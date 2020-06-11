@@ -240,9 +240,94 @@ burden %>%
 Cost burden by each of
 
   - race/ethnicity
-  - gender
   - tenure
   - percent FPL
+
+**Ugh, pre-2012 PUMAs had different numbering scheme. Reconcile.**
+:weary:
+
+``` r
+puma_out <- list()
+
+puma_hhlds <- hhdes %>%
+    select(year, puma, hhwt, hoh_race, ownershp, fpl) %>% 
+    group_by(year, puma, ownershp, hoh_race, fpl) %>% 
+    summarise(total_hhlds = survey_total(hhwt)) %>% 
+    select(puma, everything())
+
+puma_out$count_hhlds <- puma_hhlds
+
+rent_burd <- hhdes %>% 
+    filter(ownershp == "Rented") %>% 
+    select(year, puma, hoh_race, ownershp, fpl, rentgrs, hhincome, hhwt) %>% 
+    mutate(pct_income_to_housing = (rentgrs * 12) / hhincome,
+                 is_burdened = if_else(pct_income_to_housing > .3, T, F)) %>% 
+    #capture hhlds with negative income as burdened
+    mutate(is_burdened = if_else(pct_income_to_housing < 0, T, is_burdened)) %>% 
+    #some people have no rent and no income. filtering them out
+    filter(!is.na(is_burdened)) %>%  
+    group_by(year, puma, hoh_race, is_burdened, ownershp, fpl) %>% 
+    summarise(hhlds = survey_total(hhwt)) %>% 
+    left_join(puma_hhlds, by = c("year", "puma", "hoh_race", "ownershp", "fpl")) %>% 
+    mutate(share = round(hhlds / total_hhlds, 3)) %>% 
+    select(-contains("total")) %>% 
+    select(puma, everything())
+
+own_burd <- hhdes %>% 
+    filter(ownershp == "Owned or being bought (loan)") %>% 
+    select(year, puma, hoh_race, ownershp, fpl, owncost, hhincome, hhwt) %>% 
+    mutate(pct_income_to_housing = (owncost * 12) / hhincome,
+                 is_burdened = if_else(pct_income_to_housing > .3, T, F)) %>% 
+    #capture hhlds with negative income as burdened
+    mutate(is_burdened = if_else(pct_income_to_housing < 0, T, is_burdened)) %>% 
+    #filter no housing costs/no income people
+    filter(!is.na(is_burdened)) %>%  
+    group_by(year, puma, hoh_race, is_burdened, ownershp, fpl) %>% 
+    summarise(hhlds = survey_total(hhwt)) %>% 
+    left_join(puma_hhlds, by = c("year", "puma", "hoh_race", "ownershp", "fpl")) %>% 
+    mutate(share = round(hhlds / total_hhlds, 3)) %>% 
+    select(-contains("total")) %>% 
+    select(puma, everything())
+
+puma_burden <- bind_rows(rent_burd, own_burd) %>% 
+    select(puma, year, hoh_race, ownershp, fpl, is_burdened, hhlds, hhlds_se, share)
+
+puma_out$burden_race_tenure_fpl <- puma_burden
+```
+
+``` r
+#cost burden by race
+```
+
+``` r
+#cost burden by tenure
+```
+
+``` r
+#cost burden by fpl
+
+fpl_hhlds_puma <- hhdes %>%
+    select(year, puma, hhwt, fpl) %>% 
+    group_by(year, puma, fpl) %>% 
+    summarise(total_hhlds = survey_total(hhwt)) %>% 
+    select(puma, everything())
+
+puma_burden %>% 
+    select(-hoh_race, -ownershp) %>% 
+    group_by(puma, year, fpl, is_burdened) %>% 
+    summarise(hhlds = sum(hhlds)) %>% 
+    left_join(fpl_hhlds_puma, by = c("puma", "year", "fpl")) %>% 
+    mutate(share = round(hhlds / total_hhlds, 3)) %>% 
+  filter(is_burdened == T) %>% 
+    ggplot(aes(share, puma, group = fpl)) +
+    geom_point(aes(color = fpl)) +
+    #geom_text(aes(label = round(share, 2))) +
+    labs(title = str_wrap("The vast majority of low income households are cost burdened; rates have barely budged since 2013", 60)) +
+    facet_grid(cols = vars(year)) +
+    theme(legend.position = "bottom")
+```
+
+![](cost_burden_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ## Town-level
 
