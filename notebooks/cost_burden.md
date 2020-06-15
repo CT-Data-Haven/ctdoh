@@ -5,6 +5,7 @@ Cost burden
 library(ipumsr)
 library(tidyverse)
 library(srvyr)
+library(tidycensus)
 ```
 
 Looking at cost burden by a few demographic factors and geographic
@@ -243,8 +244,10 @@ Cost burden by each of
   - tenure
   - percent FPL
 
-**Ugh, pre-2012 PUMAs had different numbering scheme. Reconcile.**
-:weary:
+:weary: PUMAs are not comparable between the years I want, so we either
+need to combine Stamford/Norwalk in both years or only use latest PUMAs.
+
+**I also need to add a crosswalk for future reference**
 
 ``` r
 puma_out <- list()
@@ -305,7 +308,6 @@ puma_out$burden_race_tenure_fpl <- puma_burden
 
 ``` r
 #cost burden by fpl
-
 fpl_hhlds_puma <- hhdes %>%
     select(year, puma, hhwt, fpl) %>% 
     group_by(year, puma, fpl) %>% 
@@ -318,7 +320,7 @@ puma_burden %>%
     summarise(hhlds = sum(hhlds)) %>% 
     left_join(fpl_hhlds_puma, by = c("puma", "year", "fpl")) %>% 
     mutate(share = round(hhlds / total_hhlds, 3)) %>% 
-  filter(is_burdened == T) %>% 
+  filter(is_burdened == T) %>%
     ggplot(aes(share, puma, group = fpl)) +
     geom_point(aes(color = fpl)) +
     #geom_text(aes(label = round(share, 2))) +
