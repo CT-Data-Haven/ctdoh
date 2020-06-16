@@ -4,16 +4,19 @@ Population trends
 ``` r
 library(tidyverse)
 library(tidycensus)
+library(janitor)
 library(tigris)
 library(sf)
+
+out <- list()
 ```
 
-Basic population trends for each year starting in 2000 through latest
-available
+Collecting and lightly cleaning basic population data for multiple
+geographies and each year starting in 2000 through latest available.
 
   - Total pop - state, county, town
   - Pop change - *(natural, international, domestic)* - state, county,
-    town?
+    town not available through PES
   - Change by age *(need to define bands)* - state, county, town?
   - Change by race *(major three/four and other?)* - state, county,
     town?
@@ -21,8 +24,72 @@ available
     town?
   - Change by income *(need to define bands)* - state, county, town?
 
-<!-- end list -->
+### Total pop
+
+Pre-2010 state and county data from Census intercensal counts. 2010-2018
+data from deci/ACS.
 
 ``` r
-#get_estimates
+# 2000-2010 intercensal data comes in spreadsheets from
+# https://www.census.gov/data/datasets/time-series/demo/popest/intercensal-2000-2010-counties.html
+# see data dictionary in companion pdf
+intercensal <- read_csv("../input_data/co-est00int-alldata-09.csv") %>%
+    clean_names()
+
+out$state_county_demographics_2000_2010 <- intercensal
+```
+
+Town data only ACS and deci, limited demographic disaggregations.
+
+``` r
+acs_years <- list("2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014, "2015" = 2015, "2016" = 2016, "2017" = 2017, "2018" = 2018)
+town_pop <- acs_years %>% map(~get_acs(geography = "county subdivision", state = "09", table = "B01001", survey = "acs5", year = ., cache_table = T))
+names <- names(town_pop)
+town_pop2 <- map2(town_pop, names, ~cbind(.x, year = .y))
+town_pop_bind <- Reduce(rbind, town_pop2)
+
+out$town_pop_sex_age_2011_2018 <- town_pop_bind
+```
+
+### Pop change
+
+Periods are annual estimates from July 1–June 30 where period 2 is 2011,
+period 3 is 2012, etc. **EXCEPTION:** Period 1 is April 1–June 30, 2010
+because of decennial census.
+
+``` r
+period_lut <- tibble(
+    estimate_range = c(
+        "April 1, 2010–June 30, 2010",
+        "July 1, 2010–June 30, 2011",
+        "July 1, 2011–June 30, 2012",
+        "July 1, 2012–June 30, 2013",
+        "July 1, 2013–June 30, 2014",
+        "July 1, 2014–June 30, 2015",
+        "July 1, 2015–June 30, 2016",
+        "July 1, 2016–June 30, 2017",
+        "July 1, 2017–June 30, 2018"),
+    period = seq(1:9))
+
+ct_components <- get_estimates(
+    geography = "state", 
+    state = "09", 
+    product = "components", 
+    time_series = T)
+
+county_components <- get_estimates(
+    geography = "county", 
+    state = "09", 
+    product = "components", 
+    time_series = T)
+
+state_county_pop_change_2010_2018 <- bind_rows(ct_components, county_components) %>%
+    clean_names() %>% 
+    mutate(variable = str_to_lower(variable)) %>% 
+    filter(variable %in% c(
+        "births", "deaths", "naturalinc", "domesticmig", "internationalmig")) %>% 
+    left_join(period_lut, by = "period") %>% 
+    select(geoid, name, estimate_range, variable, value)
+
+out$pop_change_2010_2018 <- state_county_pop_change_2010_2018
 ```
