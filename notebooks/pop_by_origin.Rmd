@@ -1,0 +1,57 @@
+---
+title: "Pop by origin"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+library(cwi)
+library(camiller)
+```
+
+Collecting and lightly cleaning basic population data for multiple geographies and each year available starting in 2000 through latest available.
+
+Change by origin - *(natural, international, domestic)* - state and county only; town not available through PES.
+
+## Change by origin stuff
+Periods are annual estimates from July 1–June 30 where period 2 is 2011, period 3 is 2012, etc. **EXCEPTION:** Period 1 is April 1–June 30, 2010 because of decennial census.
+```{r}
+period_lut <- tibble(
+	estimate_range = c(
+		"April 1, 2010–June 30, 2010",
+		"July 1, 2010–June 30, 2011",
+		"July 1, 2011–June 30, 2012",
+		"July 1, 2012–June 30, 2013",
+		"July 1, 2013–June 30, 2014",
+		"July 1, 2014–June 30, 2015",
+		"July 1, 2015–June 30, 2016",
+		"July 1, 2016–June 30, 2017",
+		"July 1, 2017–June 30, 2018"),
+	period = seq(1:9))
+
+ct_components <- get_estimates(
+	geography = "state", 
+	state = "09", 
+	product = "components", 
+	time_series = T)
+
+county_components <- get_estimates(
+	geography = "county", 
+	state = "09", 
+	product = "components", 
+	time_series = T)
+
+state_county_pop_change_2010_2018 <- bind_rows(ct_components, county_components) %>%
+	clean_names() %>% 
+	mutate(variable = str_to_lower(variable)) %>% 
+	filter(variable %in% c(
+		"births", "deaths", "naturalinc", "domesticmig", "internationalmig")) %>% 
+	left_join(period_lut, by = "period") %>% 
+	select(geoid, name, estimate_range, variable, value)
+```
