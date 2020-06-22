@@ -1,0 +1,154 @@
+---
+title: "Population trends"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+library(cwi)
+library(camiller)
+```
+
+6/22: The other notebook was getting unwieldy, so splitting these into smaller notebooks. While I work on it, stuff is just copy/pasted from the other notebook to sit here until I sort it into its new notebook.
+
+* Change by origin - *(natural, international, domestic)* - state, county; town not available through PES
+* Change by age *(need to define bands)* - state, county; town?
+* Change by race *(major three/four and other?)* - state, county; town?
+* Change by household type/size *(see town reports)* - state, county; town?
+* Change by income *(need to define bands)* - state, county; town?
+
+```{r}
+out <- list()
+
+acs_years <- list("2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014, "2015" = 2015, "2016" = 2016, "2017" = 2017, "2018" = 2018)
+
+#median income?? - b19013
+#pop by race - b03002
+#tenure - b25003
+#hh type - b11001
+
+race <- acs_years %>% map(~multi_geo_acs(table = "B03002", year = ., new_england = F))
+race_bind <- Reduce(rbind, race) %>% label_acs()
+
+tenure <- acs_years %>% map(~multi_geo_acs(table = "B25003", year = ., new_england = F))
+tenure_bind <- Reduce(rbind, tenure) %>% label_acs()
+
+hh_type <- acs_years %>% map(~multi_geo_acs(table = "B11001", year = ., new_england = F))
+hh_type_bind <- Reduce(rbind, hh_type) %>% label_acs()
+
+out$race_state_county_town_2011_2018 <- race_bind
+out$tenure_state_county_town_2011_2018 <- tenure_bind
+out$hh_type_state_county_town_2011_2019 <- hh_type_bind
+```
+
+
+
+## Change by origin stuff
+Periods are annual estimates from July 1–June 30 where period 2 is 2011, period 3 is 2012, etc. **EXCEPTION:** Period 1 is April 1–June 30, 2010 because of decennial census.
+```{r}
+period_lut <- tibble(
+	estimate_range = c(
+		"April 1, 2010–June 30, 2010",
+		"July 1, 2010–June 30, 2011",
+		"July 1, 2011–June 30, 2012",
+		"July 1, 2012–June 30, 2013",
+		"July 1, 2013–June 30, 2014",
+		"July 1, 2014–June 30, 2015",
+		"July 1, 2015–June 30, 2016",
+		"July 1, 2016–June 30, 2017",
+		"July 1, 2017–June 30, 2018"),
+	period = seq(1:9))
+
+ct_components <- get_estimates(
+	geography = "state", 
+	state = "09", 
+	product = "components", 
+	time_series = T)
+
+county_components <- get_estimates(
+	geography = "county", 
+	state = "09", 
+	product = "components", 
+	time_series = T)
+
+state_county_pop_change_2010_2018 <- bind_rows(ct_components, county_components) %>%
+	clean_names() %>% 
+	mutate(variable = str_to_lower(variable)) %>% 
+	filter(variable %in% c(
+		"births", "deaths", "naturalinc", "domesticmig", "internationalmig")) %>% 
+	left_join(period_lut, by = "period") %>% 
+	select(geoid, name, estimate_range, variable, value)
+
+out$pop_change_2010_2018 <- state_county_pop_change_2010_2018
+```
+
+Pop by age, this will need total pops table
+```{r}
+pop_by_age <- pop_tables$sex_by_age_state_county_town_2011_2018 %>%
+	separate(label, into = c("total", "gender", "age"), sep = "!!", fill = "right") %>% 
+	clean_names() %>%
+	filter(!grepl("_001|_002|_026", variable)) %>% #remove total, total male, total female
+  select(-gender, -total, -variable, -state) %>% 
+	mutate(age = str_replace_all(age, " ", "_") %>% 
+				 	str_to_lower()) %>% 
+	mutate(age = as.factor(age) %>% 
+				 	fct_relevel(., "under_5_years", "5_to_9_years") %>% 
+				 	fct_collapse(.,
+				 							 `15_to_19_years` = c("15_to_17_years", "18_and_19_years"),
+				 							 `20_to_24_years` = c("20_years", "21_years", "22_to_24_years"),
+				 							 `60_to_64_years` = c("60_and_61_years", "62_to_64_years"),
+				 							 `65_to_69_years` = c("65_and_66_years", "67_to_69_years"))) %>% 
+	group_by(year, level, geoid, name, county, var = age) %>% 
+	summarise(estimate = sum(estimate),
+						moe = moe_sum(moe = moe, estimate = estimate)) %>% 
+	bind_rows(total_pop) %>%
+	group_by(year, level, geoid, name, county) %>% 
+	mutate(moe = replace_na(moe, 0),
+				 moe = round(moe, 0)) %>% 
+	calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
+
+age_lut <- tibble(agegrp = c(99, seq(1:18)),
+									age = unique(pop_by_age$var)) %>% 
+	add_row(agegrp = 0, age = "under_5_years")
+
+period_lut <- tibble(
+	estimate_date = c(
+		"April 2000 base estimate",
+		"July 1, 2000 estimate",
+		"July 1, 2001 estimate",
+		"July 1, 2002 estimate",
+		"July 1, 2003 estimate",
+		"July 1, 2004 estimate",
+		"July 1, 2005 estimate",
+		"July 1, 2006 estimate",
+		"July 1, 2007 estimate",
+		"July 1, 2008 estimate",
+		"July 1, 2009 estimate",
+		"2010 census count",
+		"July 1, 2010 estimate"),
+	year = seq(1:13))
+```
+
+```{r}
+int_pop <- intercensal %>% 
+	mutate(geoid = paste(state, county, sep = "")) %>% 
+  select(geoid, name = ctyname, year, agegrp, estimate = tot_pop) %>% 
+	left_join(age_lut, by = "agegrp") %>% 
+	left_join(period_lut, by = "year") %>% 
+	select(-year, -agegrp) %>% 
+	rename(var = age, year = estimate_date) %>% 
+	mutate(level = "2_county", county = NA, moe = 0,
+				 var = as.factor(var) %>% 
+				 	fct_relevel(., "under_5_years", "5_to_9_years")) %>% 
+	group_by(year, level, geoid, name, county, var) %>% 
+	summarise(estimate = sum(estimate), moe = sum(moe)) %>% 
+	ungroup() %>% 
+	group_by(year, level, geoid, name, county) %>% 
+	calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
+```
