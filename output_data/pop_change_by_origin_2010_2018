@@ -1,0 +1,406 @@
+year,level,geoid,name,county,var,estimate
+2010,1_state,09,Connecticut,NA,births,9492
+2011,1_state,09,Connecticut,NA,births,37642
+2012,1_state,09,Connecticut,NA,births,36853
+2013,1_state,09,Connecticut,NA,births,36138
+2014,1_state,09,Connecticut,NA,births,36158
+2015,1_state,09,Connecticut,NA,births,36319
+2016,1_state,09,Connecticut,NA,births,35892
+2017,1_state,09,Connecticut,NA,births,35396
+2018,1_state,09,Connecticut,NA,births,35048
+2010,1_state,09,Connecticut,NA,deaths,6843
+2011,1_state,09,Connecticut,NA,deaths,29315
+2012,1_state,09,Connecticut,NA,deaths,29087
+2013,1_state,09,Connecticut,NA,deaths,29784
+2014,1_state,09,Connecticut,NA,deaths,29668
+2015,1_state,09,Connecticut,NA,deaths,30373
+2016,1_state,09,Connecticut,NA,deaths,30085
+2017,1_state,09,Connecticut,NA,deaths,31069
+2018,1_state,09,Connecticut,NA,deaths,31312
+2010,1_state,09,Connecticut,NA,domesticmig,124
+2011,1_state,09,Connecticut,NA,domesticmig,-12343
+2012,1_state,09,Connecticut,NA,domesticmig,-17392
+2013,1_state,09,Connecticut,NA,domesticmig,-16929
+2014,1_state,09,Connecticut,NA,domesticmig,-25041
+2015,1_state,09,Connecticut,NA,domesticmig,-29986
+2016,1_state,09,Connecticut,NA,domesticmig,-29202
+2017,1_state,09,Connecticut,NA,domesticmig,-23652
+2018,1_state,09,Connecticut,NA,domesticmig,-21509
+2010,1_state,09,Connecticut,NA,internationalmig,2452
+2011,1_state,09,Connecticut,NA,internationalmig,13027
+2012,1_state,09,Connecticut,NA,internationalmig,16035
+2013,1_state,09,Connecticut,NA,internationalmig,11171
+2014,1_state,09,Connecticut,NA,internationalmig,18263
+2015,1_state,09,Connecticut,NA,internationalmig,16614
+2016,1_state,09,Connecticut,NA,internationalmig,14489
+2017,1_state,09,Connecticut,NA,internationalmig,14454
+2018,1_state,09,Connecticut,NA,internationalmig,16494
+2010,1_state,09,Connecticut,NA,naturalinc,2649
+2011,1_state,09,Connecticut,NA,naturalinc,8327
+2012,1_state,09,Connecticut,NA,naturalinc,7766
+2013,1_state,09,Connecticut,NA,naturalinc,6354
+2014,1_state,09,Connecticut,NA,naturalinc,6490
+2015,1_state,09,Connecticut,NA,naturalinc,5946
+2016,1_state,09,Connecticut,NA,naturalinc,5807
+2017,1_state,09,Connecticut,NA,naturalinc,4327
+2018,1_state,09,Connecticut,NA,naturalinc,3736
+2010,2_counties,09001,Fairfield County,NA,births,2721
+2011,2_counties,09001,Fairfield County,NA,births,10408
+2012,2_counties,09001,Fairfield County,NA,births,10203
+2013,2_counties,09001,Fairfield County,NA,births,10053
+2014,2_counties,09001,Fairfield County,NA,births,10091
+2015,2_counties,09001,Fairfield County,NA,births,10188
+2016,2_counties,09001,Fairfield County,NA,births,10017
+2017,2_counties,09001,Fairfield County,NA,births,9852
+2018,2_counties,09001,Fairfield County,NA,births,9711
+2010,2_counties,09003,Hartford County,NA,births,2454
+2011,2_counties,09003,Hartford County,NA,births,9732
+2012,2_counties,09003,Hartford County,NA,births,9477
+2013,2_counties,09003,Hartford County,NA,births,9389
+2014,2_counties,09003,Hartford County,NA,births,9346
+2015,2_counties,09003,Hartford County,NA,births,9565
+2016,2_counties,09003,Hartford County,NA,births,9385
+2017,2_counties,09003,Hartford County,NA,births,9254
+2018,2_counties,09003,Hartford County,NA,births,9213
+2010,2_counties,09005,Litchfield County,NA,births,416
+2011,2_counties,09005,Litchfield County,NA,births,1557
+2012,2_counties,09005,Litchfield County,NA,births,1466
+2013,2_counties,09005,Litchfield County,NA,births,1423
+2014,2_counties,09005,Litchfield County,NA,births,1420
+2015,2_counties,09005,Litchfield County,NA,births,1413
+2016,2_counties,09005,Litchfield County,NA,births,1437
+2017,2_counties,09005,Litchfield County,NA,births,1428
+2018,2_counties,09005,Litchfield County,NA,births,1396
+2010,2_counties,09007,Middlesex County,NA,births,357
+2011,2_counties,09007,Middlesex County,NA,births,1537
+2012,2_counties,09007,Middlesex County,NA,births,1481
+2013,2_counties,09007,Middlesex County,NA,births,1366
+2014,2_counties,09007,Middlesex County,NA,births,1381
+2015,2_counties,09007,Middlesex County,NA,births,1365
+2016,2_counties,09007,Middlesex County,NA,births,1311
+2017,2_counties,09007,Middlesex County,NA,births,1268
+2018,2_counties,09007,Middlesex County,NA,births,1269
+2010,2_counties,09009,New Haven County,NA,births,2259
+2011,2_counties,09009,New Haven County,NA,births,9265
+2012,2_counties,09009,New Haven County,NA,births,9047
+2013,2_counties,09009,New Haven County,NA,births,8912
+2014,2_counties,09009,New Haven County,NA,births,8986
+2015,2_counties,09009,New Haven County,NA,births,8802
+2016,2_counties,09009,New Haven County,NA,births,8844
+2017,2_counties,09009,New Haven County,NA,births,8713
+2018,2_counties,09009,New Haven County,NA,births,8651
+2010,2_counties,09011,New London County,NA,births,658
+2011,2_counties,09011,New London County,NA,births,2766
+2012,2_counties,09011,New London County,NA,births,2864
+2013,2_counties,09011,New London County,NA,births,2692
+2014,2_counties,09011,New London County,NA,births,2675
+2015,2_counties,09011,New London County,NA,births,2674
+2016,2_counties,09011,New London County,NA,births,2635
+2017,2_counties,09011,New London County,NA,births,2646
+2018,2_counties,09011,New London County,NA,births,2581
+2010,2_counties,09013,Tolland County,NA,births,337
+2011,2_counties,09013,Tolland County,NA,births,1181
+2012,2_counties,09013,Tolland County,NA,births,1125
+2013,2_counties,09013,Tolland County,NA,births,1125
+2014,2_counties,09013,Tolland County,NA,births,1131
+2015,2_counties,09013,Tolland County,NA,births,1195
+2016,2_counties,09013,Tolland County,NA,births,1163
+2017,2_counties,09013,Tolland County,NA,births,1146
+2018,2_counties,09013,Tolland County,NA,births,1156
+2010,2_counties,09015,Windham County,NA,births,290
+2011,2_counties,09015,Windham County,NA,births,1196
+2012,2_counties,09015,Windham County,NA,births,1190
+2013,2_counties,09015,Windham County,NA,births,1178
+2014,2_counties,09015,Windham County,NA,births,1128
+2015,2_counties,09015,Windham County,NA,births,1117
+2016,2_counties,09015,Windham County,NA,births,1100
+2017,2_counties,09015,Windham County,NA,births,1089
+2018,2_counties,09015,Windham County,NA,births,1071
+2010,2_counties,09001,Fairfield County,NA,deaths,1507
+2011,2_counties,09001,Fairfield County,NA,deaths,6463
+2012,2_counties,09001,Fairfield County,NA,deaths,6318
+2013,2_counties,09001,Fairfield County,NA,deaths,6629
+2014,2_counties,09001,Fairfield County,NA,deaths,6528
+2015,2_counties,09001,Fairfield County,NA,deaths,6770
+2016,2_counties,09001,Fairfield County,NA,deaths,6750
+2017,2_counties,09001,Fairfield County,NA,deaths,6955
+2018,2_counties,09001,Fairfield County,NA,deaths,7036
+2010,2_counties,09003,Hartford County,NA,deaths,1817
+2011,2_counties,09003,Hartford County,NA,deaths,7928
+2012,2_counties,09003,Hartford County,NA,deaths,7744
+2013,2_counties,09003,Hartford County,NA,deaths,7868
+2014,2_counties,09003,Hartford County,NA,deaths,7752
+2015,2_counties,09003,Hartford County,NA,deaths,7995
+2016,2_counties,09003,Hartford County,NA,deaths,7809
+2017,2_counties,09003,Hartford County,NA,deaths,8288
+2018,2_counties,09003,Hartford County,NA,deaths,8316
+2010,2_counties,09005,Litchfield County,NA,deaths,373
+2011,2_counties,09005,Litchfield County,NA,deaths,1667
+2012,2_counties,09005,Litchfield County,NA,deaths,1749
+2013,2_counties,09005,Litchfield County,NA,deaths,1820
+2014,2_counties,09005,Litchfield County,NA,deaths,1818
+2015,2_counties,09005,Litchfield County,NA,deaths,1752
+2016,2_counties,09005,Litchfield County,NA,deaths,1785
+2017,2_counties,09005,Litchfield County,NA,deaths,1800
+2018,2_counties,09005,Litchfield County,NA,deaths,1822
+2010,2_counties,09007,Middlesex County,NA,deaths,346
+2011,2_counties,09007,Middlesex County,NA,deaths,1459
+2012,2_counties,09007,Middlesex County,NA,deaths,1430
+2013,2_counties,09007,Middlesex County,NA,deaths,1490
+2014,2_counties,09007,Middlesex County,NA,deaths,1495
+2015,2_counties,09007,Middlesex County,NA,deaths,1509
+2016,2_counties,09007,Middlesex County,NA,deaths,1490
+2017,2_counties,09007,Middlesex County,NA,deaths,1558
+2018,2_counties,09007,Middlesex County,NA,deaths,1536
+2010,2_counties,09009,New Haven County,NA,deaths,1710
+2011,2_counties,09009,New Haven County,NA,deaths,7570
+2012,2_counties,09009,New Haven County,NA,deaths,7582
+2013,2_counties,09009,New Haven County,NA,deaths,7591
+2014,2_counties,09009,New Haven County,NA,deaths,7684
+2015,2_counties,09009,New Haven County,NA,deaths,7836
+2016,2_counties,09009,New Haven County,NA,deaths,7767
+2017,2_counties,09009,New Haven County,NA,deaths,7839
+2018,2_counties,09009,New Haven County,NA,deaths,7918
+2010,2_counties,09011,New London County,NA,deaths,548
+2011,2_counties,09011,New London County,NA,deaths,2233
+2012,2_counties,09011,New London County,NA,deaths,2334
+2013,2_counties,09011,New London County,NA,deaths,2395
+2014,2_counties,09011,New London County,NA,deaths,2356
+2015,2_counties,09011,New London County,NA,deaths,2459
+2016,2_counties,09011,New London County,NA,deaths,2433
+2017,2_counties,09011,New London County,NA,deaths,2486
+2018,2_counties,09011,New London County,NA,deaths,2572
+2010,2_counties,09013,Tolland County,NA,deaths,296
+2011,2_counties,09013,Tolland County,NA,deaths,1012
+2012,2_counties,09013,Tolland County,NA,deaths,945
+2013,2_counties,09013,Tolland County,NA,deaths,990
+2014,2_counties,09013,Tolland County,NA,deaths,1007
+2015,2_counties,09013,Tolland County,NA,deaths,1030
+2016,2_counties,09013,Tolland County,NA,deaths,1004
+2017,2_counties,09013,Tolland County,NA,deaths,1091
+2018,2_counties,09013,Tolland County,NA,deaths,1060
+2010,2_counties,09015,Windham County,NA,deaths,246
+2011,2_counties,09015,Windham County,NA,deaths,983
+2012,2_counties,09015,Windham County,NA,deaths,985
+2013,2_counties,09015,Windham County,NA,deaths,1001
+2014,2_counties,09015,Windham County,NA,deaths,1028
+2015,2_counties,09015,Windham County,NA,deaths,1022
+2016,2_counties,09015,Windham County,NA,deaths,1047
+2017,2_counties,09015,Windham County,NA,deaths,1052
+2018,2_counties,09015,Windham County,NA,deaths,1052
+2010,2_counties,09001,Fairfield County,NA,domesticmig,491
+2011,2_counties,09001,Fairfield County,NA,domesticmig,90
+2012,2_counties,09001,Fairfield County,NA,domesticmig,-2137
+2013,2_counties,09001,Fairfield County,NA,domesticmig,-2209
+2014,2_counties,09001,Fairfield County,NA,domesticmig,-5336
+2015,2_counties,09001,Fairfield County,NA,domesticmig,-7871
+2016,2_counties,09001,Fairfield County,NA,domesticmig,-8412
+2017,2_counties,09001,Fairfield County,NA,domesticmig,-8849
+2018,2_counties,09001,Fairfield County,NA,domesticmig,-7215
+2010,2_counties,09003,Hartford County,NA,domesticmig,-41
+2011,2_counties,09003,Hartford County,NA,domesticmig,-4009
+2012,2_counties,09003,Hartford County,NA,domesticmig,-5347
+2013,2_counties,09003,Hartford County,NA,domesticmig,-4708
+2014,2_counties,09003,Hartford County,NA,domesticmig,-7267
+2015,2_counties,09003,Hartford County,NA,domesticmig,-7762
+2016,2_counties,09003,Hartford County,NA,domesticmig,-8238
+2017,2_counties,09003,Hartford County,NA,domesticmig,-6775
+2018,2_counties,09003,Hartford County,NA,domesticmig,-6564
+2010,2_counties,09005,Litchfield County,NA,domesticmig,-177
+2011,2_counties,09005,Litchfield County,NA,domesticmig,-821
+2012,2_counties,09005,Litchfield County,NA,domesticmig,-1289
+2013,2_counties,09005,Litchfield County,NA,domesticmig,-507
+2014,2_counties,09005,Litchfield County,NA,domesticmig,-1409
+2015,2_counties,09005,Litchfield County,NA,domesticmig,-1228
+2016,2_counties,09005,Litchfield County,NA,domesticmig,-1241
+2017,2_counties,09005,Litchfield County,NA,domesticmig,-973
+2018,2_counties,09005,Litchfield County,NA,domesticmig,-452
+2010,2_counties,09007,Middlesex County,NA,domesticmig,-134
+2011,2_counties,09007,Middlesex County,NA,domesticmig,212
+2012,2_counties,09007,Middlesex County,NA,domesticmig,-1095
+2013,2_counties,09007,Middlesex County,NA,domesticmig,-355
+2014,2_counties,09007,Middlesex County,NA,domesticmig,-787
+2015,2_counties,09007,Middlesex County,NA,domesticmig,-1216
+2016,2_counties,09007,Middlesex County,NA,domesticmig,-488
+2017,2_counties,09007,Middlesex County,NA,domesticmig,-269
+2018,2_counties,09007,Middlesex County,NA,domesticmig,-181
+2010,2_counties,09009,New Haven County,NA,domesticmig,-69
+2011,2_counties,09009,New Haven County,NA,domesticmig,-4080
+2012,2_counties,09009,New Haven County,NA,domesticmig,-4412
+2013,2_counties,09009,New Haven County,NA,domesticmig,-5754
+2014,2_counties,09009,New Haven County,NA,domesticmig,-5699
+2015,2_counties,09009,New Haven County,NA,domesticmig,-7697
+2016,2_counties,09009,New Haven County,NA,domesticmig,-6913
+2017,2_counties,09009,New Haven County,NA,domesticmig,-4633
+2018,2_counties,09009,New Haven County,NA,domesticmig,-5155
+2010,2_counties,09011,New London County,NA,domesticmig,-417
+2011,2_counties,09011,New London County,NA,domesticmig,-2373
+2012,2_counties,09011,New London County,NA,domesticmig,-566
+2013,2_counties,09011,New London County,NA,domesticmig,-2027
+2014,2_counties,09011,New London County,NA,domesticmig,-2675
+2015,2_counties,09011,New London County,NA,domesticmig,-2831
+2016,2_counties,09011,New London County,NA,domesticmig,-1956
+2017,2_counties,09011,New London County,NA,domesticmig,-1480
+2018,2_counties,09011,New London County,NA,domesticmig,-1578
+2010,2_counties,09013,Tolland County,NA,domesticmig,381
+2011,2_counties,09013,Tolland County,NA,domesticmig,-666
+2012,2_counties,09013,Tolland County,NA,domesticmig,-1646
+2013,2_counties,09013,Tolland County,NA,domesticmig,-585
+2014,2_counties,09013,Tolland County,NA,domesticmig,-704
+2015,2_counties,09013,Tolland County,NA,domesticmig,-634
+2016,2_counties,09013,Tolland County,NA,domesticmig,-1148
+2017,2_counties,09013,Tolland County,NA,domesticmig,-595
+2018,2_counties,09013,Tolland County,NA,domesticmig,-486
+2010,2_counties,09015,Windham County,NA,domesticmig,90
+2011,2_counties,09015,Windham County,NA,domesticmig,-696
+2012,2_counties,09015,Windham County,NA,domesticmig,-900
+2013,2_counties,09015,Windham County,NA,domesticmig,-784
+2014,2_counties,09015,Windham County,NA,domesticmig,-1164
+2015,2_counties,09015,Windham County,NA,domesticmig,-747
+2016,2_counties,09015,Windham County,NA,domesticmig,-806
+2017,2_counties,09015,Windham County,NA,domesticmig,-78
+2018,2_counties,09015,Windham County,NA,domesticmig,122
+2010,2_counties,09001,Fairfield County,NA,internationalmig,813
+2011,2_counties,09001,Fairfield County,NA,internationalmig,4650
+2012,2_counties,09001,Fairfield County,NA,internationalmig,5523
+2013,2_counties,09001,Fairfield County,NA,internationalmig,3769
+2014,2_counties,09001,Fairfield County,NA,internationalmig,6124
+2015,2_counties,09001,Fairfield County,NA,internationalmig,5356
+2016,2_counties,09001,Fairfield County,NA,internationalmig,4618
+2017,2_counties,09001,Fairfield County,NA,internationalmig,4553
+2018,2_counties,09001,Fairfield County,NA,internationalmig,4857
+2010,2_counties,09003,Hartford County,NA,internationalmig,691
+2011,2_counties,09003,Hartford County,NA,internationalmig,3756
+2012,2_counties,09003,Hartford County,NA,internationalmig,4514
+2013,2_counties,09003,Hartford County,NA,internationalmig,3224
+2014,2_counties,09003,Hartford County,NA,internationalmig,5366
+2015,2_counties,09003,Hartford County,NA,internationalmig,5021
+2016,2_counties,09003,Hartford County,NA,internationalmig,4448
+2017,2_counties,09003,Hartford County,NA,internationalmig,4543
+2018,2_counties,09003,Hartford County,NA,internationalmig,5404
+2010,2_counties,09005,Litchfield County,NA,internationalmig,25
+2011,2_counties,09005,Litchfield County,NA,internationalmig,122
+2012,2_counties,09005,Litchfield County,NA,internationalmig,168
+2013,2_counties,09005,Litchfield County,NA,internationalmig,191
+2014,2_counties,09005,Litchfield County,NA,internationalmig,312
+2015,2_counties,09005,Litchfield County,NA,internationalmig,297
+2016,2_counties,09005,Litchfield County,NA,internationalmig,258
+2017,2_counties,09005,Litchfield County,NA,internationalmig,255
+2018,2_counties,09005,Litchfield County,NA,internationalmig,286
+2010,2_counties,09007,Middlesex County,NA,internationalmig,63
+2011,2_counties,09007,Middlesex County,NA,internationalmig,307
+2012,2_counties,09007,Middlesex County,NA,internationalmig,309
+2013,2_counties,09007,Middlesex County,NA,internationalmig,210
+2014,2_counties,09007,Middlesex County,NA,internationalmig,350
+2015,2_counties,09007,Middlesex County,NA,internationalmig,318
+2016,2_counties,09007,Middlesex County,NA,internationalmig,269
+2017,2_counties,09007,Middlesex County,NA,internationalmig,269
+2018,2_counties,09007,Middlesex County,NA,internationalmig,284
+2010,2_counties,09009,New Haven County,NA,internationalmig,551
+2011,2_counties,09009,New Haven County,NA,internationalmig,2853
+2012,2_counties,09009,New Haven County,NA,internationalmig,3718
+2013,2_counties,09009,New Haven County,NA,internationalmig,2702
+2014,2_counties,09009,New Haven County,NA,internationalmig,4484
+2015,2_counties,09009,New Haven County,NA,internationalmig,3977
+2016,2_counties,09009,New Haven County,NA,internationalmig,3524
+2017,2_counties,09009,New Haven County,NA,internationalmig,3554
+2018,2_counties,09009,New Haven County,NA,internationalmig,4235
+2010,2_counties,09011,New London County,NA,internationalmig,238
+2011,2_counties,09011,New London County,NA,internationalmig,818
+2012,2_counties,09011,New London County,NA,internationalmig,1151
+2013,2_counties,09011,New London County,NA,internationalmig,612
+2014,2_counties,09011,New London County,NA,internationalmig,802
+2015,2_counties,09011,New London County,NA,internationalmig,843
+2016,2_counties,09011,New London County,NA,internationalmig,646
+2017,2_counties,09011,New London County,NA,internationalmig,533
+2018,2_counties,09011,New London County,NA,internationalmig,528
+2010,2_counties,09013,Tolland County,NA,internationalmig,42
+2011,2_counties,09013,Tolland County,NA,internationalmig,282
+2012,2_counties,09013,Tolland County,NA,internationalmig,356
+2013,2_counties,09013,Tolland County,NA,internationalmig,272
+2014,2_counties,09013,Tolland County,NA,internationalmig,514
+2015,2_counties,09013,Tolland County,NA,internationalmig,449
+2016,2_counties,09013,Tolland County,NA,internationalmig,391
+2017,2_counties,09013,Tolland County,NA,internationalmig,379
+2018,2_counties,09013,Tolland County,NA,internationalmig,379
+2010,2_counties,09015,Windham County,NA,internationalmig,29
+2011,2_counties,09015,Windham County,NA,internationalmig,239
+2012,2_counties,09015,Windham County,NA,internationalmig,296
+2013,2_counties,09015,Windham County,NA,internationalmig,191
+2014,2_counties,09015,Windham County,NA,internationalmig,311
+2015,2_counties,09015,Windham County,NA,internationalmig,353
+2016,2_counties,09015,Windham County,NA,internationalmig,335
+2017,2_counties,09015,Windham County,NA,internationalmig,368
+2018,2_counties,09015,Windham County,NA,internationalmig,521
+2010,2_counties,09001,Fairfield County,NA,naturalinc,1214
+2011,2_counties,09001,Fairfield County,NA,naturalinc,3945
+2012,2_counties,09001,Fairfield County,NA,naturalinc,3885
+2013,2_counties,09001,Fairfield County,NA,naturalinc,3424
+2014,2_counties,09001,Fairfield County,NA,naturalinc,3563
+2015,2_counties,09001,Fairfield County,NA,naturalinc,3418
+2016,2_counties,09001,Fairfield County,NA,naturalinc,3267
+2017,2_counties,09001,Fairfield County,NA,naturalinc,2897
+2018,2_counties,09001,Fairfield County,NA,naturalinc,2675
+2010,2_counties,09003,Hartford County,NA,naturalinc,637
+2011,2_counties,09003,Hartford County,NA,naturalinc,1804
+2012,2_counties,09003,Hartford County,NA,naturalinc,1733
+2013,2_counties,09003,Hartford County,NA,naturalinc,1521
+2014,2_counties,09003,Hartford County,NA,naturalinc,1594
+2015,2_counties,09003,Hartford County,NA,naturalinc,1570
+2016,2_counties,09003,Hartford County,NA,naturalinc,1576
+2017,2_counties,09003,Hartford County,NA,naturalinc,966
+2018,2_counties,09003,Hartford County,NA,naturalinc,897
+2010,2_counties,09005,Litchfield County,NA,naturalinc,43
+2011,2_counties,09005,Litchfield County,NA,naturalinc,-110
+2012,2_counties,09005,Litchfield County,NA,naturalinc,-283
+2013,2_counties,09005,Litchfield County,NA,naturalinc,-397
+2014,2_counties,09005,Litchfield County,NA,naturalinc,-398
+2015,2_counties,09005,Litchfield County,NA,naturalinc,-339
+2016,2_counties,09005,Litchfield County,NA,naturalinc,-348
+2017,2_counties,09005,Litchfield County,NA,naturalinc,-372
+2018,2_counties,09005,Litchfield County,NA,naturalinc,-426
+2010,2_counties,09007,Middlesex County,NA,naturalinc,11
+2011,2_counties,09007,Middlesex County,NA,naturalinc,78
+2012,2_counties,09007,Middlesex County,NA,naturalinc,51
+2013,2_counties,09007,Middlesex County,NA,naturalinc,-124
+2014,2_counties,09007,Middlesex County,NA,naturalinc,-114
+2015,2_counties,09007,Middlesex County,NA,naturalinc,-144
+2016,2_counties,09007,Middlesex County,NA,naturalinc,-179
+2017,2_counties,09007,Middlesex County,NA,naturalinc,-290
+2018,2_counties,09007,Middlesex County,NA,naturalinc,-267
+2010,2_counties,09009,New Haven County,NA,naturalinc,549
+2011,2_counties,09009,New Haven County,NA,naturalinc,1695
+2012,2_counties,09009,New Haven County,NA,naturalinc,1465
+2013,2_counties,09009,New Haven County,NA,naturalinc,1321
+2014,2_counties,09009,New Haven County,NA,naturalinc,1302
+2015,2_counties,09009,New Haven County,NA,naturalinc,966
+2016,2_counties,09009,New Haven County,NA,naturalinc,1077
+2017,2_counties,09009,New Haven County,NA,naturalinc,874
+2018,2_counties,09009,New Haven County,NA,naturalinc,733
+2010,2_counties,09011,New London County,NA,naturalinc,110
+2011,2_counties,09011,New London County,NA,naturalinc,533
+2012,2_counties,09011,New London County,NA,naturalinc,530
+2013,2_counties,09011,New London County,NA,naturalinc,297
+2014,2_counties,09011,New London County,NA,naturalinc,319
+2015,2_counties,09011,New London County,NA,naturalinc,215
+2016,2_counties,09011,New London County,NA,naturalinc,202
+2017,2_counties,09011,New London County,NA,naturalinc,160
+2018,2_counties,09011,New London County,NA,naturalinc,9
+2010,2_counties,09013,Tolland County,NA,naturalinc,41
+2011,2_counties,09013,Tolland County,NA,naturalinc,169
+2012,2_counties,09013,Tolland County,NA,naturalinc,180
+2013,2_counties,09013,Tolland County,NA,naturalinc,135
+2014,2_counties,09013,Tolland County,NA,naturalinc,124
+2015,2_counties,09013,Tolland County,NA,naturalinc,165
+2016,2_counties,09013,Tolland County,NA,naturalinc,159
+2017,2_counties,09013,Tolland County,NA,naturalinc,55
+2018,2_counties,09013,Tolland County,NA,naturalinc,96
+2010,2_counties,09015,Windham County,NA,naturalinc,44
+2011,2_counties,09015,Windham County,NA,naturalinc,213
+2012,2_counties,09015,Windham County,NA,naturalinc,205
+2013,2_counties,09015,Windham County,NA,naturalinc,177
+2014,2_counties,09015,Windham County,NA,naturalinc,100
+2015,2_counties,09015,Windham County,NA,naturalinc,95
+2016,2_counties,09015,Windham County,NA,naturalinc,53
+2017,2_counties,09015,Windham County,NA,naturalinc,37
+2018,2_counties,09015,Windham County,NA,naturalinc,19
