@@ -104,6 +104,7 @@ int_pop <- intercensal %>%
 	rename(var = age, year = estimate_date) %>% 
 	mutate(year = as.numeric(year),
 				 level = "2_counties", county = NA, moe = 0,
+				 level = as.factor(level),
 				 var = as.factor(var) %>% 
 				 	fct_relevel(., "under_5_years", "5_to_9_years")) %>% 
 	group_by(year, level, geoid, name, county, var) %>% 
@@ -112,7 +113,38 @@ int_pop <- intercensal %>%
 	group_by(year, level, geoid, name, county) %>% 
 	calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
 
-pop_by_age_out <- bind_rows(int_pop, acs_pop) %>% 
+int_ct <- int_pop %>% 
+	ungroup() %>% 
+	select(-geoid, -level, -name, -share, -sharemoe) %>% 
+	group_by(year, county, var) %>% 
+	summarise(estimate = sum(estimate), moe = sum(moe)) %>% 
+	mutate(name = "Connecticut", level = "1_state", geoid = "09",
+				 level = as.factor(level)) %>% 
+	ungroup() %>% 
+	group_by(year, level, geoid, name, county) %>% 
+	calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
+
+pop_by_age_out <- bind_rows(int_pop, int_ct, acs_pop) %>% 
 	arrange(level, geoid, year) %>% 
 	write_csv(., "../output_data/pop_by_age_2000_2018.csv")
+```
+
+## Calculate change
+
+Need to work on this... figure out why level and var are converting to character, then the rest of the code should be fine.
+```{r}
+# pop_by_age_out %>% 
+# 	mutate(level = as.factor(level), var = as.factor(var) %>% 
+# 				 	fct_relevel(var, "under_5_years", "5_to_9_years")) %>% 
+# 	select(-share, -moe, -sharemoe) %>% 
+# 	group_by(level, geoid, county, var) %>% 
+# 	arrange(name, year, var) %>% 
+# 	mutate(diff = estimate - lag(estimate, default = first(estimate))) %>% 
+# 	arrange(level, geoid, year, var) %>% 
+# 	mutate(var = "pop_change") %>% 
+# 	select(-estimate, -moe) %>% 
+# 	rename(estimate = diff) %>% View()
+# 	select(year, level, geoid, name, county, var, estimate) %>%
+# 	write_csv("../output_data/pop_by_age_change_2000_2018.csv")
+
 ```
