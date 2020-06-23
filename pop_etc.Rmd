@@ -17,7 +17,6 @@ library(camiller)
 
 6/22: The other notebook was getting unwieldy, so splitting these into smaller notebooks. While I work on it, stuff is just copy/pasted from the other notebook to sit here until I sort it into its new notebook.
 
-* Change by age *(need to define bands)* - state, county; town?
 * Change by race *(major three/four and other?)* - state, county; town?
 * Change by household type/size *(see town reports)* - state, county; town?
 * Change by income *(need to define bands)* - state, county; town?
@@ -44,72 +43,4 @@ hh_type_bind <- Reduce(rbind, hh_type) %>% label_acs()
 out$race_state_county_town_2011_2018 <- race_bind
 out$tenure_state_county_town_2011_2018 <- tenure_bind
 out$hh_type_state_county_town_2011_2019 <- hh_type_bind
-```
-
-
-
-
-Pop by age, this will need total pops table
-```{r}
-pop_by_age <- pop_tables$sex_by_age_state_county_town_2011_2018 %>%
-	separate(label, into = c("total", "gender", "age"), sep = "!!", fill = "right") %>% 
-	clean_names() %>%
-	filter(!grepl("_001|_002|_026", variable)) %>% #remove total, total male, total female
-  select(-gender, -total, -variable, -state) %>% 
-	mutate(age = str_replace_all(age, " ", "_") %>% 
-				 	str_to_lower()) %>% 
-	mutate(age = as.factor(age) %>% 
-				 	fct_relevel(., "under_5_years", "5_to_9_years") %>% 
-				 	fct_collapse(.,
-				 							 `15_to_19_years` = c("15_to_17_years", "18_and_19_years"),
-				 							 `20_to_24_years` = c("20_years", "21_years", "22_to_24_years"),
-				 							 `60_to_64_years` = c("60_and_61_years", "62_to_64_years"),
-				 							 `65_to_69_years` = c("65_and_66_years", "67_to_69_years"))) %>% 
-	group_by(year, level, geoid, name, county, var = age) %>% 
-	summarise(estimate = sum(estimate),
-						moe = moe_sum(moe = moe, estimate = estimate)) %>% 
-	bind_rows(total_pop) %>%
-	group_by(year, level, geoid, name, county) %>% 
-	mutate(moe = replace_na(moe, 0),
-				 moe = round(moe, 0)) %>% 
-	calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
-
-age_lut <- tibble(agegrp = c(99, seq(1:18)),
-									age = unique(pop_by_age$var)) %>% 
-	add_row(agegrp = 0, age = "under_5_years")
-
-period_lut <- tibble(
-	estimate_date = c(
-		"April 2000 base estimate",
-		"July 1, 2000 estimate",
-		"July 1, 2001 estimate",
-		"July 1, 2002 estimate",
-		"July 1, 2003 estimate",
-		"July 1, 2004 estimate",
-		"July 1, 2005 estimate",
-		"July 1, 2006 estimate",
-		"July 1, 2007 estimate",
-		"July 1, 2008 estimate",
-		"July 1, 2009 estimate",
-		"2010 census count",
-		"July 1, 2010 estimate"),
-	year = seq(1:13))
-```
-
-```{r}
-int_pop <- intercensal %>% 
-	mutate(geoid = paste(state, county, sep = "")) %>% 
-  select(geoid, name = ctyname, year, agegrp, estimate = tot_pop) %>% 
-	left_join(age_lut, by = "agegrp") %>% 
-	left_join(period_lut, by = "year") %>% 
-	select(-year, -agegrp) %>% 
-	rename(var = age, year = estimate_date) %>% 
-	mutate(level = "2_county", county = NA, moe = 0,
-				 var = as.factor(var) %>% 
-				 	fct_relevel(., "under_5_years", "5_to_9_years")) %>% 
-	group_by(year, level, geoid, name, county, var) %>% 
-	summarise(estimate = sum(estimate), moe = sum(moe)) %>% 
-	ungroup() %>% 
-	group_by(year, level, geoid, name, county) %>% 
-	calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
 ```

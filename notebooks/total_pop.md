@@ -39,7 +39,7 @@ sex_by_age_bind <- Reduce(rbind, sex_by_age) %>% label_acs()
 deci_years <- list("2000" = 2000, "2010" = 2010)
 
 deci_pops <- deci_years %>% map(~multi_geo_decennial(table = "P001", year = .))
-deci_pops_bind <- Reduce(rbind, deci_pops) %>% label_acs() 
+deci_pops_bind <- Reduce(rbind, deci_pops) %>% label_decennial() 
 ```
 
 ## Clean
