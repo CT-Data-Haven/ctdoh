@@ -71,6 +71,7 @@ acs_pop <- sex_by_age_bind %>%
     group_by(year, level, geoid, name, county, var = age) %>% 
     summarise(estimate = sum(estimate),
                         moe = moe_sum(moe = moe, estimate = estimate)) %>% 
+    ungroup() %>% 
     group_by(year, level, geoid, name, county) %>% 
     mutate(moe = replace_na(moe, 0),
                  moe = round(moe, 0)) %>% 
@@ -99,6 +100,7 @@ int_pop <- intercensal %>%
     rename(var = age, year = estimate_date) %>% 
     mutate(year = as.numeric(year),
                  level = "2_counties", county = NA, moe = 0,
+                 level = as.factor(level),
                  var = as.factor(var) %>% 
                     fct_relevel(., "under_5_years", "5_to_9_years")) %>% 
     group_by(year, level, geoid, name, county, var) %>% 
@@ -107,7 +109,40 @@ int_pop <- intercensal %>%
     group_by(year, level, geoid, name, county) %>% 
     calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
 
-pop_by_age_out <- bind_rows(int_pop, acs_pop) %>% 
-    arrange(level, geoid, year) %>% 
+int_ct <- int_pop %>% 
+    ungroup() %>% 
+    select(-geoid, -level, -name, -share, -sharemoe) %>% 
+    group_by(year, county, var) %>% 
+    summarise(estimate = sum(estimate), moe = sum(moe)) %>% 
+    mutate(name = "Connecticut", level = "1_state", geoid = "09",
+                 level = as.factor(level)) %>% 
+    ungroup() %>% 
+    group_by(year, level, geoid, name, county) %>% 
+    calc_shares(group = var, denom = "total_pop", value = estimate, moe = moe)
+
+pop_by_age_out <- bind_rows(int_pop, int_ct, acs_pop) %>% 
+    mutate(level = fct_relevel(level, "1_state", "2_counties", "3_towns")) %>% 
+    arrange(level, geoid, year)
+
+pop_by_age_out %>% 
     write_csv(., "../output_data/pop_by_age_2000_2018.csv")
+```
+
+## Calculate change
+
+``` r
+age_change <- pop_by_age_out %>%
+    select(-share, -moe, -sharemoe) %>%
+    rename(age = var) %>% 
+    group_by(level, geoid, county, age) %>%
+    arrange(name, year, age) %>%
+    mutate(diff = estimate - lag(estimate, default = first(estimate))) %>%
+    arrange(level, geoid, year, age) %>%
+    mutate(measure = "pop_change_from_prev_data_year") %>%
+    select(-estimate) %>%
+    rename(estimate = diff) %>% 
+    select(year, level, geoid, name, county, age, measure, estimate)
+    
+age_change %>% 
+    write_csv("../output_data/pop_by_age_change_2000_2018.csv")
 ```
