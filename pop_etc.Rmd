@@ -22,17 +22,9 @@ library(camiller)
 * Change by income *(need to define bands)* - state, county; town?
 
 ```{r}
-out <- list()
+
 
 acs_years <- list("2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014, "2015" = 2015, "2016" = 2016, "2017" = 2017, "2018" = 2018)
-
-#median income?? - b19013
-#pop by race - b03002
-#tenure - b25003
-#hh type - b11001
-
-race <- acs_years %>% map(~multi_geo_acs(table = "B03002", year = ., new_england = F))
-race_bind <- Reduce(rbind, race) %>% label_acs()
 
 tenure <- acs_years %>% map(~multi_geo_acs(table = "B25003", year = ., new_england = F))
 tenure_bind <- Reduce(rbind, tenure) %>% label_acs()
@@ -40,7 +32,4 @@ tenure_bind <- Reduce(rbind, tenure) %>% label_acs()
 hh_type <- acs_years %>% map(~multi_geo_acs(table = "B11001", year = ., new_england = F))
 hh_type_bind <- Reduce(rbind, hh_type) %>% label_acs()
 
-out$race_state_county_town_2011_2018 <- race_bind
-out$tenure_state_county_town_2011_2018 <- tenure_bind
-out$hh_type_state_county_town_2011_2019 <- hh_type_bind
 ```

@@ -1,0 +1,99 @@
+---
+title: "Pop by race"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+library(cwi)
+library(camiller)
+```
+
+Collecting and lightly cleaning basic population data for multiple
+geographies and each year available starting in 2000 through latest
+available.
+
+Using four major race/ethnicity groups and all others grouped together, for five groups total - state and county intercensal (2001-2009), decennial (2000 and 2010), and ACS 2011-2018; town ACS 2011-2018 and decinnial 2000 and 2010
+
+2000-2010 intercensal data comes in spreadsheets from
+<https://www.census.gov/data/datasets/time-series/demo/popest/intercensal-2000-2010-counties.html>
+
+See data dictionary in companion pdf in input_data.
+
+## Fetch
+
+```{r}
+intercensal <- read_csv("../input_data/co-est00int-alldata-09.csv") %>%
+	clean_names()
+
+acs_years <- list("2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014, "2015" = 2015, "2016" = 2016, "2017" = 2017, "2018" = 2018)
+
+race <- acs_years %>% map(~multi_geo_acs(table = "B03002", year = ., new_england = F))
+race_bind <- Reduce(rbind, race) %>% label_acs()
+
+deci_years <- list("2000" = 2000, "2010" = 2010)
+
+deci_race_fetch <- deci_years %>% map(~multi_geo_decennial(table = "P005", year = .))
+deci_race_bind <- Reduce(rbind, deci_race_fetch) %>% label_decennial() 
+```
+
+## Clean
+
+```{r}
+deci_race <- deci_race_bind %>% 
+	clean_names() %>% 
+	group_by(level, geoid, name, year) %>%
+  add_grps(list(total_pop = 1, latino = 10, white = 3, black = 4, asian = 6, other_race = c(5, 7:9)), group = label, value = value) %>%
+  calc_shares(group = label, value = value) %>%
+	mutate(moe = 0, sharemoe = NA) %>% 
+  rename(var = label, estimate = value)
+
+acs_race <- race_bind %>%
+	clean_names() %>% 
+	group_by(level, geoid, name, year) %>% 
+  add_grps(list(total_pop = 1, latino = 12, white = 3, black = 4, asian = 6, other_race = c(5, 7:9)), group = label, moe = moe) %>%
+  calc_shares(group = label, moe = moe) %>%
+  rename(var = label)
+
+period_lut <- tibble(
+	estimate_date = c(
+		"remove_april_2000",
+		"remove_july_2000",
+		seq(2001, 2009),
+		"remove_april_2010",
+		"remove_july_2010"),
+	year = seq(1:13))
+
+int_race_county <- intercensal %>% 
+	filter(agegrp == 99) %>% 
+	mutate(geoid = paste(state, county, sep = ""),
+				 latino = h_male + h_female,
+				 white = nhwa_male + nhwa_female,
+				 black = nhba_male + nhba_female,
+				 asian = nhaa_male + nhaa_female) %>% 
+	select(geoid, ctyname, year, tot_pop, white, black, latino, asian) %>% 
+	mutate(other_race = tot_pop - white - black - latino - asian) %>% 
+	left_join(., period_lut, by = "year") %>% 
+	filter(!grepl("remove", estimate_date)) %>% 
+	select(-year) %>% 
+	rename(total_pop = tot_pop, year = estimate_date, name = ctyname) %>% 
+	mutate(year = as.numeric(year),
+				 level = "2_counties",
+				 level = as.factor(level)) %>% 
+	select(year, geoid, name, level, everything()) %>% 
+	pivot_longer(cols = 5:10, names_to = "var") %>% 
+	group_by(year, geoid, name, level) %>% 
+	calc_shares(group = var, value = value, denom = "total_pop")
+
+#collapse counties into state
+#bind everything
+#write out pop file
+```
+
+## Calculate change
