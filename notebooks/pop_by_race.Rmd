@@ -34,19 +34,22 @@ intercensal <- read_csv("../input_data/co-est00int-alldata-09.csv") %>%
 
 acs_years <- list("2011" = 2011, "2012" = 2012, "2013" = 2013, "2014" = 2014, "2015" = 2015, "2016" = 2016, "2017" = 2017, "2018" = 2018)
 
-race <- acs_years %>% map(~multi_geo_acs(table = "B03002", year = ., new_england = F))
+race <- acs_years %>% map(~multi_geo_acs(table = "B03002", year = ., new_england = F, verbose = F))
 race_bind <- Reduce(rbind, race) %>% label_acs()
 
-deci_years <- list("2000" = 2000, "2010" = 2010)
+# Decennial race/ethnicity tables are different, need to do two calls :weary:
+race_fetch00 <- multi_geo_decennial(table = "P004", year = 2000, verbose = F) %>% 
+	label_decennial(year = 2000)
 
-deci_race_fetch <- deci_years %>% map(~multi_geo_decennial(table = "P005", year = .))
-deci_race_bind <- Reduce(rbind, deci_race_fetch) %>% label_decennial() 
+race_fetch10 <- multi_geo_decennial(table = "P005", year = 2010, verbose = F) %>% 
+	label_decennial()
 ```
 
 ## Clean
 
+Intercensals have estimates that are a little off. Other race is too small while Asian and Latino are a bit too high compared with decennial census figures. Use at your own peril.
 ```{r}
-deci_race <- deci_race_bind %>% 
+deci_race10 <- race_fetch10 %>% 
 	clean_names() %>% 
 	group_by(level, geoid, name, year) %>%
   add_grps(list(total_pop = 1, latino = 10, white = 3, black = 4, asian = 6, other_race = c(5, 7:9)), group = label, value = value) %>%
@@ -54,9 +57,19 @@ deci_race <- deci_race_bind %>%
 	mutate(moe = 0, sharemoe = NA) %>% 
   rename(var = label, estimate = value)
 
+deci_race00 <- race_fetch00 %>% 
+	clean_names() %>% 
+	group_by(level, geoid, name, year) %>%
+  add_grps(list(total_pop = 1, latino = 2, white = 5, black = 6, asian = 8, other_race = c(7, 9:11)), group = label, value = value) %>%
+  calc_shares(group = label, value = value) %>%
+	mutate(moe = 0, sharemoe = NA) %>% 
+  rename(var = label, estimate = value)
+
+deci_race <- bind_rows(deci_race00, deci_race10)
+
 acs_race <- race_bind %>%
 	clean_names() %>% 
-	group_by(level, geoid, name, year) %>% 
+	group_by(level, geoid, name, year, county) %>% 
   add_grps(list(total_pop = 1, latino = 12, white = 3, black = 4, asian = 6, other_race = c(5, 7:9)), group = label, moe = moe) %>%
   calc_shares(group = label, moe = moe) %>%
   rename(var = label)
@@ -76,9 +89,9 @@ int_race_county <- intercensal %>%
 				 latino = h_male + h_female,
 				 white = nhwa_male + nhwa_female,
 				 black = nhba_male + nhba_female,
-				 asian = nhaa_male + nhaa_female) %>% 
-	select(geoid, ctyname, year, tot_pop, white, black, latino, asian) %>% 
-	mutate(other_race = tot_pop - white - black - latino - asian) %>% 
+				 asian = nhaa_male + nhaa_female,
+				 other_race = (nh_male + nh_female) - (white + black + asian)) %>% 
+	select(geoid, ctyname, year, tot_pop, white, black, latino, asian, other_race) %>% 
 	left_join(., period_lut, by = "year") %>% 
 	filter(!grepl("remove", estimate_date)) %>% 
 	select(-year) %>% 
@@ -87,13 +100,42 @@ int_race_county <- intercensal %>%
 				 level = "2_counties",
 				 level = as.factor(level)) %>% 
 	select(year, geoid, name, level, everything()) %>% 
-	pivot_longer(cols = 5:10, names_to = "var") %>% 
+	pivot_longer(cols = 5:10, names_to = "var", values_to = "estimate") %>% 
 	group_by(year, geoid, name, level) %>% 
-	calc_shares(group = var, value = value, denom = "total_pop")
+	calc_shares(group = var, value = estimate, denom = "total_pop")
 
-#collapse counties into state
-#bind everything
-#write out pop file
+int_race_ct <- int_race_county %>%
+	select(-name, -level, -geoid, -share) %>% 
+	mutate(name = "Connecticut", level = "1_state", geoid = "09",
+				 level = as.factor(level)) %>% 
+	group_by(geoid, name, level, year, var) %>% 
+	summarise(estimate = sum(estimate)) %>% 
+	ungroup() %>% 
+	group_by(geoid, name, level, year) %>% 
+	calc_shares(group = var, value = estimate) %>% 
+	ungroup()
+
+pop_by_race_out <- bind_rows(deci_race, acs_race, int_race_county, int_race_ct) %>% 
+	select(level, geoid, name, year, county, var, estimate, moe, share, sharemoe) %>% 
+	arrange(level, geoid, year)
+
+write_csv(pop_by_race_out, "../output_data/pop_by_race_2000_2018.csv")
 ```
 
 ## Calculate change
+```{r}
+race_change <- pop_by_race_out %>%
+	select(-share, -moe, -sharemoe) %>%
+	rename(race = var) %>% 
+	group_by(level, geoid, county, race) %>%
+	arrange(name, year, race) %>%
+	mutate(diff = estimate - lag(estimate, default = first(estimate))) %>%
+	arrange(level, geoid, year, race) %>%
+	mutate(measure = "pop_change_from_prev_data_year") %>%
+	select(-estimate) %>%
+	rename(estimate = diff) %>% 
+	select(year, level, geoid, name, county, race, measure, estimate)
+	
+race_change %>% 
+	write_csv("../output_data/pop_by_race_change_2000_2018.csv")
+```
