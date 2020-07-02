@@ -7,6 +7,8 @@ library(tidyverse)
 library(srvyr)
 library(tidycensus)
 library(hrbrthemes)
+library(camiller)
+library(waffle)
 ```
 
 This notebook needs a better name. “Households desiring housing” to me
@@ -77,7 +79,15 @@ pums <- read_ipums_micro(ddi, verbose = F)  %>%
             include.lowest = T, right = F)) %>% 
     mutate(
         inc_band = as.factor(inc_band) %>%
-            fct_relevel(., "poor", "low", "middle", "high", "affluent"))
+            fct_relevel(., "poor", "low", "middle", "high", "affluent")) %>% 
+    mutate(cb = if_else(ownershp == "Rented", (rentgrs * 12) / hhincome, 99999)) %>% 
+    mutate(cb = if_else(ownershp == "Owned or being bought (loan)", (owncost * 12) / hhincome, cb)) %>% 
+    mutate(
+        cost_burden = cut(
+            cb,
+            breaks = c(-Inf, .3, .5, Inf),
+            labels = c("No burden", "cost-burdened", "severely cost-burdened"),
+            include.lowest = T, right = F))
 
 hhdes <- pums %>%
     filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
@@ -89,20 +99,61 @@ out <- list()
 ## Household counts/shares by income bands
 
 ``` r
-count_hhlds <- hhdes %>%
+county_hhlds <- hhdes %>%
     select(hhwt, name, inc_band) %>% 
     group_by(name, inc_band) %>% 
-    summarise(total_hhlds = survey_total(hhwt))
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(level = "2_counties")
 
-out$hh_by_inc_band_by_county <- count_hhlds
+county_total <- hhdes %>%
+    select(hhwt, name) %>% 
+    group_by(name) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(inc_band = "total_hhlds") %>% 
+    mutate(level = "2_counties")
 
-count_hhlds %>% 
-    ggplot(aes(total_hhlds, name, group = inc_band)) +
+ct_hhlds <- hhdes %>%
+    select(hhwt, statefip, inc_band) %>% 
+    group_by(statefip, inc_band) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state") %>% 
+    select(-statefip)
+
+ct_total <- hhdes %>%
+    select(hhwt, statefip) %>% 
+    group_by(statefip) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state", inc_band = "total_hhlds") %>% 
+    select(-statefip)
+
+hh_by_inc_band <- bind_rows(county_hhlds, county_total, ct_hhlds, ct_total) %>%
+    ungroup() %>%
+    mutate(inc_band = as.factor(inc_band) %>% 
+                    fct_relevel(., "poor", "low", "middle", "high", "affluent", "total_hhlds"),
+                 level = as.factor(level)) %>% 
+    arrange(level, name) %>% 
+    group_by(level, name) %>% 
+    calc_shares(group = inc_band, denom = "total_hhlds", value = value, moe = value_se)
+
+out$hh_by_inc_band <- hh_by_inc_band
+```
+
+``` r
+hh_by_inc_band %>% 
+    group_by(level) %>% 
+    mutate(name = as.factor(name) %>% 
+                    fct_rev()) %>% 
+    filter(inc_band != "total_hhlds") %>% 
+    ggplot(aes(value, name, group = inc_band)) +
     geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.8)) +
     scale_x_continuous(
-        limits = c(0, 115000),
         expand = expansion(mult = c(0, 0.1)),
         labels = scales::comma) +
+    geom_text(aes(
+        label = scales::comma(value, accuracy = 1)),
+        position = position_dodge(.8), hjust = -0.1, family = "Roboto Condensed", size = 3.25) +
+    facet_grid(rows = "level", scales = "free_y", space = "free") +
+    guides(fill = guide_legend(title = "")) +
     labs(
         x = "",
         y = "",
@@ -110,73 +161,51 @@ count_hhlds %>%
     theme_ipsum_rc() +
     theme(
         panel.grid.minor = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_text(colour = "black"),
-        axis.text.y = element_text(colour = "black"))
-```
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
-
-``` r
-count_hhlds %>% 
-    select(-name) %>% 
-    mutate(name = "Connecticut") %>% 
-    group_by(name, inc_band) %>% 
-    summarise(total_hhlds = sum(total_hhlds)) %>% 
-    ggplot(aes(total_hhlds, inc_band)) +
-    geom_col(aes(fill = inc_band), width = .6, position = position_dodge(.7)) +
-    geom_text(aes(label = scales::comma(total_hhlds)), position = position_dodge(.7), hjust = 1.1, family = "Roboto Condensed") +
-    scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-    labs(
-        x = "",
-        y = "",
-        title = "Connecticut households in each income band",
-        subtitle = "(Relative to the household's county median income, not state median income.)") +
-    theme_ipsum_rc() +
-    theme(
         panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        legend.position = "none",
+        legend.position = "top",
+        plot.title.position = "plot",
         axis.text.x = element_blank(),
         axis.text.y = element_text(colour = "black"),
-        plot.title.position = "plot")
+        strip.text.y = element_blank())
 ```
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+More than half a million households in CT (40% of all households) are
+poor or low-income, earning less than three-quarters of their county’s
+median income. A similar share are affluent or high income, earning 125%
+or more of their county’s median income. Just one in five households
+statewide are considered middle income by this definition.
 
 ``` r
-out$hh_by_inc_band_state <- count_hhlds %>% 
-    select(-name) %>% 
-    mutate(name = "Connecticut") %>% 
-    group_by(name, inc_band) %>% 
-    summarise(total_hhlds = sum(total_hhlds))
+hh_by_inc_band %>% 
+    filter(inc_band != "total_hhlds") %>% 
+    ggplot(aes(fill = inc_band, values = share)) +
+    geom_waffle(n_rows = 10, size = 0.33, colour = "white", flip = F, make_proportional = T) +
+    facet_wrap(facets = "name") +
+    coord_equal() +
+    theme_ipsum_rc(grid = "") +
+    theme_enhance_waffle() +
+    theme(legend.position = "top",
+                plot.title.position = "plot") +
+    guides(fill = guide_legend(title = "")) +
+    labs(x = "", y = "",
+             title = "Share of households in each income band by state and county")
 ```
 
-This is not a way we typically look at this data, but this trend mirrors
-national trends with middle income households being squeezed out by high
-and low income households. More than half a million households in CT
-(40% of all households) are poor or low-income, earning less than
-three-quarters of their county’s median income. A similar share are
-affluent or high income, earning 125% or more of their county’s median
-income. One in five households statewide are considered middle income by
-this definition.
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-Out of curiosity, I also want to see the share of units in each income
-band by county.
+These waffles are not usually a way we look at this data, but I’m
+surprised at the consistency in the income distributions, even in the
+more rural counties. This trend mirrors national trends with middle
+income households being squeezed out by high and low income households.
+
+*Out of curiosity, I also want to see the share of a county’s units in
+each income band (so like what share of all affluent households are in
+FC). But I’ll come back to it later.*
+
+## Cost burden within each income band
 
 ``` r
-count_hhlds %>% 
-    select(-name) %>% 
-    group_by(inc_band) %>% 
-    summarise(total_hhlds = sum(total_hhlds))
+#redo design
+#statewide and county, cb by each
 ```
-
-    ## # A tibble: 5 x 2
-    ##   inc_band total_hhlds
-    ##   <fct>          <dbl>
-    ## 1 poor          352722
-    ## 2 low           180387
-    ## 3 middle        293490
-    ## 4 high          109921
-    ## 5 affluent      430854
