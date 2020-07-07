@@ -1,44 +1,36 @@
 Households desiring housing
 ================
 
-``` r
-library(ipumsr)
-library(tidyverse)
-library(srvyr)
-library(tidycensus)
-library(hrbrthemes)
-library(camiller)
-library(scales)
-```
-
 This notebook needs a better name. “Households desiring housing” to me
-reads as wanting to move, not being unable to afford housing. Maybe just
-“gaps in housing units available to households by income band” or
-something? Kind of a mouthful…
+suggests a household wants to move, not that they’re unable to afford
+housing. Maybe just “gaps in housing units available to households by
+income band” or something? Kind of a mouthful…
 
-There are a couple measurements in this notebook that build off of each
-other:
+There’s a lot going on in this notebook:
 
-  - Count and share of households by income band, the kinds of
-    occupations/jobs those housing occupants might work in (so salary by
-    occ?), and the share of those households that are cost-burdened (T2
-    in DC report).
-  - **Divisions of county median income make the most sense because HUD
-    regions (HMFAs) cross PUMA and county lines.**
+  - Count and share of households by income band by area
+      - **Divisions of county median income make the most sense because
+        HUD regions (HMFAs) cross PUMA and county lines, but consult
+        with Urban here.**
+      - Rounded to pretty numbers for legibility?
+  - The kinds of occupations/jobs those residents work in
+      - Not super germane to the conversation unless we’re talking about
+        wage reform, but brings the context back down to earth…
+  - Count and share of households in each band that are cost-burdened
+    (T2 in DC report)
   - The approximate monthly housing cost for an affordable unit for each
-    income band, rounded to pretty numbers for legibility. Then, the
-    count/share of units by those cost bands in the area (T3 in DC
+    income band.
+      - Rounded to pretty numbers for legibility?
+  - Count and share of units by those cost bands in the area (T3 in DC
     report).
-  - **Again, counties make sense if using county median income above.**
-  - The count of housing units needed for each cost band, and the count
-    of units in those cost bands, i.e., affordable to each income band
-    (F19 in DC report–they found that gaps/need existed in low income
-    bands and surpluses/lack of need in higher income bands)
+  - Number of housing units needed for each cost band so each household
+    would have an affordable housing cost, vs. the actual count of units
+    in those cost bands (F19 in DC report)
   - For each income band, the number of households that can/cannot
-    afford to pay more, and those that are vacant in that cost band (F20
-    in DC report).
+    afford to pay more, and a count of vacant units in that cost band
+    (F20 in DC report).
 
-## Clean and set survey design
+## Set survey design
 
 Starting by using county median incomes (CMI), then income bands like we
 did in the Community Index reports…
@@ -63,208 +55,18 @@ county:
   - Latino (any race)
   - All others (grouped)
 
-<!-- end list -->
-
-``` r
-minc <- get_acs(
-    geography = "county",
-      table = "B19013",
-    state = 09,
-      cache_table = T) %>% 
-    arrange(GEOID) %>% 
-    mutate(countyfip = seq(from = 1, to = 15, by = 2),
-                 name = str_remove(NAME, ", Connecticut")) %>% 
-    select(countyfip, name, minc = estimate)
-
-ddi <- read_ipums_ddi("../input_data/usa_00037.xml")
-
-pums <- read_ipums_micro(ddi, verbose = F)  %>% 
-    mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND), as_factor) %>% 
-    mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
-    mutate_at(vars(HHINCOME, OWNCOST, RENTGRS), as.integer) %>% 
-    janitor::clean_names() %>% 
-    left_join(minc, by = "countyfip") %>% 
-    mutate(ratio = hhincome / minc) %>% 
-    mutate(
-        inc_band = cut(
-            ratio,
-            breaks = c(-Inf, 0.5, 0.75, 1.25, 1.5, Inf),
-            labels = c("poor", "low", "middle", "high", "affluent"),
-            include.lowest = T, right = F)) %>% 
-    mutate(
-        inc_band = as.factor(inc_band) %>%
-            fct_relevel(., "poor", "low", "middle", "high", "affluent")) %>% 
-    mutate(cb = if_else(ownershp == "Rented", (rentgrs * 12) / hhincome, 99999)) %>% 
-    mutate(cb = if_else(ownershp == "Owned or being bought (loan)", (owncost * 12) / hhincome, cb)) %>%
-    # if rent is 0 and income is 0, no burden
-    mutate(cb = if_else((rentgrs == 0 & hhincome == 0), 0, cb)) %>% 
-    #if income is 0 and rent is >0, burden
-    mutate(
-        cost_burden = cut(
-            cb,
-            breaks = c(-Inf, .3, .5, Inf),
-            labels = c("no burden", "cost-burdened", "severely cost-burdened"),
-            include.lowest = T, right = F)) %>% 
-        mutate(race2 = if_else(hispan == "Not Hispanic", as.character(race), "Latino")) %>% 
-    mutate(race2 = as.factor(race2) %>% 
-                    fct_recode(Black = "Black/African American/Negro") %>%
-                    fct_other(keep = c("White", "Black", "Latino"), other_level = "Other race") %>%
-                    fct_relevel("White", "Black", "Latino", "Other race"))
-
-des <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
-    as_survey_design(., ids = 1, wt = hhwt)
-
-out <- list()
-```
-
 ## Household counts/shares by income bands
 
-### Prep counts
+### Define income bands
 
-``` r
-county_hhlds <- des %>%
-    select(hhwt, name, inc_band) %>% 
-    group_by(name, inc_band) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-county_total <- des %>%
-    select(hhwt, name) %>% 
-    group_by(name) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(inc_band = "total_hhlds") %>% 
-    mutate(level = "2_counties")
-
-ct_hhlds <- des %>%
-    select(hhwt, statefip, inc_band) %>% 
-    group_by(statefip, inc_band) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state") %>% 
-    select(-statefip)
-
-ct_total <- des %>%
-    select(hhwt, statefip) %>% 
-    group_by(statefip) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state", inc_band = "total_hhlds") %>% 
-    select(-statefip)
-
-hh_by_inc_band <- bind_rows(county_hhlds, county_total, ct_hhlds, ct_total) %>%
-    ungroup() %>%
-    mutate(inc_band = as.factor(inc_band) %>% 
-                    fct_relevel(., "poor", "low", "middle", "high", "affluent", "total_hhlds"),
-                 level = as.factor(level)) %>% 
-    arrange(level, name) %>% 
-    group_by(level, name) %>% 
-    calc_shares(group = inc_band, denom = "total_hhlds", value = value, moe = value_se)
-
-out$hh_by_inc_band <- hh_by_inc_band
-```
-
-### Race breakdowns
-
-Race/ethnicity of head of household.
-
-``` r
-county_hhlds_by_race <- des %>%
-    select(hhwt, name, inc_band, race2) %>% 
-    group_by(name, inc_band, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-county_race_total <- des %>%
-    select(hhwt, name, race2) %>% 
-    group_by(name, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(inc_band = "total") %>% 
-    mutate(level = "2_counties")
-
-ct_hhlds_by_race <- des %>%
-    select(hhwt, statefip, inc_band, race2) %>% 
-    group_by(statefip, inc_band, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state") %>% 
-    select(-statefip)
-
-ct_race_total <- des %>%
-    select(hhwt, statefip, race2) %>% 
-    group_by(statefip, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state", inc_band = "total") %>% 
-    select(-statefip)
-
-hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhlds_by_race, ct_race_total) %>%
-    ungroup() %>%
-    mutate(inc_band = as.factor(inc_band) %>% 
-                    fct_relevel(., "poor", "low", "middle", "high", "affluent", "total"),
-                 level = as.factor(level)) %>% 
-    arrange(level, name, race2) %>% 
-    group_by(level, name, race2) %>% 
-    calc_shares(group = inc_band, denom = "total", value = value, moe = value_se)
-
-out$hh_by_inc_band <- hh_by_race_inc_band
-```
-
-``` r
-hh_by_race_inc_band %>% 
-    filter(name == "Connecticut", inc_band != "total") %>% 
-    mutate(race2 = fct_rev(race2)) %>% 
-    ggplot(aes(share, race2, group = race2)) +
-    geom_col(aes(fill = inc_band), width = .8, position = position_stack(1)) +
-    #coord_flip() +
-    guides(fill = guide_legend(title = "", reverse = T)) +
-    geom_text(aes(label = percent(share, accuracy = 1)),
-                        position = position_stack(.5), family = "Roboto Condensed") +
-    scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-    theme_ipsum_rc() +
-    guides(fill = guide_legend(title = "")) +
-    labs(x = "", y = "",
-             title = "Share of households in each income band by race of HOH",
-             subtitle = "Connecticut") +
-    theme(panel.grid.major  = element_blank(),
-                panel.grid.minor = element_blank(),
-                axis.text.y = element_text(colour = "black"),
-                axis.text.x = element_blank(),
-                legend.position = "bottom",
-                plot.title.position = "plot")
-```
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
-
-More than half of all households headed by a Black or Latino person are
-poor or low income, compared to about a third of households headed by a
-white person. Only showing CT here, but there’s some variation by
-county, with more equitable distributions in Litchfield and Windham,
-less in Fairfield, New Haven, and Hartford.
-
-### Income breakdowns
-
-``` r
-ctminc <- get_acs(geography = "state", state = 09, table = "B19013") %>% 
-    select(name = NAME, minc = estimate)
-
-income_table <- minc %>% 
-    bind_rows(ctminc) %>% 
-    mutate(p = comma(round(minc * .5, 0), accuracy = 1),
-                 l = comma(round(minc * .75, 0), accuracy = 1),
-                 m = comma(round(minc * 1.25, 0), accuracy = 1), 
-                 h = comma(round(minc * 1.5, 0), accuracy = 1),
-                 poor = paste("Less than $", p, sep = ""),
-                 low_inc = paste("Between $", p, " and $", l, sep = ""),
-                 mid_inc = paste("Between $", l, " and $", m, sep = ""),
-                 high_inc = paste("Between $", m, " and $", h, sep = ""),
-                 affluent = paste("More than $", h, sep = "")) %>% 
-    select(name, poor:affluent)
-
-kableExtra::kable(income_table, caption = "Income bands by county")
-```
+Would it be preferable to set these as prettier breaks, or use the CT
+numbers for all counties?
 
 <table>
 
 <caption>
 
-Income bands by county
+Income ranges by income band and area
 
 </caption>
 
@@ -274,37 +76,37 @@ Income bands by county
 
 <th style="text-align:left;">
 
-name
+Name
 
 </th>
 
 <th style="text-align:left;">
 
-poor
+Poor
 
 </th>
 
 <th style="text-align:left;">
 
-low\_inc
+Low
 
 </th>
 
 <th style="text-align:left;">
 
-mid\_inc
+Middle
 
 </th>
 
 <th style="text-align:left;">
 
-high\_inc
+High
 
 </th>
 
 <th style="text-align:left;">
 
-affluent
+Affluent
 
 </th>
 
@@ -678,189 +480,525 @@ More than $114,159
 
 </table>
 
-### Households by income band
+### Race breakdowns
 
-``` r
-hh_by_inc_band %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    filter(inc_band != "total_hhlds") %>% 
-    ggplot(aes(value, name, group = rev(inc_band))) +
-    geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.8)) +
-    scale_x_continuous(
-        expand = expansion(mult = c(0, 0.1)),
-        labels = scales::comma) +
-    geom_text(aes(
-        label = comma(value, accuracy = 1)),
-        position = position_dodge(.8), hjust = -0.1, family = "Roboto Condensed", size = 3.75) +
-    guides(fill = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = "Number of households in each income band") +
-    theme_ipsum_rc() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major = element_blank(),
-        legend.position = "top",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"),
-        strip.text.y = element_blank())
-```
+Considering race/ethnicity of head of household. More than half of all
+households headed by a Black or Latino person are poor or low income,
+compared to about a third of households headed by a white person. Only
+showing CT here, but there’s some variation by county, with more
+equitable distributions in Litchfield and Windham, less in Fairfield,
+New Haven, and Hartford.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+### Count/share of households by income band
+
 More than half a million households in CT (40% of all households) are
 poor or low-income, earning less than three-quarters of their county’s
 median income. A similar share are affluent or high income, earning 125%
 or more of their county’s median income. Just one in five households
 statewide are considered middle income by this definition.
 
-``` r
-hh_by_inc_band %>% 
-    filter(inc_band != "total_hhlds") %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    ggplot(aes(name, share, group = name)) +
-    geom_col(aes(fill = inc_band), width = .7, position = position_stack(1)) +
-    coord_flip() +
-    geom_text(aes(label = percent(share, accuracy = 1)),
-                        position = position_stack(.5), family = "Roboto Condensed") +
-    scale_y_continuous(expand = expansion(mult = c(0, 0))) +
-    theme_ipsum_rc() +
-    guides(fill = guide_legend(title = "")) +
-    labs(x = "", y = "",
-             title = "Share of households in each income band by state and county") +
-    theme(panel.grid.major  = element_blank(),
-                panel.grid.minor = element_blank(),
-                axis.text.y = element_text(colour = "black"),
-                axis.text.x = element_blank(),
-                legend.position = "bottom",
-                plot.title.position = "plot")
-```
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Name
+
+</th>
+
+<th style="text-align:left;">
+
+Poor
+
+</th>
+
+<th style="text-align:left;">
+
+Low
+
+</th>
+
+<th style="text-align:left;">
+
+Middle
+
+</th>
+
+<th style="text-align:left;">
+
+High
+
+</th>
+
+<th style="text-align:left;">
+
+Affluent
+
+</th>
+
+<th style="text-align:left;">
+
+Total
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+93,471
+
+</td>
+
+<td style="text-align:left;">
+
+43,416
+
+</td>
+
+<td style="text-align:left;">
+
+66,244
+
+</td>
+
+<td style="text-align:left;">
+
+24,325
+
+</td>
+
+<td style="text-align:left;">
+
+113,036
+
+</td>
+
+<td style="text-align:left;">
+
+340,492
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+90,275
+
+</td>
+
+<td style="text-align:left;">
+
+47,543
+
+</td>
+
+<td style="text-align:left;">
+
+73,551
+
+</td>
+
+<td style="text-align:left;">
+
+29,171
+
+</td>
+
+<td style="text-align:left;">
+
+108,523
+
+</td>
+
+<td style="text-align:left;">
+
+349,063
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+17,353
+
+</td>
+
+<td style="text-align:left;">
+
+10,125
+
+</td>
+
+<td style="text-align:left;">
+
+18,243
+
+</td>
+
+<td style="text-align:left;">
+
+6,411
+
+</td>
+
+<td style="text-align:left;">
+
+21,855
+
+</td>
+
+<td style="text-align:left;">
+
+73,987
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+17,033
+
+</td>
+
+<td style="text-align:left;">
+
+9,033
+
+</td>
+
+<td style="text-align:left;">
+
+15,449
+
+</td>
+
+<td style="text-align:left;">
+
+5,858
+
+</td>
+
+<td style="text-align:left;">
+
+19,520
+
+</td>
+
+<td style="text-align:left;">
+
+66,893
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+84,672
+
+</td>
+
+<td style="text-align:left;">
+
+42,987
+
+</td>
+
+<td style="text-align:left;">
+
+69,453
+
+</td>
+
+<td style="text-align:left;">
+
+26,036
+
+</td>
+
+<td style="text-align:left;">
+
+106,708
+
+</td>
+
+<td style="text-align:left;">
+
+329,856
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+25,089
+
+</td>
+
+<td style="text-align:left;">
+
+14,553
+
+</td>
+
+<td style="text-align:left;">
+
+26,028
+
+</td>
+
+<td style="text-align:left;">
+
+9,263
+
+</td>
+
+<td style="text-align:left;">
+
+32,469
+
+</td>
+
+<td style="text-align:left;">
+
+107,402
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+14,403
+
+</td>
+
+<td style="text-align:left;">
+
+7,080
+
+</td>
+
+<td style="text-align:left;">
+
+13,145
+
+</td>
+
+<td style="text-align:left;">
+
+4,792
+
+</td>
+
+<td style="text-align:left;">
+
+15,798
+
+</td>
+
+<td style="text-align:left;">
+
+55,218
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+10,426
+
+</td>
+
+<td style="text-align:left;">
+
+5,650
+
+</td>
+
+<td style="text-align:left;">
+
+11,377
+
+</td>
+
+<td style="text-align:left;">
+
+4,065
+
+</td>
+
+<td style="text-align:left;">
+
+12,945
+
+</td>
+
+<td style="text-align:left;">
+
+44,463
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+352,722
+
+</td>
+
+<td style="text-align:left;">
+
+180,387
+
+</td>
+
+<td style="text-align:left;">
+
+293,490
+
+</td>
+
+<td style="text-align:left;">
+
+109,921
+
+</td>
+
+<td style="text-align:left;">
+
+430,854
+
+</td>
+
+<td style="text-align:left;">
+
+1,367,374
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 The income distributions are fairly consistent, even in the more rural
 counties. This trend mirrors national trends with middle income
 households being squeezed out by high and low income households.
 
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
 **Out of curiosity, I also want to see the share of a county’s units in
 each income band (so like what share of all affluent households are in
-FC).**
+FC) Will come back to that later.**
 
-## Cost burden within each income band
-
-``` r
-county_cb <- des %>%
-    select(hhwt, name, inc_band, cost_burden) %>% 
-    group_by(name, inc_band, cost_burden) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-ct_cb <- des %>%
-    select(hhwt, statefip, inc_band, cost_burden) %>%
-    group_by(statefip, inc_band, cost_burden) %>%
-    summarise(value = survey_total(hhwt)) %>%
-    mutate(name = "Connecticut", level = "1_state") %>%
-    select(-statefip)
-
-cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
-    mutate(cost_burden = if_else(is.na(cost_burden), "total_hhlds", as.character(cost_burden)),
-                 cost_burden = as.factor(cost_burden) %>% 
-                    fct_relevel(., "no burden", "cost-burdened", "severely cost-burdened", "total_hhlds")) %>% 
-    ungroup() %>%
-    mutate(inc_band = as.factor(inc_band) %>%
-                    fct_relevel(., "poor", "low", "middle", "high", "affluent"),
-                 level = as.factor(level)) %>%
-    arrange(level, name, inc_band) %>%
-    group_by(level, name, inc_band) %>%
-    calc_shares(group = cost_burden, denom = "total_hhlds", value = value, moe = value_se)
-
-out$cb_by_inc_band <- cb_by_inc_band
-```
-
-``` r
-cb_by_inc_band %>% 
-    mutate(cost_burden = fct_collapse(cost_burden, burden = c("cost-burdened", "severely cost-burdened"))) %>% 
-    ungroup() %>% 
-    select(-share, -sharemoe, -value_se) %>% 
-    group_by(level, name, inc_band, cost_burden) %>% 
-    summarise(value = sum(value)) %>% 
-    ungroup() %>% 
-    group_by(level, name, inc_band) %>% 
-    calc_shares(group = cost_burden, denom = "total_hhlds", value = value) %>% 
-    filter(cost_burden == "burden") %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    ggplot(aes(share, name, group = inc_band)) +
-    geom_point(aes(color = inc_band), size = 7.5) +
-    geom_text(aes(
-        label = percent(share, accuracy = 1)),
-        family = "Roboto Condensed", size = 3.55) +
-    scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
-    guides(color = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = "Cost-burden rates for households in each income band",
-        subtitle = "County and state") +
-    theme_ipsum_rc() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"))
-```
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+## Cost burden by income band
 
 No surprise that cost burden rates among poor households are around 80%,
-on the statewide level that’s more than 20x the rate of affluent
-households.
+at the statewide level that’s 20x the rate of affluent households.
 
 What does stand out a bit are the gaps between each group. Moving up the
 income scale (from lower to higher income) shows a 20-30 percentage
 point decrease in cost burden rates. Those gains are much smaller from
-medium to high and from high to affluent income groups.
+medium to high and from high to affluent income groups. Not like anyone
+was doubting this before, but this chart essentially says there’s not
+enough housing is affordable to low-income households, but there’s
+plenty of housing affordable to mid-to-high income households.
 
-``` r
-cb_by_inc_band %>% 
-    ungroup() %>% 
-    filter(!cost_burden %in% c("total_hhlds", "no burden")) %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    ggplot(aes(share, name, group = inc_band)) +
-    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
-    geom_text(aes(
-        label = percent(share, accuracy = 1)),
-        family = "Roboto Condensed", size = 2.75, alpha = 0.8) +
-    scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
-    facet_grid(rows = "cost_burden", scales = "free", space = "fixed") +
-    guides(color = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = "Rates of burden by burden type for households in each income band",
-        subtitle = "County and state",
-        caption = "Cost-burdened: spending 30%-50% of household income on housing;\nSeverely cost-burdened: spending more than 50% of household income on housing.") +
-    theme_ipsum_rc() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"))
-```
+Too bad I can’t do this by town…
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 For all households but the poorest, twice the share of households pay
 between 30% and 50% of income towards housing than pay more than 50%.
@@ -873,4 +1011,432 @@ of affordable housing.
 **See how many SCB households have no or negative income to make that
 point.**
 
-## For each group, how much housing do we need? How much do we have?
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+## Jobs held by people in these households
+
+Woops need to add OCC to PUMS output, then I guess do like top 3-5 most
+common jobs for each income band (limit to HOHs?)
+
+## Housing costs affordable to household within each band
+
+Over-under on the actual number of units costing less than $1.2K in FC?
+I’ll say 10,000.
+
+<table>
+
+<caption>
+
+Affordable monthly housing cost ranges by income band and area
+
+</caption>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Name
+
+</th>
+
+<th style="text-align:left;">
+
+Poor
+
+</th>
+
+<th style="text-align:left;">
+
+Low
+
+</th>
+
+<th style="text-align:left;">
+
+Middle
+
+</th>
+
+<th style="text-align:left;">
+
+High
+
+</th>
+
+<th style="text-align:left;">
+
+Affluent
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $1,162
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,162 and $1,743
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,743 and $2,905
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,905 and $3,486
+
+</td>
+
+<td style="text-align:left;">
+
+More than $3,486
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $904
+
+</td>
+
+<td style="text-align:left;">
+
+Between $904 and $1,356
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,356 and $2,260
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,260 and $2,712
+
+</td>
+
+<td style="text-align:left;">
+
+More than $2,712
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $979
+
+</td>
+
+<td style="text-align:left;">
+
+Between $979 and $1,468
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,468 and $2,447
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,447 and $2,937
+
+</td>
+
+<td style="text-align:left;">
+
+More than $2,937
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $1,060
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,060 and $1,589
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,589 and $2,649
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,649 and $3,179
+
+</td>
+
+<td style="text-align:left;">
+
+More than $3,179
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $839
+
+</td>
+
+<td style="text-align:left;">
+
+Between $839 and $1,259
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,259 and $2,098
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,098 and $2,517
+
+</td>
+
+<td style="text-align:left;">
+
+More than $2,517
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $892
+
+</td>
+
+<td style="text-align:left;">
+
+Between $892 and $1,338
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,338 and $2,230
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,230 and $2,676
+
+</td>
+
+<td style="text-align:left;">
+
+More than $2,676
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $1,061
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,061 and $1,592
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,592 and $2,654
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,654 and $3,184
+
+</td>
+
+<td style="text-align:left;">
+
+More than $3,184
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $810
+
+</td>
+
+<td style="text-align:left;">
+
+Between $810 and $1,214
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,214 and $2,024
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,024 and $2,429
+
+</td>
+
+<td style="text-align:left;">
+
+More than $2,429
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Less than $951
+
+</td>
+
+<td style="text-align:left;">
+
+Between $951 and $1,427
+
+</td>
+
+<td style="text-align:left;">
+
+Between $1,427 and $2,378
+
+</td>
+
+<td style="text-align:left;">
+
+Between $2,378 and $2,854
+
+</td>
+
+<td style="text-align:left;">
+
+More than $2,854
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
