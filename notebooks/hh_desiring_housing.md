@@ -10,8 +10,9 @@ There’s a lot going on in this notebook:
 
   - Count and share of households by income band by area
       - **Divisions of county median income make the most sense because
-        HUD regions (HMFAs) cross PUMA and county lines, but consult
-        with Urban here.**
+        HUD regions (HMFAs) cross PUMA and county lines. Brought up with
+        Urban on 7/8 and they will make a call soon, so I’ll move
+        forward with what I have for now.**
       - Rounded to pretty numbers for legibility?
   - The kinds of occupations/jobs those residents work in
       - Not super germane to the conversation unless we’re talking about
@@ -30,7 +31,7 @@ There’s a lot going on in this notebook:
     afford to pay more, and a count of vacant units in that cost band
     (F20 in DC report).
 
-## Set survey design
+## Establish groups
 
 Starting by using county median incomes (CMI), then income bands like we
 did in the Community Index reports…
@@ -47,7 +48,7 @@ Cost-burden in predictable breaks:
   - Cost-burdened: 30%-50% income to housing
   - Severely cost-burdened: More than 50% income to housing
 
-And race/ethnicty into a few major categories so we can look at it by
+And race/ethnicity into a few major categories so we can look at it by
 county:
 
   - White (NH)
@@ -55,12 +56,14 @@ county:
   - Latino (any race)
   - All others (grouped)
 
-## Household counts/shares by income bands
-
-### Define income bands
+## Define income bands
 
 Would it be preferable to set these as prettier breaks, or use the CT
 numbers for all counties?
+
+**A better chart here would be color coded segments indicating each
+group’s range, with each area on a new row. Could use arrow ends or
+something to communicate the top and bottom. Come back to this idea.**
 
 <table>
 
@@ -480,18 +483,7 @@ More than $114,159
 
 </table>
 
-### Race breakdowns
-
-Considering race/ethnicity of head of household. More than half of all
-households headed by a Black or Latino person are poor or low income,
-compared to about a third of households headed by a white person. Only
-showing CT here, but there’s some variation by county, with more
-equitable distributions in Litchfield and Windham, less in Fairfield,
-New Haven, and Hartford.
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
-
-### Count/share of households by income band
+## Count/share of households by income band
 
 More than half a million households in CT (40% of all households) are
 poor or low-income, earning less than three-quarters of their county’s
@@ -499,7 +491,7 @@ median income. A similar share are affluent or high income, earning 125%
 or more of their county’s median income. Just one in five households
 statewide are considered middle income by this definition.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 <table>
 
@@ -977,11 +969,490 @@ The income distributions are fairly consistent, even in the more rural
 counties. This trend mirrors national trends with middle income
 households being squeezed out by high and low income households.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 **Out of curiosity, I also want to see the share of a county’s units in
 each income band (so like what share of all affluent households are in
 FC) Will come back to that later.**
+
+## Household characteristics by income bands
+
+### Race breakdowns
+
+Considering race/ethnicity of head of household. More than half of all
+households headed by a Black or Latino person are poor or low income,
+compared to about a third of households headed by a white person. Only
+showing CT here to make the point, but there’s some variation by county,
+with more equitable distributions in Litchfield and Windham, less in
+Fairfield, New Haven, and Hartford.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+### Jobs held by household occupants
+
+Retrieved a list of 2018 occ codes from the Census Bureau at
+<https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html>.
+
+This table lists the top five occupations, in order from the most
+numerous, for household inhabitants—so not just heads of household, but
+all household members, including inhabitants with no work experience in
+the past 5 years or who have never worked—by household income band by
+county.
+
+To be honest, this is a little surprising in places. I expected more
+food service workers in general, and I’m surprised at how many teachers
+are workers in higher income households. Also \#thestruggle @ the
+adjuncts and GAs in Tolland County (UConn) versus Yale profs in New
+Haven and Middlesex Counties.
+
+<table>
+
+<caption>
+
+Common occupations for workers by household income band
+
+</caption>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+Name
+
+</th>
+
+<th style="text-align:left;">
+
+Poor
+
+</th>
+
+<th style="text-align:left;">
+
+Low
+
+</th>
+
+<th style="text-align:left;">
+
+Middle
+
+</th>
+
+<th style="text-align:left;">
+
+High
+
+</th>
+
+<th style="text-align:left;">
+
+Affluent
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Maids and housekeeping cleaners; Cashiers; Unemployed, with no work
+experience in the last 5 years or earlier or never worked; Janitors and
+building cleaners; Landscaping and groundskeeping workers
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Maids and housekeeping cleaners; Janitors and building
+cleaners; Retail salespersons; Secretaries and administrative
+assistants, except legal, medical, and executive
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Cashiers; Retail salespersons;
+Secretaries and administrative assistants, except legal, medical, and
+executive; Managers, all other
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Managers, all other; Registered
+nurses; Secretaries and administrative assistants, except legal,
+medical, and executive; Customer service representatives
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Elementary and middle school teachers; Financial
+managers; Chief executives; Accountants and auditors
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Unemployed, with no work experience in the last 5 years or
+earlier or never worked; Janitors and building cleaners; Nursing
+assistants; Personal care aides
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Nursing assistants; Retail salespersons; Janitors and building
+cleaners; Unemployed, with no work experience in the last 5 years or
+earlier or never worked
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Janitors and building cleaners; First-Line supervisors of
+retail sales workers; Secretaries and administrative assistants, except
+legal, medical, and executive; Driver/sales workers and truck drivers
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Managers, all other; Registered
+nurses; Secretaries and administrative assistants, except legal,
+medical, and executive; Customer service representatives
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Elementary and middle school teachers; Registered
+nurses; Accountants and auditors; Retail salespersons
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Janitors and building cleaners; Personal care aides; First-Line
+supervisors of retail sales workers; Retail salespersons; Cashiers
+
+</td>
+
+<td style="text-align:left;">
+
+Janitors and building cleaners; Secretaries and administrative
+assistants, except legal, medical, and executive; Cashiers; Bookkeeping,
+accounting, and auditing clerks; Driver/sales workers and truck drivers
+
+</td>
+
+<td style="text-align:left;">
+
+First-Line supervisors of retail sales workers; Elementary and middle
+school teachers; Landscaping and groundskeeping workers; Retail
+salespersons; Managers, all other
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Cashiers; First-Line supervisors
+of retail sales workers; Managers, all other; Janitors and building
+cleaners
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Managers, all other; Registered
+nurses; Chief executives; Customer service representatives
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Customer service representatives; Waiters and waitresses;
+Maids and housekeeping cleaners; Driver/sales workers and truck drivers
+
+</td>
+
+<td style="text-align:left;">
+
+Customer service representatives; First-Line supervisors of retail sales
+workers; Cashiers; Secretaries and administrative assistants, except
+legal, medical, and executive; Nursing assistants
+
+</td>
+
+<td style="text-align:left;">
+
+Secretaries and administrative assistants, except legal, medical, and
+executive; Elementary and middle school teachers; Registered nurses;
+Managers, all other; Cashiers
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Elementary and middle school teachers; First-Line
+supervisors of retail sales workers; Secretaries and administrative
+assistants, except legal, medical, and executive; Bookkeeping,
+accounting, and auditing clerks
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Managers, all other; Registered
+nurses; Chief executives; Postsecondary teachers
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Unemployed, with no work experience in the last 5 years or earlier or
+never worked; Cashiers; Personal care aides; Nursing assistants; Retail
+salespersons
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Nursing assistants; Retail salespersons; First-Line
+supervisors of retail sales workers; Unemployed, with no work experience
+in the last 5 years or earlier or never worked
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Janitors and building cleaners; Retail salespersons;
+First-Line supervisors of retail sales workers; Secretaries and
+administrative assistants, except legal, medical, and executive
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Retail salespersons; Driver/sales
+workers and truck drivers; Nursing assistants; Secretaries and
+administrative assistants, except legal, medical, and executive
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Managers, all other; Registered
+nurses; Secretaries and administrative assistants, except legal,
+medical, and executive; Postsecondary teachers
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Janitors and building cleaners; Retail salespersons; Maids and
+housekeeping cleaners; Waiters and waitresses
+
+</td>
+
+<td style="text-align:left;">
+
+Janitors and building cleaners; Cashiers; Landscaping and groundskeeping
+workers; Gambling services workers; Nursing assistants
+
+</td>
+
+<td style="text-align:left;">
+
+Secretaries and administrative assistants, except legal, medical, and
+executive; Driver/sales workers and truck drivers; Gambling services
+workers; Cashiers; Elementary and middle school teachers
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Elementary and middle school teachers; First-Line
+supervisors of retail sales workers; Waiters and waitresses; Cashiers
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Military enlisted tactical operations and
+air/weapons specialists and crew members; Registered nurses; Elementary
+and middle school teachers; Cashiers
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Waiters and waitresses; Customer service representatives; Nursing
+assistants; Postsecondary teachers; Cashiers
+
+</td>
+
+<td style="text-align:left;">
+
+Retail salespersons; Driver/sales workers and truck drivers; Teaching
+assistants; Nursing assistants; Laborers and freight, stock, and
+material movers, hand
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Accountants and auditors;
+Cashiers; First-Line supervisors of retail sales workers; Registered
+nurses
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Secretaries and administrative assistants, except
+legal, medical, and executive; Registered nurses; Elementary and middle
+school teachers; Driver/sales workers and truck drivers
+
+</td>
+
+<td style="text-align:left;">
+
+Managers, all other; Elementary and middle school teachers; Secretaries
+and administrative assistants, except legal, medical, and executive;
+Cashiers; Registered nurses
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Unemployed, with no work experience in the last 5 years or earlier or
+never worked; Retail salespersons; Laborers and freight, stock, and
+material movers, hand; Maids and housekeeping cleaners; Personal care
+aides
+
+</td>
+
+<td style="text-align:left;">
+
+Janitors and building cleaners; Food preparation workers; Cooks;
+First-Line supervisors of retail sales workers; Retail salespersons
+
+</td>
+
+<td style="text-align:left;">
+
+Driver/sales workers and truck drivers; Cashiers; Nursing assistants;
+Customer service representatives; First-Line supervisors of retail sales
+workers
+
+</td>
+
+<td style="text-align:left;">
+
+Elementary and middle school teachers; Cashiers; Driver/sales workers
+and truck drivers; Registered nurses; Licensed practical and licensed
+vocational nurses
+
+</td>
+
+<td style="text-align:left;">
+
+Registered nurses; Elementary and middle school teachers; Cashiers;
+Secretaries and administrative assistants, except legal, medical, and
+executive; Driver/sales workers and truck drivers
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 ## Cost burden by income band
 
@@ -998,7 +1469,7 @@ plenty of housing affordable to mid-to-high income households.
 
 Too bad I can’t do this by town…
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 For all households but the poorest, twice the share of households pay
 between 30% and 50% of income towards housing than pay more than 50%.
@@ -1011,12 +1482,7 @@ of affordable housing.
 **See how many SCB households have no or negative income to make that
 point.**
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
-
-## Jobs held by people in these households
-
-Woops need to add OCC to PUMS output, then I guess do like top 3-5 most
-common jobs for each income band (limit to HOHs?)
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ## Housing costs affordable to household within each band
 

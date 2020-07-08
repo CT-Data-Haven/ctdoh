@@ -46,7 +46,7 @@ This notebook needs a better name. "Households desiring housing" to me suggests 
 There's a lot going on in this notebook:
 
 * Count and share of households by income band by area
-    * **Divisions of county median income make the most sense because HUD regions (HMFAs) cross PUMA and county lines, but consult with Urban here.**
+    * **Divisions of county median income make the most sense because HUD regions (HMFAs) cross PUMA and county lines. Brought up with Urban on 7/8 and they will make a call soon, so I'll move forward with what I have for now.**
     * Rounded to pretty numbers for legibility?
 * The kinds of occupations/jobs those residents work in
     * Not super germane to the conversation unless we're talking about wage reform, but brings the context back down to earth...
@@ -58,7 +58,7 @@ There's a lot going on in this notebook:
 * For each income band, the number of households that can/cannot afford to pay more, and a count of vacant units in that cost band (F20 in DC report).
 
 
-## Set survey design
+## Establish groups
 
 Starting by using county median incomes (CMI), then income bands like we did in the Community Index reports...
 
@@ -74,7 +74,7 @@ Cost-burden in predictable breaks:
 * Cost-burdened: 30%-50% income to housing
 * Severely cost-burdened: More than 50% income to housing
 
-And race/ethnicty into a few major categories so we can look at it by county:
+And race/ethnicity into a few major categories so we can look at it by county:
 
 * White (NH)
 * Black (NH)
@@ -92,12 +92,12 @@ minc <- get_acs(
 				 name = str_remove(NAME, ", Connecticut")) %>% 
 	select(countyfip, name, minc = estimate)
 
-ddi <- read_ipums_ddi("../input_data/usa_00037.xml")
+ddi <- read_ipums_ddi("../input_data/usa_00038.xml")
 
 pums <- read_ipums_micro(ddi, verbose = F)  %>% 
 	mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND), as_factor) %>% 
 	mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
-	mutate_at(vars(HHINCOME, OWNCOST, RENTGRS), as.integer) %>% 
+	mutate_at(vars(HHINCOME, OWNCOST, RENTGRS, OCC), as.integer) %>% 
 	janitor::clean_names() %>% 
 	left_join(minc, by = "countyfip") %>% 
 	mutate(ratio = hhincome / minc) %>% 
@@ -133,8 +133,6 @@ des <- pums %>%
 
 out <- list()
 ```
-
-## Household counts/shares by income bands
 
 ```{r hh by inc band}
 county_hhlds <- des %>%
@@ -176,9 +174,11 @@ hh_by_inc_band <- bind_rows(county_hhlds, county_total, ct_hhlds, ct_total) %>%
 out$hh_by_inc_band <- hh_by_inc_band
 ```
 
-### Define income bands
+## Define income bands
 
 Would it be preferable to set these as prettier breaks, or use the CT numbers for all counties?
+
+**A better chart here would be color coded segments indicating each group's range, with each area on a new row. Could use arrow ends or something to communicate the top and bottom. Come back to this idea.**
 
 ```{r inc table}
 ctminc <- get_acs(geography = "state", state = 09, table = "B19013") %>% 
@@ -199,6 +199,79 @@ income_table <- minc %>%
 
 kable(income_table, caption = "Income ranges by income band and area")
 ```
+
+## Count/share of households by income band
+
+More than half a million households in CT (40% of all households) are poor or low-income, earning less than three-quarters of their county's median income. A similar share are affluent or high income, earning  125% or more of their county's median income. Just one in five households statewide are considered middle income by this definition.
+
+```{r}
+hh_by_inc_band %>% 
+	filter(inc_band != "Total", name == "Connecticut") %>% 
+	mutate(inc_band = fct_rev(inc_band)) %>% 
+	ggplot(aes(value, inc_band)) +
+	geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.8)) +
+	scale_x_continuous(
+		expand = expansion(mult = c(0, 0.1)),
+		labels = scales::comma) +
+	geom_text(aes(
+		label = comma(value, accuracy = 1)),
+		position = position_dodge(.8), hjust = 1, family = "Roboto Condensed", size = 3.75) +
+	guides(fill = guide_legend(title = "")) +
+	labs(
+		x = "",
+		y = "",
+		title = "Number of households in each income band",
+		subtitle = "Connecticut") +
+	scale_fill_custom() +
+	theme(
+		panel.grid.minor = element_blank(),
+		panel.grid.major = element_blank(),
+		legend.position = "none",
+		plot.title.position = "plot",
+		axis.text.x = element_blank(),
+		axis.text.y = element_text(colour = "black"),
+		strip.text.y = element_blank())
+```
+
+```{r}
+kable(hh_by_inc_band %>% 
+	mutate(level = fct_rev(level)) %>% 
+	arrange(level) %>% 
+	select(Name = name, inc_band, value) %>% 
+	mutate(value = comma(value, accuracy = 1)) %>% 
+	pivot_wider(id_cols = Name, names_from = "inc_band") %>% 
+	select(Name, Poor:Affluent, Total))
+```
+
+The income distributions are fairly consistent, even in the more rural counties. This trend mirrors national trends with middle income households being squeezed out by high and low income households.
+
+```{r fig.width=8, fig.height=8}
+hh_by_inc_band %>% 
+	filter(inc_band != "Total") %>% 
+	group_by(level) %>% 
+	mutate(name = as.factor(name) %>% 
+				 	fct_rev()) %>% 
+	ggplot(aes(name, share, group = name)) +
+	geom_col(aes(fill = inc_band), width = .7, position = position_stack(1)) +
+	coord_flip() +
+	geom_text(aes(label = percent(share, accuracy = 1)),
+						position = position_stack(.5), family = "Roboto Condensed") +
+	scale_y_continuous(expand = expansion(mult = c(0, 0))) +
+	scale_fill_custom() +
+	guides(fill = guide_legend(title = "")) +
+	labs(x = "", y = "",
+			 title = "Share of households in each income band by state and county") +
+	theme(panel.grid.major  = element_blank(),
+				panel.grid.minor = element_blank(),
+				axis.text.y = element_text(colour = "black"),
+				axis.text.x = element_blank(),
+				legend.position = "bottom",
+				plot.title.position = "plot")
+```
+
+**Out of curiosity, I also want to see the share of a county's units in each income band (so like what share of all affluent households are in FC) Will come back to that later.**
+
+## Household characteristics by income bands
 
 ### Race breakdowns
 
@@ -242,7 +315,7 @@ hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhl
 out$hh_by_inc_band <- hh_by_race_inc_band
 ```
 
-Considering race/ethnicity of head of household. More than half of all households headed by a Black or Latino person are poor or low income, compared to about a third of households headed by a white person. Only showing CT here, but there's some variation by county, with more equitable distributions in Litchfield and Windham, less in Fairfield, New Haven, and Hartford.
+Considering race/ethnicity of head of household. More than half of all households headed by a Black or Latino person are poor or low income, compared to about a third of households headed by a white person. Only showing CT here to make the point, but there's some variation by county, with more equitable distributions in Litchfield and Windham, less in Fairfield, New Haven, and Hartford.
 
 ```{r}
 hh_by_race_inc_band %>% 
@@ -267,77 +340,45 @@ hh_by_race_inc_band %>%
 				plot.title.position = "plot")
 ```
 
-### Count/share of households by income band
+### Jobs held by household occupants
 
-More than half a million households in CT (40% of all households) are poor or low-income, earning less than three-quarters of their county's median income. A similar share are affluent or high income, earning  125% or more of their county's median income. Just one in five households statewide are considered middle income by this definition.
+Retrieved a list of 2018 occ codes from the Census Bureau at <https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html>. 
 
-```{r}
-hh_by_inc_band %>% 
-	filter(inc_band != "Total", name == "Connecticut") %>% 
-	mutate(inc_band = fct_rev(inc_band)) %>% 
-	ggplot(aes(value, inc_band)) +
-	geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.8)) +
-	scale_x_continuous(
-		expand = expansion(mult = c(0, 0.1)),
-		labels = scales::comma) +
-	geom_text(aes(
-		label = comma(value, accuracy = 1)),
-		position = position_dodge(.8), hjust = 1, family = "Roboto Condensed", size = 3.75) +
-	guides(fill = guide_legend(title = "")) +
-	labs(
-		x = "",
-		y = "",
-		title = "Number of households in each income band",
-		subtitle = "Connecticut") +
-	scale_fill_custom() +
-	theme(
-		panel.grid.minor = element_blank(),
-		panel.grid.major = element_blank(),
-		legend.position = "none",
-		plot.title.position = "plot",
-		axis.text.x = element_blank(),
-		axis.text.y = element_text(colour = "black"),
-		strip.text.y = element_blank())
-```
+This table lists the top five occupations, in order from the most numerous, for household inhabitants—so not just heads of household, but all household members, including inhabitants with no work experience in the past 5 years or who have never worked—by household income band by county.
+
+To be honest, this is a little surprising in places. I expected more food service workers in general, and I'm surprised at how many teachers are workers in higher income households. Also #thestruggle @ the adjuncts and GAs in Tolland County (UConn) versus Yale profs in New Haven and Middlesex Counties.
 
 ```{r}
-knitr::kable(hh_by_inc_band %>% 
-	mutate(level = fct_rev(level)) %>% 
-	arrange(level) %>% 
-	select(Name = name, inc_band, value) %>% 
-	mutate(value = comma(value, accuracy = 1)) %>% 
-	pivot_wider(id_cols = Name, names_from = "inc_band") %>% 
-	select(Name, Poor:Affluent, Total))
+des2 <- pums %>%
+	filter(hhincome != 9999999, ownershp != "N/A") %>% 
+	as_survey_design(., ids = 1, wt = perwt)
+
+occ_lut <- read_csv("../input_data/occ_codes.csv") %>% 
+	mutate(occ_code = as.integer(occ_code)) #leading 0s
+
+common_jobs_by_inc_band <- pums %>%
+	select(perwt, name, inc_band, occ) %>% 
+	group_by(name, inc_band, occ) %>% 
+	summarise(workers = sum(perwt)) %>% 
+	mutate(level = "2_counties") %>% 
+	filter(occ != "0") %>% #0 is "n/a" occ
+	group_by(name, inc_band) %>% 
+	slice_max(workers, n = 5) %>%
+	left_join(occ_lut, by = c("occ" = "occ_code")) %>% 
+	select(level, name, inc_band, workers, occ, occ_label)
+
+out$common_jobs_by_inc_band <- common_jobs_by_inc_band
+
+common_jobs_by_inc_band %>% 
+	group_by(level, name, inc_band) %>% 
+	mutate(rank = order(workers, decreasing = T)) %>% 
+	select(name, inc_band, rank, occ_label) %>% 
+	pivot_wider(id_cols = c("name", "inc_band"), names_from = "rank", values_from = "occ_label") %>% 
+	mutate(`Common occupations` = paste(`1`, `2`, `3`, `4`, `5`, sep = "; ")) %>% 
+	select(Name = name, `Income band` = inc_band, `Common occupations`) %>% 
+	pivot_wider(id_cols = Name, names_from = "Income band", values_from = "Common occupations") %>% 
+	kable(caption = "Common occupations for workers by household income band")
 ```
-
-
-The income distributions are fairly consistent, even in the more rural counties. This trend mirrors national trends with middle income households being squeezed out by high and low income households.
-
-```{r fig.width=8, fig.height=8}
-hh_by_inc_band %>% 
-	filter(inc_band != "Total") %>% 
-	group_by(level) %>% 
-	mutate(name = as.factor(name) %>% 
-				 	fct_rev()) %>% 
-	ggplot(aes(name, share, group = name)) +
-	geom_col(aes(fill = inc_band), width = .7, position = position_stack(1)) +
-	coord_flip() +
-	geom_text(aes(label = percent(share, accuracy = 1)),
-						position = position_stack(.5), family = "Roboto Condensed") +
-	scale_y_continuous(expand = expansion(mult = c(0, 0))) +
-	scale_fill_custom() +
-	guides(fill = guide_legend(title = "")) +
-	labs(x = "", y = "",
-			 title = "Share of households in each income band by state and county") +
-	theme(panel.grid.major  = element_blank(),
-				panel.grid.minor = element_blank(),
-				axis.text.y = element_text(colour = "black"),
-				axis.text.x = element_blank(),
-				legend.position = "bottom",
-				plot.title.position = "plot")
-```
-
-**Out of curiosity, I also want to see the share of a county's units in each income band (so like what share of all affluent households are in FC) Will come back to that later.**
 
 ## Cost burden by income band
 
@@ -445,14 +486,6 @@ cb_by_inc_band %>%
 		plot.title.position = "plot",
 		axis.text.x = element_blank(),
 		axis.text.y = element_text(colour = "black"))
-```
-
-## Jobs held by people in these households
-
-Woops need to add OCC to PUMS output, then I guess do like top 3-5 most common jobs for each income band (limit to HOHs?)
-
-```{r}
-
 ```
 
 ## Housing costs affordable to household within each band

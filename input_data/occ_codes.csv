@@ -1,0 +1,571 @@
+occ_label,occ_code
+Chief executives,0010
+General and operations managers,0020
+Legislators,0030
+Advertising and promotions managers,0040
+Marketing managers,0051
+Sales managers,0052
+Public relations and fundraising managers,0060
+Administrative services managers,0101
+Facilities managers,0102
+Computer and information systems managers,0110
+Financial managers,0120
+Compensation and benefits managers,0135
+Human resources managers,0136
+Training and development managers,0137
+Industrial production managers,0140
+Purchasing managers,0150
+"Transportation, storage, and distribution managers",0160
+"Farmers, ranchers, and other agricultural managers",0205
+Construction managers,0220
+Education and childcare administrators ,0230
+Architectural and engineering managers,0300
+Food service managers,0310
+Funeral home managers,0325
+Entertainment and recreation managers,0335
+Lodging managers,0340
+Medical and health services managers,0350
+Natural sciences managers,0360
+Postmasters and mail superintendents,0400
+"Property, real estate, and community association managers",0410
+Social and community service managers,0420
+Emergency management directors,0425
+"Personal service managers, all other",0426
+"Managers, all other",0440
+"Agents and business managers of artists, performers, and athletes",0500
+"Buyers and purchasing agents, farm products",0510
+"Wholesale and retail buyers, except farm products",0520
+"Purchasing agents, except wholesale, retail, and farm products",0530
+"Claims adjusters, appraisers, examiners, and investigators",0540
+Compliance officers,0565
+Cost estimators,0600
+Human resources workers,0630
+"Compensation, benefits, and job analysis specialists",0640
+Training and development specialists,0650
+Logisticians,0700
+Project management specialists,0705
+Management analysts,0710
+"Meeting, convention, and event planners",0725
+Fundraisers,0726
+Market research analysts and marketing specialists,0735
+"Business operations specialists, all other",0750
+Accountants and auditors,0800
+Property appraisers and assessors,0810
+Budget analysts,0820
+Credit analysts,0830
+Financial and investment analysts,0845
+Personal financial advisors,0850
+Insurance underwriters,0860
+Financial examiners,0900
+Credit counselors and loan officers,0910
+"Tax examiners and collectors, and revenue agents",0930
+Tax preparers,0940
+Other financial specialists,0960
+Computer and information research scientists,1005
+Computer systems analysts,1006
+Information security analysts,1007
+Computer programmers,1010
+Software developers,1021
+Software quality assurance analysts and testers,1022
+Web developers,1031
+Web and digital interface designers,1032
+Computer support specialists,1050
+Database administrators and architects,1065
+Network and computer systems administrators,1105
+Computer network architects,1106
+"Computer occupations, all other",1108
+Actuaries,1200
+Mathematicians,1210
+Operations research analysts,1220
+Statisticians,1230
+Other mathematical science occupations,1240
+"Architects, except landscape and naval",1305
+Landscape architects,1306
+"Surveyors, cartographers, and photogrammetrists",1310
+Aerospace engineers,1320
+Agricultural engineers,1330
+Bioengineers and biomedical engineers,1340
+Chemical engineers,1350
+Civil engineers,1360
+Computer hardware engineers,1400
+Electrical and electronics engineers,1410
+Environmental engineers,1420
+"Industrial engineers, including health and safety ",1430
+Marine engineers and naval architects,1440
+Materials engineers,1450
+Mechanical engineers,1460
+"Mining and geological engineers, including mining safety engineers",1500
+Nuclear engineers,1510
+Petroleum engineers,1520
+"Engineers, all other",1530
+Architectural and civil drafters,1541
+Other drafters,1545
+Electrical and electronic engineering technologists and technicians,1551
+"Other engineering technologists and technicians, except drafters",1555
+Surveying and mapping technicians,1560
+Agricultural and food scientists,1600
+Biological scientists,1610
+Conservation scientists and foresters,1640
+Medical scientists,1650
+"Life scientists, all other",1660
+Astronomers and physicists,1700
+Atmospheric and space scientists,1710
+Chemists and materials scientists,1720
+"Environmental scientists and specialists, including health",1745
+"Geoscientists and hydrologists, except geographers",1750
+"Physical scientists, all other",1760
+Economists,1800
+Survey researchers,1815
+Clinical and counseling psychologists,1821
+School psychologists,1822
+Other psychologists,1825
+Sociologists,1830
+Urban and regional planners,1840
+Miscellaneous social scientists and related workers,1860
+Agricultural and food science technicians,1900
+Biological technicians,1910
+Chemical technicians,1920
+Environmental  science and geoscience technicians,1935
+Nuclear technicians,1940
+Social science research assistants,1950
+"Other life, physical, and social science technicians",1970
+Occupational health and safety specialists and technicians,1980
+Substance abuse and behavioral disorder counselors,2001
+"Educational, guidance, and career counselors and advisors",2002
+Marriage and family therapists,2003
+Mental health counselors,2004
+Rehabilitation counselors,2005
+"Counselors, all other",2006
+"Child, family, and school social workers",2011
+Healthcare social workers,2012
+Mental health and substance abuse social workers,2013
+"Social workers, all other",2014
+Probation officers and correctional treatment specialists,2015
+Social and human service assistants,2016
+Other community and social service specialists,2025
+Clergy,2040
+"Directors, religious activities and education",2050
+"Religious workers, all other",2060
+Lawyers,2100
+Judicial law clerks,2105
+"Judges, magistrates, and other judicial workers",2110
+Paralegals and legal assistants,2145
+"Title examiners, abstractors, and searchers",2170
+"Legal support workers, all other",2180
+Postsecondary teachers,2205
+Preschool and kindergarten teachers,2300
+Elementary and middle school teachers,2310
+Secondary school teachers,2320
+Special education teachers,2330
+Tutors,2350
+Other teachers and instructors,2360
+"Archivists, curators, and museum technicians",2400
+Librarians and media collections specialists,2435
+Library technicians,2440
+Teaching assistants,2545
+Other educational instruction and library workers,2555
+Artists and related workers,2600
+Commercial and industrial designers,2631
+Fashion designers,2632
+Floral designers,2633
+Graphic designers,2634
+Interior designers,2635
+Merchandise displayers and window trimmers,2636
+Other designers,2640
+Actors,2700
+Producers and directors,2710
+Athletes and sports competitors,2721
+Coaches and scouts,2722
+"Umpires, referees, and other sports officials",2723
+Dancers and choreographers,2740
+Music directors and composers,2751
+Musicians and singers,2752
+"Disc jockeys, except radio ",2755
+"Entertainers and performers, sports and related workers, all other",2770
+Broadcast announcers and radio disc jockeys,2805
+"News analysts, reporters, and journalists",2810
+Public relations specialists,2825
+Editors,2830
+Technical writers,2840
+Writers and authors,2850
+Interpreters and translators,2861
+Court reporters and simultaneous captioners,2862
+"Media and communication workers, all other",2865
+"Broadcast, sound, and lighting technicians",2905
+Photographers,2910
+"Television, video, and film camera operators and editors",2920
+"Media and communication equipment workers, all other",2970
+Chiropractors,3000
+Dentists,3010
+Dietitians and nutritionists,3030
+Optometrists,3040
+Pharmacists,3050
+Emergency medicine physicians,3065
+Radiologists,3070
+Other physicians,3090
+Surgeons,3100
+Physician assistants,3110
+Podiatrists,3120
+Audiologists,3140
+Occupational therapists,3150
+Physical therapists,3160
+Radiation therapists,3200
+Recreational therapists,3210
+Respiratory therapists,3220
+Speech-language pathologists,3230
+Exercise physiologists,3235
+"Therapists, all other",3245
+Veterinarians,3250
+Registered nurses,3255
+Nurse anesthetists,3256
+Nurse midwives,3257
+Nurse practitioners,3258
+Acupuncturists,3261
+"Healthcare diagnosing or treating practitioners, all other",3270
+Clinical laboratory technologists and technicians,3300
+Dental hygienists,3310
+Cardiovascular technologists and technicians,3321
+Diagnostic medical sonographers,3322
+Radiologic technologists and technicians,3323
+Magnetic resonance imaging technologists,3324
+Nuclear medicine technologists and medical dosimetrists,3330
+Emergency medical technicians,3401
+Paramedics,3402
+Pharmacy technicians,3421
+Psychiatric technicians,3422
+Surgical technologists,3423
+Veterinary technologists and technicians,3424
+Dietetic technicians and ophthalmic medical technicians,3430
+Licensed practical and licensed vocational nurses,3500
+Medical records specialists,3515
+"Opticians, dispensing",3520
+Miscellaneous health technologists and technicians,3545
+Other healthcare practitioners and technical occupations,3550
+Home health aides,3601
+Personal care aides,3602
+Nursing assistants,3603
+Orderlies and psychiatric aides,3605
+Occupational therapy assistants and aides,3610
+Physical therapist assistants and aides,3620
+Massage therapists,3630
+Dental assistants,3640
+Medical assistants,3645
+Medical transcriptionists,3646
+Pharmacy aides,3647
+Veterinary assistants and laboratory animal caretakers,3648
+Phlebotomists,3649
+Other healthcare support workers,3655
+First-line supervisors of correctional officers,3700
+First-line supervisors of police and detectives,3710
+First-line supervisors of firefighting and prevention workers,3720
+First-line supervisors of security workers,3725
+"First-line supervisors of protective service workers, all other",3735
+Firefighters,3740
+Fire inspectors ,3750
+Bailiffs,3801
+Correctional officers and jailers,3802
+Detectives and criminal investigators,3820
+Fish and game wardens,3830
+Parking enforcement workers,3840
+Police officers,3870
+Animal control workers,3900
+Private detectives and investigators,3910
+Security guards and gambling surveillance officers,3930
+Crossing guards and flaggers,3940
+Transportation security screeners,3945
+School bus monitors,3946
+Other protective service workers,3960
+Chefs and head cooks,4000
+First-line supervisors of food preparation and serving workers,4010
+Cooks,4020
+Food preparation workers,4030
+Bartenders,4040
+Fast food and counter workers,4055
+Waiters and waitresses,4110
+"Food servers, nonrestaurant",4120
+Dining room and cafeteria attendants and bartender helpers,4130
+Dishwashers,4140
+"Hosts and hostesses, restaurant, lounge, and coffee shop",4150
+"Food preparation and serving related workers, all other",4160
+First-line supervisors of housekeeping and janitorial workers,4200
+"First-line supervisors of landscaping, lawn service, and groundskeeping workers",4210
+Janitors and building cleaners,4220
+Maids and housekeeping cleaners,4230
+Pest control workers,4240
+Landscaping and groundskeeping workers,4251
+Tree trimmers and pruners,4252
+Other grounds maintenance workers,4255
+Supervisors of personal care and service workers,4330
+Animal trainers,4340
+Animal caretakers,4350
+Gambling services workers,4400
+"Ushers, lobby attendants, and ticket takers",4420
+Other entertainment attendants and related workers,4435
+"Embalmers, crematory operators and funeral attendants",4461
+"Morticians, undertakers, and funeral arrangers",4465
+Barbers,4500
+"Hairdressers, hairstylists, and cosmetologists",4510
+Manicurists and pedicurists,4521
+Skincare specialists,4522
+Other personal appearance workers,4525
+"Baggage porters, bellhops, and concierges",4530
+Tour and travel guides,4540
+Childcare workers,4600
+Exercise trainers and group fitness instructors,4621
+Recreation workers,4622
+Residential advisors,4640
+"Personal care and service workers, all other",4655
+First-Line supervisors of retail sales workers,4700
+First-Line supervisors of non-retail sales workers,4710
+Cashiers,4720
+Counter and rental clerks,4740
+Parts salespersons,4750
+Retail salespersons,4760
+Advertising sales agents,4800
+Insurance sales agents,4810
+"Securities, commodities, and financial services sales agents",4820
+Travel agents,4830
+"Sales representatives of services, except advertising, insurance, financial services, and travel",4840
+"Sales representatives, wholesale and manufacturing",4850
+"Models, demonstrators, and product promoters",4900
+Real estate brokers and sales agents,4920
+Sales engineers,4930
+Telemarketers,4940
+"Door-to-door sales workers, news and street vendors, and related workers",4950
+"Sales and related workers, all other",4965
+First-Line supervisors of office and administrative support workers,5000
+"Switchboard operators, including answering service",5010
+Telephone operators,5020
+"Communications equipment operators, all other",5040
+Bill and account collectors,5100
+Billing and posting clerks,5110
+"Bookkeeping, accounting, and auditing clerks",5120
+Gambling cage workers,5130
+Payroll and timekeeping clerks,5140
+Procurement clerks,5150
+Tellers,5160
+"Financial clerks, all other",5165
+Brokerage clerks,5200
+Correspondence clerks,5210
+"Court, municipal, and license clerks",5220
+"Credit authorizers, checkers, and clerks",5230
+Customer service representatives,5240
+"Eligibility interviewers, government programs",5250
+File clerks,5260
+"Hotel, motel, and resort desk clerks",5300
+"Interviewers, except eligibility and loan",5310
+"Library assistants, clerical",5320
+Loan interviewers and clerks,5330
+New accounts clerks,5340
+Order clerks,5350
+"Human resources assistants, except payroll and timekeeping",5360
+Receptionists and information clerks,5400
+Reservation and transportation ticket agents and travel clerks,5410
+"Information and record clerks, all other",5420
+Cargo and freight agents,5500
+Couriers and messengers,5510
+Public safety telecommunicators,5521
+"Dispatchers, except police, fire, and ambulance",5522
+"Meter readers, utilities",5530
+Postal service clerks,5540
+Postal service mail carriers,5550
+"Postal service mail sorters, processors, and processing machine operators",5560
+"Production, planning, and expediting clerks",5600
+"Shipping, receiving, and inventory clerks",5610
+"Weighers, measurers, checkers, and samplers, recordkeeping",5630
+Executive secretaries and executive administrative assistants,5710
+Legal secretaries and administrative assistants,5720
+Medical secretaries and administrative assistants,5730
+"Secretaries and administrative assistants, except legal, medical, and executive",5740
+Data entry keyers,5810
+Word processors and typists,5820
+Desktop publishers,5830
+Insurance claims and policy processing clerks,5840
+"Mail clerks and mail machine operators, except postal service",5850
+"Office clerks, general",5860
+"Office machine operators, except computer",5900
+Proofreaders and copy markers,5910
+Statistical assistants,5920
+"Office and administrative support workers, all other",5940
+"First-line supervisors of farming, fishing, and forestry workers",6005
+Agricultural inspectors,6010
+Animal breeders,6020
+"Graders and sorters, agricultural products",6040
+Miscellaneous agricultural workers,6050
+Fishing and hunting workers,6115
+Forest and conservation workers,6120
+Logging workers,6130
+First-line supervisors of construction trades and extraction workers,6200
+Boilermakers,6210
+"Brickmasons, blockmasons, and stonemasons",6220
+Carpenters,6230
+"Carpet, floor, and tile installers and finishers",6240
+"Cement masons, concrete finishers, and terrazzo workers",6250
+Construction laborers,6260
+Construction equipment operators,6305
+"Drywall installers, ceiling tile installers, and tapers",6330
+Electricians,6355
+Glaziers,6360
+Insulation workers,6400
+Painters and paperhangers,6410
+Pipelayers,6441
+"Plumbers, pipefitters, and steamfitters",6442
+Plasterers and stucco masons,6460
+Reinforcing iron and rebar workers,6500
+Roofers,6515
+Sheet metal workers,6520
+Structural iron and steel workers,6530
+Solar photovoltaic installers,6540
+"Helpers, construction trades",6600
+Construction and building inspectors,6660
+Elevator and escalator installers and repairers,6700
+Fence erectors,6710
+Hazardous materials removal workers,6720
+Highway maintenance workers,6730
+Rail-track laying and maintenance equipment operators,6740
+Septic tank servicers and sewer pipe cleaners,6750
+Miscellaneous construction and related workers,6765
+"Derrick, rotary drill, and service unit operators, oil and gas  ",6800
+"Excavating and loading machine and dragline operators, surface mining",6821
+"Earth drillers, except oil and gas",6825
+"Explosives workers, ordnance handling experts, and blasters",6835
+Underground mining machine operators,6850
+"Roustabouts, oil and gas",6920
+Other extraction workers,6950
+"First-line supervisors of mechanics, installers, and repairers",7000
+"Computer, automated teller, and office machine repairers",7010
+Radio and telecommunications equipment installers and repairers,7020
+Avionics technicians,7030
+"Electric motor, power tool, and related repairers",7040
+"Electrical and electronics installers and repairers, transportation equipment",7050
+"Electrical and electronics repairers, industrial and utility ",7100
+"Electronic equipment installers and repairers, motor vehicles",7110
+Audiovisual equipment installers and repairers ,7120
+Security and fire alarm systems installers,7130
+Aircraft mechanics and service technicians,7140
+Automotive body and related repairers,7150
+Automotive glass installers and repairers,7160
+Automotive service technicians and mechanics,7200
+Bus and truck mechanics and diesel engine specialists,7210
+Heavy vehicle and mobile equipment service technicians and mechanics,7220
+Small engine mechanics,7240
+"Miscellaneous vehicle and mobile equipment mechanics, installers, and repairers",7260
+Control and valve installers and repairers,7300
+"Heating, air conditioning, and refrigeration mechanics and installers",7315
+Home appliance repairers,7320
+Industrial and refractory machinery mechanics,7330
+"Maintenance and repair workers, general",7340
+"Maintenance workers, machinery",7350
+Millwrights,7360
+Electrical power-line installers and repairers,7410
+Telecommunications line installers and repairers,7420
+Precision instrument and equipment repairers,7430
+Wind turbine service technicians,7440
+"Coin, vending, and amusement machine servicers and repairers",7510
+Commercial divers,7520
+Locksmiths and safe repairers,7540
+Manufactured building and mobile home installers,7550
+Riggers,7560
+"Helpers--installation, maintenance, and repair workers",7610
+"Other installation, maintenance, and repair workers",7640
+First-line supervisors of production and operating workers,7700
+"Aircraft structure, surfaces, rigging, and systems assemblers",7710
+"Electrical, electronics, and electromechanical assemblers",7720
+Engine and other machine assemblers,7730
+Structural metal fabricators and fitters,7740
+Other assemblers and fabricators,7750
+Bakers,7800
+"Butchers and other meat, poultry, and fish processing workers",7810
+"Food and tobacco roasting, baking, and drying machine operators and tenders",7830
+Food batchmakers,7840
+Food cooking machine operators and tenders,7850
+"Food processing workers, all other",7855
+Computer numerically controlled tool operators and programmers,7905
+"Forming machine setters, operators, and tenders, metal and plastic",7925
+"Cutting, punching, and press machine setters, operators, and tenders, metal and plastic",7950
+"Grinding, lapping, polishing, and buffing machine tool setters, operators, and tenders, metal and plastic",8000
+"Other machine tool setters, operators, and tenders, metal and plastic",8025
+Machinists,8030
+"Metal furnace operators, tenders, pourers, and casters",8040
+"Model makers and patternmakers, metal and plastic",8060
+"Molders and molding machine setters, operators, and tenders, metal and plastic",8100
+Tool and die makers,8130
+"Welding, soldering, and brazing workers",8140
+Other metal workers and plastic workers,8225
+Prepress technicians and workers,8250
+Printing press operators,8255
+Print binding and finishing workers,8256
+Laundry and dry-cleaning workers,8300
+"Pressers, textile, garment, and related materials",8310
+Sewing machine operators,8320
+Shoe and leather workers,8335
+"Tailors, dressmakers, and sewers",8350
+"Textile machine setters, operators, and tenders",8365
+Upholsterers,8450
+"Other textile, apparel, and furnishings workers",8465
+Cabinetmakers and bench carpenters,8500
+Furniture finishers,8510
+"Sawing machine setters, operators, and tenders, wood",8530
+"Woodworking machine setters, operators, and tenders, except sawing",8540
+Other woodworkers,8555
+"Power plant operators, distributors, and dispatchers",8600
+Stationary engineers and boiler operators,8610
+Water and wastewater treatment plant and system operators,8620
+Miscellaneous plant and system operators,8630
+"Chemical processing machine setters, operators, and tenders",8640
+"Crushing, grinding, polishing, mixing, and blending workers",8650
+Cutting workers,8710
+"Extruding, forming, pressing, and compacting machine setters, operators, and tenders",8720
+"Furnace, kiln, oven, drier, and kettle operators and tenders",8730
+"Inspectors, testers, sorters, samplers, and weighers",8740
+Jewelers and precious stone and metal workers,8750
+Dental and ophthalmic laboratory technicians and medical appliance technicians,8760
+Packaging and filling machine operators and tenders,8800
+Painting workers,8810
+Photographic process workers and processing machine operators,8830
+Adhesive bonding machine operators and tenders,8850
+Etchers and engravers,8910
+"Molders, shapers, and casters, except metal and plastic",8920
+"Paper goods machine setters, operators, and tenders",8930
+Tire builders,8940
+Helpers--production workers,8950
+Other production equipment operators and tenders,8865
+Other production workers,8990
+Supervisors of transportation and material moving workers,9005
+Aircraft pilots and flight engineers,9030
+Air traffic controllers and airfield operations specialists,9040
+Flight attendants,9050
+"Ambulance drivers and attendants, except emergency medical technicians",9110
+"Bus drivers, school",9121
+"Bus drivers, transit and intercity",9122
+Driver/sales workers and truck drivers,9130
+Shuttle drivers and chauffeurs,9141
+Taxi drivers,9142
+"Motor vehicle operators, all other",9150
+Locomotive engineers and operators,9210
+Railroad conductors and yardmasters,9240
+Other rail transportation workers,9265
+Sailors and marine oilers,9300
+Ship and boat captains and operators,9310
+Ship engineers ,9330
+Parking attendants,9350
+Transportation service attendants,9365
+Transportation inspectors,9410
+Passenger attendants,9415
+Other transportation workers,9430
+Crane and tower operators,9510
+"Conveyor, dredge, and hoist and winch operators",9570
+Industrial truck and tractor operators,9600
+Cleaners of vehicles and equipment,9610
+"Laborers and freight, stock, and material movers, hand",9620
+Machine feeders and offbearers,9630
+"Packers and packagers, hand",9640
+Stockers and order fillers,9645
+Pumping station operators,9650
+Refuse and recyclable material collectors,9720
+Other material moving workers,9760
+Military officer special and tactical operations leaders,9800
+First-line enlisted military supervisors,9810
+Military enlisted tactical operations and air/weapons specialists and crew members,9825
+"Military, rank not Specified",9830
+"Unemployed, with no work experience in the last 5 years or earlier or never worked",9920
