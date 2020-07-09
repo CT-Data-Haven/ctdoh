@@ -269,8 +269,6 @@ hh_by_inc_band %>%
 				plot.title.position = "plot")
 ```
 
-**Out of curiosity, I also want to see the share of a county's units in each income band (so like what share of all affluent households are in FC) Will come back to that later.**
-
 ## Household characteristics by income bands
 
 ### Race breakdowns
@@ -286,7 +284,7 @@ county_race_total <- des %>%
 	select(hhwt, name, race2) %>% 
 	group_by(name, race2) %>% 
 	summarise(value = survey_total(hhwt)) %>% 
-	mutate(inc_band = "total") %>% 
+	mutate(inc_band = "Total") %>% 
 	mutate(level = "2_counties")
 
 ct_hhlds_by_race <- des %>%
@@ -315,11 +313,11 @@ hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhl
 out$hh_by_inc_band <- hh_by_race_inc_band
 ```
 
-Considering race/ethnicity of head of household. More than half of all households headed by a Black or Latino person are poor or low income, compared to about a third of households headed by a white person. Only showing CT here to make the point, but there's some variation by county, with more equitable distributions in Litchfield and Windham, less in Fairfield, New Haven, and Hartford.
+Considering race/ethnicity of head of household. Statewide, more than half of all households headed by a Black or Latino person are poor or low income, compared to about a third of households headed by a white person. Some variation exists by county.
 
-```{r}
+```{r fig.width=10, fig.height=10}
 hh_by_race_inc_band %>% 
-	filter(name == "Connecticut", inc_band != "Total") %>% 
+	filter(inc_band != "Total") %>% 
 	mutate(race2 = fct_rev(race2)) %>% 
 	ggplot(aes(share, race2, group = race2)) +
 	geom_col(aes(fill = inc_band), width = .8, position = position_stack(1)) +
@@ -327,11 +325,11 @@ hh_by_race_inc_band %>%
 	geom_text(aes(label = percent(share, accuracy = 1)),
 						position = position_stack(.5), family = "Roboto Condensed") +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
+	facet_wrap(facets = "name") +
 	guides(fill = guide_legend(title = "")) +
 	scale_fill_custom() +
 	labs(x = "", y = "",
-			 title = "Share of households in each income band by race of HOH",
-			 subtitle = "Connecticut") +
+			 title = "Share of households in each income band by race of HOH") +
 	theme(panel.grid.major  = element_blank(),
 				panel.grid.minor = element_blank(),
 				axis.text.y = element_text(colour = "black"),
@@ -342,11 +340,12 @@ hh_by_race_inc_band %>%
 
 ### Jobs held by household occupants
 
-Retrieved a list of 2018 occ codes from the Census Bureau at <https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html>. 
+Retrieved a list of 2018 occ codes from the Census Bureau at
+<https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html>. 
 
 This table lists the top five occupations, in order from the most numerous, for household inhabitants—so not just heads of household, but all household members, including inhabitants with no work experience in the past 5 years or who have never worked—by household income band by county.
 
-To be honest, this is a little surprising in places. I expected more food service workers in general, and I'm surprised at how many teachers are workers in higher income households. Also #thestruggle @ the adjuncts and GAs in Tolland County (UConn) versus Yale profs in New Haven and Middlesex Counties.
+To be honest, this is a little surprising in places. I expected more food service workers in general, and I'm surprised at how many elementary and middle school teachers are workers in higher income households. Either I have the exact wrong impression of how much teachers are paid or it's a common occupation for people whose partners/spouses pull in big money. And yet, #thestruggle: adjuncts and GAs in Tolland County (UConn) getting those minimum wage grad school stipends while profs in New Haven and Middlesex Counties make six figures teaching half the load.
 
 ```{r}
 des2 <- pums %>%
@@ -411,11 +410,9 @@ cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
 out$cb_by_inc_band <- cb_by_inc_band
 ```
 
-No surprise that cost burden rates among poor households are around 80%, at the statewide level that's 20x the rate of affluent households.
+No surprise that cost burden rates among poor households are around 80%, at the statewide level that's 20x the rate of affluent households. Too bad I can't do this by town...
 
-What does stand out a bit are the gaps between each group. Moving up the income scale (from lower to higher income) shows a 20-30 percentage point decrease in cost burden rates. Those gains are much smaller from medium to high and from high to affluent income groups. Not like anyone was doubting this before, but this chart essentially says there's not enough housing is affordable to low-income households, but there's plenty of housing affordable to mid-to-high income households.
-
-Too bad I can't do this by town...
+What does stand out a bit are the gaps between each group. Moving up the income scale (from lower to higher income) shows a 20-30 percentage point decrease in cost burden rates. Those gains are much smaller from medium to high and from high to affluent income groups. Not like anyone was doubting this before, but this chart essentially says there's not enough housing affordable to low-income households, but there's plenty of housing affordable to mid-to-high income households. More on this below...
 
 ```{r fig.width=8}
 cb_by_inc_band %>% 
@@ -441,8 +438,7 @@ cb_by_inc_band %>%
 	labs(
 		x = "",
 		y = "",
-		title = "Cost-burden rates for households in each income band",
-		subtitle = "County and state") +
+		title = "Cost-burden rates for households in each income band") +
 	scale_color_custom() +
 	theme(
 		panel.grid.minor = element_blank(),
@@ -452,10 +448,6 @@ cb_by_inc_band %>%
 		axis.text.x = element_blank(),
 		axis.text.y = element_text(colour = "black"))
 ```
-
-For all households but the poorest, twice the share of households pay between 30% and 50% of income towards housing than pay more than 50%. Among the poor, the inverse is true. This is partially explained by some poor households having housing costs but no or negative income (by definition, the household is "poor" if household income is $0 or less because that's less than 50% CMI), but obvs there's also just a paucity of affordable housing.
-
-**See how many SCB households have no or negative income to make that point.**
 
 ```{r fig.height=8, fig.width=8}
 cb_by_inc_band %>% 
@@ -476,7 +468,6 @@ cb_by_inc_band %>%
 		x = "",
 		y = "",
 		title = "Rates of burden by burden type for households in each income band",
-		subtitle = "County and state",
 		caption = "Cost-burdened: spending 30%-50% of household income on housing;\nSeverely cost-burdened: spending more than 50% of household income on housing.") +
 	scale_color_custom() +
 	theme(
@@ -486,6 +477,29 @@ cb_by_inc_band %>%
 		plot.title.position = "plot",
 		axis.text.x = element_blank(),
 		axis.text.y = element_text(colour = "black"))
+```
+
+For all households but the poorest, about twice the share of households pay between 30% and 50% of income towards housing than pay more than 50%, the idea being that because middle-to-high income households have more money, they have more choice in what they pay in order to live where they'd like to live. But among poor households, the inverse is true—more poor households pay half or more of their income in rent. Obviously with less money to spend, a higher shares of income go to expenses like housing. But I think the element of choice comes into play here as well. It's that the housing market in CT is anti-poor.
+
+Follow me: obviously there's a paucity of affordable housing because the range of housing costs is both high and narrow, but the market has also exploited the fact that poor households will pay to gain more choice, and has calibrated to what poor households are willing to pay and where. Consider choice as shorthand for typical inputs to a hedonic abstraction for housing—although location is perhaps more important than housing type, amenities, etc., in this regard.
+
+Poor households in CT make up to about $38K/year. By spending half of that income monthly on housing, they're paying about $1,500 per month, which is the lower end of what middle-income people should be paying housing that's affordable. I think we hear this every time someone proposes a development in New Haven at market-rate prices to attract "young professionals" who by and large can already choose to live here or elsewhere and who are less restricted by unit cost and more sensitive to amenities or location. But the value of that choice isn't necessarily restricted to middle-to-high income households. With some town zoning boards blocking sub-market rate housing, thereby restricting supply, and other towns concentrating housing affordable to poor households in just a few neighborhoods, restricting location, if a poor household wants to have any choice in where they live at all, they're stuck paying middle-income rent in order to gain the value of that expanded choice of location/amenities/etc.
+
+Anyway, it'll be interesting to see what households in each income band are paying and where vacancies exist by cost band to test this theory. I think the magic number is the low-end of middle income cost bands as the sweet spot between what people who expect choice want to be wooed for and what people who pay for choice can pay up to.
+
+
+Quick diversion: is the SCB rate among poor households partially explained by some of these households having housing costs and no/negative negative income?
+
+By definition, the household is "poor" if household income is $0 or less because that's less than 50% CMI. There are about 15K poor households with no or negative income. About 6K of those have no housing costs and thus no burden. The remaining 9K (shown below) are severely cost-burdened by definition. Although there are 2-3K of these households in the urban counties, they only account for 2-3% of poor households in those areas. In other words, no, these households are not driving the trend in SCB.
+
+```{r}
+des %>%
+	mutate(income = if_else(hhincome == 0, "no_income", "positive_income")) %>% 
+	mutate(income = if_else(hhincome < 0, "negative_income", income)) %>% 
+	select(hhwt, name, income, cost_burden) %>% 
+	group_by(name, income, cost_burden) %>% 
+	filter(income != "positive_income", cost_burden == "Severely cost-burdened") %>% 
+	summarise(households = survey_total(hhwt))
 ```
 
 ## Housing costs affordable to household within each band

@@ -971,20 +971,14 @@ households being squeezed out by high and low income households.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-**Out of curiosity, I also want to see the share of a county’s units in
-each income band (so like what share of all affluent households are in
-FC) Will come back to that later.**
-
 ## Household characteristics by income bands
 
 ### Race breakdowns
 
-Considering race/ethnicity of head of household. More than half of all
-households headed by a Black or Latino person are poor or low income,
-compared to about a third of households headed by a white person. Only
-showing CT here to make the point, but there’s some variation by county,
-with more equitable distributions in Litchfield and Windham, less in
-Fairfield, New Haven, and Hartford.
+Considering race/ethnicity of head of household. Statewide, more than
+half of all households headed by a Black or Latino person are poor or
+low income, compared to about a third of households headed by a white
+person. Some variation exists by county.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
@@ -1000,10 +994,14 @@ the past 5 years or who have never worked—by household income band by
 county.
 
 To be honest, this is a little surprising in places. I expected more
-food service workers in general, and I’m surprised at how many teachers
-are workers in higher income households. Also \#thestruggle @ the
-adjuncts and GAs in Tolland County (UConn) versus Yale profs in New
-Haven and Middlesex Counties.
+food service workers in general, and I’m surprised at how many
+elementary and middle school teachers are workers in higher income
+households. Either I have the exact wrong impression of how much
+teachers are paid or it’s a common occupation for people whose
+partners/spouses pull in big money. And yet, \#thestruggle: adjuncts and
+GAs in Tolland County (UConn) getting those minimum wage grad school
+stipends while profs in New Haven and Middlesex Counties make six
+figures teaching half the load.
 
 <table>
 
@@ -1457,32 +1455,86 @@ executive; Driver/sales workers and truck drivers
 ## Cost burden by income band
 
 No surprise that cost burden rates among poor households are around 80%,
-at the statewide level that’s 20x the rate of affluent households.
+at the statewide level that’s 20x the rate of affluent households. Too
+bad I can’t do this by town…
 
 What does stand out a bit are the gaps between each group. Moving up the
 income scale (from lower to higher income) shows a 20-30 percentage
 point decrease in cost burden rates. Those gains are much smaller from
 medium to high and from high to affluent income groups. Not like anyone
 was doubting this before, but this chart essentially says there’s not
-enough housing is affordable to low-income households, but there’s
-plenty of housing affordable to mid-to-high income households.
-
-Too bad I can’t do this by town…
+enough housing affordable to low-income households, but there’s plenty
+of housing affordable to mid-to-high income households. More on this
+below…
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
-For all households but the poorest, twice the share of households pay
-between 30% and 50% of income towards housing than pay more than 50%.
-Among the poor, the inverse is true. This is partially explained by some
-poor households having housing costs but no or negative income (by
-definition, the household is “poor” if household income is $0 or less
-because that’s less than 50% CMI), but obvs there’s also just a paucity
-of affordable housing.
-
-**See how many SCB households have no or negative income to make that
-point.**
-
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+For all households but the poorest, about twice the share of households
+pay between 30% and 50% of income towards housing than pay more than
+50%, the idea being that because middle-to-high income households have
+more money, they have more choice in what they pay in order to live
+where they’d like to live. But among poor households, the inverse is
+true—more poor households pay half or more of their income in rent.
+Obviously with less money to spend, a higher shares of income go to
+expenses like housing. But I think the element of choice comes into play
+here as well. It’s that the housing market in CT is anti-poor.
+
+Follow me: obviously there’s a paucity of affordable housing because the
+range of housing costs is both high and narrow, but the market has also
+exploited the fact that poor households will pay to gain more choice,
+and has calibrated to what poor households are willing to pay and where.
+Consider choice as shorthand for typical inputs to a hedonic abstraction
+for housing—although location is perhaps more important than housing
+type, amenities, etc., in this regard.
+
+Poor households in CT make up to about $38K/year. By spending half of
+that income monthly on housing, they’re paying about $1,500 per month,
+which is the lower end of what middle-income people should be paying
+housing that’s affordable. I think we hear this every time someone
+proposes a development in New Haven at market-rate prices to attract
+“young professionals” who by and large can already choose to live here
+or elsewhere and who are less restricted by unit cost and more sensitive
+to amenities or location. But the value of that choice isn’t necessarily
+restricted to middle-to-high income households. With some town zoning
+boards blocking sub-market rate housing, thereby restricting supply, and
+other towns concentrating housing affordable to poor households in just
+a few neighborhoods, restricting location, if a poor household wants to
+have any choice in where they live at all, they’re stuck paying
+middle-income rent in order to gain the value of that expanded choice of
+location/amenities/etc.
+
+Anyway, it’ll be interesting to see what households in each income band
+are paying and where vacancies exist by cost band to test this theory. I
+think the magic number is the low-end of middle income cost bands as the
+sweet spot between what people who expect choice want to be wooed for
+and what people who pay for choice can pay up to.
+
+Quick diversion: is the SCB rate among poor households partially
+explained by some of these households having housing costs and
+no/negative negative income?
+
+By definition, the household is “poor” if household income is $0 or less
+because that’s less than 50% CMI. There are about 15K poor households
+with no or negative income. About 6K of those have no housing costs and
+thus no burden. The remaining 9K (shown below) are severely
+cost-burdened by definition. Although there are 2-3K of these households
+in the urban counties, they only account for 2-3% of poor households in
+those areas. In other words, no, these households are not driving the
+trend in SCB.
+
+    ## # A tibble: 8 x 5
+    ##   name              income    cost_burden            households households_se
+    ##   <chr>             <chr>     <fct>                       <dbl>         <dbl>
+    ## 1 Fairfield County  no_income Severely cost-burdened       2047         270. 
+    ## 2 Hartford County   no_income Severely cost-burdened       2689         315. 
+    ## 3 Litchfield County no_income Severely cost-burdened        178          54.4
+    ## 4 Middlesex County  no_income Severely cost-burdened        481         147. 
+    ## 5 New Haven County  no_income Severely cost-burdened       2918         311. 
+    ## 6 New London County no_income Severely cost-burdened        431         108. 
+    ## 7 Tolland County    no_income Severely cost-burdened        173          65.3
+    ## 8 Windham County    no_income Severely cost-burdened        122          57.6
 
 ## Housing costs affordable to household within each band
 
