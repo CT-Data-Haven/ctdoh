@@ -15,8 +15,8 @@ There’s a lot going on in this notebook:
         forward with what I have for now.**
       - Rounded to pretty numbers for legibility?
   - The kinds of occupations/jobs those residents work in
-      - Not super germane to the conversation unless we’re talking about
-        wage reform, but brings the context back down to earth…
+      - Not exactly germane to the conversation unless we’re talking
+        about wage reform, but brings the context back down to earth…
   - Count and share of households in each band that are cost-burdened
     (T2 in DC report)
   - The approximate monthly housing cost for an affordable unit for each
@@ -28,8 +28,8 @@ There’s a lot going on in this notebook:
     would have an affordable housing cost, vs. the actual count of units
     in those cost bands (F19 in DC report)
   - For each income band, the number of households that can/cannot
-    afford to pay more, and a count of vacant units in that cost band
-    (F20 in DC report).
+    afford to pay more, \* Count of vacant units in each cost band (F20
+    in DC report).
 
 ## Establish groups
 
@@ -1538,8 +1538,8 @@ trend in SCB.
 
 ## Housing costs affordable to household within each band
 
-Over-under on the actual number of units costing less than $1.2K in FC?
-I’ll say 10,000.
+Using the income bands above, these are the 30% rent cutoff points, so
+the monthly affordable cost by income band. We’ll call these cost bands.
 
 <table>
 
@@ -1958,3 +1958,8 @@ More than $2,854
 </tbody>
 
 </table>
+
+## Housing units in those cost bands
+
+Using a new PUMS file in hierarchical format… never done that before so
+we’ll see.
