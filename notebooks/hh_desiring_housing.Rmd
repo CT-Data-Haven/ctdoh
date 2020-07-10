@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = T, message = F, warning = F, echo = F)
+knitr::opts_chunk$set(echo = T, message = F, warning = F, echo = T)
 ```
 
 ```{r lib}
@@ -21,7 +21,7 @@ library(kableExtra)
 ```{r gg etc}
 theme_set(theme_ipsum_rc())
 
-#this theme is better when reverse is standard so poor != red, but also this theme sucks by default because it's based on mineral water, but here we are.
+#this theme is better when reverse is standard so poor != red, but also this theme is also terrible by default because it's based on mineral water, but i am a monster.
 pal <- pal <- rev(LaCroixColoR::lacroix_palette(name = "Pamplemousse", n = 5, type = "discrete"))
 
 scale_fill_custom <- function(palette = pal, rev = F) {
@@ -479,13 +479,15 @@ cb_by_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
-For all households but the poorest, about twice the share of households pay between 30% and 50% of income towards housing than pay more than 50%, the idea being that because middle-to-high income households have more money, they have more choice in what they pay in order to live where they'd like to live. But among poor households, the inverse is true—more poor households pay half or more of their income in rent. Obviously with less money to spend, a higher shares of income go to expenses like housing. But I think the element of choice comes into play here as well. It's that the housing market in CT is anti-poor.
+For all households but the poorest, about twice the share of households pay between 30% and 50% of income towards housing than pay more than 50%, the idea being that because middle-to-high income households have more money, they have more choice in what they pay in order to live where they'd like to live. But among poor households, the inverse is true—more poor households pay half or more of their income in rent. Obviously with less money to spend, a higher shares of income go to expenses like housing. But I think the element of choice comes into play here as well. It's that the housing market in CT exploits poor households who want choice.
 
-Follow me: obviously there's a paucity of affordable housing because the range of housing costs is both high and narrow, but the market has also exploited the fact that poor households will pay to gain more choice, and has calibrated to what poor households are willing to pay and where. Consider choice as shorthand for typical inputs to a hedonic abstraction for housing—although location is perhaps more important than housing type, amenities, etc., in this regard.
+Follow me: obviously there's a paucity of affordable housing because the range of housing costs is both high and narrow, but the market has also exploited the fact that poor households will pay to gain more choice, and has calibrated to what poor households are willing to pay and where. Consider choice as shorthand for typical inputs to a hedonic abstraction for housing—although location is perhaps more important than housing type, amenities, etc., in this regard. Obviously, this assumption is limited by the fact I'm not considering household size, and more bedrooms is just plainly associated with higher cost. Urban's demographer and I kinda talked about doing this but it might be too complicated.
 
-Poor households in CT make up to about $38K/year. By spending half of that income monthly on housing, they're paying about $1,500 per month, which is the lower end of what middle-income people should be paying housing that's affordable. I think we hear this every time someone proposes a development in New Haven at market-rate prices to attract "young professionals" who by and large can already choose to live here or elsewhere and who are less restricted by unit cost and more sensitive to amenities or location. But the value of that choice isn't necessarily restricted to middle-to-high income households. With some town zoning boards blocking sub-market rate housing, thereby restricting supply, and other towns concentrating housing affordable to poor households in just a few neighborhoods, restricting location, if a poor household wants to have any choice in where they live at all, they're stuck paying middle-income rent in order to gain the value of that expanded choice of location/amenities/etc.
+Anyway, Poor households in CT make up to about $38K/year. By spending half of that income monthly on housing, they're paying about $1,500 per month, which is the lower end of what middle-income people should be paying housing that's affordable, and is about the going rate for a 1 bedroom apartment in East Rock or slightly larger apartments elsewhere in New Haven. I think we hear this every time someone proposes a development in New Haven at market-rate prices to attract "young professionals" who by and large can already choose to live here or elsewhere and who are less restricted by unit cost and more sensitive to amenities or location. But the value of that choice isn't necessarily restricted to middle-to-high income households. With some town zoning boards blocking sub-market rate housing, thereby restricting overall supply and location, and other towns concentrating housing affordable to poor households in just a few neighborhoods, restricting location even further, if a poor household wants to have any choice in where they live at all, they're stuck paying middle-income rent in order to gain the value of that expanded choice of location/amenities/etc.
 
-Anyway, it'll be interesting to see what households in each income band are paying and where vacancies exist by cost band to test this theory. I think the magic number is the low-end of middle income cost bands as the sweet spot between what people who expect choice want to be wooed for and what people who pay for choice can pay up to.
+So the next part of this analysis that I haven't started but will be interesting to see is what the households in each income band are actually paying and how many units exist by cost band. I think the magic number is the low-end of middle income cost bands as the sweet spot between what people who expect choice want to be wooed for and what people who pay for choice can pay up to.
+
+============================================
 
 Quick diversion: is the SCB rate among poor households partially explained by some of these households having housing costs and no/negative negative income?
 
@@ -533,7 +535,7 @@ kable(affordable_cost_table %>%
 
 ## Housing units in those cost bands
 
-Using a new PUMS file in hierarchical format... never done that before so we'll see.
+Occupied units (renter/owner) and vacant units available in each cost band. Occupied units will go by gross cost, vacant by contract rent, so the need a new PUMS file in hierarchical format, widdled down to household level. Need to work on this a bit more...
 
 ```{r}
 hddi <- read_ipums_ddi("../input_data/usa_00039.xml")
@@ -594,10 +596,17 @@ rent_occ_cost_bands <- occ_des %>%
 	select(name, tenure, cost_band, units, units_se)
 
 occ_cost_bands <- bind_rows(own_occ_cost_bands, rent_occ_cost_bands)
-	
+```
+
+Here's a quick crappy table of the occupied units by cost band and county. I'll need to add vacant units and summarize to get totals and shares.
+
+```{r}
+kable(occ_cost_bands)
+```
+
+```{r}
 vac_des <- hpums %>%
 	filter(vacancy == "For rent or sale") %>% 
 	as_survey_design(., ids = 1, wt = hhwt)
-
 #for vacant units, use 'for rent or sale', and use rent for cost
 ```

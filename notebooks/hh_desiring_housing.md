@@ -1,6 +1,40 @@
 Households desiring housing
 ================
 
+``` r
+library(ipumsr)
+library(tidyverse)
+library(srvyr)
+library(tidycensus)
+library(hrbrthemes)
+library(camiller)
+library(scales)
+library(kableExtra)
+```
+
+``` r
+theme_set(theme_ipsum_rc())
+
+#this theme is better when reverse is standard so poor != red, but also this theme is also terrible by default because it's based on mineral water, but i am a monster.
+pal <- pal <- rev(LaCroixColoR::lacroix_palette(name = "Pamplemousse", n = 5, type = "discrete"))
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 This notebook needs a better name. “Households desiring housing” to me
 suggests a household wants to move, not that they’re unable to afford
 housing. Maybe just “gaps in housing units available to households by
@@ -56,6 +90,101 @@ county:
   - Latino (any race)
   - All others (grouped)
 
+<!-- end list -->
+
+``` r
+minc <- get_acs(
+    geography = "county",
+      table = "B19013",
+    state = 09,
+      cache_table = T) %>% 
+    arrange(GEOID) %>% 
+    mutate(countyfip = seq(from = 1, to = 15, by = 2),
+                 name = str_remove(NAME, ", Connecticut")) %>% 
+    select(countyfip, name, minc = estimate)
+
+ddi <- read_ipums_ddi("../input_data/usa_00038.xml")
+
+pums <- read_ipums_micro(ddi, verbose = F)  %>% 
+    mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND), as_factor) %>% 
+    mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
+    mutate_at(vars(HHINCOME, OWNCOST, RENTGRS, OCC), as.integer) %>% 
+    janitor::clean_names() %>% 
+    left_join(minc, by = "countyfip") %>% 
+    mutate(ratio = hhincome / minc) %>% 
+    mutate(
+        inc_band = cut(
+            ratio,
+            breaks = c(-Inf, 0.5, 0.75, 1.25, 1.5, Inf),
+            labels = c("Poor", "Low", "Middle", "High", "Affluent"),
+            include.lowest = T, right = F)) %>% 
+    mutate(
+        inc_band = as.factor(inc_band) %>%
+            fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent")) %>% 
+    mutate(cb = if_else(ownershp == "Rented", (rentgrs * 12) / hhincome, 99999)) %>% 
+    mutate(cb = if_else(ownershp == "Owned or being bought (loan)", (owncost * 12) / hhincome, cb)) %>%
+    # if rent is 0 and income is 0, no burden
+    mutate(cb = if_else((rentgrs == 0 & hhincome == 0), 0, cb)) %>% 
+    #if income is 0 and rent is >0, burden
+    mutate(
+        cost_burden = cut(
+            cb,
+            breaks = c(-Inf, .3, .5, Inf),
+            labels = c("No burden", "Cost-burdened", "Severely cost-burdened"),
+            include.lowest = T, right = F)) %>% 
+        mutate(race2 = if_else(hispan == "Not Hispanic", as.character(race), "Latino")) %>% 
+    mutate(race2 = as.factor(race2) %>% 
+                    fct_recode(Black = "Black/African American/Negro") %>%
+                    fct_other(keep = c("White", "Black", "Latino"), other_level = "Other race") %>%
+                    fct_relevel("White", "Black", "Latino", "Other race"))
+
+des <- pums %>%
+    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
+    as_survey_design(., ids = 1, wt = hhwt)
+
+out <- list()
+```
+
+``` r
+county_hhlds <- des %>%
+    select(hhwt, name, inc_band) %>% 
+    group_by(name, inc_band) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(level = "2_counties")
+
+county_total <- des %>%
+    select(hhwt, name) %>% 
+    group_by(name) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(inc_band = "Total") %>% 
+    mutate(level = "2_counties")
+
+ct_hhlds <- des %>%
+    select(hhwt, statefip, inc_band) %>% 
+    group_by(statefip, inc_band) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state") %>% 
+    select(-statefip)
+
+ct_total <- des %>%
+    select(hhwt, statefip) %>% 
+    group_by(statefip) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state", inc_band = "Total") %>% 
+    select(-statefip)
+
+hh_by_inc_band <- bind_rows(county_hhlds, county_total, ct_hhlds, ct_total) %>%
+    ungroup() %>%
+    mutate(inc_band = as.factor(inc_band) %>% 
+                    fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent", "Total"),
+                 level = as.factor(level)) %>% 
+    arrange(level, name) %>% 
+    group_by(level, name) %>% 
+    calc_shares(group = inc_band, denom = "Total", value = value, moe = value_se)
+
+out$hh_by_inc_band <- hh_by_inc_band
+```
+
 ## Define income bands
 
 Would it be preferable to set these as prettier breaks, or use the CT
@@ -64,6 +193,26 @@ numbers for all counties?
 **A better chart here would be color coded segments indicating each
 group’s range, with each area on a new row. Could use arrow ends or
 something to communicate the top and bottom. Come back to this idea.**
+
+``` r
+ctminc <- get_acs(geography = "state", state = 09, table = "B19013") %>% 
+    select(name = NAME, minc = estimate)
+
+income_table <- minc %>% 
+    bind_rows(ctminc) %>% 
+    mutate(p = comma(round(minc * .5, 0), accuracy = 1),
+                 l = comma(round(minc * .75, 0), accuracy = 1),
+                 m = comma(round(minc * 1.25, 0), accuracy = 1), 
+                 h = comma(round(minc * 1.5, 0), accuracy = 1),
+                 Poor = paste("Less than $", p, sep = ""),
+                 Low = paste("Between $", p, " and $", l, sep = ""),
+                 Middle = paste("Between $", l, " and $", m, sep = ""),
+                 High = paste("Between $", m, " and $", h, sep = ""),
+                 Affluent = paste("More than $", h, sep = "")) %>% 
+    select(Name = name, Poor:Affluent)
+
+kable(income_table, caption = "Income ranges by income band and area")
+```
 
 <table>
 
@@ -491,7 +640,46 @@ median income. A similar share are affluent or high income, earning 125%
 or more of their county’s median income. Just one in five households
 statewide are considered middle income by this definition.
 
+``` r
+hh_by_inc_band %>% 
+    filter(inc_band != "Total", name == "Connecticut") %>% 
+    mutate(inc_band = fct_rev(inc_band)) %>% 
+    ggplot(aes(value, inc_band)) +
+    geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.8)) +
+    scale_x_continuous(
+        expand = expansion(mult = c(0, 0.1)),
+        labels = scales::comma) +
+    geom_text(aes(
+        label = comma(value, accuracy = 1)),
+        position = position_dodge(.8), hjust = 1, family = "Roboto Condensed", size = 3.75) +
+    guides(fill = guide_legend(title = "")) +
+    labs(
+        x = "",
+        y = "",
+        title = "Number of households in each income band",
+        subtitle = "Connecticut") +
+    scale_fill_custom() +
+    theme(
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        legend.position = "none",
+        plot.title.position = "plot",
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(colour = "black"),
+        strip.text.y = element_blank())
+```
+
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+``` r
+kable(hh_by_inc_band %>% 
+    mutate(level = fct_rev(level)) %>% 
+    arrange(level) %>% 
+    select(Name = name, inc_band, value) %>% 
+    mutate(value = comma(value, accuracy = 1)) %>% 
+    pivot_wider(id_cols = Name, names_from = "inc_band") %>% 
+    select(Name, Poor:Affluent, Total))
+```
 
 <table>
 
@@ -969,16 +1157,103 @@ The income distributions are fairly consistent, even in the more rural
 counties. This trend mirrors national trends with middle income
 households being squeezed out by high and low income households.
 
+``` r
+hh_by_inc_band %>% 
+    filter(inc_band != "Total") %>% 
+    group_by(level) %>% 
+    mutate(name = as.factor(name) %>% 
+                    fct_rev()) %>% 
+    ggplot(aes(name, share, group = name)) +
+    geom_col(aes(fill = inc_band), width = .7, position = position_stack(1)) +
+    coord_flip() +
+    geom_text(aes(label = percent(share, accuracy = 1)),
+                        position = position_stack(.5), family = "Roboto Condensed") +
+    scale_y_continuous(expand = expansion(mult = c(0, 0))) +
+    scale_fill_custom() +
+    guides(fill = guide_legend(title = "")) +
+    labs(x = "", y = "",
+             title = "Share of households in each income band by state and county") +
+    theme(panel.grid.major  = element_blank(),
+                panel.grid.minor = element_blank(),
+                axis.text.y = element_text(colour = "black"),
+                axis.text.x = element_blank(),
+                legend.position = "bottom",
+                plot.title.position = "plot")
+```
+
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ## Household characteristics by income bands
 
 ### Race breakdowns
 
+``` r
+county_hhlds_by_race <- des %>%
+    select(hhwt, name, inc_band, race2) %>% 
+    group_by(name, inc_band, race2) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(level = "2_counties")
+
+county_race_total <- des %>%
+    select(hhwt, name, race2) %>% 
+    group_by(name, race2) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(inc_band = "Total") %>% 
+    mutate(level = "2_counties")
+
+ct_hhlds_by_race <- des %>%
+    select(hhwt, statefip, inc_band, race2) %>% 
+    group_by(statefip, inc_band, race2) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state") %>% 
+    select(-statefip)
+
+ct_race_total <- des %>%
+    select(hhwt, statefip, race2) %>% 
+    group_by(statefip, race2) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state", inc_band = "Total") %>% 
+    select(-statefip)
+
+hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhlds_by_race, ct_race_total) %>%
+    ungroup() %>%
+    mutate(inc_band = as.factor(inc_band) %>% 
+                    fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent", "Total"),
+                 level = as.factor(level)) %>% 
+    arrange(level, name, race2) %>% 
+    group_by(level, name, race2) %>% 
+    calc_shares(group = inc_band, denom = "Total", value = value, moe = value_se)
+
+out$hh_by_inc_band <- hh_by_race_inc_band
+```
+
 Considering race/ethnicity of head of household. Statewide, more than
 half of all households headed by a Black or Latino person are poor or
 low income, compared to about a third of households headed by a white
 person. Some variation exists by county.
+
+``` r
+hh_by_race_inc_band %>% 
+    filter(inc_band != "Total") %>% 
+    mutate(race2 = fct_rev(race2)) %>% 
+    ggplot(aes(share, race2, group = race2)) +
+    geom_col(aes(fill = inc_band), width = .8, position = position_stack(1)) +
+    guides(fill = guide_legend(title = "", reverse = T)) +
+    geom_text(aes(label = percent(share, accuracy = 1)),
+                        position = position_stack(.5), family = "Roboto Condensed") +
+    scale_x_continuous(expand = expansion(mult = c(0, 0))) +
+    facet_wrap(facets = "name") +
+    guides(fill = guide_legend(title = "")) +
+    scale_fill_custom() +
+    labs(x = "", y = "",
+             title = "Share of households in each income band by race of HOH") +
+    theme(panel.grid.major  = element_blank(),
+                panel.grid.minor = element_blank(),
+                axis.text.y = element_text(colour = "black"),
+                axis.text.x = element_blank(),
+                legend.position = "bottom",
+                plot.title.position = "plot")
+```
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
@@ -1002,6 +1277,38 @@ partners/spouses pull in big money. And yet, \#thestruggle: adjuncts and
 GAs in Tolland County (UConn) getting those minimum wage grad school
 stipends while profs in New Haven and Middlesex Counties make six
 figures teaching half the load.
+
+``` r
+des2 <- pums %>%
+    filter(hhincome != 9999999, ownershp != "N/A") %>% 
+    as_survey_design(., ids = 1, wt = perwt)
+
+occ_lut <- read_csv("../input_data/occ_codes.csv") %>% 
+    mutate(occ_code = as.integer(occ_code)) #leading 0s
+
+common_jobs_by_inc_band <- pums %>%
+    select(perwt, name, inc_band, occ) %>% 
+    group_by(name, inc_band, occ) %>% 
+    summarise(workers = sum(perwt)) %>% 
+    mutate(level = "2_counties") %>% 
+    filter(occ != "0") %>% #0 is "n/a" occ
+    group_by(name, inc_band) %>% 
+    slice_max(workers, n = 5) %>%
+    left_join(occ_lut, by = c("occ" = "occ_code")) %>% 
+    select(level, name, inc_band, workers, occ, occ_label)
+
+out$common_jobs_by_inc_band <- common_jobs_by_inc_band
+
+common_jobs_by_inc_band %>% 
+    group_by(level, name, inc_band) %>% 
+    mutate(rank = order(workers, decreasing = T)) %>% 
+    select(name, inc_band, rank, occ_label) %>% 
+    pivot_wider(id_cols = c("name", "inc_band"), names_from = "rank", values_from = "occ_label") %>% 
+    mutate(`Common occupations` = paste(`1`, `2`, `3`, `4`, `5`, sep = "; ")) %>% 
+    select(Name = name, `Income band` = inc_band, `Common occupations`) %>% 
+    pivot_wider(id_cols = Name, names_from = "Income band", values_from = "Common occupations") %>% 
+    kable(caption = "Common occupations for workers by household income band")
+```
 
 <table>
 
@@ -1454,6 +1761,35 @@ executive; Driver/sales workers and truck drivers
 
 ## Cost burden by income band
 
+``` r
+county_cb <- des %>%
+    select(hhwt, name, inc_band, cost_burden) %>% 
+    group_by(name, inc_band, cost_burden) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    mutate(level = "2_counties")
+
+ct_cb <- des %>%
+    select(hhwt, statefip, inc_band, cost_burden) %>%
+    group_by(statefip, inc_band, cost_burden) %>%
+    summarise(value = survey_total(hhwt)) %>%
+    mutate(name = "Connecticut", level = "1_state") %>%
+    select(-statefip)
+
+cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
+    mutate(cost_burden = if_else(is.na(cost_burden), "Total", as.character(cost_burden)),
+                 cost_burden = as.factor(cost_burden) %>% 
+                    fct_relevel(., "No burden", "Cost-burdened", "Severely cost-burdened", "Total")) %>% 
+    ungroup() %>%
+    mutate(inc_band = as.factor(inc_band) %>%
+                    fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent"),
+                 level = as.factor(level)) %>%
+    arrange(level, name, inc_band) %>%
+    group_by(level, name, inc_band) %>%
+    calc_shares(group = cost_burden, denom = "Total", value = value, moe = value_se)
+
+out$cb_by_inc_band <- cb_by_inc_band
+```
+
 No surprise that cost burden rates among poor households are around 80%,
 at the statewide level that’s 20x the rate of affluent households. Too
 bad I can’t do this by town…
@@ -1467,7 +1803,72 @@ enough housing affordable to low-income households, but there’s plenty
 of housing affordable to mid-to-high income households. More on this
 below…
 
+``` r
+cb_by_inc_band %>% 
+    mutate(cost_burden = fct_collapse(cost_burden, Burden = c("Cost-burdened", "Severely cost-burdened"))) %>% 
+    ungroup() %>% 
+    select(-share, -sharemoe, -value_se) %>% 
+    group_by(level, name, inc_band, cost_burden) %>% 
+    summarise(value = sum(value)) %>% 
+    ungroup() %>% 
+    group_by(level, name, inc_band) %>% 
+    calc_shares(group = cost_burden, denom = "Total", value = value) %>% 
+    filter(cost_burden == "Burden") %>% 
+    group_by(level) %>% 
+    mutate(name = as.factor(name) %>% 
+                    fct_rev()) %>% 
+    ggplot(aes(share, name, group = inc_band)) +
+    geom_point(aes(color = inc_band), size = 7.5, alpha = .8) +
+    geom_text(aes(
+        label = percent(share, accuracy = 1)),
+        family = "Roboto Condensed", size = 3.55) +
+    scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
+    guides(color = guide_legend(title = "")) +
+    labs(
+        x = "",
+        y = "",
+        title = "Cost-burden rates for households in each income band") +
+    scale_color_custom() +
+    theme(
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        legend.position = "bottom",
+        plot.title.position = "plot",
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(colour = "black"))
+```
+
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+cb_by_inc_band %>% 
+    ungroup() %>% 
+    filter(!cost_burden %in% c("Total", "No burden")) %>% 
+    group_by(level) %>% 
+    mutate(name = as.factor(name) %>% 
+                    fct_rev()) %>% 
+    ggplot(aes(share, name, group = inc_band)) +
+    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
+    geom_text(aes(
+        label = percent(share, accuracy = 1)),
+        family = "Roboto Condensed", size = 2.75, alpha = 0.8) +
+    scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
+    facet_grid(rows = "cost_burden", scales = "free", space = "fixed") +
+    guides(color = guide_legend(title = "")) +
+    labs(
+        x = "",
+        y = "",
+        title = "Rates of burden by burden type for households in each income band",
+        caption = "Cost-burdened: spending 30%-50% of household income on housing;\nSeverely cost-burdened: spending more than 50% of household income on housing.") +
+    scale_color_custom() +
+    theme(
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        legend.position = "bottom",
+        plot.title.position = "plot",
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(colour = "black"))
+```
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
@@ -1479,7 +1880,8 @@ where they’d like to live. But among poor households, the inverse is
 true—more poor households pay half or more of their income in rent.
 Obviously with less money to spend, a higher shares of income go to
 expenses like housing. But I think the element of choice comes into play
-here as well. It’s that the housing market in CT is anti-poor.
+here as well. It’s that the housing market in CT exploits poor
+households who want choice.
 
 Follow me: obviously there’s a paucity of affordable housing because the
 range of housing costs is both high and narrow, but the market has also
@@ -1487,29 +1889,38 @@ exploited the fact that poor households will pay to gain more choice,
 and has calibrated to what poor households are willing to pay and where.
 Consider choice as shorthand for typical inputs to a hedonic abstraction
 for housing—although location is perhaps more important than housing
-type, amenities, etc., in this regard.
+type, amenities, etc., in this regard. Obviously, this assumption is
+limited by the fact I’m not considering household size, and more
+bedrooms is just plainly associated with higher cost. Urban’s
+demographer and I kinda talked about doing this but it might be too
+complicated.
 
-Poor households in CT make up to about $38K/year. By spending half of
-that income monthly on housing, they’re paying about $1,500 per month,
-which is the lower end of what middle-income people should be paying
-housing that’s affordable. I think we hear this every time someone
-proposes a development in New Haven at market-rate prices to attract
-“young professionals” who by and large can already choose to live here
-or elsewhere and who are less restricted by unit cost and more sensitive
-to amenities or location. But the value of that choice isn’t necessarily
+Anyway, Poor households in CT make up to about $38K/year. By spending
+half of that income monthly on housing, they’re paying about $1,500 per
+month, which is the lower end of what middle-income people should be
+paying housing that’s affordable, and is about the going rate for a 1
+bedroom apartment in East Rock or slightly larger apartments elsewhere
+in New Haven. I think we hear this every time someone proposes a
+development in New Haven at market-rate prices to attract “young
+professionals” who by and large can already choose to live here or
+elsewhere and who are less restricted by unit cost and more sensitive to
+amenities or location. But the value of that choice isn’t necessarily
 restricted to middle-to-high income households. With some town zoning
-boards blocking sub-market rate housing, thereby restricting supply, and
-other towns concentrating housing affordable to poor households in just
-a few neighborhoods, restricting location, if a poor household wants to
-have any choice in where they live at all, they’re stuck paying
-middle-income rent in order to gain the value of that expanded choice of
-location/amenities/etc.
+boards blocking sub-market rate housing, thereby restricting overall
+supply and location, and other towns concentrating housing affordable to
+poor households in just a few neighborhoods, restricting location even
+further, if a poor household wants to have any choice in where they live
+at all, they’re stuck paying middle-income rent in order to gain the
+value of that expanded choice of location/amenities/etc.
 
-Anyway, it’ll be interesting to see what households in each income band
-are paying and where vacancies exist by cost band to test this theory. I
-think the magic number is the low-end of middle income cost bands as the
-sweet spot between what people who expect choice want to be wooed for
-and what people who pay for choice can pay up to.
+So the next part of this analysis that I haven’t started but will be
+interesting to see is what the households in each income band are
+actually paying and how many units exist by cost band. I think the magic
+number is the low-end of middle income cost bands as the sweet spot
+between what people who expect choice want to be wooed for and what
+people who pay for choice can pay up to.
+
+\============================================
 
 Quick diversion: is the SCB rate among poor households partially
 explained by some of these households having housing costs and
@@ -1523,6 +1934,16 @@ cost-burdened by definition. Although there are 2-3K of these households
 in the urban counties, they only account for 2-3% of poor households in
 those areas. In other words, no, these households are not driving the
 trend in SCB.
+
+``` r
+des %>%
+    mutate(income = if_else(hhincome == 0, "no_income", "positive_income")) %>% 
+    mutate(income = if_else(hhincome < 0, "negative_income", income)) %>% 
+    select(hhwt, name, income, cost_burden) %>% 
+    group_by(name, income, cost_burden) %>% 
+    filter(income != "positive_income", cost_burden == "Severely cost-burdened") %>% 
+    summarise(households = survey_total(hhwt))
+```
 
     ## # A tibble: 8 x 5
     ##   name              income    cost_burden            households households_se
@@ -1540,6 +1961,32 @@ trend in SCB.
 
 Using the income bands above, these are the 30% rent cutoff points, so
 the monthly affordable cost by income band. We’ll call these cost bands.
+
+``` r
+affordable_cost_table <- minc %>% 
+    bind_rows(ctminc) %>% 
+    select(-countyfip) %>% 
+    mutate(p = minc * .5,
+                 l = minc * .75,
+                 m = minc * 1.25, 
+                 h = minc * 1.5) %>% 
+    select(-minc) %>% 
+    pivot_longer(cols = p:h, names_to = "inc_band", values_to = "income") %>% 
+    mutate(income = round(income, 0),
+                 affordable_hcost = round(income / 12 * .3, 0)) %>% 
+    select(name, inc_band, affordable_hcost) %>% 
+    mutate(affordable_hcost = comma(affordable_hcost, accuracy = 1)) %>% 
+    pivot_wider(id_cols = name, names_from = inc_band, values_from = affordable_hcost) %>% 
+    mutate(Poor = paste("Less than $", p, sep = ""),
+                 Low = paste("Between $", p, " and $", l, sep = ""),
+                 Middle = paste("Between $", l, " and $", m, sep = ""),
+                 High = paste("Between $", m, " and $", h, sep = ""),
+                 Affluent = paste("More than $", h, sep = ""))
+
+kable(affordable_cost_table %>% 
+                select(Name = name, Poor:Affluent),
+            caption = "Affordable monthly housing cost ranges by income band and area")
+```
 
 <table>
 
@@ -1961,5 +2408,2849 @@ More than $2,854
 
 ## Housing units in those cost bands
 
-Using a new PUMS file in hierarchical format… never done that before so
-we’ll see.
+Occupied units (renter/owner) and vacant units available in each cost
+band. Occupied units will go by gross cost, vacant by contract rent, so
+the need a new PUMS file in hierarchical format, widdled down to
+household level. Need to work on this a bit more…
+
+``` r
+hddi <- read_ipums_ddi("../input_data/usa_00039.xml")
+
+cost_bands <- minc %>% 
+    bind_rows(ctminc) %>% 
+    select(-countyfip) %>% 
+    mutate(p = round((minc * .5 / 12 * .3), 0),
+                 l = round((minc * .75 / 12 * .3), 0),
+                 m = round((minc * 1.25 / 12 * .3), 0), 
+                 h = round((minc * 1.5 / 12 * .3), 0)) %>% 
+    select(-minc)
+
+hpums <- read_ipums_micro(hddi, verbose = F) %>% 
+    filter(RECTYPE == "H") %>% 
+    mutate_at(vars(OWNERSHP, OWNERSHPD, VACANCY), as_factor) %>% 
+    mutate_at(vars(OWNCOST, RENT, RENTGRS), as.numeric) %>% 
+    janitor::clean_names() %>% 
+    left_join(minc, by = "countyfip") %>% 
+    left_join(cost_bands, by = "name")
+    
+occ_des <- hpums %>%
+    filter(vacancy == "N/A", ownershp != "N/A") %>% 
+    as_survey_design(., ids = 1, wt = hhwt)
+
+own_occ_cost_bands <- occ_des %>%
+    filter(owncost != 99999) %>% 
+    select(hhwt, name, owncost, p, l, m, h) %>% 
+    group_by(name) %>% 
+    mutate(tenure = "owner_occupied",
+                 poor = between(owncost, 0, (p - 1)),
+                 low = between(owncost, p, (l - 1)),
+                 middle = between(owncost, l, (m - 1)),
+                 high = between(owncost, m, (h - 1)),
+                 affluent = between(owncost, h, Inf)) %>% 
+    ungroup() %>% 
+    group_by(name, tenure, poor, low, middle, high, affluent) %>% 
+    summarise(units = survey_total(hhwt)) %>% 
+    pivot_longer(cols = poor:affluent, names_to = "cost_band") %>% 
+    filter(value == T) %>% 
+    select(name, tenure, cost_band, units, units_se)
+
+rent_occ_cost_bands <- occ_des %>%
+    filter(owncost == 99999) %>% 
+    select(hhwt, name, rentgrs, p, l, m, h) %>% 
+    group_by(name) %>% 
+    mutate(tenure = "renter_occupied",
+                 poor = between(rentgrs, 0, (p - 1)),
+                 low = between(rentgrs, p, (l - 1)),
+                 middle = between(rentgrs, l, (m - 1)),
+                 high = between(rentgrs, m, (h - 1)),
+                 affluent = between(rentgrs, h, Inf)) %>% 
+    ungroup() %>% 
+    group_by(name, tenure, poor, low, middle, high, affluent) %>% 
+    summarise(units = survey_total(hhwt)) %>% 
+    pivot_longer(cols = poor:affluent, names_to = "cost_band") %>% 
+    filter(value == T) %>% 
+    select(name, tenure, cost_band, units, units_se)
+
+occ_cost_bands <- bind_rows(own_occ_cost_bands, rent_occ_cost_bands)
+```
+
+Here’s a quick crappy table of the occupied units by cost band and
+county. I’ll need to add vacant units and summarize to get totals and
+shares.
+
+``` r
+kable(occ_cost_bands)
+```
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+name
+
+</th>
+
+<th style="text-align:left;">
+
+tenure
+
+</th>
+
+<th style="text-align:left;">
+
+cost\_band
+
+</th>
+
+<th style="text-align:right;">
+
+units
+
+</th>
+
+<th style="text-align:right;">
+
+units\_se
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+51978
+
+</td>
+
+<td style="text-align:right;">
+
+1035.37045
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+23619
+
+</td>
+
+<td style="text-align:right;">
+
+745.62256
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+71938
+
+</td>
+
+<td style="text-align:right;">
+
+1310.87665
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+36036
+
+</td>
+
+<td style="text-align:right;">
+
+925.45482
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+42545
+
+</td>
+
+<td style="text-align:right;">
+
+944.35213
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+30125
+
+</td>
+
+<td style="text-align:right;">
+
+833.25231
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+22135
+
+</td>
+
+<td style="text-align:right;">
+
+742.31965
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+83604
+
+</td>
+
+<td style="text-align:right;">
+
+1439.58068
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+43029
+
+</td>
+
+<td style="text-align:right;">
+
+978.14178
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+44469
+
+</td>
+
+<td style="text-align:right;">
+
+969.14026
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+5291
+
+</td>
+
+<td style="text-align:right;">
+
+335.89606
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+4662
+
+</td>
+
+<td style="text-align:right;">
+
+340.06449
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+20274
+
+</td>
+
+<td style="text-align:right;">
+
+684.60494
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+11223
+
+</td>
+
+<td style="text-align:right;">
+
+509.67539
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+15506
+
+</td>
+
+<td style="text-align:right;">
+
+574.45090
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+4567
+
+</td>
+
+<td style="text-align:right;">
+
+361.06160
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+4942
+
+</td>
+
+<td style="text-align:right;">
+
+382.30382
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+17991
+
+</td>
+
+<td style="text-align:right;">
+
+684.22512
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+9087
+
+</td>
+
+<td style="text-align:right;">
+
+486.66931
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+12489
+
+</td>
+
+<td style="text-align:right;">
+
+543.22960
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+39677
+
+</td>
+
+<td style="text-align:right;">
+
+1038.85176
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+24512
+
+</td>
+
+<td style="text-align:right;">
+
+801.66113
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+68158
+
+</td>
+
+<td style="text-align:right;">
+
+1391.50345
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+40002
+
+</td>
+
+<td style="text-align:right;">
+
+1013.93616
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+30279
+
+</td>
+
+<td style="text-align:right;">
+
+825.21845
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+8271
+
+</td>
+
+<td style="text-align:right;">
+
+410.57111
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+7035
+
+</td>
+
+<td style="text-align:right;">
+
+411.58541
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+24645
+
+</td>
+
+<td style="text-align:right;">
+
+784.88127
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+12881
+
+</td>
+
+<td style="text-align:right;">
+
+549.00606
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+18498
+
+</td>
+
+<td style="text-align:right;">
+
+642.66030
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+2310
+
+</td>
+
+<td style="text-align:right;">
+
+246.10017
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+2456
+
+</td>
+
+<td style="text-align:right;">
+
+243.48187
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+15261
+
+</td>
+
+<td style="text-align:right;">
+
+666.15703
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+7785
+
+</td>
+
+<td style="text-align:right;">
+
+438.73167
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+11903
+
+</td>
+
+<td style="text-align:right;">
+
+532.07203
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+2404
+
+</td>
+
+<td style="text-align:right;">
+
+237.69931
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+2978
+
+</td>
+
+<td style="text-align:right;">
+
+279.04393
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+12380
+
+</td>
+
+<td style="text-align:right;">
+
+587.63637
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+5280
+
+</td>
+
+<td style="text-align:right;">
+
+373.83578
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+owner\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+8010
+
+</td>
+
+<td style="text-align:right;">
+
+414.90464
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+4967
+
+</td>
+
+<td style="text-align:right;">
+
+391.15955
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+3200
+
+</td>
+
+<td style="text-align:right;">
+
+324.35857
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+29972
+
+</td>
+
+<td style="text-align:right;">
+
+1031.27584
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+37825
+
+</td>
+
+<td style="text-align:right;">
+
+1149.97087
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+38412
+
+</td>
+
+<td style="text-align:right;">
+
+1125.15132
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+1140
+
+</td>
+
+<td style="text-align:right;">
+
+167.40966
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+1364
+
+</td>
+
+<td style="text-align:right;">
+
+202.07482
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+27242
+
+</td>
+
+<td style="text-align:right;">
+
+969.57619
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+51587
+
+</td>
+
+<td style="text-align:right;">
+
+1316.80514
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+44368
+
+</td>
+
+<td style="text-align:right;">
+
+1160.70008
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+121
+
+</td>
+
+<td style="text-align:right;">
+
+44.23596
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+85
+
+</td>
+
+<td style="text-align:right;">
+
+41.02343
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+2505
+
+</td>
+
+<td style="text-align:right;">
+
+279.39442
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+6789
+
+</td>
+
+<td style="text-align:right;">
+
+490.41994
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+7531
+
+</td>
+
+<td style="text-align:right;">
+
+453.57773
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+199
+
+</td>
+
+<td style="text-align:right;">
+
+80.15317
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+30
+
+</td>
+
+<td style="text-align:right;">
+
+22.84720
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+2998
+
+</td>
+
+<td style="text-align:right;">
+
+323.84905
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+7396
+
+</td>
+
+<td style="text-align:right;">
+
+545.28120
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+7194
+
+</td>
+
+<td style="text-align:right;">
+
+467.30098
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+2155
+
+</td>
+
+<td style="text-align:right;">
+
+270.15971
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+4040
+
+</td>
+
+<td style="text-align:right;">
+
+372.19730
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+40504
+
+</td>
+
+<td style="text-align:right;">
+
+1226.71064
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+46775
+
+</td>
+
+<td style="text-align:right;">
+
+1305.79098
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+33754
+
+</td>
+
+<td style="text-align:right;">
+
+1076.68947
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+318
+
+</td>
+
+<td style="text-align:right;">
+
+81.53933
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+458
+
+</td>
+
+<td style="text-align:right;">
+
+106.82318
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+9034
+
+</td>
+
+<td style="text-align:right;">
+
+564.58372
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+14804
+
+</td>
+
+<td style="text-align:right;">
+
+771.89307
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+11458
+
+</td>
+
+<td style="text-align:right;">
+
+637.23983
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+55
+
+</td>
+
+<td style="text-align:right;">
+
+28.30139
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+126
+
+</td>
+
+<td style="text-align:right;">
+
+85.52122
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+2856
+
+</td>
+
+<td style="text-align:right;">
+
+364.23944
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+5298
+
+</td>
+
+<td style="text-align:right;">
+
+525.26414
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+7168
+
+</td>
+
+<td style="text-align:right;">
+
+537.74389
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+affluent
+
+</td>
+
+<td style="text-align:right;">
+
+88
+
+</td>
+
+<td style="text-align:right;">
+
+50.85201
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+high
+
+</td>
+
+<td style="text-align:right;">
+
+66
+
+</td>
+
+<td style="text-align:right;">
+
+47.01031
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+middle
+
+</td>
+
+<td style="text-align:right;">
+
+2084
+
+</td>
+
+<td style="text-align:right;">
+
+297.08542
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+low
+
+</td>
+
+<td style="text-align:right;">
+
+5646
+
+</td>
+
+<td style="text-align:right;">
+
+455.53652
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+renter\_occupied
+
+</td>
+
+<td style="text-align:left;">
+
+poor
+
+</td>
+
+<td style="text-align:right;">
+
+5527
+
+</td>
+
+<td style="text-align:right;">
+
+435.45275
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+``` r
+vac_des <- hpums %>%
+    filter(vacancy == "For rent or sale") %>% 
+    as_survey_design(., ids = 1, wt = hhwt)
+#for vacant units, use 'for rent or sale', and use rent for cost
+```
