@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ipums-ddi-xslt.xsl"?>
+<codeBook xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd" version="2.5" ID="ddi2-166458_usa_00040.dat-usa.ipums.org">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Codebook for an IPUMS-USA Data Extract</titl>
+        <subTitl>DDI 2.5 metadata describing the extract file  'usa_00040.dat'</subTitl>
+        <IDNo>ddi2-166458_usa_00040.dat-usa.ipums.org</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">Minnesota Population Center</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="MPC" affiliation="University of Minnesota" role="Documentation">Minnesota Population Center</producer>
+        <prodDate date="2020-07-13">July 13, 2020</prodDate>
+        <prodPlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact affiliation="University of Minnesota" URI="http://pop.umn.edu">Minnesota Population Center</contact>
+      </distStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>User Extract usa_00040.dat</titl>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">Minnesota Population Center</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="MPC" affiliation="University of Minnesota" role="Documentation">Minnesota Population Center</producer>
+        <prodDate date="2020-07-13">July 13, 2020</prodDate>
+        <prodPlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact affiliation="University of Minnesota" URI="http://pop.umn.edu">Minnesota Population Center</contact>
+      </distStmt>
+      <serStmt>
+        <serName abbr="usa">IPUMS USA</serName>
+        <serInfo>DOI:10.18128/D010.V10.0</serInfo>
+      </serStmt>
+      <verStmt>
+        <version date="2020-07-13"/>
+      </verStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <topcClas vocab="IPUMS">Technical Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Geographic Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Group Quarters Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Dwelling Characteristic Variables -- HOUSEHOLD</topcClas>
+        <topcClas vocab="IPUMS">Technical Variables -- PERSON</topcClas>
+      </subject>
+      <sumDscr ID="sdatref-2708">
+        <timePrd event="single" date="2018">2018</timePrd>
+        <nation abbr="us">United States</nation>
+      </sumDscr>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  2014-2018, ACS 5-year\n            Density of the full data file:  5.0%
+            Density of this extract: 5.0%
+]]></notes>
+    </stdyInfo>
+    <dataAccs>
+      <useStmt>
+        <confDec required="no"><![CDATA[None]]></confDec>
+        <contact affiliation="Minnesota Population Center" URI="http://usa.ipums.org">IPUMS-USA</contact>
+        <citReq><![CDATA[Publications and research reports based on the IPUMS-USA database must cite it appropriately. The citation should include the following:
+
+Steven Ruggles,  Sarah Flood,  Ronald Goeken,  Josiah Grover,  Erin Meyer,  Jose Pacas and Matthew Sobek. IPUMS USA: Version 10.0  [dataset]. Minneapolis, MN: IPUMS, 2020. https://doi.org/10.18128/D010.V10.0
+
+The licensing agreement for use of IPUMS-USA data requires that users supply us with the title and full citation for any publications, research reports, or educational materials making use of the data or documentation. Please add your citation to the IPUMS bibliography at http://bibliography.ipums.org/.]]></citReq>
+        <conditions><![CDATA[Users of IPUMS-USA data must agree to abide by the conditions of use. A user's license is valid for one year and may be renewed.  Users must agree to the following conditions:
+
+(1) No fees may be charged for use or distribution of the data.
+
+(2) Cite IPUMS appropriately.  For information on proper citation,  refer to the citation requirement section of this DDI document.
+
+(3) Tell us about any work you do using the IPUMS.  Publications, research  reports, or presentations making use of IPUMS-USA should be added to our  Bibliography. Continued funding for the IPUMS depends on our ability to  show our sponsor agencies that researchers are using the data for productive  purposes.
+
+(4) The IPUMS cannot be used for genealogical research
+
+(5) It is difficult to use the IPUMS to study small geographic areas.  In the  IPUMS census samples for years 1940-present, no places having a population  of fewer than 100,000 persons can be identified.
+
+(6) Use it for GOOD -- never for EVIL.
+
+(7) Please notify ipums@umn.edu regarding errors in the data or documentation.]]></conditions>
+        <disclaimer>The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</disclaimer>
+      </useStmt>
+    </dataAccs>
+    <notes><![CDATA[User-provided description:  Revision of (DOH: household stuff (hierarchical) includes rent, rentgrs, owncost, ownershp, vacancy) adds VALUEH]]></notes>
+    <notes>This extract is a revision of the user's previous extract, number 39.</notes>
+  </stdyDscr>
+  <fileDscr ID="ExtractData">
+    <fileTxt>
+      <fileName>usa_00040.dat</fileName>
+      <fileCont>Microdata records</fileCont>
+      <fileStrc type="hierarchical">
+        <recGrp rectype="P" recidvar="RECTYPE" keyvar="YEAR DATANUM SERIAL">
+          <labl>Person Record</labl>
+        </recGrp>
+        <recGrp rectype="H" recidvar="RECTYPE">
+          <labl>Household Record</labl>
+        </recGrp>
+      </fileStrc>
+      <fileType charset="ISO-8859-1">ISO-8859-1 data file</fileType>
+      <format>fixed length fields</format>
+      <filePlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</filePlac>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="RECTYPE" files="ExtractData" name="RECTYPE" intrvl="contin" dcml="0" rectype="H P">
+      <location StartPos="1" width="1" EndPos="1"/>
+      <labl>Record type</labl>
+      <txt><![CDATA[RECTYPE assigns all household records the alphabetic string "H." This allows users to discriminate between household and person records; the latter are assigned the string "P" in the person-record variable RECTYPEP. For non-vacant households, each household record is followed by one or more person records. Data at the household level pertain to each person in the household.]]></txt>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Household</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Person</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="character"/>
+    </var>
+    <var ID="YEAR" files="ExtractData" name="YEAR" intrvl="discrete" dcml="0" rectype="H P">
+      <location StartPos="2" width="4" EndPos="5"/>
+      <labl>Census year</labl>
+      <txt><![CDATA[YEAR reports the four-digit year when the household was enumerated or included in the census, the ACS, and the PRCS.
+
+For the multi-year ACS/PRCS samples, YEAR indicates the last year of data included (e.g., 2007 for the 2005-2007 3-year ACS/PRCS; 2008 for the 2006-2008 3-year ACS/PRCS; and so on).  For the actual year of survey in these multi-year data, see MULTYEAR.]]></txt>
+      <catgry>
+        <catValu>1850</catValu>
+        <labl>1850</labl>
+      </catgry>
+      <catgry>
+        <catValu>1860</catValu>
+        <labl>1860</labl>
+      </catgry>
+      <catgry>
+        <catValu>1870</catValu>
+        <labl>1870</labl>
+      </catgry>
+      <catgry>
+        <catValu>1880</catValu>
+        <labl>1880</labl>
+      </catgry>
+      <catgry>
+        <catValu>1900</catValu>
+        <labl>1900</labl>
+      </catgry>
+      <catgry>
+        <catValu>1910</catValu>
+        <labl>1910</labl>
+      </catgry>
+      <catgry>
+        <catValu>1920</catValu>
+        <labl>1920</labl>
+      </catgry>
+      <catgry>
+        <catValu>1930</catValu>
+        <labl>1930</labl>
+      </catgry>
+      <catgry>
+        <catValu>1940</catValu>
+        <labl>1940</labl>
+      </catgry>
+      <catgry>
+        <catValu>1950</catValu>
+        <labl>1950</labl>
+      </catgry>
+      <catgry>
+        <catValu>1960</catValu>
+        <labl>1960</labl>
+      </catgry>
+      <catgry>
+        <catValu>1970</catValu>
+        <labl>1970</labl>
+      </catgry>
+      <catgry>
+        <catValu>1980</catValu>
+        <labl>1980</labl>
+      </catgry>
+      <catgry>
+        <catValu>1990</catValu>
+        <labl>1990</labl>
+      </catgry>
+      <catgry>
+        <catValu>2000</catValu>
+        <labl>2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>2001</catValu>
+        <labl>2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>2002</catValu>
+        <labl>2002</labl>
+      </catgry>
+      <catgry>
+        <catValu>2003</catValu>
+        <labl>2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>2004</catValu>
+        <labl>2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>2005</catValu>
+        <labl>2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>2006</catValu>
+        <labl>2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>2007</catValu>
+        <labl>2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>2008</catValu>
+        <labl>2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>2009</catValu>
+        <labl>2009</labl>
+      </catgry>
+      <catgry>
+        <catValu>2010</catValu>
+        <labl>2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>2011</catValu>
+        <labl>2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>2012</catValu>
+        <labl>2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>2013</catValu>
+        <labl>2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>2014</catValu>
+        <labl>2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>2015</catValu>
+        <labl>2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>2016</catValu>
+        <labl>2016</labl>
+      </catgry>
+      <catgry>
+        <catValu>2017</catValu>
+        <labl>2017</labl>
+      </catgry>
+      <catgry>
+        <catValu>2018</catValu>
+        <labl>2018</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="MULTYEAR" files="ExtractData" name="MULTYEAR" intrvl="contin" dcml="0" rectype="H P">
+      <location StartPos="6" width="4" EndPos="9"/>
+      <labl>Actual year of survey, multi-year ACS/PRCS</labl>
+      <txt><![CDATA[MULTYEAR identifies the actual year of survey in multi-year ACS/PRCS samples.  
+
+For example, the 3-year ACS and PRCS data files each include cases from three single-year files.  For these multi-year samples, the YEAR variable identifies the last year of data (2007 for the 2005-2007 3-year data; 2008 for the 2006-2008 data; and so on). MULTYEAR gives the single-year sample from which the case was drawn (2005, 2006, or 2007 for the 2005-2007 3-year data; 2006, 2007, or 2008 for the 2006-2008 3-year data; and so on).]]></txt>
+      <codInstr><![CDATA[
+This variable is valid only for multi-year ACS and PRCS samples. MULTYEAR is a 4-digit numeric variable which reports the actual year of survey in multi-year ACS/PRCS samples. MULTYEAR specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SAMPLE" files="ExtractData" name="SAMPLE" intrvl="discrete" dcml="0" rectype="H P">
+      <location StartPos="10" width="6" EndPos="15"/>
+      <labl>IPUMS sample identifier</labl>
+      <txt><![CDATA[SAMPLE identifies the IPUMS sample from which the case is drawn. Each sample receives a unique 6-digit code. The codes are structured as follows:
+
+
+The first four digits are the year of the census/survey. 
+
+
+
+The next two digits identify the sample within the year. 
+
+
+For most censuses, IPUMS has multiple datasets which were constructed using different sampling techniques (i.e. size/demographic of the sample population, geographic coverage level or location, or duration of the sampling period for the ACS/PRCS samples).  
+
+The availability table for each variable indicates whether that variable is available in only certain samples for a given year. For further discussion of sample differences, see "Sample Designs." [URL omitted from DDI.].
+
+Note: SAMPLE replaces DATANUM. Though the last two digits in SAMPLE do not correlate exactly with the now-deprecated DATANUM, the variable serves the same purpose of assigning a unique id to all cases that belong to the same dataset.]]></txt>
+      <catgry>
+        <catValu>185001</catValu>
+        <labl>1850 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>185002</catValu>
+        <labl>1850 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>186001</catValu>
+        <labl>1860 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>186002</catValu>
+        <labl>1860 1% sample with black oversample</labl>
+      </catgry>
+      <catgry>
+        <catValu>186003</catValu>
+        <labl>1860 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>187001</catValu>
+        <labl>1870 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>187002</catValu>
+        <labl>1870 1% sample with black oversample</labl>
+      </catgry>
+      <catgry>
+        <catValu>187003</catValu>
+        <labl>1870 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>188001</catValu>
+        <labl>1880 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>188002</catValu>
+        <labl>1880 10%</labl>
+      </catgry>
+      <catgry>
+        <catValu>188003</catValu>
+        <labl>1880 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>190001</catValu>
+        <labl>1900 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>190002</catValu>
+        <labl>1900 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>190003</catValu>
+        <labl>1900 1% sample with oversamples</labl>
+      </catgry>
+      <catgry>
+        <catValu>190004</catValu>
+        <labl>1900 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>191001</catValu>
+        <labl>1910 Puerto Rico</labl>
+      </catgry>
+      <catgry>
+        <catValu>191002</catValu>
+        <labl>1910 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>191003</catValu>
+        <labl>1910 1.4% sample with oversamples</labl>
+      </catgry>
+      <catgry>
+        <catValu>191004</catValu>
+        <labl>1910 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>192001</catValu>
+        <labl>1920 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>192002</catValu>
+        <labl>1920 Puerto Rico sample</labl>
+      </catgry>
+      <catgry>
+        <catValu>192003</catValu>
+        <labl>1920 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>193001</catValu>
+        <labl>1930 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>193002</catValu>
+        <labl>1930 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>193003</catValu>
+        <labl>1930 Puerto Rico</labl>
+      </catgry>
+      <catgry>
+        <catValu>193004</catValu>
+        <labl>1930 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>194001</catValu>
+        <labl>1940 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>194002</catValu>
+        <labl>1940 100% database</labl>
+      </catgry>
+      <catgry>
+        <catValu>195001</catValu>
+        <labl>1950 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>196001</catValu>
+        <labl>1960 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>196002</catValu>
+        <labl>1960 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>197001</catValu>
+        <labl>1970 Form 1 State</labl>
+      </catgry>
+      <catgry>
+        <catValu>197002</catValu>
+        <labl>1970 Form 2 State</labl>
+      </catgry>
+      <catgry>
+        <catValu>197003</catValu>
+        <labl>1970 Form 1 Metro</labl>
+      </catgry>
+      <catgry>
+        <catValu>197004</catValu>
+        <labl>1970 Form 2 Metro</labl>
+      </catgry>
+      <catgry>
+        <catValu>197005</catValu>
+        <labl>1970 Form 1 Neighborhood</labl>
+      </catgry>
+      <catgry>
+        <catValu>197006</catValu>
+        <labl>1970 Form 2 Neighborhood</labl>
+      </catgry>
+      <catgry>
+        <catValu>197007</catValu>
+        <labl>1970 Puerto Rico State</labl>
+      </catgry>
+      <catgry>
+        <catValu>197008</catValu>
+        <labl>1970 Puerto Rico Municipio</labl>
+      </catgry>
+      <catgry>
+        <catValu>197009</catValu>
+        <labl>1970 Puerto Rico Neighborhood</labl>
+      </catgry>
+      <catgry>
+        <catValu>198001</catValu>
+        <labl>1980 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>198002</catValu>
+        <labl>1980 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>198003</catValu>
+        <labl>1980 Urban/Rural</labl>
+      </catgry>
+      <catgry>
+        <catValu>198004</catValu>
+        <labl>1980 Labor Market Area</labl>
+      </catgry>
+      <catgry>
+        <catValu>198005</catValu>
+        <labl>1980 Detailed metro/non-metro</labl>
+      </catgry>
+      <catgry>
+        <catValu>198006</catValu>
+        <labl>1980 Puerto Rico 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>198007</catValu>
+        <labl>1980 Puerto Rico 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>199001</catValu>
+        <labl>1990 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>199002</catValu>
+        <labl>1990 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>199003</catValu>
+        <labl>1990 Unweighted 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>199004</catValu>
+        <labl>1990 Elderly</labl>
+      </catgry>
+      <catgry>
+        <catValu>199005</catValu>
+        <labl>1990 Labor Market Area</labl>
+      </catgry>
+      <catgry>
+        <catValu>199006</catValu>
+        <labl>1990 Puerto Rico 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>199007</catValu>
+        <labl>1990 Puerto Rico 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>200001</catValu>
+        <labl>2000 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>200002</catValu>
+        <labl>2000 1% sample (old version)</labl>
+      </catgry>
+      <catgry>
+        <catValu>200003</catValu>
+        <labl>2000 Unweighted 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>200004</catValu>
+        <labl>2000 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200005</catValu>
+        <labl>2000 Puerto Rico 5%</labl>
+      </catgry>
+      <catgry>
+        <catValu>200006</catValu>
+        <labl>2000 Puerto Rico 1% sample (old version)</labl>
+      </catgry>
+      <catgry>
+        <catValu>200007</catValu>
+        <labl>2000 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>200008</catValu>
+        <labl>2000 Puerto Rico 1%</labl>
+      </catgry>
+      <catgry>
+        <catValu>200101</catValu>
+        <labl>2001 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200201</catValu>
+        <labl>2002 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200301</catValu>
+        <labl>2003 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200401</catValu>
+        <labl>2004 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200501</catValu>
+        <labl>2005 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200502</catValu>
+        <labl>2005 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200601</catValu>
+        <labl>2006 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200602</catValu>
+        <labl>2006 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200701</catValu>
+        <labl>2007 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200702</catValu>
+        <labl>2007 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200703</catValu>
+        <labl>2005-2007, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200704</catValu>
+        <labl>2005-2007, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200801</catValu>
+        <labl>2008 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200802</catValu>
+        <labl>2008 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200803</catValu>
+        <labl>2006-2008, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200804</catValu>
+        <labl>2006-2008, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200901</catValu>
+        <labl>2009 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200902</catValu>
+        <labl>2009 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>200903</catValu>
+        <labl>2007-2009, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200904</catValu>
+        <labl>2007-2009, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200905</catValu>
+        <labl>2005-2009, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>200906</catValu>
+        <labl>2005-2009, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201001</catValu>
+        <labl>2010 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201002</catValu>
+        <labl>2010 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201003</catValu>
+        <labl>2008-2010, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201004</catValu>
+        <labl>2008-2010, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201005</catValu>
+        <labl>2006-2010, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201006</catValu>
+        <labl>2006-2010, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201007</catValu>
+        <labl>2010 10%</labl>
+      </catgry>
+      <catgry>
+        <catValu>201008</catValu>
+        <labl>2010 Puerto Rico 10%</labl>
+      </catgry>
+      <catgry>
+        <catValu>201101</catValu>
+        <labl>2011 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201102</catValu>
+        <labl>2011 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201103</catValu>
+        <labl>2009-2011, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201104</catValu>
+        <labl>2009-2011, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201105</catValu>
+        <labl>2007-2011, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201106</catValu>
+        <labl>2007-2011, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201201</catValu>
+        <labl>2012 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201202</catValu>
+        <labl>2012 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201203</catValu>
+        <labl>2010-2012, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201204</catValu>
+        <labl>2010-2012, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201205</catValu>
+        <labl>2008-2012, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201206</catValu>
+        <labl>2008-2012, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201301</catValu>
+        <labl>2013 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201302</catValu>
+        <labl>2013 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201303</catValu>
+        <labl>2011-2013, ACS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201304</catValu>
+        <labl>2011-2013, PRCS 3-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201305</catValu>
+        <labl>2009-2013, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201306</catValu>
+        <labl>2009-2013, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201401</catValu>
+        <labl>2014 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201402</catValu>
+        <labl>2014 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201403</catValu>
+        <labl>2010-2014, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201404</catValu>
+        <labl>2010-2014, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201501</catValu>
+        <labl>2015 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201502</catValu>
+        <labl>2015 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201503</catValu>
+        <labl>2011-2015, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201504</catValu>
+        <labl>2011-2015, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201601</catValu>
+        <labl>2016 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201602</catValu>
+        <labl>2016 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201603</catValu>
+        <labl>2012-2016, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201604</catValu>
+        <labl>2012-2016, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201701</catValu>
+        <labl>2017 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201702</catValu>
+        <labl>2017 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201703</catValu>
+        <labl>2013-2017, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201704</catValu>
+        <labl>2013-2017, PRCS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201801</catValu>
+        <labl>2018 ACS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201802</catValu>
+        <labl>2018 PRCS</labl>
+      </catgry>
+      <catgry>
+        <catValu>201803</catValu>
+        <labl>2014-2018, ACS 5-year</labl>
+      </catgry>
+      <catgry>
+        <catValu>201804</catValu>
+        <labl>2014-2018, PRCS 5-year</labl>
+      </catgry>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="SERIAL" files="ExtractData" name="SERIAL" intrvl="contin" dcml="0" rectype="H P">
+      <location StartPos="16" width="8" EndPos="23"/>
+      <labl>Household serial number</labl>
+      <txt><![CDATA[SERIAL is an identifying number unique to each household record in a given sample. All person records are assigned the same serial number as the household record that they follow. (Person records also have their own unique identifiers - see PERNUM.) A combination of SAMPLE and SERIAL provides a unique identifier for every household in the IPUMS; the combination of SAMPLE, SERIAL, and PERNUM uniquely identifies every person in the database.
+
+For 1850-1930, households that are part of a multi-household dwelling can be identified by using the DWELLING and DWSEQ variables. See "Sample Designs" [URL omitted from DDI.] for further discussion of sampling from within multi-household dwellings.]]></txt>
+      <codInstr><![CDATA[
+SERIAL is an 8-digit numeric variable which assigns a unique identification number to each household record in a given sample (See PERNUM for the analogous person record identifier). A combination of SAMPLE and SERIAL provides a unique identifier for every household in the IPUMS; the combination of SAMPLE, SERIAL, and PERNUM uniquely identifies every person in the database. SERIAL specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).
+
+SERIAL Specific Variable Codes]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="CBSERIAL" files="ExtractData" name="CBSERIAL" intrvl="contin" dcml="0" rectype="H P">
+      <location StartPos="24" width="13" EndPos="36"/>
+      <labl>Original Census Bureau household serial number</labl>
+      <txt><![CDATA[CBSERIAL is the unique, original identification number assigned to each household record in a given sample by the Census Bureau. All person records are assigned the same serial number as the household record that they follow. (The original person record unique identification numbers assigned by the Census Bureau are provided by CBPERNUM.) 
+
+A combination of SAMPLE and CBSERIAL provides a unique identifier for every household in the IPUMS; the combination of SAMPLE, CBSERIAL, and CBPERNUM uniquely identifies every person in the database.]]></txt>
+      <codInstr><![CDATA[
+CBSERIAL is an 8-digit numeric variable which assigns a unique identification number to each household record in a given sample (See  CBPERNUM  for the analogous person record identifier). CBSERIAL specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).
+
+CBSERIAL Specific Variable Codes]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="HHWT" files="ExtractData" name="HHWT" intrvl="contin" dcml="2" rectype="H">
+      <location StartPos="37" width="10" EndPos="46"/>
+      <labl>Household weight</labl>
+      <txt><![CDATA[HHWT indicates how many households in the U.S. population are represented by a given household in an IPUMS sample. 
+
+It is generally a good idea to use HHWT when conducting a household-level analysis of any IPUMS sample. The use of HHWT is optional when analyzing one of the "flat" or unweighted IPUMS samples. Flat IPUMS samples include the 1% samples from 1850-1930, all samples from 1960, 1970, and 1980, the 1% unweighted samples from 1990 and 2000, the 10% 2010 sample, and any of the full count 100% census datasets. HHWT must be used to obtain nationally representative statistics for household-level analyses of any sample other than those.
+
+Users should also be sure to select one person (e.g., PERNUM = 1) to represent the entire household.
+
+For further explanation of the sample weights, see "Sample Designs" [URL omitted from DDI.] and "Sample Weights" [URL omitted from DDI.]. See also PERWT for a corresponding variable at the person level, and SLWT for a weight variable used with sample-line records in 1940 1% and 1950.]]></txt>
+      <codInstr><![CDATA[
+HHWT is a 6-digit numeric variable which indicates how many households in the U.S. population are represented by a given household in an IPUMS sample and has two implied decimals. For example, a HHWT value of 010461 should be interpreted as 104.61. HHWT specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).
+
+User Note: Users should also be sure to select one person (e.g., PERNUM = 1) to represent the entire household when using HHWT.
+
+HHWT Specific Variable Codes]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="CLUSTER" files="ExtractData" name="CLUSTER" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="47" width="13" EndPos="59"/>
+      <labl>Household cluster for variance estimation</labl>
+      <txt><![CDATA[CLUSTER is designed for use with STRATA in Taylor series linear approximation for correction of complex sample design characteristics. See the STRATA variable description for more details.]]></txt>
+      <codInstr><![CDATA[
+CLUSTER is an 11-digit numeric variable designed for use with STRATA in Taylor series linear approximation for correction of complex sample design characteristics (See the Description of STRATA for more details). CLUSTER specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).
+
+CLUSTER Specific Variable Codes]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="STATEFIP" files="ExtractData" name="STATEFIP" intrvl="discrete" dcml="0" rectype="H">
+      <location StartPos="60" width="2" EndPos="61"/>
+      <labl>State (FIPS code)</labl>
+      <txt><![CDATA[STATEFIP reports the state in which the household was located, using the Federal Information Processing Standards (FIPS) coding scheme, which orders the states alphabetically.
+
+In the 1980 Urban/Rural sample, STATEFIP identifies state groups that are not available in STATEICP; these state groups (codes 61-68) are only available for that particular sample. 
+
+See "Geographic Coding and Comparability" [URL omitted from DDI.] for more information on the geographic detail available in particular samples.]]></txt>
+      <catgry>
+        <catValu>99</catValu>
+        <labl>State not identified</labl>
+      </catgry>
+      <catgry>
+        <catValu>72</catValu>
+        <labl>Puerto Rico</labl>
+      </catgry>
+      <catgry>
+        <catValu>97</catValu>
+        <labl>Military/Mil. Reservation</labl>
+      </catgry>
+      <catgry>
+        <catValu>68</catValu>
+        <labl>Alaska-Hawaii</labl>
+      </catgry>
+      <catgry>
+        <catValu>67</catValu>
+        <labl>Arizona-New Mexico</labl>
+      </catgry>
+      <catgry>
+        <catValu>66</catValu>
+        <labl>Utah-Nevada</labl>
+      </catgry>
+      <catgry>
+        <catValu>65</catValu>
+        <labl>Montana-Idaho-Wyoming</labl>
+      </catgry>
+      <catgry>
+        <catValu>64</catValu>
+        <labl>Maryland-Delaware</labl>
+      </catgry>
+      <catgry>
+        <catValu>63</catValu>
+        <labl>Minnesota-Iowa-Missouri-Kansas-Nebraska-S.Dakota-N.Dakota</labl>
+      </catgry>
+      <catgry>
+        <catValu>62</catValu>
+        <labl>Massachusetts-Rhode Island</labl>
+      </catgry>
+      <catgry>
+        <catValu>61</catValu>
+        <labl>Maine-New Hampshire-Vermont</labl>
+      </catgry>
+      <catgry>
+        <catValu>55</catValu>
+        <labl>Wisconsin</labl>
+      </catgry>
+      <catgry>
+        <catValu>56</catValu>
+        <labl>Wyoming</labl>
+      </catgry>
+      <catgry>
+        <catValu>01</catValu>
+        <labl>Alabama</labl>
+      </catgry>
+      <catgry>
+        <catValu>02</catValu>
+        <labl>Alaska</labl>
+      </catgry>
+      <catgry>
+        <catValu>04</catValu>
+        <labl>Arizona</labl>
+      </catgry>
+      <catgry>
+        <catValu>05</catValu>
+        <labl>Arkansas</labl>
+      </catgry>
+      <catgry>
+        <catValu>06</catValu>
+        <labl>California</labl>
+      </catgry>
+      <catgry>
+        <catValu>08</catValu>
+        <labl>Colorado</labl>
+      </catgry>
+      <catgry>
+        <catValu>09</catValu>
+        <labl>Connecticut</labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>Delaware</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>District of Columbia</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>Florida</labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl>Georgia</labl>
+      </catgry>
+      <catgry>
+        <catValu>15</catValu>
+        <labl>Hawaii</labl>
+      </catgry>
+      <catgry>
+        <catValu>16</catValu>
+        <labl>Idaho</labl>
+      </catgry>
+      <catgry>
+        <catValu>17</catValu>
+        <labl>Illinois</labl>
+      </catgry>
+      <catgry>
+        <catValu>18</catValu>
+        <labl>Indiana</labl>
+      </catgry>
+      <catgry>
+        <catValu>19</catValu>
+        <labl>Iowa</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>Kansas</labl>
+      </catgry>
+      <catgry>
+        <catValu>21</catValu>
+        <labl>Kentucky</labl>
+      </catgry>
+      <catgry>
+        <catValu>22</catValu>
+        <labl>Louisiana</labl>
+      </catgry>
+      <catgry>
+        <catValu>23</catValu>
+        <labl>Maine</labl>
+      </catgry>
+      <catgry>
+        <catValu>24</catValu>
+        <labl>Maryland</labl>
+      </catgry>
+      <catgry>
+        <catValu>25</catValu>
+        <labl>Massachusetts</labl>
+      </catgry>
+      <catgry>
+        <catValu>26</catValu>
+        <labl>Michigan</labl>
+      </catgry>
+      <catgry>
+        <catValu>27</catValu>
+        <labl>Minnesota</labl>
+      </catgry>
+      <catgry>
+        <catValu>28</catValu>
+        <labl>Mississippi</labl>
+      </catgry>
+      <catgry>
+        <catValu>29</catValu>
+        <labl>Missouri</labl>
+      </catgry>
+      <catgry>
+        <catValu>30</catValu>
+        <labl>Montana</labl>
+      </catgry>
+      <catgry>
+        <catValu>31</catValu>
+        <labl>Nebraska</labl>
+      </catgry>
+      <catgry>
+        <catValu>32</catValu>
+        <labl>Nevada</labl>
+      </catgry>
+      <catgry>
+        <catValu>33</catValu>
+        <labl>New Hampshire</labl>
+      </catgry>
+      <catgry>
+        <catValu>34</catValu>
+        <labl>New Jersey</labl>
+      </catgry>
+      <catgry>
+        <catValu>35</catValu>
+        <labl>New Mexico</labl>
+      </catgry>
+      <catgry>
+        <catValu>36</catValu>
+        <labl>New York</labl>
+      </catgry>
+      <catgry>
+        <catValu>37</catValu>
+        <labl>North Carolina</labl>
+      </catgry>
+      <catgry>
+        <catValu>38</catValu>
+        <labl>North Dakota</labl>
+      </catgry>
+      <catgry>
+        <catValu>39</catValu>
+        <labl>Ohio</labl>
+      </catgry>
+      <catgry>
+        <catValu>40</catValu>
+        <labl>Oklahoma</labl>
+      </catgry>
+      <catgry>
+        <catValu>41</catValu>
+        <labl>Oregon</labl>
+      </catgry>
+      <catgry>
+        <catValu>42</catValu>
+        <labl>Pennsylvania</labl>
+      </catgry>
+      <catgry>
+        <catValu>44</catValu>
+        <labl>Rhode Island</labl>
+      </catgry>
+      <catgry>
+        <catValu>45</catValu>
+        <labl>South Carolina</labl>
+      </catgry>
+      <catgry>
+        <catValu>46</catValu>
+        <labl>South Dakota</labl>
+      </catgry>
+      <catgry>
+        <catValu>47</catValu>
+        <labl>Tennessee</labl>
+      </catgry>
+      <catgry>
+        <catValu>48</catValu>
+        <labl>Texas</labl>
+      </catgry>
+      <catgry>
+        <catValu>49</catValu>
+        <labl>Utah</labl>
+      </catgry>
+      <catgry>
+        <catValu>50</catValu>
+        <labl>Vermont</labl>
+      </catgry>
+      <catgry>
+        <catValu>51</catValu>
+        <labl>Virginia</labl>
+      </catgry>
+      <catgry>
+        <catValu>53</catValu>
+        <labl>Washington</labl>
+      </catgry>
+      <catgry>
+        <catValu>54</catValu>
+        <labl>West Virginia</labl>
+      </catgry>
+      <concept vocab="IPUMS">Geographic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+      <notes>Case selection:  09 Connecticut</notes>
+    </var>
+    <var ID="COUNTYFIP" files="ExtractData" name="COUNTYFIP" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="62" width="3" EndPos="64"/>
+      <labl>County (FIPS code)</labl>
+      <txt><![CDATA[COUNTYFIP identifies the county where the household was enumerated, using the Federal Information Processing Standard (FIPS) coding scheme.
+
+COUNTYFIP codes are state-dependent; they must be combined with state codes (see STATEFIP or STATEICP) to distinguish counties located in different states.
+
+Like STATEFIP, COUNTYFIP facilitates merging IPUMS data with data from other sources that use FIPS codes.
+
+Many county boundaries and some county names have changed over time. IPUMS does not impose a uniform county boundary system on the data, so each county listed for a given year in IPUMS should be assumed to have the boundaries that it had in that year.
+
+FIPS codes were first instituted around the time of the 1970 census, so historical counties that were dissolved before then have no FIPS code. COUNTYICP and COUNTYNHG supply codes for the complete history of U.S. county definitions. These alternative variables both use codes based on the 3-digit FIPS scheme with a fourth digit added to distinguish historical counties.
+
+Counties are not identified in public-use microdata from 1950 onwards, so IPUMS instead identifies counties, where possible, from other low-level geographic identifiers. These include State Economic Areas (SEA) in 1950; county groups in 1970 (CNTYGP97) and 1980 (CNTYGP98); and Public Use Microdata Areas (PUMA) from 1990 onwards, including Super-PUMAs (PUMASUPR) in 2000.
+
+COUNTYFIP identifies a county if and only if:
+it was coterminous with a single SEA, county group, or PUMA; or
+it contained multiple SEAs, county groups, or PUMAs, none of which extended into other counties.
+
+Listing of counties identified:
+Identified Counties, 1950-Forward [URL omitted from DDI.]
+
+For municipios, the Puerto Rican statistical equivalent of U.S. counties, see PRCOUNTA (alphabetic version) and PRCOUNTY (numeric version).]]></txt>
+      <codInstr><![CDATA[
+COUNTYFIP is a 3-digit numeric variable that identifies the county where the household was enumerated using the Federal Information Processing Standard (FIPS) coding scheme.
+
+COUNTYFIP codes are state-dependent; they must be combined with state codes (see STATEFIP or STATEICP) to distinguish counties located in different states.
+
+COUNTYFIP codes differ from standard FIPS codes in one case: Dade County, Florida, had FIPS code 025 until its name was changed to Miami-Dade County in 1997, with a new FIPS code of 086. COUNTYFIP assigns a code of 086 to Dade County in all samples to be consistent with the Miami-Dade code in later samples.
+
+COUNTYFIP-Specific Variable Code
+000 = County not identifiable from public-use data (1950-onward)*
+
+*Counties are not identified in public-use microdata from 1950 onwards, so IPUMS instead identifies counties, where possible, from other low-level geographic identifiers.
+
+Listing of counties identified in IPUMS USA samples, including FIPS and ICPSR codes:
+Identified Counties, 1950-Forward [URL omitted from DDI.]]]></codInstr>
+      <concept vocab="IPUMS">Geographic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PUMA" files="ExtractData" name="PUMA" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="65" width="5" EndPos="69"/>
+      <labl>Public Use Microdata Area</labl>
+      <txt><![CDATA[PUMA identifies the Public Use Microdata Area (PUMA) where the housing unit was located. In the 1990 State sample, PUMAs generally follow the boundaries of county groups, single counties, or census-defined "places". If these areas exceed 200,000 residents, they are divided into as many PUMAs of 100,000+ residents as possible. None of the 1990 State sample PUMAs cross state lines. For the 1990 Metro sample, PUMAs generally follow the boundaries of whole central cities, Metropolitan Statistical Areas, Primary Metropolitan Statistical Areas, or non-metropolitan places (See METAREA for definitions of these terms). If these areas exceed 200,000 residents, they are divided into as many PUMAs of 100,000+ residents as possible. 1990 Metro sample PUMAs sometimes cross state lines; when they do, STATEFIP and STATEICP codes are not available for households in those PUMAs. PUMAs in the 2000 census, 2010 census, and the 2005-onward ACS/PRCS also consist of 100,000+ residents, and they do not cross state lines.
+
+Note that PUMA is state-dependent. The codes must be read in combination with one of the STATE variables (STATEFIP or STATEICP). PUMAs are categorized by type (e.g., metropolitan, mixed metro/nonmetro, non-metropolitan) in the variable PUMATYPE. PUMA is similar to the county group variables, CNTYGP97 (1970) and CNTYGP98 (1980), and the State Economic Area variable (SEA) for 1940 and 1950.
+
+Note Regarding Multi-Year Samples: The Census Bureau redraws PUMA boundaries every 10 years based on population information gathered from the most recent decennial census. ACS samples incorporate the new PUMAs within a few years of the Decennial Census. See the comparability statement to see which PUMAs are used in each sample. In Multi-Year ACS files, PUMA boundaries depend on the original year the respondent was interviewed (see MULTYEAR). For example in the 2010-2012 3-year ACS sample, respondents from 2010 and 2011 correspond to the Census 2000 based PUMAs, while respondents from 2012 correspond to the Census 2010 based PUMAs.]]></txt>
+      <codInstr><![CDATA[
+PUMA is a 5-digit numeric variable identifying the Public Use Microdata Area (PUMA) where the housing unit was located. PUMAs are categorized by type (e.g., metropolitan, mixed metro/nonmetro, non-metropolitan) in the variable PUMATYPE. PUMA is similar to the county group variables, CNTYGP97 (1970) and CNTYGP98 (1980), and the State Economic Area variable (SEA) for 1940 and 1950. PUMA specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below by Census year (and data sample if specified).
+
+User Note: PUMAs are drawn and coded differently for the 1990 State and Metro samples. In the 1990 State sample, PUMAs generally follow the boundaries of groups of counties, single counties, or census-defined "places". If such areas exceed 200,000 residents, they are divided into as many PUMAs of 100,000+ residents as possible. None of the 1990 State sample PUMAs cross state lines. In the 1990 Metro sample, PUMAs generally follow the boundaries of whole central cities, Metropolitan Statistical Areas, Primary Metropolitan Statistical Areas, or non-metropolitan places (See METAREA for definitions of these terms). If these areas exceed 200,000 residents, they are divided into as many PUMAs of 100,000+ residents as possible. 1990 Metro sample PUMAs sometimes cross state lines; when they do, STATEFIP and STATEICP codes are not available for households in those PUMAs. PUMAs in the 2000 census, 2010 census, and the 2005-onward ACS/PRCS also consist of 100,000+ residents, and they do not cross state lines.
+
+User Note: PUMA is state-dependent, therefore the codes must be read in combination with one of the STATE variables: STATEFIP or STATEICP.
+
+PUMA Specific Variable Codes
+See links for details regarding PUMA codes:
+Census 2010 based PUMA map and Boundary files [URL omitted from DDI.]
+Census 2000 based PUMA and Super-PUMA Maps, Boundary files and Detailed Composition [URL omitted from DDI.]
+1990 PUMA Maps, Boundary files and Detailed Composition [URL omitted from DDI.]
+1990 PUMAs crossing state lines, 1 percent Metro sample [URL omitted from DDI.]
+
+User Note: In the 2006-2011 ACS, persons living in Louisiana PUMAs 01801, 01802, and 01905 were all coded as living in Louisiana PUMA 77777. This is because these three PUMAs no longer had sufficient population to be included as separate entities due the effects of hurricane Katrina.]]></codInstr>
+      <concept vocab="IPUMS">Geographic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="STRATA" files="ExtractData" name="STRATA" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="70" width="12" EndPos="81"/>
+      <labl>Household strata for variance estimation</labl>
+      <txt><![CDATA[STRATA is designed for use with CLUSTER in Taylor series linear approximation for correction of complex sample design characteristics.
+
+While appropriate use of the sampling weights PERWT and HHWT allow users to produce correct point estimates (such as means and proportions), many researchers believe that additional statistical techniques are also necessary to produce correct standard errors and statistical tests that account for complex sample design. 
+
+For further information on why and how to use STRATA and CLUSTER, see  Analysis and Variance Estimation with the IPUMS  [URL omitted from DDI.]. For more details on the mathematics behind this method, see  Issues Concerning the Calculation of Standard Errors Using IPUMS Data Products  [URL omitted from DDI.].]]></txt>
+      <codInstr><![CDATA[
+STRATA is a 12-digit numeric variable designed for use with CLUSTER in Taylor series linear approximation for correction of complex sample design characteristics. While appropriate use of the sampling weights PERWT and HHWT allow users to produce correct point estimates (such as means and proportions), many researchers believe that additional statistical techniques are also necessary to produce correct standard errors and statistical tests that account for complex sample design. STRATA specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).
+
+User Note: For further information on why and how to use STRATA and CLUSTER, see Analysis and Variance Estimation with the IPUMS [URL omitted from DDI.]. For more details on the mathematics behind this method, see Issues Concerning the Calculation of Standard Errors Using IPUMS Data Products [URL omitted from DDI.].  
+
+STRATA Specific Variable Codes]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="GQ" files="ExtractData" name="GQ" intrvl="discrete" dcml="0" rectype="H">
+      <location StartPos="82" width="1" EndPos="82"/>
+      <labl>Group quarters status</labl>
+      <txt><![CDATA[GQ classifies all housing units as falling into one of three main categories: households, group quarters, or vacant units. It also identifies fragmentary sample units for 1850-1930 (see below). In all years, the data available about a person and their co-residents depend on whether the person lives in a household or in group quarters. Households are sampled as units, meaning that everyone in the household is included in the sample, and most household-level variables are available. People living in group quarters are generally sampled as individuals; other people in their unit may or may not be included in the sample, and there is no way of linking co-residents' records to one another. If, however, a sampled person in group quarters was living with relatives, the related group was sampled for 1850-1930. Most household-level variables are not available for group quarters or for vacant units.
+
+Group quarters are largely institutions and other group living arrangements, such as rooming houses and military barracks. The definitions vary from year to year, but the pre-1940 samples have generally used a definition of group quarters that includes units with 10 or more individuals unrelated to the householder. See the comparability discussion below and "Sample Designs" [URL omitted from DDI.] for more details about changing definitions of group quarters.  Group-quarters types are identified in further detail by GQTYPE and GQFUNDS.]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>Vacant unit</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Households under 1970 definition</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Additional households under 1990 definition</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>Group quarters--Institutions</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>Other group quarters</labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>Additional households under 2000 definition</labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl>Fragment</labl>
+      </catgry>
+      <concept vocab="IPUMS">Group Quarters Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="OWNERSHP" files="ExtractData" name="OWNERSHP" intrvl="discrete" dcml="0" rectype="H">
+      <location StartPos="83" width="1" EndPos="83"/>
+      <labl>Ownership of dwelling (tenure) [general version]</labl>
+      <txt><![CDATA[OWNERSHP indicates whether the housing unit was rented or owned by its inhabitants. Housing units acquired with a mortgage or other lending arrangement(s) are classified as "owned," even if repayment was not yet completed.]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>N/A</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>Owned or being bought (loan)</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>Rented</labl>
+      </catgry>
+      <concept vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="OWNERSHPD" files="ExtractData" name="OWNERSHPD" intrvl="discrete" dcml="0" rectype="H">
+      <location StartPos="84" width="2" EndPos="85"/>
+      <labl>Ownership of dwelling (tenure) [detailed version]</labl>
+      <txt><![CDATA[OWNERSHP indicates whether the housing unit was rented or owned by its inhabitants. Housing units acquired with a mortgage or other lending arrangement(s) are classified as "owned," even if repayment was not yet completed.]]></txt>
+      <catgry>
+        <catValu>00</catValu>
+        <labl>N/A</labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>Owned or being bought</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>Check mark (owns?)</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>Owned free and clear</labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl>Owned with mortgage or loan</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>Rented</labl>
+      </catgry>
+      <catgry>
+        <catValu>21</catValu>
+        <labl>No cash rent</labl>
+      </catgry>
+      <catgry>
+        <catValu>22</catValu>
+        <labl>With cash rent</labl>
+      </catgry>
+      <concept vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="OWNCOST" files="ExtractData" name="OWNCOST" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="86" width="5" EndPos="90"/>
+      <labl>Selected monthly owner costs</labl>
+      <txt><![CDATA[OWNCOST reports selected monthly owner costs for owner-occupied units.
+
+OWNCOST is the derived sum of payments for mortgages, deeds of trust, contracts to purchase, or similar debts on the property (including payments for the first mortgage, second mortgages, home equity loans, and other junior mortgages); real estate taxes; fire, hazard, and flood insurance on the property; utilities (electricity, gas, and water and sewer); and fuels (oil, coal, kerosene, wood, etc.). It also includes, where appropriate, the monthly condominium fee for condominiums and mobile home costs (installment loan payments, personal property taxes, site rent, registration fees, and license fees).
+
+The components of this variable are available separately via CONDOFEE, COSTELEC, COSTFUEL, MORTAMT1, MORTAMT2, MORTOTAL, COSTWATR, COSTGAS, PROPTXIN, PROPINSR, and MOBLHOME.
+
+OWNCOST is not always exactly equal to the sum of these variables. Many of the component variables for OWNCOST were intervalled or topcoded. In some cases, OWNCOST appears to have been constructed from these variables prior to their being intervalled or topcoded. Also, most of the component variables report annual costs, whereas OWNCOST reports monthly costs.
+
+Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation (See INCTOT for Consumer Price Index adjustment factors). The exception is the ACS/PRCS multi-year files, where all dollar amounts have been standardized to dollars as valued in the final year of data included in the file (e.g., 2007 dollars for the 2005-2007 3-year file). Additionally, more detail may be available than exists in the original ACS samples.]]></txt>
+      <codInstr><![CDATA[
+OWNCOST is a 5-digit numeric code which reports selected monthly owner costs for owner-occupied units. OWNCOST is the derived sum of payments for mortgages, deeds of trust, contracts to purchase, or similar debts on the property (including payments for the first mortgage, second mortgages, home equity loans, and other junior mortgages); real estate taxes; fire, hazard, and flood insurance on the property; utilities (electricity, gas, and water and sewer); and fuels (oil, coal, kerosene, wood, etc.). It also includes, where appropriate, the monthly condominium fee for condominiums and mobile home costs (installment loan payments, personal property taxes, site rent, registration fees, and license fees). OWNCOST specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below by Census year (and data sample if specified).
+
+User Note: The components of this variable are available separately via CONDOFEE, COSTELEC, COSTFUEL, MORTAMT1, MORTAMT2, MORTOTAL, COSTWATR, COSTGAS, PROPTXIN, PROPINSR, and RENT (See Description for details regarding the construction of OWNCOST).
+
+User Note: Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation (See Description). The exception is the ACS/PRCS multi-year files, where all dollar amounts have been standardized to dollars as valued in the final year of data included in the file (e.g., 2007 dollars for the 2005-2007 3-year file) 
+
+OWNCOST Specific Variable Codes
+99999 = Not in universe]]></codInstr>
+      <concept vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="RENT" files="ExtractData" name="RENT" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="91" width="4" EndPos="94"/>
+      <labl>Monthly contract rent</labl>
+      <txt><![CDATA[RENT reports the amount of the household's monthly contract rent payment. For vacant units (included beginning in 1970), RENT reports the amount for which landlord expected to rent the unit. This amount includes utilities, fuels, etc. only if they were included in the rent contract. Respondents were to report the full contract amount, even if payments were delinquent or made by someone outside the household. See also RENTGRS.
+
+Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation. See INCTOT for Consumer Price Index adjustment factors. The exception is the ACS/PRCS multi-year files, where all dollar amounts have been standardized to dollars as valued in the final year of data included in the file (e.g., 2007 dollars for the 2005-2007 3-year file). Additionally, more detail may be available than exists in the original ACS samples.
+
+User Note: The traditional unit of land area in Puerto Rico is the cuerda. The cuerda is equal to about 3930 square meters, 4700 square yards, or 0.971 acres. Because the cuerda and the acre are so close in size, they are often treated informally as being equal. Mainlanders sometimes call the cuerda the "Spanish Acre." The IPUMS has preserved the units for the mainland U.S. as acres and for Puerto Rico as cuerdas.]]></txt>
+      <codInstr><![CDATA[
+RENT is a 4-digit numeric variable that reports the amount of the household's monthly contract rent payment. For vacant units (included beginning in 1970), RENT reports the amount for which landlord expected to rent the unit. This amount includes utilities, fuels, etc. only if they were included in the rent contract. Respondents were to report the full contract amount, even if payments were delinquent or made by someone outside the household. See also RENTGRS. RENT specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below by Census year (and data sample if specified).
+
+User Note: Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation (See Description). The exception is the ACS/PRCS multi-year files, where all dollar amounts have been standardized to dollars as valued in the final year of data included in the file (e.g., 2007 dollars for the 2005-2007 3-year file). Additionally, more detail may be available than exists in the original ACS samples.
+
+RENT Specific Variable Codes
+0000 = N/A
+0001 = No cash rent (1980-1990)
+9998 = Missing (1940)
+9999 = No cash rent (1940)
+
+* .indent {
+  text-indent: 10px;
+}
+
+* .lrgindent {
+  text-indent: 90px;
+}
+
+
+	
+		RENT
+	
+		Census 
+		Top Code
+	
+		1940
+		$9,998
+	
+	1940 100%
+			$9,997
+	
+		1960
+		$200
+	
+		1970 (US)
+		$999
+	
+		1970 (PR)
+		-
+	
+		1980
+		$500
+	
+		1990
+		$1,000
+	
+		2000
+		 $1,700*
+	
+		ACS (2000)
+		 $2,300*
+	
+		ACS (2001-2002)
+		 $2,500*
+	
+		ACS (2003-onward)
+		 99.5th Percentile in State*
+	
+		 PRCS (2005-onward)
+		 99.5th Percentile in State*
+	
+	
+	
+	
+
+* Higher amounts are expressed as the state means of values above the listed Top Code value for that specific Census year (i.e. For Census Year 2000, any observed value greater than the Top Code value of $1,700 was coded as the mean value greater than $1,700 within that observation's state.).
+
+Values Exceeding Top codes, by State: 2000 - onward [URL omitted from DDI.]]]></codInstr>
+      <concept vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="RENTGRS" files="ExtractData" name="RENTGRS" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="95" width="4" EndPos="98"/>
+      <labl>Monthly gross rent</labl>
+      <txt><![CDATA[RENTGRS reports the gross monthly rental cost of the housing unit, including contract rent plus additional costs for utilities (water, electricity, gas) and fuels (oil, coal, kerosene, wood, etc.). The census PUMS for each year constructed this variable by adding the amounts reported for contract rent, utility costs, and fuel costs. RENTGRS amounts should be more comparable across renting households than RENT (Contract rent) amounts, which may or may not include utilities and fuels. See RENT for more discussion of contract rent.
+
+Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation (See INCTOT for Consumer Price Index adjustment factors). The exception is the ACS/PRCS multi-year files, where all dollar amounts have been standardized to dollars as valued in the final year of data included in the file (e.g., 2007 dollars for the 2005-2007 3-year file). Additionally, more detail may be available than exists in the original ACS samples.]]></txt>
+      <codInstr><![CDATA[
+RENTGRS is a 4-digit numeric variable that reports the gross monthly rental cost of the housing unit, including contract rent plus additional costs for utilities (water, electricity, gas) and fuels (oil, coal, kerosene, wood, etc.). The census PUMS for each year constructed this variable by adding the amounts reported for contract rent, utility costs, and fuel costs. RENTGRS amounts should be more comparable across renting households than RENT (Contract rent) amounts, which may or may not include utilities and fuels. See RENT for more discussion of contract rent. RENTGRS specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below by Census year (and data sample if specified).
+
+User Note: Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation (See Description). The exception is the ACS/PRCS multi-year files, where all dollar amounts have been standardized to dollars as valued in the final year of data included in the file (e.g., 2007 dollars for the 2005-2007 3-year file). Additionally, more detail may be available than exists in the original ACS samples.
+
+RENTGRS Specific Variable Codes
+
+* .indent {
+  text-indent: 10px;
+}
+
+* .lrgindent {
+  text-indent: 90px;
+}
+
+
+	
+		RENTGRS
+	
+		Census
+		Top Code
+	
+		1960
+		$200
+	
+		1970
+		$999
+	
+		1980
+		$999
+	
+		1990
+		 $1,500*
+	
+		2000
+		$9,999
+	
+		ACS
+		See Constituent Variables**
+	
+		PRCS
+		See Constituent Variables**
+	
+	
+	
+	
+
+*Higher amounts are expressed as the state medians of values above $1,500.
+** For the ACS and PRCS, RENTGRS is not documented. See constituent variables:  (RENT, COSTELEC, COSTGAS, COSTFUEL) for Top code information.
+
+Values Exceeding Top codes, by State: 1990 [URL omitted from DDI.]
+
+User Note: Some states in the 1990 data show more than one value above $1,500, even though all values above this point were to be replaced by state medians.]]></codInstr>
+      <concept vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="VALUEH" files="ExtractData" name="VALUEH" intrvl="contin" dcml="0" rectype="H">
+      <location StartPos="99" width="7" EndPos="105"/>
+      <labl>House value</labl>
+      <txt><![CDATA[VALUEH reports the value of housing units in contemporary dollars. For 1930, 1940, and from 2008 onward, VALUEH is a continuous variable. The other years report the midpoint of an interval; see codes and frequencies for intervals.
+
+User Note: Universe shifts and changing methods of determining value complicate use of this variable for comparisons across years. Furthermore, dollar amounts were intervalled differently for each year, and the top codes changed. Users must adjust for the effects of inflation; see INCTOT for Consumer Price Index adjustment factors.
+
+User Note: The traditional unit of land area in Puerto Rico is the cuerda. The cuerda is equal to about 3930 square meters, 4700 square yards, or 0.971 acres. Because the cuerda and the acre are so close to being equal, they are often treated informally as being equal. Mainlanders sometimes call the unit the "Spanish Acre." The IPUMS has preserved the units for the mainland U.S. as acres and Puerto Rico as cuerdas.]]></txt>
+      <codInstr><![CDATA[
+VALUEH is a 7-digit numeric code which reports the value of housing units in contemporary dollars. For 1930, 1940, and 2008 onward samples, VALUEH is a continuous variable. Other years report the midpoint of an interval.
+
+VALUEH specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below by Census year (and data sample if specified).
+
+User Note: Amounts are expressed in contemporary dollars, and users studying change over time must adjust for inflation. Further, universe shifts and changing methods of determining value complicate use of this variable for comparisons across years (See Description).
+
+VALUEH Specific Variable Codes
+0000000 = N/A (1930)
+9999998 = Missing (1940 100%)
+9999999 = Missing (1930), N/A (1940-2000, ACS, and PRCS)
+
+* .indent {
+  text-indent: 10px;
+}
+
+* .lrgindent {
+  text-indent: 90px;
+}
+
+
+	
+		VALUEH
+	
+		Census 
+		Top Code
+	
+		1960
+		$35,000
+	
+		1970 (US)
+		$50,000
+	
+		1970 (PR)
+		$30,000
+	
+		1980 (US)
+		$200,000
+	
+		1980 (PR)
+		$100,000
+	
+		1990 (US)
+		$400,000
+	
+		2000
+		$1,000,000
+	
+		ACS (2000-2007)
+		$1,000,000
+	
+		 PRCS (2000-2007)
+		$1,000,000
+	
+	
+	
+	
+
+2008-onward ACS/PRCS Top Coding, by State: Values Exceeding Top codes, by State: 2008 - onward [URL omitted from DDI.]]]></codInstr>
+      <concept vocab="IPUMS">Economic Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="VACANCY" files="ExtractData" name="VACANCY" intrvl="discrete" dcml="0" rectype="H">
+      <location StartPos="106" width="1" EndPos="106"/>
+      <labl>Vacancy status</labl>
+      <txt><![CDATA[VACANCY identifies vacant housing units and reports the reason for the vacancy (e.g., for rent, for sale, used only seasonally). To be counted as "vacant," a unit has to be in livable condition and intended for residential use. For newly-constructed units, all exterior windows and doors must be installed, and usable floors must be in place. Dilapidated, condemned, and nonresidential buildings are thus excluded. Mobile homes and trailers (in 1970 and 1980) were counted only if they were intended for occupancy where they stood (i.e., they were not still in a factory or retailer's sales lot). Enumerators obtained vacancy information from landlords, owners, neighbors, or anyone else who might have known about the unit's status; in 1970, they could rely on personal inspection.
+
+User Caution: By default, the extraction system rectangularizes the data: that is, it puts household information on the person records and does not retain the households as separate records.  As a result, rectangular files will not contain vacant units, since there are no persons corresponding to these units.  Researchers wishing to retain vacant units should instead choose a hierarchical file format when creating their extract.]]></txt>
+      <catgry>
+        <catValu>0</catValu>
+        <labl>N/A</labl>
+      </catgry>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>For rent or sale</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>For sale only</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>Rented or sold but not (yet) occupied</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>For seasonal, recreational or other occasional use</labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>For occasional use</labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl>For seasonal use</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>For migrant farm workers</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>For seasonal use or migratory</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>Other vacant</labl>
+      </catgry>
+      <concept vocab="IPUMS">Dwelling Characteristic Variables -- HOUSEHOLD</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PERNUM" files="ExtractData" name="PERNUM" intrvl="contin" dcml="0" rectype="P">
+      <location StartPos="37" width="4" EndPos="40"/>
+      <labl>Person number in sample unit</labl>
+      <txt><![CDATA[PERNUM numbers all persons within each household consecutively in the order in which they appear on the original census or survey form. When combined with SAMPLE and SERIAL, PERNUM uniquely identifies each person within the IPUMS.]]></txt>
+      <codInstr><![CDATA[
+
+PERNUM is a 4-digit numeric variable which numbers all persons within each household consecutively in the order in which they appear on the original census or survey form. PERNUM specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PERWT" files="ExtractData" name="PERWT" intrvl="contin" dcml="2" rectype="P">
+      <location StartPos="41" width="10" EndPos="50"/>
+      <labl>Person weight</labl>
+      <txt><![CDATA[PERWT indicates how many persons in the U.S. population are represented by a given person in an IPUMS sample. 
+
+It is generally a good idea to use PERWT when conducting a person-level analysis of any IPUMS sample. The use of PERWT is optional when analyzing one of the "flat" or unweighted IPUMS samples. Flat IPUMS samples include the 1% samples from 1850-1930, all samples from 1960, 1970, and 1980, the 1% unweighted samples from 1990 and 2000, the 10% 2010 sample, and any of the full count 100% census datasets. PERWT must be used to obtain nationally representative statistics for person-level analyses of any sample other than those.
+
+For further explanation of the sample weights, see "Sample Designs" [URL omitted from DDI.] and "Sample Weights" [URL omitted from DDI.]. See also HHWT for a corresponding variable at the household level, and SLWT for a weight variable used with sample-line records in 1940 and 1950.]]></txt>
+      <codInstr><![CDATA[
+PERWT is a 6-digit numeric variable which indicates how many persons in the U.S. population are represented by a given person in an IPUMS sample and has two implied decimals. For example, a PERWT value of 010461 should be interpreted as 104.61. PERWT specific variable codes for missing, edited, or unidentified observations, observations not applicable (N/A), observations not in universe (NIU), top and bottom value coding, etc. are provided below if applicable by Census year (and data sample if specified).
+
+PERWT Specific Variable Codes]]></codInstr>
+      <concept vocab="IPUMS">Technical Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+  </dataDscr>
+</codeBook>
