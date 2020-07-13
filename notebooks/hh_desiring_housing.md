@@ -1761,6 +1761,10 @@ executive; Driver/sales workers and truck drivers
 
 ## Cost burden by income band
 
+**In addition to just whether or not the household is cost burdened, add
+summary of actual cost ratios here. This will be useful in determining
+who can pay more.**
+
 ``` r
 county_cb <- des %>%
     select(hhwt, name, inc_band, cost_burden) %>% 
@@ -2414,7 +2418,7 @@ the need a new PUMS file in hierarchical format, widdled down to
 household level. Need to work on this a bit more…
 
 ``` r
-hddi <- read_ipums_ddi("../input_data/usa_00039.xml")
+hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
 
 cost_bands <- minc %>% 
     bind_rows(ctminc) %>% 
@@ -2475,8 +2479,9 @@ occ_cost_bands <- bind_rows(own_occ_cost_bands, rent_occ_cost_bands)
 ```
 
 Here’s a quick crappy table of the occupied units by cost band and
-county. I’ll need to add vacant units and summarize to get totals and
-shares.
+county. I’ll need to add vacant units and do some adjustment to the home
+values of for-sale homes to determine a mortgage payment amount, then
+summarize to get totals and shares.
 
 ``` r
 kable(occ_cost_bands)
@@ -5253,4 +5258,17 @@ vac_des <- hpums %>%
     filter(vacancy == "For rent or sale") %>% 
     as_survey_design(., ids = 1, wt = hhwt)
 #for vacant units, use 'for rent or sale', and use rent for cost
+# will need to use the base rate for home loans to determine what the mortgage cost would be for a for-sale home
 ```
+
+## Households who need housing in each cost band
+
+Not sure, but I think this will by default include the number of
+households in each income band (if I’m low income I should pay low
+income prices, right?), then further split out into those who are paying
+in the appropriate cost band, and the gap or surplus. So the household’s
+income band, then the cost band they’re paying in.
+
+## Add homeless?
+
+Not sure where to get good data… PIT counts by county?
