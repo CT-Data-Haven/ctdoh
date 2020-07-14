@@ -53,17 +53,22 @@ There’s a lot going on in this notebook:
         about wage reform, but brings the context back down to earth…
   - Count and share of households in each band that are cost-burdened
     (T2 in DC report)
+  - Average (median?) housing-cost-to-income ratio for each income band
   - The approximate monthly housing cost for an affordable unit for each
     income band.
       - Rounded to pretty numbers for legibility?
+      - DC report used lower cost burden ratios for higher income bands.
+        Should we?
   - Count and share of units by those cost bands in the area (T3 in DC
     report).
   - Number of housing units needed for each cost band so each household
     would have an affordable housing cost, vs. the actual count of units
-    in those cost bands (F19 in DC report)
+    in those cost bands (F19 in DC report) \* Again, DC used much lower
+    cost ratios for higher income bands. I think we should expect they
+    can pay more.
   - For each income band, the number of households that can/cannot
-    afford to pay more, \* Count of vacant units in each cost band (F20
-    in DC report).
+    afford to pay more
+  - Count of vacant units in each cost band (F20 in DC report).
 
 ## Establish groups
 
@@ -123,9 +128,14 @@ pums <- read_ipums_micro(ddi, verbose = F)  %>%
             fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent")) %>% 
     mutate(cb = if_else(ownershp == "Rented", (rentgrs * 12) / hhincome, 99999)) %>% 
     mutate(cb = if_else(ownershp == "Owned or being bought (loan)", (owncost * 12) / hhincome, cb)) %>%
-    # if rent is 0 and income is 0, no burden
-    mutate(cb = if_else((rentgrs == 0 & hhincome == 0), 0, cb)) %>% 
-    #if income is 0 and rent is >0, burden
+    # if housing cost is 0 and income is 0, no burden
+    mutate(cb = if_else((rentgrs == 0 & hhincome == 0), 0, cb)) %>%
+    mutate(cb = if_else((owncost == 0 & hhincome == 0), 0, cb)) %>%
+    #if income is <=0 and housing cost is >0, burden
+    mutate(cb = if_else((rentgrs > 0 & hhincome <= 0), 1, cb)) %>%
+    mutate(cb = if_else((owncost > 0 & hhincome <= 0), 1, cb)) %>%
+    # some people pay more than 100% income to housing, but I will code these as 1
+    mutate(cb = if_else(cb > 1, 1, cb)) %>%
     mutate(
         cost_burden = cut(
             cb,
@@ -658,7 +668,7 @@ hh_by_inc_band %>%
         y = "",
         title = "Number of households in each income band",
         subtitle = "Connecticut") +
-    scale_fill_custom() +
+    scale_fill_custom(rev = T) +
     theme(
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
@@ -1876,90 +1886,195 @@ cb_by_inc_band %>%
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
-For all households but the poorest, about twice the share of households
-pay between 30% and 50% of income towards housing than pay more than
-50%, the idea being that because middle-to-high income households have
-more money, they have more choice in what they pay in order to live
-where they’d like to live. But among poor households, the inverse is
-true—more poor households pay half or more of their income in rent.
-Obviously with less money to spend, a higher shares of income go to
-expenses like housing. But I think the element of choice comes into play
-here as well. It’s that the housing market in CT exploits poor
-households who want choice.
-
-Follow me: obviously there’s a paucity of affordable housing because the
-range of housing costs is both high and narrow, but the market has also
-exploited the fact that poor households will pay to gain more choice,
-and has calibrated to what poor households are willing to pay and where.
-Consider choice as shorthand for typical inputs to a hedonic abstraction
-for housing—although location is perhaps more important than housing
-type, amenities, etc., in this regard. Obviously, this assumption is
-limited by the fact I’m not considering household size, and more
-bedrooms is just plainly associated with higher cost. Urban’s
-demographer and I kinda talked about doing this but it might be too
-complicated.
-
-Anyway, Poor households in CT make up to about $38K/year. By spending
-half of that income monthly on housing, they’re paying about $1,500 per
-month, which is the lower end of what middle-income people should be
-paying housing that’s affordable, and is about the going rate for a 1
-bedroom apartment in East Rock or slightly larger apartments elsewhere
-in New Haven. I think we hear this every time someone proposes a
-development in New Haven at market-rate prices to attract “young
-professionals” who by and large can already choose to live here or
-elsewhere and who are less restricted by unit cost and more sensitive to
-amenities or location. But the value of that choice isn’t necessarily
-restricted to middle-to-high income households. With some town zoning
-boards blocking sub-market rate housing, thereby restricting overall
-supply and location, and other towns concentrating housing affordable to
-poor households in just a few neighborhoods, restricting location even
-further, if a poor household wants to have any choice in where they live
-at all, they’re stuck paying middle-income rent in order to gain the
-value of that expanded choice of location/amenities/etc.
-
-So the next part of this analysis that I haven’t started but will be
-interesting to see is what the households in each income band are
-actually paying and how many units exist by cost band. I think the magic
-number is the low-end of middle income cost bands as the sweet spot
-between what people who expect choice want to be wooed for and what
-people who pay for choice can pay up to.
-
 \============================================
 
 Quick diversion: is the SCB rate among poor households partially
 explained by some of these households having housing costs and
 no/negative negative income?
 
-By definition, the household is “poor” if household income is $0 or less
-because that’s less than 50% CMI. There are about 15K poor households
-with no or negative income. About 6K of those have no housing costs and
-thus no burden. The remaining 9K (shown below) are severely
-cost-burdened by definition. Although there are 2-3K of these households
-in the urban counties, they only account for 2-3% of poor households in
-those areas. In other words, no, these households are not driving the
-trend in SCB.
+By definition, the household is in the “poor” income band if household
+income is $0 or less because that’s less than 50% CMI. There are about
+15K poor households with no or negative income and some nonzero housing
+cost, making them “severely cost burdened” by definition. These \~15K
+units make up about 4% of all poor households, which is not
+insignificant, but it’s not the sole motivator for high SCB rates in
+this income band.
 
 ``` r
 des %>%
     mutate(income = if_else(hhincome == 0, "no_income", "positive_income")) %>% 
     mutate(income = if_else(hhincome < 0, "negative_income", income)) %>% 
-    select(hhwt, name, income, cost_burden) %>% 
-    group_by(name, income, cost_burden) %>% 
+    select(hhwt, income, cost_burden) %>% 
+    group_by(income, cost_burden) %>% 
     filter(income != "positive_income", cost_burden == "Severely cost-burdened") %>% 
     summarise(households = survey_total(hhwt))
 ```
 
-    ## # A tibble: 8 x 5
-    ##   name              income    cost_burden            households households_se
-    ##   <chr>             <chr>     <fct>                       <dbl>         <dbl>
-    ## 1 Fairfield County  no_income Severely cost-burdened       2047         270. 
-    ## 2 Hartford County   no_income Severely cost-burdened       2689         315. 
-    ## 3 Litchfield County no_income Severely cost-burdened        178          54.4
-    ## 4 Middlesex County  no_income Severely cost-burdened        481         147. 
-    ## 5 New Haven County  no_income Severely cost-burdened       2918         311. 
-    ## 6 New London County no_income Severely cost-burdened        431         108. 
-    ## 7 Tolland County    no_income Severely cost-burdened        173          65.3
-    ## 8 Windham County    no_income Severely cost-burdened        122          57.6
+    ## # A tibble: 2 x 4
+    ##   income          cost_burden            households households_se
+    ##   <chr>           <fct>                       <dbl>         <dbl>
+    ## 1 negative_income Severely cost-burdened        366          79.2
+    ## 2 no_income       Severely cost-burdened      14470         681.
+
+## Average housing-cost-to-income ratio for each band
+
+``` r
+avg_cost_ratio_county <- pums %>%
+    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
+    select(hhwt, name, inc_band, cb) %>%
+    mutate(mult = cb * hhwt) %>% 
+    group_by(name, inc_band) %>% 
+    summarise(wm_cb = sum(mult)/sum(hhwt)) %>% 
+    mutate(level = "2_counties")
+
+avg_cost_ratio_ct <- pums %>%
+    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
+    select(hhwt, inc_band, cb) %>%
+    mutate(mult = cb * hhwt) %>% 
+    group_by(inc_band) %>% 
+    summarise(wm_cb = sum(mult)/sum(hhwt)) %>% 
+    mutate(name = "Connecticut", level = "1_state")
+
+avg_cost_ratio_inc_band <- bind_rows(avg_cost_ratio_county, avg_cost_ratio_ct)
+
+out$avg_cost_ratio_inc_band <- avg_cost_ratio_inc_band
+```
+
+Urban’s DC study found that higher income households paid about 12%
+income to housing. In CT it’s about 14%. For a household with $200K in
+income, that’s about $2500/month in housing costs, which I just don’t
+think is that high. For a household at the lower end of CT’s affluent
+band, earning about $114K, housing costs are about $1400, which is about
+the going rate for a one bedroom in New Haven, but I know affluent
+households aren’t all living in 600 square foot fourth-floor walk ups.
+This is just one of those situations where affluent people have access
+to more competitive housing rates such that their mortgates are insanely
+low or they really do just squeeze all lower-income households into
+fewer units because they don’t want to pay their fair share.
+
+The question I have, then, is how to handle this. Do I assume 12% cost
+burden is “affordable” for high income households, or bump them up to
+30% like the rest of us? I do still want to look at how many people from
+each INCOME band are living in each COST band, basically to make the
+point that competition is high for housing units that cost about
+$1200–$1500/month.
+
+This also underscores the point, I guess, that we need a lot more
+“market rate” housing.
+
+``` r
+avg_cost_ratio_inc_band %>% 
+    group_by(level) %>% 
+    mutate(name = as.factor(name) %>% 
+                    fct_rev()) %>% 
+    mutate(wm_cb = round(wm_cb, 3)) %>% 
+    ggplot(aes(wm_cb, name, group = inc_band)) +
+    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
+    geom_vline(xintercept = .3, color = "gray60", size = 0.5, linetype = "23") +
+    geom_vline(xintercept = .5, color = "gray60", size = 0.5, linetype = "23") +
+    geom_text(aes(
+        label = percent(wm_cb, accuracy = 1)),
+        family = "Roboto Condensed", size = 2.75, alpha = 0.8) +
+    scale_x_continuous(breaks = c(.3, .5),
+                                         labels = c("Cost burden", "Severe cost burden"),
+                                         expand = expansion(mult = c(.025, .1))) +
+    guides(color = guide_legend(title = "")) +
+    labs(
+        x = "",
+        y = "",
+        title = str_wrap("Average housing-cost-to-income-ratio by income band", 60),
+        caption = "Weighted mean of cost ratio to IPUMS household weight") +
+    scale_color_custom() +
+    theme(
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        legend.position = "bottom",
+        plot.title.position = "plot",
+        axis.text.x = element_text(colour = "black"),
+        axis.text.y = element_text(colour = "black"))
+```
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+One last thing real quick… what’s the average *actual* housing cost for
+each band?
+
+``` r
+avg_cost_county_owners <- pums %>%
+    filter(pernum == "1", hhincome != 9999999, ownershp == "Owned or being bought (loan)") %>%
+    select(hhwt, name, inc_band, owncost) %>%
+    mutate(mult = owncost * hhwt) %>% 
+    group_by(name, inc_band) %>% 
+    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
+    mutate(tenure = "owner", level = "2_counties")
+
+avg_cost_county_renters <- pums %>%
+    filter(pernum == "1", hhincome != 9999999, ownershp == "Rented") %>%
+    select(hhwt, name, inc_band, rentgrs) %>%
+    mutate(mult = rentgrs * hhwt) %>% 
+    group_by(name, inc_band) %>% 
+    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
+    mutate(tenure = "renter", level = "2_counties")
+
+avg_cost_ct_owners <- pums %>%
+  filter(pernum == "1", hhincome != 9999999, ownershp == "Owned or being bought (loan)") %>%
+    select(hhwt, inc_band, owncost) %>%
+    mutate(mult = owncost * hhwt) %>% 
+    group_by(inc_band) %>% 
+    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
+    mutate(tenure = "owner", name = "Connecticut", level = "1_state")
+
+avg_cost_ct_renters <- pums %>%
+    filter(pernum == "1", hhincome != 9999999, ownershp == "Rented") %>%
+    select(hhwt, inc_band, rentgrs) %>%
+    mutate(mult = rentgrs * hhwt) %>% 
+    group_by(inc_band) %>% 
+    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
+    mutate(tenure = "renter", name = "Connecticut", level = "1_state")
+
+avg_cost_inc_band <- bind_rows(avg_cost_county_renters, avg_cost_county_owners, avg_cost_ct_renters, avg_cost_ct_owners)
+
+out$avg_cost_inc_band <- avg_cost_inc_band
+```
+
+Lots of competition for renters in the window between $1000 and $1500.
+The couple of tight clusters, like in Litchfield and Windham Counties,
+are interesting. Affluent households in those counties are only paying a
+couple hundred bucks more per month for rentals. For home owners, cost
+ranges are a little wider.
+
+``` r
+avg_cost_inc_band %>% 
+    group_by(level) %>% 
+    mutate(name = as.factor(name) %>% 
+                    fct_rev(),
+                 tenure = as.factor(tenure)) %>% 
+    mutate(wm_cost = round(wm_cost/1000, 1)) %>% 
+    ggplot(aes(wm_cost, name, group = inc_band)) +
+    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
+    #geom_vline(xintercept = .3, color = "gray60", size = 0.5, linetype = "23") +
+    #geom_vline(xintercept = .5, color = "gray60", size = 0.5, linetype = "23") +
+    geom_text(aes(
+        label = dollar(wm_cost, accuracy = .1)),
+        family = "Roboto Condensed", size = 3, alpha = 0.8) +
+    scale_x_continuous(expand = expansion(mult = c(.025, .025))) +
+    facet_grid(rows = vars(tenure), scales = "fixed", space = "fixed") +
+    guides(color = guide_legend(title = "")) +
+    labs(
+        x = "Monthly housing cost (thousands)",
+        y = "",
+        title = str_wrap("Average housing costs by tenure and income band", 60),
+        caption = "Weighted mean of cost to IPUMS household weight, includes $0 housing costs") +
+    scale_color_custom() +
+    theme(
+        panel.grid.minor = element_blank(),
+        panel.grid.major.x = element_blank(),
+        legend.position = "bottom",
+        plot.title.position = "plot",
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(colour = "black"))
+```
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 ## Housing costs affordable to household within each band
 
