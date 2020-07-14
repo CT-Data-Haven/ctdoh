@@ -1,40 +1,6 @@
 Households desiring housing
 ================
 
-``` r
-library(ipumsr)
-library(tidyverse)
-library(srvyr)
-library(tidycensus)
-library(hrbrthemes)
-library(camiller)
-library(scales)
-library(kableExtra)
-```
-
-``` r
-theme_set(theme_ipsum_rc())
-
-#this theme is better when reverse is standard so poor != red, but also this theme is also terrible by default because it's based on mineral water, but i am a monster.
-pal <- pal <- rev(LaCroixColoR::lacroix_palette(name = "Pamplemousse", n = 5, type = "discrete"))
-
-scale_fill_custom <- function(palette = pal, rev = F) {
-  if (rev) {
-    scale_fill_manual(values = rev(pal))
-  } else {
-    scale_fill_manual(values = pal)
-  }
-}
-
-scale_color_custom <- function(palette = pal, rev = F) {
-  if (rev) {
-    scale_color_manual(values = rev(pal))
-  } else {
-    scale_color_manual(values = pal)
-  }
-}
-```
-
 This notebook needs a better name. “Households desiring housing” to me
 suggests a household wants to move, not that they’re unable to afford
 housing. Maybe just “gaps in housing units available to households by
@@ -95,106 +61,6 @@ county:
   - Latino (any race)
   - All others (grouped)
 
-<!-- end list -->
-
-``` r
-minc <- get_acs(
-    geography = "county",
-      table = "B19013",
-    state = 09,
-      cache_table = T) %>% 
-    arrange(GEOID) %>% 
-    mutate(countyfip = seq(from = 1, to = 15, by = 2),
-                 name = str_remove(NAME, ", Connecticut")) %>% 
-    select(countyfip, name, minc = estimate)
-
-ddi <- read_ipums_ddi("../input_data/usa_00038.xml")
-
-pums <- read_ipums_micro(ddi, verbose = F)  %>% 
-    mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND), as_factor) %>% 
-    mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
-    mutate_at(vars(HHINCOME, OWNCOST, RENTGRS, OCC), as.integer) %>% 
-    janitor::clean_names() %>% 
-    left_join(minc, by = "countyfip") %>% 
-    mutate(ratio = hhincome / minc) %>% 
-    mutate(
-        inc_band = cut(
-            ratio,
-            breaks = c(-Inf, 0.5, 0.75, 1.25, 1.5, Inf),
-            labels = c("Poor", "Low", "Middle", "High", "Affluent"),
-            include.lowest = T, right = F)) %>% 
-    mutate(
-        inc_band = as.factor(inc_band) %>%
-            fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent")) %>% 
-    mutate(cb = if_else(ownershp == "Rented", (rentgrs * 12) / hhincome, 99999)) %>% 
-    mutate(cb = if_else(ownershp == "Owned or being bought (loan)", (owncost * 12) / hhincome, cb)) %>%
-    # if housing cost is 0 and income is 0, no burden
-    mutate(cb = if_else((rentgrs == 0 & hhincome == 0), 0, cb)) %>%
-    mutate(cb = if_else((owncost == 0 & hhincome == 0), 0, cb)) %>%
-    #if income is <=0 and housing cost is >0, burden
-    mutate(cb = if_else((rentgrs > 0 & hhincome <= 0), 1, cb)) %>%
-    mutate(cb = if_else((owncost > 0 & hhincome <= 0), 1, cb)) %>%
-    # some people pay more than 100% income to housing, but I will code these as 1
-    mutate(cb = if_else(cb > 1, 1, cb)) %>%
-    mutate(
-        cost_burden = cut(
-            cb,
-            breaks = c(-Inf, .3, .5, Inf),
-            labels = c("No burden", "Cost-burdened", "Severely cost-burdened"),
-            include.lowest = T, right = F)) %>% 
-        mutate(race2 = if_else(hispan == "Not Hispanic", as.character(race), "Latino")) %>% 
-    mutate(race2 = as.factor(race2) %>% 
-                    fct_recode(Black = "Black/African American/Negro") %>%
-                    fct_other(keep = c("White", "Black", "Latino"), other_level = "Other race") %>%
-                    fct_relevel("White", "Black", "Latino", "Other race"))
-
-des <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
-    as_survey_design(., ids = 1, wt = hhwt)
-
-out <- list()
-```
-
-``` r
-county_hhlds <- des %>%
-    select(hhwt, name, inc_band) %>% 
-    group_by(name, inc_band) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-county_total <- des %>%
-    select(hhwt, name) %>% 
-    group_by(name) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(inc_band = "Total") %>% 
-    mutate(level = "2_counties")
-
-ct_hhlds <- des %>%
-    select(hhwt, statefip, inc_band) %>% 
-    group_by(statefip, inc_band) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state") %>% 
-    select(-statefip)
-
-ct_total <- des %>%
-    select(hhwt, statefip) %>% 
-    group_by(statefip) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state", inc_band = "Total") %>% 
-    select(-statefip)
-
-hh_by_inc_band <- bind_rows(county_hhlds, county_total, ct_hhlds, ct_total) %>%
-    ungroup() %>%
-    mutate(inc_band = as.factor(inc_band) %>% 
-                    fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent", "Total"),
-                 level = as.factor(level)) %>% 
-    arrange(level, name) %>% 
-    group_by(level, name) %>% 
-    calc_shares(group = inc_band, denom = "Total", value = value, moe = value_se)
-
-out$hh_by_inc_band <- hh_by_inc_band
-```
-
 ## Define income bands
 
 Would it be preferable to set these as prettier breaks, or use the CT
@@ -203,26 +69,6 @@ numbers for all counties?
 **A better chart here would be color coded segments indicating each
 group’s range, with each area on a new row. Could use arrow ends or
 something to communicate the top and bottom. Come back to this idea.**
-
-``` r
-ctminc <- get_acs(geography = "state", state = 09, table = "B19013") %>% 
-    select(name = NAME, minc = estimate)
-
-income_table <- minc %>% 
-    bind_rows(ctminc) %>% 
-    mutate(p = comma(round(minc * .5, 0), accuracy = 1),
-                 l = comma(round(minc * .75, 0), accuracy = 1),
-                 m = comma(round(minc * 1.25, 0), accuracy = 1), 
-                 h = comma(round(minc * 1.5, 0), accuracy = 1),
-                 Poor = paste("Less than $", p, sep = ""),
-                 Low = paste("Between $", p, " and $", l, sep = ""),
-                 Middle = paste("Between $", l, " and $", m, sep = ""),
-                 High = paste("Between $", m, " and $", h, sep = ""),
-                 Affluent = paste("More than $", h, sep = "")) %>% 
-    select(Name = name, Poor:Affluent)
-
-kable(income_table, caption = "Income ranges by income band and area")
-```
 
 <table>
 
@@ -650,46 +496,7 @@ median income. A similar share are affluent or high income, earning 125%
 or more of their county’s median income. Just one in five households
 statewide are considered middle income by this definition.
 
-``` r
-hh_by_inc_band %>% 
-    filter(inc_band != "Total", name == "Connecticut") %>% 
-    mutate(inc_band = fct_rev(inc_band)) %>% 
-    ggplot(aes(value, inc_band)) +
-    geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.8)) +
-    scale_x_continuous(
-        expand = expansion(mult = c(0, 0.1)),
-        labels = scales::comma) +
-    geom_text(aes(
-        label = comma(value, accuracy = 1)),
-        position = position_dodge(.8), hjust = 1, family = "Roboto Condensed", size = 3.75) +
-    guides(fill = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = "Number of households in each income band",
-        subtitle = "Connecticut") +
-    scale_fill_custom(rev = T) +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major = element_blank(),
-        legend.position = "none",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"),
-        strip.text.y = element_blank())
-```
-
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
-
-``` r
-kable(hh_by_inc_band %>% 
-    mutate(level = fct_rev(level)) %>% 
-    arrange(level) %>% 
-    select(Name = name, inc_band, value) %>% 
-    mutate(value = comma(value, accuracy = 1)) %>% 
-    pivot_wider(id_cols = Name, names_from = "inc_band") %>% 
-    select(Name, Poor:Affluent, Total))
-```
 
 <table>
 
@@ -1167,103 +974,16 @@ The income distributions are fairly consistent, even in the more rural
 counties. This trend mirrors national trends with middle income
 households being squeezed out by high and low income households.
 
-``` r
-hh_by_inc_band %>% 
-    filter(inc_band != "Total") %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    ggplot(aes(name, share, group = name)) +
-    geom_col(aes(fill = inc_band), width = .7, position = position_stack(1)) +
-    coord_flip() +
-    geom_text(aes(label = percent(share, accuracy = 1)),
-                        position = position_stack(.5), family = "Roboto Condensed") +
-    scale_y_continuous(expand = expansion(mult = c(0, 0))) +
-    scale_fill_custom() +
-    guides(fill = guide_legend(title = "")) +
-    labs(x = "", y = "",
-             title = "Share of households in each income band by state and county") +
-    theme(panel.grid.major  = element_blank(),
-                panel.grid.minor = element_blank(),
-                axis.text.y = element_text(colour = "black"),
-                axis.text.x = element_blank(),
-                legend.position = "bottom",
-                plot.title.position = "plot")
-```
-
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ## Household characteristics by income bands
 
 ### Race breakdowns
 
-``` r
-county_hhlds_by_race <- des %>%
-    select(hhwt, name, inc_band, race2) %>% 
-    group_by(name, inc_band, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-county_race_total <- des %>%
-    select(hhwt, name, race2) %>% 
-    group_by(name, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(inc_band = "Total") %>% 
-    mutate(level = "2_counties")
-
-ct_hhlds_by_race <- des %>%
-    select(hhwt, statefip, inc_band, race2) %>% 
-    group_by(statefip, inc_band, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state") %>% 
-    select(-statefip)
-
-ct_race_total <- des %>%
-    select(hhwt, statefip, race2) %>% 
-    group_by(statefip, race2) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state", inc_band = "Total") %>% 
-    select(-statefip)
-
-hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhlds_by_race, ct_race_total) %>%
-    ungroup() %>%
-    mutate(inc_band = as.factor(inc_band) %>% 
-                    fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent", "Total"),
-                 level = as.factor(level)) %>% 
-    arrange(level, name, race2) %>% 
-    group_by(level, name, race2) %>% 
-    calc_shares(group = inc_band, denom = "Total", value = value, moe = value_se)
-
-out$hh_by_inc_band <- hh_by_race_inc_band
-```
-
 Considering race/ethnicity of head of household. Statewide, more than
 half of all households headed by a Black or Latino person are poor or
 low income, compared to about a third of households headed by a white
 person. Some variation exists by county.
-
-``` r
-hh_by_race_inc_band %>% 
-    filter(inc_band != "Total") %>% 
-    mutate(race2 = fct_rev(race2)) %>% 
-    ggplot(aes(share, race2, group = race2)) +
-    geom_col(aes(fill = inc_band), width = .8, position = position_stack(1)) +
-    guides(fill = guide_legend(title = "", reverse = T)) +
-    geom_text(aes(label = percent(share, accuracy = 1)),
-                        position = position_stack(.5), family = "Roboto Condensed") +
-    scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-    facet_wrap(facets = "name") +
-    guides(fill = guide_legend(title = "")) +
-    scale_fill_custom() +
-    labs(x = "", y = "",
-             title = "Share of households in each income band by race of HOH") +
-    theme(panel.grid.major  = element_blank(),
-                panel.grid.minor = element_blank(),
-                axis.text.y = element_text(colour = "black"),
-                axis.text.x = element_blank(),
-                legend.position = "bottom",
-                plot.title.position = "plot")
-```
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
@@ -1287,38 +1007,6 @@ partners/spouses pull in big money. And yet, \#thestruggle: adjuncts and
 GAs in Tolland County (UConn) getting those minimum wage grad school
 stipends while profs in New Haven and Middlesex Counties make six
 figures teaching half the load.
-
-``` r
-des2 <- pums %>%
-    filter(hhincome != 9999999, ownershp != "N/A") %>% 
-    as_survey_design(., ids = 1, wt = perwt)
-
-occ_lut <- read_csv("../input_data/occ_codes.csv") %>% 
-    mutate(occ_code = as.integer(occ_code)) #leading 0s
-
-common_jobs_by_inc_band <- pums %>%
-    select(perwt, name, inc_band, occ) %>% 
-    group_by(name, inc_band, occ) %>% 
-    summarise(workers = sum(perwt)) %>% 
-    mutate(level = "2_counties") %>% 
-    filter(occ != "0") %>% #0 is "n/a" occ
-    group_by(name, inc_band) %>% 
-    slice_max(workers, n = 5) %>%
-    left_join(occ_lut, by = c("occ" = "occ_code")) %>% 
-    select(level, name, inc_band, workers, occ, occ_label)
-
-out$common_jobs_by_inc_band <- common_jobs_by_inc_band
-
-common_jobs_by_inc_band %>% 
-    group_by(level, name, inc_band) %>% 
-    mutate(rank = order(workers, decreasing = T)) %>% 
-    select(name, inc_band, rank, occ_label) %>% 
-    pivot_wider(id_cols = c("name", "inc_band"), names_from = "rank", values_from = "occ_label") %>% 
-    mutate(`Common occupations` = paste(`1`, `2`, `3`, `4`, `5`, sep = "; ")) %>% 
-    select(Name = name, `Income band` = inc_band, `Common occupations`) %>% 
-    pivot_wider(id_cols = Name, names_from = "Income band", values_from = "Common occupations") %>% 
-    kable(caption = "Common occupations for workers by household income band")
-```
 
 <table>
 
@@ -1771,42 +1459,9 @@ executive; Driver/sales workers and truck drivers
 
 ## Cost burden by income band
 
-**In addition to just whether or not the household is cost burdened, add
-summary of actual cost ratios here. This will be useful in determining
-who can pay more.**
-
-``` r
-county_cb <- des %>%
-    select(hhwt, name, inc_band, cost_burden) %>% 
-    group_by(name, inc_band, cost_burden) %>% 
-    summarise(value = survey_total(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-ct_cb <- des %>%
-    select(hhwt, statefip, inc_band, cost_burden) %>%
-    group_by(statefip, inc_band, cost_burden) %>%
-    summarise(value = survey_total(hhwt)) %>%
-    mutate(name = "Connecticut", level = "1_state") %>%
-    select(-statefip)
-
-cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
-    mutate(cost_burden = if_else(is.na(cost_burden), "Total", as.character(cost_burden)),
-                 cost_burden = as.factor(cost_burden) %>% 
-                    fct_relevel(., "No burden", "Cost-burdened", "Severely cost-burdened", "Total")) %>% 
-    ungroup() %>%
-    mutate(inc_band = as.factor(inc_band) %>%
-                    fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent"),
-                 level = as.factor(level)) %>%
-    arrange(level, name, inc_band) %>%
-    group_by(level, name, inc_band) %>%
-    calc_shares(group = cost_burden, denom = "Total", value = value, moe = value_se)
-
-out$cb_by_inc_band <- cb_by_inc_band
-```
-
 No surprise that cost burden rates among poor households are around 80%,
-at the statewide level that’s 20x the rate of affluent households. Too
-bad I can’t do this by town…
+at the statewide level that’s more than 20x the rate of affluent
+households. Too bad I can’t do this by town…
 
 What does stand out a bit are the gaps between each group. Moving up the
 income scale (from lower to higher income) shows a 20-30 percentage
@@ -1817,76 +1472,9 @@ enough housing affordable to low-income households, but there’s plenty
 of housing affordable to mid-to-high income households. More on this
 below…
 
-``` r
-cb_by_inc_band %>% 
-    mutate(cost_burden = fct_collapse(cost_burden, Burden = c("Cost-burdened", "Severely cost-burdened"))) %>% 
-    ungroup() %>% 
-    select(-share, -sharemoe, -value_se) %>% 
-    group_by(level, name, inc_band, cost_burden) %>% 
-    summarise(value = sum(value)) %>% 
-    ungroup() %>% 
-    group_by(level, name, inc_band) %>% 
-    calc_shares(group = cost_burden, denom = "Total", value = value) %>% 
-    filter(cost_burden == "Burden") %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    ggplot(aes(share, name, group = inc_band)) +
-    geom_point(aes(color = inc_band), size = 7.5, alpha = .8) +
-    geom_text(aes(
-        label = percent(share, accuracy = 1)),
-        family = "Roboto Condensed", size = 3.55) +
-    scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
-    guides(color = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = "Cost-burden rates for households in each income band") +
-    scale_color_custom() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"))
-```
-
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
-``` r
-cb_by_inc_band %>% 
-    ungroup() %>% 
-    filter(!cost_burden %in% c("Total", "No burden")) %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    ggplot(aes(share, name, group = inc_band)) +
-    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
-    geom_text(aes(
-        label = percent(share, accuracy = 1)),
-        family = "Roboto Condensed", size = 2.75, alpha = 0.8) +
-    scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
-    facet_grid(rows = "cost_burden", scales = "free", space = "fixed") +
-    guides(color = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = "Rates of burden by burden type for households in each income band",
-        caption = "Cost-burdened: spending 30%-50% of household income on housing;\nSeverely cost-burdened: spending more than 50% of household income on housing.") +
-    scale_color_custom() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"))
-```
-
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
-
-\============================================
 
 Quick diversion: is the SCB rate among poor households partially
 explained by some of these households having housing costs and
@@ -1900,16 +1488,6 @@ units make up about 4% of all poor households, which is not
 insignificant, but it’s not the sole motivator for high SCB rates in
 this income band.
 
-``` r
-des %>%
-    mutate(income = if_else(hhincome == 0, "no_income", "positive_income")) %>% 
-    mutate(income = if_else(hhincome < 0, "negative_income", income)) %>% 
-    select(hhwt, income, cost_burden) %>% 
-    group_by(income, cost_burden) %>% 
-    filter(income != "positive_income", cost_burden == "Severely cost-burdened") %>% 
-    summarise(households = survey_total(hhwt))
-```
-
     ## # A tibble: 2 x 4
     ##   income          cost_burden            households households_se
     ##   <chr>           <fct>                       <dbl>         <dbl>
@@ -1918,123 +1496,33 @@ des %>%
 
 ## Average housing-cost-to-income ratio for each band
 
-``` r
-avg_cost_ratio_county <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
-    select(hhwt, name, inc_band, cb) %>%
-    mutate(mult = cb * hhwt) %>% 
-    group_by(name, inc_band) %>% 
-    summarise(wm_cb = sum(mult)/sum(hhwt)) %>% 
-    mutate(level = "2_counties")
-
-avg_cost_ratio_ct <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
-    select(hhwt, inc_band, cb) %>%
-    mutate(mult = cb * hhwt) %>% 
-    group_by(inc_band) %>% 
-    summarise(wm_cb = sum(mult)/sum(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state")
-
-avg_cost_ratio_inc_band <- bind_rows(avg_cost_ratio_county, avg_cost_ratio_ct)
-
-out$avg_cost_ratio_inc_band <- avg_cost_ratio_inc_band
-```
-
 Urban’s DC study found that higher income households paid about 12%
 income to housing. In CT it’s about 14%. For a household with $200K in
 income, that’s about $2500/month in housing costs, which I just don’t
-think is that high. For a household at the lower end of CT’s affluent
-band, earning about $114K, housing costs are about $1400, which is about
-the going rate for a one bedroom in New Haven, but I know affluent
-households aren’t all living in 600 square foot fourth-floor walk ups.
-This is just one of those situations where affluent people have access
-to more competitive housing rates such that their mortgates are insanely
-low or they really do just squeeze all lower-income households into
-fewer units because they don’t want to pay their fair share.
+think is that high considering there are some kinda crappy 2BRs in East
+Rock that go for that much. Are those occupants really New Haven
+affluent? I don’t think so. Affluent people pay for apartments with air
+conditioning, probably.
 
-The question I have, then, is how to handle this. Do I assume 12% cost
-burden is “affordable” for high income households, or bump them up to
-30% like the rest of us? I do still want to look at how many people from
-each INCOME band are living in each COST band, basically to make the
-point that competition is high for housing units that cost about
-$1200–$1500/month.
+For a household at the lower end of CT’s affluent band, earning about
+$114K, 14% of income to housing cost would be about $1400, which as a
+renter strikes me as unbelievably low for someone of means. It’s the
+same as 30% for a middle income person. Why is that OK?
 
-This also underscores the point, I guess, that we need a lot more
-“market rate” housing.
-
-``` r
-avg_cost_ratio_inc_band %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev()) %>% 
-    mutate(wm_cb = round(wm_cb, 3)) %>% 
-    ggplot(aes(wm_cb, name, group = inc_band)) +
-    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
-    geom_vline(xintercept = .3, color = "gray60", size = 0.5, linetype = "23") +
-    geom_vline(xintercept = .5, color = "gray60", size = 0.5, linetype = "23") +
-    geom_text(aes(
-        label = percent(wm_cb, accuracy = 1)),
-        family = "Roboto Condensed", size = 2.75, alpha = 0.8) +
-    scale_x_continuous(breaks = c(.3, .5),
-                                         labels = c("Cost burden", "Severe cost burden"),
-                                         expand = expansion(mult = c(.025, .1))) +
-    guides(color = guide_legend(title = "")) +
-    labs(
-        x = "",
-        y = "",
-        title = str_wrap("Average housing-cost-to-income-ratio by income band", 60),
-        caption = "Weighted mean of cost ratio to IPUMS household weight") +
-    scale_color_custom() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_text(colour = "black"),
-        axis.text.y = element_text(colour = "black"))
-```
+The question I have, then, is how do I handle this in the analysis? Do I
+assume a 14% cost ratio is “affordable” for high income households the
+same way 30% for a middle income person is “affordable,” or do I draw a
+hard line at 30% for everyone? Do I set like a floor of 20% and ceiling
+of 30% for everyone? I assume there are weird HUD rules here, but
+frankly those rules shouldn’t apply to rich people and I don’t think we
+should purport in our analysis that someone making six figures should
+pay what low/middle income people pay because there’s precedent for it.
+If people want housing in the middle income band but can pay more, we
+should state that.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 One last thing real quick… what’s the average *actual* housing cost for
 each band?
-
-``` r
-avg_cost_county_owners <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp == "Owned or being bought (loan)") %>%
-    select(hhwt, name, inc_band, owncost) %>%
-    mutate(mult = owncost * hhwt) %>% 
-    group_by(name, inc_band) %>% 
-    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-    mutate(tenure = "owner", level = "2_counties")
-
-avg_cost_county_renters <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp == "Rented") %>%
-    select(hhwt, name, inc_band, rentgrs) %>%
-    mutate(mult = rentgrs * hhwt) %>% 
-    group_by(name, inc_band) %>% 
-    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-    mutate(tenure = "renter", level = "2_counties")
-
-avg_cost_ct_owners <- pums %>%
-  filter(pernum == "1", hhincome != 9999999, ownershp == "Owned or being bought (loan)") %>%
-    select(hhwt, inc_band, owncost) %>%
-    mutate(mult = owncost * hhwt) %>% 
-    group_by(inc_band) %>% 
-    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-    mutate(tenure = "owner", name = "Connecticut", level = "1_state")
-
-avg_cost_ct_renters <- pums %>%
-    filter(pernum == "1", hhincome != 9999999, ownershp == "Rented") %>%
-    select(hhwt, inc_band, rentgrs) %>%
-    mutate(mult = rentgrs * hhwt) %>% 
-    group_by(inc_band) %>% 
-    summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-    mutate(tenure = "renter", name = "Connecticut", level = "1_state")
-
-avg_cost_inc_band <- bind_rows(avg_cost_county_renters, avg_cost_county_owners, avg_cost_ct_renters, avg_cost_ct_owners)
-
-out$avg_cost_inc_band <- avg_cost_inc_band
-```
 
 Lots of competition for renters in the window between $1000 and $1500.
 The couple of tight clusters, like in Litchfield and Windham Counties,
@@ -2042,70 +1530,14 @@ are interesting. Affluent households in those counties are only paying a
 couple hundred bucks more per month for rentals. For home owners, cost
 ranges are a little wider.
 
-``` r
-avg_cost_inc_band %>% 
-    group_by(level) %>% 
-    mutate(name = as.factor(name) %>% 
-                    fct_rev(),
-                 tenure = as.factor(tenure)) %>% 
-    mutate(wm_cost = round(wm_cost/1000, 1)) %>% 
-    ggplot(aes(wm_cost, name, group = inc_band)) +
-    geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
-    #geom_vline(xintercept = .3, color = "gray60", size = 0.5, linetype = "23") +
-    #geom_vline(xintercept = .5, color = "gray60", size = 0.5, linetype = "23") +
-    geom_text(aes(
-        label = dollar(wm_cost, accuracy = .1)),
-        family = "Roboto Condensed", size = 3, alpha = 0.8) +
-    scale_x_continuous(expand = expansion(mult = c(.025, .025))) +
-    facet_grid(rows = vars(tenure), scales = "fixed", space = "fixed") +
-    guides(color = guide_legend(title = "")) +
-    labs(
-        x = "Monthly housing cost (thousands)",
-        y = "",
-        title = str_wrap("Average housing costs by tenure and income band", 60),
-        caption = "Weighted mean of cost to IPUMS household weight, includes $0 housing costs") +
-    scale_color_custom() +
-    theme(
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        legend.position = "bottom",
-        plot.title.position = "plot",
-        axis.text.x = element_blank(),
-        axis.text.y = element_text(colour = "black"))
-```
-
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
-## Housing costs affordable to household within each band
+So I do want to look at how many people from each INCOME band are living
+in each COST band.
 
-Using the income bands above, these are the 30% rent cutoff points, so
-the monthly affordable cost by income band. We’ll call these cost bands.
+## Affordable housing costs to households in each band
 
-``` r
-affordable_cost_table <- minc %>% 
-    bind_rows(ctminc) %>% 
-    select(-countyfip) %>% 
-    mutate(p = minc * .5,
-                 l = minc * .75,
-                 m = minc * 1.25, 
-                 h = minc * 1.5) %>% 
-    select(-minc) %>% 
-    pivot_longer(cols = p:h, names_to = "inc_band", values_to = "income") %>% 
-    mutate(income = round(income, 0),
-                 affordable_hcost = round(income / 12 * .3, 0)) %>% 
-    select(name, inc_band, affordable_hcost) %>% 
-    mutate(affordable_hcost = comma(affordable_hcost, accuracy = 1)) %>% 
-    pivot_wider(id_cols = name, names_from = inc_band, values_from = affordable_hcost) %>% 
-    mutate(Poor = paste("Less than $", p, sep = ""),
-                 Low = paste("Between $", p, " and $", l, sep = ""),
-                 Middle = paste("Between $", l, " and $", m, sep = ""),
-                 High = paste("Between $", m, " and $", h, sep = ""),
-                 Affluent = paste("More than $", h, sep = ""))
-
-kable(affordable_cost_table %>% 
-                select(Name = name, Poor:Affluent),
-            caption = "Affordable monthly housing cost ranges by income band and area")
-```
+For this first pass, I’ll set it to 30% for everyone.
 
 <table>
 
@@ -2525,82 +1957,31 @@ More than $2,854
 
 </table>
 
+Some future iteration of this notebook should find a way to combine this
+table with the chart above, but a couple interesting things stand out.
+Poor renters are often spending the “affordable” amount, but poor
+homeowners spend a little more. I’m on the fence about considering this
+a bad thing necessarily, since the benefits of home ownership may
+outweigh the extra $100-$200 per month above the affordable threshold.
+On the other hand, a couple hundred bucks a month is a really easy gap
+to fall into and miss a mortgage payment.
+
+Almost all renters are paying below the affordable threshold for middle
+income. So clearly higher income people rent in lower cost bands. Still
+not sure whether this warrants adjusting the cost bands as far down as
+the cost ratios.
+
 ## Housing units in those cost bands
 
-Occupied units (renter/owner) and vacant units available in each cost
-band. Occupied units will go by gross cost, vacant by contract rent, so
-the need a new PUMS file in hierarchical format, widdled down to
-household level. Need to work on this a bit more…
-
-``` r
-hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
-
-cost_bands <- minc %>% 
-    bind_rows(ctminc) %>% 
-    select(-countyfip) %>% 
-    mutate(p = round((minc * .5 / 12 * .3), 0),
-                 l = round((minc * .75 / 12 * .3), 0),
-                 m = round((minc * 1.25 / 12 * .3), 0), 
-                 h = round((minc * 1.5 / 12 * .3), 0)) %>% 
-    select(-minc)
-
-hpums <- read_ipums_micro(hddi, verbose = F) %>% 
-    filter(RECTYPE == "H") %>% 
-    mutate_at(vars(OWNERSHP, OWNERSHPD, VACANCY), as_factor) %>% 
-    mutate_at(vars(OWNCOST, RENT, RENTGRS), as.numeric) %>% 
-    janitor::clean_names() %>% 
-    left_join(minc, by = "countyfip") %>% 
-    left_join(cost_bands, by = "name")
-    
-occ_des <- hpums %>%
-    filter(vacancy == "N/A", ownershp != "N/A") %>% 
-    as_survey_design(., ids = 1, wt = hhwt)
-
-own_occ_cost_bands <- occ_des %>%
-    filter(owncost != 99999) %>% 
-    select(hhwt, name, owncost, p, l, m, h) %>% 
-    group_by(name) %>% 
-    mutate(tenure = "owner_occupied",
-                 poor = between(owncost, 0, (p - 1)),
-                 low = between(owncost, p, (l - 1)),
-                 middle = between(owncost, l, (m - 1)),
-                 high = between(owncost, m, (h - 1)),
-                 affluent = between(owncost, h, Inf)) %>% 
-    ungroup() %>% 
-    group_by(name, tenure, poor, low, middle, high, affluent) %>% 
-    summarise(units = survey_total(hhwt)) %>% 
-    pivot_longer(cols = poor:affluent, names_to = "cost_band") %>% 
-    filter(value == T) %>% 
-    select(name, tenure, cost_band, units, units_se)
-
-rent_occ_cost_bands <- occ_des %>%
-    filter(owncost == 99999) %>% 
-    select(hhwt, name, rentgrs, p, l, m, h) %>% 
-    group_by(name) %>% 
-    mutate(tenure = "renter_occupied",
-                 poor = between(rentgrs, 0, (p - 1)),
-                 low = between(rentgrs, p, (l - 1)),
-                 middle = between(rentgrs, l, (m - 1)),
-                 high = between(rentgrs, m, (h - 1)),
-                 affluent = between(rentgrs, h, Inf)) %>% 
-    ungroup() %>% 
-    group_by(name, tenure, poor, low, middle, high, affluent) %>% 
-    summarise(units = survey_total(hhwt)) %>% 
-    pivot_longer(cols = poor:affluent, names_to = "cost_band") %>% 
-    filter(value == T) %>% 
-    select(name, tenure, cost_band, units, units_se)
-
-occ_cost_bands <- bind_rows(own_occ_cost_bands, rent_occ_cost_bands)
-```
+*Notes for myself: Total up occupied units (renter + owner, any reason
+to separate?) and vacant units available in each cost band. Occupied
+units will go by the cost paid (rentgrs and owncost), vacant by contract
+rent and mortgage payment estimate generated using some average mortgage
+rate for CT. Need a new PUMS file in hierarchical format, widdled down
+to household level.*
 
 Here’s a quick crappy table of the occupied units by cost band and
-county. I’ll need to add vacant units and do some adjustment to the home
-values of for-sale homes to determine a mortgage payment amount, then
-summarize to get totals and shares.
-
-``` r
-kable(occ_cost_bands)
-```
+county. Still working on this.
 
 <table>
 
@@ -5368,22 +4749,17 @@ poor
 
 </table>
 
-``` r
-vac_des <- hpums %>%
-    filter(vacancy == "For rent or sale") %>% 
-    as_survey_design(., ids = 1, wt = hhwt)
-#for vacant units, use 'for rent or sale', and use rent for cost
-# will need to use the base rate for home loans to determine what the mortgage cost would be for a for-sale home
-```
-
 ## Households who need housing in each cost band
 
-Not sure, but I think this will by default include the number of
-households in each income band (if I’m low income I should pay low
-income prices, right?), then further split out into those who are paying
-in the appropriate cost band, and the gap or surplus. So the household’s
-income band, then the cost band they’re paying in.
+To get a table of gaps and surpluses, I think I need to determine how
+many units are needed in each cost band (so, by default this will be the
+number of households in each income band if low income households should
+pay low income prices, right?), then count up the number of households
+whose costs are in each cost band and add the vacants by contract and
+mortgage costs. So how many in each income band, vs. how many in each
+cost band. Seems legit?
 
 ## Add homeless?
 
-Not sure where to get good data… PIT counts by county?
+Not sure where to get good data… PIT counts by county? Mark suggests
+<https://cceh.org/data/interactive/>

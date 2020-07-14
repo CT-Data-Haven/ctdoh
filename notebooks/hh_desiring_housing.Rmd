@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = T, message = F, warning = F, echo = T)
+knitr::opts_chunk$set(echo = T, message = F, warning = F, echo = F)
 ```
 
 ```{r lib}
@@ -390,8 +390,6 @@ common_jobs_by_inc_band %>%
 
 ## Cost burden by income band
 
-**In addition to just whether or not the household is cost burdened, add summary of actual cost ratios here. This will be useful in determining who can pay more.**
-
 ```{r}
 county_cb <- des %>%
 	select(hhwt, name, inc_band, cost_burden) %>% 
@@ -421,7 +419,7 @@ cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
 out$cb_by_inc_band <- cb_by_inc_band
 ```
 
-No surprise that cost burden rates among poor households are around 80%, at the statewide level that's 20x the rate of affluent households. Too bad I can't do this by town...
+No surprise that cost burden rates among poor households are around 80%, at the statewide level that's more than 20x the rate of affluent households. Too bad I can't do this by town...
 
 What does stand out a bit are the gaps between each group. Moving up the income scale (from lower to higher income) shows a 20-30 percentage point decrease in cost burden rates. Those gains are much smaller from medium to high and from high to affluent income groups. Not like anyone was doubting this before, but this chart essentially says there's not enough housing affordable to low-income households, but there's plenty of housing affordable to mid-to-high income households. More on this below...
 
@@ -490,8 +488,6 @@ cb_by_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
-============================================
-
 Quick diversion: is the SCB rate among poor households partially explained by some of these households having housing costs and no/negative negative income?
 
 By definition, the household is in the "poor" income band if household income is $0 or less because that's less than 50% CMI. There are about 15K poor households with no or negative income and some nonzero housing cost, making them "severely cost burdened" by definition. These ~15K units make up about 4% of all poor households, which is not insignificant, but it's not the sole motivator for high SCB rates in this income band.
@@ -529,11 +525,11 @@ avg_cost_ratio_inc_band <- bind_rows(avg_cost_ratio_county, avg_cost_ratio_ct)
 out$avg_cost_ratio_inc_band <- avg_cost_ratio_inc_band
 ```
 
-Urban's DC study found that higher income households paid about 12% income to housing. In CT it's about 14%. For a household with $200K in income, that's about $2500/month in housing costs, which I just don't think is that high. For a household at the lower end of CT's affluent band, earning about $114K, housing costs are about $1400, which is about the going rate for a one bedroom in New Haven, but I know affluent households aren't all living in 600 square foot fourth-floor walk ups. This is just one of those situations where affluent people have access to more competitive housing rates such that their mortgates are insanely low or they really do just squeeze all lower-income households into fewer units because they don't want to pay their fair share.
+Urban's DC study found that higher income households paid about 12% income to housing. In CT it's about 14%. For a household with $200K in income, that's about $2500/month in housing costs, which I just don't think is that high considering there are some kinda crappy 2BRs in East Rock that go for that much. Are those occupants really New Haven affluent? I don't think so. Affluent people pay for apartments with air conditioning, probably.
 
-The question I have, then, is how to handle this. Do I assume 12% cost burden is "affordable" for high income households, or bump them up to 30% like the rest of us? I do still want to look at how many people from each INCOME band are living in each COST band, basically to make the point that competition is high for housing units that cost about $1200–$1500/month.
+For a household at the lower end of CT's affluent band, earning about $114K, 14% of income to housing cost would be about $1400, which as a renter strikes me as unbelievably low for someone of means. It's the same as 30% for a middle income person. Why is that OK?
 
-This also underscores the point, I guess, that we need a lot more "market rate" housing.
+The question I have, then, is how do I handle this in the analysis? Do I assume a 14% cost ratio is "affordable" for high income households the same way 30% for a middle income person is "affordable," or do I draw a hard line at 30% for everyone? Do I set like a floor of 20% and ceiling of 30% for everyone? I assume there are weird HUD rules here, but frankly those rules shouldn't apply to rich people and I don't think we should purport in our analysis that someone making six figures should pay what low/middle income people pay because there's precedent for it. If people want housing in the middle income band but can pay more, we should state that.
 
 ```{r}
 avg_cost_ratio_inc_band %>% 
@@ -640,9 +636,11 @@ avg_cost_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
-## Housing costs affordable to household within each band
+So I do want to look at how many people from each INCOME band are living in each COST band.
 
-Using the income bands above, these are the 30% rent cutoff points, so the monthly affordable cost by income band. We'll call these cost bands.
+## Affordable housing costs to households in each band
+
+For this first pass, I'll set it to 30% for everyone.
 
 ```{r}
 affordable_cost_table <- minc %>% 
@@ -670,9 +668,13 @@ kable(affordable_cost_table %>%
 			caption = "Affordable monthly housing cost ranges by income band and area")
 ```
 
+Some future iteration of this notebook should find a way to combine this table with the chart above, but a couple interesting things stand out. Poor renters are often spending the "affordable" amount, but poor homeowners spend a little more. I'm on the fence about considering this a bad thing necessarily, since the benefits of home ownership may outweigh the extra $100-$200 per month above the affordable threshold. On the other hand, a couple hundred bucks a month is a really easy gap to fall into and miss a mortgage payment.
+
+Almost all renters are paying below the affordable threshold for middle income. So clearly higher income people rent in lower cost bands. Still not sure whether this warrants adjusting the cost bands as far down as the cost ratios.
+
 ## Housing units in those cost bands
 
-Occupied units (renter/owner) and vacant units available in each cost band. Occupied units will go by gross cost, vacant by contract rent, so the need a new PUMS file in hierarchical format, widdled down to household level. Need to work on this a bit more...
+*Notes for myself: Total up occupied units (renter + owner, any reason to separate?) and vacant units available in each cost band. Occupied units will go by the cost paid (rentgrs and owncost), vacant by contract rent and mortgage payment estimate generated using some average mortgage rate for CT. Need a new PUMS file in hierarchical format, widdled down to household level.*
 
 ```{r}
 hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
@@ -735,7 +737,7 @@ rent_occ_cost_bands <- occ_des %>%
 occ_cost_bands <- bind_rows(own_occ_cost_bands, rent_occ_cost_bands)
 ```
 
-Here's a quick crappy table of the occupied units by cost band and county. I'll need to add vacant units and do some adjustment to the home values of for-sale homes to determine a mortgage payment amount, then summarize to get totals and shares.
+Here's a quick crappy table of the occupied units by cost band and county. Still working on this.
 
 ```{r}
 kable(occ_cost_bands)
@@ -751,7 +753,7 @@ vac_des <- hpums %>%
 
 ## Households who need housing in each cost band
 
-Not sure, but I think this will by default include the number of households in each income band (if I'm low income I should pay low income prices, right?), then further split out into those who are paying in the appropriate cost band, and the gap or surplus. So the household's income band, then the cost band they're paying in.
+To get a table of gaps and surpluses, I think I need to determine how many units are needed in each cost band (so, by default this will be the number of households in each income band if low income households should pay low income prices, right?), then count up the number of households whose costs are in each cost band and add the vacants by contract and mortgage costs. So how many in each income band, vs. how many in each cost band. Seems legit?
 
 ## Add homeless?
-Not sure where to get good data... PIT counts by county?
+Not sure where to get good data... PIT counts by county? Mark suggests https://cceh.org/data/interactive/
