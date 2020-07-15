@@ -46,31 +46,28 @@ This notebook needs a better name. "Households desiring housing" to me suggests 
 There's a lot going on in this notebook:
 
 * Count and share of households by income band by area
-    * **Divisions of county median income make the most sense because HUD regions (HMFAs) cross PUMA and county lines. Brought up with Urban on 7/8 and they will make a call soon, so I'll move forward with what I have for now.**
     * Rounded to pretty numbers for legibility?
 * The kinds of occupations/jobs those residents work in
     * Not exactly germane to the conversation unless we're talking about wage reform, but brings the context back down to earth...
 * Count and share of households in each band that are cost-burdened (T2 in DC report)
 * Average (median?) housing-cost-to-income ratio for each income band
-* The approximate monthly housing cost for an affordable unit for each income band.
+* The approximate monthly housing cost for an affordable unit (30%) for each income band.
     * Rounded to pretty numbers for legibility?
-    * DC report used lower cost burden ratios for higher income bands. Should we?
 * Count and share of units by those cost bands in the area (T3 in DC report).
 * Number of housing units needed for each cost band so each household would have an affordable housing cost, vs. the actual count of units in those cost bands (F19 in DC report)
-		* Again, DC used much lower cost ratios for higher income bands. I think we should expect they can pay more.
 * For each income band, the number of households that can/cannot afford to pay more
 * Count of vacant units in each cost band (F20 in DC report).
 
 
 ## Establish groups
 
-Starting by using county median incomes (CMI), then income bands like we did in the Community Index reports...
+After discussion with team on 7/15 we are settled with using median hh income by county and the groupings below:
 
-* poor: < 0.5 CMI
-* low-income: [0.5–0.75) CMI
-* middle-income: [0.75–1.25) CMI
-* high-income: [1.25–1.50) CMI
-* affluent: >= 1.5 CMI
+* very low income: <= 0.3 CMI
+* low income: (0.3–0.5] CMI
+* mid-low income: (0.5–.8] CMI
+* mid-high income: (.8–1.2] CMI
+* high income: > 1.2 CMI
 
 Cost-burden in predictable breaks:
 
@@ -84,6 +81,8 @@ And race/ethnicity into a few major categories so we can look at it by county:
 * Black (NH)
 * Latino (any race)
 * All others (grouped)
+
+And for everyone we're considering affordable 30%, not the sliding scale they used in the DC report.
 
 ```{r data prep}
 minc <- get_acs(
@@ -108,12 +107,12 @@ pums <- read_ipums_micro(ddi, verbose = F)  %>%
 	mutate(
 		inc_band = cut(
 			ratio,
-			breaks = c(-Inf, 0.5, 0.75, 1.25, 1.5, Inf),
-			labels = c("Poor", "Low", "Middle", "High", "Affluent"),
-			include.lowest = T, right = F)) %>% 
+			breaks = c(-Inf, 0.3, 0.5, .8, 1.2, Inf),
+			labels = c("Very low", "Low", "Mid-low", "Mid-high", "High"),
+			include.lowest = T, right = T)) %>% 
 	mutate(
 		inc_band = as.factor(inc_band) %>%
-			fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent")) %>% 
+			fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
 	mutate(cb = if_else(ownershp == "Rented", (rentgrs * 12) / hhincome, 99999)) %>% 
 	mutate(cb = if_else(ownershp == "Owned or being bought (loan)", (owncost * 12) / hhincome, cb)) %>%
 	# if housing cost is 0 and income is 0, no burden
@@ -174,7 +173,7 @@ ct_total <- des %>%
 hh_by_inc_band <- bind_rows(county_hhlds, county_total, ct_hhlds, ct_total) %>%
 	ungroup() %>%
 	mutate(inc_band = as.factor(inc_band) %>% 
-				 	fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent", "Total"),
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High", "Total"),
 				 level = as.factor(level)) %>% 
 	arrange(level, name) %>% 
 	group_by(level, name) %>% 
@@ -195,23 +194,23 @@ ctminc <- get_acs(geography = "state", state = 09, table = "B19013") %>%
 
 income_table <- minc %>% 
 	bind_rows(ctminc) %>% 
-	mutate(p = comma(round(minc * .5, 0), accuracy = 1),
+	mutate(vl = comma(round(minc * .5, 0), accuracy = 1),
 				 l = comma(round(minc * .75, 0), accuracy = 1),
-				 m = comma(round(minc * 1.25, 0), accuracy = 1), 
-				 h = comma(round(minc * 1.5, 0), accuracy = 1),
-				 Poor = paste("Less than $", p, sep = ""),
-				 Low = paste("Between $", p, " and $", l, sep = ""),
-				 Middle = paste("Between $", l, " and $", m, sep = ""),
-				 High = paste("Between $", m, " and $", h, sep = ""),
-				 Affluent = paste("More than $", h, sep = "")) %>% 
-	select(Name = name, Poor:Affluent)
+				 ml = comma(round(minc * 1.25, 0), accuracy = 1), 
+				 mh = comma(round(minc * 1.5, 0), accuracy = 1),
+				 `Very low` = paste("Less than $", vl, sep = ""),
+				 Low = paste("Between $", vl, " and $", l, sep = ""),
+				 `Mid-low` = paste("Between $", l, " and $", ml, sep = ""),
+				 `Mid-high` = paste("Between $", ml, " and $", mh, sep = ""),
+				 High = paste("More than $", mh, sep = "")) %>% 
+	select(Name = name, `Very low`:High)
 
 kable(income_table, caption = "Income ranges by income band and area")
 ```
 
 ## Count/share of households by income band
 
-More than half a million households in CT (40% of all households) are poor or low-income, earning less than three-quarters of their county's median income. A similar share are affluent or high income, earning  125% or more of their county's median income. Just one in five households statewide are considered middle income by this definition.
+Using the new breakdowns, high income households *vastly* outnumber lower income households.
 
 ```{r}
 hh_by_inc_band %>% 
@@ -249,10 +248,11 @@ kable(hh_by_inc_band %>%
 	select(Name = name, inc_band, value) %>% 
 	mutate(value = comma(value, accuracy = 1)) %>% 
 	pivot_wider(id_cols = Name, names_from = "inc_band") %>% 
-	select(Name, Poor:Affluent, Total))
+	select(Name, `Very low`:High, Total),
+	caption = "Number of households by income band")
 ```
 
-The income distributions are fairly consistent, even in the more rural counties. This trend mirrors national trends with middle income households being squeezed out by high and low income households.
+The income distributions are fairly consistent.
 
 ```{r fig.width=8, fig.height=8}
 hh_by_inc_band %>% 
@@ -313,7 +313,7 @@ ct_race_total <- des %>%
 hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhlds_by_race, ct_race_total) %>%
 	ungroup() %>%
 	mutate(inc_band = as.factor(inc_band) %>% 
-				 	fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent", "Total"),
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High", "Total"),
 				 level = as.factor(level)) %>% 
 	arrange(level, name, race2) %>% 
 	group_by(level, name, race2) %>% 
@@ -322,7 +322,7 @@ hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhl
 out$hh_by_inc_band <- hh_by_race_inc_band
 ```
 
-Considering race/ethnicity of head of household. Statewide, more than half of all households headed by a Black or Latino person are poor or low income, compared to about a third of households headed by a white person. Some variation exists by county.
+Considering race/ethnicity of head of household. Statewide, a quarter of all households headed by a Black or Latino person are very low income, earning less than 30% of the county household median income, compared to just over a tenth of households headed by a white person. Some variation exists by county. In the three largest counties, half of white households are high income.
 
 ```{r fig.width=10, fig.height=10}
 hh_by_race_inc_band %>% 
@@ -410,7 +410,7 @@ cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
 				 	fct_relevel(., "No burden", "Cost-burdened", "Severely cost-burdened", "Total")) %>% 
 	ungroup() %>%
 	mutate(inc_band = as.factor(inc_band) %>%
-				 	fct_relevel(., "Poor", "Low", "Middle", "High", "Affluent"),
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High"),
 				 level = as.factor(level)) %>%
 	arrange(level, name, inc_band) %>%
 	group_by(level, name, inc_band) %>%
@@ -419,9 +419,9 @@ cb_by_inc_band <- bind_rows(county_cb, county_hhlds, ct_cb, ct_hhlds) %>%
 out$cb_by_inc_band <- cb_by_inc_band
 ```
 
-No surprise that cost burden rates among poor households are around 80%, at the statewide level that's more than 20x the rate of affluent households. Too bad I can't do this by town...
+No surprise that cost burden rates among very low income households are more than 80%. At the statewide level that's more than 14x the rate of high income households.
 
-What does stand out a bit are the gaps between each group. Moving up the income scale (from lower to higher income) shows a 20-30 percentage point decrease in cost burden rates. Those gains are much smaller from medium to high and from high to affluent income groups. Not like anyone was doubting this before, but this chart essentially says there's not enough housing affordable to low-income households, but there's plenty of housing affordable to mid-to-high income households. More on this below...
+It's a little surprising that fully half of mid-low income households (households whose income ranges from $57K-$95K in CT) are cost burdened.
 
 ```{r fig.width=8}
 cb_by_inc_band %>% 
@@ -458,6 +458,10 @@ cb_by_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
+Breaking this down by regular and severe cost burden, in Fairfield and New Haven Counties, about the same share of low income households are cost burdened or severely cost burdened. Two-thirds or more very low income households are severely cost burdened.
+
+**Note, these would add up to 100% if households with no burden were included, so the chart is read as "16% of very low income households in Connecticut are cost burdened and another 70% are severely cost burdened."**
+
 ```{r fig.height=8, fig.width=8}
 cb_by_inc_band %>% 
 	ungroup() %>% 
@@ -488,9 +492,9 @@ cb_by_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
-Quick diversion: is the SCB rate among poor households partially explained by some of these households having housing costs and no/negative negative income?
+Quick diversion: is the SCB rate among very low income households partially explained by some of these households having housing costs and no/negative negative income?
 
-By definition, the household is in the "poor" income band if household income is $0 or less because that's less than 50% CMI. There are about 15K poor households with no or negative income and some nonzero housing cost, making them "severely cost burdened" by definition. These ~15K units make up about 4% of all poor households, which is not insignificant, but it's not the sole motivator for high SCB rates in this income band.
+By definition, the household is in the "very low income" income band if household income is $0 or less because that's less than 30% CMI. There are about 15K poor households with no or negative income and some nonzero housing cost, making them "severely cost burdened" by definition. These ~15K units make up about 7% of all very low income households, which is not insignificant, but it's not the sole motivator for high SCB rates in this income band.
 
 ```{r}
 des %>%
@@ -525,11 +529,11 @@ avg_cost_ratio_inc_band <- bind_rows(avg_cost_ratio_county, avg_cost_ratio_ct)
 out$avg_cost_ratio_inc_band <- avg_cost_ratio_inc_band
 ```
 
-Urban's DC study found that higher income households paid about 12% income to housing. In CT it's about 14%. For a household with $200K in income, that's about $2500/month in housing costs, which I just don't think is that high considering there are some kinda crappy 2BRs in East Rock that go for that much. Are those occupants really New Haven affluent? I don't think so. Affluent people pay for apartments with air conditioning, probably.
+Urban's DC study found that higher income households paid about 12% income to housing. In CT it's about 16%. For a household with $200K in income, that's about $2667/month in housing costs, which I just don't think is that high considering there are some kinda crappy 2BRs in East Rock that go for that much.
 
-For a household at the lower end of CT's affluent band, earning about $114K, 14% of income to housing cost would be about $1400, which as a renter strikes me as unbelievably low for someone of means. It's the same as 30% for a middle income person. Why is that OK?
+For a household at the lower end of CT's affluent band, earning about $114K, 16% of income to housing cost would be about $1520, which as a renter strikes me as unbelievably low for someone of those means. It's the same as 30% for someone earning $60K. Why is that OK?
 
-The question I have, then, is how do I handle this in the analysis? Do I assume a 14% cost ratio is "affordable" for high income households the same way 30% for a middle income person is "affordable," or do I draw a hard line at 30% for everyone? Do I set like a floor of 20% and ceiling of 30% for everyone? I assume there are weird HUD rules here, but frankly those rules shouldn't apply to rich people and I don't think we should purport in our analysis that someone making six figures should pay what low/middle income people pay because there's precedent for it. If people want housing in the middle income band but can pay more, we should state that.
+**7/15:** Talked with the team and I think we're going to use 30% for all income bands rather than the sliding scale.
 
 ```{r}
 avg_cost_ratio_inc_band %>% 
@@ -562,6 +566,7 @@ avg_cost_ratio_inc_band %>%
 		axis.text.x = element_text(colour = "black"),
 		axis.text.y = element_text(colour = "black"))
 ```
+
 One last thing real quick... what's the average *actual* housing cost for each band?
 
 ```{r}
@@ -602,7 +607,7 @@ avg_cost_inc_band <- bind_rows(avg_cost_county_renters, avg_cost_county_owners, 
 out$avg_cost_inc_band <- avg_cost_inc_band
 ```
 
-Lots of competition for renters in the window between $1000 and $1500. The couple of tight clusters, like in Litchfield and Windham Counties, are interesting. Affluent households in those counties are only paying a couple hundred bucks more per month for rentals. For home owners, cost ranges are a little wider.
+Lots of competition for renters in the range between $1000 and $1500, and for homeowners in the $1200-$1500 range. The tightness of the clusters by county are also interesting.
 
 ```{r fig.height=8, fig.width=8}
 avg_cost_inc_band %>% 
@@ -613,8 +618,6 @@ avg_cost_inc_band %>%
 	mutate(wm_cost = round(wm_cost/1000, 1)) %>% 
 	ggplot(aes(wm_cost, name, group = inc_band)) +
 	geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
-	#geom_vline(xintercept = .3, color = "gray60", size = 0.5, linetype = "23") +
-	#geom_vline(xintercept = .5, color = "gray60", size = 0.5, linetype = "23") +
 	geom_text(aes(
 		label = dollar(wm_cost, accuracy = .1)),
 		family = "Roboto Condensed", size = 3, alpha = 0.8) +
@@ -640,37 +643,35 @@ So I do want to look at how many people from each INCOME band are living in each
 
 ## Affordable housing costs to households in each band
 
-For this first pass, I'll set it to 30% for everyone.
+Some future iteration of this notebook should find a way to combine this table with the chart above, but a couple interesting things stand out. Very low income renters are often spending their "affordable" amount, but very low income homeowners spend more. Depending on how much more, I'm on the fence about considering this a bad thing necessarily, since the benefits of home ownership may outweigh an extra $100-$200 per month above the affordable threshold, but $300 or more becomes much more challenging to maintain. A few hundred bucks a month over 30% of income, which is already a huge chunk, is the difference between scraping together the mortgage payment and an unexpected expense like a medical bill or car repair.
+
+Almost all middle-to-high income renters are paying below their affordable threshold. As was shown above, higher income people like to rent in lower cost bands. The chart above and table below just show how much lower they rent. But low-bar slow clap for high income FC homeowners paying their 30%.
 
 ```{r}
 affordable_cost_table <- minc %>% 
 	bind_rows(ctminc) %>% 
 	select(-countyfip) %>% 
-	mutate(p = minc * .5,
+	mutate(vl = minc * .5,
 				 l = minc * .75,
-				 m = minc * 1.25, 
-				 h = minc * 1.5) %>% 
+				 ml = minc * 1.25, 
+				 mh = minc * 1.5) %>% 
 	select(-minc) %>% 
-	pivot_longer(cols = p:h, names_to = "inc_band", values_to = "income") %>% 
+	pivot_longer(cols = vl:mh, names_to = "inc_band", values_to = "income") %>% 
 	mutate(income = round(income, 0),
 				 affordable_hcost = round(income / 12 * .3, 0)) %>% 
 	select(name, inc_band, affordable_hcost) %>% 
 	mutate(affordable_hcost = comma(affordable_hcost, accuracy = 1)) %>% 
 	pivot_wider(id_cols = name, names_from = inc_band, values_from = affordable_hcost) %>% 
-	mutate(Poor = paste("Less than $", p, sep = ""),
-				 Low = paste("Between $", p, " and $", l, sep = ""),
-				 Middle = paste("Between $", l, " and $", m, sep = ""),
-				 High = paste("Between $", m, " and $", h, sep = ""),
-				 Affluent = paste("More than $", h, sep = ""))
+	mutate(`Very low` = paste("Less than $", vl, sep = ""),
+				 Low = paste("Between $", vl, " and $", l, sep = ""),
+				 `Mid-low` = paste("Between $", l, " and $", ml, sep = ""),
+				 `Mid-high` = paste("Between $", ml, " and $", mh, sep = ""),
+				 High = paste("More than $", mh, sep = ""))
 
 kable(affordable_cost_table %>% 
-				select(Name = name, Poor:Affluent),
+				select(Name = name, `Very low`:High),
 			caption = "Affordable monthly housing cost ranges by income band and area")
 ```
-
-Some future iteration of this notebook should find a way to combine this table with the chart above, but a couple interesting things stand out. Poor renters are often spending the "affordable" amount, but poor homeowners spend a little more. I'm on the fence about considering this a bad thing necessarily, since the benefits of home ownership may outweigh the extra $100-$200 per month above the affordable threshold. On the other hand, a couple hundred bucks a month is a really easy gap to fall into and miss a mortgage payment.
-
-Almost all renters are paying below the affordable threshold for middle income. So clearly higher income people rent in lower cost bands. Still not sure whether this warrants adjusting the cost bands as far down as the cost ratios.
 
 ## Housing units in those cost bands
 
@@ -682,10 +683,10 @@ hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
 cost_bands <- minc %>% 
 	bind_rows(ctminc) %>% 
 	select(-countyfip) %>% 
-	mutate(p = round((minc * .5 / 12 * .3), 0),
+	mutate(vl = round((minc * .5 / 12 * .3), 0),
 				 l = round((minc * .75 / 12 * .3), 0),
-				 m = round((minc * 1.25 / 12 * .3), 0), 
-				 h = round((minc * 1.5 / 12 * .3), 0)) %>% 
+				 ml = round((minc * 1.25 / 12 * .3), 0), 
+				 mh = round((minc * 1.5 / 12 * .3), 0)) %>% 
 	select(-minc)
 
 hpums <- read_ipums_micro(hddi, verbose = F) %>% 
@@ -702,35 +703,35 @@ occ_des <- hpums %>%
 
 own_occ_cost_bands <- occ_des %>%
 	filter(owncost != 99999) %>% 
-	select(hhwt, name, owncost, p, l, m, h) %>% 
+	select(hhwt, name, owncost, vl, l, ml, mh) %>% 
 	group_by(name) %>% 
 	mutate(tenure = "owner_occupied",
-				 poor = between(owncost, 0, (p - 1)),
-				 low = between(owncost, p, (l - 1)),
-				 middle = between(owncost, l, (m - 1)),
-				 high = between(owncost, m, (h - 1)),
-				 affluent = between(owncost, h, Inf)) %>% 
+				 very_low = between(owncost, 0, (vl - 1)),
+				 low = between(owncost, vl, (l - 1)),
+				 mid_low = between(owncost, l, (ml - 1)),
+				 mid_high = between(owncost, ml, (mh - 1)),
+				 high = between(owncost, mh, Inf)) %>% 
 	ungroup() %>% 
-	group_by(name, tenure, poor, low, middle, high, affluent) %>% 
+	group_by(name, tenure, very_low, low, mid_low, mid_high, high) %>% 
 	summarise(units = survey_total(hhwt)) %>% 
-	pivot_longer(cols = poor:affluent, names_to = "cost_band") %>% 
+	pivot_longer(cols = very_low:high, names_to = "cost_band") %>% 
 	filter(value == T) %>% 
 	select(name, tenure, cost_band, units, units_se)
 
 rent_occ_cost_bands <- occ_des %>%
 	filter(owncost == 99999) %>% 
-	select(hhwt, name, rentgrs, p, l, m, h) %>% 
+	select(hhwt, name, rentgrs, vl, l, ml, mh) %>% 
 	group_by(name) %>% 
 	mutate(tenure = "renter_occupied",
-				 poor = between(rentgrs, 0, (p - 1)),
-				 low = between(rentgrs, p, (l - 1)),
-				 middle = between(rentgrs, l, (m - 1)),
-				 high = between(rentgrs, m, (h - 1)),
-				 affluent = between(rentgrs, h, Inf)) %>% 
+				 very_low = between(rentgrs, 0, (vl - 1)),
+				 low = between(rentgrs, vl, (l - 1)),
+				 mid_low = between(rentgrs, l, (ml - 1)),
+				 mid_high = between(rentgrs, ml, (mh - 1)),
+				 high = between(rentgrs, mh, Inf)) %>% 
 	ungroup() %>% 
-	group_by(name, tenure, poor, low, middle, high, affluent) %>% 
+	group_by(name, tenure, very_low, low, mid_low, mid_high, high) %>% 
 	summarise(units = survey_total(hhwt)) %>% 
-	pivot_longer(cols = poor:affluent, names_to = "cost_band") %>% 
+	pivot_longer(cols = very_low:high, names_to = "cost_band") %>% 
 	filter(value == T) %>% 
 	select(name, tenure, cost_band, units, units_se)
 

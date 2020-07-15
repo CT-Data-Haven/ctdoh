@@ -9,10 +9,6 @@ income band” or something? Kind of a mouthful…
 There’s a lot going on in this notebook:
 
   - Count and share of households by income band by area
-      - **Divisions of county median income make the most sense because
-        HUD regions (HMFAs) cross PUMA and county lines. Brought up with
-        Urban on 7/8 and they will make a call soon, so I’ll move
-        forward with what I have for now.**
       - Rounded to pretty numbers for legibility?
   - The kinds of occupations/jobs those residents work in
       - Not exactly germane to the conversation unless we’re talking
@@ -20,32 +16,28 @@ There’s a lot going on in this notebook:
   - Count and share of households in each band that are cost-burdened
     (T2 in DC report)
   - Average (median?) housing-cost-to-income ratio for each income band
-  - The approximate monthly housing cost for an affordable unit for each
-    income band.
+  - The approximate monthly housing cost for an affordable unit (30%)
+    for each income band.
       - Rounded to pretty numbers for legibility?
-      - DC report used lower cost burden ratios for higher income bands.
-        Should we?
   - Count and share of units by those cost bands in the area (T3 in DC
     report).
   - Number of housing units needed for each cost band so each household
     would have an affordable housing cost, vs. the actual count of units
-    in those cost bands (F19 in DC report) \* Again, DC used much lower
-    cost ratios for higher income bands. I think we should expect they
-    can pay more.
+    in those cost bands (F19 in DC report)
   - For each income band, the number of households that can/cannot
     afford to pay more
   - Count of vacant units in each cost band (F20 in DC report).
 
 ## Establish groups
 
-Starting by using county median incomes (CMI), then income bands like we
-did in the Community Index reports…
+After discussion with team on 7/15 we are settled with using median hh
+income by county and the groupings below:
 
-  - poor: \< 0.5 CMI
-  - low-income: \[0.5–0.75) CMI
-  - middle-income: \[0.75–1.25) CMI
-  - high-income: \[1.25–1.50) CMI
-  - affluent: \>= 1.5 CMI
+  - very low income: \<= 0.3 CMI
+  - low income: (0.3–0.5\] CMI
+  - mid-low income: (0.5–.8\] CMI
+  - mid-high income: (.8–1.2\] CMI
+  - high income: \> 1.2 CMI
 
 Cost-burden in predictable breaks:
 
@@ -60,6 +52,9 @@ county:
   - Black (NH)
   - Latino (any race)
   - All others (grouped)
+
+And for everyone we’re considering affordable 30%, not the sliding scale
+they used in the DC report.
 
 ## Define income bands
 
@@ -90,7 +85,7 @@ Name
 
 <th style="text-align:left;">
 
-Poor
+Very low
 
 </th>
 
@@ -102,19 +97,19 @@ Low
 
 <th style="text-align:left;">
 
-Middle
+Mid-low
+
+</th>
+
+<th style="text-align:left;">
+
+Mid-high
 
 </th>
 
 <th style="text-align:left;">
 
 High
-
-</th>
-
-<th style="text-align:left;">
-
-Affluent
 
 </th>
 
@@ -490,15 +485,18 @@ More than $114,159
 
 ## Count/share of households by income band
 
-More than half a million households in CT (40% of all households) are
-poor or low-income, earning less than three-quarters of their county’s
-median income. A similar share are affluent or high income, earning 125%
-or more of their county’s median income. Just one in five households
-statewide are considered middle income by this definition.
+Using the new breakdowns, high income households *vastly* outnumber
+lower income households.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 <table>
+
+<caption>
+
+Number of households by income band
+
+</caption>
 
 <thead>
 
@@ -512,7 +510,7 @@ Name
 
 <th style="text-align:left;">
 
-Poor
+Very low
 
 </th>
 
@@ -524,19 +522,19 @@ Low
 
 <th style="text-align:left;">
 
-Middle
+Mid-low
+
+</th>
+
+<th style="text-align:left;">
+
+Mid-high
 
 </th>
 
 <th style="text-align:left;">
 
 High
-
-</th>
-
-<th style="text-align:left;">
-
-Affluent
 
 </th>
 
@@ -562,31 +560,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-93,471
+55,251
 
 </td>
 
 <td style="text-align:left;">
 
-43,416
+38,220
 
 </td>
 
 <td style="text-align:left;">
 
-66,244
+51,287
 
 </td>
 
 <td style="text-align:left;">
 
-24,325
+53,533
 
 </td>
 
 <td style="text-align:left;">
 
-113,036
+142,201
 
 </td>
 
@@ -608,31 +606,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-90,275
+52,900
 
 </td>
 
 <td style="text-align:left;">
 
-47,543
+37,375
 
 </td>
 
 <td style="text-align:left;">
 
-73,551
+55,552
 
 </td>
 
 <td style="text-align:left;">
 
-29,171
+57,614
 
 </td>
 
 <td style="text-align:left;">
 
-108,523
+145,622
 
 </td>
 
@@ -654,31 +652,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-17,353
+8,698
 
 </td>
 
 <td style="text-align:left;">
 
-10,125
+8,655
 
 </td>
 
 <td style="text-align:left;">
 
-18,243
+11,899
 
 </td>
 
 <td style="text-align:left;">
 
-6,411
+14,645
 
 </td>
 
 <td style="text-align:left;">
 
-21,855
+30,090
 
 </td>
 
@@ -700,31 +698,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-17,033
+9,466
 
 </td>
 
 <td style="text-align:left;">
 
-9,033
+7,567
 
 </td>
 
 <td style="text-align:left;">
 
-15,449
+10,680
 
 </td>
 
 <td style="text-align:left;">
 
-5,858
+12,075
 
 </td>
 
 <td style="text-align:left;">
 
-19,520
+27,105
 
 </td>
 
@@ -746,31 +744,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-84,672
+47,160
 
 </td>
 
 <td style="text-align:left;">
 
-42,987
+37,512
 
 </td>
 
 <td style="text-align:left;">
 
-69,453
+52,407
 
 </td>
 
 <td style="text-align:left;">
 
-26,036
+53,410
 
 </td>
 
 <td style="text-align:left;">
 
-106,708
+139,367
 
 </td>
 
@@ -792,31 +790,31 @@ New London County
 
 <td style="text-align:left;">
 
-25,089
+14,344
 
 </td>
 
 <td style="text-align:left;">
 
-14,553
+10,745
 
 </td>
 
 <td style="text-align:left;">
 
-26,028
+17,668
 
 </td>
 
 <td style="text-align:left;">
 
-9,263
+20,979
 
 </td>
 
 <td style="text-align:left;">
 
-32,469
+43,666
 
 </td>
 
@@ -838,31 +836,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-14,403
+7,722
 
 </td>
 
 <td style="text-align:left;">
 
-7,080
+6,681
 
 </td>
 
 <td style="text-align:left;">
 
-13,145
+8,039
 
 </td>
 
 <td style="text-align:left;">
 
-4,792
+10,580
 
 </td>
 
 <td style="text-align:left;">
 
-15,798
+22,196
 
 </td>
 
@@ -884,31 +882,31 @@ Windham County
 
 <td style="text-align:left;">
 
-10,426
+5,836
 
 </td>
 
 <td style="text-align:left;">
 
-5,650
+4,590
 
 </td>
 
 <td style="text-align:left;">
 
-11,377
+6,958
 
 </td>
 
 <td style="text-align:left;">
 
-4,065
+9,000
 
 </td>
 
 <td style="text-align:left;">
 
-12,945
+18,079
 
 </td>
 
@@ -930,31 +928,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-352,722
+201,377
 
 </td>
 
 <td style="text-align:left;">
 
-180,387
+151,345
 
 </td>
 
 <td style="text-align:left;">
 
-293,490
+214,490
 
 </td>
 
 <td style="text-align:left;">
 
-109,921
+231,836
 
 </td>
 
 <td style="text-align:left;">
 
-430,854
+568,326
 
 </td>
 
@@ -970,9 +968,7 @@ Connecticut
 
 </table>
 
-The income distributions are fairly consistent, even in the more rural
-counties. This trend mirrors national trends with middle income
-households being squeezed out by high and low income households.
+The income distributions are fairly consistent.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
@@ -980,10 +976,12 @@ households being squeezed out by high and low income households.
 
 ### Race breakdowns
 
-Considering race/ethnicity of head of household. Statewide, more than
-half of all households headed by a Black or Latino person are poor or
-low income, compared to about a third of households headed by a white
-person. Some variation exists by county.
+Considering race/ethnicity of head of household. Statewide, a quarter of
+all households headed by a Black or Latino person are very low income,
+earning less than 30% of the county household median income, compared to
+just over a tenth of households headed by a white person. Some variation
+exists by county. In the three largest counties, half of white
+households are high income.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
@@ -1028,7 +1026,7 @@ Name
 
 <th style="text-align:left;">
 
-Poor
+Very low
 
 </th>
 
@@ -1040,19 +1038,19 @@ Low
 
 <th style="text-align:left;">
 
-Middle
+Mid-low
+
+</th>
+
+<th style="text-align:left;">
+
+Mid-high
 
 </th>
 
 <th style="text-align:left;">
 
 High
-
-</th>
-
-<th style="text-align:left;">
-
-Affluent
 
 </th>
 
@@ -1072,17 +1070,24 @@ Fairfield County
 
 <td style="text-align:left;">
 
-Maids and housekeeping cleaners; Cashiers; Unemployed, with no work
-experience in the last 5 years or earlier or never worked; Janitors and
-building cleaners; Landscaping and groundskeeping workers
+Cashiers; Unemployed, with no work experience in the last 5 years or
+earlier or never worked; Maids and housekeeping cleaners; Childcare
+workers; Landscaping and groundskeeping workers
+
+</td>
+
+<td style="text-align:left;">
+
+Maids and housekeeping cleaners; Janitors and building cleaners;
+Landscaping and groundskeeping workers; Cashiers; Childcare workers
 
 </td>
 
 <td style="text-align:left;">
 
 Cashiers; Maids and housekeeping cleaners; Janitors and building
-cleaners; Retail salespersons; Secretaries and administrative
-assistants, except legal, medical, and executive
+cleaners; Secretaries and administrative assistants, except legal,
+medical, and executive; Retail salespersons
 
 </td>
 
@@ -1090,22 +1095,14 @@ assistants, except legal, medical, and executive
 
 Elementary and middle school teachers; Cashiers; Retail salespersons;
 Secretaries and administrative assistants, except legal, medical, and
-executive; Managers, all other
+executive; Driver/sales workers and truck drivers
 
 </td>
 
 <td style="text-align:left;">
 
-Elementary and middle school teachers; Managers, all other; Registered
-nurses; Secretaries and administrative assistants, except legal,
-medical, and executive; Customer service representatives
-
-</td>
-
-<td style="text-align:left;">
-
-Managers, all other; Elementary and middle school teachers; Financial
-managers; Chief executives; Accountants and auditors
+Managers, all other; Elementary and middle school teachers; Accountants
+and auditors; Financial managers; Chief executives
 
 </td>
 
@@ -1122,32 +1119,33 @@ Hartford County
 <td style="text-align:left;">
 
 Cashiers; Unemployed, with no work experience in the last 5 years or
-earlier or never worked; Janitors and building cleaners; Nursing
-assistants; Personal care aides
+earlier or never worked; Personal care aides; Janitors and building
+cleaners; Nursing assistants
 
 </td>
 
 <td style="text-align:left;">
 
-Cashiers; Nursing assistants; Retail salespersons; Janitors and building
-cleaners; Unemployed, with no work experience in the last 5 years or
-earlier or never worked
+Cashiers; Janitors and building cleaners; Unemployed, with no work
+experience in the last 5 years or earlier or never worked; Retail
+salespersons; Nursing assistants
 
 </td>
 
 <td style="text-align:left;">
 
-Cashiers; Janitors and building cleaners; First-Line supervisors of
-retail sales workers; Secretaries and administrative assistants, except
-legal, medical, and executive; Driver/sales workers and truck drivers
+Cashiers; Retail salespersons; Nursing assistants; Unemployed, with no
+work experience in the last 5 years or earlier or never worked;
+Secretaries and administrative assistants, except legal, medical, and
+executive
 
 </td>
 
 <td style="text-align:left;">
 
-Elementary and middle school teachers; Managers, all other; Registered
-nurses; Secretaries and administrative assistants, except legal,
-medical, and executive; Customer service representatives
+Cashiers; Secretaries and administrative assistants, except legal,
+medical, and executive; Janitors and building cleaners; Driver/sales
+workers and truck drivers; Customer service representatives
 
 </td>
 
@@ -1170,16 +1168,24 @@ Litchfield County
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Personal care aides; First-Line
-supervisors of retail sales workers; Retail salespersons; Cashiers
+Retail salespersons; Laborers and freight, stock, and material movers,
+hand; Personal care aides; Cashiers; Janitors and building cleaners
 
 </td>
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Secretaries and administrative
-assistants, except legal, medical, and executive; Cashiers; Bookkeeping,
-accounting, and auditing clerks; Driver/sales workers and truck drivers
+Janitors and building cleaners; First-Line supervisors of retail sales
+workers; Waiters and waitresses; Personal care aides; Customer service
+representatives
+
+</td>
+
+<td style="text-align:left;">
+
+Janitors and building cleaners; Cashiers; Secretaries and administrative
+assistants, except legal, medical, and executive; Driver/sales workers
+and truck drivers; Bookkeeping, accounting, and auditing clerks
 
 </td>
 
@@ -1187,15 +1193,8 @@ accounting, and auditing clerks; Driver/sales workers and truck drivers
 
 First-Line supervisors of retail sales workers; Elementary and middle
 school teachers; Landscaping and groundskeeping workers; Retail
-salespersons; Managers, all other
-
-</td>
-
-<td style="text-align:left;">
-
-Elementary and middle school teachers; Cashiers; First-Line supervisors
-of retail sales workers; Managers, all other; Janitors and building
-cleaners
+salespersons; Secretaries and administrative assistants, except legal,
+medical, and executive
 
 </td>
 
@@ -1218,33 +1217,33 @@ Middlesex County
 
 <td style="text-align:left;">
 
-Cashiers; Customer service representatives; Waiters and waitresses;
-Maids and housekeeping cleaners; Driver/sales workers and truck drivers
+Customer service representatives; Cashiers; Driver/sales workers and
+truck drivers; First-Line supervisors of retail sales workers; Nursing
+assistants
 
 </td>
 
 <td style="text-align:left;">
 
-Customer service representatives; First-Line supervisors of retail sales
-workers; Cashiers; Secretaries and administrative assistants, except
-legal, medical, and executive; Nursing assistants
+Cashiers; Waiters and waitresses; Office clerks, general; Maids and
+housekeeping cleaners; Inspectors, testers, sorters, samplers, and
+weighers
 
 </td>
 
 <td style="text-align:left;">
 
-Secretaries and administrative assistants, except legal, medical, and
-executive; Elementary and middle school teachers; Registered nurses;
-Managers, all other; Cashiers
+Cashiers; Secretaries and administrative assistants, except legal,
+medical, and executive; First-Line supervisors of retail sales workers;
+Customer service representatives; Nursing assistants
 
 </td>
 
 <td style="text-align:left;">
 
-Managers, all other; Elementary and middle school teachers; First-Line
-supervisors of retail sales workers; Secretaries and administrative
-assistants, except legal, medical, and executive; Bookkeeping,
-accounting, and auditing clerks
+Managers, all other; Elementary and middle school teachers; Registered
+nurses; Secretaries and administrative assistants, except legal,
+medical, and executive; Janitors and building cleaners
 
 </td>
 
@@ -1268,7 +1267,15 @@ New Haven County
 <td style="text-align:left;">
 
 Unemployed, with no work experience in the last 5 years or earlier or
-never worked; Cashiers; Personal care aides; Nursing assistants; Retail
+never worked; Cashiers; Customer service representatives; Personal care
+aides; Janitors and building cleaners
+
+</td>
+
+<td style="text-align:left;">
+
+Cashiers; Unemployed, with no work experience in the last 5 years or
+earlier or never worked; Personal care aides; Nursing assistants; Retail
 salespersons
 
 </td>
@@ -1276,24 +1283,15 @@ salespersons
 <td style="text-align:left;">
 
 Cashiers; Nursing assistants; Retail salespersons; First-Line
-supervisors of retail sales workers; Unemployed, with no work experience
-in the last 5 years or earlier or never worked
+supervisors of retail sales workers; Janitors and building cleaners
 
 </td>
 
 <td style="text-align:left;">
 
-Cashiers; Janitors and building cleaners; Retail salespersons;
-First-Line supervisors of retail sales workers; Secretaries and
-administrative assistants, except legal, medical, and executive
-
-</td>
-
-<td style="text-align:left;">
-
-Elementary and middle school teachers; Retail salespersons; Driver/sales
-workers and truck drivers; Nursing assistants; Secretaries and
-administrative assistants, except legal, medical, and executive
+Janitors and building cleaners; First-Line supervisors of retail sales
+workers; Retail salespersons; Cashiers; Secretaries and administrative
+assistants, except legal, medical, and executive
 
 </td>
 
@@ -1301,7 +1299,7 @@ administrative assistants, except legal, medical, and executive
 
 Elementary and middle school teachers; Managers, all other; Registered
 nurses; Secretaries and administrative assistants, except legal,
-medical, and executive; Postsecondary teachers
+medical, and executive; First-Line supervisors of retail sales workers
 
 </td>
 
@@ -1317,38 +1315,40 @@ New London County
 
 <td style="text-align:left;">
 
-Cashiers; Janitors and building cleaners; Retail salespersons; Maids and
-housekeeping cleaners; Waiters and waitresses
+Maids and housekeeping cleaners; Janitors and building cleaners; Waiters
+and waitresses; Unemployed, with no work experience in the last 5 years
+or earlier or never worked; Cashiers
 
 </td>
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Cashiers; Landscaping and groundskeeping
-workers; Gambling services workers; Nursing assistants
+Cashiers; Janitors and building cleaners; Retail salespersons; Cooks;
+Laborers and freight, stock, and material movers, hand
+
+</td>
+
+<td style="text-align:left;">
+
+Janitors and building cleaners; Cashiers; Gambling services workers;
+Landscaping and groundskeeping workers; Nursing assistants
 
 </td>
 
 <td style="text-align:left;">
 
 Secretaries and administrative assistants, except legal, medical, and
-executive; Driver/sales workers and truck drivers; Gambling services
-workers; Cashiers; Elementary and middle school teachers
+executive; Driver/sales workers and truck drivers; Cashiers; First-Line
+supervisors of retail sales workers; Elementary and middle school
+teachers
 
 </td>
 
 <td style="text-align:left;">
 
-Managers, all other; Elementary and middle school teachers; First-Line
-supervisors of retail sales workers; Waiters and waitresses; Cashiers
-
-</td>
-
-<td style="text-align:left;">
-
-Managers, all other; Military enlisted tactical operations and
-air/weapons specialists and crew members; Registered nurses; Elementary
-and middle school teachers; Cashiers
+Managers, all other; Elementary and middle school teachers; Military
+enlisted tactical operations and air/weapons specialists and crew
+members; Registered nurses; Cashiers
 
 </td>
 
@@ -1364,32 +1364,32 @@ Tolland County
 
 <td style="text-align:left;">
 
-Waiters and waitresses; Customer service representatives; Nursing
-assistants; Postsecondary teachers; Cashiers
+Waiters and waitresses; Postsecondary teachers; Customer service
+representatives; Nursing assistants; Cashiers
+
+</td>
+
+<td style="text-align:left;">
+
+Waiters and waitresses; Driver/sales workers and truck drivers; Chefs
+and head cooks; Receptionists and information clerks; Customer service
+representatives
 
 </td>
 
 <td style="text-align:left;">
 
 Retail salespersons; Driver/sales workers and truck drivers; Teaching
-assistants; Nursing assistants; Laborers and freight, stock, and
-material movers, hand
+assistants; Childcare workers; First-Line supervisors of retail sales
+workers
 
 </td>
 
 <td style="text-align:left;">
 
-Elementary and middle school teachers; Accountants and auditors;
-Cashiers; First-Line supervisors of retail sales workers; Registered
-nurses
-
-</td>
-
-<td style="text-align:left;">
-
-Managers, all other; Secretaries and administrative assistants, except
-legal, medical, and executive; Registered nurses; Elementary and middle
-school teachers; Driver/sales workers and truck drivers
+Accountants and auditors; Elementary and middle school teachers;
+Cashiers; Secretaries and administrative assistants, except legal,
+medical, and executive; Registered nurses
 
 </td>
 
@@ -1397,7 +1397,7 @@ school teachers; Driver/sales workers and truck drivers
 
 Managers, all other; Elementary and middle school teachers; Secretaries
 and administrative assistants, except legal, medical, and executive;
-Cashiers; Registered nurses
+Registered nurses; Cashiers
 
 </td>
 
@@ -1414,40 +1414,40 @@ Windham County
 <td style="text-align:left;">
 
 Unemployed, with no work experience in the last 5 years or earlier or
-never worked; Retail salespersons; Laborers and freight, stock, and
-material movers, hand; Maids and housekeeping cleaners; Personal care
-aides
+never worked; Janitors and building cleaners; Maids and housekeeping
+cleaners; Waiters and waitresses; Retail salespersons
 
 </td>
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Food preparation workers; Cooks;
-First-Line supervisors of retail sales workers; Retail salespersons
+Laborers and freight, stock, and material movers, hand; Retail
+salespersons; Personal care aides; Nursing assistants; Driver/sales
+workers and truck drivers
 
 </td>
 
 <td style="text-align:left;">
 
-Driver/sales workers and truck drivers; Cashiers; Nursing assistants;
-Customer service representatives; First-Line supervisors of retail sales
-workers
+Janitors and building cleaners; Driver/sales workers and truck drivers;
+Landscaping and groundskeeping workers; Food preparation workers; Cooks
 
 </td>
 
 <td style="text-align:left;">
 
-Elementary and middle school teachers; Cashiers; Driver/sales workers
-and truck drivers; Registered nurses; Licensed practical and licensed
-vocational nurses
+Nursing assistants; First-Line supervisors of retail sales workers;
+Driver/sales workers and truck drivers; Secretaries and administrative
+assistants, except legal, medical, and executive; Customer service
+representatives
 
 </td>
 
 <td style="text-align:left;">
 
-Registered nurses; Elementary and middle school teachers; Cashiers;
-Secretaries and administrative assistants, except legal, medical, and
-executive; Driver/sales workers and truck drivers
+Registered nurses; Cashiers; Elementary and middle school teachers;
+Driver/sales workers and truck drivers; Secretaries and administrative
+assistants, except legal, medical, and executive
 
 </td>
 
@@ -1459,34 +1459,38 @@ executive; Driver/sales workers and truck drivers
 
 ## Cost burden by income band
 
-No surprise that cost burden rates among poor households are around 80%,
-at the statewide level that’s more than 20x the rate of affluent
-households. Too bad I can’t do this by town…
+No surprise that cost burden rates among very low income households are
+more than 80%. At the statewide level that’s more than 14x the rate of
+high income households.
 
-What does stand out a bit are the gaps between each group. Moving up the
-income scale (from lower to higher income) shows a 20-30 percentage
-point decrease in cost burden rates. Those gains are much smaller from
-medium to high and from high to affluent income groups. Not like anyone
-was doubting this before, but this chart essentially says there’s not
-enough housing affordable to low-income households, but there’s plenty
-of housing affordable to mid-to-high income households. More on this
-below…
+It’s a little surprising that fully half of mid-low income households
+(households whose income ranges from $57K-$95K in CT) are cost burdened.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
+Breaking this down by regular and severe cost burden, in Fairfield and
+New Haven Counties, about the same share of low income households are
+cost burdened or severely cost burdened. Two-thirds or more very low
+income households are severely cost burdened.
+
+**Note, these would add up to 100% if households with no burden were
+included, so the chart is read as “16% of very low income households in
+Connecticut are cost burdened and another 70% are severely cost
+burdened.”**
+
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
-Quick diversion: is the SCB rate among poor households partially
-explained by some of these households having housing costs and
+Quick diversion: is the SCB rate among very low income households
+partially explained by some of these households having housing costs and
 no/negative negative income?
 
-By definition, the household is in the “poor” income band if household
-income is $0 or less because that’s less than 50% CMI. There are about
-15K poor households with no or negative income and some nonzero housing
-cost, making them “severely cost burdened” by definition. These \~15K
-units make up about 4% of all poor households, which is not
-insignificant, but it’s not the sole motivator for high SCB rates in
-this income band.
+By definition, the household is in the “very low income” income band if
+household income is $0 or less because that’s less than 30% CMI. There
+are about 15K poor households with no or negative income and some
+nonzero housing cost, making them “severely cost burdened” by
+definition. These \~15K units make up about 7% of all very low income
+households, which is not insignificant, but it’s not the sole motivator
+for high SCB rates in this income band.
 
     ## # A tibble: 2 x 4
     ##   income          cost_burden            households households_se
@@ -1497,38 +1501,27 @@ this income band.
 ## Average housing-cost-to-income ratio for each band
 
 Urban’s DC study found that higher income households paid about 12%
-income to housing. In CT it’s about 14%. For a household with $200K in
-income, that’s about $2500/month in housing costs, which I just don’t
+income to housing. In CT it’s about 16%. For a household with $200K in
+income, that’s about $2667/month in housing costs, which I just don’t
 think is that high considering there are some kinda crappy 2BRs in East
-Rock that go for that much. Are those occupants really New Haven
-affluent? I don’t think so. Affluent people pay for apartments with air
-conditioning, probably.
+Rock that go for that much.
 
 For a household at the lower end of CT’s affluent band, earning about
-$114K, 14% of income to housing cost would be about $1400, which as a
-renter strikes me as unbelievably low for someone of means. It’s the
-same as 30% for a middle income person. Why is that OK?
+$114K, 16% of income to housing cost would be about $1520, which as a
+renter strikes me as unbelievably low for someone of those means. It’s
+the same as 30% for someone earning $60K. Why is that OK?
 
-The question I have, then, is how do I handle this in the analysis? Do I
-assume a 14% cost ratio is “affordable” for high income households the
-same way 30% for a middle income person is “affordable,” or do I draw a
-hard line at 30% for everyone? Do I set like a floor of 20% and ceiling
-of 30% for everyone? I assume there are weird HUD rules here, but
-frankly those rules shouldn’t apply to rich people and I don’t think we
-should purport in our analysis that someone making six figures should
-pay what low/middle income people pay because there’s precedent for it.
-If people want housing in the middle income band but can pay more, we
-should state that.
+**7/15:** Talked with the team and I think we’re going to use 30% for
+all income bands rather than the sliding scale.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
 One last thing real quick… what’s the average *actual* housing cost for
 each band?
 
-Lots of competition for renters in the window between $1000 and $1500.
-The couple of tight clusters, like in Litchfield and Windham Counties,
-are interesting. Affluent households in those counties are only paying a
-couple hundred bucks more per month for rentals. For home owners, cost
-ranges are a little wider.
+Lots of competition for renters in the range between $1000 and $1500,
+and for homeowners in the $1200-$1500 range. The tightness of the
+clusters by county are also interesting.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
@@ -1537,7 +1530,23 @@ in each COST band.
 
 ## Affordable housing costs to households in each band
 
-For this first pass, I’ll set it to 30% for everyone.
+Some future iteration of this notebook should find a way to combine this
+table with the chart above, but a couple interesting things stand out.
+Very low income renters are often spending their “affordable” amount,
+but very low income homeowners spend more. Depending on how much more,
+I’m on the fence about considering this a bad thing necessarily, since
+the benefits of home ownership may outweigh an extra $100-$200 per month
+above the affordable threshold, but $300 or more becomes much more
+challenging to maintain. A few hundred bucks a month over 30% of income,
+which is already a huge chunk, is the difference between scraping
+together the mortgage payment and an unexpected expense like a medical
+bill or car repair.
+
+Almost all middle-to-high income renters are paying below their
+affordable threshold. As was shown above, higher income people like to
+rent in lower cost bands. The chart above and table below just show how
+much lower they rent. But low-bar slow clap for high income FC
+homeowners paying their 30%.
 
 <table>
 
@@ -1559,7 +1568,7 @@ Name
 
 <th style="text-align:left;">
 
-Poor
+Very low
 
 </th>
 
@@ -1571,19 +1580,19 @@ Low
 
 <th style="text-align:left;">
 
-Middle
+Mid-low
+
+</th>
+
+<th style="text-align:left;">
+
+Mid-high
 
 </th>
 
 <th style="text-align:left;">
 
 High
-
-</th>
-
-<th style="text-align:left;">
-
-Affluent
 
 </th>
 
@@ -1957,20 +1966,6 @@ More than $2,854
 
 </table>
 
-Some future iteration of this notebook should find a way to combine this
-table with the chart above, but a couple interesting things stand out.
-Poor renters are often spending the “affordable” amount, but poor
-homeowners spend a little more. I’m on the fence about considering this
-a bad thing necessarily, since the benefits of home ownership may
-outweigh the extra $100-$200 per month above the affordable threshold.
-On the other hand, a couple hundred bucks a month is a really easy gap
-to fall into and miss a mortgage payment.
-
-Almost all renters are paying below the affordable threshold for middle
-income. So clearly higher income people rent in lower cost bands. Still
-not sure whether this warrants adjusting the cost bands as far down as
-the cost ratios.
-
 ## Housing units in those cost bands
 
 *Notes for myself: Total up occupied units (renter + owner, any reason
@@ -2041,7 +2036,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -2075,7 +2070,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -2109,7 +2104,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -2177,7 +2172,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -2211,7 +2206,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -2245,7 +2240,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -2279,7 +2274,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -2347,7 +2342,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -2381,7 +2376,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -2415,7 +2410,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -2449,7 +2444,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -2517,7 +2512,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -2551,7 +2546,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -2585,7 +2580,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -2619,7 +2614,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -2687,7 +2682,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -2721,7 +2716,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -2755,7 +2750,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -2789,7 +2784,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -2857,7 +2852,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -2891,7 +2886,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -2925,7 +2920,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -2959,7 +2954,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -3027,7 +3022,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -3061,7 +3056,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -3095,7 +3090,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -3129,7 +3124,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -3197,7 +3192,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -3231,7 +3226,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -3265,7 +3260,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -3299,7 +3294,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -3367,7 +3362,7 @@ owner\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -3401,7 +3396,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -3435,7 +3430,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -3469,7 +3464,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -3537,7 +3532,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -3571,7 +3566,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -3605,7 +3600,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -3639,7 +3634,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -3707,7 +3702,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -3741,7 +3736,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -3775,7 +3770,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -3809,7 +3804,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -3877,7 +3872,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -3911,7 +3906,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -3945,7 +3940,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -3979,7 +3974,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -4047,7 +4042,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -4081,7 +4076,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -4115,7 +4110,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -4149,7 +4144,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -4217,7 +4212,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -4251,7 +4246,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -4285,7 +4280,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -4319,7 +4314,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -4387,7 +4382,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -4421,7 +4416,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -4455,7 +4450,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -4489,7 +4484,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -4557,7 +4552,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
@@ -4591,7 +4586,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-affluent
+high
 
 </td>
 
@@ -4625,7 +4620,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-high
+mid\_high
 
 </td>
 
@@ -4659,7 +4654,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-middle
+mid\_low
 
 </td>
 
@@ -4727,7 +4722,7 @@ renter\_occupied
 
 <td style="text-align:left;">
 
-poor
+very\_low
 
 </td>
 
