@@ -21,8 +21,8 @@ library(kableExtra)
 ```{r gg etc}
 theme_set(theme_ipsum_rc())
 
-#this theme is better when reverse is standard so poor != red, but also this theme is also terrible by default because it's based on mineral water, but i am a monster.
-pal <- pal <- rev(LaCroixColoR::lacroix_palette(name = "Pamplemousse", n = 5, type = "discrete"))
+# People hate these colors, but mostly because it's not colorblind friendly, but it's not what we're using in the final so I'm not gonna mess with it
+pal <- rev(LaCroixColoR::lacroix_palette(name = "Pamplemousse", n = 5, type = "discrete"))
 
 scale_fill_custom <- function(palette = pal, rev = F) {
   if (rev) {
@@ -677,6 +677,8 @@ kable(affordable_cost_table %>%
 
 *Notes for myself: Total up occupied units (renter + owner, any reason to separate?) and vacant units available in each cost band. Occupied units will go by the cost paid (rentgrs and owncost), vacant by contract rent and mortgage payment estimate generated using some average mortgage rate for CT. Need a new PUMS file in hierarchical format, widdled down to household level.*
 
+As far as average mortgage rates, the team had no good source for this, just said to Google it. I think I should take an average of a few years since rates are super low today. Try HMDA?
+
 ```{r}
 hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
 
@@ -754,7 +756,7 @@ vac_des <- hpums %>%
 
 ## Households who need housing in each cost band
 
-To get a table of gaps and surpluses, I think I need to determine how many units are needed in each cost band (so, by default this will be the number of households in each income band if low income households should pay low income prices, right?), then count up the number of households whose costs are in each cost band and add the vacants by contract and mortgage costs. So how many in each income band, vs. how many in each cost band. Seems legit?
+To get a table of gaps and surpluses, I think I need to determine how many units are needed in each cost band (so, by default this will be the number of households in each income band if low income households should pay low income prices, right?), then count up the number of households whose costs are in each cost band and add the vacants by contract and mortgage costs. So how many households in each income band, vs. how many units in each cost band. Seems legit?
 
 ## Add homeless?
 Not sure where to get good data... PIT counts by county? Mark suggests https://cceh.org/data/interactive/

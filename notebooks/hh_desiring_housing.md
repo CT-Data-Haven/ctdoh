@@ -1975,6 +1975,10 @@ rent and mortgage payment estimate generated using some average mortgage
 rate for CT. Need a new PUMS file in hierarchical format, widdled down
 to household level.*
 
+As far as average mortgage rates, the team had no good source for this,
+just said to Google it. I think I should take an average of a few years
+since rates are super low today. Try HMDA?
+
 Here’s a quick crappy table of the occupied units by cost band and
 county. Still working on this.
 
@@ -4751,8 +4755,8 @@ many units are needed in each cost band (so, by default this will be the
 number of households in each income band if low income households should
 pay low income prices, right?), then count up the number of households
 whose costs are in each cost band and add the vacants by contract and
-mortgage costs. So how many in each income band, vs. how many in each
-cost band. Seems legit?
+mortgage costs. So how many households in each income band, vs. how many
+units in each cost band. Seems legit?
 
 ## Add homeless?
 
