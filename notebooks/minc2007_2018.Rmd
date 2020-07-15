@@ -1,0 +1,48 @@
+---
+title: "Median HH income by county (2007–2018)"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F, echo = T)
+```
+```{r}
+library(tidyverse)
+library(cwi)
+library(ipumsr)
+library(srvyr)
+```
+
+```{r}
+years <- c(2011, 2014, 2018)
+
+fetch <- years %>%
+	map(~multi_geo_acs(
+		table = "B19013",
+		year = .,
+		towns = NULL,
+		verbose = F))
+
+county_minc <- bind_rows(fetch) %>% 
+	janitor::clean_names() %>%
+	select(level, geoid, name, year, minc = estimate) %>% 
+	#if inflation-adjusting, do that to minc here
+	mutate(x30 = .3 * minc,
+				 x50 = .5 * minc,
+				 x80 = .8 * minc,
+				 x120 = 1.2 * minc) %>% 
+	mutate(across(starts_with("x"), .fns = round))
+```
+
+2007 has to be done with PUMS because the Bureau doesn't love us enough to keep old data online
+
+```{r}
+#ddi <- read_ipums_ddi("./input_data/usa_00041.xml")
+#pums <- read_ipums_micro(ddi, verbose = F)
+```
+
+Quick view:
+
+```{r echo = F}
+kableExtra::kable(county_minc)
+```
