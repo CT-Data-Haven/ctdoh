@@ -69,6 +69,8 @@ minc_07 <- bind_rows(state07, county07, county_minc) %>%
 				 x80 = .8 * minc,
 				 x120 = 1.2 * minc) %>% 
 	mutate(across(starts_with("x"), .fns = round))
+
+write_csv(minc_07, "../output_data/county_median_hh_income_2007_2018.csv")
 ```
 
 ```{r echo = F}
