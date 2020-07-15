@@ -25,8 +25,45 @@ fetch <- years %>%
 
 county_minc <- bind_rows(fetch) %>% 
 	janitor::clean_names() %>%
-	select(level, geoid, name, year, minc = estimate) %>% 
-	#if inflation-adjusting, do that to minc here
+	select(level, geoid, name, year, minc = estimate)
+```
+
+2007 has to be done with PUMS because the Bureau doesn't love us enough to keep old data online
+
+```{r}
+ddi <- read_ipums_ddi("../input_data/usa_00041.xml")
+pums <- read_ipums_micro(ddi, verbose = F) %>% 
+	janitor::clean_names()
+
+des <- pums %>%
+	filter(pernum == "1", hhincome != 9999999) %>% 
+	as_survey_design(., ids = 1, wt = hhwt)
+
+names <- county_minc %>% 
+	filter(level == "2_counties", year == 2018) %>% 
+	select(name, geoid) %>% 
+	arrange(name) %>% 
+	mutate(countyfip = seq(from = 1, to = 15, by = 2))
+
+county07 <- des %>%
+	select(countyfip, hhincome, hhwt) %>% 
+	group_by(countyfip) %>% 
+	summarise(minc = round(survey_median(hhincome), 0)) %>% 
+	left_join(names, by = "countyfip") %>% 
+	mutate(level = "2_counties", year = 2007) %>% 
+	select(level, geoid, name, year, minc)
+
+state07 <- des %>% 
+	select(statefip, hhincome, hhwt) %>% 
+	group_by(statefip) %>% 
+	summarise(minc = round(survey_median(hhincome), 0)) %>%
+	mutate(level = "1_state", geoid = "09", year = 2007, name = "Connecticut") %>% 
+	select(level, geoid, name, year, minc)
+```
+
+```{r}
+minc_07 <- bind_rows(state07, county07, county_minc) %>% 
+#if inflation-adjusting, do that to minc here
 	mutate(x30 = .3 * minc,
 				 x50 = .5 * minc,
 				 x80 = .8 * minc,
@@ -34,15 +71,6 @@ county_minc <- bind_rows(fetch) %>%
 	mutate(across(starts_with("x"), .fns = round))
 ```
 
-2007 has to be done with PUMS because the Bureau doesn't love us enough to keep old data online
-
-```{r}
-#ddi <- read_ipums_ddi("./input_data/usa_00041.xml")
-#pums <- read_ipums_micro(ddi, verbose = F)
-```
-
-Quick view:
-
 ```{r echo = F}
-kableExtra::kable(county_minc)
+kableExtra::kable(minc_07)
 ```
