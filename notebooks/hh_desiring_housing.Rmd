@@ -677,7 +677,7 @@ kable(affordable_cost_table %>%
 
 *Notes for myself: Total up occupied units (renter + owner, any reason to separate?) and vacant units available in each cost band. Occupied units will go by the cost paid (rentgrs and owncost), vacant by contract rent and mortgage payment estimate generated using some average mortgage rate for CT. Need a new PUMS file in hierarchical format, widdled down to household level.*
 
-As far as average mortgage rates, the team had no good source for this, just said to Google it. I think I should take an average of a few years since rates are super low today. Try HMDA?
+According to HMDA data, the statewide average for first lien mortgages in 2019 was 4.179. I'll further disaggregate by county and do additional analysis on high interest loans and rates by race of applicant/other demographic flags, but for now I'll use that value to estimate mortgage payments.
 
 ```{r}
 hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
@@ -740,18 +740,33 @@ rent_occ_cost_bands <- occ_des %>%
 occ_cost_bands <- bind_rows(own_occ_cost_bands, rent_occ_cost_bands)
 ```
 
-Here's a quick crappy table of the occupied units by cost band and county. Still working on this.
-
-```{r}
-kable(occ_cost_bands)
-```
 
 ```{r}
 vac_des <- hpums %>%
 	filter(vacancy == "For rent or sale") %>% 
 	as_survey_design(., ids = 1, wt = hhwt)
-#for vacant units, use 'for rent or sale', and use rent for cost
-# will need to use the base rate for home loans to determine what the mortgage cost would be for a for-sale home
+
+rent_vac_cost_bands <- vac_des %>%
+	filter(owncost == "99999") %>% 
+	select(hhwt, name, rent, vl, l, ml, mh) %>% 
+	group_by(name) %>% 
+	mutate(tenure = "renter_vacant",
+				 very_low = between(rent, 0, (vl - 1)),
+				 low = between(rent, vl, (l - 1)),
+				 mid_low = between(rent, l, (ml - 1)),
+				 mid_high = between(rent, ml, (mh - 1)),
+				 high = between(rent, mh, Inf)) %>% 
+	ungroup() %>% 
+	group_by(name, tenure, very_low, low, mid_low, mid_high, high) %>% 
+	summarise(units = survey_total(hhwt)) %>% 
+	pivot_longer(cols = very_low:high, names_to = "cost_band") %>% 
+	filter(value == T) %>% 
+	select(name, tenure, cost_band, units, units_se)
+
+
+int_rate <- 4.179
+pmi <- 7.5 #avg mortgage insurance rate between 5 and 10% of loan amount
+#leah had taxes at 25% of mortgage payment but I'm not sure about that. Isn't it based on property value, not mortgage payment? Should I take an average of the statewide mill rate? of the county?
 ```
 
 ## Households who need housing in each cost band
