@@ -129,31 +129,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-Less than $46,484
+Less than $27,891
 
 </td>
 
 <td style="text-align:left;">
 
-Between $46,484 and $69,727
+Between $27,891 and $46,484
 
 </td>
 
 <td style="text-align:left;">
 
-Between $69,727 and $116,211
+Between $46,484 and $74,375
 
 </td>
 
 <td style="text-align:left;">
 
-Between $116,211 and $139,454
+Between $74,375 and $111,563
 
 </td>
 
 <td style="text-align:left;">
 
-More than $139,454
+More than $111,563
 
 </td>
 
@@ -169,31 +169,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-Less than $36,160
+Less than $21,696
 
 </td>
 
 <td style="text-align:left;">
 
-Between $36,160 and $54,241
+Between $21,696 and $36,160
 
 </td>
 
 <td style="text-align:left;">
 
-Between $54,241 and $90,401
+Between $36,160 and $57,857
 
 </td>
 
 <td style="text-align:left;">
 
-Between $90,401 and $108,482
+Between $57,857 and $86,785
 
 </td>
 
 <td style="text-align:left;">
 
-More than $108,482
+More than $86,785
 
 </td>
 
@@ -209,31 +209,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-Less than $39,157
+Less than $23,494
 
 </td>
 
 <td style="text-align:left;">
 
-Between $39,157 and $58,736
+Between $23,494 and $39,157
 
 </td>
 
 <td style="text-align:left;">
 
-Between $58,736 and $97,892
+Between $39,157 and $62,651
 
 </td>
 
 <td style="text-align:left;">
 
-Between $97,892 and $117,471
+Between $62,651 and $93,977
 
 </td>
 
 <td style="text-align:left;">
 
-More than $117,471
+More than $93,977
 
 </td>
 
@@ -249,31 +249,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-Less than $42,380
+Less than $25,428
 
 </td>
 
 <td style="text-align:left;">
 
-Between $42,380 and $63,571
+Between $25,428 and $42,380
 
 </td>
 
 <td style="text-align:left;">
 
-Between $63,571 and $105,951
+Between $42,380 and $67,809
 
 </td>
 
 <td style="text-align:left;">
 
-Between $105,951 and $127,142
+Between $67,809 and $101,713
 
 </td>
 
 <td style="text-align:left;">
 
-More than $127,142
+More than $101,713
 
 </td>
 
@@ -289,31 +289,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-Less than $33,564
+Less than $20,138
 
 </td>
 
 <td style="text-align:left;">
 
-Between $33,564 and $50,346
+Between $20,138 and $33,564
 
 </td>
 
 <td style="text-align:left;">
 
-Between $50,346 and $83,910
+Between $33,564 and $53,702
 
 </td>
 
 <td style="text-align:left;">
 
-Between $83,910 and $100,692
+Between $53,702 and $80,554
 
 </td>
 
 <td style="text-align:left;">
 
-More than $100,692
+More than $80,554
 
 </td>
 
@@ -329,31 +329,31 @@ New London County
 
 <td style="text-align:left;">
 
-Less than $35,684
+Less than $21,410
 
 </td>
 
 <td style="text-align:left;">
 
-Between $35,684 and $53,526
+Between $21,410 and $35,684
 
 </td>
 
 <td style="text-align:left;">
 
-Between $53,526 and $89,210
+Between $35,684 and $57,094
 
 </td>
 
 <td style="text-align:left;">
 
-Between $89,210 and $107,052
+Between $57,094 and $85,642
 
 </td>
 
 <td style="text-align:left;">
 
-More than $107,052
+More than $85,642
 
 </td>
 
@@ -369,31 +369,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-Less than $42,458
+Less than $25,475
 
 </td>
 
 <td style="text-align:left;">
 
-Between $42,458 and $63,687
+Between $25,475 and $42,458
 
 </td>
 
 <td style="text-align:left;">
 
-Between $63,687 and $106,145
+Between $42,458 and $67,933
 
 </td>
 
 <td style="text-align:left;">
 
-Between $106,145 and $127,374
+Between $67,933 and $101,899
 
 </td>
 
 <td style="text-align:left;">
 
-More than $127,374
+More than $101,899
 
 </td>
 
@@ -409,31 +409,31 @@ Windham County
 
 <td style="text-align:left;">
 
-Less than $32,387
+Less than $19,432
 
 </td>
 
 <td style="text-align:left;">
 
-Between $32,387 and $48,580
+Between $19,432 and $32,387
 
 </td>
 
 <td style="text-align:left;">
 
-Between $48,580 and $80,968
+Between $32,387 and $51,819
 
 </td>
 
 <td style="text-align:left;">
 
-Between $80,968 and $97,161
+Between $51,819 and $77,729
 
 </td>
 
 <td style="text-align:left;">
 
-More than $97,161
+More than $77,729
 
 </td>
 
@@ -449,31 +449,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-Less than $38,053
+Less than $22,832
 
 </td>
 
 <td style="text-align:left;">
 
-Between $38,053 and $57,080
+Between $22,832 and $38,053
 
 </td>
 
 <td style="text-align:left;">
 
-Between $57,080 and $95,132
+Between $38,053 and $60,885
 
 </td>
 
 <td style="text-align:left;">
 
-Between $95,132 and $114,159
+Between $60,885 and $91,327
 
 </td>
 
 <td style="text-align:left;">
 
-More than $114,159
+More than $91,327
 
 </td>
 
@@ -1519,34 +1519,16 @@ all income bands rather than the sliding scale.
 One last thing real quick… what’s the average *actual* housing cost for
 each band?
 
-Lots of competition for renters in the range between $1000 and $1500,
-and for homeowners in the $1200-$1500 range. The tightness of the
-clusters by county are also interesting.
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
-
-So I do want to look at how many people from each INCOME band are living
-in each COST band.
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 ## Affordable housing costs to households in each band
 
 Some future iteration of this notebook should find a way to combine this
-table with the chart above, but a couple interesting things stand out.
-Very low income renters are often spending their “affordable” amount,
-but very low income homeowners spend more. Depending on how much more,
-I’m on the fence about considering this a bad thing necessarily, since
-the benefits of home ownership may outweigh an extra $100-$200 per month
-above the affordable threshold, but $300 or more becomes much more
-challenging to maintain. A few hundred bucks a month over 30% of income,
-which is already a huge chunk, is the difference between scraping
-together the mortgage payment and an unexpected expense like a medical
-bill or car repair.
-
-Almost all middle-to-high income renters are paying below their
-affordable threshold. As was shown above, higher income people like to
-rent in lower cost bands. The chart above and table below just show how
-much lower they rent. But low-bar slow clap for high income FC
-homeowners paying their 30%.
+table with the chart above, but the topline is that the average actual
+costs in low and very low income households exceeds the affordable
+threshold (except low income households in Windham County). The
+middle-to-high income households’ average actual housing cost is within
+the affordable range.
 
 <table>
 
@@ -1612,31 +1594,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-Less than $1,162
+Less than $697
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,162 and $1,743
+Between $697 and $1,162
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,743 and $2,905
+Between $1,162 and $1,859
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,905 and $3,486
+Between $1,859 and $2,789
 
 </td>
 
 <td style="text-align:left;">
 
-More than $3,486
+More than $2,789
 
 </td>
 
@@ -1652,31 +1634,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-Less than $904
+Less than $542
 
 </td>
 
 <td style="text-align:left;">
 
-Between $904 and $1,356
+Between $542 and $904
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,356 and $2,260
+Between $904 and $1,446
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,260 and $2,712
+Between $1,446 and $2,170
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,712
+More than $2,170
 
 </td>
 
@@ -1692,31 +1674,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-Less than $979
+Less than $587
 
 </td>
 
 <td style="text-align:left;">
 
-Between $979 and $1,468
+Between $587 and $979
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,468 and $2,447
+Between $979 and $1,566
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,447 and $2,937
+Between $1,566 and $2,349
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,937
+More than $2,349
 
 </td>
 
@@ -1732,31 +1714,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-Less than $1,060
+Less than $636
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,060 and $1,589
+Between $636 and $1,060
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,589 and $2,649
+Between $1,060 and $1,695
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,649 and $3,179
+Between $1,695 and $2,543
 
 </td>
 
 <td style="text-align:left;">
 
-More than $3,179
+More than $2,543
 
 </td>
 
@@ -1772,31 +1754,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-Less than $839
+Less than $503
 
 </td>
 
 <td style="text-align:left;">
 
-Between $839 and $1,259
+Between $503 and $839
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,259 and $2,098
+Between $839 and $1,343
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,098 and $2,517
+Between $1,343 and $2,014
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,517
+More than $2,014
 
 </td>
 
@@ -1812,31 +1794,31 @@ New London County
 
 <td style="text-align:left;">
 
-Less than $892
+Less than $535
 
 </td>
 
 <td style="text-align:left;">
 
-Between $892 and $1,338
+Between $535 and $892
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,338 and $2,230
+Between $892 and $1,427
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,230 and $2,676
+Between $1,427 and $2,141
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,676
+More than $2,141
 
 </td>
 
@@ -1852,31 +1834,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-Less than $1,061
+Less than $637
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,061 and $1,592
+Between $637 and $1,061
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,592 and $2,654
+Between $1,061 and $1,698
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,654 and $3,184
+Between $1,698 and $2,547
 
 </td>
 
 <td style="text-align:left;">
 
-More than $3,184
+More than $2,547
 
 </td>
 
@@ -1892,31 +1874,31 @@ Windham County
 
 <td style="text-align:left;">
 
-Less than $810
+Less than $486
 
 </td>
 
 <td style="text-align:left;">
 
-Between $810 and $1,214
+Between $486 and $810
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,214 and $2,024
+Between $810 and $1,295
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,024 and $2,429
+Between $1,295 and $1,943
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,429
+More than $1,943
 
 </td>
 
@@ -1932,31 +1914,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-Less than $951
+Less than $571
 
 </td>
 
 <td style="text-align:left;">
 
-Between $951 and $1,427
+Between $571 and $951
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,427 and $2,378
+Between $951 and $1,522
 
 </td>
 
 <td style="text-align:left;">
 
-Between $2,378 and $2,854
+Between $1,522 and $2,283
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,854
+More than $2,283
 
 </td>
 
@@ -1966,7 +1948,31 @@ More than $2,854
 
 </table>
 
-## Housing units in those cost bands
+## What income band do households live in, what cost band do they pay in?
+
+Pretty sure here I’m going to need a dodged bar chart of occupied units
+in each income band and occupied units in each cost band.
+
+This is interesting, and quite different from the DC study. We have many
+more high income households than occupied units in that cost band, so
+high income households are occupying housing affordable to lower-income
+households. There are not enough units affordable to low income
+households anywhere.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+
+Another interesting chart might be the share of households paying into
+the right cost band, those paying less, and those paying more. Only
+showing CT but providing a table by county.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+
+## How many housing units in those cost bands
+
+Adds vacant units to above
+
+Establishing that there’s a need for housing in lower cost bands, how
+many units exist in each of these bands?
 
 *Notes for myself: Total up occupied units (renter + owner, any reason
 to separate?) and vacant units available in each cost band. Occupied
