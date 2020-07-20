@@ -392,6 +392,8 @@ common_jobs_by_inc_band %>%
 
 ## Cost burden by income band
 
+**Add basic count of how many cost burdened hh's in CT**
+
 ```{r}
 county_cb <- des %>%
 	select(hhwt, name, inc_band, cost_burden) %>% 
@@ -862,9 +864,9 @@ Adds vacant units to above
 
 Establishing that there's a need for housing in lower cost bands, how many units exist in each of these bands?
 
-*Notes for myself: Total up occupied units (renter + owner, any reason to separate?) and vacant units available in each cost band. Occupied units will go by the cost paid (rentgrs and owncost), vacant by contract rent and mortgage payment estimate generated using some average mortgage rate for CT. Need a new PUMS file in hierarchical format, widdled down to household level.*
-
-I'll further disaggregate by county and do additional analysis on high interest loans and rates by race of applicant/other demographic flags, but for now I'll use that value to estimate mortgage payments.
+*Notes for myself: Total up occupied units (renter + owner, any reason to separate?) and vacant units available in each cost band. -- DONE*
+*Vacant by contract rent and mortgage payment estimate generated using some average values for CT.*
+*Need a new PUMS file in hierarchical format, widdled down to household level.*
 
 ```{r}
 hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
@@ -951,9 +953,20 @@ rent_vac_cost_bands <- vac_des %>%
 	select(name, tenure, cost_band, units, units_se)
 
 #right now these are all ct averages, not county
-int_rate <- 4.179 #HMDA: statewide average for first lien mortgages in 2019 was 4.179
-pmi <- 7.5 #avg mortgage insurance rate between 5 and 10% of loan amount
+##testing process to calculate this... will be a million mutates
+int_rate <- .04179 #HMDA: statewide average for first lien mortgages in 2019 was 4.179
+pmi <- .075 #avg mortgage insurance rate between 5 and 10% of loan amount
 median_mill <- 31.17 #statewide median mill rate
+valueh <- 200000 #example cheap house in CT
+
+loan = .9 * valueh
+month_mortgage= (int_rate / 12) / 100
+monthly_PI = loan * month_mortgage * ((1+month_mortgage)**360)/(((1+month_mortgage)**360)-1)
+
+PMI = (.075 * loan ) / 12
+property_tax = loan / 1000 * .7 * median_mill / 12
+total_month = monthly_PI + PMI + property_tax
+
 
 #leah had taxes at 25% of mortgage payment but I'm not sure about that. Isn't it based on property value, not mortgage payment?
 ```
