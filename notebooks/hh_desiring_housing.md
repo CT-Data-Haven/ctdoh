@@ -1961,9 +1961,10 @@ households anywhere.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
-Another interesting chart might be the share of households paying into
-the right cost band, those paying less, and those paying more. Only
-showing CT but providing a table by county.
+Knowing that households paying into a cost band are not a subset of
+households in that income band, here’s the share of households paying
+into the appropriate/same cost band, those paying less, and those paying
+more. Only showing CT but providing a table by county.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
@@ -1981,11 +1982,9 @@ rent and mortgage payment estimate generated using some average mortgage
 rate for CT. Need a new PUMS file in hierarchical format, widdled down
 to household level.*
 
-According to HMDA data, the statewide average for first lien mortgages
-in 2019 was 4.179. I’ll further disaggregate by county and do additional
-analysis on high interest loans and rates by race of applicant/other
-demographic flags, but for now I’ll use that value to estimate mortgage
-payments.
+I’ll further disaggregate by county and do additional analysis on high
+interest loans and rates by race of applicant/other demographic flags,
+but for now I’ll use that value to estimate mortgage payments.
 
 ## Households who need housing in each cost band
 

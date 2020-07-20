@@ -725,12 +725,21 @@ units_by_income <- units %>%
 	group_by(name, inc_band) %>% 
 	summarise(households = sum(hhwt))
 
-units_by_cost_income <- units %>% 
+county_units_by_cost_income <- units %>% 
 	select(name, hhwt, inc_band = cost_band) %>% 
 	group_by(name, inc_band) %>% 
 	summarise(units = sum(hhwt)) %>% 
 	left_join(units_by_income, by = c("name", "inc_band")) %>% 
 	pivot_longer(cols = c("households", "units"), names_to = "group")
+
+ct_units_by_cost_income <- county_units_by_cost_income %>% 
+	ungroup() %>% 
+	mutate(name = "Connecticut") %>% 
+	group_by(name, inc_band, group) %>% 
+	summarise(value = sum(value))
+
+units_by_cost_income <- bind_rows(county_units_by_cost_income, ct_units_by_cost_income) %>% 
+	mutate(level = if_else(name == "Connecticut", "1_state", "2_counties"))
 ```
 
 This is interesting, and quite different from the DC study. We have many more high income households than occupied units in that cost band, so high income households are occupying housing affordable to lower-income households. There are not enough units affordable to low income households anywhere.
@@ -758,7 +767,7 @@ units_by_cost_income %>%
 			 x = "", y = "", caption = "Does not include vacant units")
 ```
 
-Another interesting chart might be the share of households paying into the right cost band, those paying less, and those paying more. Only showing CT but providing a table by county.
+Knowing that households paying into a cost band are not a subset of households in that income band, here's the share of households paying into the appropriate/same cost band, those paying less, and those paying more. Only showing CT but providing a table by county.
 
 ```{r}
 relative_housing_costs <- units %>%
@@ -767,30 +776,44 @@ relative_housing_costs <- units %>%
 	rename(inc_code = code) %>%
 	left_join(codes, by = c("cost_band" = "band")) %>%
 	rename(cost_code = code) %>%
-	mutate(v = if_else(inc_code == cost_code, "same", "higher")) %>%
-	mutate(v = if_else(inc_code > cost_code, "lower", v)) %>%
-	select(hhwt, name, inc_band, v) %>%
-	group_by(name, inc_band, v) %>%
+	mutate(cost_paid = if_else(inc_code == cost_code, "same", "higher")) %>%
+	mutate(cost_paid = if_else(inc_code > cost_code, "lower", cost_paid)) %>%
+	select(hhwt, name, inc_band, cost_paid) %>%
+	mutate(inc_band = as.factor(inc_band) %>% 
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
+	group_by(name, inc_band, cost_paid) %>%
 	summarise(value = sum(hhwt))
 
 ct_hhld_totals <- ct_hhlds %>% 
-	mutate(v = "total") %>% 
-	select(inc_band, v, value)
+	mutate(cost_paid = "total") %>% 
+	select(inc_band, cost_paid, value)
 
 ct_relative <- relative_housing_costs %>% 
 	select(-name) %>% 
-	group_by(inc_band, v) %>% 
+	group_by(inc_band, cost_paid) %>% 
 	summarise(value = sum(value)) %>%
 	bind_rows(ct_hhld_totals) %>% 
 	ungroup() %>%
 	group_by(inc_band) %>% 
-	calc_shares(group = v, denom = "total", value = value) %>% 
-	mutate(inc_band = as.factor(inc_band) %>%
-				 	fct_relevel("Very low", "Low", "Mid-low", "Mid-high", "High"))
+	calc_shares(group = cost_paid, denom = "total", value = value)
 
 ct_relative %>% 
-	ggplot(aes(share, inc_band, group = v)) +
-	geom_col(aes(fill = v), position = position_stack())
+	filter(cost_paid != "total") %>% 
+	mutate(cost_paid = as.factor(cost_paid) %>% 
+				 	fct_rev()) %>% 
+	mutate(inc_band = as.factor(inc_band) %>% 
+				 	fct_rev()) %>% 
+	ggplot(aes(share, inc_band)) +
+	geom_col(aes(fill = cost_paid), width = .75, position = position_stack()) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Roboto Condensed") +
+	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
+	scale_fill_custom() +
+	labs(title = str_wrap("Share of households paying into the same, lower, or higher cost bands than their income band", 60), subtitle = "Connecticut", x = "", y = "") +
+	theme(plot.title.position = "plot", 
+				axis.text.x = element_blank(),
+				axis.text.y = element_text(colour = "black"),
+				panel.grid.major = element_blank(),
+				panel.grid.minor = element_blank())
 ```
 
 ## How many housing units in those cost bands
@@ -800,7 +823,7 @@ Establishing that there's a need for housing in lower cost bands, how many units
 
 *Notes for myself: Total up occupied units (renter + owner, any reason to separate?) and vacant units available in each cost band. Occupied units will go by the cost paid (rentgrs and owncost), vacant by contract rent and mortgage payment estimate generated using some average mortgage rate for CT. Need a new PUMS file in hierarchical format, widdled down to household level.*
 
-According to HMDA data, the statewide average for first lien mortgages in 2019 was 4.179. I'll further disaggregate by county and do additional analysis on high interest loans and rates by race of applicant/other demographic flags, but for now I'll use that value to estimate mortgage payments.
+I'll further disaggregate by county and do additional analysis on high interest loans and rates by race of applicant/other demographic flags, but for now I'll use that value to estimate mortgage payments.
 
 ```{r}
 hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
@@ -886,10 +909,12 @@ rent_vac_cost_bands <- vac_des %>%
 	filter(value == T) %>% 
 	select(name, tenure, cost_band, units, units_se)
 
-
-int_rate <- 4.179
+#right now these are all ct averages, not county
+int_rate <- 4.179 #HMDA: statewide average for first lien mortgages in 2019 was 4.179
 pmi <- 7.5 #avg mortgage insurance rate between 5 and 10% of loan amount
-#leah had taxes at 25% of mortgage payment but I'm not sure about that. Isn't it based on property value, not mortgage payment? Should I take an average of the statewide mill rate? of the county?
+median_mill <- 31.17 #statewide median mill rate
+
+#leah had taxes at 25% of mortgage payment but I'm not sure about that. Isn't it based on property value, not mortgage payment?
 ```
 
 ## Households who need housing in each cost band
