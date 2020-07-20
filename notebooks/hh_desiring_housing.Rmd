@@ -356,6 +356,8 @@ This table lists the top five occupations, in order from the most numerous, for 
 
 To be honest, this is a little surprising in places. I expected more food service workers in general, and I'm surprised at how many elementary and middle school teachers are workers in higher income households. Either I have the exact wrong impression of how much teachers are paid or it's a common occupation for people whose partners/spouses pull in big money. And yet, #thestruggle: adjuncts and GAs in Tolland County (UConn) getting those minimum wage grad school stipends while profs in New Haven and Middlesex Counties make six figures teaching half the load.
 
+**Mark brought up a good point about common occupations (like teachers, cashiers) present in each income band. If this is used in the report, it might be best to look at the output and cherry pick some representative occupations.**
+
 ```{r}
 des2 <- pums %>%
 	filter(hhincome != 9999999, ownershp != "N/A") %>% 
@@ -371,7 +373,7 @@ common_jobs_by_inc_band <- pums %>%
 	mutate(level = "2_counties") %>% 
 	filter(occ != "0") %>% #0 is "n/a" occ
 	group_by(name, inc_band) %>% 
-	slice_max(workers, n = 5) %>%
+	slice_max(workers, n = 10) %>%
 	left_join(occ_lut, by = c("occ" = "occ_code")) %>% 
 	select(level, name, inc_band, workers, occ, occ_label)
 
@@ -663,6 +665,46 @@ avg_cost_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
+**Another question might be, what are the cost ratios for those who are cost burdened? What's the dollar amount over cost-burden that these households are paying?**
+
+```{r}
+housing_cost_gap <- pums %>%
+	filter(cost_burden != "No burden") %>% 
+	mutate(affordable_hcost = hhincome / 12 * .3) %>% 
+	mutate(affordable_cost = if_else(affordable_hcost < 0, 0, affordable_hcost)) %>% 
+	mutate(actual_hcost = if_else(ownershp == "Rented", rentgrs, NULL)) %>% 
+	mutate(actual_hcost = if_else(ownershp == "Owned or being bought (loan)", owncost, actual_hcost)) %>% 
+	filter(actual_hcost != 999999) %>% 
+	mutate(diff = actual_hcost - affordable_hcost) %>%  
+	filter(diff != 0) %>% #excluding no income/no housing cost households
+	mutate(mult = hhwt * diff,
+				 name = as.factor(name)) %>% 
+	select(name, inc_band, mult, hhwt) %>% 
+	group_by(name, inc_band) %>% 
+	summarise(monthly_affordability_gap = sum(mult)/sum(hhwt))
+```
+
+Here, I looked only at households whose housing costs exceed 30% of income, and took the weighted average of the gap between what they actually pay for housing versus what they should pay at an affordable (30%) threshold. Very low and high income households spend the most over the affordable threshold. The average gap for households in all income bands in FC is over $800/month while in most other counties the gap falls between $400 and $800/month.
+
+```{r}
+housing_cost_gap %>% 
+	mutate(name = fct_rev(name)) %>% 
+	ggplot(aes(monthly_affordability_gap, name, group = name)) +
+	geom_point(aes(color = inc_band), size = 2.5, alpha = .8) +
+	scale_color_custom() +
+	scale_x_continuous(breaks = c(400, 800, 1200),
+										 expand = expansion(mult = c(.1, .1)),
+										 labels = dollar_format()) +
+	guides(color = guide_legend(title = "")) +
+	labs(title = str_wrap("Average monthly affordability gap by income band for households that are cost-burdened", 60),
+			 subtitle = "Dollars spent over affordable amount (30% of household's income) ",
+			 x = "", y = "") +
+theme(plot.title.position = "plot",
+			axis.text.y = element_text(colour = "black", size = 11),
+			axis.text.x = element_text(colour = "black", size = 11),
+			legend.position = "right")
+```
+
 ## Affordable housing costs to households in each band
 
 Some future iteration of this notebook should find a way to combine this table with the chart above, but the topline is that the average actual costs in low and very low income households exceeds the affordable threshold (except low income households in Windham County). The middle-to-high income households' average actual housing cost is within the affordable range.
@@ -695,7 +737,6 @@ kable(affordable_cost_table %>%
 
 ## What income band do households live in, what cost band do they pay in?
 
-Pretty sure here I'm going to need a dodged bar chart of occupied units in each income band and occupied units in each cost band.
 
 ```{r}
 owners <- pums %>%
@@ -742,32 +783,32 @@ units_by_cost_income <- bind_rows(county_units_by_cost_income, ct_units_by_cost_
 	mutate(level = if_else(name == "Connecticut", "1_state", "2_counties"))
 ```
 
-This is interesting, and quite different from the DC study. We have many more high income households than occupied units in that cost band, so high income households are occupying housing affordable to lower-income households. There are not enough units affordable to low income households anywhere.
+There are many more higher income households than units in that cost band, so high income households are occupying housing affordable to lower-income households. Likewise there are many more very low income households than units and they're occupying more expensive housing than they can afford. There are not enough units affordable to very low income households anywhere, but at the low income threshold, units occupied within that cost band begin to exceed households in that income band.
 
-```{r fig.height=8, fig.width=7}
+```{r fig.height=9, fig.width=9}
 units_by_cost_income %>% 
 	mutate(group = as.factor(group) %>% 
 				 	fct_relevel(., "units", "households")) %>% 
 	mutate(inc_band = as.factor(inc_band) %>% 
 				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
 	ggplot(aes(inc_band, value, group = group)) +
-	geom_col(aes(fill = group), width = .7, position = position_dodge(.75)) +
-	geom_text(aes(label = comma(value, accuracy = 1)), position = position_dodge(.75), vjust = "top", family = "Roboto Condensed", size = 3) +
+	geom_col(aes(fill = group), width = .8, position = position_dodge(.85)) +
+	geom_text(aes(label = comma(value, accuracy = 1)), position = position_dodge(.85), vjust = "top", family = "Roboto Condensed", size = 3.5, fontface = "bold") +
 	facet_grid(rows = vars(name), scales = "free", space = "fixed", switch = "y") +
-	scale_fill_custom() +
+	scale_fill_manual(values = c(pal[1], pal[4])) +
 	guides(fill = guide_legend(title = "")) +
 	theme(legend.position = "bottom",
 				plot.title.position = "plot",
 				panel.grid.minor = element_blank(),
 				panel.grid.major = element_blank(),
 				axis.text.y = element_blank(),
-				axis.text.x = element_text(colour = "black", size = 8),
+				axis.text.x = element_text(colour = "black", size = 11),
 				strip.text.y.left = element_text(color = "black", size = 8, angle = 360)) +
 	labs(title = "Counts of households and units by band",
 			 x = "", y = "", caption = "Does not include vacant units")
 ```
 
-Knowing that households paying into a cost band are not a subset of households in that income band, here's the share of households paying into the appropriate/same cost band, those paying less, and those paying more. Only showing CT but providing a table by county.
+Knowing that households paying into a cost band are not a subset of households in that income band, here's the share of households paying into the appropriate/same cost band, those paying less, and those paying more.
 
 ```{r}
 relative_housing_costs <- units %>%
@@ -809,9 +850,9 @@ ct_relative %>%
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_custom() +
 	labs(title = str_wrap("Share of households paying into the same, lower, or higher cost bands than their income band", 60), subtitle = "Connecticut", x = "", y = "") +
-	theme(plot.title.position = "plot", 
-				axis.text.x = element_blank(),
+	theme(plot.title.position = "plot",
 				axis.text.y = element_text(colour = "black"),
+				axis.text.x = element_blank(),
 				panel.grid.major = element_blank(),
 				panel.grid.minor = element_blank())
 ```

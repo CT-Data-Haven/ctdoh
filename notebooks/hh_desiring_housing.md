@@ -1006,6 +1006,11 @@ GAs in Tolland County (UConn) getting those minimum wage grad school
 stipends while profs in New Haven and Middlesex Counties make six
 figures teaching half the load.
 
+**Mark brought up a good point about common occupations (like teachers,
+cashiers) present in each income band. If this is used in the report, it
+might be best to look at the output and cherry pick some representative
+occupations.**
+
 <table>
 
 <caption>
@@ -1521,6 +1526,20 @@ each band?
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
+**Another question might be, what are the cost ratios for those who are
+cost burdened? What’s the dollar amount over cost-burden that these
+households are paying?**
+
+Here, I looked only at households whose housing costs exceed 30% of
+income, and took the weighted average of the gap between what they
+actually pay for housing versus what they should pay at an affordable
+(30%) threshold. Very low and high income households spend the most over
+the affordable threshold. The average gap for households in all income
+bands in FC is over $800/month while in most other counties the gap
+falls between $400 and $800/month.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+
 ## Affordable housing costs to households in each band
 
 Some future iteration of this notebook should find a way to combine this
@@ -1950,23 +1969,23 @@ More than $2,283
 
 ## What income band do households live in, what cost band do they pay in?
 
-Pretty sure here I’m going to need a dodged bar chart of occupied units
-in each income band and occupied units in each cost band.
+There are many more higher income households than units in that cost
+band, so high income households are occupying housing affordable to
+lower-income households. Likewise there are many more very low income
+households than units and they’re occupying more expensive housing than
+they can afford. There are not enough units affordable to very low
+income households anywhere, but at the low income threshold, units
+occupied within that cost band begin to exceed households in that income
+band.
 
-This is interesting, and quite different from the DC study. We have many
-more high income households than occupied units in that cost band, so
-high income households are occupying housing affordable to lower-income
-households. There are not enough units affordable to low income
-households anywhere.
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 Knowing that households paying into a cost band are not a subset of
 households in that income band, here’s the share of households paying
 into the appropriate/same cost band, those paying less, and those paying
-more. Only showing CT but providing a table by county.
+more.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 ## How many housing units in those cost bands
 
