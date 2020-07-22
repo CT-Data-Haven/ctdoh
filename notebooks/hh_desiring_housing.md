@@ -33,11 +33,15 @@ There’s a lot going on in this notebook:
 After discussion with team on 7/15 we are settled with using median hh
 income by county and the groupings below:
 
+\*\*7/21: want to bring up to the team tomorrow adding a very high
+income category
+
   - very low income: \<= 0.3 CMI
   - low income: (0.3–0.5\] CMI
   - mid-low income: (0.5–.8\] CMI
   - mid-high income: (.8–1.2\] CMI
-  - high income: \> 1.2 CMI
+  - high income: (1.2–2.0\] CMI
+  - very high income: \> 2.0 CMI
 
 Cost-burden in predictable breaks:
 
@@ -488,7 +492,11 @@ More than $91,327
 Using the new breakdowns, high income households *vastly* outnumber
 lower income households.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+FYI, each county was very consistent in its share of households in each
+income band. High income was more than 40% with the rest somewhere
+between 10% and 20%
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 <table>
 
@@ -968,10 +976,6 @@ Connecticut
 
 </table>
 
-The income distributions are fairly consistent.
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
-
 ## Household characteristics by income bands
 
 ### Race breakdowns
@@ -983,7 +987,7 @@ just over a tenth of households headed by a white person. Some variation
 exists by county. In the three largest counties, half of white
 households are high income.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ### Jobs held by household occupants
 
@@ -1464,26 +1468,29 @@ assistants, except legal, medical, and executive
 
 ## Cost burden by income band
 
+Real quick top level summary of cost burden before we get into the
+details.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
 No surprise that cost burden rates among very low income households are
 more than 80%. At the statewide level that’s more than 14x the rate of
 high income households.
 
-It’s a little surprising that fully half of mid-low income households
-(households whose income ranges from $57K-$95K in CT) are cost burdened.
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
-
-Breaking this down by regular and severe cost burden, in Fairfield and
-New Haven Counties, about the same share of low income households are
-cost burdened or severely cost burdened. Two-thirds or more very low
-income households are severely cost burdened.
+Breaking this down by regular and severe cost burden (although I don’t
+think we should do this in the report\!) in Fairfield and New Haven
+Counties, about the same share of low income households are cost
+burdened or severely cost burdened. Two-thirds or more very low income
+households are severely cost burdened.
 
 **Note, these would add up to 100% if households with no burden were
 included, so the chart is read as “16% of very low income households in
 Connecticut are cost burdened and another 70% are severely cost
 burdened.”**
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 Quick diversion: is the SCB rate among very low income households
 partially explained by some of these households having housing costs and
@@ -1519,16 +1526,12 @@ the same as 30% for someone earning $60K. Why is that OK?
 **7/15:** Talked with the team and I think we’re going to use 30% for
 all income bands rather than the sliding scale.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 One last thing real quick… what’s the average *actual* housing cost for
 each band?
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
-
-**Another question might be, what are the cost ratios for those who are
-cost burdened? What’s the dollar amount over cost-burden that these
-households are paying?**
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 Here, I looked only at households whose housing costs exceed 30% of
 income, and took the weighted average of the gap between what they
@@ -1538,16 +1541,16 @@ the affordable threshold. The average gap for households in all income
 bands in FC is over $800/month while in most other counties the gap
 falls between $400 and $800/month.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 ## Affordable housing costs to households in each band
 
 Some future iteration of this notebook should find a way to combine this
-table with the chart above, but the topline is that the average actual
-costs in low and very low income households exceeds the affordable
-threshold (except low income households in Windham County). The
-middle-to-high income households’ average actual housing cost is within
-the affordable range.
+table with the actual housing costs chart above, but the topline is that
+the average actual costs in low and very low income households exceeds
+the affordable threshold (except low income households in Windham
+County). The middle-to-high income households’ average actual housing
+cost is within the affordable range.
 
 <table>
 
@@ -1970,40 +1973,39 @@ More than $2,283
 ## What income band do households live in, what cost band do they pay in?
 
 There are many more higher income households than units in that cost
-band, so high income households are occupying housing affordable to
-lower-income households. Likewise there are many more very low income
-households than units and they’re occupying more expensive housing than
-they can afford. There are not enough units affordable to very low
-income households anywhere, but at the low income threshold, units
-occupied within that cost band begin to exceed households in that income
-band.
+band, so high income households have to occupy housing affordable to
+lower-income households. Likewise, the same holds at the other extreme:
+there are many more very low income households than very low income
+units and they have to occupy more expensive housing than they can
+afford.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+Knowing that households paying into a cost band are a subset of
+households across many income bands, here’s a heat map of households by
+income band and the cost band they pay into. Add each row and you’ll get
+the total number of households in each income band. Add each column and
+you’ll get the total of all households in each cost band.
 
-Knowing that households paying into a cost band are not a subset of
-households in that income band, here’s the share of households paying
-into the appropriate/same cost band, those paying less, and those paying
-more.
+There are a couple caveats… people who own their homes outright and just
+have some utility costs are usually in the very low cost band but may be
+in any income band. There are also a fair amount of people who are high
+income but have $0 cash rents (I guess their company or someone else
+pays their rent?) who would be in the very low cost band.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
-## How many housing units in those cost bands
-
-Adds vacant units to above
+## How many housing units are in each cost bands
 
 Establishing that there’s a need for housing in lower cost bands, how
-many units exist in each of these bands?
+many units exist in each band? This adds vacants to the occupied units
+above.
 
-*Notes for myself: Total up occupied units (renter + owner, any reason
-to separate?) and vacant units available in each cost band. Occupied
-units will go by the cost paid (rentgrs and owncost), vacant by contract
-rent and mortgage payment estimate generated using some average mortgage
-rate for CT. Need a new PUMS file in hierarchical format, widdled down
-to household level.*
+This chart divides all housing units in CT into their cost bands and
+further by occupancy. Vacant, available are units listed as “For rent or
+sale” or “For sale only”, while other vacant is all other vacancy
+categories (“For seasonal, recreational, or other occasional use”, “For
+migrant farm workers”, and “Other vacant”).
 
-I’ll further disaggregate by county and do additional analysis on high
-interest loans and rates by race of applicant/other demographic flags,
-but for now I’ll use that value to estimate mortgage payments.
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ## Households who need housing in each cost band
 
