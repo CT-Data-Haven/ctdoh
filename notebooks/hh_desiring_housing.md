@@ -496,7 +496,7 @@ FYI, each county was very consistent in its share of households in each
 income band. High income was more than 40% with the rest somewhere
 between 10% and 20%
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20bar%20chart-1.png)<!-- -->
 
 <table>
 
@@ -987,7 +987,16 @@ just over a tenth of households headed by a white person. Some variation
 exists by county. In the three largest counties, half of white
 households are high income.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+**What else do I want to do with this? Could use pivot the data… share
+of race by income band rather than share of income band by race. We have
+lots of cost burden by race data elsewhere, could pull something in from
+HER. I hesitate to divide it up too much more than this.**
+
+![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20by%20race%20bar%20charts-1.png)<!-- -->
+
+**Add disability flag and do like pct of hh in each income band
+(statewide) with a disabled person living there. Break it down by
+disability type?**
 
 ### Jobs held by household occupants
 
@@ -1471,13 +1480,13 @@ assistants, except legal, medical, and executive
 Real quick top level summary of cost burden before we get into the
 details.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/cb%20totals%20bar%20chart-1.png)<!-- -->
 
 No surprise that cost burden rates among very low income households are
 more than 80%. At the statewide level that’s more than 14x the rate of
 high income households.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/cb%20rate%20dot%20plot-1.png)<!-- -->
 
 Breaking this down by regular and severe cost burden (although I don’t
 think we should do this in the report\!) in Fairfield and New Haven
@@ -1490,7 +1499,7 @@ included, so the chart is read as “16% of very low income households in
 Connecticut are cost burdened and another 70% are severely cost
 burdened.”**
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/cb%20burden%20by%20severity%20dot%20plot-1.png)<!-- -->
 
 Quick diversion: is the SCB rate among very low income households
 partially explained by some of these households having housing costs and
@@ -1526,12 +1535,12 @@ the same as 30% for someone earning $60K. Why is that OK?
 **7/15:** Talked with the team and I think we’re going to use 30% for
 all income bands rather than the sliding scale.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/hcost%20to%20income%20ratio%20dotplot-1.png)<!-- -->
 
 One last thing real quick… what’s the average *actual* housing cost for
 each band?
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/actual%20cost%20dot%20plot-1.png)<!-- -->
 
 Here, I looked only at households whose housing costs exceed 30% of
 income, and took the weighted average of the gap between what they
@@ -1541,7 +1550,7 @@ the affordable threshold. The average gap for households in all income
 bands in FC is over $800/month while in most other counties the gap
 falls between $400 and $800/month.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/affordability%20gap%20dot%20plot-1.png)<!-- -->
 
 ## Affordable housing costs to households in each band
 
@@ -1991,7 +2000,7 @@ in any income band. There are also a fair amount of people who are high
 income but have $0 cash rents (I guess their company or someone else
 pays their rent?) who would be in the very low cost band.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/income%20vs%20cost%20band%20heat%20map-1.png)<!-- -->
 
 ## How many housing units are in each cost bands
 
@@ -1999,13 +2008,32 @@ Establishing that there’s a need for housing in lower cost bands, how
 many units exist in each band? This adds vacants to the occupied units
 above.
 
-This chart divides all housing units in CT into their cost bands and
-further by occupancy. Vacant, available are units listed as “For rent or
-sale” or “For sale only”, while other vacant is all other vacancy
-categories (“For seasonal, recreational, or other occasional use”, “For
-migrant farm workers”, and “Other vacant”).
+Using ratio of rentgrs / rent to determine how much on top of contract
+payment utilities, etc. might be. I can’t think of a similar way to do
+that for homes for sale so I’m just gonna use the same ratio for owner
+unis, too.
 
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+In addition to the occupied units we’ve already looked at, this chart
+adds two categories of vacant units: “Vacant-On market” units are listed
+as “For rent or sale” or “For sale only,” and “Vacant-Off market” are
+vacant units that have been sold or rented but are not yet occupied.
+
+![](hh_desiring_housing_files/figure-gfm/units%20by%20tenure%20and%20occ%20bar%20chart-1.png)<!-- -->
+
+There are two other major vacancy categories, “Other vacant” and “For
+seasonal, recreational, or other occasional use”, but there’s no cost
+information associated with those units, so they can’t be sorted into
+the appropriate cost bands. Another minor category are housing units
+reserved for migrant farm workers. Collectively, these comprise about
+83,000 units, which is a ton by CT standards. Bridgeport, New Haven,
+Hartford all have about 50,000 units each.
+
+    ## # A tibble: 3 x 2
+    ##   vacancy                                             hhwt
+    ##   <fct>                                              <dbl>
+    ## 1 For seasonal, recreational or other occasional use 29578
+    ## 2 For migrant farm workers                             129
+    ## 3 Other vacant                                       53438
 
 ## Households who need housing in each cost band
 
@@ -2019,5 +2047,13 @@ units in each cost band. Seems legit?
 
 ## Add homeless?
 
-Not sure where to get good data… PIT counts by county? Mark suggests
-<https://cceh.org/data/interactive/>
+Mark suggests <https://cceh.org> for subcounty estimates, but I’m not
+sure how best to align CANs to counties, so instead I think this should
+be separate and included in the statewide count.
+
+Looks like in 2018 there were 2,253 adults-only households, 370
+adults-and-children households, and 7 children-only households for a
+total of 2,630 households (3,383 people). We should add these households
+to very low income units needed.
+
+Source: <https://cceh.org/data/interactive/2018pitdashboard/>
