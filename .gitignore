@@ -40,3 +40,4 @@ vignettes/*.pdf
 ctdoh.Rproj
 .DS_Store
 notebooks/scratch.R
+notebooks/cost_burden.Rmd
