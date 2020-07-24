@@ -28,8 +28,6 @@ source("../_utils/town2county.R")
 theme_set(theme_ipsum_rc())
 
 pal <- c("#92c9c5", "#ffe37e", "#ffac8f", "#cb94c4", "#5e63af")
-	
-#rev(LaCroixColoR::lacroix_palette(name = "Pamplemousse", n = 5, type = "discrete"))
 
 scale_fill_custom <- function(palette = pal, rev = F) {
   if (rev) {
@@ -48,42 +46,38 @@ scale_color_custom <- function(palette = pal, rev = F) {
 }
 ```
 
-This notebook needs a better name. "Households desiring housing" to me suggests a household wants to move, not that they're unable to afford housing. Maybe just "gaps in housing units available to households by income band" or something? Kind of a mouthful...
+This analysis needs a better name. "Households desiring housing" to me suggests a household wants to move or is unhoused. Maybe just "households by income and affordable housing units" or something? Kind of a mouthful...
 
 There's a lot going on in this notebook:
 
-* Count and share of households by income band by area
-    * Rounded to pretty numbers for legibility?
-* The kinds of occupations/jobs those residents work in
-    * Not exactly germane to the conversation unless we're talking about wage reform, but brings the context back down to earth...
-* Count and share of households in each band that are cost-burdened (T2 in DC report)
-* Average (median?) housing-cost-to-income ratio for each income band
-* The approximate monthly housing cost for an affordable unit (30%) for each income band.
-    * Rounded to pretty numbers for legibility?
-* Count and share of units by those cost bands in the area (T3 in DC report).
-* Number of housing units needed for each cost band so each household would have an affordable housing cost, vs. the actual count of units in those cost bands (F19 in DC report)
-* For each income band, the number of households that can/cannot afford to pay more
-* Count of vacant units in each cost band (F20 in DC report).
-
+* Count and share of households by income band, and further:
+    * households by income band by race
+    * households by income band by presence of inhabitant with disability
+* The kinds of occupations/jobs those household members work in
+* Count and share of households in each band that are cost-burdened
+* Average housing-cost-to-income ratio for each income band
+* Average actual housing cost by cost band
+* Approximate monthly housing cost range for an affordable unit (30%) for each income band (henceforth cost bands)
+* Number of households in each income band versus what cost band they pay into
+* Count and share of units by cost bands
+* Vacant units in each cost band
+* Number of housing units needed in each cost band so each household would have an affordable housing cost, vs. the actual count of units in those cost bands. In other words, total households by income band versus total units in each cost band.
 
 ## Establish groups
 
-After discussion with team on 7/15 we are settled with using median hh income by county and the groupings below:
+After discussion with team on 7/15 we will use median household income by county and the groupings below. I'm not committed to these names but needed a convenient shorthand for the analysis.
 
-**7/21: want to bring up to the team tomorrow adding a very high income category
-
-* very low income: <= 0.3 CMI
-* low income: (0.3–0.5] CMI
-* mid-low income: (0.5–.8] CMI
-* mid-high income: (.8–1.2] CMI
-* high income: (1.2–2.0] CMI
-* very high income: > 2.0 CMI
+* Very low income: <= 0.3 CMI
+* Low income: (0.3–0.5] CMI
+* Mid-low income: (0.5–.8] CMI
+* Mid-high income: (.8–1.2] CMI
+* High income: (1.2–2.0] CMI
 
 Cost-burden in predictable breaks:
 
-* No burden: Less than 30% income to housing
-* Cost-burdened: 30%-50% income to housing
-* Severely cost-burdened: More than 50% income to housing
+* No burden: <30% income to housing
+* Cost-burdened: [30%-50%) income to housing
+* Severely cost-burdened: >=50% income to housing
 
 And race/ethnicity into a few major categories so we can look at it by county:
 
@@ -92,7 +86,7 @@ And race/ethnicity into a few major categories so we can look at it by county:
 * Latino (any race)
 * All others (grouped)
 
-And for everyone we're considering affordable 30%, not the sliding scale they used in the DC report.
+**Add flag for any inhabitant with a disability (should this be further pared down by type, e.g., ambulatory vs. sensory vs. other vs. none?)**
 
 ```{r pums prep}
 minc <- get_acs(
@@ -194,11 +188,11 @@ out$hh_by_inc_band <- hh_by_inc_band
 
 ## Define income bands
 
-Would it be preferable to set these as prettier breaks, or use the CT numbers for all counties?
-
-**A better chart here would be color coded segments indicating each group's range, with each area on a new row. Could use arrow ends or something to communicate the top and bottom. Come back to this idea.**
+Would it be better to use pretty breaks or the same breaks for all counties? I'm leaving it as-is, assuming we will put just CT in the main report text but include counties in the appendix.
 
 ```{r inc table}
+#A better chart here would be color coded segments indicating each group's range, with each area on a new row.
+
 ctminc <- get_acs(geography = "state", state = 09, table = "B19013") %>% 
 	select(name = NAME, minc = estimate)
 
@@ -220,9 +214,9 @@ kable(income_table, caption = "Income ranges by income band and area")
 
 ## Count/share of households by income band
 
-Using the new breakdowns, high income households *vastly* outnumber lower income households.
+Because the groupings are granular only at the lower income extreme, High income households *vastly* outnumber lower income households.
 
-FYI, each county was very consistent in its share of households in each income band. High income was more than 40% with the rest somewhere between 10% and 20%
+FYI, I did look at this by county, and each was very consistent in it distribution. High income was more than 40% with the rest somewhere between 10% and 20%. See table below.
 
 ```{r hh by inc band bar chart}
 hh_by_inc_band %>% 
@@ -262,29 +256,6 @@ kable(hh_by_inc_band %>%
 	pivot_wider(id_cols = Name, names_from = "inc_band") %>% 
 	select(Name, `Very low`:High, Total),
 	caption = "Number of households by income band")
-```
-
-```{r no eval1, eval = F}
-hh_by_inc_band %>% 
-	filter(inc_band != "Total", name == "Connecticut") %>% 
-	group_by(level) %>% 
-	mutate(name = as.factor(name) %>% 
-				 	fct_rev()) %>% 
-	ggplot(aes(inc_band, value)) +
-	geom_col(aes(fill = inc_band), width = .7, position = position_dodge(.75)) +
-	geom_text(aes(label = percent(share, accuracy = 1)),
-						position = position_dodge(.75), vjust = 1.2, family = "Roboto Condensed", size = 4) +
-	scale_y_continuous(expand = expansion(mult = c(0, 0))) +
-	scale_fill_custom() +
-	guides(fill = guide_legend(title = "")) +
-	labs(x = "", y = "",
-			 title = "Share of households in each income band") +
-	theme(panel.grid.major  = element_blank(),
-				panel.grid.minor = element_blank(),
-				axis.text.y = element_blank(),
-				axis.text.x = element_text(colour = "black"),
-				legend.position = "none",
-				plot.title.position = "plot")
 ```
 
 ## Household characteristics by income bands
@@ -331,9 +302,9 @@ hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhl
 out$hh_by_inc_band <- hh_by_race_inc_band
 ```
 
-Considering race/ethnicity of head of household. Statewide, a quarter of all households headed by a Black or Latino person are very low income, earning less than 30% of the county household median income, compared to just over a tenth of households headed by a white person. Some variation exists by county. In the three largest counties, half of white households are high income.
+In the charts below, I'm considering race/ethnicity of head of household. Statewide, a quarter of all households headed by a Black or Latino person are very low income, earning less than 30% of the county household median income, compared to just over a tenth of households headed by a white person. Some variation exists by county. In the three largest counties, half of white households are high income.
 
-**What else do I want to do with this? Could use pivot the data... share of race by income band rather than share of income band by race. We have lots of cost burden by race data elsewhere, could pull something in from HER. I hesitate to divide it up too much more than this.**
+**Other thoughts for later: Should pivot the data... share of race by income band rather than share of income band by race. We have lots of cost burden by race data elsewhere, could pull something in from HER. I hesitate to divide it up too much more than this, so more of an equity implication than an analysis crosstab.**
 
 ```{r hh by inc band by race bar charts, fig.width=10, fig.height=10}
 hh_by_race_inc_band %>% 
@@ -358,8 +329,7 @@ hh_by_race_inc_band %>%
 				plot.title.position = "plot")
 ```
 
-**Add disability flag and do like pct of hh in each income band (statewide) with a disabled person living there. Break it down by disability type?**
-
+**Redo disability flags**
 
 ### Jobs held by household occupants
 
@@ -368,9 +338,11 @@ Retrieved a list of 2018 occ codes from the Census Bureau at
 
 This table lists the top five occupations, in order from the most numerous, for household inhabitants—so not just heads of household, but all household members, including inhabitants with no work experience in the past 5 years or who have never worked—by household income band by county.
 
-To be honest, this is a little surprising in places. I expected more food service workers in general, and I'm surprised at how many elementary and middle school teachers are workers in higher income households. Either I have the exact wrong impression of how much teachers are paid or it's a common occupation for people whose partners/spouses pull in big money. And yet, #thestruggle: adjuncts and GAs in Tolland County (UConn) getting those minimum wage grad school stipends while profs in New Haven and Middlesex Counties make six figures teaching half the load.
+To be honest, this is a little surprising in places. I expected more service industry workers in FC and NHC, and I'm surprised at how many elementary and middle school teachers are workers in higher income households. Either I have the exact wrong impression of how much teachers are paid or it's a common occupation for people whose partners/spouses pull in big money. And yet, #thestruggle: adjuncts and GAs in Tolland County (UConn) getting those minimum wage grad school stipends while profs in Middlesex Counties make six figures teaching half the load.
 
-**Mark brought up a good point about common occupations (like teachers, cashiers) present in each income band. If this is used in the report, it might be best to look at the output and cherry pick some representative occupations.**
+**Mark brought up a good point about common occupations (like teachers, cashiers) present in each income band. If this is used in the report, it might be best to just look at the output table and cherry pick some representative occupations.**
+
+**An alternative approach, similar to I think what was used in the DC report, is to look at like QWI data to determine which occupations' average salaries in each county most closely align with the income band. However, that's an individual's salary versus a household's income.**
 
 ```{r jobs}
 des2 <- pums %>%
@@ -451,8 +423,8 @@ cb_by_inc_band %>%
 	group_by(level) %>% 
 	mutate(name = fct_rev(name)) %>% 
 	ggplot(aes(share, name, group = cost_burden)) +
-	geom_col(aes(fill = cost_burden), width = .75, position = position_stack(.5)) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Roboto Condensed", size = 3.5) +
+	geom_col(aes(fill = cost_burden), width = .8, position = position_stack(.5)) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Roboto Condensed", size = 3.75) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_manual(values = c("grey80", pal[1], pal[4])) +
 	theme(legend.position = "bottom",
@@ -462,11 +434,11 @@ cb_by_inc_band %>%
 				panel.grid.major = element_blank(),
 				panel.grid.minor = element_blank()) +
 	guides(fill = guide_legend(title = "", reverse = T)) +
-	labs(title = "Cost burden severity",
-			 x = "", y = "", caption = "Cost burdened: 30-50% household income to housing costs.\nSeverely cost burdened: More than 50% of household income to housing costs.")
+	labs(title = "Share of households by cost burden severity",
+			 x = "", y = "", caption = "Cost burdened: 30% to 49.9% household income to housing costs.\nSeverely cost burdened: 50% or more of household income to housing costs.")
 ```
 
-No surprise that cost burden rates among very low income households are more than 80%. At the statewide level that's more than 14x the rate of high income households.
+This dot plot shows the share of cost burdened households in each income band. Statewide, almost 90% of Very Low income households pay 30%+ income to housing costs.
 
 ```{r cb rate dot plot, fig.width=8}
 cb_by_inc_band %>% 
@@ -503,7 +475,7 @@ cb_by_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
-Breaking this down by regular and severe cost burden (although I don't think we should do this in the report!) in Fairfield and New Haven Counties, about the same share of low income households are cost burdened or severely cost burdened. Two-thirds or more very low income households are severely cost burdened.
+Above, we established 86% of Very Low income households were cost burdened, so this second dot plot breaks things down by regular and severe cost burden *(although I don't think we should do this in the report!)*.
 
 **Note, these would add up to 100% if households with no burden were included, so the chart is read as "16% of very low income households in Connecticut are cost burdened and another 70% are severely cost burdened."**
 
@@ -526,7 +498,7 @@ cb_by_inc_band %>%
 		x = "",
 		y = "",
 		title = "Rates of burden by burden type for households in each income band",
-		caption = "Cost-burdened: spending 30%-50% of household income on housing;\nSeverely cost-burdened: spending more than 50% of household income on housing.") +
+		caption = "Cost burdened: 30% to 49.9% household income to housing costs.\nSeverely cost burdened: 50% or more of household income to housing costs.") +
 	scale_color_custom() +
 	theme(
 		panel.grid.minor = element_blank(),
@@ -539,7 +511,7 @@ cb_by_inc_band %>%
 
 Quick diversion: is the SCB rate among very low income households partially explained by some of these households having housing costs and no/negative negative income?
 
-By definition, the household is in the "very low income" income band if household income is $0 or less because that's less than 30% CMI. There are about 15K poor households with no or negative income and some nonzero housing cost, making them "severely cost burdened" by definition. These ~15K units make up about 7% of all very low income households, which is not insignificant, but it's not the sole motivator for high SCB rates in this income band.
+By definition, the household is in the "Very Low income" income band if household income is $0 or less because that's less than 30% CMI. There are about 15K Very Low income households with no or negative income and some nonzero housing cost, making them "severely cost burdened" by definition. These ~15K units make up about 7% of all very low income households, which is not insignificant, but it's not the sole motivator for high SCB rates in this income band.
 
 ```{r no income hh}
 des %>%
@@ -574,9 +546,9 @@ avg_cost_ratio_inc_band <- bind_rows(avg_cost_ratio_county, avg_cost_ratio_ct)
 out$avg_cost_ratio_inc_band <- avg_cost_ratio_inc_band
 ```
 
-Urban's DC study found that higher income households paid about 12% income to housing. In CT it's about 16%. For a household with $200K in income, that's about $2667/month in housing costs, which I just don't think is that high considering there are some kinda crappy 2BRs in East Rock that go for that much.
+Urban's DC study found that High income households paid about 12% income to housing, and used that to determine a sliding scale for affordability. In Connecticut, High income households pay about 16% income to housing costs. For a household with $200K in income, that's about $2667/month, which I just don't think is that much. For a household at the lower end of CT's High income band, earning about $114K, 16% of income to housing cost would be about $1520/month, which is just plain offensive to me as a NHV renter.
 
-For a household at the lower end of CT's affluent band, earning about $114K, 16% of income to housing cost would be about $1520, which as a renter strikes me as unbelievably low for someone of those means. It's the same as 30% for someone earning $60K. Why is that OK?
+I don't think we should assume that because High income households don't pay a full 30% that the 16% threshold is what is "affordable" for them. They *can* pay more, they just *don't*. Someone earning $114K paying 16% is the same as someone earning $60K paying 30%. For the sake of fairness and communication of "affordability," I think we should do 30% for everyone.
 
 **7/15:** Talked with the team and I think we're going to use 30% for all income bands rather than the sliding scale.
 
@@ -600,8 +572,7 @@ avg_cost_ratio_inc_band %>%
 	labs(
 		x = "",
 		y = "",
-		title = str_wrap("Average housing-cost-to-income-ratio by income band", 60),
-		caption = "Weighted mean of cost ratio to IPUMS household weight") +
+		title = str_wrap("Average housing-cost-to-income-ratio by income band", 60), caption = "A 30% ratio is cost-burden, 50% is severe cost burden") +
 	scale_color_custom() +
 	theme(
 		panel.grid.minor = element_blank(),
@@ -612,7 +583,9 @@ avg_cost_ratio_inc_band %>%
 		axis.text.y = element_text(colour = "black"))
 ```
 
-One last thing real quick... what's the average *actual* housing cost for each band?
+And finally... what's the average *actual* housing cost for each band? How much are households really paying?
+
+The major takeaway is that Very Low and Low income households are paying too much. Everyone else is right on target. **See table below for affordable cost ranges.**
 
 ```{r actual costs}
 cost_county_owners <- pums %>%
@@ -638,45 +611,6 @@ avg_cost_inc_band <- bind_rows(cost_county_owners, cost_county_renters, cost_ct_
 	group_by(name, inc_band) %>% 
 	summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
 	mutate(level = if_else(name == "Connecticut", "1_state", "2_counties"))
-
-out$avg_cost_inc_band <- avg_cost_inc_band
-```
-
-```{r no eval2, eval=F}
-#want to combine own and rent
-avg_cost_county_owners <- pums %>%
-	filter(pernum == "1", hhincome != 9999999, ownershp == "Owned or being bought (loan)") %>%
-	select(hhwt, name, inc_band, owncost) %>%
-	mutate(mult = owncost * hhwt) %>% 
-	group_by(name, inc_band) %>% 
-	summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-	mutate(tenure = "owner", level = "2_counties")
-
-avg_cost_county_renters <- pums %>%
-	filter(pernum == "1", hhincome != 9999999, ownershp == "Rented") %>%
-	select(hhwt, name, inc_band, rentgrs) %>%
-	mutate(mult = rentgrs * hhwt) %>% 
-	group_by(name, inc_band) %>% 
-	summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-	mutate(tenure = "renter", level = "2_counties")
-
-avg_cost_ct_owners <- pums %>%
-  filter(pernum == "1", hhincome != 9999999, ownershp == "Owned or being bought (loan)") %>%
-	select(hhwt, inc_band, owncost) %>%
-	mutate(mult = owncost * hhwt) %>% 
-	group_by(inc_band) %>% 
-	summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-	mutate(tenure = "owner", name = "Connecticut", level = "1_state")
-
-avg_cost_ct_renters <- pums %>%
-	filter(pernum == "1", hhincome != 9999999, ownershp == "Rented") %>%
-	select(hhwt, inc_band, rentgrs) %>%
-	mutate(mult = rentgrs * hhwt) %>% 
-	group_by(inc_band) %>% 
-	summarise(wm_cost = sum(mult)/sum(hhwt)) %>% 
-	mutate(tenure = "renter", name = "Connecticut", level = "1_state")
-
-avg_cost_inc_band <- bind_rows(avg_cost_county_renters, avg_cost_county_owners, avg_cost_ct_renters, avg_cost_ct_owners)
 
 out$avg_cost_inc_band <- avg_cost_inc_band
 ```
@@ -725,7 +659,9 @@ housing_cost_gap <- pums %>%
 	summarise(monthly_affordability_gap = sum(mult)/sum(hhwt))
 ```
 
-Here, I looked only at households whose housing costs exceed 30% of income, and took the weighted average of the gap between what they actually pay for housing versus what they should pay at an affordable (30%) threshold. Very low and high income households spend the most over the affordable threshold. The average gap for households in all income bands in FC is over $800/month while in most other counties the gap falls between $400 and $800/month.
+This unlabeled dot plot is a little more esoteric. I looked only at households whose housing costs exceed 30% of income, and took the weighted average of the gap between what they actually pay for housing versus what they should pay at a max affordable (30%) threshold. In other words, how many dollars per month over 30% are they paying?
+
+Very Low (light green) and High income  (dark blue) households spend the most over the affordable threshold. The average gap for households in all income bands in FC is over $800/month while in most other counties the gap falls between $400 and $800/month. Over the course of a year, that's an extraordinary amount of money these households are not spending on other necessities, saving, or investing in other expensive things like higher ed.
 
 ```{r affordability gap dot plot}
 housing_cost_gap %>% 
@@ -737,8 +673,7 @@ housing_cost_gap %>%
 										 expand = expansion(mult = c(.1, .1)),
 										 labels = dollar_format()) +
 	guides(color = guide_legend(title = "")) +
-	labs(title = str_wrap("Average monthly affordability gap by income band for households that are cost-burdened", 60),
-			 subtitle = "Dollars spent over affordable amount (30% of household's income) ",
+	labs(title = str_wrap("How much money per month over 30% are households paying in housing costs?", 60),
 			 x = "", y = "") +
 theme(plot.title.position = "plot",
 			axis.text.y = element_text(colour = "black", size = 11),
@@ -746,9 +681,9 @@ theme(plot.title.position = "plot",
 			legend.position = "right")
 ```
 
-## Affordable housing costs to households in each band
+## Ranges of affordability for each band
 
-Some future iteration of this notebook should find a way to combine this table with the actual housing costs chart above, but the topline is that the average actual costs in low and very low income households exceeds the affordable threshold (except low income households in Windham County). The middle-to-high income households' average actual housing cost is within the affordable range.
+Some future iteration of this analysis should find a way to combine this table with the actual housing costs chart above, but the topline is that the average actual costs in Low and Very Low income households exceed the affordable threshold (except low income households in Windham County). The middle-to-high income households' average actual housing cost is within the affordable range.
 
 ```{r affordable cost range table}
 affordable_cost_table <- minc %>% 
@@ -850,7 +785,7 @@ There are many more higher income households than units in that cost band, so hi
 
 Knowing that households paying into a cost band are a subset of households across many income bands, here's a heat map of households by income band and the cost band they pay into. Add each row and you'll get the total number of households in each income band. Add each column and you'll get the total of all households in each cost band.
 
-There are a couple caveats... people who own their homes outright and just have some utility costs are usually in the very low cost band but may be in any income band. There are also a fair amount of people who are high income but have $0 cash rents (I guess their company or someone else pays their rent?) who would be in the very low cost band.
+There are a couple caveats... people who own their homes outright and just have some utility costs are usually in the Very Low cost band but may be in any income band. There are also a fair amount of people who are high income but have $0 cash rents (I guess their company owns their apartments and they live rent free?) who would be in the Very Low cost band.
 
 ```{r no eval4, eval = F}
 relative_housing_costs <- units %>%
@@ -930,9 +865,11 @@ income_vs_cost_bands %>%
 
 ## How many housing units are in each cost bands
 
-Establishing that there's a need for housing in lower cost bands, how many units exist in each band? This adds vacants to the occupied units above.
+Further establishing that there's a need for housing in lower cost bands, how many units exist in each band? This adds vacants to the occupied units above.
 
-Using ratio of rentgrs / rent to determine how much on top of contract payment utilities, etc. might be. I can't think of a similar way to do that for homes for sale so I'm just gonna use the same ratio for owner unis, too.
+Vacant apartments and homes for sale have imputed costs based on contract rent plus imputed utilities (see below), and homes for sale had owner-costs imputed based on county average mortgage rates (2019 HMDA data for approved first lien mortgages for homes intended for owner occupancy), the median mill rate for each county, and imputed utility costs.
+
+I used a ratio of RENTGRS to RENT to determine how much utilities run on top of contract rent (by county). I can't think of a similar way to do that for homes for sale so I used the same ratio for owner units, too.
 
 ```{r hh level pums setup}
 hddi <- read_ipums_ddi("../input_data/usa_00040.xml")
@@ -1178,7 +1115,7 @@ units_by_tenure_occupancy_cost_band %>%
 			 x = "", y = "")
 ```
 
-There are two other major vacancy categories, "Other vacant" and "For seasonal, recreational, or other occasional use", but there's no cost information associated with those units, so they can't be sorted into the appropriate cost bands. Another minor category are housing units reserved for migrant farm workers. Collectively, these comprise about 83,000 units, which is a ton by CT standards. Bridgeport, New Haven, Hartford all have about 50,000 units each.
+There are two other major vacancy categories, "Other vacant" and "For seasonal, recreational, or other occasional use," but there's no cost information associated with those units, so they can't be sorted into the appropriate cost bands. Another minor category are housing units reserved for migrant farm workers. Collectively, these comprise about 83,000 units, which is a ton by CT standards. The cities of Bridgeport, New Haven, and Hartford all have about 50,000 units each.
 
 ```{r other vacs}
 hpums %>% 
@@ -1190,9 +1127,51 @@ hpums %>%
 
 ## Households who need housing in each cost band
 
-To get a table of gaps and surpluses, I think I need to determine how many units are needed in each cost band (so, by default this will be the number of households in each income band if low income households should pay low income prices, right?), then count up the number of households whose costs are in each cost band and add the vacants by contract and mortgage costs. So how many households in each income band, vs. how many units in each cost band. Seems legit?
+This bar chart is the major summary of this analysis. It shows occupied units in each income band versus units available in their cost band. In essence, the households in each income band need a unit in their cost band.
 
-## Add homeless?
+The data show significant gaps in the extremes... Very Low and High income households do not have enough units in their affordability range (though with High income households I think we care less about whether they have enough high cost units and more that they aren't squeezing the middle out of a place to live).
+
+While there are a lot of middle income units, competition for those units is coming from above and below. More housing units in the Very Low range are absolutely needed. Since High income households tend to want to pay less than 30% for housing, more (well-located and not just single family) mid-high units could help alleviate some strain on the middle income households.
+
+```{r units vs hh}
+all_units_by_inc_band <- units_by_tenure_occupancy_cost_band %>% 
+  select(-tenure, -occupancy) %>% 
+	group_by(name, cost_band) %>% 
+	summarise(units = sum(units)) %>% 
+	bind_rows(units_by_tenure_occupancy_cost_band %>% 
+							select(-tenure, -occupancy) %>% 
+							mutate(name = "Connecticut") %>% 
+							group_by(name, cost_band) %>% 
+							summarise(units = sum(units))) %>% 
+	rename(band = cost_band)
+
+units_and_hh <- hh_by_inc_band %>% 
+	ungroup() %>% 
+	select(name, band = inc_band, households = value) %>% 
+	filter(band != "Total") %>% 
+	left_join(all_units_by_inc_band, by = c("name", "band")) %>%
+	pivot_longer(cols = c("households", "units"), names_to = "group")
+```
+
+```{r units v hh bar chart, fig.height=9, fig.width=9}
+units_and_hh %>% 
+	ggplot(aes(band, value, group = group)) +
+	geom_col(aes(fill = group), position = position_dodge()) +
+	scale_y_continuous(labels = comma_format()) +
+	facet_wrap(facets = "name", scales = "free_y") +
+	scale_fill_manual(values = c(pal[1], pal[3])) +
+	labs(title = "Households and housing units in each band",
+			 x = "", y = "", caption = "Units include vacant units") +
+	guides(fill = guide_legend(title = "")) +
+	theme(plot.title.position = "plot",
+				axis.text.y = element_text(colour = "black"),
+				panel.grid.major.x = element_blank(),
+				panel.grid.minor = element_blank(),
+				legend.position = "bottom",
+				axis.text.x = element_text(colour = "black", angle = -60, hjust = 0, vjust = .5))
+```
+
+## Add homeless households?
 Mark suggests https://cceh.org for subcounty estimates, but I'm not sure how best to align CANs to counties, so instead I think this should be separate and included in the statewide count.
 
 Looks like in 2018 there were 2,253 adults-only households, 370 adults-and-children households, and 7 children-only households for a total of 2,630 households (3,383 people). We should add these households to very low income units needed.

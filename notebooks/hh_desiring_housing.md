@@ -1,53 +1,49 @@
 Households desiring housing
 ================
 
-This notebook needs a better name. “Households desiring housing” to me
-suggests a household wants to move, not that they’re unable to afford
-housing. Maybe just “gaps in housing units available to households by
-income band” or something? Kind of a mouthful…
+This analysis needs a better name. “Households desiring housing” to me
+suggests a household wants to move or is unhoused. Maybe just
+“households by income and affordable housing units” or something? Kind
+of a mouthful…
 
 There’s a lot going on in this notebook:
 
-  - Count and share of households by income band by area
-      - Rounded to pretty numbers for legibility?
-  - The kinds of occupations/jobs those residents work in
-      - Not exactly germane to the conversation unless we’re talking
-        about wage reform, but brings the context back down to earth…
+  - Count and share of households by income band, and further:
+      - households by income band by race
+      - households by income band by presence of inhabitant with
+        disability
+  - The kinds of occupations/jobs those household members work in
   - Count and share of households in each band that are cost-burdened
-    (T2 in DC report)
-  - Average (median?) housing-cost-to-income ratio for each income band
-  - The approximate monthly housing cost for an affordable unit (30%)
-    for each income band.
-      - Rounded to pretty numbers for legibility?
-  - Count and share of units by those cost bands in the area (T3 in DC
-    report).
-  - Number of housing units needed for each cost band so each household
+  - Average housing-cost-to-income ratio for each income band
+  - Average actual housing cost by cost band
+  - Approximate monthly housing cost range for an affordable unit (30%)
+    for each income band (henceforth cost bands)
+  - Number of households in each income band versus what cost band they
+    pay into
+  - Count and share of units by cost bands
+  - Vacant units in each cost band
+  - Number of housing units needed in each cost band so each household
     would have an affordable housing cost, vs. the actual count of units
-    in those cost bands (F19 in DC report)
-  - For each income band, the number of households that can/cannot
-    afford to pay more
-  - Count of vacant units in each cost band (F20 in DC report).
+    in those cost bands. In other words, total households by income band
+    versus total units in each cost band.
 
 ## Establish groups
 
-After discussion with team on 7/15 we are settled with using median hh
-income by county and the groupings below:
+After discussion with team on 7/15 we will use median household income
+by county and the groupings below. I’m not committed to these names but
+needed a convenient shorthand for the analysis.
 
-\*\*7/21: want to bring up to the team tomorrow adding a very high
-income category
-
-  - very low income: \<= 0.3 CMI
-  - low income: (0.3–0.5\] CMI
-  - mid-low income: (0.5–.8\] CMI
-  - mid-high income: (.8–1.2\] CMI
-  - high income: (1.2–2.0\] CMI
-  - very high income: \> 2.0 CMI
+  - Very low income: \<= 0.3 CMI
+  - Low income: (0.3–0.5\] CMI
+  - Mid-low income: (0.5–.8\] CMI
+  - Mid-high income: (.8–1.2\] CMI
+  - High income: (1.2–2.0\] CMI
 
 Cost-burden in predictable breaks:
 
-  - No burden: Less than 30% income to housing
-  - Cost-burdened: 30%-50% income to housing
-  - Severely cost-burdened: More than 50% income to housing
+  - No burden: \<30% income to housing
+  - Cost-burdened: \[30%-50%) income to housing
+  - Severely cost-burdened: \>=50% income to housing
 
 And race/ethnicity into a few major categories so we can look at it by
 county:
@@ -57,17 +53,14 @@ county:
   - Latino (any race)
   - All others (grouped)
 
-And for everyone we’re considering affordable 30%, not the sliding scale
-they used in the DC report.
+**Add flag for any inhabitant with a disability (should this be further
+pared down by type, e.g., ambulatory vs. sensory vs. other vs. none?)**
 
 ## Define income bands
 
-Would it be preferable to set these as prettier breaks, or use the CT
-numbers for all counties?
-
-**A better chart here would be color coded segments indicating each
-group’s range, with each area on a new row. Could use arrow ends or
-something to communicate the top and bottom. Come back to this idea.**
+Would it be better to use pretty breaks or the same breaks for all
+counties? I’m leaving it as-is, assuming we will put just CT in the main
+report text but include counties in the appendix.
 
 <table>
 
@@ -489,12 +482,12 @@ More than $91,327
 
 ## Count/share of households by income band
 
-Using the new breakdowns, high income households *vastly* outnumber
-lower income households.
+Because the groupings are granular only at the lower income extreme,
+High income households *vastly* outnumber lower income households.
 
-FYI, each county was very consistent in its share of households in each
-income band. High income was more than 40% with the rest somewhere
-between 10% and 20%
+FYI, I did look at this by county, and each was very consistent in it
+distribution. High income was more than 40% with the rest somewhere
+between 10% and 20%. See table below.
 
 ![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20bar%20chart-1.png)<!-- -->
 
@@ -980,23 +973,22 @@ Connecticut
 
 ### Race breakdowns
 
-Considering race/ethnicity of head of household. Statewide, a quarter of
-all households headed by a Black or Latino person are very low income,
-earning less than 30% of the county household median income, compared to
-just over a tenth of households headed by a white person. Some variation
-exists by county. In the three largest counties, half of white
-households are high income.
+In the charts below, I’m considering race/ethnicity of head of
+household. Statewide, a quarter of all households headed by a Black or
+Latino person are very low income, earning less than 30% of the county
+household median income, compared to just over a tenth of households
+headed by a white person. Some variation exists by county. In the three
+largest counties, half of white households are high income.
 
-**What else do I want to do with this? Could use pivot the data… share
-of race by income band rather than share of income band by race. We have
-lots of cost burden by race data elsewhere, could pull something in from
-HER. I hesitate to divide it up too much more than this.**
+**Other thoughts for later: Should pivot the data… share of race by
+income band rather than share of income band by race. We have lots of
+cost burden by race data elsewhere, could pull something in from HER. I
+hesitate to divide it up too much more than this, so more of an equity
+implication than an analysis crosstab.**
 
 ![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20by%20race%20bar%20charts-1.png)<!-- -->
 
-**Add disability flag and do like pct of hh in each income band
-(statewide) with a disabled person living there. Break it down by
-disability type?**
+**Redo disability flags**
 
 ### Jobs held by household occupants
 
@@ -1010,19 +1002,24 @@ the past 5 years or who have never worked—by household income band by
 county.
 
 To be honest, this is a little surprising in places. I expected more
-food service workers in general, and I’m surprised at how many
+service industry workers in FC and NHC, and I’m surprised at how many
 elementary and middle school teachers are workers in higher income
 households. Either I have the exact wrong impression of how much
 teachers are paid or it’s a common occupation for people whose
 partners/spouses pull in big money. And yet, \#thestruggle: adjuncts and
 GAs in Tolland County (UConn) getting those minimum wage grad school
-stipends while profs in New Haven and Middlesex Counties make six
-figures teaching half the load.
+stipends while profs in Middlesex Counties make six figures teaching
+half the load.
 
 **Mark brought up a good point about common occupations (like teachers,
 cashiers) present in each income band. If this is used in the report, it
-might be best to look at the output and cherry pick some representative
-occupations.**
+might be best to just look at the output table and cherry pick some
+representative occupations.**
+
+**An alternative approach, similar to I think what was used in the DC
+report, is to look at like QWI data to determine which occupations’
+average salaries in each county most closely align with the income band.
+However, that’s an individual’s salary versus a household’s income.**
 
 <table>
 
@@ -1482,17 +1479,16 @@ details.
 
 ![](hh_desiring_housing_files/figure-gfm/cb%20totals%20bar%20chart-1.png)<!-- -->
 
-No surprise that cost burden rates among very low income households are
-more than 80%. At the statewide level that’s more than 14x the rate of
-high income households.
+This dot plot shows the share of cost burdened households in each income
+band. Statewide, almost 90% of Very Low income households pay 30%+
+income to housing costs.
 
 ![](hh_desiring_housing_files/figure-gfm/cb%20rate%20dot%20plot-1.png)<!-- -->
 
-Breaking this down by regular and severe cost burden (although I don’t
-think we should do this in the report\!) in Fairfield and New Haven
-Counties, about the same share of low income households are cost
-burdened or severely cost burdened. Two-thirds or more very low income
-households are severely cost burdened.
+Above, we established 86% of Very Low income households were cost
+burdened, so this second dot plot breaks things down by regular and
+severe cost burden *(although I don’t think we should do this in the
+report\!)*.
 
 **Note, these would add up to 100% if households with no burden were
 included, so the chart is read as “16% of very low income households in
@@ -1505,10 +1501,10 @@ Quick diversion: is the SCB rate among very low income households
 partially explained by some of these households having housing costs and
 no/negative negative income?
 
-By definition, the household is in the “very low income” income band if
+By definition, the household is in the “Very Low income” income band if
 household income is $0 or less because that’s less than 30% CMI. There
-are about 15K poor households with no or negative income and some
-nonzero housing cost, making them “severely cost burdened” by
+are about 15K Very Low income households with no or negative income and
+some nonzero housing cost, making them “severely cost burdened” by
 definition. These \~15K units make up about 7% of all very low income
 households, which is not insignificant, but it’s not the sole motivator
 for high SCB rates in this income band.
@@ -1521,42 +1517,57 @@ for high SCB rates in this income band.
 
 ## Average housing-cost-to-income ratio for each band
 
-Urban’s DC study found that higher income households paid about 12%
-income to housing. In CT it’s about 16%. For a household with $200K in
-income, that’s about $2667/month in housing costs, which I just don’t
-think is that high considering there are some kinda crappy 2BRs in East
-Rock that go for that much.
+Urban’s DC study found that High income households paid about 12% income
+to housing, and used that to determine a sliding scale for
+affordability. In Connecticut, High income households pay about 16%
+income to housing costs. For a household with $200K in income, that’s
+about $2667/month, which I just don’t think is that much. For a
+household at the lower end of CT’s High income band, earning about
+$114K, 16% of income to housing cost would be about $1520/month, which
+is just plain offensive to me as a NHV renter.
 
-For a household at the lower end of CT’s affluent band, earning about
-$114K, 16% of income to housing cost would be about $1520, which as a
-renter strikes me as unbelievably low for someone of those means. It’s
-the same as 30% for someone earning $60K. Why is that OK?
+I don’t think we should assume that because High income households don’t
+pay a full 30% that the 16% threshold is what is “affordable” for them.
+They *can* pay more, they just *don’t*. Someone earning $114K paying 16%
+is the same as someone earning $60K paying 30%. For the sake of fairness
+and communication of “affordability,” I think we should do 30% for
+everyone.
 
 **7/15:** Talked with the team and I think we’re going to use 30% for
 all income bands rather than the sliding scale.
 
 ![](hh_desiring_housing_files/figure-gfm/hcost%20to%20income%20ratio%20dotplot-1.png)<!-- -->
 
-One last thing real quick… what’s the average *actual* housing cost for
-each band?
+And finally… what’s the average *actual* housing cost for each band? How
+much are households really paying?
+
+The major takeaway is that Very Low and Low income households are paying
+too much. Everyone else is right on target. **See table below for
+affordable cost ranges.**
 
 ![](hh_desiring_housing_files/figure-gfm/actual%20cost%20dot%20plot-1.png)<!-- -->
 
-Here, I looked only at households whose housing costs exceed 30% of
-income, and took the weighted average of the gap between what they
-actually pay for housing versus what they should pay at an affordable
-(30%) threshold. Very low and high income households spend the most over
-the affordable threshold. The average gap for households in all income
-bands in FC is over $800/month while in most other counties the gap
-falls between $400 and $800/month.
+This unlabeled dot plot is a little more esoteric. I looked only at
+households whose housing costs exceed 30% of income, and took the
+weighted average of the gap between what they actually pay for housing
+versus what they should pay at a max affordable (30%) threshold. In
+other words, how many dollars per month over 30% are they paying?
+
+Very Low (light green) and High income (dark blue) households spend the
+most over the affordable threshold. The average gap for households in
+all income bands in FC is over $800/month while in most other counties
+the gap falls between $400 and $800/month. Over the course of a year,
+that’s an extraordinary amount of money these households are not
+spending on other necessities, saving, or investing in other expensive
+things like higher ed.
 
 ![](hh_desiring_housing_files/figure-gfm/affordability%20gap%20dot%20plot-1.png)<!-- -->
 
-## Affordable housing costs to households in each band
+## Ranges of affordability for each band
 
-Some future iteration of this notebook should find a way to combine this
+Some future iteration of this analysis should find a way to combine this
 table with the actual housing costs chart above, but the topline is that
-the average actual costs in low and very low income households exceeds
+the average actual costs in Low and Very Low income households exceed
 the affordable threshold (except low income households in Windham
 County). The middle-to-high income households’ average actual housing
 cost is within the affordable range.
@@ -1995,23 +2006,30 @@ the total number of households in each income band. Add each column and
 you’ll get the total of all households in each cost band.
 
 There are a couple caveats… people who own their homes outright and just
-have some utility costs are usually in the very low cost band but may be
+have some utility costs are usually in the Very Low cost band but may be
 in any income band. There are also a fair amount of people who are high
-income but have $0 cash rents (I guess their company or someone else
-pays their rent?) who would be in the very low cost band.
+income but have $0 cash rents (I guess their company owns their
+apartments and they live rent free?) who would be in the Very Low cost
+band.
 
 ![](hh_desiring_housing_files/figure-gfm/income%20vs%20cost%20band%20heat%20map-1.png)<!-- -->
 
 ## How many housing units are in each cost bands
 
-Establishing that there’s a need for housing in lower cost bands, how
-many units exist in each band? This adds vacants to the occupied units
-above.
+Further establishing that there’s a need for housing in lower cost
+bands, how many units exist in each band? This adds vacants to the
+occupied units above.
 
-Using ratio of rentgrs / rent to determine how much on top of contract
-payment utilities, etc. might be. I can’t think of a similar way to do
-that for homes for sale so I’m just gonna use the same ratio for owner
-unis, too.
+Vacant apartments and homes for sale have imputed costs based on
+contract rent plus imputed utilities (see below), and homes for sale had
+owner-costs imputed based on county average mortgage rates (2019 HMDA
+data for approved first lien mortgages for homes intended for owner
+occupancy), the median mill rate for each county, and imputed utility
+costs.
+
+I used a ratio of RENTGRS to RENT to determine how much utilities run on
+top of contract rent (by county). I can’t think of a similar way to do
+that for homes for sale so I used the same ratio for owner units, too.
 
 In addition to the occupied units we’ve already looked at, this chart
 adds two categories of vacant units: “Vacant-On market” units are listed
@@ -2021,12 +2039,12 @@ vacant units that have been sold or rented but are not yet occupied.
 ![](hh_desiring_housing_files/figure-gfm/units%20by%20tenure%20and%20occ%20bar%20chart-1.png)<!-- -->
 
 There are two other major vacancy categories, “Other vacant” and “For
-seasonal, recreational, or other occasional use”, but there’s no cost
+seasonal, recreational, or other occasional use,” but there’s no cost
 information associated with those units, so they can’t be sorted into
 the appropriate cost bands. Another minor category are housing units
 reserved for migrant farm workers. Collectively, these comprise about
-83,000 units, which is a ton by CT standards. Bridgeport, New Haven,
-Hartford all have about 50,000 units each.
+83,000 units, which is a ton by CT standards. The cities of Bridgeport,
+New Haven, and Hartford all have about 50,000 units each.
 
     ## # A tibble: 3 x 2
     ##   vacancy                                             hhwt
@@ -2037,15 +2055,27 @@ Hartford all have about 50,000 units each.
 
 ## Households who need housing in each cost band
 
-To get a table of gaps and surpluses, I think I need to determine how
-many units are needed in each cost band (so, by default this will be the
-number of households in each income band if low income households should
-pay low income prices, right?), then count up the number of households
-whose costs are in each cost band and add the vacants by contract and
-mortgage costs. So how many households in each income band, vs. how many
-units in each cost band. Seems legit?
+This bar chart is the major summary of this analysis. It shows occupied
+units in each income band versus units available in their cost band. In
+essence, the households in each income band need a unit in their cost
+band.
 
-## Add homeless?
+The data show significant gaps in the extremes… Very Low and High income
+households do not have enough units in their affordability range (though
+with High income households I think we care less about whether they have
+enough high cost units and more that they aren’t squeezing the middle
+out of a place to live).
+
+While there are a lot of middle income units, competition for those
+units is coming from above and below. More housing units in the Very Low
+range are absolutely needed. Since High income households tend to want
+to pay less than 30% for housing, more (well-located and not just single
+family) mid-high units could help alleviate some strain on the middle
+income households.
+
+![](hh_desiring_housing_files/figure-gfm/units%20v%20hh%20bar%20chart-1.png)<!-- -->
+
+## Add homeless households?
 
 Mark suggests <https://cceh.org> for subcounty estimates, but I’m not
 sure how best to align CANs to counties, so instead I think this should
