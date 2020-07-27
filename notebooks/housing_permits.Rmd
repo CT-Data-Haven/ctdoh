@@ -15,7 +15,9 @@ library(cwi)
 library(camiller)
 ```
 
-Permits
+Permits, 2000-2018... can either use https://portal.ct.gov/DECD/Content/About_DECD/Research-and-Publications/01_Access-Research/Exports-and-Housing-and-Income-Data
+
+or the building permit survey, presumably through censusapi
 
 # Fetch
 
