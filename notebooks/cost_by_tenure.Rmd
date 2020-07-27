@@ -1,0 +1,28 @@
+---
+title: "Housing costs by tenure"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+library(cwi)
+library(camiller)
+```
+
+Housing cost by tenure - Probably gonna be PUMS. Method is in desiring housing notebook. Need to submit a new extract with the years we want.
+
+# Fetch
+
+```{r}
+
+```
+
+# Clean
+
+# Calculate change
