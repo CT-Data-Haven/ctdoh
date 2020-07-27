@@ -1,0 +1,28 @@
+---
+title: "Housing permits"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+library(cwi)
+library(camiller)
+```
+
+Permits
+
+# Fetch
+
+```{r}
+
+```
+
+# Clean
+
+# Calculate change
