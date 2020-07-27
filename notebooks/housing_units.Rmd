@@ -1,0 +1,28 @@
+---
+title: "Housing units"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+library(cwi)
+library(camiller)
+```
+
+Change in total units by tenure, units in structure, number bedrooms. Presumably PUMS because ACS is households not units. Might be in permit data? Do this last.
+
+# Fetch
+
+```{r}
+
+```
+
+# Clean
+
+# Calculate change
