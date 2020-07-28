@@ -1,0 +1,3205 @@
+level,name,year,group,value,share
+1_state,Connecticut,2000,total_households,1301670,NA
+1_state,Connecticut,2000,living_alone,344224,0.264
+1_state,Connecticut,2000,married_w_kids,307126,0.236
+1_state,Connecticut,2000,married_no_kids,369341,0.284
+1_state,Connecticut,2000,single_w_kids,112159,0.086
+1_state,Connecticut,2000,other_households,168820,0.13
+1_state,Connecticut,2010,total_households,1359218,NA
+1_state,Connecticut,2010,living_alone,369552,0.272
+1_state,Connecticut,2010,married_w_kids,302764,0.223
+1_state,Connecticut,2010,married_no_kids,384696,0.283
+1_state,Connecticut,2010,single_w_kids,122797,0.09
+1_state,Connecticut,2010,other_households,179409,0.132
+1_state,Connecticut,2018,total_households,1367374,NA
+1_state,Connecticut,2018,living_alone,390350,0.285
+1_state,Connecticut,2018,married_w_kids,256597,0.188
+1_state,Connecticut,2018,married_no_kids,403767,0.295
+1_state,Connecticut,2018,single_w_kids,116440,0.085
+1_state,Connecticut,2018,other_households,200220,0.146
+2_counties,Fairfield County,2000,total_households,324232,NA
+2_counties,Fairfield County,2000,living_alone,77918,0.24
+2_counties,Fairfield County,2000,married_w_kids,86972,0.268
+2_counties,Fairfield County,2000,married_no_kids,92828,0.286
+2_counties,Fairfield County,2000,single_w_kids,23976,0.074
+2_counties,Fairfield County,2000,other_households,42538,0.131
+2_counties,Fairfield County,2010,total_households,331782,NA
+2_counties,Fairfield County,2010,living_alone,85151,0.257
+2_counties,Fairfield County,2010,married_w_kids,88988,0.268
+2_counties,Fairfield County,2010,married_no_kids,90348,0.272
+2_counties,Fairfield County,2010,single_w_kids,26152,0.079
+2_counties,Fairfield County,2010,other_households,41143,0.124
+2_counties,Fairfield County,2018,total_households,340491,NA
+2_counties,Fairfield County,2018,living_alone,84627,0.249
+2_counties,Fairfield County,2018,married_w_kids,81390,0.239
+2_counties,Fairfield County,2018,married_no_kids,100537,0.295
+2_counties,Fairfield County,2018,single_w_kids,27250,0.08
+2_counties,Fairfield County,2018,other_households,46687,0.137
+2_counties,Hartford County,2000,total_households,335098,NA
+2_counties,Hartford County,2000,living_alone,93515,0.279
+2_counties,Hartford County,2000,married_w_kids,72168,0.215
+2_counties,Hartford County,2000,married_no_kids,92628,0.276
+2_counties,Hartford County,2000,single_w_kids,32640,0.097
+2_counties,Hartford County,2000,other_households,44147,0.132
+2_counties,Hartford County,2010,total_households,347625,NA
+2_counties,Hartford County,2010,living_alone,100328,0.289
+2_counties,Hartford County,2010,married_w_kids,70204,0.202
+2_counties,Hartford County,2010,married_no_kids,93001,0.268
+2_counties,Hartford County,2010,single_w_kids,35307,0.102
+2_counties,Hartford County,2010,other_households,48785,0.14
+2_counties,Hartford County,2018,total_households,349064,NA
+2_counties,Hartford County,2018,living_alone,103606,0.297
+2_counties,Hartford County,2018,married_w_kids,63059,0.181
+2_counties,Hartford County,2018,married_no_kids,96689,0.277
+2_counties,Hartford County,2018,single_w_kids,32584,0.093
+2_counties,Hartford County,2018,other_households,53126,0.152
+2_counties,Litchfield County,2000,total_households,71551,NA
+2_counties,Litchfield County,2000,living_alone,18079,0.253
+2_counties,Litchfield County,2000,married_w_kids,18280,0.255
+2_counties,Litchfield County,2000,married_no_kids,22645,0.316
+2_counties,Litchfield County,2000,single_w_kids,4687,0.066
+2_counties,Litchfield County,2000,other_households,7860,0.11
+2_counties,Litchfield County,2010,total_households,76688,NA
+2_counties,Litchfield County,2010,living_alone,20347,0.265
+2_counties,Litchfield County,2010,married_w_kids,17481,0.228
+2_counties,Litchfield County,2010,married_no_kids,25304,0.33
+2_counties,Litchfield County,2010,single_w_kids,5177,0.068
+2_counties,Litchfield County,2010,other_households,8379,0.109
+2_counties,Litchfield County,2018,total_households,73987,NA
+2_counties,Litchfield County,2018,living_alone,20451,0.276
+2_counties,Litchfield County,2018,married_w_kids,13357,0.181
+2_counties,Litchfield County,2018,married_no_kids,25650,0.347
+2_counties,Litchfield County,2018,single_w_kids,4365,0.059
+2_counties,Litchfield County,2018,other_households,10164,0.137
+2_counties,Middlesex County,2000,total_households,61341,NA
+2_counties,Middlesex County,2000,living_alone,16715,0.272
+2_counties,Middlesex County,2000,married_w_kids,14698,0.24
+2_counties,Middlesex County,2000,married_no_kids,18648,0.304
+2_counties,Middlesex County,2000,single_w_kids,3887,0.063
+2_counties,Middlesex County,2000,other_households,7393,0.121
+2_counties,Middlesex County,2010,total_households,66975,NA
+2_counties,Middlesex County,2010,living_alone,17875,0.267
+2_counties,Middlesex County,2010,married_w_kids,15084,0.225
+2_counties,Middlesex County,2010,married_no_kids,21393,0.319
+2_counties,Middlesex County,2010,single_w_kids,4591,0.069
+2_counties,Middlesex County,2010,other_households,8032,0.12
+2_counties,Middlesex County,2018,total_households,66892,NA
+2_counties,Middlesex County,2018,living_alone,19425,0.29
+2_counties,Middlesex County,2018,married_w_kids,11758,0.176
+2_counties,Middlesex County,2018,married_no_kids,22493,0.336
+2_counties,Middlesex County,2018,single_w_kids,4394,0.066
+2_counties,Middlesex County,2018,other_households,8822,0.132
+2_counties,New Haven County,2000,total_households,319040,NA
+2_counties,New Haven County,2000,living_alone,90086,0.282
+2_counties,New Haven County,2000,married_w_kids,68845,0.216
+2_counties,New Haven County,2000,married_no_kids,86160,0.27
+2_counties,New Haven County,2000,single_w_kids,30581,0.096
+2_counties,New Haven County,2000,other_households,43368,0.136
+2_counties,New Haven County,2010,total_households,330785,NA
+2_counties,New Haven County,2010,living_alone,93926,0.284
+2_counties,New Haven County,2010,married_w_kids,66653,0.201
+2_counties,New Haven County,2010,married_no_kids,90087,0.272
+2_counties,New Haven County,2010,single_w_kids,33484,0.101
+2_counties,New Haven County,2010,other_households,46635,0.141
+2_counties,New Haven County,2018,total_households,329857,NA
+2_counties,New Haven County,2018,living_alone,104693,0.317
+2_counties,New Haven County,2018,married_w_kids,51562,0.156
+2_counties,New Haven County,2018,married_no_kids,92898,0.282
+2_counties,New Haven County,2018,single_w_kids,29717,0.09
+2_counties,New Haven County,2018,other_households,50987,0.155
+2_counties,New London County,2000,total_households,99835,NA
+2_counties,New London County,2000,living_alone,26310,0.264
+2_counties,New London County,2000,married_w_kids,23365,0.234
+2_counties,New London County,2000,married_no_kids,29062,0.291
+2_counties,New London County,2000,single_w_kids,8940,0.09
+2_counties,New London County,2000,other_households,12158,0.122
+2_counties,New London County,2010,total_households,106590,NA
+2_counties,New London County,2010,living_alone,28725,0.269
+2_counties,New London County,2010,married_w_kids,21763,0.204
+2_counties,New London County,2010,married_no_kids,32842,0.308
+2_counties,New London County,2010,single_w_kids,9736,0.091
+2_counties,New London County,2010,other_households,13524,0.127
+2_counties,New London County,2018,total_households,107402,NA
+2_counties,New London County,2018,living_alone,31316,0.292
+2_counties,New London County,2018,married_w_kids,17779,0.166
+2_counties,New London County,2018,married_no_kids,33009,0.307
+2_counties,New London County,2018,single_w_kids,10188,0.095
+2_counties,New London County,2018,other_households,15110,0.141
+2_counties,Tolland County,2000,total_households,49431,NA
+2_counties,Tolland County,2000,living_alone,11604,0.235
+2_counties,Tolland County,2000,married_w_kids,13167,0.266
+2_counties,Tolland County,2000,married_no_kids,15492,0.313
+2_counties,Tolland County,2000,single_w_kids,3276,0.066
+2_counties,Tolland County,2000,other_households,5892,0.119
+2_counties,Tolland County,2010,total_households,54452,NA
+2_counties,Tolland County,2010,living_alone,12114,0.222
+2_counties,Tolland County,2010,married_w_kids,13478,0.248
+2_counties,Tolland County,2010,married_no_kids,18295,0.336
+2_counties,Tolland County,2010,single_w_kids,3732,0.069
+2_counties,Tolland County,2010,other_households,6833,0.125
+2_counties,Tolland County,2018,total_households,55232,NA
+2_counties,Tolland County,2018,living_alone,14259,0.258
+2_counties,Tolland County,2018,married_w_kids,10677,0.193
+2_counties,Tolland County,2018,married_no_kids,18252,0.33
+2_counties,Tolland County,2018,single_w_kids,3500,0.063
+2_counties,Tolland County,2018,other_households,8544,0.155
+2_counties,Windham County,2000,total_households,41142,NA
+2_counties,Windham County,2000,living_alone,9997,0.243
+2_counties,Windham County,2000,married_w_kids,9631,0.234
+2_counties,Windham County,2000,married_no_kids,11878,0.289
+2_counties,Windham County,2000,single_w_kids,4172,0.101
+2_counties,Windham County,2000,other_households,5464,0.133
+2_counties,Windham County,2010,total_households,44321,NA
+2_counties,Windham County,2010,living_alone,11086,0.25
+2_counties,Windham County,2010,married_w_kids,9113,0.206
+2_counties,Windham County,2010,married_no_kids,13426,0.303
+2_counties,Windham County,2010,single_w_kids,4618,0.104
+2_counties,Windham County,2010,other_households,6078,0.137
+2_counties,Windham County,2018,total_households,44449,NA
+2_counties,Windham County,2018,living_alone,11973,0.269
+2_counties,Windham County,2018,married_w_kids,7015,0.158
+2_counties,Windham County,2018,married_no_kids,14239,0.32
+2_counties,Windham County,2018,single_w_kids,4442,0.1
+2_counties,Windham County,2018,other_households,6780,0.153
+3_towns,Andover,2000,total_households,1150,NA
+3_towns,Andover,2000,living_alone,218,0.19
+3_towns,Andover,2000,married_w_kids,361,0.314
+3_towns,Andover,2000,married_no_kids,378,0.329
+3_towns,Andover,2000,single_w_kids,70,0.061
+3_towns,Andover,2000,other_households,123,0.107
+3_towns,Andover,2010,total_households,1276,NA
+3_towns,Andover,2010,living_alone,259,0.203
+3_towns,Andover,2010,married_w_kids,331,0.259
+3_towns,Andover,2010,married_no_kids,396,0.31
+3_towns,Andover,2010,single_w_kids,51,0.04
+3_towns,Andover,2010,other_households,239,0.187
+3_towns,Andover,2018,total_households,1235,NA
+3_towns,Andover,2018,living_alone,275,0.223
+3_towns,Andover,2018,married_w_kids,237,0.192
+3_towns,Andover,2018,married_no_kids,555,0.449
+3_towns,Andover,2018,single_w_kids,42,0.034
+3_towns,Andover,2018,other_households,126,0.102
+3_towns,Ansonia,2000,total_households,7507,NA
+3_towns,Ansonia,2000,living_alone,2143,0.285
+3_towns,Ansonia,2000,married_w_kids,1522,0.203
+3_towns,Ansonia,2000,married_no_kids,1942,0.259
+3_towns,Ansonia,2000,single_w_kids,835,0.111
+3_towns,Ansonia,2000,other_households,1065,0.142
+3_towns,Ansonia,2010,total_households,7622,NA
+3_towns,Ansonia,2010,living_alone,2081,0.273
+3_towns,Ansonia,2010,married_w_kids,1561,0.205
+3_towns,Ansonia,2010,married_no_kids,1824,0.239
+3_towns,Ansonia,2010,single_w_kids,751,0.099
+3_towns,Ansonia,2010,other_households,1405,0.184
+3_towns,Ansonia,2018,total_households,7452,NA
+3_towns,Ansonia,2018,living_alone,2492,0.334
+3_towns,Ansonia,2018,married_w_kids,1011,0.136
+3_towns,Ansonia,2018,married_no_kids,1717,0.23
+3_towns,Ansonia,2018,single_w_kids,738,0.099
+3_towns,Ansonia,2018,other_households,1494,0.2
+3_towns,Ashford,2000,total_households,1578,NA
+3_towns,Ashford,2000,living_alone,325,0.206
+3_towns,Ashford,2000,married_w_kids,430,0.272
+3_towns,Ashford,2000,married_no_kids,461,0.292
+3_towns,Ashford,2000,single_w_kids,114,0.072
+3_towns,Ashford,2000,other_households,248,0.157
+3_towns,Ashford,2010,total_households,1686,NA
+3_towns,Ashford,2010,living_alone,424,0.251
+3_towns,Ashford,2010,married_w_kids,349,0.207
+3_towns,Ashford,2010,married_no_kids,612,0.363
+3_towns,Ashford,2010,single_w_kids,75,0.044
+3_towns,Ashford,2010,other_households,226,0.134
+3_towns,Ashford,2018,total_households,1780,NA
+3_towns,Ashford,2018,living_alone,579,0.325
+3_towns,Ashford,2018,married_w_kids,281,0.158
+3_towns,Ashford,2018,married_no_kids,516,0.29
+3_towns,Ashford,2018,single_w_kids,130,0.073
+3_towns,Ashford,2018,other_households,274,0.154
+3_towns,Avon,2000,total_households,6192,NA
+3_towns,Avon,2000,living_alone,1455,0.235
+3_towns,Avon,2000,married_w_kids,1885,0.304
+3_towns,Avon,2000,married_no_kids,2190,0.354
+3_towns,Avon,2000,single_w_kids,221,0.036
+3_towns,Avon,2000,other_households,441,0.071
+3_towns,Avon,2010,total_households,6786,NA
+3_towns,Avon,2010,living_alone,1587,0.234
+3_towns,Avon,2010,married_w_kids,2049,0.302
+3_towns,Avon,2010,married_no_kids,2148,0.317
+3_towns,Avon,2010,single_w_kids,354,0.052
+3_towns,Avon,2010,other_households,648,0.095
+3_towns,Avon,2018,total_households,6968,NA
+3_towns,Avon,2018,living_alone,1678,0.241
+3_towns,Avon,2018,married_w_kids,2179,0.313
+3_towns,Avon,2018,married_no_kids,2532,0.363
+3_towns,Avon,2018,single_w_kids,193,0.028
+3_towns,Avon,2018,other_households,386,0.055
+3_towns,Barkhamsted,2000,total_households,1334,NA
+3_towns,Barkhamsted,2000,living_alone,225,0.169
+3_towns,Barkhamsted,2000,married_w_kids,414,0.31
+3_towns,Barkhamsted,2000,married_no_kids,496,0.372
+3_towns,Barkhamsted,2000,single_w_kids,69,0.052
+3_towns,Barkhamsted,2000,other_households,130,0.097
+3_towns,Barkhamsted,2010,total_households,1407,NA
+3_towns,Barkhamsted,2010,living_alone,245,0.174
+3_towns,Barkhamsted,2010,married_w_kids,449,0.319
+3_towns,Barkhamsted,2010,married_no_kids,561,0.399
+3_towns,Barkhamsted,2010,single_w_kids,62,0.044
+3_towns,Barkhamsted,2010,other_households,90,0.064
+3_towns,Barkhamsted,2018,total_households,1364,NA
+3_towns,Barkhamsted,2018,living_alone,177,0.13
+3_towns,Barkhamsted,2018,married_w_kids,363,0.266
+3_towns,Barkhamsted,2018,married_no_kids,581,0.426
+3_towns,Barkhamsted,2018,single_w_kids,53,0.039
+3_towns,Barkhamsted,2018,other_households,190,0.139
+3_towns,Beacon Falls,2000,total_households,2032,NA
+3_towns,Beacon Falls,2000,living_alone,467,0.23
+3_towns,Beacon Falls,2000,married_w_kids,566,0.279
+3_towns,Beacon Falls,2000,married_no_kids,617,0.304
+3_towns,Beacon Falls,2000,single_w_kids,126,0.062
+3_towns,Beacon Falls,2000,other_households,256,0.126
+3_towns,Beacon Falls,2010,total_households,2278,NA
+3_towns,Beacon Falls,2010,living_alone,615,0.27
+3_towns,Beacon Falls,2010,married_w_kids,534,0.234
+3_towns,Beacon Falls,2010,married_no_kids,777,0.341
+3_towns,Beacon Falls,2010,single_w_kids,194,0.085
+3_towns,Beacon Falls,2010,other_households,158,0.069
+3_towns,Beacon Falls,2018,total_households,2466,NA
+3_towns,Beacon Falls,2018,living_alone,765,0.31
+3_towns,Beacon Falls,2018,married_w_kids,469,0.19
+3_towns,Beacon Falls,2018,married_no_kids,780,0.316
+3_towns,Beacon Falls,2018,single_w_kids,169,0.069
+3_towns,Beacon Falls,2018,other_households,283,0.115
+3_towns,Berlin,2000,total_households,6792,NA
+3_towns,Berlin,2000,living_alone,1415,0.208
+3_towns,Berlin,2000,married_w_kids,2041,0.301
+3_towns,Berlin,2000,married_no_kids,2407,0.354
+3_towns,Berlin,2000,single_w_kids,290,0.043
+3_towns,Berlin,2000,other_households,639,0.094
+3_towns,Berlin,2010,total_households,7467,NA
+3_towns,Berlin,2010,living_alone,1535,0.206
+3_towns,Berlin,2010,married_w_kids,1839,0.246
+3_towns,Berlin,2010,married_no_kids,2668,0.357
+3_towns,Berlin,2010,single_w_kids,459,0.061
+3_towns,Berlin,2010,other_households,966,0.129
+3_towns,Berlin,2018,total_households,8243,NA
+3_towns,Berlin,2018,living_alone,2009,0.244
+3_towns,Berlin,2018,married_w_kids,1592,0.193
+3_towns,Berlin,2018,married_no_kids,3188,0.387
+3_towns,Berlin,2018,single_w_kids,489,0.059
+3_towns,Berlin,2018,other_households,965,0.117
+3_towns,Bethany,2000,total_households,1755,NA
+3_towns,Bethany,2000,living_alone,237,0.135
+3_towns,Bethany,2000,married_w_kids,622,0.354
+3_towns,Bethany,2000,married_no_kids,673,0.383
+3_towns,Bethany,2000,single_w_kids,84,0.048
+3_towns,Bethany,2000,other_households,139,0.079
+3_towns,Bethany,2010,total_households,1888,NA
+3_towns,Bethany,2010,living_alone,222,0.118
+3_towns,Bethany,2010,married_w_kids,662,0.351
+3_towns,Bethany,2010,married_no_kids,803,0.425
+3_towns,Bethany,2010,single_w_kids,89,0.047
+3_towns,Bethany,2010,other_households,112,0.059
+3_towns,Bethany,2018,total_households,1967,NA
+3_towns,Bethany,2018,living_alone,288,0.146
+3_towns,Bethany,2018,married_w_kids,451,0.229
+3_towns,Bethany,2018,married_no_kids,1025,0.521
+3_towns,Bethany,2018,single_w_kids,53,0.027
+3_towns,Bethany,2018,other_households,150,0.076
+3_towns,Bethel,2000,total_households,6505,NA
+3_towns,Bethel,2000,living_alone,1339,0.206
+3_towns,Bethel,2000,married_w_kids,2111,0.325
+3_towns,Bethel,2000,married_no_kids,1948,0.299
+3_towns,Bethel,2000,single_w_kids,400,0.061
+3_towns,Bethel,2000,other_households,707,0.109
+3_towns,Bethel,2010,total_households,6590,NA
+3_towns,Bethel,2010,living_alone,1281,0.194
+3_towns,Bethel,2010,married_w_kids,1867,0.283
+3_towns,Bethel,2010,married_no_kids,2429,0.369
+3_towns,Bethel,2010,single_w_kids,505,0.077
+3_towns,Bethel,2010,other_households,508,0.077
+3_towns,Bethel,2018,total_households,7271,NA
+3_towns,Bethel,2018,living_alone,1933,0.266
+3_towns,Bethel,2018,married_w_kids,1753,0.241
+3_towns,Bethel,2018,married_no_kids,2249,0.309
+3_towns,Bethel,2018,single_w_kids,575,0.079
+3_towns,Bethel,2018,other_households,761,0.105
+3_towns,Bethlehem,2000,total_households,1246,NA
+3_towns,Bethlehem,2000,living_alone,244,0.196
+3_towns,Bethlehem,2000,married_w_kids,385,0.309
+3_towns,Bethlehem,2000,married_no_kids,433,0.348
+3_towns,Bethlehem,2000,single_w_kids,54,0.043
+3_towns,Bethlehem,2000,other_households,130,0.104
+3_towns,Bethlehem,2010,total_households,1485,NA
+3_towns,Bethlehem,2010,living_alone,343,0.231
+3_towns,Bethlehem,2010,married_w_kids,350,0.236
+3_towns,Bethlehem,2010,married_no_kids,580,0.391
+3_towns,Bethlehem,2010,single_w_kids,43,0.029
+3_towns,Bethlehem,2010,other_households,169,0.114
+3_towns,Bethlehem,2018,total_households,1306,NA
+3_towns,Bethlehem,2018,living_alone,324,0.248
+3_towns,Bethlehem,2018,married_w_kids,255,0.195
+3_towns,Bethlehem,2018,married_no_kids,506,0.387
+3_towns,Bethlehem,2018,single_w_kids,70,0.054
+3_towns,Bethlehem,2018,other_households,151,0.116
+3_towns,Bloomfield,2000,total_households,7902,NA
+3_towns,Bloomfield,2000,living_alone,2380,0.301
+3_towns,Bloomfield,2000,married_w_kids,1228,0.155
+3_towns,Bloomfield,2000,married_no_kids,2413,0.305
+3_towns,Bloomfield,2000,single_w_kids,670,0.085
+3_towns,Bloomfield,2000,other_households,1211,0.153
+3_towns,Bloomfield,2010,total_households,8696,NA
+3_towns,Bloomfield,2010,living_alone,3019,0.347
+3_towns,Bloomfield,2010,married_w_kids,1159,0.133
+3_towns,Bloomfield,2010,married_no_kids,2501,0.288
+3_towns,Bloomfield,2010,single_w_kids,632,0.073
+3_towns,Bloomfield,2010,other_households,1385,0.159
+3_towns,Bloomfield,2018,total_households,8613,NA
+3_towns,Bloomfield,2018,living_alone,2816,0.327
+3_towns,Bloomfield,2018,married_w_kids,923,0.107
+3_towns,Bloomfield,2018,married_no_kids,2865,0.333
+3_towns,Bloomfield,2018,single_w_kids,479,0.056
+3_towns,Bloomfield,2018,other_households,1530,0.178
+3_towns,Bolton,2000,total_households,1906,NA
+3_towns,Bolton,2000,living_alone,375,0.197
+3_towns,Bolton,2000,married_w_kids,561,0.294
+3_towns,Bolton,2000,married_no_kids,705,0.37
+3_towns,Bolton,2000,single_w_kids,99,0.052
+3_towns,Bolton,2000,other_households,166,0.087
+3_towns,Bolton,2010,total_households,2061,NA
+3_towns,Bolton,2010,living_alone,513,0.249
+3_towns,Bolton,2010,married_w_kids,400,0.194
+3_towns,Bolton,2010,married_no_kids,775,0.376
+3_towns,Bolton,2010,single_w_kids,116,0.056
+3_towns,Bolton,2010,other_households,257,0.125
+3_towns,Bolton,2018,total_households,1803,NA
+3_towns,Bolton,2018,living_alone,367,0.204
+3_towns,Bolton,2018,married_w_kids,411,0.228
+3_towns,Bolton,2018,married_no_kids,691,0.383
+3_towns,Bolton,2018,single_w_kids,95,0.053
+3_towns,Bolton,2018,other_households,239,0.133
+3_towns,Bozrah,2000,total_households,883,NA
+3_towns,Bozrah,2000,living_alone,173,0.196
+3_towns,Bozrah,2000,married_w_kids,241,0.273
+3_towns,Bozrah,2000,married_no_kids,312,0.353
+3_towns,Bozrah,2000,single_w_kids,47,0.053
+3_towns,Bozrah,2000,other_households,110,0.125
+3_towns,Bozrah,2010,total_households,1098,NA
+3_towns,Bozrah,2010,living_alone,247,0.225
+3_towns,Bozrah,2010,married_w_kids,233,0.212
+3_towns,Bozrah,2010,married_no_kids,388,0.353
+3_towns,Bozrah,2010,single_w_kids,118,0.107
+3_towns,Bozrah,2010,other_households,112,0.102
+3_towns,Bozrah,2018,total_households,989,NA
+3_towns,Bozrah,2018,living_alone,175,0.177
+3_towns,Bozrah,2018,married_w_kids,144,0.146
+3_towns,Bozrah,2018,married_no_kids,442,0.447
+3_towns,Bozrah,2018,single_w_kids,91,0.092
+3_towns,Bozrah,2018,other_households,137,0.139
+3_towns,Branford,2000,total_households,12543,NA
+3_towns,Branford,2000,living_alone,4068,0.324
+3_towns,Branford,2000,married_w_kids,2426,0.193
+3_towns,Branford,2000,married_no_kids,3588,0.286
+3_towns,Branford,2000,single_w_kids,799,0.064
+3_towns,Branford,2000,other_households,1662,0.133
+3_towns,Branford,2010,total_households,12119,NA
+3_towns,Branford,2010,living_alone,3772,0.311
+3_towns,Branford,2010,married_w_kids,2007,0.166
+3_towns,Branford,2010,married_no_kids,3847,0.317
+3_towns,Branford,2010,single_w_kids,770,0.064
+3_towns,Branford,2010,other_households,1723,0.142
+3_towns,Branford,2018,total_households,12430,NA
+3_towns,Branford,2018,living_alone,4262,0.343
+3_towns,Branford,2018,married_w_kids,1542,0.124
+3_towns,Branford,2018,married_no_kids,4115,0.331
+3_towns,Branford,2018,single_w_kids,966,0.078
+3_towns,Branford,2018,other_households,1545,0.124
+3_towns,Bridgeport,2000,total_households,50307,NA
+3_towns,Bridgeport,2000,living_alone,14577,0.29
+3_towns,Bridgeport,2000,married_w_kids,8462,0.168
+3_towns,Bridgeport,2000,married_no_kids,9156,0.182
+3_towns,Bridgeport,2000,single_w_kids,8782,0.175
+3_towns,Bridgeport,2000,other_households,9330,0.185
+3_towns,Bridgeport,2010,total_households,52281,NA
+3_towns,Bridgeport,2010,living_alone,16348,0.313
+3_towns,Bridgeport,2010,married_w_kids,8525,0.163
+3_towns,Bridgeport,2010,married_no_kids,8723,0.167
+3_towns,Bridgeport,2010,single_w_kids,8950,0.171
+3_towns,Bridgeport,2010,other_households,9735,0.186
+3_towns,Bridgeport,2018,total_households,50547,NA
+3_towns,Bridgeport,2018,living_alone,14467,0.286
+3_towns,Bridgeport,2018,married_w_kids,7625,0.151
+3_towns,Bridgeport,2018,married_no_kids,9127,0.181
+3_towns,Bridgeport,2018,single_w_kids,8192,0.162
+3_towns,Bridgeport,2018,other_households,11136,0.22
+3_towns,Bridgewater,2000,total_households,703,NA
+3_towns,Bridgewater,2000,living_alone,148,0.211
+3_towns,Bridgewater,2000,married_w_kids,183,0.26
+3_towns,Bridgewater,2000,married_no_kids,291,0.414
+3_towns,Bridgewater,2000,single_w_kids,24,0.034
+3_towns,Bridgewater,2000,other_households,57,0.081
+3_towns,Bridgewater,2010,total_households,734,NA
+3_towns,Bridgewater,2010,living_alone,172,0.234
+3_towns,Bridgewater,2010,married_w_kids,122,0.166
+3_towns,Bridgewater,2010,married_no_kids,365,0.497
+3_towns,Bridgewater,2010,single_w_kids,28,0.038
+3_towns,Bridgewater,2010,other_households,47,0.064
+3_towns,Bridgewater,2018,total_households,710,NA
+3_towns,Bridgewater,2018,living_alone,156,0.22
+3_towns,Bridgewater,2018,married_w_kids,104,0.146
+3_towns,Bridgewater,2018,married_no_kids,343,0.483
+3_towns,Bridgewater,2018,single_w_kids,25,0.035
+3_towns,Bridgewater,2018,other_households,82,0.115
+3_towns,Bristol,2000,total_households,24886,NA
+3_towns,Bristol,2000,living_alone,7180,0.289
+3_towns,Bristol,2000,married_w_kids,5236,0.21
+3_towns,Bristol,2000,married_no_kids,7114,0.286
+3_towns,Bristol,2000,single_w_kids,2131,0.086
+3_towns,Bristol,2000,other_households,3225,0.13
+3_towns,Bristol,2010,total_households,24966,NA
+3_towns,Bristol,2010,living_alone,7733,0.31
+3_towns,Bristol,2010,married_w_kids,4762,0.191
+3_towns,Bristol,2010,married_no_kids,6707,0.269
+3_towns,Bristol,2010,single_w_kids,2187,0.088
+3_towns,Bristol,2010,other_households,3577,0.143
+3_towns,Bristol,2018,total_households,24460,NA
+3_towns,Bristol,2018,living_alone,7806,0.319
+3_towns,Bristol,2018,married_w_kids,4167,0.17
+3_towns,Bristol,2018,married_no_kids,6375,0.261
+3_towns,Bristol,2018,single_w_kids,2241,0.092
+3_towns,Bristol,2018,other_households,3871,0.158
+3_towns,Brookfield,2000,total_households,5572,NA
+3_towns,Brookfield,2000,living_alone,961,0.172
+3_towns,Brookfield,2000,married_w_kids,1905,0.342
+3_towns,Brookfield,2000,married_no_kids,1892,0.34
+3_towns,Brookfield,2000,single_w_kids,271,0.049
+3_towns,Brookfield,2000,other_households,543,0.097
+3_towns,Brookfield,2010,total_households,5869,NA
+3_towns,Brookfield,2010,living_alone,1019,0.174
+3_towns,Brookfield,2010,married_w_kids,1796,0.306
+3_towns,Brookfield,2010,married_no_kids,2137,0.364
+3_towns,Brookfield,2010,single_w_kids,334,0.057
+3_towns,Brookfield,2010,other_households,583,0.099
+3_towns,Brookfield,2018,total_households,6190,NA
+3_towns,Brookfield,2018,living_alone,1289,0.208
+3_towns,Brookfield,2018,married_w_kids,1684,0.272
+3_towns,Brookfield,2018,married_no_kids,2278,0.368
+3_towns,Brookfield,2018,single_w_kids,286,0.046
+3_towns,Brookfield,2018,other_households,653,0.105
+3_towns,Brooklyn,2000,total_households,2531,NA
+3_towns,Brooklyn,2000,living_alone,553,0.218
+3_towns,Brooklyn,2000,married_w_kids,622,0.246
+3_towns,Brooklyn,2000,married_no_kids,819,0.324
+3_towns,Brooklyn,2000,single_w_kids,238,0.094
+3_towns,Brooklyn,2000,other_households,299,0.118
+3_towns,Brooklyn,2010,total_households,2654,NA
+3_towns,Brooklyn,2010,living_alone,443,0.167
+3_towns,Brooklyn,2010,married_w_kids,671,0.253
+3_towns,Brooklyn,2010,married_no_kids,925,0.349
+3_towns,Brooklyn,2010,single_w_kids,333,0.125
+3_towns,Brooklyn,2010,other_households,282,0.106
+3_towns,Brooklyn,2018,total_households,3126,NA
+3_towns,Brooklyn,2018,living_alone,786,0.251
+3_towns,Brooklyn,2018,married_w_kids,594,0.19
+3_towns,Brooklyn,2018,married_no_kids,1304,0.417
+3_towns,Brooklyn,2018,single_w_kids,201,0.064
+3_towns,Brooklyn,2018,other_households,241,0.077
+3_towns,Burlington,2000,total_households,2840,NA
+3_towns,Burlington,2000,living_alone,319,0.112
+3_towns,Burlington,2000,married_w_kids,1076,0.379
+3_towns,Burlington,2000,married_no_kids,1080,0.38
+3_towns,Burlington,2000,single_w_kids,136,0.048
+3_towns,Burlington,2000,other_households,229,0.081
+3_towns,Burlington,2010,total_households,3183,NA
+3_towns,Burlington,2010,living_alone,427,0.134
+3_towns,Burlington,2010,married_w_kids,1247,0.392
+3_towns,Burlington,2010,married_no_kids,1057,0.332
+3_towns,Burlington,2010,single_w_kids,244,0.077
+3_towns,Burlington,2010,other_households,208,0.065
+3_towns,Burlington,2018,total_households,3367,NA
+3_towns,Burlington,2018,living_alone,487,0.145
+3_towns,Burlington,2018,married_w_kids,989,0.294
+3_towns,Burlington,2018,married_no_kids,1317,0.391
+3_towns,Burlington,2018,single_w_kids,185,0.055
+3_towns,Burlington,2018,other_households,389,0.116
+3_towns,Canaan,2000,total_households,445,NA
+3_towns,Canaan,2000,living_alone,123,0.276
+3_towns,Canaan,2000,married_w_kids,111,0.249
+3_towns,Canaan,2000,married_no_kids,146,0.328
+3_towns,Canaan,2000,single_w_kids,24,0.054
+3_towns,Canaan,2000,other_households,41,0.092
+3_towns,Canaan,2010,total_households,579,NA
+3_towns,Canaan,2010,living_alone,221,0.382
+3_towns,Canaan,2010,married_w_kids,72,0.124
+3_towns,Canaan,2010,married_no_kids,195,0.337
+3_towns,Canaan,2010,single_w_kids,46,0.079
+3_towns,Canaan,2010,other_households,45,0.078
+3_towns,Canaan,2018,total_households,531,NA
+3_towns,Canaan,2018,living_alone,149,0.281
+3_towns,Canaan,2018,married_w_kids,80,0.151
+3_towns,Canaan,2018,married_no_kids,208,0.392
+3_towns,Canaan,2018,single_w_kids,26,0.049
+3_towns,Canaan,2018,other_households,68,0.128
+3_towns,Canterbury,2000,total_households,1717,NA
+3_towns,Canterbury,2000,living_alone,286,0.167
+3_towns,Canterbury,2000,married_w_kids,522,0.304
+3_towns,Canterbury,2000,married_no_kids,603,0.351
+3_towns,Canterbury,2000,single_w_kids,117,0.068
+3_towns,Canterbury,2000,other_households,189,0.11
+3_towns,Canterbury,2010,total_households,1965,NA
+3_towns,Canterbury,2010,living_alone,462,0.235
+3_towns,Canterbury,2010,married_w_kids,490,0.249
+3_towns,Canterbury,2010,married_no_kids,627,0.319
+3_towns,Canterbury,2010,single_w_kids,110,0.056
+3_towns,Canterbury,2010,other_households,276,0.14
+3_towns,Canterbury,2018,total_households,1839,NA
+3_towns,Canterbury,2018,living_alone,267,0.145
+3_towns,Canterbury,2018,married_w_kids,376,0.204
+3_towns,Canterbury,2018,married_no_kids,821,0.446
+3_towns,Canterbury,2018,single_w_kids,167,0.091
+3_towns,Canterbury,2018,other_households,208,0.113
+3_towns,Canton,2000,total_households,3516,NA
+3_towns,Canton,2000,living_alone,855,0.243
+3_towns,Canton,2000,married_w_kids,954,0.271
+3_towns,Canton,2000,married_no_kids,1163,0.331
+3_towns,Canton,2000,single_w_kids,221,0.063
+3_towns,Canton,2000,other_households,323,0.092
+3_towns,Canton,2010,total_households,4001,NA
+3_towns,Canton,2010,living_alone,1002,0.25
+3_towns,Canton,2010,married_w_kids,1020,0.255
+3_towns,Canton,2010,married_no_kids,1323,0.331
+3_towns,Canton,2010,single_w_kids,266,0.066
+3_towns,Canton,2010,other_households,390,0.097
+3_towns,Canton,2018,total_households,4076,NA
+3_towns,Canton,2018,living_alone,1074,0.263
+3_towns,Canton,2018,married_w_kids,959,0.235
+3_towns,Canton,2018,married_no_kids,1520,0.373
+3_towns,Canton,2018,single_w_kids,250,0.061
+3_towns,Canton,2018,other_households,273,0.067
+3_towns,Chaplin,2000,total_households,858,NA
+3_towns,Chaplin,2000,living_alone,175,0.204
+3_towns,Chaplin,2000,married_w_kids,225,0.262
+3_towns,Chaplin,2000,married_no_kids,278,0.324
+3_towns,Chaplin,2000,single_w_kids,63,0.073
+3_towns,Chaplin,2000,other_households,117,0.136
+3_towns,Chaplin,2010,total_households,932,NA
+3_towns,Chaplin,2010,living_alone,207,0.222
+3_towns,Chaplin,2010,married_w_kids,211,0.226
+3_towns,Chaplin,2010,married_no_kids,294,0.315
+3_towns,Chaplin,2010,single_w_kids,104,0.112
+3_towns,Chaplin,2010,other_households,116,0.124
+3_towns,Chaplin,2018,total_households,910,NA
+3_towns,Chaplin,2018,living_alone,215,0.236
+3_towns,Chaplin,2018,married_w_kids,133,0.146
+3_towns,Chaplin,2018,married_no_kids,345,0.379
+3_towns,Chaplin,2018,single_w_kids,50,0.055
+3_towns,Chaplin,2018,other_households,167,0.184
+3_towns,Cheshire,2000,total_households,9349,NA
+3_towns,Cheshire,2000,living_alone,1815,0.194
+3_towns,Cheshire,2000,married_w_kids,3227,0.345
+3_towns,Cheshire,2000,married_no_kids,3175,0.34
+3_towns,Cheshire,2000,single_w_kids,430,0.046
+3_towns,Cheshire,2000,other_households,702,0.075
+3_towns,Cheshire,2010,total_households,9214,NA
+3_towns,Cheshire,2010,living_alone,1641,0.178
+3_towns,Cheshire,2010,married_w_kids,3347,0.363
+3_towns,Cheshire,2010,married_no_kids,3019,0.328
+3_towns,Cheshire,2010,single_w_kids,418,0.045
+3_towns,Cheshire,2010,other_households,789,0.086
+3_towns,Cheshire,2018,total_households,10162,NA
+3_towns,Cheshire,2018,living_alone,2217,0.218
+3_towns,Cheshire,2018,married_w_kids,2422,0.238
+3_towns,Cheshire,2018,married_no_kids,4233,0.417
+3_towns,Cheshire,2018,single_w_kids,373,0.037
+3_towns,Cheshire,2018,other_households,917,0.09
+3_towns,Chester,2000,total_households,1510,NA
+3_towns,Chester,2000,living_alone,425,0.281
+3_towns,Chester,2000,married_w_kids,371,0.246
+3_towns,Chester,2000,married_no_kids,488,0.323
+3_towns,Chester,2000,single_w_kids,78,0.052
+3_towns,Chester,2000,other_households,148,0.098
+3_towns,Chester,2010,total_households,1620,NA
+3_towns,Chester,2010,living_alone,407,0.251
+3_towns,Chester,2010,married_w_kids,359,0.222
+3_towns,Chester,2010,married_no_kids,500,0.309
+3_towns,Chester,2010,single_w_kids,115,0.071
+3_towns,Chester,2010,other_households,239,0.148
+3_towns,Chester,2018,total_households,1720,NA
+3_towns,Chester,2018,living_alone,482,0.28
+3_towns,Chester,2018,married_w_kids,267,0.155
+3_towns,Chester,2018,married_no_kids,634,0.369
+3_towns,Chester,2018,single_w_kids,137,0.08
+3_towns,Chester,2018,other_households,200,0.116
+3_towns,Clinton,2000,total_households,5134,NA
+3_towns,Clinton,2000,living_alone,1216,0.237
+3_towns,Clinton,2000,married_w_kids,1394,0.272
+3_towns,Clinton,2000,married_no_kids,1639,0.319
+3_towns,Clinton,2000,single_w_kids,320,0.062
+3_towns,Clinton,2000,other_households,565,0.11
+3_towns,Clinton,2010,total_households,5434,NA
+3_towns,Clinton,2010,living_alone,1244,0.229
+3_towns,Clinton,2010,married_w_kids,1374,0.253
+3_towns,Clinton,2010,married_no_kids,1951,0.359
+3_towns,Clinton,2010,single_w_kids,250,0.046
+3_towns,Clinton,2010,other_households,615,0.113
+3_towns,Clinton,2018,total_households,5460,NA
+3_towns,Clinton,2018,living_alone,1429,0.262
+3_towns,Clinton,2018,married_w_kids,1022,0.187
+3_towns,Clinton,2018,married_no_kids,1886,0.345
+3_towns,Clinton,2018,single_w_kids,357,0.065
+3_towns,Clinton,2018,other_households,766,0.14
+3_towns,Colchester,2000,total_households,5225,NA
+3_towns,Colchester,2000,living_alone,953,0.182
+3_towns,Colchester,2000,married_w_kids,1816,0.348
+3_towns,Colchester,2000,married_no_kids,1524,0.292
+3_towns,Colchester,2000,single_w_kids,430,0.082
+3_towns,Colchester,2000,other_households,502,0.096
+3_towns,Colchester,2010,total_households,5836,NA
+3_towns,Colchester,2010,living_alone,1001,0.172
+3_towns,Colchester,2010,married_w_kids,1966,0.337
+3_towns,Colchester,2010,married_no_kids,1701,0.291
+3_towns,Colchester,2010,single_w_kids,602,0.103
+3_towns,Colchester,2010,other_households,566,0.097
+3_towns,Colchester,2018,total_households,5973,NA
+3_towns,Colchester,2018,living_alone,1242,0.208
+3_towns,Colchester,2018,married_w_kids,1243,0.208
+3_towns,Colchester,2018,married_no_kids,2084,0.349
+3_towns,Colchester,2018,single_w_kids,690,0.116
+3_towns,Colchester,2018,other_households,714,0.12
+3_towns,Colebrook,2000,total_households,566,NA
+3_towns,Colebrook,2000,living_alone,111,0.196
+3_towns,Colebrook,2000,married_w_kids,159,0.281
+3_towns,Colebrook,2000,married_no_kids,210,0.371
+3_towns,Colebrook,2000,single_w_kids,23,0.041
+3_towns,Colebrook,2000,other_households,63,0.111
+3_towns,Colebrook,2010,total_households,554,NA
+3_towns,Colebrook,2010,living_alone,118,0.213
+3_towns,Colebrook,2010,married_w_kids,144,0.26
+3_towns,Colebrook,2010,married_no_kids,204,0.368
+3_towns,Colebrook,2010,single_w_kids,27,0.049
+3_towns,Colebrook,2010,other_households,61,0.11
+3_towns,Colebrook,2018,total_households,588,NA
+3_towns,Colebrook,2018,living_alone,138,0.235
+3_towns,Colebrook,2018,married_w_kids,120,0.204
+3_towns,Colebrook,2018,married_no_kids,231,0.393
+3_towns,Colebrook,2018,single_w_kids,23,0.039
+3_towns,Colebrook,2018,other_households,76,0.129
+3_towns,Columbia,2000,total_households,1864,NA
+3_towns,Columbia,2000,living_alone,323,0.173
+3_towns,Columbia,2000,married_w_kids,577,0.31
+3_towns,Columbia,2000,married_no_kids,692,0.371
+3_towns,Columbia,2000,single_w_kids,97,0.052
+3_towns,Columbia,2000,other_households,175,0.094
+3_towns,Columbia,2010,total_households,2109,NA
+3_towns,Columbia,2010,living_alone,369,0.175
+3_towns,Columbia,2010,married_w_kids,536,0.254
+3_towns,Columbia,2010,married_no_kids,908,0.431
+3_towns,Columbia,2010,single_w_kids,92,0.044
+3_towns,Columbia,2010,other_households,204,0.097
+3_towns,Columbia,2018,total_households,2073,NA
+3_towns,Columbia,2018,living_alone,266,0.128
+3_towns,Columbia,2018,married_w_kids,532,0.257
+3_towns,Columbia,2018,married_no_kids,1058,0.51
+3_towns,Columbia,2018,single_w_kids,79,0.038
+3_towns,Columbia,2018,other_households,138,0.067
+3_towns,Cornwall,2000,total_households,615,NA
+3_towns,Cornwall,2000,living_alone,189,0.307
+3_towns,Cornwall,2000,married_w_kids,136,0.221
+3_towns,Cornwall,2000,married_no_kids,187,0.304
+3_towns,Cornwall,2000,single_w_kids,45,0.073
+3_towns,Cornwall,2000,other_households,58,0.094
+3_towns,Cornwall,2010,total_households,678,NA
+3_towns,Cornwall,2010,living_alone,200,0.295
+3_towns,Cornwall,2010,married_w_kids,169,0.249
+3_towns,Cornwall,2010,married_no_kids,215,0.317
+3_towns,Cornwall,2010,single_w_kids,21,0.031
+3_towns,Cornwall,2010,other_households,73,0.108
+3_towns,Cornwall,2018,total_households,571,NA
+3_towns,Cornwall,2018,living_alone,148,0.259
+3_towns,Cornwall,2018,married_w_kids,105,0.184
+3_towns,Cornwall,2018,married_no_kids,229,0.401
+3_towns,Cornwall,2018,single_w_kids,35,0.061
+3_towns,Cornwall,2018,other_households,54,0.095
+3_towns,Coventry,2000,total_households,4261,NA
+3_towns,Coventry,2000,living_alone,791,0.186
+3_towns,Coventry,2000,married_w_kids,1312,0.308
+3_towns,Coventry,2000,married_no_kids,1415,0.332
+3_towns,Coventry,2000,single_w_kids,283,0.066
+3_towns,Coventry,2000,other_households,460,0.108
+3_towns,Coventry,2010,total_households,4767,NA
+3_towns,Coventry,2010,living_alone,917,0.192
+3_towns,Coventry,2010,married_w_kids,1380,0.289
+3_towns,Coventry,2010,married_no_kids,1728,0.362
+3_towns,Coventry,2010,single_w_kids,389,0.082
+3_towns,Coventry,2010,other_households,353,0.074
+3_towns,Coventry,2018,total_households,4774,NA
+3_towns,Coventry,2018,living_alone,1021,0.214
+3_towns,Coventry,2018,married_w_kids,987,0.207
+3_towns,Coventry,2018,married_no_kids,1663,0.348
+3_towns,Coventry,2018,single_w_kids,397,0.083
+3_towns,Coventry,2018,other_households,706,0.148
+3_towns,Cromwell,2000,total_households,5212,NA
+3_towns,Cromwell,2000,living_alone,1578,0.303
+3_towns,Cromwell,2000,married_w_kids,1184,0.227
+3_towns,Cromwell,2000,married_no_kids,1526,0.293
+3_towns,Cromwell,2000,single_w_kids,278,0.053
+3_towns,Cromwell,2000,other_households,646,0.124
+3_towns,Cromwell,2010,total_households,5449,NA
+3_towns,Cromwell,2010,living_alone,1520,0.279
+3_towns,Cromwell,2010,married_w_kids,1287,0.236
+3_towns,Cromwell,2010,married_no_kids,1693,0.311
+3_towns,Cromwell,2010,single_w_kids,367,0.067
+3_towns,Cromwell,2010,other_households,582,0.107
+3_towns,Cromwell,2018,total_households,5819,NA
+3_towns,Cromwell,2018,living_alone,1978,0.34
+3_towns,Cromwell,2018,married_w_kids,1088,0.187
+3_towns,Cromwell,2018,married_no_kids,1795,0.308
+3_towns,Cromwell,2018,single_w_kids,328,0.056
+3_towns,Cromwell,2018,other_households,630,0.108
+3_towns,Danbury,2000,total_households,27183,NA
+3_towns,Danbury,2000,living_alone,7130,0.262
+3_towns,Danbury,2000,married_w_kids,6403,0.236
+3_towns,Danbury,2000,married_no_kids,7491,0.276
+3_towns,Danbury,2000,single_w_kids,1841,0.068
+3_towns,Danbury,2000,other_households,4318,0.159
+3_towns,Danbury,2010,total_households,29552,NA
+3_towns,Danbury,2010,living_alone,8279,0.28
+3_towns,Danbury,2010,married_w_kids,6750,0.228
+3_towns,Danbury,2010,married_no_kids,7761,0.263
+3_towns,Danbury,2010,single_w_kids,2465,0.083
+3_towns,Danbury,2010,other_households,4297,0.145
+3_towns,Danbury,2018,total_households,29736,NA
+3_towns,Danbury,2018,living_alone,8018,0.27
+3_towns,Danbury,2018,married_w_kids,6035,0.203
+3_towns,Danbury,2018,married_no_kids,7830,0.263
+3_towns,Danbury,2018,single_w_kids,2866,0.096
+3_towns,Danbury,2018,other_households,4987,0.168
+3_towns,Darien,2000,total_households,6592,NA
+3_towns,Darien,2000,living_alone,1027,0.156
+3_towns,Darien,2000,married_w_kids,2833,0.43
+3_towns,Darien,2000,married_no_kids,2078,0.315
+3_towns,Darien,2000,single_w_kids,223,0.034
+3_towns,Darien,2000,other_households,431,0.065
+3_towns,Darien,2010,total_households,6713,NA
+3_towns,Darien,2010,living_alone,1164,0.173
+3_towns,Darien,2010,married_w_kids,2912,0.434
+3_towns,Darien,2010,married_no_kids,1917,0.286
+3_towns,Darien,2010,single_w_kids,443,0.066
+3_towns,Darien,2010,other_households,277,0.041
+3_towns,Darien,2018,total_households,6858,NA
+3_towns,Darien,2018,living_alone,1031,0.15
+3_towns,Darien,2018,married_w_kids,3123,0.455
+3_towns,Darien,2018,married_no_kids,1990,0.29
+3_towns,Darien,2018,single_w_kids,316,0.046
+3_towns,Darien,2018,other_households,398,0.058
+3_towns,Deep River,2000,total_households,1824,NA
+3_towns,Deep River,2000,living_alone,437,0.24
+3_towns,Deep River,2000,married_w_kids,423,0.232
+3_towns,Deep River,2000,married_no_kids,609,0.334
+3_towns,Deep River,2000,single_w_kids,128,0.07
+3_towns,Deep River,2000,other_households,227,0.124
+3_towns,Deep River,2010,total_households,1893,NA
+3_towns,Deep River,2010,living_alone,441,0.233
+3_towns,Deep River,2010,married_w_kids,445,0.235
+3_towns,Deep River,2010,married_no_kids,726,0.384
+3_towns,Deep River,2010,single_w_kids,85,0.045
+3_towns,Deep River,2010,other_households,196,0.104
+3_towns,Deep River,2018,total_households,1892,NA
+3_towns,Deep River,2018,living_alone,512,0.271
+3_towns,Deep River,2018,married_w_kids,376,0.199
+3_towns,Deep River,2018,married_no_kids,544,0.288
+3_towns,Deep River,2018,single_w_kids,195,0.103
+3_towns,Deep River,2018,other_households,265,0.14
+3_towns,Derby,2000,total_households,5252,NA
+3_towns,Derby,2000,living_alone,1701,0.324
+3_towns,Derby,2000,married_w_kids,933,0.178
+3_towns,Derby,2000,married_no_kids,1382,0.263
+3_towns,Derby,2000,single_w_kids,484,0.092
+3_towns,Derby,2000,other_households,752,0.143
+3_towns,Derby,2010,total_households,4974,NA
+3_towns,Derby,2010,living_alone,1611,0.324
+3_towns,Derby,2010,married_w_kids,897,0.18
+3_towns,Derby,2010,married_no_kids,1402,0.282
+3_towns,Derby,2010,single_w_kids,553,0.111
+3_towns,Derby,2010,other_households,511,0.103
+3_towns,Derby,2018,total_households,5011,NA
+3_towns,Derby,2018,living_alone,1699,0.339
+3_towns,Derby,2018,married_w_kids,672,0.134
+3_towns,Derby,2018,married_no_kids,1312,0.262
+3_towns,Derby,2018,single_w_kids,490,0.098
+3_towns,Derby,2018,other_households,838,0.167
+3_towns,Durham,2000,total_households,2277,NA
+3_towns,Durham,2000,living_alone,330,0.145
+3_towns,Durham,2000,married_w_kids,834,0.366
+3_towns,Durham,2000,married_no_kids,812,0.357
+3_towns,Durham,2000,single_w_kids,104,0.046
+3_towns,Durham,2000,other_households,197,0.087
+3_towns,Durham,2010,total_households,2560,NA
+3_towns,Durham,2010,living_alone,343,0.134
+3_towns,Durham,2010,married_w_kids,861,0.336
+3_towns,Durham,2010,married_no_kids,1046,0.409
+3_towns,Durham,2010,single_w_kids,110,0.043
+3_towns,Durham,2010,other_households,200,0.078
+3_towns,Durham,2018,total_households,2665,NA
+3_towns,Durham,2018,living_alone,488,0.183
+3_towns,Durham,2018,married_w_kids,490,0.184
+3_towns,Durham,2018,married_no_kids,1253,0.47
+3_towns,Durham,2018,single_w_kids,254,0.095
+3_towns,Durham,2018,other_households,180,0.068
+3_towns,East Granby,2000,total_households,1848,NA
+3_towns,East Granby,2000,living_alone,408,0.221
+3_towns,East Granby,2000,married_w_kids,550,0.298
+3_towns,East Granby,2000,married_no_kids,610,0.33
+3_towns,East Granby,2000,single_w_kids,108,0.058
+3_towns,East Granby,2000,other_households,172,0.093
+3_towns,East Granby,2010,total_households,2005,NA
+3_towns,East Granby,2010,living_alone,434,0.216
+3_towns,East Granby,2010,married_w_kids,609,0.304
+3_towns,East Granby,2010,married_no_kids,786,0.392
+3_towns,East Granby,2010,single_w_kids,55,0.027
+3_towns,East Granby,2010,other_households,121,0.06
+3_towns,East Granby,2018,total_households,2125,NA
+3_towns,East Granby,2018,living_alone,496,0.233
+3_towns,East Granby,2018,married_w_kids,537,0.253
+3_towns,East Granby,2018,married_no_kids,583,0.274
+3_towns,East Granby,2018,single_w_kids,265,0.125
+3_towns,East Granby,2018,other_households,244,0.115
+3_towns,East Haddam,2000,total_households,3174,NA
+3_towns,East Haddam,2000,living_alone,679,0.214
+3_towns,East Haddam,2000,married_w_kids,942,0.297
+3_towns,East Haddam,2000,married_no_kids,1035,0.326
+3_towns,East Haddam,2000,single_w_kids,174,0.055
+3_towns,East Haddam,2000,other_households,344,0.108
+3_towns,East Haddam,2010,total_households,3600,NA
+3_towns,East Haddam,2010,living_alone,736,0.204
+3_towns,East Haddam,2010,married_w_kids,907,0.252
+3_towns,East Haddam,2010,married_no_kids,1423,0.395
+3_towns,East Haddam,2010,single_w_kids,231,0.064
+3_towns,East Haddam,2010,other_households,303,0.084
+3_towns,East Haddam,2018,total_households,3683,NA
+3_towns,East Haddam,2018,living_alone,880,0.239
+3_towns,East Haddam,2018,married_w_kids,828,0.225
+3_towns,East Haddam,2018,married_no_kids,1493,0.405
+3_towns,East Haddam,2018,single_w_kids,97,0.026
+3_towns,East Haddam,2018,other_households,385,0.105
+3_towns,East Hampton,2000,total_households,4126,NA
+3_towns,East Hampton,2000,living_alone,847,0.205
+3_towns,East Hampton,2000,married_w_kids,1243,0.301
+3_towns,East Hampton,2000,married_no_kids,1261,0.306
+3_towns,East Hampton,2000,single_w_kids,269,0.065
+3_towns,East Hampton,2000,other_households,506,0.123
+3_towns,East Hampton,2010,total_households,4506,NA
+3_towns,East Hampton,2010,living_alone,882,0.196
+3_towns,East Hampton,2010,married_w_kids,1228,0.273
+3_towns,East Hampton,2010,married_no_kids,1605,0.356
+3_towns,East Hampton,2010,single_w_kids,198,0.044
+3_towns,East Hampton,2010,other_households,593,0.132
+3_towns,East Hampton,2018,total_households,4975,NA
+3_towns,East Hampton,2018,living_alone,1114,0.224
+3_towns,East Hampton,2018,married_w_kids,1224,0.246
+3_towns,East Hampton,2018,married_no_kids,1891,0.38
+3_towns,East Hampton,2018,single_w_kids,125,0.025
+3_towns,East Hampton,2018,other_households,621,0.125
+3_towns,East Hartford,2000,total_households,20206,NA
+3_towns,East Hartford,2000,living_alone,6104,0.302
+3_towns,East Hartford,2000,married_w_kids,3278,0.162
+3_towns,East Hartford,2000,married_no_kids,5111,0.253
+3_towns,East Hartford,2000,single_w_kids,2629,0.13
+3_towns,East Hartford,2000,other_households,3084,0.153
+3_towns,East Hartford,2010,total_households,20201,NA
+3_towns,East Hartford,2010,living_alone,5827,0.288
+3_towns,East Hartford,2010,married_w_kids,3181,0.157
+3_towns,East Hartford,2010,married_no_kids,4514,0.223
+3_towns,East Hartford,2010,single_w_kids,2948,0.146
+3_towns,East Hartford,2010,other_households,3731,0.185
+3_towns,East Hartford,2018,total_households,19060,NA
+3_towns,East Hartford,2018,living_alone,5528,0.29
+3_towns,East Hartford,2018,married_w_kids,2869,0.151
+3_towns,East Hartford,2018,married_no_kids,4251,0.223
+3_towns,East Hartford,2018,single_w_kids,2463,0.129
+3_towns,East Hartford,2018,other_households,3949,0.207
+3_towns,East Haven,2000,total_households,11219,NA
+3_towns,East Haven,2000,living_alone,3115,0.278
+3_towns,East Haven,2000,married_w_kids,2381,0.212
+3_towns,East Haven,2000,married_no_kids,3291,0.293
+3_towns,East Haven,2000,single_w_kids,783,0.07
+3_towns,East Haven,2000,other_households,1649,0.147
+3_towns,East Haven,2010,total_households,11506,NA
+3_towns,East Haven,2010,living_alone,3282,0.285
+3_towns,East Haven,2010,married_w_kids,2103,0.183
+3_towns,East Haven,2010,married_no_kids,3330,0.289
+3_towns,East Haven,2010,single_w_kids,950,0.083
+3_towns,East Haven,2010,other_households,1841,0.16
+3_towns,East Haven,2018,total_households,11113,NA
+3_towns,East Haven,2018,living_alone,3572,0.321
+3_towns,East Haven,2018,married_w_kids,1496,0.135
+3_towns,East Haven,2018,married_no_kids,3250,0.292
+3_towns,East Haven,2018,single_w_kids,974,0.088
+3_towns,East Haven,2018,other_households,1821,0.164
+3_towns,East Lyme,2000,total_households,6308,NA
+3_towns,East Lyme,2000,living_alone,1468,0.233
+3_towns,East Lyme,2000,married_w_kids,1659,0.263
+3_towns,East Lyme,2000,married_no_kids,2187,0.347
+3_towns,East Lyme,2000,single_w_kids,431,0.068
+3_towns,East Lyme,2000,other_households,563,0.089
+3_towns,East Lyme,2010,total_households,7042,NA
+3_towns,East Lyme,2010,living_alone,1705,0.242
+3_towns,East Lyme,2010,married_w_kids,1618,0.23
+3_towns,East Lyme,2010,married_no_kids,2562,0.364
+3_towns,East Lyme,2010,single_w_kids,463,0.066
+3_towns,East Lyme,2010,other_households,694,0.099
+3_towns,East Lyme,2018,total_households,7287,NA
+3_towns,East Lyme,2018,living_alone,1928,0.265
+3_towns,East Lyme,2018,married_w_kids,1166,0.16
+3_towns,East Lyme,2018,married_no_kids,2820,0.387
+3_towns,East Lyme,2018,single_w_kids,469,0.064
+3_towns,East Lyme,2018,other_households,904,0.124
+3_towns,East Windsor,2000,total_households,4078,NA
+3_towns,East Windsor,2000,living_alone,1224,0.3
+3_towns,East Windsor,2000,married_w_kids,833,0.204
+3_towns,East Windsor,2000,married_no_kids,1151,0.282
+3_towns,East Windsor,2000,single_w_kids,287,0.07
+3_towns,East Windsor,2000,other_households,583,0.143
+3_towns,East Windsor,2010,total_households,4442,NA
+3_towns,East Windsor,2010,living_alone,1237,0.278
+3_towns,East Windsor,2010,married_w_kids,861,0.194
+3_towns,East Windsor,2010,married_no_kids,1316,0.296
+3_towns,East Windsor,2010,single_w_kids,380,0.086
+3_towns,East Windsor,2010,other_households,648,0.146
+3_towns,East Windsor,2018,total_households,4802,NA
+3_towns,East Windsor,2018,living_alone,1578,0.329
+3_towns,East Windsor,2018,married_w_kids,817,0.17
+3_towns,East Windsor,2018,married_no_kids,1380,0.287
+3_towns,East Windsor,2018,single_w_kids,372,0.077
+3_towns,East Windsor,2018,other_households,655,0.136
+3_towns,Eastford,2000,total_households,618,NA
+3_towns,Eastford,2000,living_alone,135,0.218
+3_towns,Eastford,2000,married_w_kids,177,0.286
+3_towns,Eastford,2000,married_no_kids,213,0.345
+3_towns,Eastford,2000,single_w_kids,36,0.058
+3_towns,Eastford,2000,other_households,57,0.092
+3_towns,Eastford,2010,total_households,640,NA
+3_towns,Eastford,2010,living_alone,109,0.17
+3_towns,Eastford,2010,married_w_kids,146,0.228
+3_towns,Eastford,2010,married_no_kids,296,0.462
+3_towns,Eastford,2010,single_w_kids,39,0.061
+3_towns,Eastford,2010,other_households,50,0.078
+3_towns,Eastford,2018,total_households,698,NA
+3_towns,Eastford,2018,living_alone,153,0.219
+3_towns,Eastford,2018,married_w_kids,115,0.165
+3_towns,Eastford,2018,married_no_kids,328,0.47
+3_towns,Eastford,2018,single_w_kids,22,0.032
+3_towns,Eastford,2018,other_households,80,0.115
+3_towns,Easton,2000,total_households,2465,NA
+3_towns,Easton,2000,living_alone,306,0.124
+3_towns,Easton,2000,married_w_kids,960,0.389
+3_towns,Easton,2000,married_no_kids,908,0.368
+3_towns,Easton,2000,single_w_kids,83,0.034
+3_towns,Easton,2000,other_households,208,0.084
+3_towns,Easton,2010,total_households,2438,NA
+3_towns,Easton,2010,living_alone,318,0.13
+3_towns,Easton,2010,married_w_kids,1020,0.418
+3_towns,Easton,2010,married_no_kids,841,0.345
+3_towns,Easton,2010,single_w_kids,78,0.032
+3_towns,Easton,2010,other_households,181,0.074
+3_towns,Easton,2018,total_households,2805,NA
+3_towns,Easton,2018,living_alone,508,0.181
+3_towns,Easton,2018,married_w_kids,856,0.305
+3_towns,Easton,2018,married_no_kids,1122,0.4
+3_towns,Easton,2018,single_w_kids,73,0.026
+3_towns,Easton,2018,other_households,246,0.088
+3_towns,Ellington,2000,total_households,5195,NA
+3_towns,Ellington,2000,living_alone,1390,0.268
+3_towns,Ellington,2000,married_w_kids,1411,0.272
+3_towns,Ellington,2000,married_no_kids,1569,0.302
+3_towns,Ellington,2000,single_w_kids,278,0.054
+3_towns,Ellington,2000,other_households,547,0.105
+3_towns,Ellington,2010,total_households,5959,NA
+3_towns,Ellington,2010,living_alone,1370,0.23
+3_towns,Ellington,2010,married_w_kids,1694,0.284
+3_towns,Ellington,2010,married_no_kids,1942,0.326
+3_towns,Ellington,2010,single_w_kids,433,0.073
+3_towns,Ellington,2010,other_households,520,0.087
+3_towns,Ellington,2018,total_households,7141,NA
+3_towns,Ellington,2018,living_alone,2643,0.37
+3_towns,Ellington,2018,married_w_kids,1602,0.224
+3_towns,Ellington,2018,married_no_kids,1879,0.263
+3_towns,Ellington,2018,single_w_kids,312,0.044
+3_towns,Ellington,2018,other_households,705,0.099
+3_towns,Enfield,2000,total_households,16418,NA
+3_towns,Enfield,2000,living_alone,4105,0.25
+3_towns,Enfield,2000,married_w_kids,3914,0.238
+3_towns,Enfield,2000,married_no_kids,5229,0.318
+3_towns,Enfield,2000,single_w_kids,1198,0.073
+3_towns,Enfield,2000,other_households,1972,0.12
+3_towns,Enfield,2010,total_households,16396,NA
+3_towns,Enfield,2010,living_alone,4226,0.258
+3_towns,Enfield,2010,married_w_kids,3458,0.211
+3_towns,Enfield,2010,married_no_kids,4977,0.304
+3_towns,Enfield,2010,single_w_kids,1339,0.082
+3_towns,Enfield,2010,other_households,2396,0.146
+3_towns,Enfield,2018,total_households,16472,NA
+3_towns,Enfield,2018,living_alone,4619,0.28
+3_towns,Enfield,2018,married_w_kids,2909,0.177
+3_towns,Enfield,2018,married_no_kids,5041,0.306
+3_towns,Enfield,2018,single_w_kids,1352,0.082
+3_towns,Enfield,2018,other_households,2551,0.155
+3_towns,Essex,2000,total_households,2811,NA
+3_towns,Essex,2000,living_alone,894,0.318
+3_towns,Essex,2000,married_w_kids,652,0.232
+3_towns,Essex,2000,married_no_kids,912,0.324
+3_towns,Essex,2000,single_w_kids,113,0.04
+3_towns,Essex,2000,other_households,240,0.085
+3_towns,Essex,2010,total_households,3003,NA
+3_towns,Essex,2010,living_alone,760,0.253
+3_towns,Essex,2010,married_w_kids,677,0.225
+3_towns,Essex,2010,married_no_kids,1074,0.358
+3_towns,Essex,2010,single_w_kids,108,0.036
+3_towns,Essex,2010,other_households,384,0.128
+3_towns,Essex,2018,total_households,3010,NA
+3_towns,Essex,2018,living_alone,922,0.306
+3_towns,Essex,2018,married_w_kids,367,0.122
+3_towns,Essex,2018,married_no_kids,1192,0.396
+3_towns,Essex,2018,single_w_kids,193,0.064
+3_towns,Essex,2018,other_households,336,0.112
+3_towns,Fairfield,2000,total_households,20397,NA
+3_towns,Fairfield,2000,living_alone,4497,0.22
+3_towns,Fairfield,2000,married_w_kids,6067,0.297
+3_towns,Fairfield,2000,married_no_kids,6537,0.32
+3_towns,Fairfield,2000,single_w_kids,856,0.042
+3_towns,Fairfield,2000,other_households,2440,0.12
+3_towns,Fairfield,2010,total_households,19220,NA
+3_towns,Fairfield,2010,living_alone,4183,0.218
+3_towns,Fairfield,2010,married_w_kids,6454,0.336
+3_towns,Fairfield,2010,married_no_kids,5838,0.304
+3_towns,Fairfield,2010,single_w_kids,979,0.051
+3_towns,Fairfield,2010,other_households,1766,0.092
+3_towns,Fairfield,2018,total_households,20595,NA
+3_towns,Fairfield,2018,living_alone,4337,0.211
+3_towns,Fairfield,2018,married_w_kids,6347,0.308
+3_towns,Fairfield,2018,married_no_kids,6932,0.337
+3_towns,Fairfield,2018,single_w_kids,862,0.042
+3_towns,Fairfield,2018,other_households,2117,0.103
+3_towns,Farmington,2000,total_households,9496,NA
+3_towns,Farmington,2000,living_alone,2603,0.274
+3_towns,Farmington,2000,married_w_kids,2592,0.273
+3_towns,Farmington,2000,married_no_kids,2847,0.3
+3_towns,Farmington,2000,single_w_kids,444,0.047
+3_towns,Farmington,2000,other_households,1010,0.106
+3_towns,Farmington,2010,total_households,10354,NA
+3_towns,Farmington,2010,living_alone,3114,0.301
+3_towns,Farmington,2010,married_w_kids,2592,0.25
+3_towns,Farmington,2010,married_no_kids,3198,0.309
+3_towns,Farmington,2010,single_w_kids,610,0.059
+3_towns,Farmington,2010,other_households,840,0.081
+3_towns,Farmington,2018,total_households,10455,NA
+3_towns,Farmington,2018,living_alone,3291,0.315
+3_towns,Farmington,2018,married_w_kids,2297,0.22
+3_towns,Farmington,2018,married_no_kids,3312,0.317
+3_towns,Farmington,2018,single_w_kids,439,0.042
+3_towns,Farmington,2018,other_households,1116,0.107
+3_towns,Franklin,2000,total_households,687,NA
+3_towns,Franklin,2000,living_alone,130,0.189
+3_towns,Franklin,2000,married_w_kids,190,0.277
+3_towns,Franklin,2000,married_no_kids,268,0.39
+3_towns,Franklin,2000,single_w_kids,42,0.061
+3_towns,Franklin,2000,other_households,57,0.083
+3_towns,Franklin,2010,total_households,759,NA
+3_towns,Franklin,2010,living_alone,159,0.209
+3_towns,Franklin,2010,married_w_kids,204,0.269
+3_towns,Franklin,2010,married_no_kids,282,0.372
+3_towns,Franklin,2010,single_w_kids,42,0.055
+3_towns,Franklin,2010,other_households,72,0.095
+3_towns,Franklin,2018,total_households,722,NA
+3_towns,Franklin,2018,living_alone,185,0.256
+3_towns,Franklin,2018,married_w_kids,143,0.198
+3_towns,Franklin,2018,married_no_kids,315,0.436
+3_towns,Franklin,2018,single_w_kids,18,0.025
+3_towns,Franklin,2018,other_households,61,0.084
+3_towns,Glastonbury,2000,total_households,12257,NA
+3_towns,Glastonbury,2000,living_alone,2775,0.226
+3_towns,Glastonbury,2000,married_w_kids,3888,0.317
+3_towns,Glastonbury,2000,married_no_kids,3914,0.319
+3_towns,Glastonbury,2000,single_w_kids,664,0.054
+3_towns,Glastonbury,2000,other_households,1016,0.083
+3_towns,Glastonbury,2010,total_households,12881,NA
+3_towns,Glastonbury,2010,living_alone,2798,0.217
+3_towns,Glastonbury,2010,married_w_kids,3766,0.292
+3_towns,Glastonbury,2010,married_no_kids,4168,0.324
+3_towns,Glastonbury,2010,single_w_kids,963,0.075
+3_towns,Glastonbury,2010,other_households,1186,0.092
+3_towns,Glastonbury,2018,total_households,13562,NA
+3_towns,Glastonbury,2018,living_alone,3429,0.253
+3_towns,Glastonbury,2018,married_w_kids,3343,0.246
+3_towns,Glastonbury,2018,married_no_kids,4760,0.351
+3_towns,Glastonbury,2018,single_w_kids,748,0.055
+3_towns,Glastonbury,2018,other_households,1282,0.095
+3_towns,Goshen,2000,total_households,1066,NA
+3_towns,Goshen,2000,living_alone,215,0.202
+3_towns,Goshen,2000,married_w_kids,259,0.243
+3_towns,Goshen,2000,married_no_kids,461,0.432
+3_towns,Goshen,2000,single_w_kids,54,0.051
+3_towns,Goshen,2000,other_households,77,0.072
+3_towns,Goshen,2010,total_households,1223,NA
+3_towns,Goshen,2010,living_alone,265,0.217
+3_towns,Goshen,2010,married_w_kids,254,0.208
+3_towns,Goshen,2010,married_no_kids,545,0.446
+3_towns,Goshen,2010,single_w_kids,48,0.039
+3_towns,Goshen,2010,other_households,111,0.091
+3_towns,Goshen,2018,total_households,1095,NA
+3_towns,Goshen,2018,living_alone,262,0.239
+3_towns,Goshen,2018,married_w_kids,262,0.239
+3_towns,Goshen,2018,married_no_kids,508,0.464
+3_towns,Goshen,2018,single_w_kids,9,0.008
+3_towns,Goshen,2018,other_households,54,0.049
+3_towns,Granby,2000,total_households,3781,NA
+3_towns,Granby,2000,living_alone,624,0.165
+3_towns,Granby,2000,married_w_kids,1327,0.351
+3_towns,Granby,2000,married_no_kids,1360,0.36
+3_towns,Granby,2000,single_w_kids,167,0.044
+3_towns,Granby,2000,other_households,303,0.08
+3_towns,Granby,2010,total_households,4288,NA
+3_towns,Granby,2010,living_alone,865,0.202
+3_towns,Granby,2010,married_w_kids,1250,0.292
+3_towns,Granby,2010,married_no_kids,1489,0.347
+3_towns,Granby,2010,single_w_kids,263,0.061
+3_towns,Granby,2010,other_households,421,0.098
+3_towns,Granby,2018,total_households,4193,NA
+3_towns,Granby,2018,living_alone,804,0.192
+3_towns,Granby,2018,married_w_kids,1161,0.277
+3_towns,Granby,2018,married_no_kids,1806,0.431
+3_towns,Granby,2018,single_w_kids,223,0.053
+3_towns,Granby,2018,other_households,199,0.047
+3_towns,Greenwich,2000,total_households,23230,NA
+3_towns,Greenwich,2000,living_alone,5761,0.248
+3_towns,Greenwich,2000,married_w_kids,6688,0.288
+3_towns,Greenwich,2000,married_no_kids,7111,0.306
+3_towns,Greenwich,2000,single_w_kids,1099,0.047
+3_towns,Greenwich,2000,other_households,2571,0.111
+3_towns,Greenwich,2010,total_households,22483,NA
+3_towns,Greenwich,2010,living_alone,5587,0.248
+3_towns,Greenwich,2010,married_w_kids,6973,0.31
+3_towns,Greenwich,2010,married_no_kids,6454,0.287
+3_towns,Greenwich,2010,single_w_kids,1381,0.061
+3_towns,Greenwich,2010,other_households,2088,0.093
+3_towns,Greenwich,2018,total_households,22251,NA
+3_towns,Greenwich,2018,living_alone,5140,0.231
+3_towns,Greenwich,2018,married_w_kids,6590,0.296
+3_towns,Greenwich,2018,married_no_kids,6973,0.313
+3_towns,Greenwich,2018,single_w_kids,1408,0.063
+3_towns,Greenwich,2018,other_households,2140,0.096
+3_towns,Griswold,2000,total_households,4194,NA
+3_towns,Griswold,2000,living_alone,1013,0.242
+3_towns,Griswold,2000,married_w_kids,1032,0.246
+3_towns,Griswold,2000,married_no_kids,1185,0.283
+3_towns,Griswold,2000,single_w_kids,417,0.099
+3_towns,Griswold,2000,other_households,547,0.13
+3_towns,Griswold,2010,total_households,4901,NA
+3_towns,Griswold,2010,living_alone,1479,0.302
+3_towns,Griswold,2010,married_w_kids,846,0.173
+3_towns,Griswold,2010,married_no_kids,1500,0.306
+3_towns,Griswold,2010,single_w_kids,426,0.087
+3_towns,Griswold,2010,other_households,650,0.133
+3_towns,Griswold,2018,total_households,4564,NA
+3_towns,Griswold,2018,living_alone,1069,0.234
+3_towns,Griswold,2018,married_w_kids,819,0.179
+3_towns,Griswold,2018,married_no_kids,1435,0.314
+3_towns,Griswold,2018,single_w_kids,686,0.15
+3_towns,Griswold,2018,other_households,555,0.122
+3_towns,Groton,2000,total_households,15473,NA
+3_towns,Groton,2000,living_alone,4512,0.292
+3_towns,Groton,2000,married_w_kids,3797,0.245
+3_towns,Groton,2000,married_no_kids,4022,0.26
+3_towns,Groton,2000,single_w_kids,1376,0.089
+3_towns,Groton,2000,other_households,1766,0.114
+3_towns,Groton,2010,total_households,15955,NA
+3_towns,Groton,2010,living_alone,4823,0.302
+3_towns,Groton,2010,married_w_kids,3301,0.207
+3_towns,Groton,2010,married_no_kids,3960,0.248
+3_towns,Groton,2010,single_w_kids,1497,0.094
+3_towns,Groton,2010,other_households,2374,0.149
+3_towns,Groton,2018,total_households,15703,NA
+3_towns,Groton,2018,living_alone,5400,0.344
+3_towns,Groton,2018,married_w_kids,2729,0.174
+3_towns,Groton,2018,married_no_kids,4032,0.257
+3_towns,Groton,2018,single_w_kids,1353,0.086
+3_towns,Groton,2018,other_households,2189,0.139
+3_towns,Guilford,2000,total_households,8151,NA
+3_towns,Guilford,2000,living_alone,1763,0.216
+3_towns,Guilford,2000,married_w_kids,2471,0.303
+3_towns,Guilford,2000,married_no_kids,2776,0.341
+3_towns,Guilford,2000,single_w_kids,430,0.053
+3_towns,Guilford,2000,other_households,711,0.087
+3_towns,Guilford,2010,total_households,8766,NA
+3_towns,Guilford,2010,living_alone,2097,0.239
+3_towns,Guilford,2010,married_w_kids,2592,0.296
+3_towns,Guilford,2010,married_no_kids,3174,0.362
+3_towns,Guilford,2010,single_w_kids,374,0.043
+3_towns,Guilford,2010,other_households,529,0.06
+3_towns,Guilford,2018,total_households,8314,NA
+3_towns,Guilford,2018,living_alone,1906,0.229
+3_towns,Guilford,2018,married_w_kids,1864,0.224
+3_towns,Guilford,2018,married_no_kids,3348,0.403
+3_towns,Guilford,2018,single_w_kids,437,0.053
+3_towns,Guilford,2018,other_households,759,0.091
+3_towns,Haddam,2000,total_households,2701,NA
+3_towns,Haddam,2000,living_alone,489,0.181
+3_towns,Haddam,2000,married_w_kids,811,0.3
+3_towns,Haddam,2000,married_no_kids,1029,0.381
+3_towns,Haddam,2000,single_w_kids,121,0.045
+3_towns,Haddam,2000,other_households,251,0.093
+3_towns,Haddam,2010,total_households,3038,NA
+3_towns,Haddam,2010,living_alone,654,0.215
+3_towns,Haddam,2010,married_w_kids,858,0.282
+3_towns,Haddam,2010,married_no_kids,1009,0.332
+3_towns,Haddam,2010,single_w_kids,222,0.073
+3_towns,Haddam,2010,other_households,295,0.097
+3_towns,Haddam,2018,total_households,3209,NA
+3_towns,Haddam,2018,living_alone,548,0.171
+3_towns,Haddam,2018,married_w_kids,677,0.211
+3_towns,Haddam,2018,married_no_kids,1537,0.479
+3_towns,Haddam,2018,single_w_kids,150,0.047
+3_towns,Haddam,2018,other_households,297,0.093
+3_towns,Hamden,2000,total_households,22408,NA
+3_towns,Hamden,2000,living_alone,6970,0.311
+3_towns,Hamden,2000,married_w_kids,4504,0.201
+3_towns,Hamden,2000,married_no_kids,6302,0.281
+3_towns,Hamden,2000,single_w_kids,1490,0.066
+3_towns,Hamden,2000,other_households,3142,0.14
+3_towns,Hamden,2010,total_households,24099,NA
+3_towns,Hamden,2010,living_alone,7558,0.314
+3_towns,Hamden,2010,married_w_kids,4664,0.194
+3_towns,Hamden,2010,married_no_kids,6548,0.272
+3_towns,Hamden,2010,single_w_kids,1769,0.073
+3_towns,Hamden,2010,other_households,3560,0.148
+3_towns,Hamden,2018,total_households,22945,NA
+3_towns,Hamden,2018,living_alone,7414,0.323
+3_towns,Hamden,2018,married_w_kids,3571,0.156
+3_towns,Hamden,2018,married_no_kids,6709,0.292
+3_towns,Hamden,2018,single_w_kids,1584,0.069
+3_towns,Hamden,2018,other_households,3667,0.16
+3_towns,Hampton,2000,total_households,674,NA
+3_towns,Hampton,2000,living_alone,133,0.197
+3_towns,Hampton,2000,married_w_kids,187,0.277
+3_towns,Hampton,2000,married_no_kids,235,0.349
+3_towns,Hampton,2000,single_w_kids,41,0.061
+3_towns,Hampton,2000,other_households,78,0.116
+3_towns,Hampton,2010,total_households,733,NA
+3_towns,Hampton,2010,living_alone,121,0.165
+3_towns,Hampton,2010,married_w_kids,146,0.199
+3_towns,Hampton,2010,married_no_kids,333,0.454
+3_towns,Hampton,2010,single_w_kids,44,0.06
+3_towns,Hampton,2010,other_households,89,0.121
+3_towns,Hampton,2018,total_households,773,NA
+3_towns,Hampton,2018,living_alone,198,0.256
+3_towns,Hampton,2018,married_w_kids,108,0.14
+3_towns,Hampton,2018,married_no_kids,332,0.429
+3_towns,Hampton,2018,single_w_kids,34,0.044
+3_towns,Hampton,2018,other_households,101,0.131
+3_towns,Hartford,2000,total_households,44986,NA
+3_towns,Hartford,2000,living_alone,14950,0.332
+3_towns,Hartford,2000,married_w_kids,5259,0.117
+3_towns,Hartford,2000,married_no_kids,6096,0.136
+3_towns,Hartford,2000,single_w_kids,10222,0.227
+3_towns,Hartford,2000,other_households,8459,0.188
+3_towns,Hartford,2010,total_households,46073,NA
+3_towns,Hartford,2010,living_alone,16028,0.348
+3_towns,Hartford,2010,married_w_kids,4421,0.096
+3_towns,Hartford,2010,married_no_kids,5990,0.13
+3_towns,Hartford,2010,single_w_kids,10287,0.223
+3_towns,Hartford,2010,other_households,9347,0.203
+3_towns,Hartford,2018,total_households,45879,NA
+3_towns,Hartford,2018,living_alone,16435,0.358
+3_towns,Hartford,2018,married_w_kids,3972,0.087
+3_towns,Hartford,2018,married_no_kids,5995,0.131
+3_towns,Hartford,2018,single_w_kids,8569,0.187
+3_towns,Hartford,2018,other_households,10908,0.238
+3_towns,Hartland,2000,total_households,707,NA
+3_towns,Hartland,2000,living_alone,95,0.134
+3_towns,Hartland,2000,married_w_kids,239,0.338
+3_towns,Hartland,2000,married_no_kids,262,0.371
+3_towns,Hartland,2000,single_w_kids,36,0.051
+3_towns,Hartland,2000,other_households,75,0.106
+3_towns,Hartland,2010,total_households,726,NA
+3_towns,Hartland,2010,living_alone,95,0.131
+3_towns,Hartland,2010,married_w_kids,218,0.3
+3_towns,Hartland,2010,married_no_kids,304,0.419
+3_towns,Hartland,2010,single_w_kids,23,0.032
+3_towns,Hartland,2010,other_households,86,0.118
+3_towns,Hartland,2018,total_households,782,NA
+3_towns,Hartland,2018,living_alone,200,0.256
+3_towns,Hartland,2018,married_w_kids,155,0.198
+3_towns,Hartland,2018,married_no_kids,314,0.402
+3_towns,Hartland,2018,single_w_kids,9,0.012
+3_towns,Hartland,2018,other_households,104,0.133
+3_towns,Harwinton,2000,total_households,1958,NA
+3_towns,Harwinton,2000,living_alone,337,0.172
+3_towns,Harwinton,2000,married_w_kids,586,0.299
+3_towns,Harwinton,2000,married_no_kids,797,0.407
+3_towns,Harwinton,2000,single_w_kids,74,0.038
+3_towns,Harwinton,2000,other_households,164,0.084
+3_towns,Harwinton,2010,total_households,2097,NA
+3_towns,Harwinton,2010,living_alone,383,0.183
+3_towns,Harwinton,2010,married_w_kids,579,0.276
+3_towns,Harwinton,2010,married_no_kids,874,0.417
+3_towns,Harwinton,2010,single_w_kids,101,0.048
+3_towns,Harwinton,2010,other_households,160,0.076
+3_towns,Harwinton,2018,total_households,1937,NA
+3_towns,Harwinton,2018,living_alone,226,0.117
+3_towns,Harwinton,2018,married_w_kids,427,0.22
+3_towns,Harwinton,2018,married_no_kids,929,0.48
+3_towns,Harwinton,2018,single_w_kids,80,0.041
+3_towns,Harwinton,2018,other_households,275,0.142
+3_towns,Hebron,2000,total_households,2993,NA
+3_towns,Hebron,2000,living_alone,400,0.134
+3_towns,Hebron,2000,married_w_kids,1205,0.403
+3_towns,Hebron,2000,married_no_kids,1021,0.341
+3_towns,Hebron,2000,single_w_kids,146,0.049
+3_towns,Hebron,2000,other_households,221,0.074
+3_towns,Hebron,2010,total_households,3276,NA
+3_towns,Hebron,2010,living_alone,316,0.096
+3_towns,Hebron,2010,married_w_kids,1368,0.418
+3_towns,Hebron,2010,married_no_kids,1227,0.375
+3_towns,Hebron,2010,single_w_kids,225,0.069
+3_towns,Hebron,2010,other_households,140,0.043
+3_towns,Hebron,2018,total_households,3476,NA
+3_towns,Hebron,2018,living_alone,612,0.176
+3_towns,Hebron,2018,married_w_kids,934,0.269
+3_towns,Hebron,2018,married_no_kids,1478,0.425
+3_towns,Hebron,2018,single_w_kids,206,0.059
+3_towns,Hebron,2018,other_households,246,0.071
+3_towns,Kent,2000,total_households,1143,NA
+3_towns,Kent,2000,living_alone,324,0.283
+3_towns,Kent,2000,married_w_kids,276,0.241
+3_towns,Kent,2000,married_no_kids,359,0.314
+3_towns,Kent,2000,single_w_kids,51,0.045
+3_towns,Kent,2000,other_households,133,0.116
+3_towns,Kent,2010,total_households,1299,NA
+3_towns,Kent,2010,living_alone,351,0.27
+3_towns,Kent,2010,married_w_kids,191,0.147
+3_towns,Kent,2010,married_no_kids,542,0.417
+3_towns,Kent,2010,single_w_kids,101,0.078
+3_towns,Kent,2010,other_households,114,0.088
+3_towns,Kent,2018,total_households,1138,NA
+3_towns,Kent,2018,living_alone,349,0.307
+3_towns,Kent,2018,married_w_kids,157,0.138
+3_towns,Kent,2018,married_no_kids,366,0.322
+3_towns,Kent,2018,single_w_kids,41,0.036
+3_towns,Kent,2018,other_households,225,0.198
+3_towns,Killingly,2000,total_households,6359,NA
+3_towns,Killingly,2000,living_alone,1650,0.259
+3_towns,Killingly,2000,married_w_kids,1336,0.21
+3_towns,Killingly,2000,married_no_kids,1794,0.282
+3_towns,Killingly,2000,single_w_kids,775,0.122
+3_towns,Killingly,2000,other_households,804,0.126
+3_towns,Killingly,2010,total_households,6858,NA
+3_towns,Killingly,2010,living_alone,1841,0.268
+3_towns,Killingly,2010,married_w_kids,1346,0.196
+3_towns,Killingly,2010,married_no_kids,1945,0.284
+3_towns,Killingly,2010,single_w_kids,810,0.118
+3_towns,Killingly,2010,other_households,916,0.134
+3_towns,Killingly,2018,total_households,6875,NA
+3_towns,Killingly,2018,living_alone,2098,0.305
+3_towns,Killingly,2018,married_w_kids,1205,0.175
+3_towns,Killingly,2018,married_no_kids,1828,0.266
+3_towns,Killingly,2018,single_w_kids,678,0.099
+3_towns,Killingly,2018,other_households,1066,0.155
+3_towns,Killingworth,2000,total_households,2196,NA
+3_towns,Killingworth,2000,living_alone,354,0.161
+3_towns,Killingworth,2000,married_w_kids,786,0.358
+3_towns,Killingworth,2000,married_no_kids,835,0.38
+3_towns,Killingworth,2000,single_w_kids,58,0.026
+3_towns,Killingworth,2000,other_households,163,0.074
+3_towns,Killingworth,2010,total_households,2430,NA
+3_towns,Killingworth,2010,living_alone,372,0.153
+3_towns,Killingworth,2010,married_w_kids,823,0.339
+3_towns,Killingworth,2010,married_no_kids,993,0.409
+3_towns,Killingworth,2010,single_w_kids,135,0.056
+3_towns,Killingworth,2010,other_households,107,0.044
+3_towns,Killingworth,2018,total_households,2305,NA
+3_towns,Killingworth,2018,living_alone,382,0.166
+3_towns,Killingworth,2018,married_w_kids,667,0.289
+3_towns,Killingworth,2018,married_no_kids,938,0.407
+3_towns,Killingworth,2018,single_w_kids,80,0.035
+3_towns,Killingworth,2018,other_households,238,0.103
+3_towns,Lebanon,2000,total_households,2446,NA
+3_towns,Lebanon,2000,living_alone,385,0.157
+3_towns,Lebanon,2000,married_w_kids,778,0.318
+3_towns,Lebanon,2000,married_no_kids,846,0.346
+3_towns,Lebanon,2000,single_w_kids,167,0.068
+3_towns,Lebanon,2000,other_households,270,0.11
+3_towns,Lebanon,2010,total_households,2801,NA
+3_towns,Lebanon,2010,living_alone,644,0.23
+3_towns,Lebanon,2010,married_w_kids,507,0.181
+3_towns,Lebanon,2010,married_no_kids,976,0.348
+3_towns,Lebanon,2010,single_w_kids,294,0.105
+3_towns,Lebanon,2010,other_households,380,0.136
+3_towns,Lebanon,2018,total_households,2847,NA
+3_towns,Lebanon,2018,living_alone,475,0.167
+3_towns,Lebanon,2018,married_w_kids,635,0.223
+3_towns,Lebanon,2018,married_no_kids,1087,0.382
+3_towns,Lebanon,2018,single_w_kids,73,0.026
+3_towns,Lebanon,2018,other_households,577,0.203
+3_towns,Ledyard,2000,total_households,5286,NA
+3_towns,Ledyard,2000,living_alone,869,0.164
+3_towns,Ledyard,2000,married_w_kids,1666,0.315
+3_towns,Ledyard,2000,married_no_kids,1778,0.336
+3_towns,Ledyard,2000,single_w_kids,428,0.081
+3_towns,Ledyard,2000,other_households,545,0.103
+3_towns,Ledyard,2010,total_households,5584,NA
+3_towns,Ledyard,2010,living_alone,1149,0.206
+3_towns,Ledyard,2010,married_w_kids,1616,0.289
+3_towns,Ledyard,2010,married_no_kids,2020,0.362
+3_towns,Ledyard,2010,single_w_kids,292,0.052
+3_towns,Ledyard,2010,other_households,507,0.091
+3_towns,Ledyard,2018,total_households,5795,NA
+3_towns,Ledyard,2018,living_alone,1265,0.218
+3_towns,Ledyard,2018,married_w_kids,1246,0.215
+3_towns,Ledyard,2018,married_no_kids,2101,0.363
+3_towns,Ledyard,2018,single_w_kids,531,0.092
+3_towns,Ledyard,2018,other_households,652,0.113
+3_towns,Lisbon,2000,total_households,1525,NA
+3_towns,Lisbon,2000,living_alone,284,0.186
+3_towns,Lisbon,2000,married_w_kids,448,0.294
+3_towns,Lisbon,2000,married_no_kids,527,0.346
+3_towns,Lisbon,2000,single_w_kids,115,0.075
+3_towns,Lisbon,2000,other_households,151,0.099
+3_towns,Lisbon,2010,total_households,1620,NA
+3_towns,Lisbon,2010,living_alone,329,0.203
+3_towns,Lisbon,2010,married_w_kids,465,0.287
+3_towns,Lisbon,2010,married_no_kids,612,0.378
+3_towns,Lisbon,2010,single_w_kids,86,0.053
+3_towns,Lisbon,2010,other_households,128,0.079
+3_towns,Lisbon,2018,total_households,1682,NA
+3_towns,Lisbon,2018,living_alone,364,0.216
+3_towns,Lisbon,2018,married_w_kids,364,0.216
+3_towns,Lisbon,2018,married_no_kids,667,0.397
+3_towns,Lisbon,2018,single_w_kids,132,0.078
+3_towns,Lisbon,2018,other_households,155,0.092
+3_towns,Litchfield,2000,total_households,3310,NA
+3_towns,Litchfield,2000,living_alone,878,0.265
+3_towns,Litchfield,2000,married_w_kids,865,0.261
+3_towns,Litchfield,2000,married_no_kids,1117,0.337
+3_towns,Litchfield,2000,single_w_kids,169,0.051
+3_towns,Litchfield,2000,other_households,281,0.085
+3_towns,Litchfield,2010,total_households,3514,NA
+3_towns,Litchfield,2010,living_alone,956,0.272
+3_towns,Litchfield,2010,married_w_kids,879,0.25
+3_towns,Litchfield,2010,married_no_kids,1177,0.335
+3_towns,Litchfield,2010,single_w_kids,160,0.046
+3_towns,Litchfield,2010,other_households,342,0.097
+3_towns,Litchfield,2018,total_households,3474,NA
+3_towns,Litchfield,2018,living_alone,1060,0.305
+3_towns,Litchfield,2018,married_w_kids,520,0.15
+3_towns,Litchfield,2018,married_no_kids,1287,0.37
+3_towns,Litchfield,2018,single_w_kids,158,0.045
+3_towns,Litchfield,2018,other_households,449,0.129
+3_towns,Lyme,2000,total_households,854,NA
+3_towns,Lyme,2000,living_alone,198,0.232
+3_towns,Lyme,2000,married_w_kids,188,0.22
+3_towns,Lyme,2000,married_no_kids,360,0.422
+3_towns,Lyme,2000,single_w_kids,39,0.046
+3_towns,Lyme,2000,other_households,69,0.081
+3_towns,Lyme,2010,total_households,990,NA
+3_towns,Lyme,2010,living_alone,231,0.233
+3_towns,Lyme,2010,married_w_kids,195,0.197
+3_towns,Lyme,2010,married_no_kids,415,0.419
+3_towns,Lyme,2010,single_w_kids,80,0.081
+3_towns,Lyme,2010,other_households,69,0.07
+3_towns,Lyme,2018,total_households,1060,NA
+3_towns,Lyme,2018,living_alone,256,0.242
+3_towns,Lyme,2018,married_w_kids,170,0.16
+3_towns,Lyme,2018,married_no_kids,454,0.428
+3_towns,Lyme,2018,single_w_kids,53,0.05
+3_towns,Lyme,2018,other_households,127,0.12
+3_towns,Madison,2000,total_households,6515,NA
+3_towns,Madison,2000,living_alone,1208,0.185
+3_towns,Madison,2000,married_w_kids,2250,0.345
+3_towns,Madison,2000,married_no_kids,2299,0.353
+3_towns,Madison,2000,single_w_kids,296,0.045
+3_towns,Madison,2000,other_households,462,0.071
+3_towns,Madison,2010,total_households,6684,NA
+3_towns,Madison,2010,living_alone,1192,0.178
+3_towns,Madison,2010,married_w_kids,2117,0.317
+3_towns,Madison,2010,married_no_kids,2551,0.382
+3_towns,Madison,2010,single_w_kids,325,0.049
+3_towns,Madison,2010,other_households,499,0.075
+3_towns,Madison,2018,total_households,6911,NA
+3_towns,Madison,2018,living_alone,1552,0.225
+3_towns,Madison,2018,married_w_kids,1613,0.233
+3_towns,Madison,2018,married_no_kids,2794,0.404
+3_towns,Madison,2018,single_w_kids,376,0.054
+3_towns,Madison,2018,other_households,576,0.083
+3_towns,Manchester,2000,total_households,23197,NA
+3_towns,Manchester,2000,living_alone,7220,0.311
+3_towns,Manchester,2000,married_w_kids,4220,0.182
+3_towns,Manchester,2000,married_no_kids,5929,0.256
+3_towns,Manchester,2000,single_w_kids,2310,0.1
+3_towns,Manchester,2000,other_households,3518,0.152
+3_towns,Manchester,2010,total_households,24411,NA
+3_towns,Manchester,2010,living_alone,7584,0.311
+3_towns,Manchester,2010,married_w_kids,4327,0.177
+3_towns,Manchester,2010,married_no_kids,6388,0.262
+3_towns,Manchester,2010,single_w_kids,2277,0.093
+3_towns,Manchester,2010,other_households,3835,0.157
+3_towns,Manchester,2018,total_households,23942,NA
+3_towns,Manchester,2018,living_alone,7261,0.303
+3_towns,Manchester,2018,married_w_kids,4318,0.18
+3_towns,Manchester,2018,married_no_kids,5906,0.247
+3_towns,Manchester,2018,single_w_kids,2090,0.087
+3_towns,Manchester,2018,other_households,4367,0.182
+3_towns,Mansfield,2000,total_households,5291,NA
+3_towns,Mansfield,2000,living_alone,1428,0.27
+3_towns,Mansfield,2000,married_w_kids,1133,0.214
+3_towns,Mansfield,2000,married_no_kids,1429,0.27
+3_towns,Mansfield,2000,single_w_kids,352,0.067
+3_towns,Mansfield,2000,other_households,949,0.179
+3_towns,Mansfield,2010,total_households,5889,NA
+3_towns,Mansfield,2010,living_alone,1371,0.233
+3_towns,Mansfield,2010,married_w_kids,1031,0.175
+3_towns,Mansfield,2010,married_no_kids,1691,0.287
+3_towns,Mansfield,2010,single_w_kids,571,0.097
+3_towns,Mansfield,2010,other_households,1225,0.208
+3_towns,Mansfield,2018,total_households,5514,NA
+3_towns,Mansfield,2018,living_alone,1424,0.258
+3_towns,Mansfield,2018,married_w_kids,753,0.137
+3_towns,Mansfield,2018,married_no_kids,1275,0.231
+3_towns,Mansfield,2018,single_w_kids,266,0.048
+3_towns,Mansfield,2018,other_households,1796,0.326
+3_towns,Marlborough,2000,total_households,2005,NA
+3_towns,Marlborough,2000,living_alone,277,0.138
+3_towns,Marlborough,2000,married_w_kids,712,0.355
+3_towns,Marlborough,2000,married_no_kids,727,0.363
+3_towns,Marlborough,2000,single_w_kids,102,0.051
+3_towns,Marlborough,2000,other_households,187,0.093
+3_towns,Marlborough,2010,total_households,2138,NA
+3_towns,Marlborough,2010,living_alone,223,0.104
+3_towns,Marlborough,2010,married_w_kids,742,0.347
+3_towns,Marlborough,2010,married_no_kids,858,0.401
+3_towns,Marlborough,2010,single_w_kids,152,0.071
+3_towns,Marlborough,2010,other_households,163,0.076
+3_towns,Marlborough,2018,total_households,2350,NA
+3_towns,Marlborough,2018,living_alone,355,0.151
+3_towns,Marlborough,2018,married_w_kids,589,0.251
+3_towns,Marlborough,2018,married_no_kids,1037,0.441
+3_towns,Marlborough,2018,single_w_kids,128,0.054
+3_towns,Marlborough,2018,other_households,241,0.103
+3_towns,Meriden,2000,total_households,22951,NA
+3_towns,Meriden,2000,living_alone,6629,0.289
+3_towns,Meriden,2000,married_w_kids,4471,0.195
+3_towns,Meriden,2000,married_no_kids,5943,0.259
+3_towns,Meriden,2000,single_w_kids,2721,0.119
+3_towns,Meriden,2000,other_households,3187,0.139
+3_towns,Meriden,2010,total_households,23861,NA
+3_towns,Meriden,2010,living_alone,6763,0.283
+3_towns,Meriden,2010,married_w_kids,4360,0.183
+3_towns,Meriden,2010,married_no_kids,6129,0.257
+3_towns,Meriden,2010,single_w_kids,3186,0.134
+3_towns,Meriden,2010,other_households,3423,0.143
+3_towns,Meriden,2018,total_households,26218,NA
+3_towns,Meriden,2018,living_alone,10350,0.395
+3_towns,Meriden,2018,married_w_kids,2761,0.105
+3_towns,Meriden,2018,married_no_kids,6920,0.264
+3_towns,Meriden,2018,single_w_kids,2161,0.082
+3_towns,Meriden,2018,other_households,4026,0.154
+3_towns,Middlebury,2000,total_households,2398,NA
+3_towns,Middlebury,2000,living_alone,482,0.201
+3_towns,Middlebury,2000,married_w_kids,704,0.294
+3_towns,Middlebury,2000,married_no_kids,909,0.379
+3_towns,Middlebury,2000,single_w_kids,89,0.037
+3_towns,Middlebury,2000,other_households,214,0.089
+3_towns,Middlebury,2010,total_households,2666,NA
+3_towns,Middlebury,2010,living_alone,482,0.181
+3_towns,Middlebury,2010,married_w_kids,799,0.3
+3_towns,Middlebury,2010,married_no_kids,1069,0.401
+3_towns,Middlebury,2010,single_w_kids,122,0.046
+3_towns,Middlebury,2010,other_households,194,0.073
+3_towns,Middlebury,2018,total_households,2699,NA
+3_towns,Middlebury,2018,living_alone,548,0.203
+3_towns,Middlebury,2018,married_w_kids,634,0.235
+3_towns,Middlebury,2018,married_no_kids,1141,0.423
+3_towns,Middlebury,2018,single_w_kids,35,0.013
+3_towns,Middlebury,2018,other_households,341,0.126
+3_towns,Middlefield,2000,total_households,1645,NA
+3_towns,Middlefield,2000,living_alone,367,0.223
+3_towns,Middlefield,2000,married_w_kids,473,0.288
+3_towns,Middlefield,2000,married_no_kids,553,0.336
+3_towns,Middlefield,2000,single_w_kids,86,0.052
+3_towns,Middlefield,2000,other_households,166,0.101
+3_towns,Middlefield,2010,total_households,1676,NA
+3_towns,Middlefield,2010,living_alone,410,0.245
+3_towns,Middlefield,2010,married_w_kids,450,0.268
+3_towns,Middlefield,2010,married_no_kids,469,0.28
+3_towns,Middlefield,2010,single_w_kids,145,0.087
+3_towns,Middlefield,2010,other_households,202,0.121
+3_towns,Middlefield,2018,total_households,1827,NA
+3_towns,Middlefield,2018,living_alone,512,0.28
+3_towns,Middlefield,2018,married_w_kids,312,0.171
+3_towns,Middlefield,2018,married_no_kids,741,0.406
+3_towns,Middlefield,2018,single_w_kids,102,0.056
+3_towns,Middlefield,2018,other_households,160,0.088
+3_towns,Middletown,2000,total_households,18554,NA
+3_towns,Middletown,2000,living_alone,6491,0.35
+3_towns,Middletown,2000,married_w_kids,3170,0.171
+3_towns,Middletown,2000,married_no_kids,4489,0.242
+3_towns,Middletown,2000,single_w_kids,1604,0.086
+3_towns,Middletown,2000,other_households,2800,0.151
+3_towns,Middletown,2010,total_households,20637,NA
+3_towns,Middletown,2010,living_alone,7087,0.343
+3_towns,Middletown,2010,married_w_kids,3376,0.164
+3_towns,Middletown,2010,married_no_kids,5068,0.246
+3_towns,Middletown,2010,single_w_kids,1828,0.089
+3_towns,Middletown,2010,other_households,3278,0.159
+3_towns,Middletown,2018,total_households,19054,NA
+3_towns,Middletown,2018,living_alone,6943,0.364
+3_towns,Middletown,2018,married_w_kids,2686,0.141
+3_towns,Middletown,2018,married_no_kids,4549,0.239
+3_towns,Middletown,2018,single_w_kids,1791,0.094
+3_towns,Middletown,2018,other_households,3085,0.162
+3_towns,Milford,2000,total_households,20900,NA
+3_towns,Milford,2000,living_alone,5561,0.266
+3_towns,Milford,2000,married_w_kids,4896,0.234
+3_towns,Milford,2000,married_no_kids,6467,0.309
+3_towns,Milford,2000,single_w_kids,1190,0.057
+3_towns,Milford,2000,other_households,2786,0.133
+3_towns,Milford,2010,total_households,21294,NA
+3_towns,Milford,2010,living_alone,6078,0.285
+3_towns,Milford,2010,married_w_kids,4812,0.226
+3_towns,Milford,2010,married_no_kids,6712,0.315
+3_towns,Milford,2010,single_w_kids,1207,0.057
+3_towns,Milford,2010,other_households,2485,0.117
+3_towns,Milford,2018,total_households,22065,NA
+3_towns,Milford,2018,living_alone,6571,0.298
+3_towns,Milford,2018,married_w_kids,3794,0.172
+3_towns,Milford,2018,married_no_kids,7614,0.345
+3_towns,Milford,2018,single_w_kids,1044,0.047
+3_towns,Milford,2018,other_households,3042,0.138
+3_towns,Monroe,2000,total_households,6481,NA
+3_towns,Monroe,2000,living_alone,966,0.149
+3_towns,Monroe,2000,married_w_kids,2549,0.393
+3_towns,Monroe,2000,married_no_kids,2244,0.346
+3_towns,Monroe,2000,single_w_kids,205,0.032
+3_towns,Monroe,2000,other_households,517,0.08
+3_towns,Monroe,2010,total_households,6584,NA
+3_towns,Monroe,2010,living_alone,1091,0.166
+3_towns,Monroe,2010,married_w_kids,2226,0.338
+3_towns,Monroe,2010,married_no_kids,2262,0.344
+3_towns,Monroe,2010,single_w_kids,290,0.044
+3_towns,Monroe,2010,other_households,715,0.109
+3_towns,Monroe,2018,total_households,6703,NA
+3_towns,Monroe,2018,living_alone,1270,0.189
+3_towns,Monroe,2018,married_w_kids,2142,0.32
+3_towns,Monroe,2018,married_no_kids,2267,0.338
+3_towns,Monroe,2018,single_w_kids,319,0.048
+3_towns,Monroe,2018,other_households,705,0.105
+3_towns,Montville,2000,total_households,6426,NA
+3_towns,Montville,2000,living_alone,1370,0.213
+3_towns,Montville,2000,married_w_kids,1697,0.264
+3_towns,Montville,2000,married_no_kids,2069,0.322
+3_towns,Montville,2000,single_w_kids,536,0.083
+3_towns,Montville,2000,other_households,754,0.117
+3_towns,Montville,2010,total_households,6759,NA
+3_towns,Montville,2010,living_alone,1608,0.238
+3_towns,Montville,2010,married_w_kids,1376,0.204
+3_towns,Montville,2010,married_no_kids,2601,0.385
+3_towns,Montville,2010,single_w_kids,538,0.08
+3_towns,Montville,2010,other_households,636,0.094
+3_towns,Montville,2018,total_households,6749,NA
+3_towns,Montville,2018,living_alone,1358,0.201
+3_towns,Montville,2018,married_w_kids,1168,0.173
+3_towns,Montville,2018,married_no_kids,2393,0.355
+3_towns,Montville,2018,single_w_kids,581,0.086
+3_towns,Montville,2018,other_households,1249,0.185
+3_towns,Morris,2000,total_households,912,NA
+3_towns,Morris,2000,living_alone,223,0.245
+3_towns,Morris,2000,married_w_kids,244,0.268
+3_towns,Morris,2000,married_no_kids,305,0.334
+3_towns,Morris,2000,single_w_kids,44,0.048
+3_towns,Morris,2000,other_households,96,0.105
+3_towns,Morris,2010,total_households,983,NA
+3_towns,Morris,2010,living_alone,218,0.222
+3_towns,Morris,2010,married_w_kids,247,0.251
+3_towns,Morris,2010,married_no_kids,376,0.383
+3_towns,Morris,2010,single_w_kids,18,0.018
+3_towns,Morris,2010,other_households,124,0.126
+3_towns,Morris,2018,total_households,866,NA
+3_towns,Morris,2018,living_alone,215,0.248
+3_towns,Morris,2018,married_w_kids,201,0.232
+3_towns,Morris,2018,married_no_kids,331,0.382
+3_towns,Morris,2018,single_w_kids,38,0.044
+3_towns,Morris,2018,other_households,81,0.094
+3_towns,Naugatuck,2000,total_households,11829,NA
+3_towns,Naugatuck,2000,living_alone,2950,0.249
+3_towns,Naugatuck,2000,married_w_kids,3129,0.265
+3_towns,Naugatuck,2000,married_no_kids,3177,0.269
+3_towns,Naugatuck,2000,single_w_kids,1167,0.099
+3_towns,Naugatuck,2000,other_households,1406,0.119
+3_towns,Naugatuck,2010,total_households,12369,NA
+3_towns,Naugatuck,2010,living_alone,3285,0.266
+3_towns,Naugatuck,2010,married_w_kids,2677,0.216
+3_towns,Naugatuck,2010,married_no_kids,3698,0.299
+3_towns,Naugatuck,2010,single_w_kids,1251,0.101
+3_towns,Naugatuck,2010,other_households,1458,0.118
+3_towns,Naugatuck,2018,total_households,11659,NA
+3_towns,Naugatuck,2018,living_alone,2778,0.238
+3_towns,Naugatuck,2018,married_w_kids,2353,0.202
+3_towns,Naugatuck,2018,married_no_kids,3507,0.301
+3_towns,Naugatuck,2018,single_w_kids,990,0.085
+3_towns,Naugatuck,2018,other_households,2031,0.174
+3_towns,New Britain,2000,total_households,28558,NA
+3_towns,New Britain,2000,living_alone,9446,0.331
+3_towns,New Britain,2000,married_w_kids,4229,0.148
+3_towns,New Britain,2000,married_no_kids,6230,0.218
+3_towns,New Britain,2000,single_w_kids,3846,0.135
+3_towns,New Britain,2000,other_households,4807,0.168
+3_towns,New Britain,2010,total_households,29461,NA
+3_towns,New Britain,2010,living_alone,9881,0.335
+3_towns,New Britain,2010,married_w_kids,3566,0.121
+3_towns,New Britain,2010,married_no_kids,6215,0.211
+3_towns,New Britain,2010,single_w_kids,4493,0.153
+3_towns,New Britain,2010,other_households,5306,0.18
+3_towns,New Britain,2018,total_households,28383,NA
+3_towns,New Britain,2018,living_alone,9294,0.327
+3_towns,New Britain,2018,married_w_kids,3147,0.111
+3_towns,New Britain,2018,married_no_kids,6050,0.213
+3_towns,New Britain,2018,single_w_kids,4537,0.16
+3_towns,New Britain,2018,other_households,5355,0.189
+3_towns,New Canaan,2000,total_households,6822,NA
+3_towns,New Canaan,2000,living_alone,1326,0.194
+3_towns,New Canaan,2000,married_w_kids,2571,0.377
+3_towns,New Canaan,2000,married_no_kids,2152,0.315
+3_towns,New Canaan,2000,single_w_kids,273,0.04
+3_towns,New Canaan,2000,other_households,500,0.073
+3_towns,New Canaan,2010,total_households,6767,NA
+3_towns,New Canaan,2010,living_alone,1251,0.185
+3_towns,New Canaan,2010,married_w_kids,2898,0.428
+3_towns,New Canaan,2010,married_no_kids,1757,0.26
+3_towns,New Canaan,2010,single_w_kids,282,0.042
+3_towns,New Canaan,2010,other_households,579,0.086
+3_towns,New Canaan,2018,total_households,7084,NA
+3_towns,New Canaan,2018,living_alone,1401,0.198
+3_towns,New Canaan,2018,married_w_kids,2453,0.346
+3_towns,New Canaan,2018,married_no_kids,2382,0.336
+3_towns,New Canaan,2018,single_w_kids,367,0.052
+3_towns,New Canaan,2018,other_households,481,0.068
+3_towns,New Fairfield,2000,total_households,4638,NA
+3_towns,New Fairfield,2000,living_alone,583,0.126
+3_towns,New Fairfield,2000,married_w_kids,1888,0.407
+3_towns,New Fairfield,2000,married_no_kids,1603,0.346
+3_towns,New Fairfield,2000,single_w_kids,175,0.038
+3_towns,New Fairfield,2000,other_households,389,0.084
+3_towns,New Fairfield,2010,total_households,4729,NA
+3_towns,New Fairfield,2010,living_alone,829,0.175
+3_towns,New Fairfield,2010,married_w_kids,1653,0.35
+3_towns,New Fairfield,2010,married_no_kids,1584,0.335
+3_towns,New Fairfield,2010,single_w_kids,165,0.035
+3_towns,New Fairfield,2010,other_households,498,0.105
+3_towns,New Fairfield,2018,total_households,5019,NA
+3_towns,New Fairfield,2018,living_alone,868,0.173
+3_towns,New Fairfield,2018,married_w_kids,1370,0.273
+3_towns,New Fairfield,2018,married_no_kids,2122,0.423
+3_towns,New Fairfield,2018,single_w_kids,168,0.033
+3_towns,New Fairfield,2018,other_households,491,0.098
+3_towns,New Hartford,2000,total_households,2228,NA
+3_towns,New Hartford,2000,living_alone,365,0.164
+3_towns,New Hartford,2000,married_w_kids,744,0.334
+3_towns,New Hartford,2000,married_no_kids,790,0.355
+3_towns,New Hartford,2000,single_w_kids,109,0.049
+3_towns,New Hartford,2000,other_households,220,0.099
+3_towns,New Hartford,2010,total_households,2601,NA
+3_towns,New Hartford,2010,living_alone,503,0.193
+3_towns,New Hartford,2010,married_w_kids,674,0.259
+3_towns,New Hartford,2010,married_no_kids,1055,0.406
+3_towns,New Hartford,2010,single_w_kids,196,0.075
+3_towns,New Hartford,2010,other_households,173,0.067
+3_towns,New Hartford,2018,total_households,2598,NA
+3_towns,New Hartford,2018,living_alone,654,0.252
+3_towns,New Hartford,2018,married_w_kids,669,0.258
+3_towns,New Hartford,2018,married_no_kids,940,0.362
+3_towns,New Hartford,2018,single_w_kids,126,0.048
+3_towns,New Hartford,2018,other_households,209,0.08
+3_towns,New Haven,2000,total_households,47094,NA
+3_towns,New Haven,2000,living_alone,17022,0.361
+3_towns,New Haven,2000,married_w_kids,5781,0.123
+3_towns,New Haven,2000,married_no_kids,7161,0.152
+3_towns,New Haven,2000,single_w_kids,8014,0.17
+3_towns,New Haven,2000,other_households,9116,0.194
+3_towns,New Haven,2010,total_households,48419,NA
+3_towns,New Haven,2010,living_alone,17203,0.355
+3_towns,New Haven,2010,married_w_kids,5892,0.122
+3_towns,New Haven,2010,married_no_kids,7192,0.149
+3_towns,New Haven,2010,single_w_kids,7667,0.158
+3_towns,New Haven,2010,other_households,10465,0.216
+3_towns,New Haven,2018,total_households,49770,NA
+3_towns,New Haven,2018,living_alone,20530,0.412
+3_towns,New Haven,2018,married_w_kids,5436,0.109
+3_towns,New Haven,2018,married_no_kids,6468,0.13
+3_towns,New Haven,2018,single_w_kids,7164,0.144
+3_towns,New Haven,2018,other_households,10172,0.204
+3_towns,New London,2000,total_households,10181,NA
+3_towns,New London,2000,living_alone,3847,0.378
+3_towns,New London,2000,married_w_kids,1315,0.129
+3_towns,New London,2000,married_no_kids,1780,0.175
+3_towns,New London,2000,single_w_kids,1492,0.147
+3_towns,New London,2000,other_households,1747,0.172
+3_towns,New London,2010,total_households,10223,NA
+3_towns,New London,2010,living_alone,3883,0.38
+3_towns,New London,2010,married_w_kids,1061,0.104
+3_towns,New London,2010,married_no_kids,1861,0.182
+3_towns,New London,2010,single_w_kids,1459,0.143
+3_towns,New London,2010,other_households,1959,0.192
+3_towns,New London,2018,total_households,10975,NA
+3_towns,New London,2018,living_alone,4615,0.421
+3_towns,New London,2018,married_w_kids,976,0.089
+3_towns,New London,2018,married_no_kids,1568,0.143
+3_towns,New London,2018,single_w_kids,1772,0.161
+3_towns,New London,2018,other_households,2044,0.186
+3_towns,New Milford,2000,total_households,10018,NA
+3_towns,New Milford,2000,living_alone,2136,0.213
+3_towns,New Milford,2000,married_w_kids,3096,0.309
+3_towns,New Milford,2000,married_no_kids,2910,0.29
+3_towns,New Milford,2000,single_w_kids,710,0.071
+3_towns,New Milford,2000,other_households,1166,0.116
+3_towns,New Milford,2010,total_households,10659,NA
+3_towns,New Milford,2010,living_alone,2461,0.231
+3_towns,New Milford,2010,married_w_kids,3023,0.284
+3_towns,New Milford,2010,married_no_kids,3338,0.313
+3_towns,New Milford,2010,single_w_kids,686,0.064
+3_towns,New Milford,2010,other_households,1151,0.108
+3_towns,New Milford,2018,total_households,10434,NA
+3_towns,New Milford,2018,living_alone,2522,0.242
+3_towns,New Milford,2018,married_w_kids,2380,0.228
+3_towns,New Milford,2018,married_no_kids,3442,0.33
+3_towns,New Milford,2018,single_w_kids,496,0.048
+3_towns,New Milford,2018,other_households,1594,0.153
+3_towns,Newington,2000,total_households,12014,NA
+3_towns,Newington,2000,living_alone,3216,0.268
+3_towns,Newington,2000,married_w_kids,2597,0.216
+3_towns,Newington,2000,married_no_kids,3999,0.333
+3_towns,Newington,2000,single_w_kids,730,0.061
+3_towns,Newington,2000,other_households,1472,0.123
+3_towns,Newington,2010,total_households,12131,NA
+3_towns,Newington,2010,living_alone,3432,0.283
+3_towns,Newington,2010,married_w_kids,2653,0.219
+3_towns,Newington,2010,married_no_kids,3588,0.296
+3_towns,Newington,2010,single_w_kids,628,0.052
+3_towns,Newington,2010,other_households,1830,0.151
+3_towns,Newington,2018,total_households,12394,NA
+3_towns,Newington,2018,living_alone,4026,0.325
+3_towns,Newington,2018,married_w_kids,2181,0.176
+3_towns,Newington,2018,married_no_kids,3676,0.297
+3_towns,Newington,2018,single_w_kids,796,0.064
+3_towns,Newington,2018,other_households,1715,0.138
+3_towns,Newtown,2000,total_households,8325,NA
+3_towns,Newtown,2000,living_alone,1230,0.148
+3_towns,Newtown,2000,married_w_kids,3404,0.409
+3_towns,Newtown,2000,married_no_kids,2698,0.324
+3_towns,Newtown,2000,single_w_kids,318,0.038
+3_towns,Newtown,2000,other_households,675,0.081
+3_towns,Newtown,2010,total_households,8851,NA
+3_towns,Newtown,2010,living_alone,1402,0.158
+3_towns,Newtown,2010,married_w_kids,3443,0.389
+3_towns,Newtown,2010,married_no_kids,2920,0.33
+3_towns,Newtown,2010,single_w_kids,363,0.041
+3_towns,Newtown,2010,other_households,723,0.082
+3_towns,Newtown,2018,total_households,9840,NA
+3_towns,Newtown,2018,living_alone,1923,0.195
+3_towns,Newtown,2018,married_w_kids,2872,0.292
+3_towns,Newtown,2018,married_no_kids,3705,0.377
+3_towns,Newtown,2018,single_w_kids,560,0.057
+3_towns,Newtown,2018,other_households,780,0.079
+3_towns,Norfolk,2000,total_households,676,NA
+3_towns,Norfolk,2000,living_alone,166,0.246
+3_towns,Norfolk,2000,married_w_kids,157,0.232
+3_towns,Norfolk,2000,married_no_kids,237,0.351
+3_towns,Norfolk,2000,single_w_kids,32,0.047
+3_towns,Norfolk,2000,other_households,84,0.124
+3_towns,Norfolk,2010,total_households,662,NA
+3_towns,Norfolk,2010,living_alone,183,0.276
+3_towns,Norfolk,2010,married_w_kids,174,0.263
+3_towns,Norfolk,2010,married_no_kids,168,0.254
+3_towns,Norfolk,2010,single_w_kids,51,0.077
+3_towns,Norfolk,2010,other_households,86,0.13
+3_towns,Norfolk,2018,total_households,679,NA
+3_towns,Norfolk,2018,living_alone,227,0.334
+3_towns,Norfolk,2018,married_w_kids,96,0.141
+3_towns,Norfolk,2018,married_no_kids,226,0.333
+3_towns,Norfolk,2018,single_w_kids,29,0.043
+3_towns,Norfolk,2018,other_households,101,0.149
+3_towns,North Branford,2000,total_households,5132,NA
+3_towns,North Branford,2000,living_alone,1051,0.205
+3_towns,North Branford,2000,married_w_kids,1550,0.302
+3_towns,North Branford,2000,married_no_kids,1743,0.34
+3_towns,North Branford,2000,single_w_kids,265,0.052
+3_towns,North Branford,2000,other_households,523,0.102
+3_towns,North Branford,2010,total_households,5441,NA
+3_towns,North Branford,2010,living_alone,1205,0.221
+3_towns,North Branford,2010,married_w_kids,1231,0.226
+3_towns,North Branford,2010,married_no_kids,2181,0.401
+3_towns,North Branford,2010,single_w_kids,311,0.057
+3_towns,North Branford,2010,other_households,513,0.094
+3_towns,North Branford,2018,total_households,5451,NA
+3_towns,North Branford,2018,living_alone,1236,0.227
+3_towns,North Branford,2018,married_w_kids,1028,0.189
+3_towns,North Branford,2018,married_no_kids,2293,0.421
+3_towns,North Branford,2018,single_w_kids,296,0.054
+3_towns,North Branford,2018,other_households,598,0.11
+3_towns,North Canaan,2000,total_households,1343,NA
+3_towns,North Canaan,2000,living_alone,405,0.302
+3_towns,North Canaan,2000,married_w_kids,293,0.218
+3_towns,North Canaan,2000,married_no_kids,384,0.286
+3_towns,North Canaan,2000,single_w_kids,110,0.082
+3_towns,North Canaan,2000,other_households,151,0.112
+3_towns,North Canaan,2010,total_households,1525,NA
+3_towns,North Canaan,2010,living_alone,443,0.29
+3_towns,North Canaan,2010,married_w_kids,177,0.116
+3_towns,North Canaan,2010,married_no_kids,584,0.383
+3_towns,North Canaan,2010,single_w_kids,172,0.113
+3_towns,North Canaan,2010,other_households,149,0.098
+3_towns,North Canaan,2018,total_households,1358,NA
+3_towns,North Canaan,2018,living_alone,508,0.374
+3_towns,North Canaan,2018,married_w_kids,145,0.107
+3_towns,North Canaan,2018,married_no_kids,371,0.273
+3_towns,North Canaan,2018,single_w_kids,80,0.059
+3_towns,North Canaan,2018,other_households,254,0.187
+3_towns,North Haven,2000,total_households,8597,NA
+3_towns,North Haven,2000,living_alone,1807,0.21
+3_towns,North Haven,2000,married_w_kids,2317,0.27
+3_towns,North Haven,2000,married_no_kids,3203,0.373
+3_towns,North Haven,2000,single_w_kids,349,0.041
+3_towns,North Haven,2000,other_households,921,0.107
+3_towns,North Haven,2010,total_households,8954,NA
+3_towns,North Haven,2010,living_alone,1805,0.202
+3_towns,North Haven,2010,married_w_kids,2404,0.268
+3_towns,North Haven,2010,married_no_kids,3336,0.373
+3_towns,North Haven,2010,single_w_kids,384,0.043
+3_towns,North Haven,2010,other_households,1025,0.114
+3_towns,North Haven,2018,total_households,8785,NA
+3_towns,North Haven,2018,living_alone,1997,0.227
+3_towns,North Haven,2018,married_w_kids,1845,0.21
+3_towns,North Haven,2018,married_no_kids,3441,0.392
+3_towns,North Haven,2018,single_w_kids,432,0.049
+3_towns,North Haven,2018,other_households,1070,0.122
+3_towns,North Stonington,2000,total_households,1833,NA
+3_towns,North Stonington,2000,living_alone,299,0.163
+3_towns,North Stonington,2000,married_w_kids,532,0.29
+3_towns,North Stonington,2000,married_no_kids,673,0.367
+3_towns,North Stonington,2000,single_w_kids,110,0.06
+3_towns,North Stonington,2000,other_households,219,0.119
+3_towns,North Stonington,2010,total_households,2112,NA
+3_towns,North Stonington,2010,living_alone,375,0.178
+3_towns,North Stonington,2010,married_w_kids,548,0.259
+3_towns,North Stonington,2010,married_no_kids,804,0.381
+3_towns,North Stonington,2010,single_w_kids,76,0.036
+3_towns,North Stonington,2010,other_households,309,0.146
+3_towns,North Stonington,2018,total_households,2038,NA
+3_towns,North Stonington,2018,living_alone,526,0.258
+3_towns,North Stonington,2018,married_w_kids,516,0.253
+3_towns,North Stonington,2018,married_no_kids,797,0.391
+3_towns,North Stonington,2018,single_w_kids,46,0.023
+3_towns,North Stonington,2018,other_households,153,0.075
+3_towns,Norwalk,2000,total_households,32711,NA
+3_towns,Norwalk,2000,living_alone,9223,0.282
+3_towns,Norwalk,2000,married_w_kids,6835,0.209
+3_towns,Norwalk,2000,married_no_kids,8827,0.27
+3_towns,Norwalk,2000,single_w_kids,2503,0.077
+3_towns,Norwalk,2000,other_households,5323,0.163
+3_towns,Norwalk,2010,total_households,35133,NA
+3_towns,Norwalk,2010,living_alone,11602,0.33
+3_towns,Norwalk,2010,married_w_kids,6789,0.193
+3_towns,Norwalk,2010,married_no_kids,9764,0.278
+3_towns,Norwalk,2010,single_w_kids,2391,0.068
+3_towns,Norwalk,2010,other_households,4587,0.131
+3_towns,Norwalk,2018,total_households,33923,NA
+3_towns,Norwalk,2018,living_alone,9820,0.289
+3_towns,Norwalk,2018,married_w_kids,6746,0.199
+3_towns,Norwalk,2018,married_no_kids,9214,0.272
+3_towns,Norwalk,2018,single_w_kids,2781,0.082
+3_towns,Norwalk,2018,other_households,5362,0.158
+3_towns,Norwich,2000,total_households,15091,NA
+3_towns,Norwich,2000,living_alone,4834,0.32
+3_towns,Norwich,2000,married_w_kids,2521,0.167
+3_towns,Norwich,2000,married_no_kids,3619,0.24
+3_towns,Norwich,2000,single_w_kids,1852,0.123
+3_towns,Norwich,2000,other_households,2265,0.15
+3_towns,Norwich,2010,total_households,16167,NA
+3_towns,Norwich,2010,living_alone,4804,0.297
+3_towns,Norwich,2010,married_w_kids,2470,0.153
+3_towns,Norwich,2010,married_no_kids,4012,0.248
+3_towns,Norwich,2010,single_w_kids,2031,0.126
+3_towns,Norwich,2010,other_households,2850,0.176
+3_towns,Norwich,2018,total_households,16271,NA
+3_towns,Norwich,2018,living_alone,5493,0.338
+3_towns,Norwich,2018,married_w_kids,2259,0.139
+3_towns,Norwich,2018,married_no_kids,3847,0.236
+3_towns,Norwich,2018,single_w_kids,2031,0.125
+3_towns,Norwich,2018,other_households,2641,0.162
+3_towns,Old Lyme,2000,total_households,2958,NA
+3_towns,Old Lyme,2000,living_alone,663,0.224
+3_towns,Old Lyme,2000,married_w_kids,752,0.254
+3_towns,Old Lyme,2000,married_no_kids,1117,0.378
+3_towns,Old Lyme,2000,single_w_kids,141,0.048
+3_towns,Old Lyme,2000,other_households,285,0.096
+3_towns,Old Lyme,2010,total_households,3190,NA
+3_towns,Old Lyme,2010,living_alone,773,0.242
+3_towns,Old Lyme,2010,married_w_kids,662,0.208
+3_towns,Old Lyme,2010,married_no_kids,1191,0.373
+3_towns,Old Lyme,2010,single_w_kids,236,0.074
+3_towns,Old Lyme,2010,other_households,328,0.103
+3_towns,Old Lyme,2018,total_households,3189,NA
+3_towns,Old Lyme,2018,living_alone,898,0.282
+3_towns,Old Lyme,2018,married_w_kids,562,0.176
+3_towns,Old Lyme,2018,married_no_kids,1302,0.408
+3_towns,Old Lyme,2018,single_w_kids,155,0.049
+3_towns,Old Lyme,2018,other_households,272,0.085
+3_towns,Old Saybrook,2000,total_households,4184,NA
+3_towns,Old Saybrook,2000,living_alone,1062,0.254
+3_towns,Old Saybrook,2000,married_w_kids,933,0.223
+3_towns,Old Saybrook,2000,married_no_kids,1551,0.371
+3_towns,Old Saybrook,2000,single_w_kids,207,0.049
+3_towns,Old Saybrook,2000,other_households,431,0.103
+3_towns,Old Saybrook,2010,total_households,4591,NA
+3_towns,Old Saybrook,2010,living_alone,1376,0.3
+3_towns,Old Saybrook,2010,married_w_kids,801,0.174
+3_towns,Old Saybrook,2010,married_no_kids,1716,0.374
+3_towns,Old Saybrook,2010,single_w_kids,344,0.075
+3_towns,Old Saybrook,2010,other_households,354,0.077
+3_towns,Old Saybrook,2018,total_households,4354,NA
+3_towns,Old Saybrook,2018,living_alone,1192,0.274
+3_towns,Old Saybrook,2018,married_w_kids,675,0.155
+3_towns,Old Saybrook,2018,married_no_kids,1606,0.369
+3_towns,Old Saybrook,2018,single_w_kids,289,0.066
+3_towns,Old Saybrook,2018,other_households,592,0.136
+3_towns,Orange,2000,total_households,4739,NA
+3_towns,Orange,2000,living_alone,744,0.157
+3_towns,Orange,2000,married_w_kids,1502,0.317
+3_towns,Orange,2000,married_no_kids,1960,0.414
+3_towns,Orange,2000,single_w_kids,160,0.034
+3_towns,Orange,2000,other_households,373,0.079
+3_towns,Orange,2010,total_households,4996,NA
+3_towns,Orange,2010,living_alone,902,0.181
+3_towns,Orange,2010,married_w_kids,1526,0.305
+3_towns,Orange,2010,married_no_kids,1999,0.4
+3_towns,Orange,2010,single_w_kids,168,0.034
+3_towns,Orange,2010,other_households,401,0.08
+3_towns,Orange,2018,total_households,4939,NA
+3_towns,Orange,2018,living_alone,854,0.173
+3_towns,Orange,2018,married_w_kids,1339,0.271
+3_towns,Orange,2018,married_no_kids,2070,0.419
+3_towns,Orange,2018,single_w_kids,163,0.033
+3_towns,Orange,2018,other_households,513,0.104
+3_towns,Oxford,2000,total_households,3343,NA
+3_towns,Oxford,2000,living_alone,422,0.126
+3_towns,Oxford,2000,married_w_kids,1189,0.356
+3_towns,Oxford,2000,married_no_kids,1277,0.382
+3_towns,Oxford,2000,single_w_kids,159,0.048
+3_towns,Oxford,2000,other_households,296,0.089
+3_towns,Oxford,2010,total_households,4250,NA
+3_towns,Oxford,2010,living_alone,543,0.128
+3_towns,Oxford,2010,married_w_kids,1405,0.331
+3_towns,Oxford,2010,married_no_kids,1838,0.432
+3_towns,Oxford,2010,single_w_kids,158,0.037
+3_towns,Oxford,2010,other_households,306,0.072
+3_towns,Oxford,2018,total_households,4510,NA
+3_towns,Oxford,2018,living_alone,714,0.158
+3_towns,Oxford,2018,married_w_kids,1254,0.278
+3_towns,Oxford,2018,married_no_kids,1863,0.413
+3_towns,Oxford,2018,single_w_kids,235,0.052
+3_towns,Oxford,2018,other_households,444,0.098
+3_towns,Plainfield,2000,total_households,5444,NA
+3_towns,Plainfield,2000,living_alone,1164,0.214
+3_towns,Plainfield,2000,married_w_kids,1338,0.246
+3_towns,Plainfield,2000,married_no_kids,1579,0.29
+3_towns,Plainfield,2000,single_w_kids,656,0.12
+3_towns,Plainfield,2000,other_households,707,0.13
+3_towns,Plainfield,2010,total_households,5586,NA
+3_towns,Plainfield,2010,living_alone,1295,0.232
+3_towns,Plainfield,2010,married_w_kids,1359,0.243
+3_towns,Plainfield,2010,married_no_kids,1662,0.298
+3_towns,Plainfield,2010,single_w_kids,594,0.106
+3_towns,Plainfield,2010,other_households,676,0.121
+3_towns,Plainfield,2018,total_households,5710,NA
+3_towns,Plainfield,2018,living_alone,1414,0.248
+3_towns,Plainfield,2018,married_w_kids,871,0.153
+3_towns,Plainfield,2018,married_no_kids,2009,0.352
+3_towns,Plainfield,2018,single_w_kids,454,0.08
+3_towns,Plainfield,2018,other_households,962,0.168
+3_towns,Plainville,2000,total_households,7385,NA
+3_towns,Plainville,2000,living_alone,2329,0.315
+3_towns,Plainville,2000,married_w_kids,1444,0.196
+3_towns,Plainville,2000,married_no_kids,2201,0.298
+3_towns,Plainville,2000,single_w_kids,498,0.067
+3_towns,Plainville,2000,other_households,913,0.124
+3_towns,Plainville,2010,total_households,7422,NA
+3_towns,Plainville,2010,living_alone,2527,0.34
+3_towns,Plainville,2010,married_w_kids,1316,0.177
+3_towns,Plainville,2010,married_no_kids,2333,0.314
+3_towns,Plainville,2010,single_w_kids,524,0.071
+3_towns,Plainville,2010,other_households,722,0.097
+3_towns,Plainville,2018,total_households,7722,NA
+3_towns,Plainville,2018,living_alone,2681,0.347
+3_towns,Plainville,2018,married_w_kids,1031,0.134
+3_towns,Plainville,2018,married_no_kids,2493,0.323
+3_towns,Plainville,2018,single_w_kids,596,0.077
+3_towns,Plainville,2018,other_households,921,0.119
+3_towns,Plymouth,2000,total_households,4453,NA
+3_towns,Plymouth,2000,living_alone,1015,0.228
+3_towns,Plymouth,2000,married_w_kids,1181,0.265
+3_towns,Plymouth,2000,married_no_kids,1432,0.322
+3_towns,Plymouth,2000,single_w_kids,341,0.077
+3_towns,Plymouth,2000,other_households,484,0.109
+3_towns,Plymouth,2010,total_households,4624,NA
+3_towns,Plymouth,2010,living_alone,987,0.213
+3_towns,Plymouth,2010,married_w_kids,1217,0.263
+3_towns,Plymouth,2010,married_no_kids,1579,0.341
+3_towns,Plymouth,2010,single_w_kids,370,0.08
+3_towns,Plymouth,2010,other_households,471,0.102
+3_towns,Plymouth,2018,total_households,4733,NA
+3_towns,Plymouth,2018,living_alone,1316,0.278
+3_towns,Plymouth,2018,married_w_kids,688,0.145
+3_towns,Plymouth,2018,married_no_kids,1636,0.346
+3_towns,Plymouth,2018,single_w_kids,344,0.073
+3_towns,Plymouth,2018,other_households,749,0.158
+3_towns,Pomfret,2000,total_households,1433,NA
+3_towns,Pomfret,2000,living_alone,300,0.209
+3_towns,Pomfret,2000,married_w_kids,426,0.297
+3_towns,Pomfret,2000,married_no_kids,466,0.325
+3_towns,Pomfret,2000,single_w_kids,94,0.066
+3_towns,Pomfret,2000,other_households,147,0.103
+3_towns,Pomfret,2010,total_households,1572,NA
+3_towns,Pomfret,2010,living_alone,299,0.19
+3_towns,Pomfret,2010,married_w_kids,479,0.305
+3_towns,Pomfret,2010,married_no_kids,539,0.343
+3_towns,Pomfret,2010,single_w_kids,53,0.034
+3_towns,Pomfret,2010,other_households,202,0.128
+3_towns,Pomfret,2018,total_households,1665,NA
+3_towns,Pomfret,2018,living_alone,542,0.326
+3_towns,Pomfret,2018,married_w_kids,299,0.18
+3_towns,Pomfret,2018,married_no_kids,542,0.326
+3_towns,Pomfret,2018,single_w_kids,80,0.048
+3_towns,Pomfret,2018,other_households,202,0.121
+3_towns,Portland,2000,total_households,3388,NA
+3_towns,Portland,2000,living_alone,817,0.241
+3_towns,Portland,2000,married_w_kids,921,0.272
+3_towns,Portland,2000,married_no_kids,1060,0.313
+3_towns,Portland,2000,single_w_kids,217,0.064
+3_towns,Portland,2000,other_households,373,0.11
+3_towns,Portland,2010,total_households,3759,NA
+3_towns,Portland,2010,living_alone,835,0.222
+3_towns,Portland,2010,married_w_kids,974,0.259
+3_towns,Portland,2010,married_no_kids,1301,0.346
+3_towns,Portland,2010,single_w_kids,257,0.068
+3_towns,Portland,2010,other_households,392,0.104
+3_towns,Portland,2018,total_households,3842,NA
+3_towns,Portland,2018,living_alone,1045,0.272
+3_towns,Portland,2018,married_w_kids,774,0.201
+3_towns,Portland,2018,married_no_kids,1203,0.313
+3_towns,Portland,2018,single_w_kids,242,0.063
+3_towns,Portland,2018,other_households,578,0.15
+3_towns,Preston,2000,total_households,1837,NA
+3_towns,Preston,2000,living_alone,385,0.21
+3_towns,Preston,2000,married_w_kids,452,0.246
+3_towns,Preston,2000,married_no_kids,704,0.383
+3_towns,Preston,2000,single_w_kids,105,0.057
+3_towns,Preston,2000,other_households,191,0.104
+3_towns,Preston,2010,total_households,1810,NA
+3_towns,Preston,2010,living_alone,266,0.147
+3_towns,Preston,2010,married_w_kids,412,0.228
+3_towns,Preston,2010,married_no_kids,867,0.479
+3_towns,Preston,2010,single_w_kids,113,0.062
+3_towns,Preston,2010,other_households,152,0.084
+3_towns,Preston,2018,total_households,1835,NA
+3_towns,Preston,2018,living_alone,459,0.25
+3_towns,Preston,2018,married_w_kids,365,0.199
+3_towns,Preston,2018,married_no_kids,649,0.354
+3_towns,Preston,2018,single_w_kids,126,0.069
+3_towns,Preston,2018,other_households,236,0.129
+3_towns,Prospect,2000,total_households,3020,NA
+3_towns,Prospect,2000,living_alone,456,0.151
+3_towns,Prospect,2000,married_w_kids,974,0.323
+3_towns,Prospect,2000,married_no_kids,1168,0.387
+3_towns,Prospect,2000,single_w_kids,113,0.037
+3_towns,Prospect,2000,other_households,309,0.102
+3_towns,Prospect,2010,total_households,3300,NA
+3_towns,Prospect,2010,living_alone,561,0.17
+3_towns,Prospect,2010,married_w_kids,950,0.288
+3_towns,Prospect,2010,married_no_kids,1337,0.405
+3_towns,Prospect,2010,single_w_kids,211,0.064
+3_towns,Prospect,2010,other_households,241,0.073
+3_towns,Prospect,2018,total_households,3367,NA
+3_towns,Prospect,2018,living_alone,744,0.221
+3_towns,Prospect,2018,married_w_kids,760,0.226
+3_towns,Prospect,2018,married_no_kids,1333,0.396
+3_towns,Prospect,2018,single_w_kids,99,0.029
+3_towns,Prospect,2018,other_households,431,0.128
+3_towns,Putnam,2000,total_households,3683,NA
+3_towns,Putnam,2000,living_alone,1117,0.303
+3_towns,Putnam,2000,married_w_kids,687,0.187
+3_towns,Putnam,2000,married_no_kids,964,0.262
+3_towns,Putnam,2000,single_w_kids,392,0.106
+3_towns,Putnam,2000,other_households,523,0.142
+3_towns,Putnam,2010,total_households,3975,NA
+3_towns,Putnam,2010,living_alone,1299,0.327
+3_towns,Putnam,2010,married_w_kids,603,0.152
+3_towns,Putnam,2010,married_no_kids,1089,0.274
+3_towns,Putnam,2010,single_w_kids,384,0.097
+3_towns,Putnam,2010,other_households,600,0.151
+3_towns,Putnam,2018,total_households,3949,NA
+3_towns,Putnam,2018,living_alone,1167,0.296
+3_towns,Putnam,2018,married_w_kids,416,0.105
+3_towns,Putnam,2018,married_no_kids,1137,0.288
+3_towns,Putnam,2018,single_w_kids,415,0.105
+3_towns,Putnam,2018,other_households,814,0.206
+3_towns,Redding,2000,total_households,2918,NA
+3_towns,Redding,2000,living_alone,395,0.135
+3_towns,Redding,2000,married_w_kids,1122,0.385
+3_towns,Redding,2000,married_no_kids,1086,0.372
+3_towns,Redding,2000,single_w_kids,113,0.039
+3_towns,Redding,2000,other_households,202,0.069
+3_towns,Redding,2010,total_households,3425,NA
+3_towns,Redding,2010,living_alone,813,0.237
+3_towns,Redding,2010,married_w_kids,1021,0.298
+3_towns,Redding,2010,married_no_kids,1143,0.334
+3_towns,Redding,2010,single_w_kids,167,0.049
+3_towns,Redding,2010,other_households,281,0.082
+3_towns,Redding,2018,total_households,3440,NA
+3_towns,Redding,2018,living_alone,784,0.228
+3_towns,Redding,2018,married_w_kids,920,0.267
+3_towns,Redding,2018,married_no_kids,1264,0.367
+3_towns,Redding,2018,single_w_kids,186,0.054
+3_towns,Redding,2018,other_households,286,0.083
+3_towns,Ridgefield,2000,total_households,8433,NA
+3_towns,Ridgefield,2000,living_alone,1592,0.189
+3_towns,Ridgefield,2000,married_w_kids,3281,0.389
+3_towns,Ridgefield,2000,married_no_kids,2673,0.317
+3_towns,Ridgefield,2000,single_w_kids,344,0.041
+3_towns,Ridgefield,2000,other_households,543,0.064
+3_towns,Ridgefield,2010,total_households,8592,NA
+3_towns,Ridgefield,2010,living_alone,1690,0.197
+3_towns,Ridgefield,2010,married_w_kids,3420,0.398
+3_towns,Ridgefield,2010,married_no_kids,2555,0.297
+3_towns,Ridgefield,2010,single_w_kids,401,0.047
+3_towns,Ridgefield,2010,other_households,526,0.061
+3_towns,Ridgefield,2018,total_households,8983,NA
+3_towns,Ridgefield,2018,living_alone,1543,0.172
+3_towns,Ridgefield,2018,married_w_kids,2979,0.332
+3_towns,Ridgefield,2018,married_no_kids,3316,0.369
+3_towns,Ridgefield,2018,single_w_kids,522,0.058
+3_towns,Ridgefield,2018,other_households,623,0.069
+3_towns,Rocky Hill,2000,total_households,7557,NA
+3_towns,Rocky Hill,2000,living_alone,2455,0.325
+3_towns,Rocky Hill,2000,married_w_kids,1519,0.201
+3_towns,Rocky Hill,2000,married_no_kids,2179,0.288
+3_towns,Rocky Hill,2000,single_w_kids,365,0.048
+3_towns,Rocky Hill,2000,other_households,1039,0.137
+3_towns,Rocky Hill,2010,total_households,8044,NA
+3_towns,Rocky Hill,2010,living_alone,2791,0.347
+3_towns,Rocky Hill,2010,married_w_kids,1859,0.231
+3_towns,Rocky Hill,2010,married_no_kids,2315,0.288
+3_towns,Rocky Hill,2010,single_w_kids,315,0.039
+3_towns,Rocky Hill,2010,other_households,764,0.095
+3_towns,Rocky Hill,2018,total_households,8599,NA
+3_towns,Rocky Hill,2018,living_alone,3091,0.359
+3_towns,Rocky Hill,2018,married_w_kids,1568,0.182
+3_towns,Rocky Hill,2018,married_no_kids,2444,0.284
+3_towns,Rocky Hill,2018,single_w_kids,419,0.049
+3_towns,Rocky Hill,2018,other_households,1077,0.125
+3_towns,Roxbury,2000,total_households,848,NA
+3_towns,Roxbury,2000,living_alone,172,0.203
+3_towns,Roxbury,2000,married_w_kids,220,0.259
+3_towns,Roxbury,2000,married_no_kids,344,0.406
+3_towns,Roxbury,2000,single_w_kids,28,0.033
+3_towns,Roxbury,2000,other_households,84,0.099
+3_towns,Roxbury,2010,total_households,957,NA
+3_towns,Roxbury,2010,living_alone,260,0.272
+3_towns,Roxbury,2010,married_w_kids,193,0.202
+3_towns,Roxbury,2010,married_no_kids,426,0.445
+3_towns,Roxbury,2010,single_w_kids,21,0.022
+3_towns,Roxbury,2010,other_households,57,0.06
+3_towns,Roxbury,2018,total_households,888,NA
+3_towns,Roxbury,2018,living_alone,219,0.247
+3_towns,Roxbury,2018,married_w_kids,189,0.213
+3_towns,Roxbury,2018,married_no_kids,396,0.446
+3_towns,Roxbury,2018,single_w_kids,18,0.02
+3_towns,Roxbury,2018,other_households,66,0.074
+3_towns,Salem,2000,total_households,1358,NA
+3_towns,Salem,2000,living_alone,212,0.156
+3_towns,Salem,2000,married_w_kids,509,0.375
+3_towns,Salem,2000,married_no_kids,426,0.314
+3_towns,Salem,2000,single_w_kids,82,0.06
+3_towns,Salem,2000,other_households,129,0.095
+3_towns,Salem,2010,total_households,1572,NA
+3_towns,Salem,2010,living_alone,300,0.191
+3_towns,Salem,2010,married_w_kids,443,0.282
+3_towns,Salem,2010,married_no_kids,619,0.394
+3_towns,Salem,2010,single_w_kids,124,0.079
+3_towns,Salem,2010,other_households,86,0.055
+3_towns,Salem,2018,total_households,1604,NA
+3_towns,Salem,2018,living_alone,217,0.135
+3_towns,Salem,2018,married_w_kids,418,0.261
+3_towns,Salem,2018,married_no_kids,685,0.427
+3_towns,Salem,2018,single_w_kids,48,0.03
+3_towns,Salem,2018,other_households,236,0.147
+3_towns,Salisbury,2000,total_households,1737,NA
+3_towns,Salisbury,2000,living_alone,585,0.337
+3_towns,Salisbury,2000,married_w_kids,335,0.193
+3_towns,Salisbury,2000,married_no_kids,540,0.311
+3_towns,Salisbury,2000,single_w_kids,108,0.062
+3_towns,Salisbury,2000,other_households,169,0.097
+3_towns,Salisbury,2010,total_households,1596,NA
+3_towns,Salisbury,2010,living_alone,366,0.229
+3_towns,Salisbury,2010,married_w_kids,188,0.118
+3_towns,Salisbury,2010,married_no_kids,674,0.422
+3_towns,Salisbury,2010,single_w_kids,197,0.123
+3_towns,Salisbury,2010,other_households,171,0.107
+3_towns,Salisbury,2018,total_households,1675,NA
+3_towns,Salisbury,2018,living_alone,578,0.345
+3_towns,Salisbury,2018,married_w_kids,161,0.096
+3_towns,Salisbury,2018,married_no_kids,687,0.41
+3_towns,Salisbury,2018,single_w_kids,151,0.09
+3_towns,Salisbury,2018,other_households,98,0.059
+3_towns,Scotland,2000,total_households,553,NA
+3_towns,Scotland,2000,living_alone,87,0.157
+3_towns,Scotland,2000,married_w_kids,168,0.304
+3_towns,Scotland,2000,married_no_kids,205,0.371
+3_towns,Scotland,2000,single_w_kids,39,0.071
+3_towns,Scotland,2000,other_households,54,0.098
+3_towns,Scotland,2010,total_households,612,NA
+3_towns,Scotland,2010,living_alone,87,0.142
+3_towns,Scotland,2010,married_w_kids,200,0.327
+3_towns,Scotland,2010,married_no_kids,242,0.395
+3_towns,Scotland,2010,single_w_kids,5,0.008
+3_towns,Scotland,2010,other_households,78,0.127
+3_towns,Scotland,2018,total_households,634,NA
+3_towns,Scotland,2018,living_alone,125,0.197
+3_towns,Scotland,2018,married_w_kids,126,0.199
+3_towns,Scotland,2018,married_no_kids,295,0.465
+3_towns,Scotland,2018,single_w_kids,18,0.028
+3_towns,Scotland,2018,other_households,70,0.11
+3_towns,Seymour,2000,total_households,6155,NA
+3_towns,Seymour,2000,living_alone,1650,0.268
+3_towns,Seymour,2000,married_w_kids,1551,0.252
+3_towns,Seymour,2000,married_no_kids,1862,0.303
+3_towns,Seymour,2000,single_w_kids,407,0.066
+3_towns,Seymour,2000,other_households,685,0.111
+3_towns,Seymour,2010,total_households,6444,NA
+3_towns,Seymour,2010,living_alone,1799,0.279
+3_towns,Seymour,2010,married_w_kids,1466,0.227
+3_towns,Seymour,2010,married_no_kids,1783,0.277
+3_towns,Seymour,2010,single_w_kids,517,0.08
+3_towns,Seymour,2010,other_households,879,0.136
+3_towns,Seymour,2018,total_households,6239,NA
+3_towns,Seymour,2018,living_alone,1941,0.311
+3_towns,Seymour,2018,married_w_kids,1322,0.212
+3_towns,Seymour,2018,married_no_kids,1682,0.27
+3_towns,Seymour,2018,single_w_kids,450,0.072
+3_towns,Seymour,2018,other_households,844,0.135
+3_towns,Sharon,2000,total_households,1246,NA
+3_towns,Sharon,2000,living_alone,388,0.311
+3_towns,Sharon,2000,married_w_kids,255,0.205
+3_towns,Sharon,2000,married_no_kids,392,0.315
+3_towns,Sharon,2000,single_w_kids,67,0.054
+3_towns,Sharon,2000,other_households,144,0.116
+3_towns,Sharon,2010,total_households,1185,NA
+3_towns,Sharon,2010,living_alone,372,0.314
+3_towns,Sharon,2010,married_w_kids,196,0.165
+3_towns,Sharon,2010,married_no_kids,483,0.408
+3_towns,Sharon,2010,single_w_kids,45,0.038
+3_towns,Sharon,2010,other_households,89,0.075
+3_towns,Sharon,2018,total_households,1296,NA
+3_towns,Sharon,2018,living_alone,417,0.322
+3_towns,Sharon,2018,married_w_kids,134,0.103
+3_towns,Sharon,2018,married_no_kids,572,0.441
+3_towns,Sharon,2018,single_w_kids,68,0.052
+3_towns,Sharon,2018,other_households,105,0.081
+3_towns,Shelton,2000,total_households,14190,NA
+3_towns,Shelton,2000,living_alone,3097,0.218
+3_towns,Shelton,2000,married_w_kids,3941,0.278
+3_towns,Shelton,2000,married_no_kids,4991,0.352
+3_towns,Shelton,2000,single_w_kids,713,0.05
+3_towns,Shelton,2000,other_households,1448,0.102
+3_towns,Shelton,2010,total_households,14829,NA
+3_towns,Shelton,2010,living_alone,3782,0.255
+3_towns,Shelton,2010,married_w_kids,3658,0.247
+3_towns,Shelton,2010,married_no_kids,5129,0.346
+3_towns,Shelton,2010,single_w_kids,760,0.051
+3_towns,Shelton,2010,other_households,1500,0.101
+3_towns,Shelton,2018,total_households,16351,NA
+3_towns,Shelton,2018,living_alone,4358,0.267
+3_towns,Shelton,2018,married_w_kids,3108,0.19
+3_towns,Shelton,2018,married_no_kids,6119,0.374
+3_towns,Shelton,2018,single_w_kids,881,0.054
+3_towns,Shelton,2018,other_households,1885,0.115
+3_towns,Sherman,2000,total_households,1434,NA
+3_towns,Sherman,2000,living_alone,269,0.188
+3_towns,Sherman,2000,married_w_kids,436,0.304
+3_towns,Sherman,2000,married_no_kids,544,0.379
+3_towns,Sherman,2000,single_w_kids,60,0.042
+3_towns,Sherman,2000,other_households,125,0.087
+3_towns,Sherman,2010,total_households,1301,NA
+3_towns,Sherman,2010,living_alone,225,0.173
+3_towns,Sherman,2010,married_w_kids,374,0.287
+3_towns,Sherman,2010,married_no_kids,455,0.35
+3_towns,Sherman,2010,single_w_kids,57,0.044
+3_towns,Sherman,2010,other_households,190,0.146
+3_towns,Sherman,2018,total_households,1477,NA
+3_towns,Sherman,2018,living_alone,368,0.249
+3_towns,Sherman,2018,married_w_kids,300,0.203
+3_towns,Sherman,2018,married_no_kids,610,0.413
+3_towns,Sherman,2018,single_w_kids,46,0.031
+3_towns,Sherman,2018,other_households,153,0.104
+3_towns,Simsbury,2000,total_households,8527,NA
+3_towns,Simsbury,2000,living_alone,1655,0.194
+3_towns,Simsbury,2000,married_w_kids,3087,0.362
+3_towns,Simsbury,2000,married_no_kids,2804,0.329
+3_towns,Simsbury,2000,single_w_kids,415,0.049
+3_towns,Simsbury,2000,other_households,566,0.066
+3_towns,Simsbury,2010,total_households,8570,NA
+3_towns,Simsbury,2010,living_alone,1765,0.206
+3_towns,Simsbury,2010,married_w_kids,2953,0.345
+3_towns,Simsbury,2010,married_no_kids,2803,0.327
+3_towns,Simsbury,2010,single_w_kids,388,0.045
+3_towns,Simsbury,2010,other_households,661,0.077
+3_towns,Simsbury,2018,total_households,9279,NA
+3_towns,Simsbury,2018,living_alone,2105,0.227
+3_towns,Simsbury,2018,married_w_kids,2646,0.285
+3_towns,Simsbury,2018,married_no_kids,3499,0.377
+3_towns,Simsbury,2018,single_w_kids,311,0.034
+3_towns,Simsbury,2018,other_households,718,0.077
+3_towns,Somers,2000,total_households,2925,NA
+3_towns,Somers,2000,living_alone,467,0.16
+3_towns,Somers,2000,married_w_kids,943,0.322
+3_towns,Somers,2000,married_no_kids,1115,0.381
+3_towns,Somers,2000,single_w_kids,140,0.048
+3_towns,Somers,2000,other_households,260,0.089
+3_towns,Somers,2010,total_households,3339,NA
+3_towns,Somers,2010,living_alone,426,0.128
+3_towns,Somers,2010,married_w_kids,1214,0.364
+3_towns,Somers,2010,married_no_kids,1300,0.389
+3_towns,Somers,2010,single_w_kids,114,0.034
+3_towns,Somers,2010,other_households,285,0.085
+3_towns,Somers,2018,total_households,3466,NA
+3_towns,Somers,2018,living_alone,516,0.149
+3_towns,Somers,2018,married_w_kids,772,0.223
+3_towns,Somers,2018,married_no_kids,1596,0.46
+3_towns,Somers,2018,single_w_kids,142,0.041
+3_towns,Somers,2018,other_households,440,0.127
+3_towns,South Windsor,2000,total_households,8905,NA
+3_towns,South Windsor,2000,living_alone,1762,0.198
+3_towns,South Windsor,2000,married_w_kids,2950,0.331
+3_towns,South Windsor,2000,married_no_kids,2897,0.325
+3_towns,South Windsor,2000,single_w_kids,477,0.054
+3_towns,South Windsor,2000,other_households,819,0.092
+3_towns,South Windsor,2010,total_households,9467,NA
+3_towns,South Windsor,2010,living_alone,2152,0.227
+3_towns,South Windsor,2010,married_w_kids,2870,0.303
+3_towns,South Windsor,2010,married_no_kids,2752,0.291
+3_towns,South Windsor,2010,single_w_kids,678,0.072
+3_towns,South Windsor,2010,other_households,1015,0.107
+3_towns,South Windsor,2018,total_households,9847,NA
+3_towns,South Windsor,2018,living_alone,2282,0.232
+3_towns,South Windsor,2018,married_w_kids,2521,0.256
+3_towns,South Windsor,2018,married_no_kids,3463,0.352
+3_towns,South Windsor,2018,single_w_kids,721,0.073
+3_towns,South Windsor,2018,other_households,860,0.087
+3_towns,Southbury,2000,total_households,7225,NA
+3_towns,Southbury,2000,living_alone,2154,0.298
+3_towns,Southbury,2000,married_w_kids,1866,0.258
+3_towns,Southbury,2000,married_no_kids,2457,0.34
+3_towns,Southbury,2000,single_w_kids,232,0.032
+3_towns,Southbury,2000,other_households,516,0.071
+3_towns,Southbury,2010,total_households,7423,NA
+3_towns,Southbury,2010,living_alone,2469,0.333
+3_towns,Southbury,2010,married_w_kids,1807,0.243
+3_towns,Southbury,2010,married_no_kids,2420,0.326
+3_towns,Southbury,2010,single_w_kids,190,0.026
+3_towns,Southbury,2010,other_households,537,0.072
+3_towns,Southbury,2018,total_households,7900,NA
+3_towns,Southbury,2018,living_alone,2532,0.321
+3_towns,Southbury,2018,married_w_kids,1386,0.175
+3_towns,Southbury,2018,married_no_kids,2977,0.377
+3_towns,Southbury,2018,single_w_kids,408,0.052
+3_towns,Southbury,2018,other_households,597,0.076
+3_towns,Southington,2000,total_households,15083,NA
+3_towns,Southington,2000,living_alone,3132,0.208
+3_towns,Southington,2000,married_w_kids,4101,0.272
+3_towns,Southington,2000,married_no_kids,5383,0.357
+3_towns,Southington,2000,single_w_kids,875,0.058
+3_towns,Southington,2000,other_households,1592,0.106
+3_towns,Southington,2010,total_households,16367,NA
+3_towns,Southington,2010,living_alone,3949,0.241
+3_towns,Southington,2010,married_w_kids,4225,0.258
+3_towns,Southington,2010,married_no_kids,5468,0.334
+3_towns,Southington,2010,single_w_kids,787,0.048
+3_towns,Southington,2010,other_households,1938,0.118
+3_towns,Southington,2018,total_households,17028,NA
+3_towns,Southington,2018,living_alone,4401,0.258
+3_towns,Southington,2018,married_w_kids,3825,0.225
+3_towns,Southington,2018,married_no_kids,6115,0.359
+3_towns,Southington,2018,single_w_kids,978,0.057
+3_towns,Southington,2018,other_households,1709,0.1
+3_towns,Sprague,2000,total_households,1111,NA
+3_towns,Sprague,2000,living_alone,236,0.212
+3_towns,Sprague,2000,married_w_kids,282,0.254
+3_towns,Sprague,2000,married_no_kids,320,0.288
+3_towns,Sprague,2000,single_w_kids,124,0.112
+3_towns,Sprague,2000,other_households,149,0.134
+3_towns,Sprague,2010,total_households,1224,NA
+3_towns,Sprague,2010,living_alone,352,0.288
+3_towns,Sprague,2010,married_w_kids,212,0.173
+3_towns,Sprague,2010,married_no_kids,456,0.373
+3_towns,Sprague,2010,single_w_kids,115,0.094
+3_towns,Sprague,2010,other_households,89,0.073
+3_towns,Sprague,2018,total_households,1187,NA
+3_towns,Sprague,2018,living_alone,359,0.302
+3_towns,Sprague,2018,married_w_kids,188,0.158
+3_towns,Sprague,2018,married_no_kids,381,0.321
+3_towns,Sprague,2018,single_w_kids,141,0.119
+3_towns,Sprague,2018,other_households,118,0.099
+3_towns,Stafford,2000,total_households,4353,NA
+3_towns,Stafford,2000,living_alone,1017,0.234
+3_towns,Stafford,2000,married_w_kids,1111,0.255
+3_towns,Stafford,2000,married_no_kids,1341,0.308
+3_towns,Stafford,2000,single_w_kids,402,0.092
+3_towns,Stafford,2000,other_households,482,0.111
+3_towns,Stafford,2010,total_households,4750,NA
+3_towns,Stafford,2010,living_alone,1214,0.256
+3_towns,Stafford,2010,married_w_kids,1025,0.216
+3_towns,Stafford,2010,married_no_kids,1650,0.347
+3_towns,Stafford,2010,single_w_kids,237,0.05
+3_towns,Stafford,2010,other_households,624,0.131
+3_towns,Stafford,2018,total_households,4662,NA
+3_towns,Stafford,2018,living_alone,1258,0.27
+3_towns,Stafford,2018,married_w_kids,710,0.152
+3_towns,Stafford,2018,married_no_kids,1485,0.319
+3_towns,Stafford,2018,single_w_kids,370,0.079
+3_towns,Stafford,2018,other_households,839,0.18
+3_towns,Stamford,2000,total_households,45399,NA
+3_towns,Stamford,2000,living_alone,13033,0.287
+3_towns,Stamford,2000,married_w_kids,9855,0.217
+3_towns,Stamford,2000,married_no_kids,12151,0.268
+3_towns,Stamford,2000,single_w_kids,3152,0.069
+3_towns,Stamford,2000,other_households,7208,0.159
+3_towns,Stamford,2010,total_households,46396,NA
+3_towns,Stamford,2010,living_alone,13457,0.29
+3_towns,Stamford,2010,married_w_kids,10779,0.232
+3_towns,Stamford,2010,married_no_kids,11274,0.243
+3_towns,Stamford,2010,single_w_kids,3321,0.072
+3_towns,Stamford,2010,other_households,7565,0.163
+3_towns,Stamford,2018,total_households,49510,NA
+3_towns,Stamford,2018,living_alone,14251,0.288
+3_towns,Stamford,2018,married_w_kids,10043,0.203
+3_towns,Stamford,2018,married_no_kids,13354,0.27
+3_towns,Stamford,2018,single_w_kids,3719,0.075
+3_towns,Stamford,2018,other_households,8143,0.164
+3_towns,Sterling,2000,total_households,1116,NA
+3_towns,Sterling,2000,living_alone,202,0.181
+3_towns,Sterling,2000,married_w_kids,350,0.314
+3_towns,Sterling,2000,married_no_kids,327,0.293
+3_towns,Sterling,2000,single_w_kids,99,0.089
+3_towns,Sterling,2000,other_households,138,0.124
+3_towns,Sterling,2010,total_households,1384,NA
+3_towns,Sterling,2010,living_alone,216,0.156
+3_towns,Sterling,2010,married_w_kids,256,0.185
+3_towns,Sterling,2010,married_no_kids,532,0.384
+3_towns,Sterling,2010,single_w_kids,137,0.099
+3_towns,Sterling,2010,other_households,243,0.176
+3_towns,Sterling,2018,total_households,1405,NA
+3_towns,Sterling,2018,living_alone,231,0.164
+3_towns,Sterling,2018,married_w_kids,276,0.196
+3_towns,Sterling,2018,married_no_kids,407,0.29
+3_towns,Sterling,2018,single_w_kids,183,0.13
+3_towns,Sterling,2018,other_households,308,0.219
+3_towns,Stonington,2000,total_households,7665,NA
+3_towns,Stonington,2000,living_alone,2300,0.3
+3_towns,Stonington,2000,married_w_kids,1541,0.201
+3_towns,Stonington,2000,married_no_kids,2439,0.318
+3_towns,Stonington,2000,single_w_kids,469,0.061
+3_towns,Stonington,2000,other_households,916,0.12
+3_towns,Stonington,2010,total_households,7901,NA
+3_towns,Stonington,2010,living_alone,2203,0.279
+3_towns,Stonington,2010,married_w_kids,1644,0.208
+3_towns,Stonington,2010,married_no_kids,2659,0.337
+3_towns,Stonington,2010,single_w_kids,682,0.086
+3_towns,Stonington,2010,other_households,713,0.09
+3_towns,Stonington,2018,total_households,8100,NA
+3_towns,Stonington,2018,living_alone,2585,0.319
+3_towns,Stonington,2018,married_w_kids,1146,0.141
+3_towns,Stonington,2018,married_no_kids,2864,0.354
+3_towns,Stonington,2018,single_w_kids,642,0.079
+3_towns,Stonington,2018,other_households,863,0.107
+3_towns,Stratford,2000,total_households,19898,NA
+3_towns,Stratford,2000,living_alone,5402,0.271
+3_towns,Stratford,2000,married_w_kids,4314,0.217
+3_towns,Stratford,2000,married_no_kids,6142,0.309
+3_towns,Stratford,2000,single_w_kids,1351,0.068
+3_towns,Stratford,2000,other_households,2689,0.135
+3_towns,Stratford,2010,total_households,19638,NA
+3_towns,Stratford,2010,living_alone,5575,0.284
+3_towns,Stratford,2010,married_w_kids,4515,0.23
+3_towns,Stratford,2010,married_no_kids,5580,0.284
+3_towns,Stratford,2010,single_w_kids,1368,0.07
+3_towns,Stratford,2010,other_households,2600,0.132
+3_towns,Stratford,2018,total_households,20084,NA
+3_towns,Stratford,2018,living_alone,5407,0.269
+3_towns,Stratford,2018,married_w_kids,3386,0.169
+3_towns,Stratford,2018,married_no_kids,6648,0.331
+3_towns,Stratford,2018,single_w_kids,1707,0.085
+3_towns,Stratford,2018,other_households,2936,0.146
+3_towns,Suffield,2000,total_households,4660,NA
+3_towns,Suffield,2000,living_alone,1084,0.233
+3_towns,Suffield,2000,married_w_kids,1315,0.282
+3_towns,Suffield,2000,married_no_kids,1585,0.34
+3_towns,Suffield,2000,single_w_kids,215,0.046
+3_towns,Suffield,2000,other_households,461,0.099
+3_towns,Suffield,2010,total_households,5192,NA
+3_towns,Suffield,2010,living_alone,1332,0.257
+3_towns,Suffield,2010,married_w_kids,1327,0.256
+3_towns,Suffield,2010,married_no_kids,1635,0.315
+3_towns,Suffield,2010,single_w_kids,289,0.056
+3_towns,Suffield,2010,other_households,609,0.117
+3_towns,Suffield,2018,total_households,5032,NA
+3_towns,Suffield,2018,living_alone,923,0.183
+3_towns,Suffield,2018,married_w_kids,1127,0.224
+3_towns,Suffield,2018,married_no_kids,2069,0.411
+3_towns,Suffield,2018,single_w_kids,429,0.085
+3_towns,Suffield,2018,other_households,484,0.096
+3_towns,Thomaston,2000,total_households,2916,NA
+3_towns,Thomaston,2000,living_alone,700,0.24
+3_towns,Thomaston,2000,married_w_kids,789,0.271
+3_towns,Thomaston,2000,married_no_kids,889,0.305
+3_towns,Thomaston,2000,single_w_kids,210,0.072
+3_towns,Thomaston,2000,other_households,328,0.112
+3_towns,Thomaston,2010,total_households,3214,NA
+3_towns,Thomaston,2010,living_alone,887,0.276
+3_towns,Thomaston,2010,married_w_kids,783,0.244
+3_towns,Thomaston,2010,married_no_kids,921,0.287
+3_towns,Thomaston,2010,single_w_kids,156,0.049
+3_towns,Thomaston,2010,other_households,467,0.145
+3_towns,Thomaston,2018,total_households,3134,NA
+3_towns,Thomaston,2018,living_alone,938,0.299
+3_towns,Thomaston,2018,married_w_kids,671,0.214
+3_towns,Thomaston,2018,married_no_kids,957,0.305
+3_towns,Thomaston,2018,single_w_kids,124,0.04
+3_towns,Thomaston,2018,other_households,444,0.142
+3_towns,Thompson,2000,total_households,3482,NA
+3_towns,Thompson,2000,living_alone,821,0.236
+3_towns,Thompson,2000,married_w_kids,933,0.268
+3_towns,Thompson,2000,married_no_kids,1093,0.314
+3_towns,Thompson,2000,single_w_kids,230,0.066
+3_towns,Thompson,2000,other_households,405,0.116
+3_towns,Thompson,2010,total_households,3629,NA
+3_towns,Thompson,2010,living_alone,853,0.235
+3_towns,Thompson,2010,married_w_kids,796,0.219
+3_towns,Thompson,2010,married_no_kids,1186,0.327
+3_towns,Thompson,2010,single_w_kids,328,0.09
+3_towns,Thompson,2010,other_households,466,0.128
+3_towns,Thompson,2018,total_households,3551,NA
+3_towns,Thompson,2018,living_alone,836,0.235
+3_towns,Thompson,2018,married_w_kids,716,0.202
+3_towns,Thompson,2018,married_no_kids,1470,0.414
+3_towns,Thompson,2018,single_w_kids,174,0.049
+3_towns,Thompson,2018,other_households,355,0.1
+3_towns,Tolland,2000,total_households,4586,NA
+3_towns,Tolland,2000,living_alone,597,0.13
+3_towns,Tolland,2000,married_w_kids,1733,0.378
+3_towns,Tolland,2000,married_no_kids,1679,0.366
+3_towns,Tolland,2000,single_w_kids,208,0.045
+3_towns,Tolland,2000,other_households,369,0.08
+3_towns,Tolland,2010,total_households,5273,NA
+3_towns,Tolland,2010,living_alone,604,0.115
+3_towns,Tolland,2010,married_w_kids,2030,0.385
+3_towns,Tolland,2010,married_no_kids,1860,0.353
+3_towns,Tolland,2010,single_w_kids,264,0.05
+3_towns,Tolland,2010,other_households,515,0.098
+3_towns,Tolland,2018,total_households,5159,NA
+3_towns,Tolland,2018,living_alone,797,0.154
+3_towns,Tolland,2018,married_w_kids,1605,0.311
+3_towns,Tolland,2018,married_no_kids,2188,0.424
+3_towns,Tolland,2018,single_w_kids,195,0.038
+3_towns,Tolland,2018,other_households,374,0.072
+3_towns,Torrington,2000,total_households,14743,NA
+3_towns,Torrington,2000,living_alone,4736,0.321
+3_towns,Torrington,2000,married_w_kids,2991,0.203
+3_towns,Torrington,2000,married_no_kids,4044,0.274
+3_towns,Torrington,2000,single_w_kids,1204,0.082
+3_towns,Torrington,2000,other_households,1768,0.12
+3_towns,Torrington,2010,total_households,15607,NA
+3_towns,Torrington,2010,living_alone,5198,0.333
+3_towns,Torrington,2010,married_w_kids,2766,0.177
+3_towns,Torrington,2010,married_no_kids,4046,0.259
+3_towns,Torrington,2010,single_w_kids,1504,0.096
+3_towns,Torrington,2010,other_households,2093,0.134
+3_towns,Torrington,2018,total_households,14429,NA
+3_towns,Torrington,2018,living_alone,4489,0.311
+3_towns,Torrington,2018,married_w_kids,2033,0.141
+3_towns,Torrington,2018,married_no_kids,4230,0.293
+3_towns,Torrington,2018,single_w_kids,1449,0.1
+3_towns,Torrington,2018,other_households,2228,0.154
+3_towns,Trumbull,2000,total_households,11911,NA
+3_towns,Trumbull,2000,living_alone,1929,0.162
+3_towns,Trumbull,2000,married_w_kids,4049,0.34
+3_towns,Trumbull,2000,married_no_kids,4495,0.377
+3_towns,Trumbull,2000,single_w_kids,419,0.035
+3_towns,Trumbull,2000,other_households,1019,0.086
+3_towns,Trumbull,2010,total_households,11825,NA
+3_towns,Trumbull,2010,living_alone,2136,0.181
+3_towns,Trumbull,2010,married_w_kids,4217,0.357
+3_towns,Trumbull,2010,married_no_kids,4009,0.339
+3_towns,Trumbull,2010,single_w_kids,548,0.046
+3_towns,Trumbull,2010,other_households,915,0.077
+3_towns,Trumbull,2018,total_households,12427,NA
+3_towns,Trumbull,2018,living_alone,2427,0.195
+3_towns,Trumbull,2018,married_w_kids,3815,0.307
+3_towns,Trumbull,2018,married_no_kids,4641,0.373
+3_towns,Trumbull,2018,single_w_kids,502,0.04
+3_towns,Trumbull,2018,other_households,1042,0.084
+3_towns,Union,2000,total_households,285,NA
+3_towns,Union,2000,living_alone,64,0.225
+3_towns,Union,2000,married_w_kids,70,0.246
+3_towns,Union,2000,married_no_kids,114,0.4
+3_towns,Union,2000,single_w_kids,8,0.028
+3_towns,Union,2000,other_households,29,0.102
+3_towns,Union,2010,total_households,330,NA
+3_towns,Union,2010,living_alone,40,0.121
+3_towns,Union,2010,married_w_kids,109,0.33
+3_towns,Union,2010,married_no_kids,123,0.373
+3_towns,Union,2010,single_w_kids,22,0.067
+3_towns,Union,2010,other_households,36,0.109
+3_towns,Union,2018,total_households,360,NA
+3_towns,Union,2018,living_alone,69,0.192
+3_towns,Union,2018,married_w_kids,58,0.161
+3_towns,Union,2018,married_no_kids,193,0.536
+3_towns,Union,2018,single_w_kids,13,0.036
+3_towns,Union,2018,other_households,27,0.075
+3_towns,Vernon,2000,total_households,12269,NA
+3_towns,Vernon,2000,living_alone,4053,0.33
+3_towns,Vernon,2000,married_w_kids,2183,0.178
+3_towns,Vernon,2000,married_no_kids,3370,0.275
+3_towns,Vernon,2000,single_w_kids,1070,0.087
+3_towns,Vernon,2000,other_households,1593,0.13
+3_towns,Vernon,2010,total_households,13099,NA
+3_towns,Vernon,2010,living_alone,4241,0.324
+3_towns,Vernon,2010,married_w_kids,1925,0.147
+3_towns,Vernon,2010,married_no_kids,4030,0.308
+3_towns,Vernon,2010,single_w_kids,1122,0.086
+3_towns,Vernon,2010,other_households,1781,0.136
+3_towns,Vernon,2018,total_households,13086,NA
+3_towns,Vernon,2018,living_alone,4430,0.339
+3_towns,Vernon,2018,married_w_kids,1775,0.136
+3_towns,Vernon,2018,married_no_kids,3357,0.257
+3_towns,Vernon,2018,single_w_kids,1235,0.094
+3_towns,Vernon,2018,other_households,2289,0.175
+3_towns,Voluntown,2000,total_households,952,NA
+3_towns,Voluntown,2000,living_alone,181,0.19
+3_towns,Voluntown,2000,married_w_kids,285,0.299
+3_towns,Voluntown,2000,married_no_kids,304,0.319
+3_towns,Voluntown,2000,single_w_kids,71,0.075
+3_towns,Voluntown,2000,other_households,111,0.117
+3_towns,Voluntown,2010,total_households,989,NA
+3_towns,Voluntown,2010,living_alone,161,0.163
+3_towns,Voluntown,2010,married_w_kids,238,0.241
+3_towns,Voluntown,2010,married_no_kids,376,0.38
+3_towns,Voluntown,2010,single_w_kids,88,0.089
+3_towns,Voluntown,2010,other_households,126,0.127
+3_towns,Voluntown,2018,total_households,1007,NA
+3_towns,Voluntown,2018,living_alone,240,0.238
+3_towns,Voluntown,2018,married_w_kids,184,0.183
+3_towns,Voluntown,2018,married_no_kids,400,0.397
+3_towns,Voluntown,2018,single_w_kids,72,0.071
+3_towns,Voluntown,2018,other_households,111,0.11
+3_towns,Wallingford,2000,total_households,16697,NA
+3_towns,Wallingford,2000,living_alone,4279,0.256
+3_towns,Wallingford,2000,married_w_kids,4397,0.263
+3_towns,Wallingford,2000,married_no_kids,5172,0.31
+3_towns,Wallingford,2000,single_w_kids,996,0.06
+3_towns,Wallingford,2000,other_households,1853,0.111
+3_towns,Wallingford,2010,total_households,17573,NA
+3_towns,Wallingford,2010,living_alone,4670,0.266
+3_towns,Wallingford,2010,married_w_kids,4046,0.23
+3_towns,Wallingford,2010,married_no_kids,5325,0.303
+3_towns,Wallingford,2010,single_w_kids,1291,0.073
+3_towns,Wallingford,2010,other_households,2241,0.128
+3_towns,Wallingford,2018,total_households,18518,NA
+3_towns,Wallingford,2018,living_alone,6015,0.325
+3_towns,Wallingford,2018,married_w_kids,2581,0.139
+3_towns,Wallingford,2018,married_no_kids,6757,0.365
+3_towns,Wallingford,2018,single_w_kids,820,0.044
+3_towns,Wallingford,2018,other_households,2345,0.127
+3_towns,Warren,2000,total_households,497,NA
+3_towns,Warren,2000,living_alone,109,0.219
+3_towns,Warren,2000,married_w_kids,125,0.252
+3_towns,Warren,2000,married_no_kids,191,0.384
+3_towns,Warren,2000,single_w_kids,23,0.046
+3_towns,Warren,2000,other_households,49,0.099
+3_towns,Warren,2010,total_households,580,NA
+3_towns,Warren,2010,living_alone,87,0.15
+3_towns,Warren,2010,married_w_kids,155,0.267
+3_towns,Warren,2010,married_no_kids,253,0.436
+3_towns,Warren,2010,single_w_kids,24,0.041
+3_towns,Warren,2010,other_households,61,0.105
+3_towns,Warren,2018,total_households,569,NA
+3_towns,Warren,2018,living_alone,93,0.163
+3_towns,Warren,2018,married_w_kids,142,0.25
+3_towns,Warren,2018,married_no_kids,247,0.434
+3_towns,Warren,2018,single_w_kids,18,0.032
+3_towns,Warren,2018,other_households,69,0.121
+3_towns,Washington,2000,total_households,1416,NA
+3_towns,Washington,2000,living_alone,374,0.264
+3_towns,Washington,2000,married_w_kids,324,0.229
+3_towns,Washington,2000,married_no_kids,491,0.347
+3_towns,Washington,2000,single_w_kids,73,0.052
+3_towns,Washington,2000,other_households,154,0.109
+3_towns,Washington,2010,total_households,1667,NA
+3_towns,Washington,2010,living_alone,556,0.334
+3_towns,Washington,2010,married_w_kids,282,0.169
+3_towns,Washington,2010,married_no_kids,600,0.36
+3_towns,Washington,2010,single_w_kids,52,0.031
+3_towns,Washington,2010,other_households,177,0.106
+3_towns,Washington,2018,total_households,1394,NA
+3_towns,Washington,2018,living_alone,375,0.269
+3_towns,Washington,2018,married_w_kids,205,0.147
+3_towns,Washington,2018,married_no_kids,573,0.411
+3_towns,Washington,2018,single_w_kids,40,0.029
+3_towns,Washington,2018,other_households,201,0.144
+3_towns,Waterbury,2000,total_households,42622,NA
+3_towns,Waterbury,2000,living_alone,13398,0.314
+3_towns,Waterbury,2000,married_w_kids,7039,0.165
+3_towns,Waterbury,2000,married_no_kids,9495,0.223
+3_towns,Waterbury,2000,single_w_kids,6252,0.147
+3_towns,Waterbury,2000,other_households,6438,0.151
+3_towns,Waterbury,2010,total_households,43689,NA
+3_towns,Waterbury,2010,living_alone,13858,0.317
+3_towns,Waterbury,2010,married_w_kids,6283,0.144
+3_towns,Waterbury,2010,married_no_kids,8918,0.204
+3_towns,Waterbury,2010,single_w_kids,7781,0.178
+3_towns,Waterbury,2010,other_households,6849,0.157
+3_towns,Waterbury,2018,total_households,40579,NA
+3_towns,Waterbury,2018,living_alone,13944,0.344
+3_towns,Waterbury,2018,married_w_kids,5254,0.129
+3_towns,Waterbury,2018,married_no_kids,7675,0.189
+3_towns,Waterbury,2018,single_w_kids,6575,0.162
+3_towns,Waterbury,2018,other_households,7131,0.176
+3_towns,Waterford,2000,total_households,7542,NA
+3_towns,Waterford,2000,living_alone,1998,0.265
+3_towns,Waterford,2000,married_w_kids,1664,0.221
+3_towns,Waterford,2000,married_no_kids,2602,0.345
+3_towns,Waterford,2000,single_w_kids,466,0.062
+3_towns,Waterford,2000,other_households,812,0.108
+3_towns,Waterford,2010,total_households,8057,NA
+3_towns,Waterford,2010,living_alone,2233,0.277
+3_towns,Waterford,2010,married_w_kids,1746,0.217
+3_towns,Waterford,2010,married_no_kids,2980,0.37
+3_towns,Waterford,2010,single_w_kids,374,0.046
+3_towns,Waterford,2010,other_households,724,0.09
+3_towns,Waterford,2018,total_households,7825,NA
+3_towns,Waterford,2018,living_alone,2207,0.282
+3_towns,Waterford,2018,married_w_kids,1338,0.171
+3_towns,Waterford,2018,married_no_kids,2686,0.343
+3_towns,Waterford,2018,single_w_kids,478,0.061
+3_towns,Waterford,2018,other_households,1116,0.143
+3_towns,Watertown,2000,total_households,8046,NA
+3_towns,Watertown,2000,living_alone,1746,0.217
+3_towns,Watertown,2000,married_w_kids,2295,0.285
+3_towns,Watertown,2000,married_no_kids,2669,0.332
+3_towns,Watertown,2000,single_w_kids,495,0.062
+3_towns,Watertown,2000,other_households,841,0.105
+3_towns,Watertown,2010,total_households,8528,NA
+3_towns,Watertown,2010,living_alone,2158,0.253
+3_towns,Watertown,2010,married_w_kids,2334,0.274
+3_towns,Watertown,2010,married_no_kids,2890,0.339
+3_towns,Watertown,2010,single_w_kids,383,0.045
+3_towns,Watertown,2010,other_households,763,0.089
+3_towns,Watertown,2018,total_households,8522,NA
+3_towns,Watertown,2018,living_alone,2408,0.283
+3_towns,Watertown,2018,married_w_kids,1788,0.21
+3_towns,Watertown,2018,married_no_kids,2918,0.342
+3_towns,Watertown,2018,single_w_kids,418,0.049
+3_towns,Watertown,2018,other_households,990,0.116
+3_towns,West Hartford,2000,total_households,24576,NA
+3_towns,West Hartford,2000,living_alone,7268,0.296
+3_towns,West Hartford,2000,married_w_kids,5826,0.237
+3_towns,West Hartford,2000,married_no_kids,7169,0.292
+3_towns,West Hartford,2000,single_w_kids,1509,0.061
+3_towns,West Hartford,2000,other_households,2804,0.114
+3_towns,West Hartford,2010,total_households,24651,NA
+3_towns,West Hartford,2010,living_alone,7202,0.292
+3_towns,West Hartford,2010,married_w_kids,6228,0.253
+3_towns,West Hartford,2010,married_no_kids,6916,0.281
+3_towns,West Hartford,2010,single_w_kids,1668,0.068
+3_towns,West Hartford,2010,other_households,2637,0.107
+3_towns,West Hartford,2018,total_households,24491,NA
+3_towns,West Hartford,2018,living_alone,7061,0.288
+3_towns,West Hartford,2018,married_w_kids,5688,0.232
+3_towns,West Hartford,2018,married_no_kids,6761,0.276
+3_towns,West Hartford,2018,single_w_kids,1702,0.069
+3_towns,West Hartford,2018,other_households,3279,0.134
+3_towns,West Haven,2000,total_households,21090,NA
+3_towns,West Haven,2000,living_alone,6542,0.31
+3_towns,West Haven,2000,married_w_kids,3739,0.177
+3_towns,West Haven,2000,married_no_kids,5099,0.242
+3_towns,West Haven,2000,single_w_kids,2275,0.108
+3_towns,West Haven,2000,other_households,3435,0.163
+3_towns,West Haven,2010,total_households,21641,NA
+3_towns,West Haven,2010,living_alone,6359,0.294
+3_towns,West Haven,2010,married_w_kids,3900,0.18
+3_towns,West Haven,2010,married_no_kids,5419,0.25
+3_towns,West Haven,2010,single_w_kids,2253,0.104
+3_towns,West Haven,2010,other_households,3710,0.171
+3_towns,West Haven,2018,total_households,19576,NA
+3_towns,West Haven,2018,living_alone,6005,0.307
+3_towns,West Haven,2018,married_w_kids,2712,0.139
+3_towns,West Haven,2018,married_no_kids,4566,0.233
+3_towns,West Haven,2018,single_w_kids,2196,0.112
+3_towns,West Haven,2018,other_households,4097,0.209
+3_towns,Westbrook,2000,total_households,2605,NA
+3_towns,Westbrook,2000,living_alone,729,0.28
+3_towns,Westbrook,2000,married_w_kids,561,0.215
+3_towns,Westbrook,2000,married_no_kids,849,0.326
+3_towns,Westbrook,2000,single_w_kids,130,0.05
+3_towns,Westbrook,2000,other_households,336,0.129
+3_towns,Westbrook,2010,total_households,2779,NA
+3_towns,Westbrook,2010,living_alone,808,0.291
+3_towns,Westbrook,2010,married_w_kids,664,0.239
+3_towns,Westbrook,2010,married_no_kids,819,0.295
+3_towns,Westbrook,2010,single_w_kids,196,0.071
+3_towns,Westbrook,2010,other_households,292,0.105
+3_towns,Westbrook,2018,total_households,3077,NA
+3_towns,Westbrook,2018,living_alone,998,0.324
+3_towns,Westbrook,2018,married_w_kids,305,0.099
+3_towns,Westbrook,2018,married_no_kids,1231,0.4
+3_towns,Westbrook,2018,single_w_kids,54,0.018
+3_towns,Westbrook,2018,other_households,489,0.159
+3_towns,Weston,2000,total_households,3312,NA
+3_towns,Weston,2000,living_alone,372,0.112
+3_towns,Weston,2000,married_w_kids,1511,0.456
+3_towns,Weston,2000,married_no_kids,1086,0.328
+3_towns,Weston,2000,single_w_kids,138,0.042
+3_towns,Weston,2000,other_households,205,0.062
+3_towns,Weston,2010,total_households,3270,NA
+3_towns,Weston,2010,living_alone,418,0.128
+3_towns,Weston,2010,married_w_kids,1485,0.454
+3_towns,Weston,2010,married_no_kids,1035,0.317
+3_towns,Weston,2010,single_w_kids,173,0.053
+3_towns,Weston,2010,other_households,159,0.049
+3_towns,Weston,2018,total_households,3473,NA
+3_towns,Weston,2018,living_alone,488,0.141
+3_towns,Weston,2018,married_w_kids,1454,0.419
+3_towns,Weston,2018,married_no_kids,1151,0.331
+3_towns,Weston,2018,single_w_kids,119,0.034
+3_towns,Weston,2018,other_households,261,0.075
+3_towns,Westport,2000,total_households,9586,NA
+3_towns,Westport,2000,living_alone,1994,0.208
+3_towns,Westport,2000,married_w_kids,3267,0.341
+3_towns,Westport,2000,married_no_kids,3069,0.32
+3_towns,Westport,2000,single_w_kids,417,0.044
+3_towns,Westport,2000,other_households,839,0.088
+3_towns,Westport,2010,total_households,9302,NA
+3_towns,Westport,2010,living_alone,1717,0.185
+3_towns,Westport,2010,married_w_kids,3562,0.383
+3_towns,Westport,2010,married_no_kids,2983,0.321
+3_towns,Westport,2010,single_w_kids,476,0.051
+3_towns,Westport,2010,other_households,564,0.061
+3_towns,Westport,2018,total_households,9896,NA
+3_towns,Westport,2018,living_alone,2139,0.216
+3_towns,Westport,2018,married_w_kids,3440,0.348
+3_towns,Westport,2018,married_no_kids,3157,0.319
+3_towns,Westport,2018,single_w_kids,477,0.048
+3_towns,Westport,2018,other_households,683,0.069
+3_towns,Wethersfield,2000,total_households,11214,NA
+3_towns,Wethersfield,2000,living_alone,3392,0.302
+3_towns,Wethersfield,2000,married_w_kids,2280,0.203
+3_towns,Wethersfield,2000,married_no_kids,3760,0.335
+3_towns,Wethersfield,2000,single_w_kids,546,0.049
+3_towns,Wethersfield,2000,other_households,1236,0.11
+3_towns,Wethersfield,2010,total_households,11083,NA
+3_towns,Wethersfield,2010,living_alone,3427,0.309
+3_towns,Wethersfield,2010,married_w_kids,2425,0.219
+3_towns,Wethersfield,2010,married_no_kids,3406,0.307
+3_towns,Wethersfield,2010,single_w_kids,636,0.057
+3_towns,Wethersfield,2010,other_households,1189,0.107
+3_towns,Wethersfield,2018,total_households,10843,NA
+3_towns,Wethersfield,2018,living_alone,3263,0.301
+3_towns,Wethersfield,2018,married_w_kids,2382,0.22
+3_towns,Wethersfield,2018,married_no_kids,3227,0.298
+3_towns,Wethersfield,2018,single_w_kids,621,0.057
+3_towns,Wethersfield,2018,other_households,1350,0.125
+3_towns,Willington,2000,total_households,2353,NA
+3_towns,Willington,2000,living_alone,481,0.204
+3_towns,Willington,2000,married_w_kids,567,0.241
+3_towns,Willington,2000,married_no_kids,664,0.282
+3_towns,Willington,2000,single_w_kids,123,0.052
+3_towns,Willington,2000,other_households,518,0.22
+3_towns,Willington,2010,total_households,2324,NA
+3_towns,Willington,2010,living_alone,474,0.204
+3_towns,Willington,2010,married_w_kids,435,0.187
+3_towns,Willington,2010,married_no_kids,665,0.286
+3_towns,Willington,2010,single_w_kids,96,0.041
+3_towns,Willington,2010,other_households,654,0.281
+3_towns,Willington,2018,total_households,2483,NA
+3_towns,Willington,2018,living_alone,581,0.234
+3_towns,Willington,2018,married_w_kids,301,0.121
+3_towns,Willington,2018,married_no_kids,834,0.336
+3_towns,Willington,2018,single_w_kids,148,0.06
+3_towns,Willington,2018,other_households,619,0.249
+3_towns,Wilton,2000,total_households,5923,NA
+3_towns,Wilton,2000,living_alone,909,0.153
+3_towns,Wilton,2000,married_w_kids,2520,0.425
+3_towns,Wilton,2000,married_no_kids,1946,0.329
+3_towns,Wilton,2000,single_w_kids,240,0.041
+3_towns,Wilton,2000,other_households,308,0.052
+3_towns,Wilton,2010,total_households,5994,NA
+3_towns,Wilton,2010,living_alone,984,0.164
+3_towns,Wilton,2010,married_w_kids,2651,0.442
+3_towns,Wilton,2010,married_no_kids,1798,0.3
+3_towns,Wilton,2010,single_w_kids,255,0.043
+3_towns,Wilton,2010,other_households,306,0.051
+3_towns,Wilton,2018,total_households,6028,NA
+3_towns,Wilton,2018,living_alone,857,0.142
+3_towns,Wilton,2018,married_w_kids,2349,0.39
+3_towns,Wilton,2018,married_no_kids,2086,0.346
+3_towns,Wilton,2018,single_w_kids,318,0.053
+3_towns,Wilton,2018,other_households,418,0.069
+3_towns,Winchester,2000,total_households,4371,NA
+3_towns,Winchester,2000,living_alone,1223,0.28
+3_towns,Winchester,2000,married_w_kids,884,0.202
+3_towns,Winchester,2000,married_no_kids,1316,0.301
+3_towns,Winchester,2000,single_w_kids,352,0.081
+3_towns,Winchester,2000,other_households,596,0.136
+3_towns,Winchester,2010,total_households,4514,NA
+3_towns,Winchester,2010,living_alone,1214,0.269
+3_towns,Winchester,2010,married_w_kids,880,0.195
+3_towns,Winchester,2010,married_no_kids,1302,0.288
+3_towns,Winchester,2010,single_w_kids,487,0.108
+3_towns,Winchester,2010,other_households,631,0.14
+3_towns,Winchester,2018,total_households,4559,NA
+3_towns,Winchester,2018,living_alone,1357,0.298
+3_towns,Winchester,2018,married_w_kids,622,0.136
+3_towns,Winchester,2018,married_no_kids,1443,0.317
+3_towns,Winchester,2018,single_w_kids,218,0.048
+3_towns,Winchester,2018,other_households,919,0.202
+3_towns,Windham,2000,total_households,8342,NA
+3_towns,Windham,2000,living_alone,2485,0.298
+3_towns,Windham,2000,married_w_kids,1380,0.165
+3_towns,Windham,2000,married_no_kids,1903,0.228
+3_towns,Windham,2000,single_w_kids,1134,0.136
+3_towns,Windham,2000,other_households,1440,0.173
+3_towns,Windham,2010,total_households,8969,NA
+3_towns,Windham,2010,living_alone,2631,0.293
+3_towns,Windham,2010,married_w_kids,1343,0.15
+3_towns,Windham,2010,married_no_kids,2137,0.238
+3_towns,Windham,2010,single_w_kids,1351,0.151
+3_towns,Windham,2010,other_households,1507,0.168
+3_towns,Windham,2018,total_households,8491,NA
+3_towns,Windham,2018,living_alone,2574,0.303
+3_towns,Windham,2018,married_w_kids,815,0.096
+3_towns,Windham,2018,married_no_kids,1637,0.193
+3_towns,Windham,2018,single_w_kids,1733,0.204
+3_towns,Windham,2018,other_households,1732,0.204
+3_towns,Windsor,2000,total_households,10577,NA
+3_towns,Windsor,2000,living_alone,2455,0.232
+3_towns,Windsor,2000,married_w_kids,2566,0.243
+3_towns,Windsor,2000,married_no_kids,3326,0.314
+3_towns,Windsor,2000,single_w_kids,905,0.086
+3_towns,Windsor,2000,other_households,1325,0.125
+3_towns,Windsor,2010,total_households,10976,NA
+3_towns,Windsor,2010,living_alone,2565,0.234
+3_towns,Windsor,2010,married_w_kids,2288,0.208
+3_towns,Windsor,2010,married_no_kids,3779,0.344
+3_towns,Windsor,2010,single_w_kids,939,0.086
+3_towns,Windsor,2010,other_households,1405,0.128
+3_towns,Windsor,2018,total_households,10844,NA
+3_towns,Windsor,2018,living_alone,2897,0.267
+3_towns,Windsor,2018,married_w_kids,2314,0.213
+3_towns,Windsor,2018,married_no_kids,3231,0.298
+3_towns,Windsor,2018,single_w_kids,682,0.063
+3_towns,Windsor,2018,other_households,1720,0.159
+3_towns,Windsor Locks,2000,total_households,4935,NA
+3_towns,Windsor Locks,2000,living_alone,1332,0.27
+3_towns,Windsor Locks,2000,married_w_kids,1022,0.207
+3_towns,Windsor Locks,2000,married_no_kids,1492,0.302
+3_towns,Windsor Locks,2000,single_w_kids,423,0.086
+3_towns,Windsor Locks,2000,other_households,666,0.135
+3_towns,Windsor Locks,2010,total_households,5247,NA
+3_towns,Windsor Locks,2010,living_alone,1571,0.299
+3_towns,Windsor Locks,2010,married_w_kids,993,0.189
+3_towns,Windsor Locks,2010,married_no_kids,1399,0.267
+3_towns,Windsor Locks,2010,single_w_kids,523,0.1
+3_towns,Windsor Locks,2010,other_households,761,0.145
+3_towns,Windsor Locks,2018,total_households,5253,NA
+3_towns,Windsor Locks,2018,living_alone,1716,0.327
+3_towns,Windsor Locks,2018,married_w_kids,853,0.162
+3_towns,Windsor Locks,2018,married_no_kids,1479,0.282
+3_towns,Windsor Locks,2018,single_w_kids,297,0.057
+3_towns,Windsor Locks,2018,other_households,908,0.173
+3_towns,Wolcott,2000,total_households,5414,NA
+3_towns,Wolcott,2000,living_alone,976,0.18
+3_towns,Wolcott,2000,married_w_kids,1704,0.315
+3_towns,Wolcott,2000,married_no_kids,1869,0.345
+3_towns,Wolcott,2000,single_w_kids,318,0.059
+3_towns,Wolcott,2000,other_households,547,0.101
+3_towns,Wolcott,2010,total_households,5929,NA
+3_towns,Wolcott,2010,living_alone,1229,0.207
+3_towns,Wolcott,2010,married_w_kids,1658,0.28
+3_towns,Wolcott,2010,married_no_kids,2084,0.351
+3_towns,Wolcott,2010,single_w_kids,440,0.074
+3_towns,Wolcott,2010,other_households,518,0.087
+3_towns,Wolcott,2018,total_households,5880,NA
+3_towns,Wolcott,2018,living_alone,1266,0.215
+3_towns,Wolcott,2018,married_w_kids,1198,0.204
+3_towns,Wolcott,2018,married_no_kids,2140,0.364
+3_towns,Wolcott,2018,single_w_kids,372,0.063
+3_towns,Wolcott,2018,other_households,904,0.154
+3_towns,Woodbridge,2000,total_households,3103,NA
+3_towns,Woodbridge,2000,living_alone,476,0.153
+3_towns,Woodbridge,2000,married_w_kids,1134,0.365
+3_towns,Woodbridge,2000,married_no_kids,1153,0.372
+3_towns,Woodbridge,2000,single_w_kids,117,0.038
+3_towns,Woodbridge,2000,other_households,223,0.072
+3_towns,Woodbridge,2010,total_households,3386,NA
+3_towns,Woodbridge,2010,living_alone,644,0.19
+3_towns,Woodbridge,2010,married_w_kids,953,0.281
+3_towns,Woodbridge,2010,married_no_kids,1372,0.405
+3_towns,Woodbridge,2010,single_w_kids,154,0.045
+3_towns,Woodbridge,2010,other_households,263,0.078
+3_towns,Woodbridge,2018,total_households,2931,NA
+3_towns,Woodbridge,2018,living_alone,501,0.171
+3_towns,Woodbridge,2018,married_w_kids,794,0.271
+3_towns,Woodbridge,2018,married_no_kids,1168,0.398
+3_towns,Woodbridge,2018,single_w_kids,117,0.04
+3_towns,Woodbridge,2018,other_households,351,0.12
+3_towns,Woodbury,2000,total_households,3715,NA
+3_towns,Woodbury,2000,living_alone,942,0.254
+3_towns,Woodbury,2000,married_w_kids,973,0.262
+3_towns,Woodbury,2000,married_no_kids,1214,0.327
+3_towns,Woodbury,2000,single_w_kids,194,0.052
+3_towns,Woodbury,2000,other_households,392,0.106
+3_towns,Woodbury,2010,total_households,4216,NA
+3_towns,Woodbury,2010,living_alone,1200,0.285
+3_towns,Woodbury,2010,married_w_kids,983,0.233
+3_towns,Woodbury,2010,married_no_kids,1351,0.32
+3_towns,Woodbury,2010,single_w_kids,178,0.042
+3_towns,Woodbury,2010,other_households,504,0.12
+3_towns,Woodbury,2018,total_households,4139,NA
+3_towns,Woodbury,2018,living_alone,1146,0.277
+3_towns,Woodbury,2018,married_w_kids,840,0.203
+3_towns,Woodbury,2018,married_no_kids,1493,0.361
+3_towns,Woodbury,2018,single_w_kids,228,0.055
+3_towns,Woodbury,2018,other_households,432,0.104
+3_towns,Woodstock,2000,total_households,2754,NA
+3_towns,Woodstock,2000,living_alone,564,0.205
+3_towns,Woodstock,2000,married_w_kids,850,0.309
+3_towns,Woodstock,2000,married_no_kids,938,0.341
+3_towns,Woodstock,2000,single_w_kids,144,0.052
+3_towns,Woodstock,2000,other_households,258,0.094
+3_towns,Woodstock,2010,total_households,3126,NA
+3_towns,Woodstock,2010,living_alone,799,0.256
+3_towns,Woodstock,2010,married_w_kids,718,0.23
+3_towns,Woodstock,2010,married_no_kids,1007,0.322
+3_towns,Woodstock,2010,single_w_kids,251,0.08
+3_towns,Woodstock,2010,other_households,351,0.112
+3_towns,Woodstock,2018,total_households,3043,NA
+3_towns,Woodstock,2018,living_alone,788,0.259
+3_towns,Woodstock,2018,married_w_kids,684,0.225
+3_towns,Woodstock,2018,married_no_kids,1268,0.417
+3_towns,Woodstock,2018,single_w_kids,103,0.034
+3_towns,Woodstock,2018,other_households,200,0.066
