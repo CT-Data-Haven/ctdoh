@@ -1,0 +1,2671 @@
+level,name,year,tenure,hhlds,value,share
+1_state,Connecticut,2000,renter,total,431941,NA
+1_state,Connecticut,2000,renter,p1,172489,0.399
+1_state,Connecticut,2000,renter,p2,116781,0.27
+1_state,Connecticut,2000,renter,p3,63592,0.147
+1_state,Connecticut,2000,renter,p4_or_more,79079,0.183
+1_state,Connecticut,2010,renter,total,419234,NA
+1_state,Connecticut,2010,renter,p1,171653,0.409
+1_state,Connecticut,2010,renter,p2,112607,0.269
+1_state,Connecticut,2010,renter,p3,61329,0.146
+1_state,Connecticut,2010,renter,p4_or_more,73645,0.176
+1_state,Connecticut,2018,renter,total,460240,NA
+1_state,Connecticut,2018,renter,p1,189231,0.411
+1_state,Connecticut,2018,renter,p2,122373,0.266
+1_state,Connecticut,2018,renter,p3,67647,0.147
+1_state,Connecticut,2018,renter,p4_or_more,80989,0.176
+2_counties,Fairfield County,2000,renter,total,99716,NA
+2_counties,Fairfield County,2000,renter,p1,35503,0.356
+2_counties,Fairfield County,2000,renter,p2,26560,0.266
+2_counties,Fairfield County,2000,renter,p3,15384,0.154
+2_counties,Fairfield County,2000,renter,p4_or_more,22269,0.223
+2_counties,Fairfield County,2010,renter,total,97363,NA
+2_counties,Fairfield County,2010,renter,p1,37385,0.384
+2_counties,Fairfield County,2010,renter,p2,24005,0.247
+2_counties,Fairfield County,2010,renter,p3,15315,0.157
+2_counties,Fairfield County,2010,renter,p4_or_more,20658,0.212
+2_counties,Fairfield County,2018,renter,total,111322,NA
+2_counties,Fairfield County,2018,renter,p1,38810,0.349
+2_counties,Fairfield County,2018,renter,p2,28197,0.253
+2_counties,Fairfield County,2018,renter,p3,18659,0.168
+2_counties,Fairfield County,2018,renter,p4_or_more,25656,0.23
+2_counties,Hartford County,2000,renter,total,119823,NA
+2_counties,Hartford County,2000,renter,p1,49033,0.409
+2_counties,Hartford County,2000,renter,p2,32143,0.268
+2_counties,Hartford County,2000,renter,p3,17571,0.147
+2_counties,Hartford County,2000,renter,p4_or_more,21076,0.176
+2_counties,Hartford County,2010,renter,total,116559,NA
+2_counties,Hartford County,2010,renter,p1,48031,0.412
+2_counties,Hartford County,2010,renter,p2,31047,0.266
+2_counties,Hartford County,2010,renter,p3,17640,0.151
+2_counties,Hartford County,2010,renter,p4_or_more,19841,0.17
+2_counties,Hartford County,2018,renter,total,123952,NA
+2_counties,Hartford County,2018,renter,p1,52135,0.421
+2_counties,Hartford County,2018,renter,p2,32332,0.261
+2_counties,Hartford County,2018,renter,p3,18438,0.149
+2_counties,Hartford County,2018,renter,p4_or_more,21047,0.17
+2_counties,Litchfield County,2000,renter,total,17762,NA
+2_counties,Litchfield County,2000,renter,p1,7838,0.441
+2_counties,Litchfield County,2000,renter,p2,4984,0.281
+2_counties,Litchfield County,2000,renter,p3,2327,0.131
+2_counties,Litchfield County,2000,renter,p4_or_more,2613,0.147
+2_counties,Litchfield County,2010,renter,total,16343,NA
+2_counties,Litchfield County,2010,renter,p1,7855,0.481
+2_counties,Litchfield County,2010,renter,p2,4286,0.262
+2_counties,Litchfield County,2010,renter,p3,1901,0.116
+2_counties,Litchfield County,2010,renter,p4_or_more,2301,0.141
+2_counties,Litchfield County,2018,renter,total,16908,NA
+2_counties,Litchfield County,2018,renter,p1,7588,0.449
+2_counties,Litchfield County,2018,renter,p2,4829,0.286
+2_counties,Litchfield County,2018,renter,p3,1869,0.111
+2_counties,Litchfield County,2018,renter,p4_or_more,2622,0.155
+2_counties,Middlesex County,2000,renter,total,17116,NA
+2_counties,Middlesex County,2000,renter,p1,7833,0.458
+2_counties,Middlesex County,2000,renter,p2,4965,0.29
+2_counties,Middlesex County,2000,renter,p3,2152,0.126
+2_counties,Middlesex County,2000,renter,p4_or_more,2166,0.127
+2_counties,Middlesex County,2010,renter,total,16179,NA
+2_counties,Middlesex County,2010,renter,p1,7282,0.45
+2_counties,Middlesex County,2010,renter,p2,4828,0.298
+2_counties,Middlesex County,2010,renter,p3,2029,0.125
+2_counties,Middlesex County,2010,renter,p4_or_more,2040,0.126
+2_counties,Middlesex County,2018,renter,total,17630,NA
+2_counties,Middlesex County,2018,renter,p1,8281,0.47
+2_counties,Middlesex County,2018,renter,p2,4913,0.279
+2_counties,Middlesex County,2018,renter,p3,2269,0.129
+2_counties,Middlesex County,2018,renter,p4_or_more,2167,0.123
+2_counties,New Haven County,2000,renter,total,117723,NA
+2_counties,New Haven County,2000,renter,p1,48554,0.412
+2_counties,New Haven County,2000,renter,p2,31227,0.265
+2_counties,New Haven County,2000,renter,p3,17107,0.145
+2_counties,New Haven County,2000,renter,p4_or_more,20835,0.177
+2_counties,New Haven County,2010,renter,total,114654,NA
+2_counties,New Haven County,2010,renter,p1,47615,0.415
+2_counties,New Haven County,2010,renter,p2,31661,0.276
+2_counties,New Haven County,2010,renter,p3,16114,0.141
+2_counties,New Haven County,2010,renter,p4_or_more,19264,0.168
+2_counties,New Haven County,2018,renter,total,125562,NA
+2_counties,New Haven County,2018,renter,p1,55903,0.445
+2_counties,New Haven County,2018,renter,p2,34070,0.271
+2_counties,New Haven County,2018,renter,p3,16512,0.132
+2_counties,New Haven County,2018,renter,p4_or_more,19077,0.152
+2_counties,New London County,2000,renter,total,33273,NA
+2_counties,New London County,2000,renter,p1,12999,0.391
+2_counties,New London County,2000,renter,p2,9201,0.277
+2_counties,New London County,2000,renter,p3,5104,0.153
+2_counties,New London County,2000,renter,p4_or_more,5969,0.179
+2_counties,New London County,2010,renter,total,32344,NA
+2_counties,New London County,2010,renter,p1,13197,0.408
+2_counties,New London County,2010,renter,p2,8731,0.27
+2_counties,New London County,2010,renter,p3,4990,0.154
+2_counties,New London County,2010,renter,p4_or_more,5426,0.168
+2_counties,New London County,2018,renter,total,35943,NA
+2_counties,New London County,2018,renter,p1,14563,0.405
+2_counties,New London County,2018,renter,p2,9595,0.267
+2_counties,New London County,2018,renter,p3,6199,0.172
+2_counties,New London County,2018,renter,p4_or_more,5586,0.155
+2_counties,Tolland County,2000,renter,total,13122,NA
+2_counties,Tolland County,2000,renter,p1,5655,0.431
+2_counties,Tolland County,2000,renter,p2,3963,0.302
+2_counties,Tolland County,2000,renter,p3,1831,0.14
+2_counties,Tolland County,2000,renter,p4_or_more,1673,0.127
+2_counties,Tolland County,2010,renter,total,12837,NA
+2_counties,Tolland County,2010,renter,p1,5286,0.412
+2_counties,Tolland County,2010,renter,p2,4284,0.334
+2_counties,Tolland County,2010,renter,p3,1693,0.132
+2_counties,Tolland County,2010,renter,p4_or_more,1574,0.123
+2_counties,Tolland County,2018,renter,total,15434,NA
+2_counties,Tolland County,2018,renter,p1,6549,0.424
+2_counties,Tolland County,2018,renter,p2,4886,0.317
+2_counties,Tolland County,2018,renter,p3,1941,0.126
+2_counties,Tolland County,2018,renter,p4_or_more,2058,0.133
+2_counties,Windham County,2000,renter,total,13406,NA
+2_counties,Windham County,2000,renter,p1,5074,0.378
+2_counties,Windham County,2000,renter,p2,3738,0.279
+2_counties,Windham County,2000,renter,p3,2116,0.158
+2_counties,Windham County,2000,renter,p4_or_more,2478,0.185
+2_counties,Windham County,2010,renter,total,12955,NA
+2_counties,Windham County,2010,renter,p1,5002,0.386
+2_counties,Windham County,2010,renter,p2,3765,0.291
+2_counties,Windham County,2010,renter,p3,1647,0.127
+2_counties,Windham County,2010,renter,p4_or_more,2541,0.196
+2_counties,Windham County,2018,renter,total,13489,NA
+2_counties,Windham County,2018,renter,p1,5402,0.4
+2_counties,Windham County,2018,renter,p2,3551,0.263
+2_counties,Windham County,2018,renter,p3,1760,0.13
+2_counties,Windham County,2018,renter,p4_or_more,2776,0.206
+3_towns,Andover,2000,renter,total,150,NA
+3_towns,Andover,2000,renter,p1,72,0.48
+3_towns,Andover,2000,renter,p2,37,0.247
+3_towns,Andover,2000,renter,p3,20,0.133
+3_towns,Andover,2000,renter,p4_or_more,21,0.14
+3_towns,Andover,2010,renter,total,132,NA
+3_towns,Andover,2010,renter,p1,47,0.356
+3_towns,Andover,2010,renter,p2,69,0.523
+3_towns,Andover,2010,renter,p3,0,0
+3_towns,Andover,2010,renter,p4_or_more,16,0.121
+3_towns,Andover,2018,renter,total,156,NA
+3_towns,Andover,2018,renter,p1,105,0.673
+3_towns,Andover,2018,renter,p2,51,0.327
+3_towns,Andover,2018,renter,p3,0,0
+3_towns,Andover,2018,renter,p4_or_more,0,0
+3_towns,Ansonia,2000,renter,total,3336,NA
+3_towns,Ansonia,2000,renter,p1,1246,0.374
+3_towns,Ansonia,2000,renter,p2,927,0.278
+3_towns,Ansonia,2000,renter,p3,539,0.162
+3_towns,Ansonia,2000,renter,p4_or_more,624,0.187
+3_towns,Ansonia,2010,renter,total,3012,NA
+3_towns,Ansonia,2010,renter,p1,987,0.328
+3_towns,Ansonia,2010,renter,p2,872,0.29
+3_towns,Ansonia,2010,renter,p3,602,0.2
+3_towns,Ansonia,2010,renter,p4_or_more,551,0.183
+3_towns,Ansonia,2018,renter,total,3021,NA
+3_towns,Ansonia,2018,renter,p1,1222,0.405
+3_towns,Ansonia,2018,renter,p2,815,0.27
+3_towns,Ansonia,2018,renter,p3,532,0.176
+3_towns,Ansonia,2018,renter,p4_or_more,452,0.15
+3_towns,Ashford,2000,renter,total,422,NA
+3_towns,Ashford,2000,renter,p1,141,0.334
+3_towns,Ashford,2000,renter,p2,161,0.382
+3_towns,Ashford,2000,renter,p3,64,0.152
+3_towns,Ashford,2000,renter,p4_or_more,56,0.133
+3_towns,Ashford,2010,renter,total,337,NA
+3_towns,Ashford,2010,renter,p1,125,0.371
+3_towns,Ashford,2010,renter,p2,126,0.374
+3_towns,Ashford,2010,renter,p3,11,0.033
+3_towns,Ashford,2010,renter,p4_or_more,75,0.223
+3_towns,Ashford,2018,renter,total,478,NA
+3_towns,Ashford,2018,renter,p1,291,0.609
+3_towns,Ashford,2018,renter,p2,66,0.138
+3_towns,Ashford,2018,renter,p3,9,0.019
+3_towns,Ashford,2018,renter,p4_or_more,112,0.234
+3_towns,Avon,2000,renter,total,876,NA
+3_towns,Avon,2000,renter,p1,440,0.502
+3_towns,Avon,2000,renter,p2,262,0.299
+3_towns,Avon,2000,renter,p3,81,0.092
+3_towns,Avon,2000,renter,p4_or_more,93,0.106
+3_towns,Avon,2010,renter,total,1208,NA
+3_towns,Avon,2010,renter,p1,560,0.464
+3_towns,Avon,2010,renter,p2,392,0.325
+3_towns,Avon,2010,renter,p3,101,0.084
+3_towns,Avon,2010,renter,p4_or_more,155,0.128
+3_towns,Avon,2018,renter,total,1004,NA
+3_towns,Avon,2018,renter,p1,560,0.558
+3_towns,Avon,2018,renter,p2,178,0.177
+3_towns,Avon,2018,renter,p3,99,0.099
+3_towns,Avon,2018,renter,p4_or_more,167,0.166
+3_towns,Barkhamsted,2000,renter,total,182,NA
+3_towns,Barkhamsted,2000,renter,p1,76,0.418
+3_towns,Barkhamsted,2000,renter,p2,65,0.357
+3_towns,Barkhamsted,2000,renter,p3,25,0.137
+3_towns,Barkhamsted,2000,renter,p4_or_more,16,0.088
+3_towns,Barkhamsted,2010,renter,total,161,NA
+3_towns,Barkhamsted,2010,renter,p1,55,0.342
+3_towns,Barkhamsted,2010,renter,p2,24,0.149
+3_towns,Barkhamsted,2010,renter,p3,59,0.366
+3_towns,Barkhamsted,2010,renter,p4_or_more,23,0.143
+3_towns,Barkhamsted,2018,renter,total,110,NA
+3_towns,Barkhamsted,2018,renter,p1,21,0.191
+3_towns,Barkhamsted,2018,renter,p2,74,0.673
+3_towns,Barkhamsted,2018,renter,p3,8,0.073
+3_towns,Barkhamsted,2018,renter,p4_or_more,7,0.064
+3_towns,Beacon Falls,2000,renter,total,438,NA
+3_towns,Beacon Falls,2000,renter,p1,187,0.427
+3_towns,Beacon Falls,2000,renter,p2,144,0.329
+3_towns,Beacon Falls,2000,renter,p3,53,0.121
+3_towns,Beacon Falls,2000,renter,p4_or_more,54,0.123
+3_towns,Beacon Falls,2010,renter,total,406,NA
+3_towns,Beacon Falls,2010,renter,p1,340,0.837
+3_towns,Beacon Falls,2010,renter,p2,43,0.106
+3_towns,Beacon Falls,2010,renter,p3,17,0.042
+3_towns,Beacon Falls,2010,renter,p4_or_more,6,0.015
+3_towns,Beacon Falls,2018,renter,total,372,NA
+3_towns,Beacon Falls,2018,renter,p1,261,0.702
+3_towns,Beacon Falls,2018,renter,p2,12,0.032
+3_towns,Beacon Falls,2018,renter,p3,56,0.151
+3_towns,Beacon Falls,2018,renter,p4_or_more,43,0.116
+3_towns,Berlin,2000,renter,total,796,NA
+3_towns,Berlin,2000,renter,p1,368,0.462
+3_towns,Berlin,2000,renter,p2,213,0.268
+3_towns,Berlin,2000,renter,p3,108,0.136
+3_towns,Berlin,2000,renter,p4_or_more,107,0.134
+3_towns,Berlin,2010,renter,total,784,NA
+3_towns,Berlin,2010,renter,p1,389,0.496
+3_towns,Berlin,2010,renter,p2,239,0.305
+3_towns,Berlin,2010,renter,p3,42,0.054
+3_towns,Berlin,2010,renter,p4_or_more,114,0.145
+3_towns,Berlin,2018,renter,total,1216,NA
+3_towns,Berlin,2018,renter,p1,589,0.484
+3_towns,Berlin,2018,renter,p2,449,0.369
+3_towns,Berlin,2018,renter,p3,57,0.047
+3_towns,Berlin,2018,renter,p4_or_more,121,0.1
+3_towns,Bethany,2000,renter,total,146,NA
+3_towns,Bethany,2000,renter,p1,45,0.308
+3_towns,Bethany,2000,renter,p2,46,0.315
+3_towns,Bethany,2000,renter,p3,24,0.164
+3_towns,Bethany,2000,renter,p4_or_more,31,0.212
+3_towns,Bethany,2010,renter,total,93,NA
+3_towns,Bethany,2010,renter,p1,11,0.118
+3_towns,Bethany,2010,renter,p2,14,0.151
+3_towns,Bethany,2010,renter,p3,28,0.301
+3_towns,Bethany,2010,renter,p4_or_more,40,0.43
+3_towns,Bethany,2018,renter,total,167,NA
+3_towns,Bethany,2018,renter,p1,74,0.443
+3_towns,Bethany,2018,renter,p2,32,0.192
+3_towns,Bethany,2018,renter,p3,9,0.054
+3_towns,Bethany,2018,renter,p4_or_more,52,0.311
+3_towns,Bethel,2000,renter,total,1522,NA
+3_towns,Bethel,2000,renter,p1,647,0.425
+3_towns,Bethel,2000,renter,p2,405,0.266
+3_towns,Bethel,2000,renter,p3,239,0.157
+3_towns,Bethel,2000,renter,p4_or_more,231,0.152
+3_towns,Bethel,2010,renter,total,1399,NA
+3_towns,Bethel,2010,renter,p1,582,0.416
+3_towns,Bethel,2010,renter,p2,402,0.287
+3_towns,Bethel,2010,renter,p3,202,0.144
+3_towns,Bethel,2010,renter,p4_or_more,213,0.152
+3_towns,Bethel,2018,renter,total,1587,NA
+3_towns,Bethel,2018,renter,p1,747,0.471
+3_towns,Bethel,2018,renter,p2,455,0.287
+3_towns,Bethel,2018,renter,p3,168,0.106
+3_towns,Bethel,2018,renter,p4_or_more,217,0.137
+3_towns,Bethlehem,2000,renter,total,181,NA
+3_towns,Bethlehem,2000,renter,p1,86,0.475
+3_towns,Bethlehem,2000,renter,p2,52,0.287
+3_towns,Bethlehem,2000,renter,p3,21,0.116
+3_towns,Bethlehem,2000,renter,p4_or_more,22,0.122
+3_towns,Bethlehem,2010,renter,total,197,NA
+3_towns,Bethlehem,2010,renter,p1,141,0.716
+3_towns,Bethlehem,2010,renter,p2,15,0.076
+3_towns,Bethlehem,2010,renter,p3,24,0.122
+3_towns,Bethlehem,2010,renter,p4_or_more,17,0.086
+3_towns,Bethlehem,2018,renter,total,176,NA
+3_towns,Bethlehem,2018,renter,p1,72,0.409
+3_towns,Bethlehem,2018,renter,p2,34,0.193
+3_towns,Bethlehem,2018,renter,p3,8,0.045
+3_towns,Bethlehem,2018,renter,p4_or_more,62,0.352
+3_towns,Bloomfield,2000,renter,total,1986,NA
+3_towns,Bloomfield,2000,renter,p1,1029,0.518
+3_towns,Bloomfield,2000,renter,p2,497,0.25
+3_towns,Bloomfield,2000,renter,p3,220,0.111
+3_towns,Bloomfield,2000,renter,p4_or_more,240,0.121
+3_towns,Bloomfield,2010,renter,total,2175,NA
+3_towns,Bloomfield,2010,renter,p1,1398,0.643
+3_towns,Bloomfield,2010,renter,p2,456,0.21
+3_towns,Bloomfield,2010,renter,p3,105,0.048
+3_towns,Bloomfield,2010,renter,p4_or_more,216,0.099
+3_towns,Bloomfield,2018,renter,total,2373,NA
+3_towns,Bloomfield,2018,renter,p1,1172,0.494
+3_towns,Bloomfield,2018,renter,p2,703,0.296
+3_towns,Bloomfield,2018,renter,p3,145,0.061
+3_towns,Bloomfield,2018,renter,p4_or_more,353,0.149
+3_towns,Bolton,2000,renter,total,277,NA
+3_towns,Bolton,2000,renter,p1,139,0.502
+3_towns,Bolton,2000,renter,p2,76,0.274
+3_towns,Bolton,2000,renter,p3,33,0.119
+3_towns,Bolton,2000,renter,p4_or_more,29,0.105
+3_towns,Bolton,2010,renter,total,362,NA
+3_towns,Bolton,2010,renter,p1,181,0.5
+3_towns,Bolton,2010,renter,p2,73,0.202
+3_towns,Bolton,2010,renter,p3,56,0.155
+3_towns,Bolton,2010,renter,p4_or_more,52,0.144
+3_towns,Bolton,2018,renter,total,193,NA
+3_towns,Bolton,2018,renter,p1,117,0.606
+3_towns,Bolton,2018,renter,p2,30,0.155
+3_towns,Bolton,2018,renter,p3,16,0.083
+3_towns,Bolton,2018,renter,p4_or_more,30,0.155
+3_towns,Bozrah,2000,renter,total,158,NA
+3_towns,Bozrah,2000,renter,p1,67,0.424
+3_towns,Bozrah,2000,renter,p2,40,0.253
+3_towns,Bozrah,2000,renter,p3,23,0.146
+3_towns,Bozrah,2000,renter,p4_or_more,28,0.177
+3_towns,Bozrah,2010,renter,total,181,NA
+3_towns,Bozrah,2010,renter,p1,82,0.453
+3_towns,Bozrah,2010,renter,p2,28,0.155
+3_towns,Bozrah,2010,renter,p3,51,0.282
+3_towns,Bozrah,2010,renter,p4_or_more,20,0.11
+3_towns,Bozrah,2018,renter,total,138,NA
+3_towns,Bozrah,2018,renter,p1,50,0.362
+3_towns,Bozrah,2018,renter,p2,65,0.471
+3_towns,Bozrah,2018,renter,p3,10,0.072
+3_towns,Bozrah,2018,renter,p4_or_more,13,0.094
+3_towns,Branford,2000,renter,total,3942,NA
+3_towns,Branford,2000,renter,p1,1824,0.463
+3_towns,Branford,2000,renter,p2,1180,0.299
+3_towns,Branford,2000,renter,p3,489,0.124
+3_towns,Branford,2000,renter,p4_or_more,449,0.114
+3_towns,Branford,2010,renter,total,3419,NA
+3_towns,Branford,2010,renter,p1,1493,0.437
+3_towns,Branford,2010,renter,p2,1153,0.337
+3_towns,Branford,2010,renter,p3,396,0.116
+3_towns,Branford,2010,renter,p4_or_more,377,0.11
+3_towns,Branford,2018,renter,total,3706,NA
+3_towns,Branford,2018,renter,p1,1686,0.455
+3_towns,Branford,2018,renter,p2,1202,0.324
+3_towns,Branford,2018,renter,p3,409,0.11
+3_towns,Branford,2018,renter,p4_or_more,409,0.11
+3_towns,Bridgeport,2000,renter,total,28552,NA
+3_towns,Bridgeport,2000,renter,p1,8933,0.313
+3_towns,Bridgeport,2000,renter,p2,6709,0.235
+3_towns,Bridgeport,2000,renter,p3,5005,0.175
+3_towns,Bridgeport,2000,renter,p4_or_more,7905,0.277
+3_towns,Bridgeport,2010,renter,total,28627,NA
+3_towns,Bridgeport,2010,renter,p1,9697,0.339
+3_towns,Bridgeport,2010,renter,p2,6615,0.231
+3_towns,Bridgeport,2010,renter,p3,4921,0.172
+3_towns,Bridgeport,2010,renter,p4_or_more,7394,0.258
+3_towns,Bridgeport,2018,renter,total,29433,NA
+3_towns,Bridgeport,2018,renter,p1,9308,0.316
+3_towns,Bridgeport,2018,renter,p2,7344,0.25
+3_towns,Bridgeport,2018,renter,p3,5276,0.179
+3_towns,Bridgeport,2018,renter,p4_or_more,7505,0.255
+3_towns,Bridgewater,2000,renter,total,70,NA
+3_towns,Bridgewater,2000,renter,p1,29,0.414
+3_towns,Bridgewater,2000,renter,p2,26,0.371
+3_towns,Bridgewater,2000,renter,p3,4,0.057
+3_towns,Bridgewater,2000,renter,p4_or_more,11,0.157
+3_towns,Bridgewater,2010,renter,total,86,NA
+3_towns,Bridgewater,2010,renter,p1,50,0.581
+3_towns,Bridgewater,2010,renter,p2,9,0.105
+3_towns,Bridgewater,2010,renter,p3,15,0.174
+3_towns,Bridgewater,2010,renter,p4_or_more,12,0.14
+3_towns,Bridgewater,2018,renter,total,80,NA
+3_towns,Bridgewater,2018,renter,p1,29,0.362
+3_towns,Bridgewater,2018,renter,p2,22,0.275
+3_towns,Bridgewater,2018,renter,p3,10,0.125
+3_towns,Bridgewater,2018,renter,p4_or_more,19,0.238
+3_towns,Bristol,2000,renter,total,9476,NA
+3_towns,Bristol,2000,renter,p1,4202,0.443
+3_towns,Bristol,2000,renter,p2,2717,0.287
+3_towns,Bristol,2000,renter,p3,1299,0.137
+3_towns,Bristol,2000,renter,p4_or_more,1258,0.133
+3_towns,Bristol,2010,renter,total,8394,NA
+3_towns,Bristol,2010,renter,p1,3750,0.447
+3_towns,Bristol,2010,renter,p2,2349,0.28
+3_towns,Bristol,2010,renter,p3,1169,0.139
+3_towns,Bristol,2010,renter,p4_or_more,1126,0.134
+3_towns,Bristol,2018,renter,total,8835,NA
+3_towns,Bristol,2018,renter,p1,3943,0.446
+3_towns,Bristol,2018,renter,p2,2505,0.284
+3_towns,Bristol,2018,renter,p3,1251,0.142
+3_towns,Bristol,2018,renter,p4_or_more,1136,0.129
+3_towns,Brookfield,2000,renter,total,612,NA
+3_towns,Brookfield,2000,renter,p1,223,0.364
+3_towns,Brookfield,2000,renter,p2,205,0.335
+3_towns,Brookfield,2000,renter,p3,91,0.149
+3_towns,Brookfield,2000,renter,p4_or_more,93,0.152
+3_towns,Brookfield,2010,renter,total,678,NA
+3_towns,Brookfield,2010,renter,p1,244,0.36
+3_towns,Brookfield,2010,renter,p2,213,0.314
+3_towns,Brookfield,2010,renter,p3,142,0.209
+3_towns,Brookfield,2010,renter,p4_or_more,79,0.117
+3_towns,Brookfield,2018,renter,total,1065,NA
+3_towns,Brookfield,2018,renter,p1,483,0.454
+3_towns,Brookfield,2018,renter,p2,184,0.173
+3_towns,Brookfield,2018,renter,p3,187,0.176
+3_towns,Brookfield,2018,renter,p4_or_more,211,0.198
+3_towns,Brooklyn,2000,renter,total,666,NA
+3_towns,Brooklyn,2000,renter,p1,281,0.422
+3_towns,Brooklyn,2000,renter,p2,188,0.282
+3_towns,Brooklyn,2000,renter,p3,104,0.156
+3_towns,Brooklyn,2000,renter,p4_or_more,93,0.14
+3_towns,Brooklyn,2010,renter,total,621,NA
+3_towns,Brooklyn,2010,renter,p1,248,0.399
+3_towns,Brooklyn,2010,renter,p2,204,0.329
+3_towns,Brooklyn,2010,renter,p3,90,0.145
+3_towns,Brooklyn,2010,renter,p4_or_more,79,0.127
+3_towns,Brooklyn,2018,renter,total,794,NA
+3_towns,Brooklyn,2018,renter,p1,427,0.538
+3_towns,Brooklyn,2018,renter,p2,70,0.088
+3_towns,Brooklyn,2018,renter,p3,155,0.195
+3_towns,Brooklyn,2018,renter,p4_or_more,142,0.179
+3_towns,Burlington,2000,renter,total,145,NA
+3_towns,Burlington,2000,renter,p1,39,0.269
+3_towns,Burlington,2000,renter,p2,50,0.345
+3_towns,Burlington,2000,renter,p3,26,0.179
+3_towns,Burlington,2000,renter,p4_or_more,30,0.207
+3_towns,Burlington,2010,renter,total,169,NA
+3_towns,Burlington,2010,renter,p1,58,0.343
+3_towns,Burlington,2010,renter,p2,62,0.367
+3_towns,Burlington,2010,renter,p3,38,0.225
+3_towns,Burlington,2010,renter,p4_or_more,11,0.065
+3_towns,Burlington,2018,renter,total,196,NA
+3_towns,Burlington,2018,renter,p1,44,0.224
+3_towns,Burlington,2018,renter,p2,56,0.286
+3_towns,Burlington,2018,renter,p3,65,0.332
+3_towns,Burlington,2018,renter,p4_or_more,31,0.158
+3_towns,Canaan,2000,renter,total,87,NA
+3_towns,Canaan,2000,renter,p1,36,0.414
+3_towns,Canaan,2000,renter,p2,27,0.31
+3_towns,Canaan,2000,renter,p3,8,0.092
+3_towns,Canaan,2000,renter,p4_or_more,16,0.184
+3_towns,Canaan,2010,renter,total,196,NA
+3_towns,Canaan,2010,renter,p1,131,0.668
+3_towns,Canaan,2010,renter,p2,45,0.23
+3_towns,Canaan,2010,renter,p3,8,0.041
+3_towns,Canaan,2010,renter,p4_or_more,12,0.061
+3_towns,Canaan,2018,renter,total,61,NA
+3_towns,Canaan,2018,renter,p1,21,0.344
+3_towns,Canaan,2018,renter,p2,21,0.344
+3_towns,Canaan,2018,renter,p3,5,0.082
+3_towns,Canaan,2018,renter,p4_or_more,14,0.23
+3_towns,Canterbury,2000,renter,total,240,NA
+3_towns,Canterbury,2000,renter,p1,95,0.396
+3_towns,Canterbury,2000,renter,p2,72,0.3
+3_towns,Canterbury,2000,renter,p3,41,0.171
+3_towns,Canterbury,2000,renter,p4_or_more,32,0.133
+3_towns,Canterbury,2010,renter,total,247,NA
+3_towns,Canterbury,2010,renter,p1,145,0.587
+3_towns,Canterbury,2010,renter,p2,88,0.356
+3_towns,Canterbury,2010,renter,p3,0,0
+3_towns,Canterbury,2010,renter,p4_or_more,14,0.057
+3_towns,Canterbury,2018,renter,total,216,NA
+3_towns,Canterbury,2018,renter,p1,73,0.338
+3_towns,Canterbury,2018,renter,p2,83,0.384
+3_towns,Canterbury,2018,renter,p3,18,0.083
+3_towns,Canterbury,2018,renter,p4_or_more,42,0.194
+3_towns,Canton,2000,renter,total,681,NA
+3_towns,Canton,2000,renter,p1,327,0.48
+3_towns,Canton,2000,renter,p2,204,0.3
+3_towns,Canton,2000,renter,p3,79,0.116
+3_towns,Canton,2000,renter,p4_or_more,71,0.104
+3_towns,Canton,2010,renter,total,733,NA
+3_towns,Canton,2010,renter,p1,402,0.548
+3_towns,Canton,2010,renter,p2,212,0.289
+3_towns,Canton,2010,renter,p3,73,0.1
+3_towns,Canton,2010,renter,p4_or_more,46,0.063
+3_towns,Canton,2018,renter,total,847,NA
+3_towns,Canton,2018,renter,p1,435,0.514
+3_towns,Canton,2018,renter,p2,193,0.228
+3_towns,Canton,2018,renter,p3,122,0.144
+3_towns,Canton,2018,renter,p4_or_more,97,0.115
+3_towns,Chaplin,2000,renter,total,181,NA
+3_towns,Chaplin,2000,renter,p1,62,0.343
+3_towns,Chaplin,2000,renter,p2,52,0.287
+3_towns,Chaplin,2000,renter,p3,32,0.177
+3_towns,Chaplin,2000,renter,p4_or_more,35,0.193
+3_towns,Chaplin,2010,renter,total,192,NA
+3_towns,Chaplin,2010,renter,p1,45,0.234
+3_towns,Chaplin,2010,renter,p2,103,0.536
+3_towns,Chaplin,2010,renter,p3,11,0.057
+3_towns,Chaplin,2010,renter,p4_or_more,33,0.172
+3_towns,Chaplin,2018,renter,total,91,NA
+3_towns,Chaplin,2018,renter,p1,28,0.308
+3_towns,Chaplin,2018,renter,p2,41,0.451
+3_towns,Chaplin,2018,renter,p3,5,0.055
+3_towns,Chaplin,2018,renter,p4_or_more,17,0.187
+3_towns,Cheshire,2000,renter,total,1252,NA
+3_towns,Cheshire,2000,renter,p1,622,0.497
+3_towns,Cheshire,2000,renter,p2,343,0.274
+3_towns,Cheshire,2000,renter,p3,159,0.127
+3_towns,Cheshire,2000,renter,p4_or_more,128,0.102
+3_towns,Cheshire,2010,renter,total,1363,NA
+3_towns,Cheshire,2010,renter,p1,603,0.442
+3_towns,Cheshire,2010,renter,p2,407,0.299
+3_towns,Cheshire,2010,renter,p3,171,0.125
+3_towns,Cheshire,2010,renter,p4_or_more,182,0.134
+3_towns,Cheshire,2018,renter,total,1359,NA
+3_towns,Cheshire,2018,renter,p1,615,0.453
+3_towns,Cheshire,2018,renter,p2,496,0.365
+3_towns,Cheshire,2018,renter,p3,94,0.069
+3_towns,Cheshire,2018,renter,p4_or_more,154,0.113
+3_towns,Chester,2000,renter,total,388,NA
+3_towns,Chester,2000,renter,p1,197,0.508
+3_towns,Chester,2000,renter,p2,115,0.296
+3_towns,Chester,2000,renter,p3,40,0.103
+3_towns,Chester,2000,renter,p4_or_more,36,0.093
+3_towns,Chester,2010,renter,total,466,NA
+3_towns,Chester,2010,renter,p1,177,0.38
+3_towns,Chester,2010,renter,p2,136,0.292
+3_towns,Chester,2010,renter,p3,63,0.135
+3_towns,Chester,2010,renter,p4_or_more,90,0.193
+3_towns,Chester,2018,renter,total,375,NA
+3_towns,Chester,2018,renter,p1,221,0.589
+3_towns,Chester,2018,renter,p2,110,0.293
+3_towns,Chester,2018,renter,p3,8,0.021
+3_towns,Chester,2018,renter,p4_or_more,36,0.096
+3_towns,Clinton,2000,renter,total,1036,NA
+3_towns,Clinton,2000,renter,p1,411,0.397
+3_towns,Clinton,2000,renter,p2,293,0.283
+3_towns,Clinton,2000,renter,p3,162,0.156
+3_towns,Clinton,2000,renter,p4_or_more,170,0.164
+3_towns,Clinton,2010,renter,total,972,NA
+3_towns,Clinton,2010,renter,p1,412,0.424
+3_towns,Clinton,2010,renter,p2,200,0.206
+3_towns,Clinton,2010,renter,p3,110,0.113
+3_towns,Clinton,2010,renter,p4_or_more,250,0.257
+3_towns,Clinton,2018,renter,total,1137,NA
+3_towns,Clinton,2018,renter,p1,473,0.416
+3_towns,Clinton,2018,renter,p2,332,0.292
+3_towns,Clinton,2018,renter,p3,184,0.162
+3_towns,Clinton,2018,renter,p4_or_more,148,0.13
+3_towns,Colchester,2000,renter,total,1198,NA
+3_towns,Colchester,2000,renter,p1,440,0.367
+3_towns,Colchester,2000,renter,p2,370,0.309
+3_towns,Colchester,2000,renter,p3,188,0.157
+3_towns,Colchester,2000,renter,p4_or_more,200,0.167
+3_towns,Colchester,2010,renter,total,941,NA
+3_towns,Colchester,2010,renter,p1,389,0.413
+3_towns,Colchester,2010,renter,p2,202,0.215
+3_towns,Colchester,2010,renter,p3,195,0.207
+3_towns,Colchester,2010,renter,p4_or_more,155,0.165
+3_towns,Colchester,2018,renter,total,1432,NA
+3_towns,Colchester,2018,renter,p1,395,0.276
+3_towns,Colchester,2018,renter,p2,436,0.304
+3_towns,Colchester,2018,renter,p3,329,0.23
+3_towns,Colchester,2018,renter,p4_or_more,272,0.19
+3_towns,Colebrook,2000,renter,total,79,NA
+3_towns,Colebrook,2000,renter,p1,26,0.329
+3_towns,Colebrook,2000,renter,p2,25,0.316
+3_towns,Colebrook,2000,renter,p3,11,0.139
+3_towns,Colebrook,2000,renter,p4_or_more,17,0.215
+3_towns,Colebrook,2010,renter,total,39,NA
+3_towns,Colebrook,2010,renter,p1,16,0.41
+3_towns,Colebrook,2010,renter,p2,17,0.436
+3_towns,Colebrook,2010,renter,p3,0,0
+3_towns,Colebrook,2010,renter,p4_or_more,6,0.154
+3_towns,Colebrook,2018,renter,total,64,NA
+3_towns,Colebrook,2018,renter,p1,11,0.172
+3_towns,Colebrook,2018,renter,p2,30,0.469
+3_towns,Colebrook,2018,renter,p3,0,0
+3_towns,Colebrook,2018,renter,p4_or_more,23,0.359
+3_towns,Columbia,2000,renter,total,155,NA
+3_towns,Columbia,2000,renter,p1,55,0.355
+3_towns,Columbia,2000,renter,p2,54,0.348
+3_towns,Columbia,2000,renter,p3,29,0.187
+3_towns,Columbia,2000,renter,p4_or_more,17,0.11
+3_towns,Columbia,2010,renter,total,85,NA
+3_towns,Columbia,2010,renter,p1,21,0.247
+3_towns,Columbia,2010,renter,p2,36,0.424
+3_towns,Columbia,2010,renter,p3,0,0
+3_towns,Columbia,2010,renter,p4_or_more,28,0.329
+3_towns,Columbia,2018,renter,total,155,NA
+3_towns,Columbia,2018,renter,p1,65,0.419
+3_towns,Columbia,2018,renter,p2,36,0.232
+3_towns,Columbia,2018,renter,p3,38,0.245
+3_towns,Columbia,2018,renter,p4_or_more,16,0.103
+3_towns,Cornwall,2000,renter,total,122,NA
+3_towns,Cornwall,2000,renter,p1,55,0.451
+3_towns,Cornwall,2000,renter,p2,21,0.172
+3_towns,Cornwall,2000,renter,p3,20,0.164
+3_towns,Cornwall,2000,renter,p4_or_more,26,0.213
+3_towns,Cornwall,2010,renter,total,148,NA
+3_towns,Cornwall,2010,renter,p1,64,0.432
+3_towns,Cornwall,2010,renter,p2,36,0.243
+3_towns,Cornwall,2010,renter,p3,30,0.203
+3_towns,Cornwall,2010,renter,p4_or_more,18,0.122
+3_towns,Cornwall,2018,renter,total,106,NA
+3_towns,Cornwall,2018,renter,p1,34,0.321
+3_towns,Cornwall,2018,renter,p2,40,0.377
+3_towns,Cornwall,2018,renter,p3,12,0.113
+3_towns,Cornwall,2018,renter,p4_or_more,20,0.189
+3_towns,Coventry,2000,renter,total,578,NA
+3_towns,Coventry,2000,renter,p1,227,0.393
+3_towns,Coventry,2000,renter,p2,172,0.298
+3_towns,Coventry,2000,renter,p3,88,0.152
+3_towns,Coventry,2000,renter,p4_or_more,91,0.157
+3_towns,Coventry,2010,renter,total,568,NA
+3_towns,Coventry,2010,renter,p1,131,0.231
+3_towns,Coventry,2010,renter,p2,228,0.401
+3_towns,Coventry,2010,renter,p3,63,0.111
+3_towns,Coventry,2010,renter,p4_or_more,146,0.257
+3_towns,Coventry,2018,renter,total,528,NA
+3_towns,Coventry,2018,renter,p1,204,0.386
+3_towns,Coventry,2018,renter,p2,226,0.428
+3_towns,Coventry,2018,renter,p3,64,0.121
+3_towns,Coventry,2018,renter,p4_or_more,34,0.064
+3_towns,Cromwell,2000,renter,total,1243,NA
+3_towns,Cromwell,2000,renter,p1,608,0.489
+3_towns,Cromwell,2000,renter,p2,391,0.315
+3_towns,Cromwell,2000,renter,p3,103,0.083
+3_towns,Cromwell,2000,renter,p4_or_more,141,0.113
+3_towns,Cromwell,2010,renter,total,1062,NA
+3_towns,Cromwell,2010,renter,p1,572,0.539
+3_towns,Cromwell,2010,renter,p2,339,0.319
+3_towns,Cromwell,2010,renter,p3,121,0.114
+3_towns,Cromwell,2010,renter,p4_or_more,30,0.028
+3_towns,Cromwell,2018,renter,total,1370,NA
+3_towns,Cromwell,2018,renter,p1,719,0.525
+3_towns,Cromwell,2018,renter,p2,376,0.274
+3_towns,Cromwell,2018,renter,p3,166,0.121
+3_towns,Cromwell,2018,renter,p4_or_more,109,0.08
+3_towns,Danbury,2000,renter,total,11334,NA
+3_towns,Danbury,2000,renter,p1,3699,0.326
+3_towns,Danbury,2000,renter,p2,2943,0.26
+3_towns,Danbury,2000,renter,p3,1836,0.162
+3_towns,Danbury,2000,renter,p4_or_more,2856,0.252
+3_towns,Danbury,2010,renter,total,11008,NA
+3_towns,Danbury,2010,renter,p1,3522,0.32
+3_towns,Danbury,2010,renter,p2,2622,0.238
+3_towns,Danbury,2010,renter,p3,2168,0.197
+3_towns,Danbury,2010,renter,p4_or_more,2696,0.245
+3_towns,Danbury,2018,renter,total,12442,NA
+3_towns,Danbury,2018,renter,p1,3668,0.295
+3_towns,Danbury,2018,renter,p2,2922,0.235
+3_towns,Danbury,2018,renter,p3,2278,0.183
+3_towns,Danbury,2018,renter,p4_or_more,3574,0.287
+3_towns,Darien,2000,renter,total,793,NA
+3_towns,Darien,2000,renter,p1,297,0.375
+3_towns,Darien,2000,renter,p2,216,0.272
+3_towns,Darien,2000,renter,p3,98,0.124
+3_towns,Darien,2000,renter,p4_or_more,182,0.23
+3_towns,Darien,2010,renter,total,815,NA
+3_towns,Darien,2010,renter,p1,383,0.47
+3_towns,Darien,2010,renter,p2,205,0.252
+3_towns,Darien,2010,renter,p3,60,0.074
+3_towns,Darien,2010,renter,p4_or_more,167,0.205
+3_towns,Darien,2018,renter,total,1010,NA
+3_towns,Darien,2018,renter,p1,345,0.342
+3_towns,Darien,2018,renter,p2,285,0.282
+3_towns,Darien,2018,renter,p3,116,0.115
+3_towns,Darien,2018,renter,p4_or_more,264,0.261
+3_towns,Deep River,2000,renter,total,459,NA
+3_towns,Deep River,2000,renter,p1,192,0.418
+3_towns,Deep River,2000,renter,p2,147,0.32
+3_towns,Deep River,2000,renter,p3,58,0.126
+3_towns,Deep River,2000,renter,p4_or_more,62,0.135
+3_towns,Deep River,2010,renter,total,435,NA
+3_towns,Deep River,2010,renter,p1,124,0.285
+3_towns,Deep River,2010,renter,p2,68,0.156
+3_towns,Deep River,2010,renter,p3,142,0.326
+3_towns,Deep River,2010,renter,p4_or_more,101,0.232
+3_towns,Deep River,2018,renter,total,502,NA
+3_towns,Deep River,2018,renter,p1,250,0.498
+3_towns,Deep River,2018,renter,p2,92,0.183
+3_towns,Deep River,2018,renter,p3,141,0.281
+3_towns,Deep River,2018,renter,p4_or_more,19,0.038
+3_towns,Derby,2000,renter,total,2196,NA
+3_towns,Derby,2000,renter,p1,890,0.405
+3_towns,Derby,2000,renter,p2,595,0.271
+3_towns,Derby,2000,renter,p3,370,0.168
+3_towns,Derby,2000,renter,p4_or_more,341,0.155
+3_towns,Derby,2010,renter,total,2060,NA
+3_towns,Derby,2010,renter,p1,813,0.395
+3_towns,Derby,2010,renter,p2,527,0.256
+3_towns,Derby,2010,renter,p3,249,0.121
+3_towns,Derby,2010,renter,p4_or_more,471,0.229
+3_towns,Derby,2018,renter,total,2120,NA
+3_towns,Derby,2018,renter,p1,915,0.432
+3_towns,Derby,2018,renter,p2,577,0.272
+3_towns,Derby,2018,renter,p3,373,0.176
+3_towns,Derby,2018,renter,p4_or_more,255,0.12
+3_towns,Durham,2000,renter,total,205,NA
+3_towns,Durham,2000,renter,p1,76,0.371
+3_towns,Durham,2000,renter,p2,60,0.293
+3_towns,Durham,2000,renter,p3,38,0.185
+3_towns,Durham,2000,renter,p4_or_more,31,0.151
+3_towns,Durham,2010,renter,total,137,NA
+3_towns,Durham,2010,renter,p1,46,0.336
+3_towns,Durham,2010,renter,p2,49,0.358
+3_towns,Durham,2010,renter,p3,0,0
+3_towns,Durham,2010,renter,p4_or_more,42,0.307
+3_towns,Durham,2018,renter,total,253,NA
+3_towns,Durham,2018,renter,p1,100,0.395
+3_towns,Durham,2018,renter,p2,29,0.115
+3_towns,Durham,2018,renter,p3,16,0.063
+3_towns,Durham,2018,renter,p4_or_more,108,0.427
+3_towns,East Granby,2000,renter,total,334,NA
+3_towns,East Granby,2000,renter,p1,160,0.479
+3_towns,East Granby,2000,renter,p2,102,0.305
+3_towns,East Granby,2000,renter,p3,27,0.081
+3_towns,East Granby,2000,renter,p4_or_more,45,0.135
+3_towns,East Granby,2010,renter,total,334,NA
+3_towns,East Granby,2010,renter,p1,124,0.371
+3_towns,East Granby,2010,renter,p2,117,0.35
+3_towns,East Granby,2010,renter,p3,10,0.03
+3_towns,East Granby,2010,renter,p4_or_more,83,0.249
+3_towns,East Granby,2018,renter,total,406,NA
+3_towns,East Granby,2018,renter,p1,178,0.438
+3_towns,East Granby,2018,renter,p2,195,0.48
+3_towns,East Granby,2018,renter,p3,0,0
+3_towns,East Granby,2018,renter,p4_or_more,33,0.081
+3_towns,East Haddam,2000,renter,total,499,NA
+3_towns,East Haddam,2000,renter,p1,206,0.413
+3_towns,East Haddam,2000,renter,p2,143,0.287
+3_towns,East Haddam,2000,renter,p3,67,0.134
+3_towns,East Haddam,2000,renter,p4_or_more,83,0.166
+3_towns,East Haddam,2010,renter,total,510,NA
+3_towns,East Haddam,2010,renter,p1,251,0.492
+3_towns,East Haddam,2010,renter,p2,134,0.263
+3_towns,East Haddam,2010,renter,p3,110,0.216
+3_towns,East Haddam,2010,renter,p4_or_more,15,0.029
+3_towns,East Haddam,2018,renter,total,553,NA
+3_towns,East Haddam,2018,renter,p1,257,0.465
+3_towns,East Haddam,2018,renter,p2,174,0.315
+3_towns,East Haddam,2018,renter,p3,87,0.157
+3_towns,East Haddam,2018,renter,p4_or_more,35,0.063
+3_towns,East Hampton,2000,renter,total,789,NA
+3_towns,East Hampton,2000,renter,p1,343,0.435
+3_towns,East Hampton,2000,renter,p2,215,0.272
+3_towns,East Hampton,2000,renter,p3,105,0.133
+3_towns,East Hampton,2000,renter,p4_or_more,126,0.16
+3_towns,East Hampton,2010,renter,total,491,NA
+3_towns,East Hampton,2010,renter,p1,271,0.552
+3_towns,East Hampton,2010,renter,p2,116,0.236
+3_towns,East Hampton,2010,renter,p3,14,0.029
+3_towns,East Hampton,2010,renter,p4_or_more,90,0.183
+3_towns,East Hampton,2018,renter,total,625,NA
+3_towns,East Hampton,2018,renter,p1,239,0.382
+3_towns,East Hampton,2018,renter,p2,147,0.235
+3_towns,East Hampton,2018,renter,p3,78,0.125
+3_towns,East Hampton,2018,renter,p4_or_more,161,0.258
+3_towns,East Hartford,2000,renter,total,8580,NA
+3_towns,East Hartford,2000,renter,p1,3382,0.394
+3_towns,East Hartford,2000,renter,p2,2225,0.259
+3_towns,East Hartford,2000,renter,p3,1380,0.161
+3_towns,East Hartford,2000,renter,p4_or_more,1593,0.186
+3_towns,East Hartford,2010,renter,total,8544,NA
+3_towns,East Hartford,2010,renter,p1,2949,0.345
+3_towns,East Hartford,2010,renter,p2,2303,0.27
+3_towns,East Hartford,2010,renter,p3,1751,0.205
+3_towns,East Hartford,2010,renter,p4_or_more,1541,0.18
+3_towns,East Hartford,2018,renter,total,7739,NA
+3_towns,East Hartford,2018,renter,p1,2793,0.361
+3_towns,East Hartford,2018,renter,p2,1816,0.235
+3_towns,East Hartford,2018,renter,p3,1384,0.179
+3_towns,East Hartford,2018,renter,p4_or_more,1746,0.226
+3_towns,East Haven,2000,renter,total,3051,NA
+3_towns,East Haven,2000,renter,p1,1361,0.446
+3_towns,East Haven,2000,renter,p2,850,0.279
+3_towns,East Haven,2000,renter,p3,414,0.136
+3_towns,East Haven,2000,renter,p4_or_more,426,0.14
+3_towns,East Haven,2010,renter,total,2645,NA
+3_towns,East Haven,2010,renter,p1,1160,0.439
+3_towns,East Haven,2010,renter,p2,797,0.301
+3_towns,East Haven,2010,renter,p3,331,0.125
+3_towns,East Haven,2010,renter,p4_or_more,357,0.135
+3_towns,East Haven,2018,renter,total,3242,NA
+3_towns,East Haven,2018,renter,p1,1588,0.49
+3_towns,East Haven,2018,renter,p2,882,0.272
+3_towns,East Haven,2018,renter,p3,339,0.105
+3_towns,East Haven,2018,renter,p4_or_more,433,0.134
+3_towns,East Lyme,2000,renter,total,1354,NA
+3_towns,East Lyme,2000,renter,p1,553,0.408
+3_towns,East Lyme,2000,renter,p2,399,0.295
+3_towns,East Lyme,2000,renter,p3,188,0.139
+3_towns,East Lyme,2000,renter,p4_or_more,214,0.158
+3_towns,East Lyme,2010,renter,total,1169,NA
+3_towns,East Lyme,2010,renter,p1,576,0.493
+3_towns,East Lyme,2010,renter,p2,323,0.276
+3_towns,East Lyme,2010,renter,p3,144,0.123
+3_towns,East Lyme,2010,renter,p4_or_more,126,0.108
+3_towns,East Lyme,2018,renter,total,1600,NA
+3_towns,East Lyme,2018,renter,p1,801,0.501
+3_towns,East Lyme,2018,renter,p2,465,0.291
+3_towns,East Lyme,2018,renter,p3,192,0.12
+3_towns,East Lyme,2018,renter,p4_or_more,142,0.089
+3_towns,East Windsor,2000,renter,total,1421,NA
+3_towns,East Windsor,2000,renter,p1,582,0.41
+3_towns,East Windsor,2000,renter,p2,422,0.297
+3_towns,East Windsor,2000,renter,p3,213,0.15
+3_towns,East Windsor,2000,renter,p4_or_more,204,0.144
+3_towns,East Windsor,2010,renter,total,1408,NA
+3_towns,East Windsor,2010,renter,p1,454,0.322
+3_towns,East Windsor,2010,renter,p2,353,0.251
+3_towns,East Windsor,2010,renter,p3,355,0.252
+3_towns,East Windsor,2010,renter,p4_or_more,246,0.175
+3_towns,East Windsor,2018,renter,total,1433,NA
+3_towns,East Windsor,2018,renter,p1,600,0.419
+3_towns,East Windsor,2018,renter,p2,466,0.325
+3_towns,East Windsor,2018,renter,p3,166,0.116
+3_towns,East Windsor,2018,renter,p4_or_more,201,0.14
+3_towns,Eastford,2000,renter,total,124,NA
+3_towns,Eastford,2000,renter,p1,53,0.427
+3_towns,Eastford,2000,renter,p2,34,0.274
+3_towns,Eastford,2000,renter,p3,17,0.137
+3_towns,Eastford,2000,renter,p4_or_more,20,0.161
+3_towns,Eastford,2010,renter,total,56,NA
+3_towns,Eastford,2010,renter,p1,23,0.411
+3_towns,Eastford,2010,renter,p2,14,0.25
+3_towns,Eastford,2010,renter,p3,12,0.214
+3_towns,Eastford,2010,renter,p4_or_more,7,0.125
+3_towns,Eastford,2018,renter,total,128,NA
+3_towns,Eastford,2018,renter,p1,71,0.555
+3_towns,Eastford,2018,renter,p2,39,0.305
+3_towns,Eastford,2018,renter,p3,5,0.039
+3_towns,Eastford,2018,renter,p4_or_more,13,0.102
+3_towns,Easton,2000,renter,total,141,NA
+3_towns,Easton,2000,renter,p1,42,0.298
+3_towns,Easton,2000,renter,p2,50,0.355
+3_towns,Easton,2000,renter,p3,22,0.156
+3_towns,Easton,2000,renter,p4_or_more,27,0.191
+3_towns,Easton,2010,renter,total,56,NA
+3_towns,Easton,2010,renter,p1,10,0.179
+3_towns,Easton,2010,renter,p2,17,0.304
+3_towns,Easton,2010,renter,p3,18,0.321
+3_towns,Easton,2010,renter,p4_or_more,11,0.196
+3_towns,Easton,2018,renter,total,140,NA
+3_towns,Easton,2018,renter,p1,21,0.15
+3_towns,Easton,2018,renter,p2,52,0.371
+3_towns,Easton,2018,renter,p3,46,0.329
+3_towns,Easton,2018,renter,p4_or_more,21,0.15
+3_towns,Ellington,2000,renter,total,1623,NA
+3_towns,Ellington,2000,renter,p1,833,0.513
+3_towns,Ellington,2000,renter,p2,525,0.323
+3_towns,Ellington,2000,renter,p3,138,0.085
+3_towns,Ellington,2000,renter,p4_or_more,127,0.078
+3_towns,Ellington,2010,renter,total,1881,NA
+3_towns,Ellington,2010,renter,p1,812,0.432
+3_towns,Ellington,2010,renter,p2,773,0.411
+3_towns,Ellington,2010,renter,p3,136,0.072
+3_towns,Ellington,2010,renter,p4_or_more,160,0.085
+3_towns,Ellington,2018,renter,total,2601,NA
+3_towns,Ellington,2018,renter,p1,1468,0.564
+3_towns,Ellington,2018,renter,p2,620,0.238
+3_towns,Ellington,2018,renter,p3,154,0.059
+3_towns,Ellington,2018,renter,p4_or_more,359,0.138
+3_towns,Enfield,2000,renter,total,4004,NA
+3_towns,Enfield,2000,renter,p1,1753,0.438
+3_towns,Enfield,2000,renter,p2,1095,0.273
+3_towns,Enfield,2000,renter,p3,551,0.138
+3_towns,Enfield,2000,renter,p4_or_more,605,0.151
+3_towns,Enfield,2010,renter,total,3763,NA
+3_towns,Enfield,2010,renter,p1,1541,0.41
+3_towns,Enfield,2010,renter,p2,884,0.235
+3_towns,Enfield,2010,renter,p3,688,0.183
+3_towns,Enfield,2010,renter,p4_or_more,650,0.173
+3_towns,Enfield,2018,renter,total,4008,NA
+3_towns,Enfield,2018,renter,p1,1621,0.404
+3_towns,Enfield,2018,renter,p2,1162,0.29
+3_towns,Enfield,2018,renter,p3,507,0.126
+3_towns,Enfield,2018,renter,p4_or_more,718,0.179
+3_towns,Essex,2000,renter,total,583,NA
+3_towns,Essex,2000,renter,p1,325,0.557
+3_towns,Essex,2000,renter,p2,159,0.273
+3_towns,Essex,2000,renter,p3,53,0.091
+3_towns,Essex,2000,renter,p4_or_more,46,0.079
+3_towns,Essex,2010,renter,total,612,NA
+3_towns,Essex,2010,renter,p1,262,0.428
+3_towns,Essex,2010,renter,p2,226,0.369
+3_towns,Essex,2010,renter,p3,33,0.054
+3_towns,Essex,2010,renter,p4_or_more,91,0.149
+3_towns,Essex,2018,renter,total,720,NA
+3_towns,Essex,2018,renter,p1,426,0.592
+3_towns,Essex,2018,renter,p2,187,0.26
+3_towns,Essex,2018,renter,p3,12,0.017
+3_towns,Essex,2018,renter,p4_or_more,95,0.132
+3_towns,Fairfield,2000,renter,total,3435,NA
+3_towns,Fairfield,2000,renter,p1,1322,0.385
+3_towns,Fairfield,2000,renter,p2,1111,0.323
+3_towns,Fairfield,2000,renter,p3,461,0.134
+3_towns,Fairfield,2000,renter,p4_or_more,541,0.157
+3_towns,Fairfield,2010,renter,total,2811,NA
+3_towns,Fairfield,2010,renter,p1,1288,0.458
+3_towns,Fairfield,2010,renter,p2,777,0.276
+3_towns,Fairfield,2010,renter,p3,371,0.132
+3_towns,Fairfield,2010,renter,p4_or_more,375,0.133
+3_towns,Fairfield,2018,renter,total,3397,NA
+3_towns,Fairfield,2018,renter,p1,1152,0.339
+3_towns,Fairfield,2018,renter,p2,853,0.251
+3_towns,Fairfield,2018,renter,p3,654,0.193
+3_towns,Fairfield,2018,renter,p4_or_more,738,0.217
+3_towns,Farmington,2000,renter,total,2341,NA
+3_towns,Farmington,2000,renter,p1,1127,0.481
+3_towns,Farmington,2000,renter,p2,710,0.303
+3_towns,Farmington,2000,renter,p3,285,0.122
+3_towns,Farmington,2000,renter,p4_or_more,219,0.094
+3_towns,Farmington,2010,renter,total,2334,NA
+3_towns,Farmington,2010,renter,p1,1128,0.483
+3_towns,Farmington,2010,renter,p2,601,0.257
+3_towns,Farmington,2010,renter,p3,241,0.103
+3_towns,Farmington,2010,renter,p4_or_more,364,0.156
+3_towns,Farmington,2018,renter,total,2952,NA
+3_towns,Farmington,2018,renter,p1,1635,0.554
+3_towns,Farmington,2018,renter,p2,683,0.231
+3_towns,Farmington,2018,renter,p3,322,0.109
+3_towns,Farmington,2018,renter,p4_or_more,312,0.106
+3_towns,Franklin,2000,renter,total,70,NA
+3_towns,Franklin,2000,renter,p1,29,0.414
+3_towns,Franklin,2000,renter,p2,25,0.357
+3_towns,Franklin,2000,renter,p3,5,0.071
+3_towns,Franklin,2000,renter,p4_or_more,11,0.157
+3_towns,Franklin,2010,renter,total,96,NA
+3_towns,Franklin,2010,renter,p1,45,0.469
+3_towns,Franklin,2010,renter,p2,29,0.302
+3_towns,Franklin,2010,renter,p3,0,0
+3_towns,Franklin,2010,renter,p4_or_more,22,0.229
+3_towns,Franklin,2018,renter,total,103,NA
+3_towns,Franklin,2018,renter,p1,68,0.66
+3_towns,Franklin,2018,renter,p2,19,0.184
+3_towns,Franklin,2018,renter,p3,11,0.107
+3_towns,Franklin,2018,renter,p4_or_more,5,0.049
+3_towns,Glastonbury,2000,renter,total,2240,NA
+3_towns,Glastonbury,2000,renter,p1,1036,0.462
+3_towns,Glastonbury,2000,renter,p2,664,0.296
+3_towns,Glastonbury,2000,renter,p3,269,0.12
+3_towns,Glastonbury,2000,renter,p4_or_more,271,0.121
+3_towns,Glastonbury,2010,renter,total,1976,NA
+3_towns,Glastonbury,2010,renter,p1,829,0.42
+3_towns,Glastonbury,2010,renter,p2,662,0.335
+3_towns,Glastonbury,2010,renter,p3,261,0.132
+3_towns,Glastonbury,2010,renter,p4_or_more,224,0.113
+3_towns,Glastonbury,2018,renter,total,2693,NA
+3_towns,Glastonbury,2018,renter,p1,1359,0.505
+3_towns,Glastonbury,2018,renter,p2,690,0.256
+3_towns,Glastonbury,2018,renter,p3,240,0.089
+3_towns,Glastonbury,2018,renter,p4_or_more,404,0.15
+3_towns,Goshen,2000,renter,total,132,NA
+3_towns,Goshen,2000,renter,p1,58,0.439
+3_towns,Goshen,2000,renter,p2,33,0.25
+3_towns,Goshen,2000,renter,p3,17,0.129
+3_towns,Goshen,2000,renter,p4_or_more,24,0.182
+3_towns,Goshen,2010,renter,total,128,NA
+3_towns,Goshen,2010,renter,p1,51,0.398
+3_towns,Goshen,2010,renter,p2,15,0.117
+3_towns,Goshen,2010,renter,p3,53,0.414
+3_towns,Goshen,2010,renter,p4_or_more,9,0.07
+3_towns,Goshen,2018,renter,total,42,NA
+3_towns,Goshen,2018,renter,p1,19,0.452
+3_towns,Goshen,2018,renter,p2,10,0.238
+3_towns,Goshen,2018,renter,p3,13,0.31
+3_towns,Goshen,2018,renter,p4_or_more,0,0
+3_towns,Granby,2000,renter,total,425,NA
+3_towns,Granby,2000,renter,p1,179,0.421
+3_towns,Granby,2000,renter,p2,121,0.285
+3_towns,Granby,2000,renter,p3,52,0.122
+3_towns,Granby,2000,renter,p4_or_more,73,0.172
+3_towns,Granby,2010,renter,total,407,NA
+3_towns,Granby,2010,renter,p1,149,0.366
+3_towns,Granby,2010,renter,p2,93,0.229
+3_towns,Granby,2010,renter,p3,99,0.243
+3_towns,Granby,2010,renter,p4_or_more,66,0.162
+3_towns,Granby,2018,renter,total,416,NA
+3_towns,Granby,2018,renter,p1,246,0.591
+3_towns,Granby,2018,renter,p2,107,0.257
+3_towns,Granby,2018,renter,p3,51,0.123
+3_towns,Granby,2018,renter,p4_or_more,12,0.029
+3_towns,Greenwich,2000,renter,total,7240,NA
+3_towns,Greenwich,2000,renter,p1,2649,0.366
+3_towns,Greenwich,2000,renter,p2,2126,0.294
+3_towns,Greenwich,2000,renter,p3,1027,0.142
+3_towns,Greenwich,2000,renter,p4_or_more,1438,0.199
+3_towns,Greenwich,2010,renter,total,6045,NA
+3_towns,Greenwich,2010,renter,p1,2252,0.373
+3_towns,Greenwich,2010,renter,p2,1443,0.239
+3_towns,Greenwich,2010,renter,p3,757,0.125
+3_towns,Greenwich,2010,renter,p4_or_more,1593,0.264
+3_towns,Greenwich,2018,renter,total,7650,NA
+3_towns,Greenwich,2018,renter,p1,2535,0.331
+3_towns,Greenwich,2018,renter,p2,2033,0.266
+3_towns,Greenwich,2018,renter,p3,1338,0.175
+3_towns,Greenwich,2018,renter,p4_or_more,1744,0.228
+3_towns,Griswold,2000,renter,total,1233,NA
+3_towns,Griswold,2000,renter,p1,455,0.369
+3_towns,Griswold,2000,renter,p2,364,0.295
+3_towns,Griswold,2000,renter,p3,205,0.166
+3_towns,Griswold,2000,renter,p4_or_more,209,0.17
+3_towns,Griswold,2010,renter,total,1287,NA
+3_towns,Griswold,2010,renter,p1,765,0.594
+3_towns,Griswold,2010,renter,p2,174,0.135
+3_towns,Griswold,2010,renter,p3,217,0.169
+3_towns,Griswold,2010,renter,p4_or_more,131,0.102
+3_towns,Griswold,2018,renter,total,1195,NA
+3_towns,Griswold,2018,renter,p1,326,0.273
+3_towns,Griswold,2018,renter,p2,346,0.29
+3_towns,Griswold,2018,renter,p3,271,0.227
+3_towns,Griswold,2018,renter,p4_or_more,252,0.211
+3_towns,Groton,2000,renter,total,7658,NA
+3_towns,Groton,2000,renter,p1,2575,0.336
+3_towns,Groton,2000,renter,p2,2024,0.264
+3_towns,Groton,2000,renter,p3,1300,0.17
+3_towns,Groton,2000,renter,p4_or_more,1759,0.23
+3_towns,Groton,2010,renter,total,7684,NA
+3_towns,Groton,2010,renter,p1,2653,0.345
+3_towns,Groton,2010,renter,p2,2131,0.277
+3_towns,Groton,2010,renter,p3,1536,0.2
+3_towns,Groton,2010,renter,p4_or_more,1364,0.178
+3_towns,Groton,2018,renter,total,8089,NA
+3_towns,Groton,2018,renter,p1,3056,0.378
+3_towns,Groton,2018,renter,p2,2029,0.251
+3_towns,Groton,2018,renter,p3,1577,0.195
+3_towns,Groton,2018,renter,p4_or_more,1427,0.176
+3_towns,Guilford,2000,renter,total,1192,NA
+3_towns,Guilford,2000,renter,p1,606,0.508
+3_towns,Guilford,2000,renter,p2,300,0.252
+3_towns,Guilford,2000,renter,p3,135,0.113
+3_towns,Guilford,2000,renter,p4_or_more,151,0.127
+3_towns,Guilford,2010,renter,total,1065,NA
+3_towns,Guilford,2010,renter,p1,588,0.552
+3_towns,Guilford,2010,renter,p2,243,0.228
+3_towns,Guilford,2010,renter,p3,123,0.115
+3_towns,Guilford,2010,renter,p4_or_more,111,0.104
+3_towns,Guilford,2018,renter,total,1147,NA
+3_towns,Guilford,2018,renter,p1,466,0.406
+3_towns,Guilford,2018,renter,p2,408,0.356
+3_towns,Guilford,2018,renter,p3,139,0.121
+3_towns,Guilford,2018,renter,p4_or_more,134,0.117
+3_towns,Haddam,2000,renter,total,386,NA
+3_towns,Haddam,2000,renter,p1,166,0.43
+3_towns,Haddam,2000,renter,p2,124,0.321
+3_towns,Haddam,2000,renter,p3,47,0.122
+3_towns,Haddam,2000,renter,p4_or_more,49,0.127
+3_towns,Haddam,2010,renter,total,286,NA
+3_towns,Haddam,2010,renter,p1,57,0.199
+3_towns,Haddam,2010,renter,p2,192,0.671
+3_towns,Haddam,2010,renter,p3,37,0.129
+3_towns,Haddam,2010,renter,p4_or_more,0,0
+3_towns,Haddam,2018,renter,total,558,NA
+3_towns,Haddam,2018,renter,p1,219,0.392
+3_towns,Haddam,2018,renter,p2,151,0.271
+3_towns,Haddam,2018,renter,p3,41,0.073
+3_towns,Haddam,2018,renter,p4_or_more,147,0.263
+3_towns,Hamden,2000,renter,total,7339,NA
+3_towns,Hamden,2000,renter,p1,3397,0.463
+3_towns,Hamden,2000,renter,p2,2112,0.288
+3_towns,Hamden,2000,renter,p3,934,0.127
+3_towns,Hamden,2000,renter,p4_or_more,896,0.122
+3_towns,Hamden,2010,renter,total,7728,NA
+3_towns,Hamden,2010,renter,p1,3280,0.424
+3_towns,Hamden,2010,renter,p2,2489,0.322
+3_towns,Hamden,2010,renter,p3,971,0.126
+3_towns,Hamden,2010,renter,p4_or_more,988,0.128
+3_towns,Hamden,2018,renter,total,8247,NA
+3_towns,Hamden,2018,renter,p1,3660,0.444
+3_towns,Hamden,2018,renter,p2,2461,0.298
+3_towns,Hamden,2018,renter,p3,1219,0.148
+3_towns,Hamden,2018,renter,p4_or_more,907,0.11
+3_towns,Hampton,2000,renter,total,82,NA
+3_towns,Hampton,2000,renter,p1,43,0.524
+3_towns,Hampton,2000,renter,p2,22,0.268
+3_towns,Hampton,2000,renter,p3,11,0.134
+3_towns,Hampton,2000,renter,p4_or_more,6,0.073
+3_towns,Hampton,2010,renter,total,63,NA
+3_towns,Hampton,2010,renter,p1,28,0.444
+3_towns,Hampton,2010,renter,p2,11,0.175
+3_towns,Hampton,2010,renter,p3,8,0.127
+3_towns,Hampton,2010,renter,p4_or_more,16,0.254
+3_towns,Hampton,2018,renter,total,101,NA
+3_towns,Hampton,2018,renter,p1,34,0.337
+3_towns,Hampton,2018,renter,p2,42,0.416
+3_towns,Hampton,2018,renter,p3,11,0.109
+3_towns,Hampton,2018,renter,p4_or_more,14,0.139
+3_towns,Hartford,2000,renter,total,33922,NA
+3_towns,Hartford,2000,renter,p1,12160,0.358
+3_towns,Hartford,2000,renter,p2,7720,0.228
+3_towns,Hartford,2000,renter,p3,5635,0.166
+3_towns,Hartford,2000,renter,p4_or_more,8407,0.248
+3_towns,Hartford,2010,renter,total,34183,NA
+3_towns,Hartford,2010,renter,p1,12686,0.371
+3_towns,Hartford,2010,renter,p2,8375,0.245
+3_towns,Hartford,2010,renter,p3,5605,0.164
+3_towns,Hartford,2010,renter,p4_or_more,7517,0.22
+3_towns,Hartford,2018,renter,total,34946,NA
+3_towns,Hartford,2018,renter,p1,13538,0.387
+3_towns,Hartford,2018,renter,p2,9060,0.259
+3_towns,Hartford,2018,renter,p3,5147,0.147
+3_towns,Hartford,2018,renter,p4_or_more,7201,0.206
+3_towns,Hartland,2000,renter,total,59,NA
+3_towns,Hartland,2000,renter,p1,20,0.339
+3_towns,Hartland,2000,renter,p2,20,0.339
+3_towns,Hartland,2000,renter,p3,11,0.186
+3_towns,Hartland,2000,renter,p4_or_more,8,0.136
+3_towns,Hartland,2010,renter,total,52,NA
+3_towns,Hartland,2010,renter,p1,27,0.519
+3_towns,Hartland,2010,renter,p2,15,0.288
+3_towns,Hartland,2010,renter,p3,10,0.192
+3_towns,Hartland,2010,renter,p4_or_more,0,0
+3_towns,Hartland,2018,renter,total,48,NA
+3_towns,Hartland,2018,renter,p1,31,0.646
+3_towns,Hartland,2018,renter,p2,14,0.292
+3_towns,Hartland,2018,renter,p3,0,0
+3_towns,Hartland,2018,renter,p4_or_more,3,0.062
+3_towns,Harwinton,2000,renter,total,136,NA
+3_towns,Harwinton,2000,renter,p1,55,0.404
+3_towns,Harwinton,2000,renter,p2,40,0.294
+3_towns,Harwinton,2000,renter,p3,17,0.125
+3_towns,Harwinton,2000,renter,p4_or_more,24,0.176
+3_towns,Harwinton,2010,renter,total,69,NA
+3_towns,Harwinton,2010,renter,p1,36,0.522
+3_towns,Harwinton,2010,renter,p2,15,0.217
+3_towns,Harwinton,2010,renter,p3,0,0
+3_towns,Harwinton,2010,renter,p4_or_more,18,0.261
+3_towns,Harwinton,2018,renter,total,47,NA
+3_towns,Harwinton,2018,renter,p1,24,0.511
+3_towns,Harwinton,2018,renter,p2,23,0.489
+3_towns,Harwinton,2018,renter,p3,0,0
+3_towns,Harwinton,2018,renter,p4_or_more,0,0
+3_towns,Hebron,2000,renter,total,324,NA
+3_towns,Hebron,2000,renter,p1,123,0.38
+3_towns,Hebron,2000,renter,p2,89,0.275
+3_towns,Hebron,2000,renter,p3,54,0.167
+3_towns,Hebron,2000,renter,p4_or_more,58,0.179
+3_towns,Hebron,2010,renter,total,206,NA
+3_towns,Hebron,2010,renter,p1,73,0.354
+3_towns,Hebron,2010,renter,p2,22,0.107
+3_towns,Hebron,2010,renter,p3,54,0.262
+3_towns,Hebron,2010,renter,p4_or_more,57,0.277
+3_towns,Hebron,2018,renter,total,158,NA
+3_towns,Hebron,2018,renter,p1,65,0.411
+3_towns,Hebron,2018,renter,p2,65,0.411
+3_towns,Hebron,2018,renter,p3,7,0.044
+3_towns,Hebron,2018,renter,p4_or_more,21,0.133
+3_towns,Kent,2000,renter,total,307,NA
+3_towns,Kent,2000,renter,p1,133,0.433
+3_towns,Kent,2000,renter,p2,73,0.238
+3_towns,Kent,2000,renter,p3,50,0.163
+3_towns,Kent,2000,renter,p4_or_more,51,0.166
+3_towns,Kent,2010,renter,total,354,NA
+3_towns,Kent,2010,renter,p1,126,0.356
+3_towns,Kent,2010,renter,p2,146,0.412
+3_towns,Kent,2010,renter,p3,34,0.096
+3_towns,Kent,2010,renter,p4_or_more,48,0.136
+3_towns,Kent,2018,renter,total,253,NA
+3_towns,Kent,2018,renter,p1,92,0.364
+3_towns,Kent,2018,renter,p2,70,0.277
+3_towns,Kent,2018,renter,p3,30,0.119
+3_towns,Kent,2018,renter,p4_or_more,61,0.241
+3_towns,Killingly,2000,renter,total,2247,NA
+3_towns,Killingly,2000,renter,p1,871,0.388
+3_towns,Killingly,2000,renter,p2,629,0.28
+3_towns,Killingly,2000,renter,p3,350,0.156
+3_towns,Killingly,2000,renter,p4_or_more,397,0.177
+3_towns,Killingly,2010,renter,total,2107,NA
+3_towns,Killingly,2010,renter,p1,990,0.47
+3_towns,Killingly,2010,renter,p2,619,0.294
+3_towns,Killingly,2010,renter,p3,192,0.091
+3_towns,Killingly,2010,renter,p4_or_more,306,0.145
+3_towns,Killingly,2018,renter,total,2160,NA
+3_towns,Killingly,2018,renter,p1,830,0.384
+3_towns,Killingly,2018,renter,p2,595,0.275
+3_towns,Killingly,2018,renter,p3,382,0.177
+3_towns,Killingly,2018,renter,p4_or_more,353,0.163
+3_towns,Killingworth,2000,renter,total,97,NA
+3_towns,Killingworth,2000,renter,p1,25,0.258
+3_towns,Killingworth,2000,renter,p2,37,0.381
+3_towns,Killingworth,2000,renter,p3,15,0.155
+3_towns,Killingworth,2000,renter,p4_or_more,20,0.206
+3_towns,Killingworth,2010,renter,total,53,NA
+3_towns,Killingworth,2010,renter,p1,24,0.453
+3_towns,Killingworth,2010,renter,p2,13,0.245
+3_towns,Killingworth,2010,renter,p3,16,0.302
+3_towns,Killingworth,2010,renter,p4_or_more,0,0
+3_towns,Killingworth,2018,renter,total,164,NA
+3_towns,Killingworth,2018,renter,p1,49,0.299
+3_towns,Killingworth,2018,renter,p2,64,0.39
+3_towns,Killingworth,2018,renter,p3,0,0
+3_towns,Killingworth,2018,renter,p4_or_more,51,0.311
+3_towns,Lebanon,2000,renter,total,282,NA
+3_towns,Lebanon,2000,renter,p1,98,0.348
+3_towns,Lebanon,2000,renter,p2,79,0.28
+3_towns,Lebanon,2000,renter,p3,51,0.181
+3_towns,Lebanon,2000,renter,p4_or_more,54,0.191
+3_towns,Lebanon,2010,renter,total,363,NA
+3_towns,Lebanon,2010,renter,p1,207,0.57
+3_towns,Lebanon,2010,renter,p2,89,0.245
+3_towns,Lebanon,2010,renter,p3,17,0.047
+3_towns,Lebanon,2010,renter,p4_or_more,50,0.138
+3_towns,Lebanon,2018,renter,total,257,NA
+3_towns,Lebanon,2018,renter,p1,106,0.412
+3_towns,Lebanon,2018,renter,p2,104,0.405
+3_towns,Lebanon,2018,renter,p3,32,0.125
+3_towns,Lebanon,2018,renter,p4_or_more,15,0.058
+3_towns,Ledyard,2000,renter,total,932,NA
+3_towns,Ledyard,2000,renter,p1,239,0.256
+3_towns,Ledyard,2000,renter,p2,274,0.294
+3_towns,Ledyard,2000,renter,p3,185,0.198
+3_towns,Ledyard,2000,renter,p4_or_more,234,0.251
+3_towns,Ledyard,2010,renter,total,868,NA
+3_towns,Ledyard,2010,renter,p1,343,0.395
+3_towns,Ledyard,2010,renter,p2,215,0.248
+3_towns,Ledyard,2010,renter,p3,56,0.065
+3_towns,Ledyard,2010,renter,p4_or_more,254,0.293
+3_towns,Ledyard,2018,renter,total,1111,NA
+3_towns,Ledyard,2018,renter,p1,379,0.341
+3_towns,Ledyard,2018,renter,p2,308,0.277
+3_towns,Ledyard,2018,renter,p3,206,0.185
+3_towns,Ledyard,2018,renter,p4_or_more,218,0.196
+3_towns,Lisbon,2000,renter,total,174,NA
+3_towns,Lisbon,2000,renter,p1,59,0.339
+3_towns,Lisbon,2000,renter,p2,45,0.259
+3_towns,Lisbon,2000,renter,p3,27,0.155
+3_towns,Lisbon,2000,renter,p4_or_more,43,0.247
+3_towns,Lisbon,2010,renter,total,132,NA
+3_towns,Lisbon,2010,renter,p1,49,0.371
+3_towns,Lisbon,2010,renter,p2,41,0.311
+3_towns,Lisbon,2010,renter,p3,42,0.318
+3_towns,Lisbon,2010,renter,p4_or_more,0,0
+3_towns,Lisbon,2018,renter,total,232,NA
+3_towns,Lisbon,2018,renter,p1,85,0.366
+3_towns,Lisbon,2018,renter,p2,86,0.371
+3_towns,Lisbon,2018,renter,p3,47,0.203
+3_towns,Lisbon,2018,renter,p4_or_more,14,0.06
+3_towns,Litchfield,2000,renter,total,712,NA
+3_towns,Litchfield,2000,renter,p1,392,0.551
+3_towns,Litchfield,2000,renter,p2,171,0.24
+3_towns,Litchfield,2000,renter,p3,66,0.093
+3_towns,Litchfield,2000,renter,p4_or_more,83,0.117
+3_towns,Litchfield,2010,renter,total,717,NA
+3_towns,Litchfield,2010,renter,p1,486,0.678
+3_towns,Litchfield,2010,renter,p2,127,0.177
+3_towns,Litchfield,2010,renter,p3,46,0.064
+3_towns,Litchfield,2010,renter,p4_or_more,58,0.081
+3_towns,Litchfield,2018,renter,total,737,NA
+3_towns,Litchfield,2018,renter,p1,455,0.617
+3_towns,Litchfield,2018,renter,p2,189,0.256
+3_towns,Litchfield,2018,renter,p3,54,0.073
+3_towns,Litchfield,2018,renter,p4_or_more,39,0.053
+3_towns,Lyme,2000,renter,total,121,NA
+3_towns,Lyme,2000,renter,p1,42,0.347
+3_towns,Lyme,2000,renter,p2,38,0.314
+3_towns,Lyme,2000,renter,p3,22,0.182
+3_towns,Lyme,2000,renter,p4_or_more,19,0.157
+3_towns,Lyme,2010,renter,total,125,NA
+3_towns,Lyme,2010,renter,p1,46,0.368
+3_towns,Lyme,2010,renter,p2,19,0.152
+3_towns,Lyme,2010,renter,p3,37,0.296
+3_towns,Lyme,2010,renter,p4_or_more,23,0.184
+3_towns,Lyme,2018,renter,total,139,NA
+3_towns,Lyme,2018,renter,p1,45,0.324
+3_towns,Lyme,2018,renter,p2,49,0.353
+3_towns,Lyme,2018,renter,p3,20,0.144
+3_towns,Lyme,2018,renter,p4_or_more,25,0.18
+3_towns,Madison,2000,renter,total,769,NA
+3_towns,Madison,2000,renter,p1,389,0.506
+3_towns,Madison,2000,renter,p2,211,0.274
+3_towns,Madison,2000,renter,p3,66,0.086
+3_towns,Madison,2000,renter,p4_or_more,103,0.134
+3_towns,Madison,2010,renter,total,724,NA
+3_towns,Madison,2010,renter,p1,345,0.477
+3_towns,Madison,2010,renter,p2,171,0.236
+3_towns,Madison,2010,renter,p3,128,0.177
+3_towns,Madison,2010,renter,p4_or_more,80,0.11
+3_towns,Madison,2018,renter,total,953,NA
+3_towns,Madison,2018,renter,p1,576,0.604
+3_towns,Madison,2018,renter,p2,72,0.076
+3_towns,Madison,2018,renter,p3,162,0.17
+3_towns,Madison,2018,renter,p4_or_more,143,0.15
+3_towns,Manchester,2000,renter,total,10138,NA
+3_towns,Manchester,2000,renter,p1,4124,0.407
+3_towns,Manchester,2000,renter,p2,3135,0.309
+3_towns,Manchester,2000,renter,p3,1497,0.148
+3_towns,Manchester,2000,renter,p4_or_more,1382,0.136
+3_towns,Manchester,2010,renter,total,9643,NA
+3_towns,Manchester,2010,renter,p1,3664,0.38
+3_towns,Manchester,2010,renter,p2,2950,0.306
+3_towns,Manchester,2010,renter,p3,1452,0.151
+3_towns,Manchester,2010,renter,p4_or_more,1577,0.164
+3_towns,Manchester,2018,renter,total,10404,NA
+3_towns,Manchester,2018,renter,p1,3793,0.365
+3_towns,Manchester,2018,renter,p2,2988,0.287
+3_towns,Manchester,2018,renter,p3,2128,0.205
+3_towns,Manchester,2018,renter,p4_or_more,1495,0.144
+3_towns,Mansfield,2000,renter,total,2020,NA
+3_towns,Mansfield,2000,renter,p1,696,0.345
+3_towns,Mansfield,2000,renter,p2,601,0.298
+3_towns,Mansfield,2000,renter,p3,393,0.195
+3_towns,Mansfield,2000,renter,p4_or_more,330,0.163
+3_towns,Mansfield,2010,renter,total,1969,NA
+3_towns,Mansfield,2010,renter,p1,579,0.294
+3_towns,Mansfield,2010,renter,p2,634,0.322
+3_towns,Mansfield,2010,renter,p3,353,0.179
+3_towns,Mansfield,2010,renter,p4_or_more,403,0.205
+3_towns,Mansfield,2018,renter,total,2479,NA
+3_towns,Mansfield,2018,renter,p1,739,0.298
+3_towns,Mansfield,2018,renter,p2,894,0.361
+3_towns,Mansfield,2018,renter,p3,628,0.253
+3_towns,Mansfield,2018,renter,p4_or_more,218,0.088
+3_towns,Marlborough,2000,renter,total,194,NA
+3_towns,Marlborough,2000,renter,p1,91,0.469
+3_towns,Marlborough,2000,renter,p2,50,0.258
+3_towns,Marlborough,2000,renter,p3,22,0.113
+3_towns,Marlborough,2000,renter,p4_or_more,31,0.16
+3_towns,Marlborough,2010,renter,total,144,NA
+3_towns,Marlborough,2010,renter,p1,13,0.09
+3_towns,Marlborough,2010,renter,p2,14,0.097
+3_towns,Marlborough,2010,renter,p3,57,0.396
+3_towns,Marlborough,2010,renter,p4_or_more,60,0.417
+3_towns,Marlborough,2018,renter,total,237,NA
+3_towns,Marlborough,2018,renter,p1,110,0.464
+3_towns,Marlborough,2018,renter,p2,29,0.122
+3_towns,Marlborough,2018,renter,p3,11,0.046
+3_towns,Marlborough,2018,renter,p4_or_more,87,0.367
+3_towns,Meriden,2000,renter,total,9208,NA
+3_towns,Meriden,2000,renter,p1,3549,0.385
+3_towns,Meriden,2000,renter,p2,2358,0.256
+3_towns,Meriden,2000,renter,p3,1408,0.153
+3_towns,Meriden,2000,renter,p4_or_more,1893,0.206
+3_towns,Meriden,2010,renter,total,8636,NA
+3_towns,Meriden,2010,renter,p1,3256,0.377
+3_towns,Meriden,2010,renter,p2,2250,0.261
+3_towns,Meriden,2010,renter,p3,1607,0.186
+3_towns,Meriden,2010,renter,p4_or_more,1523,0.176
+3_towns,Meriden,2018,renter,total,10807,NA
+3_towns,Meriden,2018,renter,p1,6015,0.557
+3_towns,Meriden,2018,renter,p2,2872,0.266
+3_towns,Meriden,2018,renter,p3,928,0.086
+3_towns,Meriden,2018,renter,p4_or_more,992,0.092
+3_towns,Middlebury,2000,renter,total,263,NA
+3_towns,Middlebury,2000,renter,p1,123,0.468
+3_towns,Middlebury,2000,renter,p2,63,0.24
+3_towns,Middlebury,2000,renter,p3,30,0.114
+3_towns,Middlebury,2000,renter,p4_or_more,47,0.179
+3_towns,Middlebury,2010,renter,total,257,NA
+3_towns,Middlebury,2010,renter,p1,180,0.7
+3_towns,Middlebury,2010,renter,p2,46,0.179
+3_towns,Middlebury,2010,renter,p3,18,0.07
+3_towns,Middlebury,2010,renter,p4_or_more,13,0.051
+3_towns,Middlebury,2018,renter,total,212,NA
+3_towns,Middlebury,2018,renter,p1,99,0.467
+3_towns,Middlebury,2018,renter,p2,44,0.208
+3_towns,Middlebury,2018,renter,p3,55,0.259
+3_towns,Middlebury,2018,renter,p4_or_more,14,0.066
+3_towns,Middlefield,2000,renter,total,256,NA
+3_towns,Middlefield,2000,renter,p1,116,0.453
+3_towns,Middlefield,2000,renter,p2,72,0.281
+3_towns,Middlefield,2000,renter,p3,35,0.137
+3_towns,Middlefield,2000,renter,p4_or_more,33,0.129
+3_towns,Middlefield,2010,renter,total,224,NA
+3_towns,Middlefield,2010,renter,p1,138,0.616
+3_towns,Middlefield,2010,renter,p2,21,0.094
+3_towns,Middlefield,2010,renter,p3,55,0.246
+3_towns,Middlefield,2010,renter,p4_or_more,10,0.045
+3_towns,Middlefield,2018,renter,total,238,NA
+3_towns,Middlefield,2018,renter,p1,120,0.504
+3_towns,Middlefield,2018,renter,p2,70,0.294
+3_towns,Middlefield,2018,renter,p3,8,0.034
+3_towns,Middlefield,2018,renter,p4_or_more,40,0.168
+3_towns,Middletown,2000,renter,total,9034,NA
+3_towns,Middletown,2000,renter,p1,4248,0.47
+3_towns,Middletown,2000,renter,p2,2615,0.289
+3_towns,Middletown,2000,renter,p3,1121,0.124
+3_towns,Middletown,2000,renter,p4_or_more,1050,0.116
+3_towns,Middletown,2010,renter,total,8852,NA
+3_towns,Middletown,2010,renter,p1,3947,0.446
+3_towns,Middletown,2010,renter,p2,2856,0.323
+3_towns,Middletown,2010,renter,p3,1096,0.124
+3_towns,Middletown,2010,renter,p4_or_more,953,0.108
+3_towns,Middletown,2018,renter,total,8972,NA
+3_towns,Middletown,2018,renter,p1,4269,0.476
+3_towns,Middletown,2018,renter,p2,2515,0.28
+3_towns,Middletown,2018,renter,p3,1249,0.139
+3_towns,Middletown,2018,renter,p4_or_more,939,0.105
+3_towns,Milford,2000,renter,total,4752,NA
+3_towns,Milford,2000,renter,p1,2057,0.433
+3_towns,Milford,2000,renter,p2,1497,0.315
+3_towns,Milford,2000,renter,p3,623,0.131
+3_towns,Milford,2000,renter,p4_or_more,575,0.121
+3_towns,Milford,2010,renter,total,4892,NA
+3_towns,Milford,2010,renter,p1,2351,0.481
+3_towns,Milford,2010,renter,p2,1436,0.294
+3_towns,Milford,2010,renter,p3,500,0.102
+3_towns,Milford,2010,renter,p4_or_more,605,0.124
+3_towns,Milford,2018,renter,total,5487,NA
+3_towns,Milford,2018,renter,p1,2386,0.435
+3_towns,Milford,2018,renter,p2,1829,0.333
+3_towns,Milford,2018,renter,p3,701,0.128
+3_towns,Milford,2018,renter,p4_or_more,571,0.104
+3_towns,Monroe,2000,renter,total,427,NA
+3_towns,Monroe,2000,renter,p1,164,0.384
+3_towns,Monroe,2000,renter,p2,130,0.304
+3_towns,Monroe,2000,renter,p3,50,0.117
+3_towns,Monroe,2000,renter,p4_or_more,83,0.194
+3_towns,Monroe,2010,renter,total,525,NA
+3_towns,Monroe,2010,renter,p1,192,0.366
+3_towns,Monroe,2010,renter,p2,184,0.35
+3_towns,Monroe,2010,renter,p3,71,0.135
+3_towns,Monroe,2010,renter,p4_or_more,78,0.149
+3_towns,Monroe,2018,renter,total,561,NA
+3_towns,Monroe,2018,renter,p1,300,0.535
+3_towns,Monroe,2018,renter,p2,92,0.164
+3_towns,Monroe,2018,renter,p3,48,0.086
+3_towns,Monroe,2018,renter,p4_or_more,121,0.216
+3_towns,Montville,2000,renter,total,1453,NA
+3_towns,Montville,2000,renter,p1,516,0.355
+3_towns,Montville,2000,renter,p2,415,0.286
+3_towns,Montville,2000,renter,p3,254,0.175
+3_towns,Montville,2000,renter,p4_or_more,268,0.184
+3_towns,Montville,2010,renter,total,1494,NA
+3_towns,Montville,2010,renter,p1,599,0.401
+3_towns,Montville,2010,renter,p2,414,0.277
+3_towns,Montville,2010,renter,p3,123,0.082
+3_towns,Montville,2010,renter,p4_or_more,358,0.24
+3_towns,Montville,2018,renter,total,1137,NA
+3_towns,Montville,2018,renter,p1,321,0.282
+3_towns,Montville,2018,renter,p2,429,0.377
+3_towns,Montville,2018,renter,p3,153,0.135
+3_towns,Montville,2018,renter,p4_or_more,234,0.206
+3_towns,Morris,2000,renter,total,198,NA
+3_towns,Morris,2000,renter,p1,96,0.485
+3_towns,Morris,2000,renter,p2,63,0.318
+3_towns,Morris,2000,renter,p3,19,0.096
+3_towns,Morris,2000,renter,p4_or_more,20,0.101
+3_towns,Morris,2010,renter,total,145,NA
+3_towns,Morris,2010,renter,p1,70,0.483
+3_towns,Morris,2010,renter,p2,41,0.283
+3_towns,Morris,2010,renter,p3,0,0
+3_towns,Morris,2010,renter,p4_or_more,34,0.234
+3_towns,Morris,2018,renter,total,137,NA
+3_towns,Morris,2018,renter,p1,84,0.613
+3_towns,Morris,2018,renter,p2,21,0.153
+3_towns,Morris,2018,renter,p3,5,0.036
+3_towns,Morris,2018,renter,p4_or_more,27,0.197
+3_towns,Naugatuck,2000,renter,total,3966,NA
+3_towns,Naugatuck,2000,renter,p1,1556,0.392
+3_towns,Naugatuck,2000,renter,p2,1073,0.271
+3_towns,Naugatuck,2000,renter,p3,607,0.153
+3_towns,Naugatuck,2000,renter,p4_or_more,730,0.184
+3_towns,Naugatuck,2010,renter,total,3659,NA
+3_towns,Naugatuck,2010,renter,p1,1454,0.397
+3_towns,Naugatuck,2010,renter,p2,976,0.267
+3_towns,Naugatuck,2010,renter,p3,671,0.183
+3_towns,Naugatuck,2010,renter,p4_or_more,558,0.153
+3_towns,Naugatuck,2018,renter,total,3887,NA
+3_towns,Naugatuck,2018,renter,p1,1391,0.358
+3_towns,Naugatuck,2018,renter,p2,1380,0.355
+3_towns,Naugatuck,2018,renter,p3,551,0.142
+3_towns,Naugatuck,2018,renter,p4_or_more,565,0.145
+3_towns,New Britain,2000,renter,total,16367,NA
+3_towns,New Britain,2000,renter,p1,6261,0.383
+3_towns,New Britain,2000,renter,p2,4350,0.266
+3_towns,New Britain,2000,renter,p3,2493,0.152
+3_towns,New Britain,2000,renter,p4_or_more,3263,0.199
+3_towns,New Britain,2010,renter,total,16276,NA
+3_towns,New Britain,2010,renter,p1,6342,0.39
+3_towns,New Britain,2010,renter,p2,4368,0.268
+3_towns,New Britain,2010,renter,p3,2620,0.161
+3_towns,New Britain,2010,renter,p4_or_more,2946,0.181
+3_towns,New Britain,2018,renter,total,16718,NA
+3_towns,New Britain,2018,renter,p1,6446,0.386
+3_towns,New Britain,2018,renter,p2,4183,0.25
+3_towns,New Britain,2018,renter,p3,2948,0.176
+3_towns,New Britain,2018,renter,p4_or_more,3141,0.188
+3_towns,New Canaan,2000,renter,total,1172,NA
+3_towns,New Canaan,2000,renter,p1,459,0.392
+3_towns,New Canaan,2000,renter,p2,351,0.299
+3_towns,New Canaan,2000,renter,p3,149,0.127
+3_towns,New Canaan,2000,renter,p4_or_more,213,0.182
+3_towns,New Canaan,2010,renter,total,1151,NA
+3_towns,New Canaan,2010,renter,p1,415,0.361
+3_towns,New Canaan,2010,renter,p2,264,0.229
+3_towns,New Canaan,2010,renter,p3,287,0.249
+3_towns,New Canaan,2010,renter,p4_or_more,185,0.161
+3_towns,New Canaan,2018,renter,total,1532,NA
+3_towns,New Canaan,2018,renter,p1,615,0.401
+3_towns,New Canaan,2018,renter,p2,396,0.258
+3_towns,New Canaan,2018,renter,p3,275,0.18
+3_towns,New Canaan,2018,renter,p4_or_more,246,0.161
+3_towns,New Fairfield,2000,renter,total,304,NA
+3_towns,New Fairfield,2000,renter,p1,87,0.286
+3_towns,New Fairfield,2000,renter,p2,90,0.296
+3_towns,New Fairfield,2000,renter,p3,46,0.151
+3_towns,New Fairfield,2000,renter,p4_or_more,81,0.266
+3_towns,New Fairfield,2010,renter,total,258,NA
+3_towns,New Fairfield,2010,renter,p1,76,0.295
+3_towns,New Fairfield,2010,renter,p2,117,0.453
+3_towns,New Fairfield,2010,renter,p3,55,0.213
+3_towns,New Fairfield,2010,renter,p4_or_more,10,0.039
+3_towns,New Fairfield,2018,renter,total,292,NA
+3_towns,New Fairfield,2018,renter,p1,53,0.182
+3_towns,New Fairfield,2018,renter,p2,85,0.291
+3_towns,New Fairfield,2018,renter,p3,57,0.195
+3_towns,New Fairfield,2018,renter,p4_or_more,97,0.332
+3_towns,New Hartford,2000,renter,total,303,NA
+3_towns,New Hartford,2000,renter,p1,110,0.363
+3_towns,New Hartford,2000,renter,p2,100,0.33
+3_towns,New Hartford,2000,renter,p3,54,0.178
+3_towns,New Hartford,2000,renter,p4_or_more,39,0.129
+3_towns,New Hartford,2010,renter,total,236,NA
+3_towns,New Hartford,2010,renter,p1,61,0.258
+3_towns,New Hartford,2010,renter,p2,37,0.157
+3_towns,New Hartford,2010,renter,p3,90,0.381
+3_towns,New Hartford,2010,renter,p4_or_more,48,0.203
+3_towns,New Hartford,2018,renter,total,304,NA
+3_towns,New Hartford,2018,renter,p1,150,0.493
+3_towns,New Hartford,2018,renter,p2,100,0.329
+3_towns,New Hartford,2018,renter,p3,44,0.145
+3_towns,New Hartford,2018,renter,p4_or_more,10,0.033
+3_towns,New Haven,2000,renter,total,33167,NA
+3_towns,New Haven,2000,renter,p1,13419,0.405
+3_towns,New Haven,2000,renter,p2,8278,0.25
+3_towns,New Haven,2000,renter,p3,4898,0.148
+3_towns,New Haven,2000,renter,p4_or_more,6572,0.198
+3_towns,New Haven,2010,renter,total,33119,NA
+3_towns,New Haven,2010,renter,p1,13454,0.406
+3_towns,New Haven,2010,renter,p2,9156,0.276
+3_towns,New Haven,2010,renter,p3,4241,0.128
+3_towns,New Haven,2010,renter,p4_or_more,6268,0.189
+3_towns,New Haven,2018,renter,total,36043,NA
+3_towns,New Haven,2018,renter,p1,16125,0.447
+3_towns,New Haven,2018,renter,p2,8955,0.248
+3_towns,New Haven,2018,renter,p3,4636,0.129
+3_towns,New Haven,2018,renter,p4_or_more,6327,0.176
+3_towns,New London,2000,renter,total,6320,NA
+3_towns,New London,2000,renter,p1,2715,0.43
+3_towns,New London,2000,renter,p2,1645,0.26
+3_towns,New London,2000,renter,p3,918,0.145
+3_towns,New London,2000,renter,p4_or_more,1042,0.165
+3_towns,New London,2010,renter,total,6339,NA
+3_towns,New London,2010,renter,p1,2718,0.429
+3_towns,New London,2010,renter,p2,1608,0.254
+3_towns,New London,2010,renter,p3,907,0.143
+3_towns,New London,2010,renter,p4_or_more,1106,0.174
+3_towns,New London,2018,renter,total,7143,NA
+3_towns,New London,2018,renter,p1,3357,0.47
+3_towns,New London,2018,renter,p2,1698,0.238
+3_towns,New London,2018,renter,p3,902,0.126
+3_towns,New London,2018,renter,p4_or_more,1186,0.166
+3_towns,New Milford,2000,renter,total,2247,NA
+3_towns,New Milford,2000,renter,p1,873,0.389
+3_towns,New Milford,2000,renter,p2,654,0.291
+3_towns,New Milford,2000,renter,p3,336,0.15
+3_towns,New Milford,2000,renter,p4_or_more,384,0.171
+3_towns,New Milford,2010,renter,total,1839,NA
+3_towns,New Milford,2010,renter,p1,848,0.461
+3_towns,New Milford,2010,renter,p2,537,0.292
+3_towns,New Milford,2010,renter,p3,266,0.145
+3_towns,New Milford,2010,renter,p4_or_more,188,0.102
+3_towns,New Milford,2018,renter,total,2199,NA
+3_towns,New Milford,2018,renter,p1,914,0.416
+3_towns,New Milford,2018,renter,p2,740,0.337
+3_towns,New Milford,2018,renter,p3,288,0.131
+3_towns,New Milford,2018,renter,p4_or_more,257,0.117
+3_towns,Newington,2000,renter,total,2326,NA
+3_towns,Newington,2000,renter,p1,952,0.409
+3_towns,Newington,2000,renter,p2,747,0.321
+3_towns,Newington,2000,renter,p3,339,0.146
+3_towns,Newington,2000,renter,p4_or_more,288,0.124
+3_towns,Newington,2010,renter,total,2044,NA
+3_towns,Newington,2010,renter,p1,824,0.403
+3_towns,Newington,2010,renter,p2,579,0.283
+3_towns,Newington,2010,renter,p3,293,0.143
+3_towns,Newington,2010,renter,p4_or_more,348,0.17
+3_towns,Newington,2018,renter,total,2808,NA
+3_towns,Newington,2018,renter,p1,1398,0.498
+3_towns,Newington,2018,renter,p2,583,0.208
+3_towns,Newington,2018,renter,p3,476,0.17
+3_towns,Newington,2018,renter,p4_or_more,351,0.125
+3_towns,Newtown,2000,renter,total,671,NA
+3_towns,Newtown,2000,renter,p1,299,0.446
+3_towns,Newtown,2000,renter,p2,165,0.246
+3_towns,Newtown,2000,renter,p3,96,0.143
+3_towns,Newtown,2000,renter,p4_or_more,111,0.165
+3_towns,Newtown,2010,renter,total,800,NA
+3_towns,Newtown,2010,renter,p1,397,0.496
+3_towns,Newtown,2010,renter,p2,141,0.176
+3_towns,Newtown,2010,renter,p3,133,0.166
+3_towns,Newtown,2010,renter,p4_or_more,129,0.161
+3_towns,Newtown,2018,renter,total,1191,NA
+3_towns,Newtown,2018,renter,p1,538,0.452
+3_towns,Newtown,2018,renter,p2,387,0.325
+3_towns,Newtown,2018,renter,p3,110,0.092
+3_towns,Newtown,2018,renter,p4_or_more,156,0.131
+3_towns,Norfolk,2000,renter,total,176,NA
+3_towns,Norfolk,2000,renter,p1,72,0.409
+3_towns,Norfolk,2000,renter,p2,54,0.307
+3_towns,Norfolk,2000,renter,p3,20,0.114
+3_towns,Norfolk,2000,renter,p4_or_more,30,0.17
+3_towns,Norfolk,2010,renter,total,134,NA
+3_towns,Norfolk,2010,renter,p1,89,0.664
+3_towns,Norfolk,2010,renter,p2,3,0.022
+3_towns,Norfolk,2010,renter,p3,26,0.194
+3_towns,Norfolk,2010,renter,p4_or_more,16,0.119
+3_towns,Norfolk,2018,renter,total,137,NA
+3_towns,Norfolk,2018,renter,p1,108,0.788
+3_towns,Norfolk,2018,renter,p2,13,0.095
+3_towns,Norfolk,2018,renter,p3,7,0.051
+3_towns,Norfolk,2018,renter,p4_or_more,9,0.066
+3_towns,North Branford,2000,renter,total,810,NA
+3_towns,North Branford,2000,renter,p1,342,0.422
+3_towns,North Branford,2000,renter,p2,253,0.312
+3_towns,North Branford,2000,renter,p3,103,0.127
+3_towns,North Branford,2000,renter,p4_or_more,112,0.138
+3_towns,North Branford,2010,renter,total,777,NA
+3_towns,North Branford,2010,renter,p1,369,0.475
+3_towns,North Branford,2010,renter,p2,308,0.396
+3_towns,North Branford,2010,renter,p3,34,0.044
+3_towns,North Branford,2010,renter,p4_or_more,66,0.085
+3_towns,North Branford,2018,renter,total,724,NA
+3_towns,North Branford,2018,renter,p1,365,0.504
+3_towns,North Branford,2018,renter,p2,130,0.18
+3_towns,North Branford,2018,renter,p3,185,0.256
+3_towns,North Branford,2018,renter,p4_or_more,44,0.061
+3_towns,North Canaan,2000,renter,total,442,NA
+3_towns,North Canaan,2000,renter,p1,195,0.441
+3_towns,North Canaan,2000,renter,p2,127,0.287
+3_towns,North Canaan,2000,renter,p3,65,0.147
+3_towns,North Canaan,2000,renter,p4_or_more,55,0.124
+3_towns,North Canaan,2010,renter,total,443,NA
+3_towns,North Canaan,2010,renter,p1,125,0.282
+3_towns,North Canaan,2010,renter,p2,94,0.212
+3_towns,North Canaan,2010,renter,p3,134,0.302
+3_towns,North Canaan,2010,renter,p4_or_more,90,0.203
+3_towns,North Canaan,2018,renter,total,470,NA
+3_towns,North Canaan,2018,renter,p1,287,0.611
+3_towns,North Canaan,2018,renter,p2,86,0.183
+3_towns,North Canaan,2018,renter,p3,53,0.113
+3_towns,North Canaan,2018,renter,p4_or_more,44,0.094
+3_towns,North Haven,2000,renter,total,1157,NA
+3_towns,North Haven,2000,renter,p1,551,0.476
+3_towns,North Haven,2000,renter,p2,298,0.258
+3_towns,North Haven,2000,renter,p3,123,0.106
+3_towns,North Haven,2000,renter,p4_or_more,185,0.16
+3_towns,North Haven,2010,renter,total,1250,NA
+3_towns,North Haven,2010,renter,p1,617,0.494
+3_towns,North Haven,2010,renter,p2,303,0.242
+3_towns,North Haven,2010,renter,p3,214,0.171
+3_towns,North Haven,2010,renter,p4_or_more,116,0.093
+3_towns,North Haven,2018,renter,total,1460,NA
+3_towns,North Haven,2018,renter,p1,617,0.423
+3_towns,North Haven,2018,renter,p2,547,0.375
+3_towns,North Haven,2018,renter,p3,127,0.087
+3_towns,North Haven,2018,renter,p4_or_more,169,0.116
+3_towns,North Stonington,2000,renter,total,209,NA
+3_towns,North Stonington,2000,renter,p1,59,0.282
+3_towns,North Stonington,2000,renter,p2,61,0.292
+3_towns,North Stonington,2000,renter,p3,37,0.177
+3_towns,North Stonington,2000,renter,p4_or_more,52,0.249
+3_towns,North Stonington,2010,renter,total,123,NA
+3_towns,North Stonington,2010,renter,p1,37,0.301
+3_towns,North Stonington,2010,renter,p2,86,0.699
+3_towns,North Stonington,2010,renter,p3,0,0
+3_towns,North Stonington,2010,renter,p4_or_more,0,0
+3_towns,North Stonington,2018,renter,total,299,NA
+3_towns,North Stonington,2018,renter,p1,131,0.438
+3_towns,North Stonington,2018,renter,p2,100,0.334
+3_towns,North Stonington,2018,renter,p3,18,0.06
+3_towns,North Stonington,2018,renter,p4_or_more,50,0.167
+3_towns,Norwalk,2000,renter,total,12431,NA
+3_towns,Norwalk,2000,renter,p1,4588,0.369
+3_towns,Norwalk,2000,renter,p2,3559,0.286
+3_towns,Norwalk,2000,renter,p3,1800,0.145
+3_towns,Norwalk,2000,renter,p4_or_more,2484,0.2
+3_towns,Norwalk,2010,renter,total,12032,NA
+3_towns,Norwalk,2010,renter,p1,5667,0.471
+3_towns,Norwalk,2010,renter,p2,3046,0.253
+3_towns,Norwalk,2010,renter,p3,1514,0.126
+3_towns,Norwalk,2010,renter,p4_or_more,1805,0.15
+3_towns,Norwalk,2018,renter,total,13910,NA
+3_towns,Norwalk,2018,renter,p1,5042,0.362
+3_towns,Norwalk,2018,renter,p2,3625,0.261
+3_towns,Norwalk,2018,renter,p3,2103,0.151
+3_towns,Norwalk,2018,renter,p4_or_more,3140,0.226
+3_towns,Norwich,2000,renter,total,7167,NA
+3_towns,Norwich,2000,renter,p1,2953,0.412
+3_towns,Norwich,2000,renter,p2,2007,0.28
+3_towns,Norwich,2000,renter,p3,1059,0.148
+3_towns,Norwich,2000,renter,p4_or_more,1148,0.16
+3_towns,Norwich,2010,renter,total,6931,NA
+3_towns,Norwich,2010,renter,p1,2598,0.375
+3_towns,Norwich,2010,renter,p2,2000,0.289
+3_towns,Norwich,2010,renter,p3,1085,0.157
+3_towns,Norwich,2010,renter,p4_or_more,1248,0.18
+3_towns,Norwich,2018,renter,total,7995,NA
+3_towns,Norwich,2018,renter,p1,3248,0.406
+3_towns,Norwich,2018,renter,p2,1902,0.238
+3_towns,Norwich,2018,renter,p3,1646,0.206
+3_towns,Norwich,2018,renter,p4_or_more,1199,0.15
+3_towns,Old Lyme,2000,renter,total,466,NA
+3_towns,Old Lyme,2000,renter,p1,205,0.44
+3_towns,Old Lyme,2000,renter,p2,142,0.305
+3_towns,Old Lyme,2000,renter,p3,56,0.12
+3_towns,Old Lyme,2000,renter,p4_or_more,63,0.135
+3_towns,Old Lyme,2010,renter,total,526,NA
+3_towns,Old Lyme,2010,renter,p1,292,0.555
+3_towns,Old Lyme,2010,renter,p2,82,0.156
+3_towns,Old Lyme,2010,renter,p3,82,0.156
+3_towns,Old Lyme,2010,renter,p4_or_more,70,0.133
+3_towns,Old Lyme,2018,renter,total,608,NA
+3_towns,Old Lyme,2018,renter,p1,329,0.541
+3_towns,Old Lyme,2018,renter,p2,182,0.299
+3_towns,Old Lyme,2018,renter,p3,48,0.079
+3_towns,Old Lyme,2018,renter,p4_or_more,49,0.081
+3_towns,Old Saybrook,2000,renter,total,689,NA
+3_towns,Old Saybrook,2000,renter,p1,263,0.382
+3_towns,Old Saybrook,2000,renter,p2,189,0.274
+3_towns,Old Saybrook,2000,renter,p3,102,0.148
+3_towns,Old Saybrook,2000,renter,p4_or_more,135,0.196
+3_towns,Old Saybrook,2010,renter,total,813,NA
+3_towns,Old Saybrook,2010,renter,p1,440,0.541
+3_towns,Old Saybrook,2010,renter,p2,153,0.188
+3_towns,Old Saybrook,2010,renter,p3,80,0.098
+3_towns,Old Saybrook,2010,renter,p4_or_more,140,0.172
+3_towns,Old Saybrook,2018,renter,total,884,NA
+3_towns,Old Saybrook,2018,renter,p1,281,0.318
+3_towns,Old Saybrook,2018,renter,p2,263,0.298
+3_towns,Old Saybrook,2018,renter,p3,206,0.233
+3_towns,Old Saybrook,2018,renter,p4_or_more,134,0.152
+3_towns,Orange,2000,renter,total,338,NA
+3_towns,Orange,2000,renter,p1,139,0.411
+3_towns,Orange,2000,renter,p2,99,0.293
+3_towns,Orange,2000,renter,p3,53,0.157
+3_towns,Orange,2000,renter,p4_or_more,47,0.139
+3_towns,Orange,2010,renter,total,504,NA
+3_towns,Orange,2010,renter,p1,242,0.48
+3_towns,Orange,2010,renter,p2,202,0.401
+3_towns,Orange,2010,renter,p3,18,0.036
+3_towns,Orange,2010,renter,p4_or_more,42,0.083
+3_towns,Orange,2018,renter,total,578,NA
+3_towns,Orange,2018,renter,p1,283,0.49
+3_towns,Orange,2018,renter,p2,169,0.292
+3_towns,Orange,2018,renter,p3,26,0.045
+3_towns,Orange,2018,renter,p4_or_more,100,0.173
+3_towns,Oxford,2000,renter,total,300,NA
+3_towns,Oxford,2000,renter,p1,109,0.363
+3_towns,Oxford,2000,renter,p2,80,0.267
+3_towns,Oxford,2000,renter,p3,46,0.153
+3_towns,Oxford,2000,renter,p4_or_more,65,0.217
+3_towns,Oxford,2010,renter,total,197,NA
+3_towns,Oxford,2010,renter,p1,69,0.35
+3_towns,Oxford,2010,renter,p2,73,0.371
+3_towns,Oxford,2010,renter,p3,44,0.223
+3_towns,Oxford,2010,renter,p4_or_more,11,0.056
+3_towns,Oxford,2018,renter,total,348,NA
+3_towns,Oxford,2018,renter,p1,140,0.402
+3_towns,Oxford,2018,renter,p2,63,0.181
+3_towns,Oxford,2018,renter,p3,75,0.216
+3_towns,Oxford,2018,renter,p4_or_more,70,0.201
+3_towns,Plainfield,2000,renter,total,1708,NA
+3_towns,Plainfield,2000,renter,p1,579,0.339
+3_towns,Plainfield,2000,renter,p2,480,0.281
+3_towns,Plainfield,2000,renter,p3,312,0.183
+3_towns,Plainfield,2000,renter,p4_or_more,337,0.197
+3_towns,Plainfield,2010,renter,total,1345,NA
+3_towns,Plainfield,2010,renter,p1,541,0.402
+3_towns,Plainfield,2010,renter,p2,267,0.199
+3_towns,Plainfield,2010,renter,p3,262,0.195
+3_towns,Plainfield,2010,renter,p4_or_more,275,0.204
+3_towns,Plainfield,2018,renter,total,1748,NA
+3_towns,Plainfield,2018,renter,p1,724,0.414
+3_towns,Plainfield,2018,renter,p2,322,0.184
+3_towns,Plainfield,2018,renter,p3,170,0.097
+3_towns,Plainfield,2018,renter,p4_or_more,532,0.304
+3_towns,Plainville,2000,renter,total,2253,NA
+3_towns,Plainville,2000,renter,p1,1149,0.51
+3_towns,Plainville,2000,renter,p2,595,0.264
+3_towns,Plainville,2000,renter,p3,273,0.121
+3_towns,Plainville,2000,renter,p4_or_more,236,0.105
+3_towns,Plainville,2010,renter,total,1897,NA
+3_towns,Plainville,2010,renter,p1,1042,0.549
+3_towns,Plainville,2010,renter,p2,402,0.212
+3_towns,Plainville,2010,renter,p3,299,0.158
+3_towns,Plainville,2010,renter,p4_or_more,154,0.081
+3_towns,Plainville,2018,renter,total,2269,NA
+3_towns,Plainville,2018,renter,p1,1312,0.578
+3_towns,Plainville,2018,renter,p2,511,0.225
+3_towns,Plainville,2018,renter,p3,215,0.095
+3_towns,Plainville,2018,renter,p4_or_more,231,0.102
+3_towns,Plymouth,2000,renter,total,956,NA
+3_towns,Plymouth,2000,renter,p1,421,0.44
+3_towns,Plymouth,2000,renter,p2,270,0.282
+3_towns,Plymouth,2000,renter,p3,137,0.143
+3_towns,Plymouth,2000,renter,p4_or_more,128,0.134
+3_towns,Plymouth,2010,renter,total,529,NA
+3_towns,Plymouth,2010,renter,p1,199,0.376
+3_towns,Plymouth,2010,renter,p2,175,0.331
+3_towns,Plymouth,2010,renter,p3,54,0.102
+3_towns,Plymouth,2010,renter,p4_or_more,101,0.191
+3_towns,Plymouth,2018,renter,total,984,NA
+3_towns,Plymouth,2018,renter,p1,488,0.496
+3_towns,Plymouth,2018,renter,p2,266,0.27
+3_towns,Plymouth,2018,renter,p3,72,0.073
+3_towns,Plymouth,2018,renter,p4_or_more,158,0.161
+3_towns,Pomfret,2000,renter,total,392,NA
+3_towns,Pomfret,2000,renter,p1,158,0.403
+3_towns,Pomfret,2000,renter,p2,111,0.283
+3_towns,Pomfret,2000,renter,p3,61,0.156
+3_towns,Pomfret,2000,renter,p4_or_more,62,0.158
+3_towns,Pomfret,2010,renter,total,346,NA
+3_towns,Pomfret,2010,renter,p1,169,0.488
+3_towns,Pomfret,2010,renter,p2,84,0.243
+3_towns,Pomfret,2010,renter,p3,14,0.04
+3_towns,Pomfret,2010,renter,p4_or_more,79,0.228
+3_towns,Pomfret,2018,renter,total,386,NA
+3_towns,Pomfret,2018,renter,p1,256,0.663
+3_towns,Pomfret,2018,renter,p2,95,0.246
+3_towns,Pomfret,2018,renter,p3,35,0.091
+3_towns,Pomfret,2018,renter,p4_or_more,0,0
+3_towns,Portland,2000,renter,total,755,NA
+3_towns,Portland,2000,renter,p1,332,0.44
+3_towns,Portland,2000,renter,p2,209,0.277
+3_towns,Portland,2000,renter,p3,116,0.154
+3_towns,Portland,2000,renter,p4_or_more,98,0.13
+3_towns,Portland,2010,renter,total,649,NA
+3_towns,Portland,2010,renter,p1,256,0.394
+3_towns,Portland,2010,renter,p2,201,0.31
+3_towns,Portland,2010,renter,p3,67,0.103
+3_towns,Portland,2010,renter,p4_or_more,125,0.193
+3_towns,Portland,2018,renter,total,632,NA
+3_towns,Portland,2018,renter,p1,286,0.453
+3_towns,Portland,2018,renter,p2,240,0.38
+3_towns,Portland,2018,renter,p3,54,0.085
+3_towns,Portland,2018,renter,p4_or_more,52,0.082
+3_towns,Preston,2000,renter,total,317,NA
+3_towns,Preston,2000,renter,p1,127,0.401
+3_towns,Preston,2000,renter,p2,89,0.281
+3_towns,Preston,2000,renter,p3,47,0.148
+3_towns,Preston,2000,renter,p4_or_more,54,0.17
+3_towns,Preston,2010,renter,total,190,NA
+3_towns,Preston,2010,renter,p1,37,0.195
+3_towns,Preston,2010,renter,p2,74,0.389
+3_towns,Preston,2010,renter,p3,19,0.1
+3_towns,Preston,2010,renter,p4_or_more,60,0.316
+3_towns,Preston,2018,renter,total,225,NA
+3_towns,Preston,2018,renter,p1,152,0.676
+3_towns,Preston,2018,renter,p2,35,0.156
+3_towns,Preston,2018,renter,p3,22,0.098
+3_towns,Preston,2018,renter,p4_or_more,16,0.071
+3_towns,Prospect,2000,renter,total,223,NA
+3_towns,Prospect,2000,renter,p1,83,0.372
+3_towns,Prospect,2000,renter,p2,66,0.296
+3_towns,Prospect,2000,renter,p3,33,0.148
+3_towns,Prospect,2000,renter,p4_or_more,41,0.184
+3_towns,Prospect,2010,renter,total,239,NA
+3_towns,Prospect,2010,renter,p1,130,0.544
+3_towns,Prospect,2010,renter,p2,60,0.251
+3_towns,Prospect,2010,renter,p3,0,0
+3_towns,Prospect,2010,renter,p4_or_more,49,0.205
+3_towns,Prospect,2018,renter,total,437,NA
+3_towns,Prospect,2018,renter,p1,245,0.561
+3_towns,Prospect,2018,renter,p2,87,0.199
+3_towns,Prospect,2018,renter,p3,66,0.151
+3_towns,Prospect,2018,renter,p4_or_more,39,0.089
+3_towns,Putnam,2000,renter,total,1622,NA
+3_towns,Putnam,2000,renter,p1,706,0.435
+3_towns,Putnam,2000,renter,p2,443,0.273
+3_towns,Putnam,2000,renter,p3,219,0.135
+3_towns,Putnam,2000,renter,p4_or_more,254,0.157
+3_towns,Putnam,2010,renter,total,1780,NA
+3_towns,Putnam,2010,renter,p1,733,0.412
+3_towns,Putnam,2010,renter,p2,600,0.337
+3_towns,Putnam,2010,renter,p3,144,0.081
+3_towns,Putnam,2010,renter,p4_or_more,303,0.17
+3_towns,Putnam,2018,renter,total,1572,NA
+3_towns,Putnam,2018,renter,p1,746,0.475
+3_towns,Putnam,2018,renter,p2,427,0.272
+3_towns,Putnam,2018,renter,p3,164,0.104
+3_towns,Putnam,2018,renter,p4_or_more,235,0.149
+3_towns,Redding,2000,renter,total,289,NA
+3_towns,Redding,2000,renter,p1,101,0.349
+3_towns,Redding,2000,renter,p2,88,0.304
+3_towns,Redding,2000,renter,p3,37,0.128
+3_towns,Redding,2000,renter,p4_or_more,63,0.218
+3_towns,Redding,2010,renter,total,510,NA
+3_towns,Redding,2010,renter,p1,300,0.588
+3_towns,Redding,2010,renter,p2,134,0.263
+3_towns,Redding,2010,renter,p3,18,0.035
+3_towns,Redding,2010,renter,p4_or_more,58,0.114
+3_towns,Redding,2018,renter,total,721,NA
+3_towns,Redding,2018,renter,p1,364,0.505
+3_towns,Redding,2018,renter,p2,170,0.236
+3_towns,Redding,2018,renter,p3,51,0.071
+3_towns,Redding,2018,renter,p4_or_more,136,0.189
+3_towns,Ridgefield,2000,renter,total,1232,NA
+3_towns,Ridgefield,2000,renter,p1,587,0.476
+3_towns,Ridgefield,2000,renter,p2,341,0.277
+3_towns,Ridgefield,2000,renter,p3,142,0.115
+3_towns,Ridgefield,2000,renter,p4_or_more,162,0.131
+3_towns,Ridgefield,2010,renter,total,1252,NA
+3_towns,Ridgefield,2010,renter,p1,572,0.457
+3_towns,Ridgefield,2010,renter,p2,334,0.267
+3_towns,Ridgefield,2010,renter,p3,165,0.132
+3_towns,Ridgefield,2010,renter,p4_or_more,181,0.145
+3_towns,Ridgefield,2018,renter,total,1389,NA
+3_towns,Ridgefield,2018,renter,p1,597,0.43
+3_towns,Ridgefield,2018,renter,p2,436,0.314
+3_towns,Ridgefield,2018,renter,p3,167,0.12
+3_towns,Ridgefield,2018,renter,p4_or_more,189,0.136
+3_towns,Rocky Hill,2000,renter,total,2606,NA
+3_towns,Rocky Hill,2000,renter,p1,1193,0.458
+3_towns,Rocky Hill,2000,renter,p2,928,0.356
+3_towns,Rocky Hill,2000,renter,p3,290,0.111
+3_towns,Rocky Hill,2000,renter,p4_or_more,195,0.075
+3_towns,Rocky Hill,2010,renter,total,2823,NA
+3_towns,Rocky Hill,2010,renter,p1,1433,0.508
+3_towns,Rocky Hill,2010,renter,p2,601,0.213
+3_towns,Rocky Hill,2010,renter,p3,449,0.159
+3_towns,Rocky Hill,2010,renter,p4_or_more,340,0.12
+3_towns,Rocky Hill,2018,renter,total,3062,NA
+3_towns,Rocky Hill,2018,renter,p1,1428,0.466
+3_towns,Rocky Hill,2018,renter,p2,677,0.221
+3_towns,Rocky Hill,2018,renter,p3,533,0.174
+3_towns,Rocky Hill,2018,renter,p4_or_more,424,0.138
+3_towns,Roxbury,2000,renter,total,107,NA
+3_towns,Roxbury,2000,renter,p1,35,0.327
+3_towns,Roxbury,2000,renter,p2,33,0.308
+3_towns,Roxbury,2000,renter,p3,13,0.121
+3_towns,Roxbury,2000,renter,p4_or_more,26,0.243
+3_towns,Roxbury,2010,renter,total,115,NA
+3_towns,Roxbury,2010,renter,p1,84,0.73
+3_towns,Roxbury,2010,renter,p2,19,0.165
+3_towns,Roxbury,2010,renter,p3,7,0.061
+3_towns,Roxbury,2010,renter,p4_or_more,5,0.043
+3_towns,Roxbury,2018,renter,total,151,NA
+3_towns,Roxbury,2018,renter,p1,77,0.51
+3_towns,Roxbury,2018,renter,p2,37,0.245
+3_towns,Roxbury,2018,renter,p3,16,0.106
+3_towns,Roxbury,2018,renter,p4_or_more,21,0.139
+3_towns,Salem,2000,renter,total,194,NA
+3_towns,Salem,2000,renter,p1,63,0.325
+3_towns,Salem,2000,renter,p2,72,0.371
+3_towns,Salem,2000,renter,p3,29,0.149
+3_towns,Salem,2000,renter,p4_or_more,30,0.155
+3_towns,Salem,2010,renter,total,126,NA
+3_towns,Salem,2010,renter,p1,76,0.603
+3_towns,Salem,2010,renter,p2,40,0.317
+3_towns,Salem,2010,renter,p3,0,0
+3_towns,Salem,2010,renter,p4_or_more,10,0.079
+3_towns,Salem,2018,renter,total,121,NA
+3_towns,Salem,2018,renter,p1,28,0.231
+3_towns,Salem,2018,renter,p2,77,0.636
+3_towns,Salem,2018,renter,p3,16,0.132
+3_towns,Salem,2018,renter,p4_or_more,0,0
+3_towns,Salisbury,2000,renter,total,533,NA
+3_towns,Salisbury,2000,renter,p1,217,0.407
+3_towns,Salisbury,2000,renter,p2,179,0.336
+3_towns,Salisbury,2000,renter,p3,71,0.133
+3_towns,Salisbury,2000,renter,p4_or_more,66,0.124
+3_towns,Salisbury,2010,renter,total,428,NA
+3_towns,Salisbury,2010,renter,p1,154,0.36
+3_towns,Salisbury,2010,renter,p2,151,0.353
+3_towns,Salisbury,2010,renter,p3,50,0.117
+3_towns,Salisbury,2010,renter,p4_or_more,73,0.171
+3_towns,Salisbury,2018,renter,total,467,NA
+3_towns,Salisbury,2018,renter,p1,275,0.589
+3_towns,Salisbury,2018,renter,p2,67,0.143
+3_towns,Salisbury,2018,renter,p3,31,0.066
+3_towns,Salisbury,2018,renter,p4_or_more,94,0.201
+3_towns,Scotland,2000,renter,total,70,NA
+3_towns,Scotland,2000,renter,p1,24,0.343
+3_towns,Scotland,2000,renter,p2,21,0.3
+3_towns,Scotland,2000,renter,p3,13,0.186
+3_towns,Scotland,2000,renter,p4_or_more,12,0.171
+3_towns,Scotland,2010,renter,total,61,NA
+3_towns,Scotland,2010,renter,p1,13,0.213
+3_towns,Scotland,2010,renter,p2,35,0.574
+3_towns,Scotland,2010,renter,p3,2,0.033
+3_towns,Scotland,2010,renter,p4_or_more,11,0.18
+3_towns,Scotland,2018,renter,total,53,NA
+3_towns,Scotland,2018,renter,p1,16,0.302
+3_towns,Scotland,2018,renter,p2,29,0.547
+3_towns,Scotland,2018,renter,p3,0,0
+3_towns,Scotland,2018,renter,p4_or_more,8,0.151
+3_towns,Seymour,2000,renter,total,1772,NA
+3_towns,Seymour,2000,renter,p1,783,0.442
+3_towns,Seymour,2000,renter,p2,514,0.29
+3_towns,Seymour,2000,renter,p3,236,0.133
+3_towns,Seymour,2000,renter,p4_or_more,239,0.135
+3_towns,Seymour,2010,renter,total,1538,NA
+3_towns,Seymour,2010,renter,p1,685,0.445
+3_towns,Seymour,2010,renter,p2,601,0.391
+3_towns,Seymour,2010,renter,p3,111,0.072
+3_towns,Seymour,2010,renter,p4_or_more,141,0.092
+3_towns,Seymour,2018,renter,total,1745,NA
+3_towns,Seymour,2018,renter,p1,990,0.567
+3_towns,Seymour,2018,renter,p2,414,0.237
+3_towns,Seymour,2018,renter,p3,88,0.05
+3_towns,Seymour,2018,renter,p4_or_more,253,0.145
+3_towns,Sharon,2000,renter,total,289,NA
+3_towns,Sharon,2000,renter,p1,109,0.377
+3_towns,Sharon,2000,renter,p2,93,0.322
+3_towns,Sharon,2000,renter,p3,42,0.145
+3_towns,Sharon,2000,renter,p4_or_more,45,0.156
+3_towns,Sharon,2010,renter,total,285,NA
+3_towns,Sharon,2010,renter,p1,121,0.425
+3_towns,Sharon,2010,renter,p2,64,0.225
+3_towns,Sharon,2010,renter,p3,33,0.116
+3_towns,Sharon,2010,renter,p4_or_more,67,0.235
+3_towns,Sharon,2018,renter,total,317,NA
+3_towns,Sharon,2018,renter,p1,101,0.319
+3_towns,Sharon,2018,renter,p2,160,0.505
+3_towns,Sharon,2018,renter,p3,0,0
+3_towns,Sharon,2018,renter,p4_or_more,56,0.177
+3_towns,Shelton,2000,renter,total,2586,NA
+3_towns,Shelton,2000,renter,p1,1126,0.435
+3_towns,Shelton,2000,renter,p2,649,0.251
+3_towns,Shelton,2000,renter,p3,374,0.145
+3_towns,Shelton,2000,renter,p4_or_more,437,0.169
+3_towns,Shelton,2010,renter,total,2477,NA
+3_towns,Shelton,2010,renter,p1,1384,0.559
+3_towns,Shelton,2010,renter,p2,509,0.205
+3_towns,Shelton,2010,renter,p3,325,0.131
+3_towns,Shelton,2010,renter,p4_or_more,259,0.105
+3_towns,Shelton,2018,renter,total,3089,NA
+3_towns,Shelton,2018,renter,p1,1331,0.431
+3_towns,Shelton,2018,renter,p2,828,0.268
+3_towns,Shelton,2018,renter,p3,449,0.145
+3_towns,Shelton,2018,renter,p4_or_more,481,0.156
+3_towns,Sherman,2000,renter,total,123,NA
+3_towns,Sherman,2000,renter,p1,42,0.341
+3_towns,Sherman,2000,renter,p2,34,0.276
+3_towns,Sherman,2000,renter,p3,20,0.163
+3_towns,Sherman,2000,renter,p4_or_more,27,0.22
+3_towns,Sherman,2010,renter,total,80,NA
+3_towns,Sherman,2010,renter,p1,48,0.6
+3_towns,Sherman,2010,renter,p2,22,0.275
+3_towns,Sherman,2010,renter,p3,10,0.125
+3_towns,Sherman,2010,renter,p4_or_more,0,0
+3_towns,Sherman,2018,renter,total,191,NA
+3_towns,Sherman,2018,renter,p1,41,0.215
+3_towns,Sherman,2018,renter,p2,73,0.382
+3_towns,Sherman,2018,renter,p3,30,0.157
+3_towns,Sherman,2018,renter,p4_or_more,47,0.246
+3_towns,Simsbury,2000,renter,total,1380,NA
+3_towns,Simsbury,2000,renter,p1,611,0.443
+3_towns,Simsbury,2000,renter,p2,394,0.286
+3_towns,Simsbury,2000,renter,p3,170,0.123
+3_towns,Simsbury,2000,renter,p4_or_more,205,0.149
+3_towns,Simsbury,2010,renter,total,1193,NA
+3_towns,Simsbury,2010,renter,p1,571,0.479
+3_towns,Simsbury,2010,renter,p2,334,0.28
+3_towns,Simsbury,2010,renter,p3,178,0.149
+3_towns,Simsbury,2010,renter,p4_or_more,110,0.092
+3_towns,Simsbury,2018,renter,total,1742,NA
+3_towns,Simsbury,2018,renter,p1,784,0.45
+3_towns,Simsbury,2018,renter,p2,434,0.249
+3_towns,Simsbury,2018,renter,p3,294,0.169
+3_towns,Simsbury,2018,renter,p4_or_more,230,0.132
+3_towns,Somers,2000,renter,total,371,NA
+3_towns,Somers,2000,renter,p1,131,0.353
+3_towns,Somers,2000,renter,p2,102,0.275
+3_towns,Somers,2000,renter,p3,57,0.154
+3_towns,Somers,2000,renter,p4_or_more,81,0.218
+3_towns,Somers,2010,renter,total,166,NA
+3_towns,Somers,2010,renter,p1,71,0.428
+3_towns,Somers,2010,renter,p2,36,0.217
+3_towns,Somers,2010,renter,p3,44,0.265
+3_towns,Somers,2010,renter,p4_or_more,15,0.09
+3_towns,Somers,2018,renter,total,417,NA
+3_towns,Somers,2018,renter,p1,141,0.338
+3_towns,Somers,2018,renter,p2,143,0.343
+3_towns,Somers,2018,renter,p3,75,0.18
+3_towns,Somers,2018,renter,p4_or_more,58,0.139
+3_towns,South Windsor,2000,renter,total,952,NA
+3_towns,South Windsor,2000,renter,p1,371,0.39
+3_towns,South Windsor,2000,renter,p2,307,0.322
+3_towns,South Windsor,2000,renter,p3,136,0.143
+3_towns,South Windsor,2000,renter,p4_or_more,138,0.145
+3_towns,South Windsor,2010,renter,total,936,NA
+3_towns,South Windsor,2010,renter,p1,485,0.518
+3_towns,South Windsor,2010,renter,p2,258,0.276
+3_towns,South Windsor,2010,renter,p3,102,0.109
+3_towns,South Windsor,2010,renter,p4_or_more,91,0.097
+3_towns,South Windsor,2018,renter,total,1604,NA
+3_towns,South Windsor,2018,renter,p1,684,0.426
+3_towns,South Windsor,2018,renter,p2,424,0.264
+3_towns,South Windsor,2018,renter,p3,208,0.13
+3_towns,South Windsor,2018,renter,p4_or_more,288,0.18
+3_towns,Southbury,2000,renter,total,761,NA
+3_towns,Southbury,2000,renter,p1,383,0.503
+3_towns,Southbury,2000,renter,p2,224,0.294
+3_towns,Southbury,2000,renter,p3,70,0.092
+3_towns,Southbury,2000,renter,p4_or_more,84,0.11
+3_towns,Southbury,2010,renter,total,785,NA
+3_towns,Southbury,2010,renter,p1,524,0.668
+3_towns,Southbury,2010,renter,p2,177,0.225
+3_towns,Southbury,2010,renter,p3,10,0.013
+3_towns,Southbury,2010,renter,p4_or_more,74,0.094
+3_towns,Southbury,2018,renter,total,1132,NA
+3_towns,Southbury,2018,renter,p1,604,0.534
+3_towns,Southbury,2018,renter,p2,357,0.315
+3_towns,Southbury,2018,renter,p3,131,0.116
+3_towns,Southbury,2018,renter,p4_or_more,40,0.035
+3_towns,Southington,2000,renter,total,2806,NA
+3_towns,Southington,2000,renter,p1,1102,0.393
+3_towns,Southington,2000,renter,p2,804,0.287
+3_towns,Southington,2000,renter,p3,443,0.158
+3_towns,Southington,2000,renter,p4_or_more,457,0.163
+3_towns,Southington,2010,renter,total,2433,NA
+3_towns,Southington,2010,renter,p1,1153,0.474
+3_towns,Southington,2010,renter,p2,797,0.328
+3_towns,Southington,2010,renter,p3,243,0.1
+3_towns,Southington,2010,renter,p4_or_more,240,0.099
+3_towns,Southington,2018,renter,total,2953,NA
+3_towns,Southington,2018,renter,p1,1481,0.502
+3_towns,Southington,2018,renter,p2,748,0.253
+3_towns,Southington,2018,renter,p3,320,0.108
+3_towns,Southington,2018,renter,p4_or_more,404,0.137
+3_towns,Sprague,2000,renter,total,376,NA
+3_towns,Sprague,2000,renter,p1,115,0.306
+3_towns,Sprague,2000,renter,p2,101,0.269
+3_towns,Sprague,2000,renter,p3,68,0.181
+3_towns,Sprague,2000,renter,p4_or_more,92,0.245
+3_towns,Sprague,2010,renter,total,362,NA
+3_towns,Sprague,2010,renter,p1,136,0.376
+3_towns,Sprague,2010,renter,p2,55,0.152
+3_towns,Sprague,2010,renter,p3,45,0.124
+3_towns,Sprague,2010,renter,p4_or_more,126,0.348
+3_towns,Sprague,2018,renter,total,399,NA
+3_towns,Sprague,2018,renter,p1,134,0.336
+3_towns,Sprague,2018,renter,p2,121,0.303
+3_towns,Sprague,2018,renter,p3,55,0.138
+3_towns,Sprague,2018,renter,p4_or_more,89,0.223
+3_towns,Stafford,2000,renter,total,1105,NA
+3_towns,Stafford,2000,renter,p1,438,0.396
+3_towns,Stafford,2000,renter,p2,295,0.267
+3_towns,Stafford,2000,renter,p3,175,0.158
+3_towns,Stafford,2000,renter,p4_or_more,197,0.178
+3_towns,Stafford,2010,renter,total,1010,NA
+3_towns,Stafford,2010,renter,p1,496,0.491
+3_towns,Stafford,2010,renter,p2,200,0.198
+3_towns,Stafford,2010,renter,p3,125,0.124
+3_towns,Stafford,2010,renter,p4_or_more,189,0.187
+3_towns,Stafford,2018,renter,total,1222,NA
+3_towns,Stafford,2018,renter,p1,575,0.471
+3_towns,Stafford,2018,renter,p2,270,0.221
+3_towns,Stafford,2018,renter,p3,178,0.146
+3_towns,Stafford,2018,renter,p4_or_more,199,0.163
+3_towns,Stamford,2000,renter,total,19680,NA
+3_towns,Stamford,2000,renter,p1,7297,0.371
+3_towns,Stamford,2000,renter,p2,5421,0.275
+3_towns,Stamford,2000,renter,p3,2865,0.146
+3_towns,Stamford,2000,renter,p4_or_more,4097,0.208
+3_towns,Stamford,2010,renter,total,20188,NA
+3_towns,Stamford,2010,renter,p1,7042,0.349
+3_towns,Stamford,2010,renter,p2,5622,0.278
+3_towns,Stamford,2010,renter,p3,3190,0.158
+3_towns,Stamford,2010,renter,p4_or_more,4334,0.215
+3_towns,Stamford,2018,renter,total,23279,NA
+3_towns,Stamford,2018,renter,p1,8136,0.349
+3_towns,Stamford,2018,renter,p2,6185,0.266
+3_towns,Stamford,2018,renter,p3,4015,0.172
+3_towns,Stamford,2018,renter,p4_or_more,4943,0.212
+3_towns,Sterling,2000,renter,total,196,NA
+3_towns,Sterling,2000,renter,p1,64,0.327
+3_towns,Sterling,2000,renter,p2,49,0.25
+3_towns,Sterling,2000,renter,p3,42,0.214
+3_towns,Sterling,2000,renter,p4_or_more,41,0.209
+3_towns,Sterling,2010,renter,total,196,NA
+3_towns,Sterling,2010,renter,p1,95,0.485
+3_towns,Sterling,2010,renter,p2,26,0.133
+3_towns,Sterling,2010,renter,p3,41,0.209
+3_towns,Sterling,2010,renter,p4_or_more,34,0.173
+3_towns,Sterling,2018,renter,total,198,NA
+3_towns,Sterling,2018,renter,p1,70,0.354
+3_towns,Sterling,2018,renter,p2,63,0.318
+3_towns,Sterling,2018,renter,p3,65,0.328
+3_towns,Sterling,2018,renter,p4_or_more,0,0
+3_towns,Stonington,2000,renter,total,2247,NA
+3_towns,Stonington,2000,renter,p1,1108,0.493
+3_towns,Stonington,2000,renter,p2,639,0.284
+3_towns,Stonington,2000,renter,p3,264,0.117
+3_towns,Stonington,2000,renter,p4_or_more,236,0.105
+3_towns,Stonington,2010,renter,total,2227,NA
+3_towns,Stonington,2010,renter,p1,974,0.437
+3_towns,Stonington,2010,renter,p2,738,0.331
+3_towns,Stonington,2010,renter,p3,298,0.134
+3_towns,Stonington,2010,renter,p4_or_more,217,0.097
+3_towns,Stonington,2018,renter,total,2158,NA
+3_towns,Stonington,2018,renter,p1,1030,0.477
+3_towns,Stonington,2018,renter,p2,716,0.332
+3_towns,Stonington,2018,renter,p3,259,0.12
+3_towns,Stonington,2018,renter,p4_or_more,153,0.071
+3_towns,Stratford,2000,renter,total,3909,NA
+3_towns,Stratford,2000,renter,p1,1558,0.399
+3_towns,Stratford,2000,renter,p2,1059,0.271
+3_towns,Stratford,2000,renter,p3,583,0.149
+3_towns,Stratford,2000,renter,p4_or_more,709,0.181
+3_towns,Stratford,2010,renter,total,3606,NA
+3_towns,Stratford,2010,renter,p1,1736,0.481
+3_towns,Stratford,2010,renter,p2,776,0.215
+3_towns,Stratford,2010,renter,p3,517,0.143
+3_towns,Stratford,2010,renter,p4_or_more,577,0.16
+3_towns,Stratford,2018,renter,total,4225,NA
+3_towns,Stratford,2018,renter,p1,1773,0.42
+3_towns,Stratford,2018,renter,p2,1022,0.242
+3_towns,Stratford,2018,renter,p3,698,0.165
+3_towns,Stratford,2018,renter,p4_or_more,732,0.173
+3_towns,Suffield,2000,renter,total,833,NA
+3_towns,Suffield,2000,renter,p1,383,0.46
+3_towns,Suffield,2000,renter,p2,240,0.288
+3_towns,Suffield,2000,renter,p3,116,0.139
+3_towns,Suffield,2000,renter,p4_or_more,94,0.113
+3_towns,Suffield,2010,renter,total,826,NA
+3_towns,Suffield,2010,renter,p1,438,0.53
+3_towns,Suffield,2010,renter,p2,221,0.268
+3_towns,Suffield,2010,renter,p3,105,0.127
+3_towns,Suffield,2010,renter,p4_or_more,62,0.075
+3_towns,Suffield,2018,renter,total,665,NA
+3_towns,Suffield,2018,renter,p1,254,0.382
+3_towns,Suffield,2018,renter,p2,196,0.295
+3_towns,Suffield,2018,renter,p3,130,0.195
+3_towns,Suffield,2018,renter,p4_or_more,85,0.128
+3_towns,Thomaston,2000,renter,total,764,NA
+3_towns,Thomaston,2000,renter,p1,349,0.457
+3_towns,Thomaston,2000,renter,p2,216,0.283
+3_towns,Thomaston,2000,renter,p3,104,0.136
+3_towns,Thomaston,2000,renter,p4_or_more,95,0.124
+3_towns,Thomaston,2010,renter,total,762,NA
+3_towns,Thomaston,2010,renter,p1,421,0.552
+3_towns,Thomaston,2010,renter,p2,222,0.291
+3_towns,Thomaston,2010,renter,p3,81,0.106
+3_towns,Thomaston,2010,renter,p4_or_more,38,0.05
+3_towns,Thomaston,2018,renter,total,752,NA
+3_towns,Thomaston,2018,renter,p1,381,0.507
+3_towns,Thomaston,2018,renter,p2,221,0.294
+3_towns,Thomaston,2018,renter,p3,74,0.098
+3_towns,Thomaston,2018,renter,p4_or_more,76,0.101
+3_towns,Thompson,2000,renter,total,693,NA
+3_towns,Thompson,2000,renter,p1,276,0.398
+3_towns,Thompson,2000,renter,p2,198,0.286
+3_towns,Thompson,2000,renter,p3,106,0.153
+3_towns,Thompson,2000,renter,p4_or_more,113,0.163
+3_towns,Thompson,2010,renter,total,713,NA
+3_towns,Thompson,2010,renter,p1,272,0.381
+3_towns,Thompson,2010,renter,p2,192,0.269
+3_towns,Thompson,2010,renter,p3,65,0.091
+3_towns,Thompson,2010,renter,p4_or_more,184,0.258
+3_towns,Thompson,2018,renter,total,751,NA
+3_towns,Thompson,2018,renter,p1,252,0.336
+3_towns,Thompson,2018,renter,p2,199,0.265
+3_towns,Thompson,2018,renter,p3,102,0.136
+3_towns,Thompson,2018,renter,p4_or_more,198,0.264
+3_towns,Tolland,2000,renter,total,322,NA
+3_towns,Tolland,2000,renter,p1,121,0.376
+3_towns,Tolland,2000,renter,p2,108,0.335
+3_towns,Tolland,2000,renter,p3,48,0.149
+3_towns,Tolland,2000,renter,p4_or_more,45,0.14
+3_towns,Tolland,2010,renter,total,346,NA
+3_towns,Tolland,2010,renter,p1,125,0.361
+3_towns,Tolland,2010,renter,p2,153,0.442
+3_towns,Tolland,2010,renter,p3,57,0.165
+3_towns,Tolland,2010,renter,p4_or_more,11,0.032
+3_towns,Tolland,2018,renter,total,388,NA
+3_towns,Tolland,2018,renter,p1,129,0.332
+3_towns,Tolland,2018,renter,p2,125,0.322
+3_towns,Tolland,2018,renter,p3,84,0.216
+3_towns,Tolland,2018,renter,p4_or_more,50,0.129
+3_towns,Torrington,2000,renter,total,5222,NA
+3_towns,Torrington,2000,renter,p1,2467,0.472
+3_towns,Torrington,2000,renter,p2,1375,0.263
+3_towns,Torrington,2000,renter,p3,598,0.115
+3_towns,Torrington,2000,renter,p4_or_more,782,0.15
+3_towns,Torrington,2010,renter,total,5318,NA
+3_towns,Torrington,2010,renter,p1,2507,0.471
+3_towns,Torrington,2010,renter,p2,1355,0.255
+3_towns,Torrington,2010,renter,p3,521,0.098
+3_towns,Torrington,2010,renter,p4_or_more,935,0.176
+3_towns,Torrington,2018,renter,total,4778,NA
+3_towns,Torrington,2018,renter,p1,2027,0.424
+3_towns,Torrington,2018,renter,p2,1294,0.271
+3_towns,Torrington,2018,renter,p3,617,0.129
+3_towns,Torrington,2018,renter,p4_or_more,840,0.176
+3_towns,Trumbull,2000,renter,total,1083,NA
+3_towns,Trumbull,2000,renter,p1,456,0.421
+3_towns,Trumbull,2000,renter,p2,271,0.25
+3_towns,Trumbull,2000,renter,p3,157,0.145
+3_towns,Trumbull,2000,renter,p4_or_more,199,0.184
+3_towns,Trumbull,2010,renter,total,1130,NA
+3_towns,Trumbull,2010,renter,p1,699,0.619
+3_towns,Trumbull,2010,renter,p2,120,0.106
+3_towns,Trumbull,2010,renter,p3,112,0.099
+3_towns,Trumbull,2010,renter,p4_or_more,199,0.176
+3_towns,Trumbull,2018,renter,total,1644,NA
+3_towns,Trumbull,2018,renter,p1,775,0.471
+3_towns,Trumbull,2018,renter,p2,218,0.133
+3_towns,Trumbull,2018,renter,p3,233,0.142
+3_towns,Trumbull,2018,renter,p4_or_more,418,0.254
+3_towns,Union,2000,renter,total,45,NA
+3_towns,Union,2000,renter,p1,22,0.489
+3_towns,Union,2000,renter,p2,9,0.2
+3_towns,Union,2000,renter,p3,5,0.111
+3_towns,Union,2000,renter,p4_or_more,9,0.2
+3_towns,Union,2010,renter,total,18,NA
+3_towns,Union,2010,renter,p1,6,0.333
+3_towns,Union,2010,renter,p2,2,0.111
+3_towns,Union,2010,renter,p3,10,0.556
+3_towns,Union,2010,renter,p4_or_more,0,0
+3_towns,Union,2018,renter,total,11,NA
+3_towns,Union,2018,renter,p1,2,0.182
+3_towns,Union,2018,renter,p2,4,0.364
+3_towns,Union,2018,renter,p3,2,0.182
+3_towns,Union,2018,renter,p4_or_more,3,0.273
+3_towns,Vernon,2000,renter,total,5334,NA
+3_towns,Vernon,2000,renter,p1,2553,0.479
+3_towns,Vernon,2000,renter,p2,1579,0.296
+3_towns,Vernon,2000,renter,p3,619,0.116
+3_towns,Vernon,2000,renter,p4_or_more,583,0.109
+3_towns,Vernon,2010,renter,total,5395,NA
+3_towns,Vernon,2010,renter,p1,2539,0.471
+3_towns,Vernon,2010,renter,p2,1831,0.339
+3_towns,Vernon,2010,renter,p3,598,0.111
+3_towns,Vernon,2010,renter,p4_or_more,427,0.079
+3_towns,Vernon,2018,renter,total,6284,NA
+3_towns,Vernon,2018,renter,p1,2685,0.427
+3_towns,Vernon,2018,renter,p2,2017,0.321
+3_towns,Vernon,2018,renter,p3,657,0.105
+3_towns,Vernon,2018,renter,p4_or_more,925,0.147
+3_towns,Voluntown,2000,renter,total,173,NA
+3_towns,Voluntown,2000,renter,p1,65,0.376
+3_towns,Voluntown,2000,renter,p2,50,0.289
+3_towns,Voluntown,2000,renter,p3,23,0.133
+3_towns,Voluntown,2000,renter,p4_or_more,35,0.202
+3_towns,Voluntown,2010,renter,total,161,NA
+3_towns,Voluntown,2010,renter,p1,44,0.273
+3_towns,Voluntown,2010,renter,p2,92,0.571
+3_towns,Voluntown,2010,renter,p3,25,0.155
+3_towns,Voluntown,2010,renter,p4_or_more,0,0
+3_towns,Voluntown,2018,renter,total,183,NA
+3_towns,Voluntown,2018,renter,p1,68,0.372
+3_towns,Voluntown,2018,renter,p2,92,0.503
+3_towns,Voluntown,2018,renter,p3,10,0.055
+3_towns,Voluntown,2018,renter,p4_or_more,13,0.071
+3_towns,Wallingford,2000,renter,total,4563,NA
+3_towns,Wallingford,2000,renter,p1,2107,0.462
+3_towns,Wallingford,2000,renter,p2,1296,0.284
+3_towns,Wallingford,2000,renter,p3,573,0.126
+3_towns,Wallingford,2000,renter,p4_or_more,587,0.129
+3_towns,Wallingford,2010,renter,total,4818,NA
+3_towns,Wallingford,2010,renter,p1,2102,0.436
+3_towns,Wallingford,2010,renter,p2,1606,0.333
+3_towns,Wallingford,2010,renter,p3,590,0.122
+3_towns,Wallingford,2010,renter,p4_or_more,520,0.108
+3_towns,Wallingford,2018,renter,total,5013,NA
+3_towns,Wallingford,2018,renter,p1,2690,0.537
+3_towns,Wallingford,2018,renter,p2,1403,0.28
+3_towns,Wallingford,2018,renter,p3,431,0.086
+3_towns,Wallingford,2018,renter,p4_or_more,489,0.098
+3_towns,Warren,2000,renter,total,65,NA
+3_towns,Warren,2000,renter,p1,27,0.415
+3_towns,Warren,2000,renter,p2,11,0.169
+3_towns,Warren,2000,renter,p3,7,0.108
+3_towns,Warren,2000,renter,p4_or_more,20,0.308
+3_towns,Warren,2010,renter,total,61,NA
+3_towns,Warren,2010,renter,p1,23,0.377
+3_towns,Warren,2010,renter,p2,20,0.328
+3_towns,Warren,2010,renter,p3,6,0.098
+3_towns,Warren,2010,renter,p4_or_more,12,0.197
+3_towns,Warren,2018,renter,total,55,NA
+3_towns,Warren,2018,renter,p1,13,0.236
+3_towns,Warren,2018,renter,p2,20,0.364
+3_towns,Warren,2018,renter,p3,7,0.127
+3_towns,Warren,2018,renter,p4_or_more,15,0.273
+3_towns,Washington,2000,renter,total,305,NA
+3_towns,Washington,2000,renter,p1,117,0.384
+3_towns,Washington,2000,renter,p2,83,0.272
+3_towns,Washington,2000,renter,p3,47,0.154
+3_towns,Washington,2000,renter,p4_or_more,58,0.19
+3_towns,Washington,2010,renter,total,439,NA
+3_towns,Washington,2010,renter,p1,210,0.478
+3_towns,Washington,2010,renter,p2,112,0.255
+3_towns,Washington,2010,renter,p3,87,0.198
+3_towns,Washington,2010,renter,p4_or_more,30,0.068
+3_towns,Washington,2018,renter,total,268,NA
+3_towns,Washington,2018,renter,p1,100,0.373
+3_towns,Washington,2018,renter,p2,80,0.299
+3_towns,Washington,2018,renter,p3,7,0.026
+3_towns,Washington,2018,renter,p4_or_more,81,0.302
+3_towns,Waterbury,2000,renter,total,22331,NA
+3_towns,Waterbury,2000,renter,p1,8490,0.38
+3_towns,Waterbury,2000,renter,p2,5636,0.252
+3_towns,Waterbury,2000,renter,p3,3500,0.157
+3_towns,Waterbury,2000,renter,p4_or_more,4705,0.211
+3_towns,Waterbury,2010,renter,total,22097,NA
+3_towns,Waterbury,2010,renter,p1,8442,0.382
+3_towns,Waterbury,2010,renter,p2,5260,0.238
+3_towns,Waterbury,2010,renter,p3,3696,0.167
+3_towns,Waterbury,2010,renter,p4_or_more,4699,0.213
+3_towns,Waterbury,2018,renter,total,23275,NA
+3_towns,Waterbury,2018,renter,p1,9135,0.392
+3_towns,Waterbury,2018,renter,p2,5656,0.243
+3_towns,Waterbury,2018,renter,p3,3837,0.165
+3_towns,Waterbury,2018,renter,p4_or_more,4647,0.2
+3_towns,Waterford,2000,renter,total,1171,NA
+3_towns,Waterford,2000,renter,p1,516,0.441
+3_towns,Waterford,2000,renter,p2,322,0.275
+3_towns,Waterford,2000,renter,p3,155,0.132
+3_towns,Waterford,2000,renter,p4_or_more,178,0.152
+3_towns,Waterford,2010,renter,total,1019,NA
+3_towns,Waterford,2010,renter,p1,531,0.521
+3_towns,Waterford,2010,renter,p2,291,0.286
+3_towns,Waterford,2010,renter,p3,111,0.109
+3_towns,Waterford,2010,renter,p4_or_more,86,0.084
+3_towns,Waterford,2018,renter,total,1379,NA
+3_towns,Waterford,2018,renter,p1,454,0.329
+3_towns,Waterford,2018,renter,p2,336,0.244
+3_towns,Waterford,2018,renter,p3,375,0.272
+3_towns,Waterford,2018,renter,p4_or_more,214,0.155
+3_towns,Watertown,2000,renter,total,1661,NA
+3_towns,Watertown,2000,renter,p1,732,0.441
+3_towns,Watertown,2000,renter,p2,464,0.279
+3_towns,Watertown,2000,renter,p3,225,0.135
+3_towns,Watertown,2000,renter,p4_or_more,240,0.144
+3_towns,Watertown,2010,renter,total,1398,NA
+3_towns,Watertown,2010,renter,p1,777,0.556
+3_towns,Watertown,2010,renter,p2,310,0.222
+3_towns,Watertown,2010,renter,p3,74,0.053
+3_towns,Watertown,2010,renter,p4_or_more,237,0.17
+3_towns,Watertown,2018,renter,total,1681,NA
+3_towns,Watertown,2018,renter,p1,832,0.495
+3_towns,Watertown,2018,renter,p2,456,0.271
+3_towns,Watertown,2018,renter,p3,112,0.067
+3_towns,Watertown,2018,renter,p4_or_more,281,0.167
+3_towns,West Hartford,2000,renter,total,6912,NA
+3_towns,West Hartford,2000,renter,p1,3358,0.486
+3_towns,West Hartford,2000,renter,p2,1958,0.283
+3_towns,West Hartford,2000,renter,p3,804,0.116
+3_towns,West Hartford,2000,renter,p4_or_more,792,0.115
+3_towns,West Hartford,2010,renter,total,6574,NA
+3_towns,West Hartford,2010,renter,p1,3163,0.481
+3_towns,West Hartford,2010,renter,p2,1932,0.294
+3_towns,West Hartford,2010,renter,p3,623,0.095
+3_towns,West Hartford,2010,renter,p4_or_more,856,0.13
+3_towns,West Hartford,2018,renter,total,6947,NA
+3_towns,West Hartford,2018,renter,p1,3146,0.453
+3_towns,West Hartford,2018,renter,p2,1774,0.255
+3_towns,West Hartford,2018,renter,p3,947,0.136
+3_towns,West Hartford,2018,renter,p4_or_more,1080,0.155
+3_towns,West Haven,2000,renter,total,9458,NA
+3_towns,West Haven,2000,renter,p1,3853,0.407
+3_towns,West Haven,2000,renter,p2,2555,0.27
+3_towns,West Haven,2000,renter,p3,1473,0.156
+3_towns,West Haven,2000,renter,p4_or_more,1577,0.167
+3_towns,West Haven,2010,renter,total,8583,NA
+3_towns,West Haven,2010,renter,p1,3630,0.423
+3_towns,West Haven,2010,renter,p2,2407,0.28
+3_towns,West Haven,2010,renter,p3,1241,0.145
+3_towns,West Haven,2010,renter,p4_or_more,1305,0.152
+3_towns,West Haven,2018,renter,total,8826,NA
+3_towns,West Haven,2018,renter,p1,3172,0.359
+3_towns,West Haven,2018,renter,p2,2854,0.323
+3_towns,West Haven,2018,renter,p3,1247,0.141
+3_towns,West Haven,2018,renter,p4_or_more,1553,0.176
+3_towns,Westbrook,2000,renter,total,697,NA
+3_towns,Westbrook,2000,renter,p1,325,0.466
+3_towns,Westbrook,2000,renter,p2,196,0.281
+3_towns,Westbrook,2000,renter,p3,90,0.129
+3_towns,Westbrook,2000,renter,p4_or_more,86,0.123
+3_towns,Westbrook,2010,renter,total,617,NA
+3_towns,Westbrook,2010,renter,p1,305,0.494
+3_towns,Westbrook,2010,renter,p2,124,0.201
+3_towns,Westbrook,2010,renter,p3,85,0.138
+3_towns,Westbrook,2010,renter,p4_or_more,103,0.167
+3_towns,Westbrook,2018,renter,total,647,NA
+3_towns,Westbrook,2018,renter,p1,372,0.575
+3_towns,Westbrook,2018,renter,p2,163,0.252
+3_towns,Westbrook,2018,renter,p3,19,0.029
+3_towns,Westbrook,2018,renter,p4_or_more,93,0.144
+3_towns,Weston,2000,renter,total,225,NA
+3_towns,Weston,2000,renter,p1,82,0.364
+3_towns,Weston,2000,renter,p2,74,0.329
+3_towns,Weston,2000,renter,p3,29,0.129
+3_towns,Weston,2000,renter,p4_or_more,40,0.178
+3_towns,Weston,2010,renter,total,201,NA
+3_towns,Weston,2010,renter,p1,126,0.627
+3_towns,Weston,2010,renter,p2,17,0.085
+3_towns,Weston,2010,renter,p3,38,0.189
+3_towns,Weston,2010,renter,p4_or_more,20,0.1
+3_towns,Weston,2018,renter,total,144,NA
+3_towns,Weston,2018,renter,p1,66,0.458
+3_towns,Weston,2018,renter,p2,20,0.139
+3_towns,Weston,2018,renter,p3,9,0.062
+3_towns,Weston,2018,renter,p4_or_more,49,0.34
+3_towns,Westport,2000,renter,total,1383,NA
+3_towns,Westport,2000,renter,p1,586,0.424
+3_towns,Westport,2000,renter,p2,413,0.299
+3_towns,Westport,2000,renter,p3,172,0.124
+3_towns,Westport,2000,renter,p4_or_more,212,0.153
+3_towns,Westport,2010,renter,total,1162,NA
+3_towns,Westport,2010,renter,p1,452,0.389
+3_towns,Westport,2010,renter,p2,295,0.254
+3_towns,Westport,2010,renter,p3,217,0.187
+3_towns,Westport,2010,renter,p4_or_more,198,0.17
+3_towns,Westport,2018,renter,total,1565,NA
+3_towns,Westport,2018,renter,p1,639,0.408
+3_towns,Westport,2018,renter,p2,354,0.226
+3_towns,Westport,2018,renter,p3,178,0.114
+3_towns,Westport,2018,renter,p4_or_more,394,0.252
+3_towns,Wethersfield,2000,renter,total,2481,NA
+3_towns,Wethersfield,2000,renter,p1,1345,0.542
+3_towns,Wethersfield,2000,renter,p2,619,0.249
+3_towns,Wethersfield,2000,renter,p3,271,0.109
+3_towns,Wethersfield,2000,renter,p4_or_more,246,0.099
+3_towns,Wethersfield,2010,renter,total,2257,NA
+3_towns,Wethersfield,2010,renter,p1,1227,0.544
+3_towns,Wethersfield,2010,renter,p2,637,0.282
+3_towns,Wethersfield,2010,renter,p3,135,0.06
+3_towns,Wethersfield,2010,renter,p4_or_more,258,0.114
+3_towns,Wethersfield,2018,renter,total,2378,NA
+3_towns,Wethersfield,2018,renter,p1,1207,0.508
+3_towns,Wethersfield,2018,renter,p2,662,0.278
+3_towns,Wethersfield,2018,renter,p3,267,0.112
+3_towns,Wethersfield,2018,renter,p4_or_more,242,0.102
+3_towns,Willington,2000,renter,total,818,NA
+3_towns,Willington,2000,renter,p1,245,0.3
+3_towns,Willington,2000,renter,p2,316,0.386
+3_towns,Willington,2000,renter,p3,172,0.21
+3_towns,Willington,2000,renter,p4_or_more,85,0.104
+3_towns,Willington,2010,renter,total,699,NA
+3_towns,Willington,2010,renter,p1,205,0.293
+3_towns,Willington,2010,renter,p2,227,0.325
+3_towns,Willington,2010,renter,p3,197,0.282
+3_towns,Willington,2010,renter,p4_or_more,70,0.1
+3_towns,Willington,2018,renter,total,842,NA
+3_towns,Willington,2018,renter,p1,254,0.302
+3_towns,Willington,2018,renter,p2,405,0.481
+3_towns,Willington,2018,renter,p3,38,0.045
+3_towns,Willington,2018,renter,p4_or_more,145,0.172
+3_towns,Wilton,2000,renter,total,572,NA
+3_towns,Wilton,2000,renter,p1,259,0.453
+3_towns,Wilton,2000,renter,p2,150,0.262
+3_towns,Wilton,2000,renter,p3,85,0.149
+3_towns,Wilton,2000,renter,p4_or_more,78,0.136
+3_towns,Wilton,2010,renter,total,552,NA
+3_towns,Wilton,2010,renter,p1,301,0.545
+3_towns,Wilton,2010,renter,p2,130,0.236
+3_towns,Wilton,2010,renter,p3,24,0.043
+3_towns,Wilton,2010,renter,p4_or_more,97,0.176
+3_towns,Wilton,2018,renter,total,865,NA
+3_towns,Wilton,2018,renter,p1,281,0.325
+3_towns,Wilton,2018,renter,p2,178,0.206
+3_towns,Wilton,2018,renter,p3,173,0.2
+3_towns,Wilton,2018,renter,p4_or_more,233,0.269
+3_towns,Winchester,2000,renter,total,1557,NA
+3_towns,Winchester,2000,renter,p1,604,0.388
+3_towns,Winchester,2000,renter,p2,478,0.307
+3_towns,Winchester,2000,renter,p3,239,0.154
+3_towns,Winchester,2000,renter,p4_or_more,236,0.152
+3_towns,Winchester,2010,renter,total,1356,NA
+3_towns,Winchester,2010,renter,p1,605,0.446
+3_towns,Winchester,2010,renter,p2,422,0.311
+3_towns,Winchester,2010,renter,p3,153,0.113
+3_towns,Winchester,2010,renter,p4_or_more,176,0.13
+3_towns,Winchester,2018,renter,total,1540,NA
+3_towns,Winchester,2018,renter,p1,531,0.345
+3_towns,Winchester,2018,renter,p2,484,0.314
+3_towns,Winchester,2018,renter,p3,298,0.194
+3_towns,Winchester,2018,renter,p4_or_more,227,0.147
+3_towns,Windham,2000,renter,total,4304,NA
+3_towns,Windham,2000,renter,p1,1544,0.359
+3_towns,Windham,2000,renter,p2,1132,0.263
+3_towns,Windham,2000,renter,p3,688,0.16
+3_towns,Windham,2000,renter,p4_or_more,940,0.218
+3_towns,Windham,2010,renter,total,4435,NA
+3_towns,Windham,2010,renter,p1,1382,0.312
+3_towns,Windham,2010,renter,p2,1214,0.274
+3_towns,Windham,2010,renter,p3,714,0.161
+3_towns,Windham,2010,renter,p4_or_more,1125,0.254
+3_towns,Windham,2018,renter,total,4434,NA
+3_towns,Windham,2018,renter,p1,1408,0.318
+3_towns,Windham,2018,renter,p2,1342,0.303
+3_towns,Windham,2018,renter,p3,614,0.138
+3_towns,Windham,2018,renter,p4_or_more,1070,0.241
+3_towns,Windsor,2000,renter,total,2080,NA
+3_towns,Windsor,2000,renter,p1,834,0.401
+3_towns,Windsor,2000,renter,p2,620,0.298
+3_towns,Windsor,2000,renter,p3,303,0.146
+3_towns,Windsor,2000,renter,p4_or_more,323,0.155
+3_towns,Windsor,2010,renter,total,2002,NA
+3_towns,Windsor,2010,renter,p1,754,0.377
+3_towns,Windsor,2010,renter,p2,570,0.285
+3_towns,Windsor,2010,renter,p3,368,0.184
+3_towns,Windsor,2010,renter,p4_or_more,310,0.155
+3_towns,Windsor,2018,renter,total,1688,NA
+3_towns,Windsor,2018,renter,p1,730,0.432
+3_towns,Windsor,2018,renter,p2,445,0.264
+3_towns,Windsor,2018,renter,p3,308,0.182
+3_towns,Windsor,2018,renter,p4_or_more,205,0.121
+3_towns,Windsor Locks,2000,renter,total,1209,NA
+3_towns,Windsor Locks,2000,renter,p1,455,0.376
+3_towns,Windsor Locks,2000,renter,p2,374,0.309
+3_towns,Windsor Locks,2000,renter,p3,178,0.147
+3_towns,Windsor Locks,2000,renter,p4_or_more,202,0.167
+3_towns,Windsor Locks,2010,renter,total,1047,NA
+3_towns,Windsor Locks,2010,renter,p1,478,0.457
+3_towns,Windsor Locks,2010,renter,p2,271,0.259
+3_towns,Windsor Locks,2010,renter,p3,168,0.16
+3_towns,Windsor Locks,2010,renter,p4_or_more,130,0.124
+3_towns,Windsor Locks,2018,renter,total,1365,NA
+3_towns,Windsor Locks,2018,renter,p1,618,0.453
+3_towns,Windsor Locks,2018,renter,p2,401,0.294
+3_towns,Windsor Locks,2018,renter,p3,97,0.071
+3_towns,Windsor Locks,2018,renter,p4_or_more,249,0.182
+3_towns,Wolcott,2000,renter,total,648,NA
+3_towns,Wolcott,2000,renter,p1,311,0.48
+3_towns,Wolcott,2000,renter,p2,152,0.235
+3_towns,Wolcott,2000,renter,p3,92,0.142
+3_towns,Wolcott,2000,renter,p4_or_more,93,0.144
+3_towns,Wolcott,2010,renter,total,576,NA
+3_towns,Wolcott,2010,renter,p1,348,0.604
+3_towns,Wolcott,2010,renter,p2,62,0.108
+3_towns,Wolcott,2010,renter,p3,62,0.108
+3_towns,Wolcott,2010,renter,p4_or_more,104,0.181
+3_towns,Wolcott,2018,renter,total,933,NA
+3_towns,Wolcott,2018,renter,p1,435,0.466
+3_towns,Wolcott,2018,renter,p2,277,0.297
+3_towns,Wolcott,2018,renter,p3,32,0.034
+3_towns,Wolcott,2018,renter,p4_or_more,189,0.203
+3_towns,Woodbridge,2000,renter,total,345,NA
+3_towns,Woodbridge,2000,renter,p1,132,0.383
+3_towns,Woodbridge,2000,renter,p2,77,0.223
+3_towns,Woodbridge,2000,renter,p3,56,0.162
+3_towns,Woodbridge,2000,renter,p4_or_more,80,0.232
+3_towns,Woodbridge,2010,renter,total,212,NA
+3_towns,Woodbridge,2010,renter,p1,142,0.67
+3_towns,Woodbridge,2010,renter,p2,22,0.104
+3_towns,Woodbridge,2010,renter,p3,41,0.193
+3_towns,Woodbridge,2010,renter,p4_or_more,7,0.033
+3_towns,Woodbridge,2018,renter,total,321,NA
+3_towns,Woodbridge,2018,renter,p1,148,0.461
+3_towns,Woodbridge,2018,renter,p2,76,0.237
+3_towns,Woodbridge,2018,renter,p3,64,0.199
+3_towns,Woodbridge,2018,renter,p4_or_more,33,0.103
+3_towns,Woodbury,2000,renter,total,929,NA
+3_towns,Woodbury,2000,renter,p1,468,0.504
+3_towns,Woodbury,2000,renter,p2,251,0.27
+3_towns,Woodbury,2000,renter,p3,111,0.119
+3_towns,Woodbury,2000,renter,p4_or_more,99,0.107
+3_towns,Woodbury,2010,renter,total,760,NA
+3_towns,Woodbury,2010,renter,p1,405,0.533
+3_towns,Woodbury,2010,renter,p2,275,0.362
+3_towns,Woodbury,2010,renter,p3,50,0.066
+3_towns,Woodbury,2010,renter,p4_or_more,30,0.039
+3_towns,Woodbury,2018,renter,total,992,NA
+3_towns,Woodbury,2018,renter,p1,442,0.446
+3_towns,Woodbury,2018,renter,p2,271,0.273
+3_towns,Woodbury,2018,renter,p3,98,0.099
+3_towns,Woodbury,2018,renter,p4_or_more,181,0.182
+3_towns,Woodstock,2000,renter,total,459,NA
+3_towns,Woodstock,2000,renter,p1,177,0.386
+3_towns,Woodstock,2000,renter,p2,146,0.318
+3_towns,Woodstock,2000,renter,p3,56,0.122
+3_towns,Woodstock,2000,renter,p4_or_more,80,0.174
+3_towns,Woodstock,2010,renter,total,456,NA
+3_towns,Woodstock,2010,renter,p1,193,0.423
+3_towns,Woodstock,2010,renter,p2,182,0.399
+3_towns,Woodstock,2010,renter,p3,81,0.178
+3_towns,Woodstock,2010,renter,p4_or_more,0,0
+3_towns,Woodstock,2018,renter,total,379,NA
+3_towns,Woodstock,2018,renter,p1,176,0.464
+3_towns,Woodstock,2018,renter,p2,138,0.364
+3_towns,Woodstock,2018,renter,p3,25,0.066
+3_towns,Woodstock,2018,renter,p4_or_more,40,0.106
