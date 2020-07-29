@@ -15,7 +15,7 @@ library(cwi)
 library(camiller)
 ```
 
-Change in total units by tenure, units in structure, number bedrooms. Presumably PUMS because ACS is households not units. Might be in permit data? Do this last.
+Change in total units by tenure, units in structure, number bedrooms. Presumably PUMS because ACS is households not units. DECD data has vacancy among total units for 2010. Do we want 2000, 2010, 2018? Years in between? Do this last.
 
 # Fetch
 
