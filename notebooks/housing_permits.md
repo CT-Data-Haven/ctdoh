@@ -1,13 +1,7 @@
----
-title: "Housing permits"
-output: github_document
----
+Housing permits
+================
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = T, message = F, warning = F)
-```
-
-```{r}
+``` r
 library(tidyverse)
 library(rvest)
 library(readxl)
@@ -16,13 +10,14 @@ library(cwi)
 library(camiller)
 ```
 
-Permits, 2001-2019... town-level at https://portal.ct.gov/DECD/Content/About_DECD/Research-and-Publications/01_Access-Research/Exports-and-Housing-and-Income-Data
+Permits, 2001-2019… town-level at
+<https://portal.ct.gov/DECD/Content/About_DECD/Research-and-Publications/01_Access-Research/Exports-and-Housing-and-Income-Data>
 
 # Fetch
 
-Jacking Camille's scrape code
+Jacking Camille’s scrape code
 
-```{r}
+``` r
 permit_url <- "https://portal.ct.gov/DECD/Content/About_DECD/Research-and-Publications/01_Access-Research/Exports-and-Housing-and-Income-Data"
 decd_base <- "https://portal.ct.gov"
 
@@ -48,9 +43,9 @@ housing_read <- list.files(file.path("..", "input_data", "housing_permit_downloa
 
 # Clean
 
-Lydia's table asks for groups as: SF, MF 2-4, and MF 5+
+Lydia’s table asks for groups as: SF, MF 2-4, and MF 5+
 
-```{r}
+``` r
 source("../_utils/town2county.R")
 
 permits <- housing_read %>% 
@@ -61,23 +56,25 @@ permits <- housing_read %>%
   select(-total, -demos) %>%
   gather(key = units, value = value, -year, -name) %>%
   mutate(units = as_factor(units) %>% 
-  			 	fct_collapse(units,
-  			 							 `1 unit` = "1 unit",
-  			 							 `2 to 4 units` = c("2 units", "3 to 4 units"),
-  			 							 `5+ units` = "5+ units")) %>% 
-	left_join(town2county, by = c("name" = "town")) %>% 
-	select(year, name, county, units, value)
+                fct_collapse(units,
+                                         `1 unit` = "1 unit",
+                                         `2 to 4 units` = c("2 units", "3 to 4 units"),
+                                         `5+ units` = "5+ units")) %>% 
+    left_join(town2county, by = c("name" = "town")) %>% 
+    select(year, name, county, units, value)
 
 write_csv(permits, "../output_data/housing_permits_2001_2019.csv")
 ```
 
-```{r fig.height=10}
+``` r
 permits %>% 
-	select(-name) %>% 
-	group_by(county, year, units) %>% 
-	summarise(value = sum(value)) %>% 
-	filter(!is.na(county)) %>% 
-	ggplot(aes(year, value, group = units)) +
-	geom_line(aes(color = units)) +
-	facet_grid(facets = "county")
+    select(-name) %>% 
+    group_by(county, year, units) %>% 
+    summarise(value = sum(value)) %>% 
+    filter(!is.na(county)) %>% 
+    ggplot(aes(year, value, group = units)) +
+    geom_line(aes(color = units)) +
+    facet_grid(facets = "county")
 ```
+
+![](housing_permits_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
