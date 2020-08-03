@@ -99,10 +99,10 @@ minc <- get_acs(
 				 name = str_remove(NAME, ", Connecticut")) %>% 
 	select(countyfip, name, minc = estimate)
 
-ddi <- read_ipums_ddi("../input_data/usa_00038.xml")
+ddi <- read_ipums_ddi("../input_data/usa_00043.xml")
 
 pums <- read_ipums_micro(ddi, verbose = F)  %>% 
-	mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND), as_factor) %>% 
+	mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND, DIFFREM, DIFFPHYS, DIFFMOB, DIFFCARE, DIFFEYE, DIFFHEAR), as_factor) %>% 
 	mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
 	mutate_at(vars(HHINCOME, OWNCOST, RENTGRS, OCC), as.integer) %>% 
 	janitor::clean_names() %>% 
@@ -138,6 +138,9 @@ pums <- read_ipums_micro(ddi, verbose = F)  %>%
 				 	fct_recode(Black = "Black/African American/Negro") %>%
 				 	fct_other(keep = c("White", "Black", "Latino"), other_level = "Other race") %>%
 				 	fct_relevel("White", "Black", "Latino", "Other race"))
+
+#logical flag for any disability
+pums$has_disability <- apply(pums, 1, function(x) any(grep("Has|Yes", x)))
 
 des <- pums %>%
 	filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
@@ -329,7 +332,112 @@ hh_by_race_inc_band %>%
 				plot.title.position = "plot")
 ```
 
-**Redo disability flags**
+### Disability
+
+Because of the sample size, I'm only looking at these households statewide, not by county.
+
+I think there's still more to do here, but I want to wrap up some of the other tabulation I need to do and come back to it if time permits.
+
+```{r}
+hh_w_disability <- pums %>%
+	filter(has_disability == T) %>% 
+	select(cbserial) %>% 
+	unique()
+
+ct_inc_band_disability <- des %>% 
+	mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
+	select(hhwt, inc_band, disability) %>% 
+	mutate(name = "Connecticut") %>% 
+	group_by(name, inc_band, disability) %>% 
+	summarise(value = survey_total(hhwt)) %>% 
+	ungroup() %>% 
+	group_by(name, inc_band)
+
+ct_disability <- ct_inc_band_disability %>% 
+	select(-value_se) %>% 
+	mutate(inc_band = "Total") %>% 
+	group_by(name, inc_band, disability) %>% 
+	summarise(value = sum(value))
+
+ct_inc_band_disability <- ct_inc_band_disability %>% 
+	bind_rows(ct_disability)
+```
+
+Quick tabulations of households with an occupant with a disability
+```{r}
+kable(ct_inc_band_disability)
+```
+
+Taking a slightly different look than the table above, the plot below shows the share of households in each income band that have an occupant with a disability (so the numerator is households with an occupant with a disability in a given income band, and the denominator is all households in that income band).
+
+While the High band has the most (by count) households with an occupant with a disability, it has the smallest share.
+
+```{r}
+ct_inc_band_disability %>%
+	bind_rows(ct_hhlds) %>% 
+	ungroup() %>% 
+	select(-level) %>% 
+	filter(inc_band != "Total") %>% 
+	mutate(inc_band = as.factor(inc_band) %>% 
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High") %>% 
+				 	fct_rev()) %>%
+	mutate(disability = as.character(disability)) %>% 
+	mutate(disability = if_else(is.na(disability), "Total", disability)) %>% 
+	group_by(name, inc_band) %>% 
+	calc_shares(group = disability, denom = "Total", value = value, moe = value_se) %>% 
+	filter(disability == "TRUE", inc_band != "Total") %>% 
+	ggplot(aes(share, inc_band, group = inc_band)) +
+	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 3.5, hjust = 1.1, vjust = .5) +
+	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
+	scale_fill_custom(rev = T) +
+	theme(plot.title.position = "plot",
+				axis.text.x = element_blank(), 
+				axis.text.y = element_text(colour = "black"),
+				panel.grid.major = element_blank(),
+				panel.grid.minor = element_blank(),
+				legend.position = "none") +
+	labs(title = str_wrap("Share of households with a person with a disability in each income band", 60),
+			 subtitle = "Connecticut",
+			 x = "", y = "")
+```
+Finally, what are the average cost burden rates for households with an occupant with a disability?
+
+```{r}
+ct_cost_ratio_inc_band_disability <- pums %>% 
+	mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
+	filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
+	select(hhwt, inc_band, disability, cb) %>% 
+	mutate(mult = cb * hhwt) %>% 
+	group_by(inc_band, disability) %>% 
+	summarise(avg_cost_ratio = sum(mult) / sum(hhwt)) %>% 
+	ungroup() %>% 
+	mutate(name = "Connecticut")
+```
+
+Read this chart as: "Households with an occupant with a disability in the Very Low cost band spend, on average, 66% of household income on housing costs." 
+
+So the average cost ratio for households with an occupant with a disability is slightly lower than households without a disabled occupant, but the general trends in cost ratio across the cost bands still hold.
+
+```{r}
+ct_cost_ratio_inc_band_disability %>% 
+	ggplot(aes(inc_band, avg_cost_ratio, group = disability)) +
+	geom_col(aes(fill = disability), width = .8, position = position_dodge(.85)) +
+	geom_text(aes(label = percent(avg_cost_ratio, accuracy = 1)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
+	scale_fill_manual(values = c(pal[1], pal [5])) +
+	guides(fill = guide_legend(title = "Household has occupant with disability")) +
+	labs(title = "Average cost ratio for households in each income band",
+			 subtitle = "Connecticut",
+			 x = "", y = "",
+			 caption = "Cost ratio is the amount of household income spent on housing costs.") +
+	theme(plot.title.position = "plot", 
+				legend.position = "bottom",
+				panel.grid.minor = element_blank(),
+				panel.grid.major = element_blank(),
+				axis.text.y = element_blank(),
+				axis.text.x = element_text(colour = "black"))
+```
+
 
 ### Jobs held by household occupants
 

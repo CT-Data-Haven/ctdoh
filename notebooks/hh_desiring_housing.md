@@ -988,7 +988,493 @@ implication than an analysis crosstab.**
 
 ![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20by%20race%20bar%20charts-1.png)<!-- -->
 
-**Redo disability flags**
+### Disability
+
+Because of the sample size, I’m only looking at these households
+statewide, not by county.
+
+I think there’s still more to do here, but I want to wrap up some of the
+other tabulation I need to do and come back to it if time permits.
+
+Quick tabulations of households with an occupant with a disability
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+name
+
+</th>
+
+<th style="text-align:left;">
+
+inc\_band
+
+</th>
+
+<th style="text-align:left;">
+
+disability
+
+</th>
+
+<th style="text-align:right;">
+
+value
+
+</th>
+
+<th style="text-align:right;">
+
+value\_se
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+124879
+
+</td>
+
+<td style="text-align:right;">
+
+1939.616
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+76498
+
+</td>
+
+<td style="text-align:right;">
+
+1509.591
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+105139
+
+</td>
+
+<td style="text-align:right;">
+
+1776.579
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+46206
+
+</td>
+
+<td style="text-align:right;">
+
+1125.341
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+164046
+
+</td>
+
+<td style="text-align:right;">
+
+2214.536
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+50444
+
+</td>
+
+<td style="text-align:right;">
+
+1163.525
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+186625
+
+</td>
+
+<td style="text-align:right;">
+
+2232.000
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+45211
+
+</td>
+
+<td style="text-align:right;">
+
+1058.285
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+484239
+
+</td>
+
+<td style="text-align:right;">
+
+3034.160
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+84087
+
+</td>
+
+<td style="text-align:right;">
+
+1363.296
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Total
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+1064928
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Total
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+302446
+
+</td>
+
+<td style="text-align:right;">
+
+NA
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+Taking a slightly different look than the table above, the plot below
+shows the share of households in each income band that have an occupant
+with a disability (so the numerator is households with an occupant with
+a disability in a given income band, and the denominator is all
+households in that income band).
+
+While the High band has the most (by count) households with an occupant
+with a disability, it has the smallest share.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+Finally, what are the average cost burden rates for households with an
+occupant with a disability?
+
+Read this chart as: “Households with an occupant with a disability in
+the Very Low cost band spend, on average, 66% of household income on
+housing costs.”
+
+So the average cost ratio for households with an occupant with a
+disability is slightly lower than households without a disabled
+occupant, but the general trends in cost ratio across the cost bands
+still hold.
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ### Jobs held by household occupants
 
