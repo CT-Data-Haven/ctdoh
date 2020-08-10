@@ -104,6 +104,7 @@ bind_rows(owner, renter) %>%
  	filter(name == "Connecticut") %>% 
  	ggplot(aes(year, share, group = tenure)) +
  	geom_col(aes(fill = hhlds)) +
+	geom_text(aes(label = percent_format(share, accuracy = 1))) +
  	facet_grid(facets = "tenure") +
  	theme(axis.text.x = element_text(angle = -90)) +
 	labs(title = "CT households")

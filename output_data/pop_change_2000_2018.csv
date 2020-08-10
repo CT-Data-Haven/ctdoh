@@ -1,5 +1,6 @@
 year,level,geoid,name,county,var,estimate
-2000,1_state,09,Connecticut,NA,pop_change,0
+1990,1_state,09,Connecticut,NA,pop_change,0
+2000,1_state,09,Connecticut,NA,pop_change,118449
 2001,1_state,09,Connecticut,NA,pop_change,27270
 2002,1_state,09,Connecticut,NA,pop_change,25914
 2003,1_state,09,Connecticut,NA,pop_change,25587
@@ -18,7 +19,8 @@ year,level,geoid,name,county,var,estimate
 2016,1_state,09,Connecticut,NA,pop_change,-4652
 2017,1_state,09,Connecticut,NA,pop_change,5908
 2018,1_state,09,Connecticut,NA,pop_change,-12974
-2000,2_counties,09001,Fairfield County,NA,pop_change,0
+1990,2_counties,09001,Fairfield County,NA,pop_change,0
+2000,2_counties,09001,Fairfield County,NA,pop_change,54922
 2001,2_counties,09001,Fairfield County,NA,pop_change,6496
 2002,2_counties,09001,Fairfield County,NA,pop_change,3837
 2003,2_counties,09001,Fairfield County,NA,pop_change,3442
@@ -37,7 +39,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09001,Fairfield County,NA,pop_change,1635
 2017,2_counties,09001,Fairfield County,NA,pop_change,5710
 2018,2_counties,09001,Fairfield County,NA,pop_change,-2980
-2000,2_counties,09003,Hartford County,NA,pop_change,0
+1990,2_counties,09003,Hartford County,NA,pop_change,0
+2000,2_counties,09003,Hartford County,NA,pop_change,5400
 2001,2_counties,09003,Hartford County,NA,pop_change,5390
 2002,2_counties,09003,Hartford County,NA,pop_change,4878
 2003,2_counties,09003,Hartford County,NA,pop_change,5884
@@ -56,7 +59,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09003,Hartford County,NA,pop_change,-1244
 2017,2_counties,09003,Hartford County,NA,pop_change,1718
 2018,2_counties,09003,Hartford County,NA,pop_change,-2687
-2000,2_counties,09005,Litchfield County,NA,pop_change,0
+1990,2_counties,09005,Litchfield County,NA,pop_change,0
+2000,2_counties,09005,Litchfield County,NA,pop_change,8101
 2001,2_counties,09005,Litchfield County,NA,pop_change,1925
 2002,2_counties,09005,Litchfield County,NA,pop_change,1856
 2003,2_counties,09005,Litchfield County,NA,pop_change,1450
@@ -75,7 +79,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09005,Litchfield County,NA,pop_change,-1163
 2017,2_counties,09005,Litchfield County,NA,pop_change,-687
 2018,2_counties,09005,Litchfield County,NA,pop_change,-1423
-2000,2_counties,09007,Middlesex County,NA,pop_change,0
+1990,2_counties,09007,Middlesex County,NA,pop_change,0
+2000,2_counties,09007,Middlesex County,NA,pop_change,11875
 2001,2_counties,09007,Middlesex County,NA,pop_change,1935
 2002,2_counties,09007,Middlesex County,NA,pop_change,2181
 2003,2_counties,09007,Middlesex County,NA,pop_change,1677
@@ -94,7 +99,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09007,Middlesex County,NA,pop_change,-727
 2017,2_counties,09007,Middlesex County,NA,pop_change,-328
 2018,2_counties,09007,Middlesex County,NA,pop_change,-742
-2000,2_counties,09009,New Haven County,NA,pop_change,0
+1990,2_counties,09009,New Haven County,NA,pop_change,0
+2000,2_counties,09009,New Haven County,NA,pop_change,19789
 2001,2_counties,09009,New Haven County,NA,pop_change,5867
 2002,2_counties,09009,New Haven County,NA,pop_change,5224
 2003,2_counties,09009,New Haven County,NA,pop_change,6840
@@ -113,7 +119,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09009,New Haven County,NA,pop_change,-1350
 2017,2_counties,09009,New Haven County,NA,pop_change,1253
 2018,2_counties,09009,New Haven County,NA,pop_change,-2788
-2000,2_counties,09011,New London County,NA,pop_change,0
+1990,2_counties,09011,New London County,NA,pop_change,0
+2000,2_counties,09011,New London County,NA,pop_change,4131
 2001,2_counties,09011,New London County,NA,pop_change,2308
 2002,2_counties,09011,New London County,NA,pop_change,3302
 2003,2_counties,09011,New London County,NA,pop_change,1886
@@ -132,7 +139,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09011,New London County,NA,pop_change,-1152
 2017,2_counties,09011,New London County,NA,pop_change,-1261
 2018,2_counties,09011,New London County,NA,pop_change,-1891
-2000,2_counties,09013,Tolland County,NA,pop_change,0
+1990,2_counties,09013,Tolland County,NA,pop_change,0
+2000,2_counties,09013,Tolland County,NA,pop_change,7665
 2001,2_counties,09013,Tolland County,NA,pop_change,2570
 2002,2_counties,09013,Tolland County,NA,pop_change,3428
 2003,2_counties,09013,Tolland County,NA,pop_change,2833
@@ -151,7 +159,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09013,Tolland County,NA,pop_change,-259
 2017,2_counties,09013,Tolland County,NA,pop_change,-93
 2018,2_counties,09013,Tolland County,NA,pop_change,-327
-2000,2_counties,09015,Windham County,NA,pop_change,0
+1990,2_counties,09015,Windham County,NA,pop_change,0
+2000,2_counties,09015,Windham County,NA,pop_change,6566
 2001,2_counties,09015,Windham County,NA,pop_change,779
 2002,2_counties,09015,Windham County,NA,pop_change,1208
 2003,2_counties,09015,Windham County,NA,pop_change,1575
@@ -170,7 +179,8 @@ year,level,geoid,name,county,var,estimate
 2016,2_counties,09015,Windham County,NA,pop_change,-392
 2017,2_counties,09015,Windham County,NA,pop_change,-404
 2018,2_counties,09015,Windham County,NA,pop_change,-136
-2000,3_towns,0900104720,Bethel,Fairfield County,pop_change,0
+1990,3_towns,0900104720,Bethel,Fairfield County,pop_change,0
+2000,3_towns,0900104720,Bethel,Fairfield County,pop_change,526
 2010,3_towns,0900104720,Bethel,Fairfield County,pop_change,517
 2011,3_towns,0900104720,Bethel,Fairfield County,pop_change,-91
 2012,3_towns,0900104720,Bethel,Fairfield County,pop_change,211
@@ -180,7 +190,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900104720,Bethel,Fairfield County,pop_change,129
 2017,3_towns,0900104720,Bethel,Fairfield County,pop_change,157
 2018,3_towns,0900104720,Bethel,Fairfield County,pop_change,25
-2000,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,0
+1990,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,0
+2000,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,-2157
 2010,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,4700
 2011,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,-817
 2012,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,1034
@@ -190,7 +201,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,-318
 2017,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,564
 2018,3_towns,0900108070,Bridgeport,Fairfield County,pop_change,-1169
-2000,3_towns,0900108980,Brookfield,Fairfield County,pop_change,0
+1990,3_towns,0900108980,Brookfield,Fairfield County,pop_change,0
+2000,3_towns,0900108980,Brookfield,Fairfield County,pop_change,1551
 2010,3_towns,0900108980,Brookfield,Fairfield County,pop_change,788
 2011,3_towns,0900108980,Brookfield,Fairfield County,pop_change,-113
 2012,3_towns,0900108980,Brookfield,Fairfield County,pop_change,148
@@ -200,7 +212,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900108980,Brookfield,Fairfield County,pop_change,66
 2017,3_towns,0900108980,Brookfield,Fairfield County,pop_change,94
 2018,3_towns,0900108980,Brookfield,Fairfield County,pop_change,-51
-2000,3_towns,0900118500,Danbury,Fairfield County,pop_change,0
+1990,3_towns,0900118500,Danbury,Fairfield County,pop_change,0
+2000,3_towns,0900118500,Danbury,Fairfield County,pop_change,9263
 2010,3_towns,0900118500,Danbury,Fairfield County,pop_change,6045
 2011,3_towns,0900118500,Danbury,Fairfield County,pop_change,-792
 2012,3_towns,0900118500,Danbury,Fairfield County,pop_change,956
@@ -210,7 +223,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900118500,Danbury,Fairfield County,pop_change,414
 2017,3_towns,0900118500,Danbury,Fairfield County,pop_change,683
 2018,3_towns,0900118500,Danbury,Fairfield County,pop_change,-94
-2000,3_towns,0900118850,Darien,Fairfield County,pop_change,0
+1990,3_towns,0900118850,Darien,Fairfield County,pop_change,0
+2000,3_towns,0900118850,Darien,Fairfield County,pop_change,1411
 2010,3_towns,0900118850,Darien,Fairfield County,pop_change,1125
 2011,3_towns,0900118850,Darien,Fairfield County,pop_change,-152
 2012,3_towns,0900118850,Darien,Fairfield County,pop_change,178
@@ -220,7 +234,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900118850,Darien,Fairfield County,pop_change,127
 2017,3_towns,0900118850,Darien,Fairfield County,pop_change,223
 2018,3_towns,0900118850,Darien,Fairfield County,pop_change,17
-2000,3_towns,0900123890,Easton,Fairfield County,pop_change,0
+1990,3_towns,0900123890,Easton,Fairfield County,pop_change,0
+2000,3_towns,0900123890,Easton,Fairfield County,pop_change,969
 2010,3_towns,0900123890,Easton,Fairfield County,pop_change,218
 2011,3_towns,0900123890,Easton,Fairfield County,pop_change,-38
 2012,3_towns,0900123890,Easton,Fairfield County,pop_change,49
@@ -230,7 +245,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900123890,Easton,Fairfield County,pop_change,-28
 2017,3_towns,0900123890,Easton,Fairfield County,pop_change,16
 2018,3_towns,0900123890,Easton,Fairfield County,pop_change,-49
-2000,3_towns,0900126620,Fairfield,Fairfield County,pop_change,0
+1990,3_towns,0900126620,Fairfield,Fairfield County,pop_change,0
+2000,3_towns,0900126620,Fairfield,Fairfield County,pop_change,3922
 2010,3_towns,0900126620,Fairfield,Fairfield County,pop_change,2064
 2011,3_towns,0900126620,Fairfield,Fairfield County,pop_change,-326
 2012,3_towns,0900126620,Fairfield,Fairfield County,pop_change,484
@@ -240,7 +256,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900126620,Fairfield,Fairfield County,pop_change,98
 2017,3_towns,0900126620,Fairfield,Fairfield County,pop_change,497
 2018,3_towns,0900126620,Fairfield,Fairfield County,pop_change,-13
-2000,3_towns,0900133620,Greenwich,Fairfield County,pop_change,0
+1990,3_towns,0900133620,Greenwich,Fairfield County,pop_change,0
+2000,3_towns,0900133620,Greenwich,Fairfield County,pop_change,2660
 2010,3_towns,0900133620,Greenwich,Fairfield County,pop_change,70
 2011,3_towns,0900133620,Greenwich,Fairfield County,pop_change,-148
 2012,3_towns,0900133620,Greenwich,Fairfield County,pop_change,405
@@ -250,7 +267,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900133620,Greenwich,Fairfield County,pop_change,-16
 2017,3_towns,0900133620,Greenwich,Fairfield County,pop_change,364
 2018,3_towns,0900133620,Greenwich,Fairfield County,pop_change,-208
-2000,3_towns,0900148620,Monroe,Fairfield County,pop_change,0
+1990,3_towns,0900148620,Monroe,Fairfield County,pop_change,0
+2000,3_towns,0900148620,Monroe,Fairfield County,pop_change,2351
 2010,3_towns,0900148620,Monroe,Fairfield County,pop_change,232
 2011,3_towns,0900148620,Monroe,Fairfield County,pop_change,-81
 2012,3_towns,0900148620,Monroe,Fairfield County,pop_change,131
@@ -260,7 +278,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900148620,Monroe,Fairfield County,pop_change,-23
 2017,3_towns,0900148620,Monroe,Fairfield County,pop_change,-18
 2018,3_towns,0900148620,Monroe,Fairfield County,pop_change,-145
-2000,3_towns,0900150580,New Canaan,Fairfield County,pop_change,0
+1990,3_towns,0900150580,New Canaan,Fairfield County,pop_change,0
+2000,3_towns,0900150580,New Canaan,Fairfield County,pop_change,1531
 2010,3_towns,0900150580,New Canaan,Fairfield County,pop_change,343
 2011,3_towns,0900150580,New Canaan,Fairfield County,pop_change,-96
 2012,3_towns,0900150580,New Canaan,Fairfield County,pop_change,152
@@ -270,7 +289,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900150580,New Canaan,Fairfield County,pop_change,29
 2017,3_towns,0900150580,New Canaan,Fairfield County,pop_change,109
 2018,3_towns,0900150580,New Canaan,Fairfield County,pop_change,-84
-2000,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,0
+1990,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,0
+2000,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,1042
 2010,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,-72
 2011,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,-34
 2012,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,85
@@ -280,7 +300,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,-42
 2017,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,16
 2018,3_towns,0900150860,New Fairfield,Fairfield County,pop_change,-99
-2000,3_towns,0900152980,Newtown,Fairfield County,pop_change,0
+1990,3_towns,0900152980,Newtown,Fairfield County,pop_change,0
+2000,3_towns,0900152980,Newtown,Fairfield County,pop_change,4252
 2010,3_towns,0900152980,Newtown,Fairfield County,pop_change,2529
 2011,3_towns,0900152980,Newtown,Fairfield County,pop_change,-325
 2012,3_towns,0900152980,Newtown,Fairfield County,pop_change,308
@@ -290,7 +311,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900152980,Newtown,Fairfield County,pop_change,-22
 2017,3_towns,0900152980,Newtown,Fairfield County,pop_change,40
 2018,3_towns,0900152980,Newtown,Fairfield County,pop_change,-177
-2000,3_towns,0900156060,Norwalk,Fairfield County,pop_change,0
+1990,3_towns,0900156060,Norwalk,Fairfield County,pop_change,0
+2000,3_towns,0900156060,Norwalk,Fairfield County,pop_change,4620
 2010,3_towns,0900156060,Norwalk,Fairfield County,pop_change,2652
 2011,3_towns,0900156060,Norwalk,Fairfield County,pop_change,-458
 2012,3_towns,0900156060,Norwalk,Fairfield County,pop_change,708
@@ -300,7 +322,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900156060,Norwalk,Fairfield County,pop_change,229
 2017,3_towns,0900156060,Norwalk,Fairfield County,pop_change,607
 2018,3_towns,0900156060,Norwalk,Fairfield County,pop_change,-101
-2000,3_towns,0900163480,Redding,Fairfield County,pop_change,0
+1990,3_towns,0900163480,Redding,Fairfield County,pop_change,0
+2000,3_towns,0900163480,Redding,Fairfield County,pop_change,343
 2010,3_towns,0900163480,Redding,Fairfield County,pop_change,888
 2011,3_towns,0900163480,Redding,Fairfield County,pop_change,-100
 2012,3_towns,0900163480,Redding,Fairfield County,pop_change,90
@@ -310,7 +333,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900163480,Redding,Fairfield County,pop_change,-23
 2017,3_towns,0900163480,Redding,Fairfield County,pop_change,-2
 2018,3_towns,0900163480,Redding,Fairfield County,pop_change,-65
-2000,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,0
+1990,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,0
+2000,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,2724
 2010,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,995
 2011,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,-169
 2012,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,179
@@ -320,7 +344,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,-12
 2017,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,81
 2018,3_towns,0900163970,Ridgefield,Fairfield County,pop_change,-136
-2000,3_towns,0900168170,Shelton,Fairfield County,pop_change,0
+1990,3_towns,0900168170,Shelton,Fairfield County,pop_change,0
+2000,3_towns,0900168170,Shelton,Fairfield County,pop_change,2683
 2010,3_towns,0900168170,Shelton,Fairfield County,pop_change,1458
 2011,3_towns,0900168170,Shelton,Fairfield County,pop_change,-249
 2012,3_towns,0900168170,Shelton,Fairfield County,pop_change,331
@@ -330,7 +355,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900168170,Shelton,Fairfield County,pop_change,196
 2017,3_towns,0900168170,Shelton,Fairfield County,pop_change,303
 2018,3_towns,0900168170,Shelton,Fairfield County,pop_change,-127
-2000,3_towns,0900168310,Sherman,Fairfield County,pop_change,0
+1990,3_towns,0900168310,Sherman,Fairfield County,pop_change,0
+2000,3_towns,0900168310,Sherman,Fairfield County,pop_change,1018
 2010,3_towns,0900168310,Sherman,Fairfield County,pop_change,-246
 2011,3_towns,0900168310,Sherman,Fairfield County,pop_change,17
 2012,3_towns,0900168310,Sherman,Fairfield County,pop_change,17
@@ -340,7 +366,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900168310,Sherman,Fairfield County,pop_change,8
 2017,3_towns,0900168310,Sherman,Fairfield County,pop_change,-3
 2018,3_towns,0900168310,Sherman,Fairfield County,pop_change,-13
-2000,3_towns,0900173070,Stamford,Fairfield County,pop_change,0
+1990,3_towns,0900173070,Stamford,Fairfield County,pop_change,0
+2000,3_towns,0900173070,Stamford,Fairfield County,pop_change,9027
 2010,3_towns,0900173070,Stamford,Fairfield County,pop_change,5560
 2011,3_towns,0900173070,Stamford,Fairfield County,pop_change,-859
 2012,3_towns,0900173070,Stamford,Fairfield County,pop_change,1094
@@ -350,7 +377,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900173070,Stamford,Fairfield County,pop_change,818
 2017,3_towns,0900173070,Stamford,Fairfield County,pop_change,1441
 2018,3_towns,0900173070,Stamford,Fairfield County,pop_change,175
-2000,3_towns,0900174190,Stratford,Fairfield County,pop_change,0
+1990,3_towns,0900174190,Stratford,Fairfield County,pop_change,0
+2000,3_towns,0900174190,Stratford,Fairfield County,pop_change,587
 2010,3_towns,0900174190,Stratford,Fairfield County,pop_change,1408
 2011,3_towns,0900174190,Stratford,Fairfield County,pop_change,-268
 2012,3_towns,0900174190,Stratford,Fairfield County,pop_change,324
@@ -360,7 +388,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900174190,Stratford,Fairfield County,pop_change,-16
 2017,3_towns,0900174190,Stratford,Fairfield County,pop_change,229
 2018,3_towns,0900174190,Stratford,Fairfield County,pop_change,-250
-2000,3_towns,0900177200,Trumbull,Fairfield County,pop_change,0
+1990,3_towns,0900177200,Trumbull,Fairfield County,pop_change,0
+2000,3_towns,0900177200,Trumbull,Fairfield County,pop_change,2227
 2010,3_towns,0900177200,Trumbull,Fairfield County,pop_change,1775
 2011,3_towns,0900177200,Trumbull,Fairfield County,pop_change,-266
 2012,3_towns,0900177200,Trumbull,Fairfield County,pop_change,256
@@ -370,7 +399,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900177200,Trumbull,Fairfield County,pop_change,-94
 2017,3_towns,0900177200,Trumbull,Fairfield County,pop_change,-22
 2018,3_towns,0900177200,Trumbull,Fairfield County,pop_change,-281
-2000,3_towns,0900183430,Weston,Fairfield County,pop_change,0
+1990,3_towns,0900183430,Weston,Fairfield County,pop_change,0
+2000,3_towns,0900183430,Weston,Fairfield County,pop_change,1389
 2010,3_towns,0900183430,Weston,Fairfield County,pop_change,142
 2011,3_towns,0900183430,Weston,Fairfield County,pop_change,-37
 2012,3_towns,0900183430,Weston,Fairfield County,pop_change,61
@@ -380,7 +410,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900183430,Weston,Fairfield County,pop_change,-26
 2017,3_towns,0900183430,Weston,Fairfield County,pop_change,22
 2018,3_towns,0900183430,Weston,Fairfield County,pop_change,-81
-2000,3_towns,0900183500,Westport,Fairfield County,pop_change,0
+1990,3_towns,0900183500,Westport,Fairfield County,pop_change,0
+2000,3_towns,0900183500,Westport,Fairfield County,pop_change,1339
 2010,3_towns,0900183500,Westport,Fairfield County,pop_change,642
 2011,3_towns,0900183500,Westport,Fairfield County,pop_change,-142
 2012,3_towns,0900183500,Westport,Fairfield County,pop_change,267
@@ -390,7 +421,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900183500,Westport,Fairfield County,pop_change,168
 2017,3_towns,0900183500,Westport,Fairfield County,pop_change,266
 2018,3_towns,0900183500,Westport,Fairfield County,pop_change,63
-2000,3_towns,0900186370,Wilton,Fairfield County,pop_change,0
+1990,3_towns,0900186370,Wilton,Fairfield County,pop_change,0
+2000,3_towns,0900186370,Wilton,Fairfield County,pop_change,1644
 2010,3_towns,0900186370,Wilton,Fairfield County,pop_change,429
 2011,3_towns,0900186370,Wilton,Fairfield County,pop_change,-89
 2012,3_towns,0900186370,Wilton,Fairfield County,pop_change,228
@@ -400,7 +432,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900186370,Wilton,Fairfield County,pop_change,-27
 2017,3_towns,0900186370,Wilton,Fairfield County,pop_change,43
 2018,3_towns,0900186370,Wilton,Fairfield County,pop_change,-117
-2000,3_towns,0900302060,Avon,Hartford County,pop_change,0
+1990,3_towns,0900302060,Avon,Hartford County,pop_change,0
+2000,3_towns,0900302060,Avon,Hartford County,pop_change,1895
 2010,3_towns,0900302060,Avon,Hartford County,pop_change,2266
 2011,3_towns,0900302060,Avon,Hartford County,pop_change,-239
 2012,3_towns,0900302060,Avon,Hartford County,pop_change,190
@@ -410,7 +443,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900302060,Avon,Hartford County,pop_change,17
 2017,3_towns,0900302060,Avon,Hartford County,pop_change,29
 2018,3_towns,0900302060,Avon,Hartford County,pop_change,-43
-2000,3_towns,0900304300,Berlin,Hartford County,pop_change,0
+1990,3_towns,0900304300,Berlin,Hartford County,pop_change,0
+2000,3_towns,0900304300,Berlin,Hartford County,pop_change,1428
 2010,3_towns,0900304300,Berlin,Hartford County,pop_change,1651
 2011,3_towns,0900304300,Berlin,Hartford County,pop_change,-172
 2012,3_towns,0900304300,Berlin,Hartford County,pop_change,280
@@ -420,7 +454,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900304300,Berlin,Hartford County,pop_change,43
 2017,3_towns,0900304300,Berlin,Hartford County,pop_change,55
 2018,3_towns,0900304300,Berlin,Hartford County,pop_change,-65
-2000,3_towns,0900305910,Bloomfield,Hartford County,pop_change,0
+1990,3_towns,0900305910,Bloomfield,Hartford County,pop_change,0
+2000,3_towns,0900305910,Bloomfield,Hartford County,pop_change,104
 2010,3_towns,0900305910,Bloomfield,Hartford County,pop_change,899
 2011,3_towns,0900305910,Bloomfield,Hartford County,pop_change,-80
 2012,3_towns,0900305910,Bloomfield,Hartford County,pop_change,64
@@ -430,7 +465,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900305910,Bloomfield,Hartford County,pop_change,8
 2017,3_towns,0900305910,Bloomfield,Hartford County,pop_change,161
 2018,3_towns,0900305910,Bloomfield,Hartford County,pop_change,104
-2000,3_towns,0900308490,Bristol,Hartford County,pop_change,0
+1990,3_towns,0900308490,Bristol,Hartford County,pop_change,0
+2000,3_towns,0900308490,Bristol,Hartford County,pop_change,-578
 2010,3_towns,0900308490,Bristol,Hartford County,pop_change,415
 2011,3_towns,0900308490,Bristol,Hartford County,pop_change,-4
 2012,3_towns,0900308490,Bristol,Hartford County,pop_change,29
@@ -440,7 +476,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900308490,Bristol,Hartford County,pop_change,-117
 2017,3_towns,0900308490,Bristol,Hartford County,pop_change,61
 2018,3_towns,0900308490,Bristol,Hartford County,pop_change,-190
-2000,3_towns,0900310100,Burlington,Hartford County,pop_change,0
+1990,3_towns,0900310100,Burlington,Hartford County,pop_change,0
+2000,3_towns,0900310100,Burlington,Hartford County,pop_change,1164
 2010,3_towns,0900310100,Burlington,Hartford County,pop_change,1111
 2011,3_towns,0900310100,Burlington,Hartford County,pop_change,-110
 2012,3_towns,0900310100,Burlington,Hartford County,pop_change,102
@@ -450,7 +487,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900310100,Burlington,Hartford County,pop_change,41
 2017,3_towns,0900310100,Burlington,Hartford County,pop_change,58
 2018,3_towns,0900310100,Burlington,Hartford County,pop_change,9
-2000,3_towns,0900312270,Canton,Hartford County,pop_change,0
+1990,3_towns,0900312270,Canton,Hartford County,pop_change,0
+2000,3_towns,0900312270,Canton,Hartford County,pop_change,572
 2010,3_towns,0900312270,Canton,Hartford County,pop_change,1452
 2011,3_towns,0900312270,Canton,Hartford County,pop_change,-153
 2012,3_towns,0900312270,Canton,Hartford County,pop_change,104
@@ -460,7 +498,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900312270,Canton,Hartford County,pop_change,-17
 2017,3_towns,0900312270,Canton,Hartford County,pop_change,20
 2018,3_towns,0900312270,Canton,Hartford County,pop_change,-33
-2000,3_towns,0900322070,East Granby,Hartford County,pop_change,0
+1990,3_towns,0900322070,East Granby,Hartford County,pop_change,0
+2000,3_towns,0900322070,East Granby,Hartford County,pop_change,443
 2010,3_towns,0900322070,East Granby,Hartford County,pop_change,403
 2011,3_towns,0900322070,East Granby,Hartford County,pop_change,-93
 2012,3_towns,0900322070,East Granby,Hartford County,pop_change,0
@@ -470,7 +509,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900322070,East Granby,Hartford County,pop_change,113
 2017,3_towns,0900322070,East Granby,Hartford County,pop_change,-16
 2018,3_towns,0900322070,East Granby,Hartford County,pop_change,36
-2000,3_towns,0900322630,East Hartford,Hartford County,pop_change,0
+1990,3_towns,0900322630,East Hartford,Hartford County,pop_change,0
+2000,3_towns,0900322630,East Hartford,Hartford County,pop_change,-877
 2010,3_towns,0900322630,East Hartford,Hartford County,pop_change,1677
 2011,3_towns,0900322630,East Hartford,Hartford County,pop_change,-161
 2012,3_towns,0900322630,East Hartford,Hartford County,pop_change,80
@@ -480,7 +520,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900322630,East Hartford,Hartford County,pop_change,-303
 2017,3_towns,0900322630,East Hartford,Hartford County,pop_change,-22
 2018,3_towns,0900322630,East Hartford,Hartford County,pop_change,-359
-2000,3_towns,0900324800,East Windsor,Hartford County,pop_change,0
+1990,3_towns,0900324800,East Windsor,Hartford County,pop_change,0
+2000,3_towns,0900324800,East Windsor,Hartford County,pop_change,-263
 2010,3_towns,0900324800,East Windsor,Hartford County,pop_change,1344
 2011,3_towns,0900324800,East Windsor,Hartford County,pop_change,-138
 2012,3_towns,0900324800,East Windsor,Hartford County,pop_change,172
@@ -490,7 +531,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900324800,East Windsor,Hartford County,pop_change,6
 2017,3_towns,0900324800,East Windsor,Hartford County,pop_change,16
 2018,3_towns,0900324800,East Windsor,Hartford County,pop_change,-30
-2000,3_towns,0900325990,Enfield,Hartford County,pop_change,0
+1990,3_towns,0900325990,Enfield,Hartford County,pop_change,0
+2000,3_towns,0900325990,Enfield,Hartford County,pop_change,-320
 2010,3_towns,0900325990,Enfield,Hartford County,pop_change,-558
 2011,3_towns,0900325990,Enfield,Hartford County,pop_change,93
 2012,3_towns,0900325990,Enfield,Hartford County,pop_change,-48
@@ -500,7 +542,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900325990,Enfield,Hartford County,pop_change,-72
 2017,3_towns,0900325990,Enfield,Hartford County,pop_change,93
 2018,3_towns,0900325990,Enfield,Hartford County,pop_change,-153
-2000,3_towns,0900327600,Farmington,Hartford County,pop_change,0
+1990,3_towns,0900327600,Farmington,Hartford County,pop_change,0
+2000,3_towns,0900327600,Farmington,Hartford County,pop_change,3033
 2010,3_towns,0900327600,Farmington,Hartford County,pop_change,1699
 2011,3_towns,0900327600,Farmington,Hartford County,pop_change,-154
 2012,3_towns,0900327600,Farmington,Hartford County,pop_change,143
@@ -510,7 +553,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900327600,Farmington,Hartford County,pop_change,6
 2017,3_towns,0900327600,Farmington,Hartford County,pop_change,27
 2018,3_towns,0900327600,Farmington,Hartford County,pop_change,-50
-2000,3_towns,0900331240,Glastonbury,Hartford County,pop_change,0
+1990,3_towns,0900331240,Glastonbury,Hartford County,pop_change,0
+2000,3_towns,0900331240,Glastonbury,Hartford County,pop_change,3975
 2010,3_towns,0900331240,Glastonbury,Hartford County,pop_change,2551
 2011,3_towns,0900331240,Glastonbury,Hartford County,pop_change,-256
 2012,3_towns,0900331240,Glastonbury,Hartford County,pop_change,230
@@ -520,7 +564,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900331240,Glastonbury,Hartford County,pop_change,-8
 2017,3_towns,0900331240,Glastonbury,Hartford County,pop_change,11
 2018,3_towns,0900331240,Glastonbury,Hartford County,pop_change,-110
-2000,3_towns,0900332640,Granby,Hartford County,pop_change,0
+1990,3_towns,0900332640,Granby,Hartford County,pop_change,0
+2000,3_towns,0900332640,Granby,Hartford County,pop_change,978
 2010,3_towns,0900332640,Granby,Hartford County,pop_change,935
 2011,3_towns,0900332640,Granby,Hartford County,pop_change,-90
 2012,3_towns,0900332640,Granby,Hartford County,pop_change,51
@@ -530,7 +575,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900332640,Granby,Hartford County,pop_change,-18
 2017,3_towns,0900332640,Granby,Hartford County,pop_change,31
 2018,3_towns,0900332640,Granby,Hartford County,pop_change,-18
-2000,3_towns,0900337070,Hartford,Hartford County,pop_change,0
+1990,3_towns,0900337070,Hartford,Hartford County,pop_change,0
+2000,3_towns,0900337070,Hartford,Hartford County,pop_change,-18161
 2010,3_towns,0900337070,Hartford,Hartford County,pop_change,3197
 2011,3_towns,0900337070,Hartford,Hartford County,pop_change,42
 2012,3_towns,0900337070,Hartford,Hartford County,pop_change,62
@@ -540,7 +586,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900337070,Hartford,Hartford County,pop_change,-475
 2017,3_towns,0900337070,Hartford,Hartford County,pop_change,70
 2018,3_towns,0900337070,Hartford,Hartford County,pop_change,-762
-2000,3_towns,0900337140,Hartland,Hartford County,pop_change,0
+1990,3_towns,0900337140,Hartland,Hartford County,pop_change,0
+2000,3_towns,0900337140,Hartland,Hartford County,pop_change,146
 2010,3_towns,0900337140,Hartland,Hartford County,pop_change,102
 2011,3_towns,0900337140,Hartland,Hartford County,pop_change,44
 2012,3_towns,0900337140,Hartland,Hartford County,pop_change,40
@@ -550,7 +597,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900337140,Hartland,Hartford County,pop_change,-109
 2017,3_towns,0900337140,Hartland,Hartford County,pop_change,-4
 2018,3_towns,0900337140,Hartland,Hartford County,pop_change,-42
-2000,3_towns,0900344700,Manchester,Hartford County,pop_change,0
+1990,3_towns,0900344700,Manchester,Hartford County,pop_change,0
+2000,3_towns,0900344700,Manchester,Hartford County,pop_change,3122
 2010,3_towns,0900344700,Manchester,Hartford County,pop_change,3501
 2011,3_towns,0900344700,Manchester,Hartford County,pop_change,-344
 2012,3_towns,0900344700,Manchester,Hartford County,pop_change,181
@@ -560,7 +608,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900344700,Manchester,Hartford County,pop_change,-114
 2017,3_towns,0900344700,Manchester,Hartford County,pop_change,99
 2018,3_towns,0900344700,Manchester,Hartford County,pop_change,-217
-2000,3_towns,0900345820,Marlborough,Hartford County,pop_change,0
+1990,3_towns,0900345820,Marlborough,Hartford County,pop_change,0
+2000,3_towns,0900345820,Marlborough,Hartford County,pop_change,174
 2010,3_towns,0900345820,Marlborough,Hartford County,pop_change,695
 2011,3_towns,0900345820,Marlborough,Hartford County,pop_change,-69
 2012,3_towns,0900345820,Marlborough,Hartford County,pop_change,47
@@ -570,7 +619,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900345820,Marlborough,Hartford County,pop_change,-13
 2017,3_towns,0900345820,Marlborough,Hartford County,pop_change,-6
 2018,3_towns,0900345820,Marlborough,Hartford County,pop_change,-26
-2000,3_towns,0900350440,New Britain,Hartford County,pop_change,0
+1990,3_towns,0900350440,New Britain,Hartford County,pop_change,0
+2000,3_towns,0900350440,New Britain,Hartford County,pop_change,-3953
 2010,3_towns,0900350440,New Britain,Hartford County,pop_change,1668
 2011,3_towns,0900350440,New Britain,Hartford County,pop_change,-151
 2012,3_towns,0900350440,New Britain,Hartford County,pop_change,67
@@ -580,7 +630,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900350440,New Britain,Hartford County,pop_change,-112
 2017,3_towns,0900350440,New Britain,Hartford County,pop_change,193
 2018,3_towns,0900350440,New Britain,Hartford County,pop_change,-230
-2000,3_towns,0900352140,Newington,Hartford County,pop_change,0
+1990,3_towns,0900352140,Newington,Hartford County,pop_change,0
+2000,3_towns,0900352140,Newington,Hartford County,pop_change,98
 2010,3_towns,0900352140,Newington,Hartford County,pop_change,1256
 2011,3_towns,0900352140,Newington,Hartford County,pop_change,-121
 2012,3_towns,0900352140,Newington,Hartford County,pop_change,79
@@ -590,7 +641,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900352140,Newington,Hartford County,pop_change,-48
 2017,3_towns,0900352140,Newington,Hartford County,pop_change,13
 2018,3_towns,0900352140,Newington,Hartford County,pop_change,-280
-2000,3_towns,0900360120,Plainville,Hartford County,pop_change,0
+1990,3_towns,0900360120,Plainville,Hartford County,pop_change,0
+2000,3_towns,0900360120,Plainville,Hartford County,pop_change,-64
 2010,3_towns,0900360120,Plainville,Hartford County,pop_change,388
 2011,3_towns,0900360120,Plainville,Hartford County,pop_change,-46
 2012,3_towns,0900360120,Plainville,Hartford County,pop_change,56
@@ -600,7 +652,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900360120,Plainville,Hartford County,pop_change,-19
 2017,3_towns,0900360120,Plainville,Hartford County,pop_change,33
 2018,3_towns,0900360120,Plainville,Hartford County,pop_change,-85
-2000,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,0
+1990,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,0
+2000,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,1412
 2010,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,1743
 2011,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,-176
 2012,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,98
@@ -610,7 +663,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,81
 2017,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,95
 2018,3_towns,0900365370,Rocky Hill,Hartford County,pop_change,122
-2000,3_towns,0900368940,Simsbury,Hartford County,pop_change,0
+1990,3_towns,0900368940,Simsbury,Hartford County,pop_change,0
+2000,3_towns,0900368940,Simsbury,Hartford County,pop_change,1211
 2010,3_towns,0900368940,Simsbury,Hartford County,pop_change,277
 2011,3_towns,0900368940,Simsbury,Hartford County,pop_change,-13
 2012,3_towns,0900368940,Simsbury,Hartford County,pop_change,37
@@ -620,7 +674,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900368940,Simsbury,Hartford County,pop_change,171
 2017,3_towns,0900368940,Simsbury,Hartford County,pop_change,292
 2018,3_towns,0900368940,Simsbury,Hartford County,pop_change,212
-2000,3_towns,0900370550,Southington,Hartford County,pop_change,0
+1990,3_towns,0900370550,Southington,Hartford County,pop_change,0
+2000,3_towns,0900370550,Southington,Hartford County,pop_change,1210
 2010,3_towns,0900370550,Southington,Hartford County,pop_change,3341
 2011,3_towns,0900370550,Southington,Hartford County,pop_change,-338
 2012,3_towns,0900370550,Southington,Hartford County,pop_change,307
@@ -630,7 +685,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900370550,Southington,Hartford County,pop_change,50
 2017,3_towns,0900370550,Southington,Hartford County,pop_change,142
 2018,3_towns,0900370550,Southington,Hartford County,pop_change,-54
-2000,3_towns,0900371390,South Windsor,Hartford County,pop_change,0
+1990,3_towns,0900371390,South Windsor,Hartford County,pop_change,0
+2000,3_towns,0900371390,South Windsor,Hartford County,pop_change,2322
 2010,3_towns,0900371390,South Windsor,Hartford County,pop_change,1297
 2011,3_towns,0900371390,South Windsor,Hartford County,pop_change,-132
 2012,3_towns,0900371390,South Windsor,Hartford County,pop_change,107
@@ -640,7 +696,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900371390,South Windsor,Hartford County,pop_change,-13
 2017,3_towns,0900371390,South Windsor,Hartford County,pop_change,9
 2018,3_towns,0900371390,South Windsor,Hartford County,pop_change,21
-2000,3_towns,0900374540,Suffield,Hartford County,pop_change,0
+1990,3_towns,0900374540,Suffield,Hartford County,pop_change,0
+2000,3_towns,0900374540,Suffield,Hartford County,pop_change,2125
 2010,3_towns,0900374540,Suffield,Hartford County,pop_change,2183
 2011,3_towns,0900374540,Suffield,Hartford County,pop_change,-222
 2012,3_towns,0900374540,Suffield,Hartford County,pop_change,179
@@ -650,7 +707,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900374540,Suffield,Hartford County,pop_change,-39
 2017,3_towns,0900374540,Suffield,Hartford County,pop_change,57
 2018,3_towns,0900374540,Suffield,Hartford County,pop_change,-13
-2000,3_towns,0900382590,West Hartford,Hartford County,pop_change,0
+1990,3_towns,0900382590,West Hartford,Hartford County,pop_change,0
+2000,3_towns,0900382590,West Hartford,Hartford County,pop_change,3479
 2010,3_towns,0900382590,West Hartford,Hartford County,pop_change,-321
 2011,3_towns,0900382590,West Hartford,Hartford County,pop_change,-202
 2012,3_towns,0900382590,West Hartford,Hartford County,pop_change,91
@@ -660,7 +718,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900382590,West Hartford,Hartford County,pop_change,-101
 2017,3_towns,0900382590,West Hartford,Hartford County,pop_change,173
 2018,3_towns,0900382590,West Hartford,Hartford County,pop_change,-233
-2000,3_towns,0900384900,Wethersfield,Hartford County,pop_change,0
+1990,3_towns,0900384900,Wethersfield,Hartford County,pop_change,0
+2000,3_towns,0900384900,Wethersfield,Hartford County,pop_change,620
 2010,3_towns,0900384900,Wethersfield,Hartford County,pop_change,397
 2011,3_towns,0900384900,Wethersfield,Hartford County,pop_change,-27
 2012,3_towns,0900384900,Wethersfield,Hartford County,pop_change,29
@@ -670,7 +729,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900384900,Wethersfield,Hartford County,pop_change,-114
 2017,3_towns,0900384900,Wethersfield,Hartford County,pop_change,-1
 2018,3_towns,0900384900,Wethersfield,Hartford County,pop_change,-128
-2000,3_towns,0900387000,Windsor,Hartford County,pop_change,0
+1990,3_towns,0900387000,Windsor,Hartford County,pop_change,0
+2000,3_towns,0900387000,Windsor,Hartford County,pop_change,420
 2010,3_towns,0900387000,Windsor,Hartford County,pop_change,807
 2011,3_towns,0900387000,Windsor,Hartford County,pop_change,-82
 2012,3_towns,0900387000,Windsor,Hartford County,pop_change,105
@@ -680,7 +740,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900387000,Windsor,Hartford County,pop_change,-61
 2017,3_towns,0900387000,Windsor,Hartford County,pop_change,3
 2018,3_towns,0900387000,Windsor,Hartford County,pop_change,-120
-2000,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,0
+1990,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,0
+2000,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,-315
 2010,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,455
 2011,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,-32
 2012,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,34
@@ -690,7 +751,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,-27
 2017,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,26
 2018,3_towns,0900387070,Windsor Locks,Hartford County,pop_change,50
-2000,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,0
+1990,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,0
+2000,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,125
 2010,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,305
 2011,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,-16
 2012,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,8
@@ -700,7 +762,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,-21
 2017,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,-17
 2018,3_towns,0900502760,Barkhamsted,Litchfield County,pop_change,-22
-2000,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,0
+1990,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,0
+2000,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,351
 2010,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,185
 2011,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,-11
 2012,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,-2
@@ -710,7 +773,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,-31
 2017,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,-2
 2018,3_towns,0900504930,Bethlehem,Litchfield County,pop_change,-38
-2000,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,0
+1990,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,0
+2000,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,170
 2010,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,-97
 2011,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,63
 2012,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,-86
@@ -720,7 +784,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,-11
 2017,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,13
 2018,3_towns,0900508210,Bridgewater,Litchfield County,pop_change,25
-2000,3_towns,0900510940,Canaan,Litchfield County,pop_change,0
+1990,3_towns,0900510940,Canaan,Litchfield County,pop_change,0
+2000,3_towns,0900510940,Canaan,Litchfield County,pop_change,24
 2010,3_towns,0900510940,Canaan,Litchfield County,pop_change,153
 2011,3_towns,0900510940,Canaan,Litchfield County,pop_change,-51
 2012,3_towns,0900510940,Canaan,Litchfield County,pop_change,12
@@ -730,7 +795,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900510940,Canaan,Litchfield County,pop_change,32
 2017,3_towns,0900510940,Canaan,Litchfield County,pop_change,-53
 2018,3_towns,0900510940,Canaan,Litchfield County,pop_change,68
-2000,3_towns,0900516050,Colebrook,Litchfield County,pop_change,0
+1990,3_towns,0900516050,Colebrook,Litchfield County,pop_change,0
+2000,3_towns,0900516050,Colebrook,Litchfield County,pop_change,106
 2010,3_towns,0900516050,Colebrook,Litchfield County,pop_change,14
 2011,3_towns,0900516050,Colebrook,Litchfield County,pop_change,-90
 2012,3_towns,0900516050,Colebrook,Litchfield County,pop_change,98
@@ -740,7 +806,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900516050,Colebrook,Litchfield County,pop_change,-48
 2017,3_towns,0900516050,Colebrook,Litchfield County,pop_change,-114
 2018,3_towns,0900516050,Colebrook,Litchfield County,pop_change,47
-2000,3_towns,0900517240,Cornwall,Litchfield County,pop_change,0
+1990,3_towns,0900517240,Cornwall,Litchfield County,pop_change,0
+2000,3_towns,0900517240,Cornwall,Litchfield County,pop_change,20
 2010,3_towns,0900517240,Cornwall,Litchfield County,pop_change,-14
 2011,3_towns,0900517240,Cornwall,Litchfield County,pop_change,49
 2012,3_towns,0900517240,Cornwall,Litchfield County,pop_change,-76
@@ -750,7 +817,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900517240,Cornwall,Litchfield County,pop_change,-26
 2017,3_towns,0900517240,Cornwall,Litchfield County,pop_change,28
 2018,3_towns,0900517240,Cornwall,Litchfield County,pop_change,-62
-2000,3_towns,0900532290,Goshen,Litchfield County,pop_change,0
+1990,3_towns,0900532290,Goshen,Litchfield County,pop_change,0
+2000,3_towns,0900532290,Goshen,Litchfield County,pop_change,368
 2010,3_towns,0900532290,Goshen,Litchfield County,pop_change,279
 2011,3_towns,0900532290,Goshen,Litchfield County,pop_change,-19
 2012,3_towns,0900532290,Goshen,Litchfield County,pop_change,0
@@ -760,7 +828,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900532290,Goshen,Litchfield County,pop_change,-24
 2017,3_towns,0900532290,Goshen,Litchfield County,pop_change,-5
 2018,3_towns,0900532290,Goshen,Litchfield County,pop_change,-11
-2000,3_towns,0900537280,Harwinton,Litchfield County,pop_change,0
+1990,3_towns,0900537280,Harwinton,Litchfield County,pop_change,0
+2000,3_towns,0900537280,Harwinton,Litchfield County,pop_change,55
 2010,3_towns,0900537280,Harwinton,Litchfield County,pop_change,359
 2011,3_towns,0900537280,Harwinton,Litchfield County,pop_change,-24
 2012,3_towns,0900537280,Harwinton,Litchfield County,pop_change,2
@@ -770,7 +839,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900537280,Harwinton,Litchfield County,pop_change,-30
 2017,3_towns,0900537280,Harwinton,Litchfield County,pop_change,-15
 2018,3_towns,0900537280,Harwinton,Litchfield County,pop_change,-57
-2000,3_towns,0900540290,Kent,Litchfield County,pop_change,0
+1990,3_towns,0900540290,Kent,Litchfield County,pop_change,0
+2000,3_towns,0900540290,Kent,Litchfield County,pop_change,-60
 2010,3_towns,0900540290,Kent,Litchfield County,pop_change,121
 2011,3_towns,0900540290,Kent,Litchfield County,pop_change,3
 2012,3_towns,0900540290,Kent,Litchfield County,pop_change,-11
@@ -780,7 +850,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900540290,Kent,Litchfield County,pop_change,-36
 2017,3_towns,0900540290,Kent,Litchfield County,pop_change,-28
 2018,3_towns,0900540290,Kent,Litchfield County,pop_change,-29
-2000,3_towns,0900543370,Litchfield,Litchfield County,pop_change,0
+1990,3_towns,0900543370,Litchfield,Litchfield County,pop_change,0
+2000,3_towns,0900543370,Litchfield,Litchfield County,pop_change,-49
 2010,3_towns,0900543370,Litchfield,Litchfield County,pop_change,150
 2011,3_towns,0900543370,Litchfield,Litchfield County,pop_change,18
 2012,3_towns,0900543370,Litchfield,Litchfield County,pop_change,-30
@@ -790,7 +861,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900543370,Litchfield,Litchfield County,pop_change,-29
 2017,3_towns,0900543370,Litchfield,Litchfield County,pop_change,-25
 2018,3_towns,0900543370,Litchfield,Litchfield County,pop_change,-54
-2000,3_towns,0900549460,Morris,Litchfield County,pop_change,0
+1990,3_towns,0900549460,Morris,Litchfield County,pop_change,0
+2000,3_towns,0900549460,Morris,Litchfield County,pop_change,262
 2010,3_towns,0900549460,Morris,Litchfield County,pop_change,87
 2011,3_towns,0900549460,Morris,Litchfield County,pop_change,23
 2012,3_towns,0900549460,Morris,Litchfield County,pop_change,58
@@ -800,7 +872,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900549460,Morris,Litchfield County,pop_change,39
 2017,3_towns,0900549460,Morris,Litchfield County,pop_change,14
 2018,3_towns,0900549460,Morris,Litchfield County,pop_change,-79
-2000,3_towns,0900551350,New Hartford,Litchfield County,pop_change,0
+1990,3_towns,0900551350,New Hartford,Litchfield County,pop_change,0
+2000,3_towns,0900551350,New Hartford,Litchfield County,pop_change,319
 2010,3_towns,0900551350,New Hartford,Litchfield County,pop_change,882
 2011,3_towns,0900551350,New Hartford,Litchfield County,pop_change,-69
 2012,3_towns,0900551350,New Hartford,Litchfield County,pop_change,23
@@ -810,7 +883,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900551350,New Hartford,Litchfield County,pop_change,-29
 2017,3_towns,0900551350,New Hartford,Litchfield County,pop_change,-30
 2018,3_towns,0900551350,New Hartford,Litchfield County,pop_change,-39
-2000,3_towns,0900552630,New Milford,Litchfield County,pop_change,0
+1990,3_towns,0900552630,New Milford,Litchfield County,pop_change,0
+2000,3_towns,0900552630,New Milford,Litchfield County,pop_change,3492
 2010,3_towns,0900552630,New Milford,Litchfield County,pop_change,1021
 2011,3_towns,0900552630,New Milford,Litchfield County,pop_change,-20
 2012,3_towns,0900552630,New Milford,Litchfield County,pop_change,-55
@@ -820,7 +894,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900552630,New Milford,Litchfield County,pop_change,-169
 2017,3_towns,0900552630,New Milford,Litchfield County,pop_change,-121
 2018,3_towns,0900552630,New Milford,Litchfield County,pop_change,-184
-2000,3_towns,0900553470,Norfolk,Litchfield County,pop_change,0
+1990,3_towns,0900553470,Norfolk,Litchfield County,pop_change,0
+2000,3_towns,0900553470,Norfolk,Litchfield County,pop_change,-400
 2010,3_towns,0900553470,Norfolk,Litchfield County,pop_change,49
 2011,3_towns,0900553470,Norfolk,Litchfield County,pop_change,-135
 2012,3_towns,0900553470,Norfolk,Litchfield County,pop_change,-82
@@ -830,7 +905,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900553470,Norfolk,Litchfield County,pop_change,-103
 2017,3_towns,0900553470,Norfolk,Litchfield County,pop_change,-5
 2018,3_towns,0900553470,Norfolk,Litchfield County,pop_change,61
-2000,3_towns,0900554030,North Canaan,Litchfield County,pop_change,0
+1990,3_towns,0900554030,North Canaan,Litchfield County,pop_change,0
+2000,3_towns,0900554030,North Canaan,Litchfield County,pop_change,66
 2010,3_towns,0900554030,North Canaan,Litchfield County,pop_change,-35
 2011,3_towns,0900554030,North Canaan,Litchfield County,pop_change,14
 2012,3_towns,0900554030,North Canaan,Litchfield County,pop_change,-28
@@ -840,7 +916,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900554030,North Canaan,Litchfield County,pop_change,-9
 2017,3_towns,0900554030,North Canaan,Litchfield County,pop_change,101
 2018,3_towns,0900554030,North Canaan,Litchfield County,pop_change,-29
-2000,3_towns,0900560750,Plymouth,Litchfield County,pop_change,0
+1990,3_towns,0900560750,Plymouth,Litchfield County,pop_change,0
+2000,3_towns,0900560750,Plymouth,Litchfield County,pop_change,-188
 2010,3_towns,0900560750,Plymouth,Litchfield County,pop_change,609
 2011,3_towns,0900560750,Plymouth,Litchfield County,pop_change,-25
 2012,3_towns,0900560750,Plymouth,Litchfield County,pop_change,-25
@@ -850,7 +927,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900560750,Plymouth,Litchfield County,pop_change,-78
 2017,3_towns,0900560750,Plymouth,Litchfield County,pop_change,-38
 2018,3_towns,0900560750,Plymouth,Litchfield County,pop_change,-106
-2000,3_towns,0900565930,Roxbury,Litchfield County,pop_change,0
+1990,3_towns,0900565930,Roxbury,Litchfield County,pop_change,0
+2000,3_towns,0900565930,Roxbury,Litchfield County,pop_change,311
 2010,3_towns,0900565930,Roxbury,Litchfield County,pop_change,126
 2011,3_towns,0900565930,Roxbury,Litchfield County,pop_change,53
 2012,3_towns,0900565930,Roxbury,Litchfield County,pop_change,7
@@ -860,7 +938,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900565930,Roxbury,Litchfield County,pop_change,-11
 2017,3_towns,0900565930,Roxbury,Litchfield County,pop_change,-29
 2018,3_towns,0900565930,Roxbury,Litchfield County,pop_change,-128
-2000,3_towns,0900566420,Salisbury,Litchfield County,pop_change,0
+1990,3_towns,0900566420,Salisbury,Litchfield County,pop_change,0
+2000,3_towns,0900566420,Salisbury,Litchfield County,pop_change,-113
 2010,3_towns,0900566420,Salisbury,Litchfield County,pop_change,-236
 2011,3_towns,0900566420,Salisbury,Litchfield County,pop_change,42
 2012,3_towns,0900566420,Salisbury,Litchfield County,pop_change,-36
@@ -870,7 +949,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900566420,Salisbury,Litchfield County,pop_change,-16
 2017,3_towns,0900566420,Salisbury,Litchfield County,pop_change,-11
 2018,3_towns,0900566420,Salisbury,Litchfield County,pop_change,-27
-2000,3_towns,0900567960,Sharon,Litchfield County,pop_change,0
+1990,3_towns,0900567960,Sharon,Litchfield County,pop_change,0
+2000,3_towns,0900567960,Sharon,Litchfield County,pop_change,40
 2010,3_towns,0900567960,Sharon,Litchfield County,pop_change,-186
 2011,3_towns,0900567960,Sharon,Litchfield County,pop_change,22
 2012,3_towns,0900567960,Sharon,Litchfield County,pop_change,-15
@@ -880,7 +960,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900567960,Sharon,Litchfield County,pop_change,-10
 2017,3_towns,0900567960,Sharon,Litchfield County,pop_change,7
 2018,3_towns,0900567960,Sharon,Litchfield County,pop_change,-12
-2000,3_towns,0900575730,Thomaston,Litchfield County,pop_change,0
+1990,3_towns,0900575730,Thomaston,Litchfield County,pop_change,0
+2000,3_towns,0900575730,Thomaston,Litchfield County,pop_change,556
 2010,3_towns,0900575730,Thomaston,Litchfield County,pop_change,384
 2011,3_towns,0900575730,Thomaston,Litchfield County,pop_change,-25
 2012,3_towns,0900575730,Thomaston,Litchfield County,pop_change,3
@@ -890,7 +971,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900575730,Thomaston,Litchfield County,pop_change,-37
 2017,3_towns,0900575730,Thomaston,Litchfield County,pop_change,-31
 2018,3_towns,0900575730,Thomaston,Litchfield County,pop_change,-45
-2000,3_towns,0900576570,Torrington,Litchfield County,pop_change,0
+1990,3_towns,0900576570,Torrington,Litchfield County,pop_change,0
+2000,3_towns,0900576570,Torrington,Litchfield County,pop_change,1515
 2010,3_towns,0900576570,Torrington,Litchfield County,pop_change,1181
 2011,3_towns,0900576570,Torrington,Litchfield County,pop_change,-3
 2012,3_towns,0900576570,Torrington,Litchfield County,pop_change,-141
@@ -900,7 +982,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900576570,Torrington,Litchfield County,pop_change,-266
 2017,3_towns,0900576570,Torrington,Litchfield County,pop_change,-149
 2018,3_towns,0900576570,Torrington,Litchfield County,pop_change,-341
-2000,3_towns,0900579510,Warren,Litchfield County,pop_change,0
+1990,3_towns,0900579510,Warren,Litchfield County,pop_change,0
+2000,3_towns,0900579510,Warren,Litchfield County,pop_change,28
 2010,3_towns,0900579510,Warren,Litchfield County,pop_change,207
 2011,3_towns,0900579510,Warren,Litchfield County,pop_change,70
 2012,3_towns,0900579510,Warren,Litchfield County,pop_change,29
@@ -910,7 +993,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900579510,Warren,Litchfield County,pop_change,31
 2017,3_towns,0900579510,Warren,Litchfield County,pop_change,-28
 2018,3_towns,0900579510,Warren,Litchfield County,pop_change,-35
-2000,3_towns,0900579720,Washington,Litchfield County,pop_change,0
+1990,3_towns,0900579720,Washington,Litchfield County,pop_change,0
+2000,3_towns,0900579720,Washington,Litchfield County,pop_change,-309
 2010,3_towns,0900579720,Washington,Litchfield County,pop_change,-18
 2011,3_towns,0900579720,Washington,Litchfield County,pop_change,8
 2012,3_towns,0900579720,Washington,Litchfield County,pop_change,-12
@@ -920,7 +1004,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900579720,Washington,Litchfield County,pop_change,-20
 2017,3_towns,0900579720,Washington,Litchfield County,pop_change,-8
 2018,3_towns,0900579720,Washington,Litchfield County,pop_change,-17
-2000,3_towns,0900580490,Watertown,Litchfield County,pop_change,0
+1990,3_towns,0900580490,Watertown,Litchfield County,pop_change,0
+2000,3_towns,0900580490,Watertown,Litchfield County,pop_change,1205
 2010,3_towns,0900580490,Watertown,Litchfield County,pop_change,853
 2011,3_towns,0900580490,Watertown,Litchfield County,pop_change,-12
 2012,3_towns,0900580490,Watertown,Litchfield County,pop_change,-53
@@ -930,7 +1015,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900580490,Watertown,Litchfield County,pop_change,-113
 2017,3_towns,0900580490,Watertown,Litchfield County,pop_change,-72
 2018,3_towns,0900580490,Watertown,Litchfield County,pop_change,-144
-2000,3_towns,0900586440,Winchester,Litchfield County,pop_change,0
+1990,3_towns,0900586440,Winchester,Litchfield County,pop_change,0
+2000,3_towns,0900586440,Winchester,Litchfield County,pop_change,-860
 2010,3_towns,0900586440,Winchester,Litchfield County,pop_change,578
 2011,3_towns,0900586440,Winchester,Litchfield County,pop_change,-26
 2012,3_towns,0900586440,Winchester,Litchfield County,pop_change,-27
@@ -940,7 +1026,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900586440,Winchester,Litchfield County,pop_change,-80
 2017,3_towns,0900586440,Winchester,Litchfield County,pop_change,-32
 2018,3_towns,0900586440,Winchester,Litchfield County,pop_change,-96
-2000,3_towns,0900587910,Woodbury,Litchfield County,pop_change,0
+1990,3_towns,0900587910,Woodbury,Litchfield County,pop_change,0
+2000,3_towns,0900587910,Woodbury,Litchfield County,pop_change,1067
 2010,3_towns,0900587910,Woodbury,Litchfield County,pop_change,777
 2011,3_towns,0900587910,Woodbury,Litchfield County,pop_change,-47
 2012,3_towns,0900587910,Woodbury,Litchfield County,pop_change,-3
@@ -950,7 +1037,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900587910,Woodbury,Litchfield County,pop_change,-68
 2017,3_towns,0900587910,Woodbury,Litchfield County,pop_change,-37
 2018,3_towns,0900587910,Woodbury,Litchfield County,pop_change,-69
-2000,3_towns,0900714300,Chester,Middlesex County,pop_change,0
+1990,3_towns,0900714300,Chester,Middlesex County,pop_change,0
+2000,3_towns,0900714300,Chester,Middlesex County,pop_change,326
 2010,3_towns,0900714300,Chester,Middlesex County,pop_change,251
 2011,3_towns,0900714300,Chester,Middlesex County,pop_change,-10
 2012,3_towns,0900714300,Chester,Middlesex County,pop_change,106
@@ -960,7 +1048,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900714300,Chester,Middlesex County,pop_change,27
 2017,3_towns,0900714300,Chester,Middlesex County,pop_change,-4
 2018,3_towns,0900714300,Chester,Middlesex County,pop_change,-18
-2000,3_towns,0900715350,Clinton,Middlesex County,pop_change,0
+1990,3_towns,0900715350,Clinton,Middlesex County,pop_change,0
+2000,3_towns,0900715350,Clinton,Middlesex County,pop_change,327
 2010,3_towns,0900715350,Clinton,Middlesex County,pop_change,166
 2011,3_towns,0900715350,Clinton,Middlesex County,pop_change,31
 2012,3_towns,0900715350,Clinton,Middlesex County,pop_change,-32
@@ -970,7 +1059,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900715350,Clinton,Middlesex County,pop_change,-95
 2017,3_towns,0900715350,Clinton,Middlesex County,pop_change,-31
 2018,3_towns,0900715350,Clinton,Middlesex County,pop_change,-65
-2000,3_towns,0900718080,Cromwell,Middlesex County,pop_change,0
+1990,3_towns,0900718080,Cromwell,Middlesex County,pop_change,0
+2000,3_towns,0900718080,Cromwell,Middlesex County,pop_change,585
 2010,3_towns,0900718080,Cromwell,Middlesex County,pop_change,1134
 2011,3_towns,0900718080,Cromwell,Middlesex County,pop_change,-54
 2012,3_towns,0900718080,Cromwell,Middlesex County,pop_change,108
@@ -980,7 +1070,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900718080,Cromwell,Middlesex County,pop_change,-37
 2017,3_towns,0900718080,Cromwell,Middlesex County,pop_change,-28
 2018,3_towns,0900718080,Cromwell,Middlesex County,pop_change,-48
-2000,3_towns,0900719130,Deep River,Middlesex County,pop_change,0
+1990,3_towns,0900719130,Deep River,Middlesex County,pop_change,0
+2000,3_towns,0900719130,Deep River,Middlesex County,pop_change,278
 2010,3_towns,0900719130,Deep River,Middlesex County,pop_change,19
 2011,3_towns,0900719130,Deep River,Middlesex County,pop_change,23
 2012,3_towns,0900719130,Deep River,Middlesex County,pop_change,-16
@@ -990,7 +1081,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900719130,Deep River,Middlesex County,pop_change,-19
 2017,3_towns,0900719130,Deep River,Middlesex County,pop_change,-5
 2018,3_towns,0900719130,Deep River,Middlesex County,pop_change,-54
-2000,3_towns,0900720810,Durham,Middlesex County,pop_change,0
+1990,3_towns,0900720810,Durham,Middlesex County,pop_change,0
+2000,3_towns,0900720810,Durham,Middlesex County,pop_change,895
 2010,3_towns,0900720810,Durham,Middlesex County,pop_change,761
 2011,3_towns,0900720810,Durham,Middlesex County,pop_change,-46
 2012,3_towns,0900720810,Durham,Middlesex County,pop_change,26
@@ -1000,7 +1092,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900720810,Durham,Middlesex County,pop_change,-27
 2017,3_towns,0900720810,Durham,Middlesex County,pop_change,-30
 2018,3_towns,0900720810,Durham,Middlesex County,pop_change,-44
-2000,3_towns,0900722280,East Haddam,Middlesex County,pop_change,0
+1990,3_towns,0900722280,East Haddam,Middlesex County,pop_change,0
+2000,3_towns,0900722280,East Haddam,Middlesex County,pop_change,1657
 2010,3_towns,0900722280,East Haddam,Middlesex County,pop_change,793
 2011,3_towns,0900722280,East Haddam,Middlesex County,pop_change,-57
 2012,3_towns,0900722280,East Haddam,Middlesex County,pop_change,51
@@ -1010,7 +1103,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900722280,East Haddam,Middlesex County,pop_change,-41
 2017,3_towns,0900722280,East Haddam,Middlesex County,pop_change,-26
 2018,3_towns,0900722280,East Haddam,Middlesex County,pop_change,-40
-2000,3_towns,0900722490,East Hampton,Middlesex County,pop_change,0
+1990,3_towns,0900722490,East Hampton,Middlesex County,pop_change,0
+2000,3_towns,0900722490,East Hampton,Middlesex County,pop_change,2924
 2010,3_towns,0900722490,East Hampton,Middlesex County,pop_change,-393
 2011,3_towns,0900722490,East Hampton,Middlesex County,pop_change,-33
 2012,3_towns,0900722490,East Hampton,Middlesex County,pop_change,27
@@ -1020,7 +1114,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900722490,East Hampton,Middlesex County,pop_change,-37
 2017,3_towns,0900722490,East Hampton,Middlesex County,pop_change,12
 2018,3_towns,0900722490,East Hampton,Middlesex County,pop_change,-34
-2000,3_towns,0900726270,Essex,Middlesex County,pop_change,0
+1990,3_towns,0900726270,Essex,Middlesex County,pop_change,0
+2000,3_towns,0900726270,Essex,Middlesex County,pop_change,601
 2010,3_towns,0900726270,Essex,Middlesex County,pop_change,178
 2011,3_towns,0900726270,Essex,Middlesex County,pop_change,14
 2012,3_towns,0900726270,Essex,Middlesex County,pop_change,-15
@@ -1030,7 +1125,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900726270,Essex,Middlesex County,pop_change,-40
 2017,3_towns,0900726270,Essex,Middlesex County,pop_change,-6
 2018,3_towns,0900726270,Essex,Middlesex County,pop_change,11
-2000,3_towns,0900735230,Haddam,Middlesex County,pop_change,0
+1990,3_towns,0900735230,Haddam,Middlesex County,pop_change,0
+2000,3_towns,0900735230,Haddam,Middlesex County,pop_change,388
 2010,3_towns,0900735230,Haddam,Middlesex County,pop_change,1189
 2011,3_towns,0900735230,Haddam,Middlesex County,pop_change,-79
 2012,3_towns,0900735230,Haddam,Middlesex County,pop_change,41
@@ -1040,7 +1136,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900735230,Haddam,Middlesex County,pop_change,-35
 2017,3_towns,0900735230,Haddam,Middlesex County,pop_change,0
 2018,3_towns,0900735230,Haddam,Middlesex County,pop_change,-36
-2000,3_towns,0900740710,Killingworth,Middlesex County,pop_change,0
+1990,3_towns,0900740710,Killingworth,Middlesex County,pop_change,0
+2000,3_towns,0900740710,Killingworth,Middlesex County,pop_change,1204
 2010,3_towns,0900740710,Killingworth,Middlesex County,pop_change,507
 2011,3_towns,0900740710,Killingworth,Middlesex County,pop_change,-26
 2012,3_towns,0900740710,Killingworth,Middlesex County,pop_change,13
@@ -1050,7 +1147,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900740710,Killingworth,Middlesex County,pop_change,-26
 2017,3_towns,0900740710,Killingworth,Middlesex County,pop_change,-23
 2018,3_towns,0900740710,Killingworth,Middlesex County,pop_change,-27
-2000,3_towns,0900747080,Middlefield,Middlesex County,pop_change,0
+1990,3_towns,0900747080,Middlefield,Middlesex County,pop_change,0
+2000,3_towns,0900747080,Middlefield,Middlesex County,pop_change,278
 2010,3_towns,0900747080,Middlefield,Middlesex County,pop_change,222
 2011,3_towns,0900747080,Middlefield,Middlesex County,pop_change,-7
 2012,3_towns,0900747080,Middlefield,Middlesex County,pop_change,8
@@ -1060,7 +1158,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900747080,Middlefield,Middlesex County,pop_change,-24
 2017,3_towns,0900747080,Middlefield,Middlesex County,pop_change,-1
 2018,3_towns,0900747080,Middlefield,Middlesex County,pop_change,-17
-2000,3_towns,0900747360,Middletown,Middlesex County,pop_change,0
+1990,3_towns,0900747360,Middletown,Middlesex County,pop_change,0
+2000,3_towns,0900747360,Middletown,Middlesex County,pop_change,405
 2010,3_towns,0900747360,Middletown,Middlesex County,pop_change,4481
 2011,3_towns,0900747360,Middletown,Middlesex County,pop_change,-138
 2012,3_towns,0900747360,Middletown,Middlesex County,pop_change,20
@@ -1070,7 +1169,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900747360,Middletown,Middlesex County,pop_change,-285
 2017,3_towns,0900747360,Middletown,Middlesex County,pop_change,-186
 2018,3_towns,0900747360,Middletown,Middlesex County,pop_change,-274
-2000,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,0
+1990,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,0
+2000,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,815
 2010,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,-125
 2011,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,65
 2012,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,-39
@@ -1080,7 +1180,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,-39
 2017,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,-12
 2018,3_towns,0900757320,Old Saybrook,Middlesex County,pop_change,-44
-2000,3_towns,0900761800,Portland,Middlesex County,pop_change,0
+1990,3_towns,0900761800,Portland,Middlesex County,pop_change,0
+2000,3_towns,0900761800,Portland,Middlesex County,pop_change,314
 2010,3_towns,0900761800,Portland,Middlesex County,pop_change,776
 2011,3_towns,0900761800,Portland,Middlesex County,pop_change,-38
 2012,3_towns,0900761800,Portland,Middlesex County,pop_change,30
@@ -1090,7 +1191,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900761800,Portland,Middlesex County,pop_change,-43
 2017,3_towns,0900761800,Portland,Middlesex County,pop_change,-13
 2018,3_towns,0900761800,Portland,Middlesex County,pop_change,-29
-2000,3_towns,0900781680,Westbrook,Middlesex County,pop_change,0
+1990,3_towns,0900781680,Westbrook,Middlesex County,pop_change,0
+2000,3_towns,0900781680,Westbrook,Middlesex County,pop_change,878
 2010,3_towns,0900781680,Westbrook,Middlesex County,pop_change,646
 2011,3_towns,0900781680,Westbrook,Middlesex County,pop_change,-47
 2012,3_towns,0900781680,Westbrook,Middlesex County,pop_change,37
@@ -1100,7 +1202,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900781680,Westbrook,Middlesex County,pop_change,-6
 2017,3_towns,0900781680,Westbrook,Middlesex County,pop_change,25
 2018,3_towns,0900781680,Westbrook,Middlesex County,pop_change,-23
-2000,3_towns,0900901220,Ansonia,New Haven County,pop_change,0
+1990,3_towns,0900901220,Ansonia,New Haven County,pop_change,0
+2000,3_towns,0900901220,Ansonia,New Haven County,pop_change,151
 2010,3_towns,0900901220,Ansonia,New Haven County,pop_change,695
 2011,3_towns,0900901220,Ansonia,New Haven County,pop_change,-56
 2012,3_towns,0900901220,Ansonia,New Haven County,pop_change,-5
@@ -1110,7 +1213,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900901220,Ansonia,New Haven County,pop_change,-85
 2017,3_towns,0900901220,Ansonia,New Haven County,pop_change,3
 2018,3_towns,0900901220,Ansonia,New Haven County,pop_change,-93
-2000,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,0
+1990,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,0
+2000,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,163
 2010,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,803
 2011,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,-80
 2012,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,46
@@ -1120,7 +1224,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,6
 2017,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,33
 2018,3_towns,0900903250,Beacon Falls,New Haven County,pop_change,7
-2000,3_towns,0900904580,Bethany,New Haven County,pop_change,0
+1990,3_towns,0900904580,Bethany,New Haven County,pop_change,0
+2000,3_towns,0900904580,Bethany,New Haven County,pop_change,432
 2010,3_towns,0900904580,Bethany,New Haven County,pop_change,523
 2011,3_towns,0900904580,Bethany,New Haven County,pop_change,-50
 2012,3_towns,0900904580,Bethany,New Haven County,pop_change,11
@@ -1130,7 +1235,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900904580,Bethany,New Haven County,pop_change,-12
 2017,3_towns,0900904580,Bethany,New Haven County,pop_change,5
 2018,3_towns,0900904580,Bethany,New Haven County,pop_change,-22
-2000,3_towns,0900907310,Branford,New Haven County,pop_change,0
+1990,3_towns,0900907310,Branford,New Haven County,pop_change,0
+2000,3_towns,0900907310,Branford,New Haven County,pop_change,1080
 2010,3_towns,0900907310,Branford,New Haven County,pop_change,-657
 2011,3_towns,0900907310,Branford,New Haven County,pop_change,73
 2012,3_towns,0900907310,Branford,New Haven County,pop_change,-37
@@ -1140,8 +1246,9 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900907310,Branford,New Haven County,pop_change,10
 2017,3_towns,0900907310,Branford,New Haven County,pop_change,65
 2018,3_towns,0900907310,Branford,New Haven County,pop_change,-55
-2000,3_towns,0900914160,Cheshire,New Haven County,pop_change,0
-2010,3_towns,0900914160,Cheshire,New Haven County,pop_change,718
+1990,3_towns,0900914160,Cheshire,New Haven County,pop_change,0
+2000,3_towns,0900914160,Cheshire,New Haven County,pop_change,2779
+2010,3_towns,0900914160,Cheshire,New Haven County,pop_change,798
 2011,3_towns,0900914160,Cheshire,New Haven County,pop_change,-61
 2012,3_towns,0900914160,Cheshire,New Haven County,pop_change,53
 2013,3_towns,0900914160,Cheshire,New Haven County,pop_change,11
@@ -1150,7 +1257,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900914160,Cheshire,New Haven County,pop_change,0
 2017,3_towns,0900914160,Cheshire,New Haven County,pop_change,20
 2018,3_towns,0900914160,Cheshire,New Haven County,pop_change,-66
-2000,3_towns,0900919550,Derby,New Haven County,pop_change,0
+1990,3_towns,0900919550,Derby,New Haven County,pop_change,0
+2000,3_towns,0900919550,Derby,New Haven County,pop_change,192
 2010,3_towns,0900919550,Derby,New Haven County,pop_change,511
 2011,3_towns,0900919550,Derby,New Haven County,pop_change,-57
 2012,3_towns,0900919550,Derby,New Haven County,pop_change,13
@@ -1160,7 +1268,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900919550,Derby,New Haven County,pop_change,-41
 2017,3_towns,0900919550,Derby,New Haven County,pop_change,-55
 2018,3_towns,0900919550,Derby,New Haven County,pop_change,-104
-2000,3_towns,0900922910,East Haven,New Haven County,pop_change,0
+1990,3_towns,0900922910,East Haven,New Haven County,pop_change,0
+2000,3_towns,0900922910,East Haven,New Haven County,pop_change,2045
 2010,3_towns,0900922910,East Haven,New Haven County,pop_change,1068
 2011,3_towns,0900922910,East Haven,New Haven County,pop_change,-106
 2012,3_towns,0900922910,East Haven,New Haven County,pop_change,37
@@ -1170,7 +1279,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900922910,East Haven,New Haven County,pop_change,-89
 2017,3_towns,0900922910,East Haven,New Haven County,pop_change,-9
 2018,3_towns,0900922910,East Haven,New Haven County,pop_change,-146
-2000,3_towns,0900934950,Guilford,New Haven County,pop_change,0
+1990,3_towns,0900934950,Guilford,New Haven County,pop_change,0
+2000,3_towns,0900934950,Guilford,New Haven County,pop_change,1550
 2010,3_towns,0900934950,Guilford,New Haven County,pop_change,977
 2011,3_towns,0900934950,Guilford,New Haven County,pop_change,-103
 2012,3_towns,0900934950,Guilford,New Haven County,pop_change,81
@@ -1180,7 +1290,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900934950,Guilford,New Haven County,pop_change,-10
 2017,3_towns,0900934950,Guilford,New Haven County,pop_change,-5
 2018,3_towns,0900934950,Guilford,New Haven County,pop_change,-92
-2000,3_towns,0900935650,Hamden,New Haven County,pop_change,0
+1990,3_towns,0900935650,Hamden,New Haven County,pop_change,0
+2000,3_towns,0900935650,Hamden,New Haven County,pop_change,4479
 2010,3_towns,0900935650,Hamden,New Haven County,pop_change,4047
 2011,3_towns,0900935650,Hamden,New Haven County,pop_change,-413
 2012,3_towns,0900935650,Hamden,New Haven County,pop_change,188
@@ -1190,7 +1301,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900935650,Hamden,New Haven County,pop_change,-47
 2017,3_towns,0900935650,Hamden,New Haven County,pop_change,17
 2018,3_towns,0900935650,Hamden,New Haven County,pop_change,-287
-2000,3_towns,0900944560,Madison,New Haven County,pop_change,0
+1990,3_towns,0900944560,Madison,New Haven County,pop_change,0
+2000,3_towns,0900944560,Madison,New Haven County,pop_change,2373
 2010,3_towns,0900944560,Madison,New Haven County,pop_change,411
 2011,3_towns,0900944560,Madison,New Haven County,pop_change,-26
 2012,3_towns,0900944560,Madison,New Haven County,pop_change,21
@@ -1200,7 +1312,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900944560,Madison,New Haven County,pop_change,-12
 2017,3_towns,0900944560,Madison,New Haven County,pop_change,0
 2018,3_towns,0900944560,Madison,New Haven County,pop_change,-64
-2000,3_towns,0900946520,Meriden,New Haven County,pop_change,0
+1990,3_towns,0900946520,Meriden,New Haven County,pop_change,0
+2000,3_towns,0900946520,Meriden,New Haven County,pop_change,-1235
 2010,3_towns,0900946520,Meriden,New Haven County,pop_change,2624
 2011,3_towns,0900946520,Meriden,New Haven County,pop_change,-260
 2012,3_towns,0900946520,Meriden,New Haven County,pop_change,66
@@ -1210,8 +1323,9 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900946520,Meriden,New Haven County,pop_change,-236
 2017,3_towns,0900946520,Meriden,New Haven County,pop_change,38
 2018,3_towns,0900946520,Meriden,New Haven County,pop_change,-377
-2000,3_towns,0900946940,Middlebury,New Haven County,pop_change,0
-2010,3_towns,0900946940,Middlebury,New Haven County,pop_change,1124
+1990,3_towns,0900946940,Middlebury,New Haven County,pop_change,0
+2000,3_towns,0900946940,Middlebury,New Haven County,pop_change,386
+2010,3_towns,0900946940,Middlebury,New Haven County,pop_change,1044
 2011,3_towns,0900946940,Middlebury,New Haven County,pop_change,-116
 2012,3_towns,0900946940,Middlebury,New Haven County,pop_change,63
 2013,3_towns,0900946940,Middlebury,New Haven County,pop_change,28
@@ -1220,7 +1334,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900946940,Middlebury,New Haven County,pop_change,9
 2017,3_towns,0900946940,Middlebury,New Haven County,pop_change,52
 2018,3_towns,0900946940,Middlebury,New Haven County,pop_change,3
-2000,3_towns,0900947535,Milford,New Haven County,pop_change,0
+1990,3_towns,0900947535,Milford,New Haven County,pop_change,0
+2000,3_towns,0900947535,Milford,New Haven County,pop_change,2367
 2010,3_towns,0900947535,Milford,New Haven County,pop_change,454
 2011,3_towns,0900947535,Milford,New Haven County,pop_change,-27
 2012,3_towns,0900947535,Milford,New Haven County,pop_change,94
@@ -1230,7 +1345,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900947535,Milford,New Haven County,pop_change,224
 2017,3_towns,0900947535,Milford,New Haven County,pop_change,437
 2018,3_towns,0900947535,Milford,New Haven County,pop_change,180
-2000,3_towns,0900949950,Naugatuck,New Haven County,pop_change,0
+1990,3_towns,0900949950,Naugatuck,New Haven County,pop_change,0
+2000,3_towns,0900949950,Naugatuck,New Haven County,pop_change,364
 2010,3_towns,0900949950,Naugatuck,New Haven County,pop_change,873
 2011,3_towns,0900949950,Naugatuck,New Haven County,pop_change,-84
 2012,3_towns,0900949950,Naugatuck,New Haven County,pop_change,17
@@ -1240,7 +1356,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900949950,Naugatuck,New Haven County,pop_change,-97
 2017,3_towns,0900949950,Naugatuck,New Haven County,pop_change,24
 2018,3_towns,0900949950,Naugatuck,New Haven County,pop_change,-168
-2000,3_towns,0900952070,New Haven,New Haven County,pop_change,0
+1990,3_towns,0900952070,New Haven,New Haven County,pop_change,0
+2000,3_towns,0900952070,New Haven,New Haven County,pop_change,-6848
 2010,3_towns,0900952070,New Haven,New Haven County,pop_change,6153
 2011,3_towns,0900952070,New Haven,New Haven County,pop_change,-566
 2012,3_towns,0900952070,New Haven,New Haven County,pop_change,685
@@ -1250,7 +1367,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900952070,New Haven,New Haven County,pop_change,-207
 2017,3_towns,0900952070,New Haven,New Haven County,pop_change,479
 2018,3_towns,0900952070,New Haven,New Haven County,pop_change,-355
-2000,3_towns,0900953890,North Branford,New Haven County,pop_change,0
+1990,3_towns,0900953890,North Branford,New Haven County,pop_change,0
+2000,3_towns,0900953890,North Branford,New Haven County,pop_change,910
 2010,3_towns,0900953890,North Branford,New Haven County,pop_change,501
 2011,3_towns,0900953890,North Branford,New Haven County,pop_change,-51
 2012,3_towns,0900953890,North Branford,New Haven County,pop_change,13
@@ -1260,7 +1378,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900953890,North Branford,New Haven County,pop_change,-44
 2017,3_towns,0900953890,North Branford,New Haven County,pop_change,-35
 2018,3_towns,0900953890,North Branford,New Haven County,pop_change,-67
-2000,3_towns,0900954870,North Haven,New Haven County,pop_change,0
+1990,3_towns,0900954870,North Haven,New Haven County,pop_change,0
+2000,3_towns,0900954870,North Haven,New Haven County,pop_change,788
 2010,3_towns,0900954870,North Haven,New Haven County,pop_change,1058
 2011,3_towns,0900954870,North Haven,New Haven County,pop_change,-112
 2012,3_towns,0900954870,North Haven,New Haven County,pop_change,56
@@ -1270,7 +1389,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900954870,North Haven,New Haven County,pop_change,-49
 2017,3_towns,0900954870,North Haven,New Haven County,pop_change,-11
 2018,3_towns,0900954870,North Haven,New Haven County,pop_change,-91
-2000,3_towns,0900957600,Orange,New Haven County,pop_change,0
+1990,3_towns,0900957600,Orange,New Haven County,pop_change,0
+2000,3_towns,0900957600,Orange,New Haven County,pop_change,403
 2010,3_towns,0900957600,Orange,New Haven County,pop_change,723
 2011,3_towns,0900957600,Orange,New Haven County,pop_change,-72
 2012,3_towns,0900957600,Orange,New Haven County,pop_change,35
@@ -1280,7 +1400,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900957600,Orange,New Haven County,pop_change,-5
 2017,3_towns,0900957600,Orange,New Haven County,pop_change,40
 2018,3_towns,0900957600,Orange,New Haven County,pop_change,-44
-2000,3_towns,0900958300,Oxford,New Haven County,pop_change,0
+1990,3_towns,0900958300,Oxford,New Haven County,pop_change,0
+2000,3_towns,0900958300,Oxford,New Haven County,pop_change,1136
 2010,3_towns,0900958300,Oxford,New Haven County,pop_change,2862
 2011,3_towns,0900958300,Oxford,New Haven County,pop_change,-299
 2012,3_towns,0900958300,Oxford,New Haven County,pop_change,218
@@ -1290,7 +1411,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900958300,Oxford,New Haven County,pop_change,42
 2017,3_towns,0900958300,Oxford,New Haven County,pop_change,56
 2018,3_towns,0900958300,Oxford,New Haven County,pop_change,50
-2000,3_towns,0900962290,Prospect,New Haven County,pop_change,0
+1990,3_towns,0900962290,Prospect,New Haven County,pop_change,0
+2000,3_towns,0900962290,Prospect,New Haven County,pop_change,932
 2010,3_towns,0900962290,Prospect,New Haven County,pop_change,698
 2011,3_towns,0900962290,Prospect,New Haven County,pop_change,-70
 2012,3_towns,0900962290,Prospect,New Haven County,pop_change,115
@@ -1300,7 +1422,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900962290,Prospect,New Haven County,pop_change,42
 2017,3_towns,0900962290,Prospect,New Haven County,pop_change,28
 2018,3_towns,0900962290,Prospect,New Haven County,pop_change,-12
-2000,3_towns,0900967610,Seymour,New Haven County,pop_change,0
+1990,3_towns,0900967610,Seymour,New Haven County,pop_change,0
+2000,3_towns,0900967610,Seymour,New Haven County,pop_change,1166
 2010,3_towns,0900967610,Seymour,New Haven County,pop_change,1086
 2011,3_towns,0900967610,Seymour,New Haven County,pop_change,-98
 2012,3_towns,0900967610,Seymour,New Haven County,pop_change,45
@@ -1310,7 +1433,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900967610,Seymour,New Haven County,pop_change,-5
 2017,3_towns,0900967610,Seymour,New Haven County,pop_change,39
 2018,3_towns,0900967610,Seymour,New Haven County,pop_change,-57
-2000,3_towns,0900969640,Southbury,New Haven County,pop_change,0
+1990,3_towns,0900969640,Southbury,New Haven County,pop_change,0
+2000,3_towns,0900969640,Southbury,New Haven County,pop_change,2749
 2010,3_towns,0900969640,Southbury,New Haven County,pop_change,1337
 2011,3_towns,0900969640,Southbury,New Haven County,pop_change,-126
 2012,3_towns,0900969640,Southbury,New Haven County,pop_change,63
@@ -1320,7 +1444,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900969640,Southbury,New Haven County,pop_change,-63
 2017,3_towns,0900969640,Southbury,New Haven County,pop_change,-52
 2018,3_towns,0900969640,Southbury,New Haven County,pop_change,79
-2000,3_towns,0900978740,Wallingford,New Haven County,pop_change,0
+1990,3_towns,0900978740,Wallingford,New Haven County,pop_change,0
+2000,3_towns,0900978740,Wallingford,New Haven County,pop_change,2204
 2010,3_towns,0900978740,Wallingford,New Haven County,pop_change,2109
 2011,3_towns,0900978740,Wallingford,New Haven County,pop_change,-206
 2012,3_towns,0900978740,Wallingford,New Haven County,pop_change,118
@@ -1330,7 +1455,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900978740,Wallingford,New Haven County,pop_change,-100
 2017,3_towns,0900978740,Wallingford,New Haven County,pop_change,2
 2018,3_towns,0900978740,Wallingford,New Haven County,pop_change,-220
-2000,3_towns,0900980070,Waterbury,New Haven County,pop_change,0
+1990,3_towns,0900980070,Waterbury,New Haven County,pop_change,0
+2000,3_towns,0900980070,Waterbury,New Haven County,pop_change,-1690
 2010,3_towns,0900980070,Waterbury,New Haven County,pop_change,3095
 2011,3_towns,0900980070,Waterbury,New Haven County,pop_change,-291
 2012,3_towns,0900980070,Waterbury,New Haven County,pop_change,-1
@@ -1340,7 +1466,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900980070,Waterbury,New Haven County,pop_change,-340
 2017,3_towns,0900980070,Waterbury,New Haven County,pop_change,39
 2018,3_towns,0900980070,Waterbury,New Haven County,pop_change,-578
-2000,3_towns,0900982870,West Haven,New Haven County,pop_change,0
+1990,3_towns,0900982870,West Haven,New Haven County,pop_change,0
+2000,3_towns,0900982870,West Haven,New Haven County,pop_change,-1661
 2010,3_towns,0900982870,West Haven,New Haven County,pop_change,3204
 2011,3_towns,0900982870,West Haven,New Haven County,pop_change,-315
 2012,3_towns,0900982870,West Haven,New Haven County,pop_change,137
@@ -1350,7 +1477,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900982870,West Haven,New Haven County,pop_change,-217
 2017,3_towns,0900982870,West Haven,New Haven County,pop_change,72
 2018,3_towns,0900982870,West Haven,New Haven County,pop_change,-126
-2000,3_towns,0900987560,Wolcott,New Haven County,pop_change,0
+1990,3_towns,0900987560,Wolcott,New Haven County,pop_change,0
+2000,3_towns,0900987560,Wolcott,New Haven County,pop_change,1515
 2010,3_towns,0900987560,Wolcott,New Haven County,pop_change,1465
 2011,3_towns,0900987560,Wolcott,New Haven County,pop_change,-148
 2012,3_towns,0900987560,Wolcott,New Haven County,pop_change,106
@@ -1360,7 +1488,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900987560,Wolcott,New Haven County,pop_change,-10
 2017,3_towns,0900987560,Wolcott,New Haven County,pop_change,-11
 2018,3_towns,0900987560,Wolcott,New Haven County,pop_change,-44
-2000,3_towns,0900987700,Woodbridge,New Haven County,pop_change,0
+1990,3_towns,0900987700,Woodbridge,New Haven County,pop_change,0
+2000,3_towns,0900987700,Woodbridge,New Haven County,pop_change,1059
 2010,3_towns,0900987700,Woodbridge,New Haven County,pop_change,7
 2011,3_towns,0900987700,Woodbridge,New Haven County,pop_change,2
 2012,3_towns,0900987700,Woodbridge,New Haven County,pop_change,-2
@@ -1370,7 +1499,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0900987700,Woodbridge,New Haven County,pop_change,-14
 2017,3_towns,0900987700,Woodbridge,New Haven County,pop_change,-18
 2018,3_towns,0900987700,Woodbridge,New Haven County,pop_change,-39
-2000,3_towns,0901106820,Bozrah,New London County,pop_change,0
+1990,3_towns,0901106820,Bozrah,New London County,pop_change,0
+2000,3_towns,0901106820,Bozrah,New London County,pop_change,60
 2010,3_towns,0901106820,Bozrah,New London County,pop_change,270
 2011,3_towns,0901106820,Bozrah,New London County,pop_change,-24
 2012,3_towns,0901106820,Bozrah,New London County,pop_change,2
@@ -1380,7 +1510,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901106820,Bozrah,New London County,pop_change,-13
 2017,3_towns,0901106820,Bozrah,New London County,pop_change,-20
 2018,3_towns,0901106820,Bozrah,New London County,pop_change,-20
-2000,3_towns,0901115910,Colchester,New London County,pop_change,0
+1990,3_towns,0901115910,Colchester,New London County,pop_change,0
+2000,3_towns,0901115910,Colchester,New London County,pop_change,3571
 2010,3_towns,0901115910,Colchester,New London County,pop_change,1517
 2011,3_towns,0901115910,Colchester,New London County,pop_change,-139
 2012,3_towns,0901115910,Colchester,New London County,pop_change,115
@@ -1390,7 +1521,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901115910,Colchester,New London County,pop_change,-30
 2017,3_towns,0901115910,Colchester,New London County,pop_change,-97
 2018,3_towns,0901115910,Colchester,New London County,pop_change,-88
-2000,3_towns,0901123400,East Lyme,New London County,pop_change,0
+1990,3_towns,0901123400,East Lyme,New London County,pop_change,0
+2000,3_towns,0901123400,East Lyme,New London County,pop_change,2778
 2010,3_towns,0901123400,East Lyme,New London County,pop_change,1041
 2011,3_towns,0901123400,East Lyme,New London County,pop_change,-79
 2012,3_towns,0901123400,East Lyme,New London County,pop_change,88
@@ -1400,7 +1532,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901123400,East Lyme,New London County,pop_change,53
 2017,3_towns,0901123400,East Lyme,New London County,pop_change,-46
 2018,3_towns,0901123400,East Lyme,New London County,pop_change,-117
-2000,3_towns,0901129910,Franklin,New London County,pop_change,0
+1990,3_towns,0901129910,Franklin,New London County,pop_change,0
+2000,3_towns,0901129910,Franklin,New London County,pop_change,25
 2010,3_towns,0901129910,Franklin,New London County,pop_change,87
 2011,3_towns,0901129910,Franklin,New London County,pop_change,36
 2012,3_towns,0901129910,Franklin,New London County,pop_change,26
@@ -1410,7 +1543,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901129910,Franklin,New London County,pop_change,34
 2017,3_towns,0901129910,Franklin,New London County,pop_change,-57
 2018,3_towns,0901129910,Franklin,New London County,pop_change,-66
-2000,3_towns,0901133900,Griswold,New London County,pop_change,0
+1990,3_towns,0901133900,Griswold,New London County,pop_change,0
+2000,3_towns,0901133900,Griswold,New London County,pop_change,423
 2010,3_towns,0901133900,Griswold,New London County,pop_change,1144
 2011,3_towns,0901133900,Griswold,New London County,pop_change,-114
 2012,3_towns,0901133900,Griswold,New London County,pop_change,70
@@ -1420,7 +1554,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901133900,Griswold,New London County,pop_change,-74
 2017,3_towns,0901133900,Griswold,New London County,pop_change,-57
 2018,3_towns,0901133900,Griswold,New London County,pop_change,-98
-2000,3_towns,0901134250,Groton,New London County,pop_change,0
+1990,3_towns,0901134250,Groton,New London County,pop_change,0
+2000,3_towns,0901134250,Groton,New London County,pop_change,-5237
 2010,3_towns,0901134250,Groton,New London County,pop_change,208
 2011,3_towns,0901134250,Groton,New London County,pop_change,75
 2012,3_towns,0901134250,Groton,New London County,pop_change,-111
@@ -1430,7 +1565,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901134250,Groton,New London County,pop_change,-223
 2017,3_towns,0901134250,Groton,New London County,pop_change,-271
 2018,3_towns,0901134250,Groton,New London County,pop_change,-387
-2000,3_towns,0901142390,Lebanon,New London County,pop_change,0
+1990,3_towns,0901142390,Lebanon,New London County,pop_change,0
+2000,3_towns,0901142390,Lebanon,New London County,pop_change,866
 2010,3_towns,0901142390,Lebanon,New London County,pop_change,401
 2011,3_towns,0901142390,Lebanon,New London County,pop_change,-40
 2012,3_towns,0901142390,Lebanon,New London County,pop_change,21
@@ -1440,7 +1576,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901142390,Lebanon,New London County,pop_change,-36
 2017,3_towns,0901142390,Lebanon,New London County,pop_change,-17
 2018,3_towns,0901142390,Lebanon,New London County,pop_change,14
-2000,3_towns,0901142600,Ledyard,New London County,pop_change,0
+1990,3_towns,0901142600,Ledyard,New London County,pop_change,0
+2000,3_towns,0901142600,Ledyard,New London County,pop_change,-226
 2010,3_towns,0901142600,Ledyard,New London County,pop_change,364
 2011,3_towns,0901142600,Ledyard,New London County,pop_change,-35
 2012,3_towns,0901142600,Ledyard,New London County,pop_change,30
@@ -1450,7 +1587,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901142600,Ledyard,New London County,pop_change,-49
 2017,3_towns,0901142600,Ledyard,New London County,pop_change,-82
 2018,3_towns,0901142600,Ledyard,New London County,pop_change,-76
-2000,3_towns,0901143230,Lisbon,New London County,pop_change,0
+1990,3_towns,0901143230,Lisbon,New London County,pop_change,0
+2000,3_towns,0901143230,Lisbon,New London County,pop_change,279
 2010,3_towns,0901143230,Lisbon,New London County,pop_change,269
 2011,3_towns,0901143230,Lisbon,New London County,pop_change,-16
 2012,3_towns,0901143230,Lisbon,New London County,pop_change,11
@@ -1460,7 +1598,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901143230,Lisbon,New London County,pop_change,-7
 2017,3_towns,0901143230,Lisbon,New London County,pop_change,-23
 2018,3_towns,0901143230,Lisbon,New London County,pop_change,-28
-2000,3_towns,0901144210,Lyme,New London County,pop_change,0
+1990,3_towns,0901144210,Lyme,New London County,pop_change,0
+2000,3_towns,0901144210,Lyme,New London County,pop_change,67
 2010,3_towns,0901144210,Lyme,New London County,pop_change,390
 2011,3_towns,0901144210,Lyme,New London County,pop_change,-79
 2012,3_towns,0901144210,Lyme,New London County,pop_change,32
@@ -1470,7 +1609,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901144210,Lyme,New London County,pop_change,-62
 2017,3_towns,0901144210,Lyme,New London County,pop_change,31
 2018,3_towns,0901144210,Lyme,New London County,pop_change,46
-2000,3_towns,0901148900,Montville,New London County,pop_change,0
+1990,3_towns,0901148900,Montville,New London County,pop_change,0
+2000,3_towns,0901148900,Montville,New London County,pop_change,1873
 2010,3_towns,0901148900,Montville,New London County,pop_change,1025
 2011,3_towns,0901148900,Montville,New London County,pop_change,-66
 2012,3_towns,0901148900,Montville,New London County,pop_change,82
@@ -1480,7 +1620,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901148900,Montville,New London County,pop_change,-130
 2017,3_towns,0901148900,Montville,New London County,pop_change,-121
 2018,3_towns,0901148900,Montville,New London County,pop_change,-290
-2000,3_towns,0901152350,New London,New London County,pop_change,0
+1990,3_towns,0901152350,New London,New London County,pop_change,0
+2000,3_towns,0901152350,New London,New London County,pop_change,-2869
 2010,3_towns,0901152350,New London,New London County,pop_change,1949
 2011,3_towns,0901152350,New London,New London County,pop_change,-70
 2012,3_towns,0901152350,New London,New London County,pop_change,63
@@ -1490,7 +1631,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901152350,New London,New London County,pop_change,-205
 2017,3_towns,0901152350,New London,New London County,pop_change,-71
 2018,3_towns,0901152350,New London,New London County,pop_change,-115
-2000,3_towns,0901155500,North Stonington,New London County,pop_change,0
+1990,3_towns,0901155500,North Stonington,New London County,pop_change,0
+2000,3_towns,0901155500,North Stonington,New London County,pop_change,107
 2010,3_towns,0901155500,North Stonington,New London County,pop_change,306
 2011,3_towns,0901155500,North Stonington,New London County,pop_change,-25
 2012,3_towns,0901155500,North Stonington,New London County,pop_change,20
@@ -1500,7 +1642,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901155500,North Stonington,New London County,pop_change,0
 2017,3_towns,0901155500,North Stonington,New London County,pop_change,-21
 2018,3_towns,0901155500,North Stonington,New London County,pop_change,-13
-2000,3_towns,0901156270,Norwich,New London County,pop_change,0
+1990,3_towns,0901156270,Norwich,New London County,pop_change,0
+2000,3_towns,0901156270,Norwich,New London County,pop_change,-1274
 2010,3_towns,0901156270,Norwich,New London County,pop_change,4376
 2011,3_towns,0901156270,Norwich,New London County,pop_change,-408
 2012,3_towns,0901156270,Norwich,New London County,pop_change,237
@@ -1510,7 +1653,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901156270,Norwich,New London County,pop_change,-197
 2017,3_towns,0901156270,Norwich,New London County,pop_change,-182
 2018,3_towns,0901156270,Norwich,New London County,pop_change,-308
-2000,3_towns,0901157040,Old Lyme,New London County,pop_change,0
+1990,3_towns,0901157040,Old Lyme,New London County,pop_change,0
+2000,3_towns,0901157040,Old Lyme,New London County,pop_change,871
 2010,3_towns,0901157040,Old Lyme,New London County,pop_change,197
 2011,3_towns,0901157040,Old Lyme,New London County,pop_change,-20
 2012,3_towns,0901157040,Old Lyme,New London County,pop_change,17
@@ -1520,7 +1664,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901157040,Old Lyme,New London County,pop_change,-26
 2017,3_towns,0901157040,Old Lyme,New London County,pop_change,-45
 2018,3_towns,0901157040,Old Lyme,New London County,pop_change,-63
-2000,3_towns,0901162150,Preston,New London County,pop_change,0
+1990,3_towns,0901162150,Preston,New London County,pop_change,0
+2000,3_towns,0901162150,Preston,New London County,pop_change,-318
 2010,3_towns,0901162150,Preston,New London County,pop_change,38
 2011,3_towns,0901162150,Preston,New London County,pop_change,3
 2012,3_towns,0901162150,Preston,New London County,pop_change,7
@@ -1530,7 +1675,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901162150,Preston,New London County,pop_change,-13
 2017,3_towns,0901162150,Preston,New London County,pop_change,-23
 2018,3_towns,0901162150,Preston,New London County,pop_change,-27
-2000,3_towns,0901166210,Salem,New London County,pop_change,0
+1990,3_towns,0901166210,Salem,New London County,pop_change,0
+2000,3_towns,0901166210,Salem,New London County,pop_change,548
 2010,3_towns,0901166210,Salem,New London County,pop_change,293
 2011,3_towns,0901166210,Salem,New London County,pop_change,-33
 2012,3_towns,0901166210,Salem,New London County,pop_change,33
@@ -1540,7 +1686,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901166210,Salem,New London County,pop_change,-24
 2017,3_towns,0901166210,Salem,New London County,pop_change,-7
 2018,3_towns,0901166210,Salem,New London County,pop_change,-36
-2000,3_towns,0901171670,Sprague,New London County,pop_change,0
+1990,3_towns,0901171670,Sprague,New London County,pop_change,0
+2000,3_towns,0901171670,Sprague,New London County,pop_change,-37
 2010,3_towns,0901171670,Sprague,New London County,pop_change,13
 2011,3_towns,0901171670,Sprague,New London County,pop_change,-1
 2012,3_towns,0901171670,Sprague,New London County,pop_change,-1
@@ -1550,7 +1697,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901171670,Sprague,New London County,pop_change,-25
 2017,3_towns,0901171670,Sprague,New London County,pop_change,-10
 2018,3_towns,0901171670,Sprague,New London County,pop_change,-13
-2000,3_towns,0901173770,Stonington,New London County,pop_change,0
+1990,3_towns,0901173770,Stonington,New London County,pop_change,0
+2000,3_towns,0901173770,Stonington,New London County,pop_change,987
 2010,3_towns,0901173770,Stonington,New London County,pop_change,639
 2011,3_towns,0901173770,Stonington,New London County,pop_change,-63
 2012,3_towns,0901173770,Stonington,New London County,pop_change,46
@@ -1560,7 +1708,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901173770,Stonington,New London County,pop_change,-15
 2017,3_towns,0901173770,Stonington,New London County,pop_change,6
 2018,3_towns,0901173770,Stonington,New London County,pop_change,-47
-2000,3_towns,0901178600,Voluntown,New London County,pop_change,0
+1990,3_towns,0901178600,Voluntown,New London County,pop_change,0
+2000,3_towns,0901178600,Voluntown,New London County,pop_change,415
 2010,3_towns,0901178600,Voluntown,New London County,pop_change,75
 2011,3_towns,0901178600,Voluntown,New London County,pop_change,0
 2012,3_towns,0901178600,Voluntown,New London County,pop_change,-4
@@ -1570,7 +1719,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901178600,Voluntown,New London County,pop_change,-15
 2017,3_towns,0901178600,Voluntown,New London County,pop_change,-16
 2018,3_towns,0901178600,Voluntown,New London County,pop_change,-11
-2000,3_towns,0901180280,Waterford,New London County,pop_change,0
+1990,3_towns,0901180280,Waterford,New London County,pop_change,0
+2000,3_towns,0901180280,Waterford,New London County,pop_change,1222
 2010,3_towns,0901180280,Waterford,New London County,pop_change,365
 2011,3_towns,0901180280,Waterford,New London County,pop_change,-66
 2012,3_towns,0901180280,Waterford,New London County,pop_change,48
@@ -1580,7 +1730,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901180280,Waterford,New London County,pop_change,-95
 2017,3_towns,0901180280,Waterford,New London County,pop_change,-132
 2018,3_towns,0901180280,Waterford,New London County,pop_change,-148
-2000,3_towns,0901301080,Andover,Tolland County,pop_change,0
+1990,3_towns,0901301080,Andover,Tolland County,pop_change,0
+2000,3_towns,0901301080,Andover,Tolland County,pop_change,496
 2010,3_towns,0901301080,Andover,Tolland County,pop_change,267
 2011,3_towns,0901301080,Andover,Tolland County,pop_change,-160
 2012,3_towns,0901301080,Andover,Tolland County,pop_change,42
@@ -1590,7 +1741,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901301080,Andover,Tolland County,pop_change,-6
 2017,3_towns,0901301080,Andover,Tolland County,pop_change,-32
 2018,3_towns,0901301080,Andover,Tolland County,pop_change,44
-2000,3_towns,0901306260,Bolton,Tolland County,pop_change,0
+1990,3_towns,0901306260,Bolton,Tolland County,pop_change,0
+2000,3_towns,0901306260,Bolton,Tolland County,pop_change,442
 2010,3_towns,0901306260,Bolton,Tolland County,pop_change,-37
 2011,3_towns,0901306260,Bolton,Tolland County,pop_change,26
 2012,3_towns,0901306260,Bolton,Tolland County,pop_change,-16
@@ -1600,7 +1752,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901306260,Bolton,Tolland County,pop_change,-9
 2017,3_towns,0901306260,Bolton,Tolland County,pop_change,-3
 2018,3_towns,0901306260,Bolton,Tolland County,pop_change,-19
-2000,3_towns,0901316400,Columbia,Tolland County,pop_change,0
+1990,3_towns,0901316400,Columbia,Tolland County,pop_change,0
+2000,3_towns,0901316400,Columbia,Tolland County,pop_change,461
 2010,3_towns,0901316400,Columbia,Tolland County,pop_change,514
 2011,3_towns,0901316400,Columbia,Tolland County,pop_change,-36
 2012,3_towns,0901316400,Columbia,Tolland County,pop_change,15
@@ -1610,7 +1763,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901316400,Columbia,Tolland County,pop_change,-4
 2017,3_towns,0901316400,Columbia,Tolland County,pop_change,-14
 2018,3_towns,0901316400,Columbia,Tolland County,pop_change,-21
-2000,3_towns,0901317800,Coventry,Tolland County,pop_change,0
+1990,3_towns,0901317800,Coventry,Tolland County,pop_change,0
+2000,3_towns,0901317800,Coventry,Tolland County,pop_change,1441
 2010,3_towns,0901317800,Coventry,Tolland County,pop_change,931
 2011,3_towns,0901317800,Coventry,Tolland County,pop_change,-33
 2012,3_towns,0901317800,Coventry,Tolland County,pop_change,43
@@ -1620,7 +1774,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901317800,Coventry,Tolland County,pop_change,-4
 2017,3_towns,0901317800,Coventry,Tolland County,pop_change,12
 2018,3_towns,0901317800,Coventry,Tolland County,pop_change,-36
-2000,3_towns,0901325360,Ellington,Tolland County,pop_change,0
+1990,3_towns,0901325360,Ellington,Tolland County,pop_change,0
+2000,3_towns,0901325360,Ellington,Tolland County,pop_change,1724
 2010,3_towns,0901325360,Ellington,Tolland County,pop_change,2681
 2011,3_towns,0901325360,Ellington,Tolland County,pop_change,-208
 2012,3_towns,0901325360,Ellington,Tolland County,pop_change,155
@@ -1630,7 +1785,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901325360,Ellington,Tolland County,pop_change,89
 2017,3_towns,0901325360,Ellington,Tolland County,pop_change,68
 2018,3_towns,0901325360,Ellington,Tolland County,pop_change,93
-2000,3_towns,0901337910,Hebron,Tolland County,pop_change,0
+1990,3_towns,0901337910,Hebron,Tolland County,pop_change,0
+2000,3_towns,0901337910,Hebron,Tolland County,pop_change,1531
 2010,3_towns,0901337910,Hebron,Tolland County,pop_change,1076
 2011,3_towns,0901337910,Hebron,Tolland County,pop_change,-66
 2012,3_towns,0901337910,Hebron,Tolland County,pop_change,29
@@ -1640,7 +1796,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901337910,Hebron,Tolland County,pop_change,-31
 2017,3_towns,0901337910,Hebron,Tolland County,pop_change,-30
 2018,3_towns,0901337910,Hebron,Tolland County,pop_change,-28
-2000,3_towns,0901344910,Mansfield,Tolland County,pop_change,0
+1990,3_towns,0901344910,Mansfield,Tolland County,pop_change,0
+2000,3_towns,0901344910,Mansfield,Tolland County,pop_change,-383
 2010,3_towns,0901344910,Mansfield,Tolland County,pop_change,5823
 2011,3_towns,0901344910,Mansfield,Tolland County,pop_change,-413
 2012,3_towns,0901344910,Mansfield,Tolland County,pop_change,52
@@ -1650,7 +1807,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901344910,Mansfield,Tolland County,pop_change,-149
 2017,3_towns,0901344910,Mansfield,Tolland County,pop_change,10
 2018,3_towns,0901344910,Mansfield,Tolland County,pop_change,-42
-2000,3_towns,0901369220,Somers,Tolland County,pop_change,0
+1990,3_towns,0901369220,Somers,Tolland County,pop_change,0
+2000,3_towns,0901369220,Somers,Tolland County,pop_change,1309
 2010,3_towns,0901369220,Somers,Tolland County,pop_change,1027
 2011,3_towns,0901369220,Somers,Tolland County,pop_change,-59
 2012,3_towns,0901369220,Somers,Tolland County,pop_change,66
@@ -1660,7 +1818,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901369220,Somers,Tolland County,pop_change,-69
 2017,3_towns,0901369220,Somers,Tolland County,pop_change,-84
 2018,3_towns,0901369220,Somers,Tolland County,pop_change,-147
-2000,3_towns,0901372090,Stafford,Tolland County,pop_change,0
+1990,3_towns,0901372090,Stafford,Tolland County,pop_change,0
+2000,3_towns,0901372090,Stafford,Tolland County,pop_change,216
 2010,3_towns,0901372090,Stafford,Tolland County,pop_change,780
 2011,3_towns,0901372090,Stafford,Tolland County,pop_change,-32
 2012,3_towns,0901372090,Stafford,Tolland County,pop_change,3
@@ -1670,7 +1829,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901372090,Stafford,Tolland County,pop_change,-36
 2017,3_towns,0901372090,Stafford,Tolland County,pop_change,-5
 2018,3_towns,0901372090,Stafford,Tolland County,pop_change,-11
-2000,3_towns,0901376290,Tolland,Tolland County,pop_change,0
+1990,3_towns,0901376290,Tolland,Tolland County,pop_change,0
+2000,3_towns,0901376290,Tolland,Tolland County,pop_change,2145
 2010,3_towns,0901376290,Tolland,Tolland County,pop_change,1906
 2011,3_towns,0901376290,Tolland,Tolland County,pop_change,-121
 2012,3_towns,0901376290,Tolland,Tolland County,pop_change,49
@@ -1680,7 +1840,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901376290,Tolland,Tolland County,pop_change,-31
 2017,3_towns,0901376290,Tolland,Tolland County,pop_change,-66
 2018,3_towns,0901376290,Tolland,Tolland County,pop_change,-72
-2000,3_towns,0901377830,Union,Tolland County,pop_change,0
+1990,3_towns,0901377830,Union,Tolland County,pop_change,0
+2000,3_towns,0901377830,Union,Tolland County,pop_change,81
 2010,3_towns,0901377830,Union,Tolland County,pop_change,161
 2011,3_towns,0901377830,Union,Tolland County,pop_change,136
 2012,3_towns,0901377830,Union,Tolland County,pop_change,-36
@@ -1690,7 +1851,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901377830,Union,Tolland County,pop_change,-1
 2017,3_towns,0901377830,Union,Tolland County,pop_change,20
 2018,3_towns,0901377830,Union,Tolland County,pop_change,-59
-2000,3_towns,0901378250,Vernon,Tolland County,pop_change,0
+1990,3_towns,0901378250,Vernon,Tolland County,pop_change,0
+2000,3_towns,0901378250,Vernon,Tolland County,pop_change,-1778
 2010,3_towns,0901378250,Vernon,Tolland County,pop_change,1116
 2011,3_towns,0901378250,Vernon,Tolland County,pop_change,20
 2012,3_towns,0901378250,Vernon,Tolland County,pop_change,-11
@@ -1700,7 +1862,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901378250,Vernon,Tolland County,pop_change,26
 2017,3_towns,0901378250,Vernon,Tolland County,pop_change,42
 2018,3_towns,0901378250,Vernon,Tolland County,pop_change,-25
-2000,3_towns,0901385950,Willington,Tolland County,pop_change,0
+1990,3_towns,0901385950,Willington,Tolland County,pop_change,0
+2000,3_towns,0901385950,Willington,Tolland County,pop_change,-20
 2010,3_towns,0901385950,Willington,Tolland County,pop_change,82
 2011,3_towns,0901385950,Willington,Tolland County,pop_change,29
 2012,3_towns,0901385950,Willington,Tolland County,pop_change,-28
@@ -1710,7 +1873,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901385950,Willington,Tolland County,pop_change,-34
 2017,3_towns,0901385950,Willington,Tolland County,pop_change,-11
 2018,3_towns,0901385950,Willington,Tolland County,pop_change,-4
-2000,3_towns,0901501430,Ashford,Windham County,pop_change,0
+1990,3_towns,0901501430,Ashford,Windham County,pop_change,0
+2000,3_towns,0901501430,Ashford,Windham County,pop_change,333
 2010,3_towns,0901501430,Ashford,Windham County,pop_change,219
 2011,3_towns,0901501430,Ashford,Windham County,pop_change,-8
 2012,3_towns,0901501430,Ashford,Windham County,pop_change,-3
@@ -1720,7 +1884,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901501430,Ashford,Windham County,pop_change,-11
 2017,3_towns,0901501430,Ashford,Windham County,pop_change,-16
 2018,3_towns,0901501430,Ashford,Windham County,pop_change,-20
-2000,3_towns,0901509190,Brooklyn,Windham County,pop_change,0
+1990,3_towns,0901509190,Brooklyn,Windham County,pop_change,0
+2000,3_towns,0901509190,Brooklyn,Windham County,pop_change,492
 2010,3_towns,0901509190,Brooklyn,Windham County,pop_change,1037
 2011,3_towns,0901509190,Brooklyn,Windham County,pop_change,-78
 2012,3_towns,0901509190,Brooklyn,Windham County,pop_change,48
@@ -1730,7 +1895,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901509190,Brooklyn,Windham County,pop_change,3
 2017,3_towns,0901509190,Brooklyn,Windham County,pop_change,-26
 2018,3_towns,0901509190,Brooklyn,Windham County,pop_change,11
-2000,3_towns,0901512130,Canterbury,Windham County,pop_change,0
+1990,3_towns,0901512130,Canterbury,Windham County,pop_change,0
+2000,3_towns,0901512130,Canterbury,Windham County,pop_change,225
 2010,3_towns,0901512130,Canterbury,Windham County,pop_change,440
 2011,3_towns,0901512130,Canterbury,Windham County,pop_change,-23
 2012,3_towns,0901512130,Canterbury,Windham County,pop_change,2
@@ -1740,7 +1906,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901512130,Canterbury,Windham County,pop_change,-19
 2017,3_towns,0901512130,Canterbury,Windham County,pop_change,-4
 2018,3_towns,0901512130,Canterbury,Windham County,pop_change,0
-2000,3_towns,0901513810,Chaplin,Windham County,pop_change,0
+1990,3_towns,0901513810,Chaplin,Windham County,pop_change,0
+2000,3_towns,0901513810,Chaplin,Windham County,pop_change,202
 2010,3_towns,0901513810,Chaplin,Windham County,pop_change,55
 2011,3_towns,0901513810,Chaplin,Windham County,pop_change,176
 2012,3_towns,0901513810,Chaplin,Windham County,pop_change,-69
@@ -1750,7 +1917,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901513810,Chaplin,Windham County,pop_change,106
 2017,3_towns,0901513810,Chaplin,Windham County,pop_change,-5
 2018,3_towns,0901513810,Chaplin,Windham County,pop_change,-36
-2000,3_towns,0901521860,Eastford,Windham County,pop_change,0
+1990,3_towns,0901521860,Eastford,Windham County,pop_change,0
+2000,3_towns,0901521860,Eastford,Windham County,pop_change,304
 2010,3_towns,0901521860,Eastford,Windham County,pop_change,131
 2011,3_towns,0901521860,Eastford,Windham County,pop_change,-147
 2012,3_towns,0901521860,Eastford,Windham County,pop_change,88
@@ -1760,7 +1928,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901521860,Eastford,Windham County,pop_change,-31
 2017,3_towns,0901521860,Eastford,Windham County,pop_change,-95
 2018,3_towns,0901521860,Eastford,Windham County,pop_change,82
-2000,3_towns,0901536000,Hampton,Windham County,pop_change,0
+1990,3_towns,0901536000,Hampton,Windham County,pop_change,0
+2000,3_towns,0901536000,Hampton,Windham County,pop_change,180
 2010,3_towns,0901536000,Hampton,Windham County,pop_change,105
 2011,3_towns,0901536000,Hampton,Windham County,pop_change,-16
 2012,3_towns,0901536000,Hampton,Windham County,pop_change,-48
@@ -1770,7 +1939,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901536000,Hampton,Windham County,pop_change,-76
 2017,3_towns,0901536000,Hampton,Windham County,pop_change,55
 2018,3_towns,0901536000,Hampton,Windham County,pop_change,32
-2000,3_towns,0901540500,Killingly,Windham County,pop_change,0
+1990,3_towns,0901540500,Killingly,Windham County,pop_change,0
+2000,3_towns,0901540500,Killingly,Windham County,pop_change,583
 2010,3_towns,0901540500,Killingly,Windham County,pop_change,898
 2011,3_towns,0901540500,Killingly,Windham County,pop_change,-12
 2012,3_towns,0901540500,Killingly,Windham County,pop_change,-13
@@ -1780,7 +1950,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901540500,Killingly,Windham County,pop_change,-61
 2017,3_towns,0901540500,Killingly,Windham County,pop_change,-29
 2018,3_towns,0901540500,Killingly,Windham County,pop_change,10
-2000,3_towns,0901559980,Plainfield,Windham County,pop_change,0
+1990,3_towns,0901559980,Plainfield,Windham County,pop_change,0
+2000,3_towns,0901559980,Plainfield,Windham County,pop_change,256
 2010,3_towns,0901559980,Plainfield,Windham County,pop_change,786
 2011,3_towns,0901559980,Plainfield,Windham County,pop_change,-22
 2012,3_towns,0901559980,Plainfield,Windham County,pop_change,-25
@@ -1790,7 +1961,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901559980,Plainfield,Windham County,pop_change,-33
 2017,3_towns,0901559980,Plainfield,Windham County,pop_change,-36
 2018,3_towns,0901559980,Plainfield,Windham County,pop_change,-24
-2000,3_towns,0901561030,Pomfret,Windham County,pop_change,0
+1990,3_towns,0901561030,Pomfret,Windham County,pop_change,0
+2000,3_towns,0901561030,Pomfret,Windham County,pop_change,696
 2010,3_towns,0901561030,Pomfret,Windham County,pop_change,449
 2011,3_towns,0901561030,Pomfret,Windham County,pop_change,-18
 2012,3_towns,0901561030,Pomfret,Windham County,pop_change,2
@@ -1800,7 +1972,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901561030,Pomfret,Windham County,pop_change,-20
 2017,3_towns,0901561030,Pomfret,Windham County,pop_change,2
 2018,3_towns,0901561030,Pomfret,Windham County,pop_change,-11
-2000,3_towns,0901562710,Putnam,Windham County,pop_change,0
+1990,3_towns,0901562710,Putnam,Windham County,pop_change,0
+2000,3_towns,0901562710,Putnam,Windham County,pop_change,-29
 2010,3_towns,0901562710,Putnam,Windham County,pop_change,582
 2011,3_towns,0901562710,Putnam,Windham County,pop_change,-23
 2012,3_towns,0901562710,Putnam,Windham County,pop_change,1
@@ -1810,7 +1983,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901562710,Putnam,Windham County,pop_change,-49
 2017,3_towns,0901562710,Putnam,Windham County,pop_change,-24
 2018,3_towns,0901562710,Putnam,Windham County,pop_change,-35
-2000,3_towns,0901567400,Scotland,Windham County,pop_change,0
+1990,3_towns,0901567400,Scotland,Windham County,pop_change,0
+2000,3_towns,0901567400,Scotland,Windham County,pop_change,341
 2010,3_towns,0901567400,Scotland,Windham County,pop_change,170
 2011,3_towns,0901567400,Scotland,Windham County,pop_change,-32
 2012,3_towns,0901567400,Scotland,Windham County,pop_change,31
@@ -1820,7 +1994,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901567400,Scotland,Windham County,pop_change,-8
 2017,3_towns,0901567400,Scotland,Windham County,pop_change,7
 2018,3_towns,0901567400,Scotland,Windham County,pop_change,-38
-2000,3_towns,0901573420,Sterling,Windham County,pop_change,0
+1990,3_towns,0901573420,Sterling,Windham County,pop_change,0
+2000,3_towns,0901573420,Sterling,Windham County,pop_change,742
 2010,3_towns,0901573420,Sterling,Windham County,pop_change,731
 2011,3_towns,0901573420,Sterling,Windham County,pop_change,-61
 2012,3_towns,0901573420,Sterling,Windham County,pop_change,17
@@ -1830,7 +2005,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901573420,Sterling,Windham County,pop_change,-33
 2017,3_towns,0901573420,Sterling,Windham County,pop_change,-13
 2018,3_towns,0901573420,Sterling,Windham County,pop_change,14
-2000,3_towns,0901575870,Thompson,Windham County,pop_change,0
+1990,3_towns,0901575870,Thompson,Windham County,pop_change,0
+2000,3_towns,0901575870,Thompson,Windham County,pop_change,210
 2010,3_towns,0901575870,Thompson,Windham County,pop_change,580
 2011,3_towns,0901575870,Thompson,Windham County,pop_change,-12
 2012,3_towns,0901575870,Thompson,Windham County,pop_change,-17
@@ -1840,7 +2016,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901575870,Thompson,Windham County,pop_change,-30
 2017,3_towns,0901575870,Thompson,Windham County,pop_change,-28
 2018,3_towns,0901575870,Thompson,Windham County,pop_change,44
-2000,3_towns,0901586790,Windham,Windham County,pop_change,0
+1990,3_towns,0901586790,Windham,Windham County,pop_change,0
+2000,3_towns,0901586790,Windham,Windham County,pop_change,818
 2010,3_towns,0901586790,Windham,Windham County,pop_change,2411
 2011,3_towns,0901586790,Windham,Windham County,pop_change,-139
 2012,3_towns,0901586790,Windham,Windham County,pop_change,49
@@ -1850,7 +2027,8 @@ year,level,geoid,name,county,var,estimate
 2016,3_towns,0901586790,Windham,Windham County,pop_change,-106
 2017,3_towns,0901586790,Windham,Windham County,pop_change,-159
 2018,3_towns,0901586790,Windham,Windham County,pop_change,-151
-2000,3_towns,0901588190,Woodstock,Windham County,pop_change,0
+1990,3_towns,0901588190,Woodstock,Windham County,pop_change,0
+2000,3_towns,0901588190,Woodstock,Windham County,pop_change,1213
 2010,3_towns,0901588190,Woodstock,Windham County,pop_change,743
 2011,3_towns,0901588190,Woodstock,Windham County,pop_change,-42
 2012,3_towns,0901588190,Woodstock,Windham County,pop_change,12
