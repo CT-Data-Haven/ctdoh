@@ -59,6 +59,52 @@ components <- bind_rows(ct_components, county_components) %>%
 	select(year, level, geoid, name, county, var = variable, estimate = value)
 
 write_csv(components, "../output_data/pop_change_components_2010_2018")
+
+total <- components %>% 
+	ungroup() %>% 
+	filter(!var %in% c("births", "deaths")) %>% 
+	select(name, year, estimate) %>% 
+	group_by(name, year) %>% 
+	summarise(estimate = sum(estimate)) %>% 
+	ungroup() %>% 
+	filter(year != 2010) %>% 
+	mutate(var = "total")
 ```
 
-2000-2010 intercensals unavailable with tidycensus. After looking through APIs I'm not sure these estimates exist prior to 2010. Need to confer with Urban.
+2010 data is weird a short period (see note above) so I'm going to remove it from charts.
+
+The county charts tell a more detailed story than just the state chart. If we choose to only show state in the report, the text should describe how the counties differ, and a table or this faceted chart should be in the appendix.
+
+```{r}
+components_plot <- components %>% 
+	ungroup() %>% 
+	select(name, year, var, estimate) %>% 
+	filter(!var %in% c("births", "deaths"), year != 2010) %>% 
+	bind_rows(total) %>% 
+	mutate(var = str_replace(var, "mig", " Migration"),
+				 var = str_remove(var, "inc"),
+				 var = str_to_sentence(var)) %>% 
+	mutate(year = as.factor(year),
+				 var = as.factor(var) %>% 
+				 	fct_relevel(., "Natural", "Domestic migration", "International migration"))
+```
+
+```{r fig.height=8, fig.width=12}
+ggplot(components_plot, aes(x = year, y = estimate, group = var)) +
+	geom_col(data = components_plot %>% filter(var != "Total"), aes(fill = var), position = position_stack(), color = "grey90", size = 0.1) +
+	geom_line(data = components_plot %>% filter(var == "Total"), aes(color = var), size = .75) +
+	scale_color_manual(values = "grey35") +
+	scale_y_continuous(labels = scales::comma_format()) +
+	facet_wrap(facets = "name", scales = "free_y") +
+	hrbrthemes::theme_ipsum_rc() +
+	guides(color = guide_legend(title = ""),
+				 fill = guide_legend(title = "Component")) +
+	labs(title = "Components of population change, 2011–2018",
+			 x = "", y = "", caption = "Natural population change is the sum of births and deaths in the area.") +
+	theme(strip.text.x = element_text(hjust = .5, size = 11),
+				panel.grid.minor = element_blank(),
+				legend.position = "bottom",
+				plot.title.position = "plot", 
+				axis.text.x = element_text(colour = "black", size = 10),
+				axis.text.y = element_text(colour = "black", size = 10))
+```
