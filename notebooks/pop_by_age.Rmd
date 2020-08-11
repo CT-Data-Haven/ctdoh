@@ -253,3 +253,43 @@ pop_by_age_out %>%
 	select(Name = name, `Age group` = var, `Estimate, 2000` = `2000`, `Estimate, 2018` = `2018`, `Pct. chg. 2000–2018` = lbl_chg) %>% 
 	kableExtra::kable()
 ```
+
+```{r}
+pop_by_age_out %>% 
+	ungroup() %>% 
+	filter(level != "3_towns", year %in% c( 2000,  2018)) %>% 
+	select(year, name, var, estimate) %>% 
+	mutate(year = as.factor(year),
+				 var = fct_collapse(var,
+				 									 `Total population` = "total_pop",
+				 									 `Under 19 years` = c("under_5_years", "5_to_9_years", "10_to_14_years", "15_to_19_years"),
+				 									 `20–34 years` = c("20_to_24_years", "25_to_29_years", "30_to_34_years"),
+				 									 `35–59 years` = c("35_to_39_years", "40_to_44_years", "45_to_49_years", "50_to_54_years", "55_to_59_years"),
+				 									 `60–74 years` = c("60_to_64_years", "65_to_69_years", "70_to_74_years"),
+				 									 `75 years and over` = c("75_to_79_years", "80_to_84_years", "85_years_and_over"))) %>% 
+	group_by(year, name, var) %>% 
+	summarise(estimate = sum(estimate)) %>% 
+	ungroup() %>% 
+	pivot_wider(id_cols = c("name", "var"), names_from = year, values_from = estimate) %>% 
+	mutate(pct_chg = (`2018` - `2000`) / `2000`,
+				 var = fct_rev(var)) %>% 
+	filter(var != "Total population") %>% 
+	ggplot(aes(pct_chg, var)) +
+	geom_vline(xintercept = 0, size = .25, alpha = .8) +
+	geom_col(aes(fill = var), width = .75, position = position_dodge(.85)) +
+	geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Roboto Condensed", size = 4) +
+	scale_x_continuous(limits = c(-.25, 1),
+										 expand = expansion(mult = c(.15,.05))) +
+	facet_wrap(facets = "name") +
+	hrbrthemes::theme_ipsum_rc() +
+	guides(fill = guide_legend(title = "")) +
+	labs(title = "Population change by age group, 2000–2018",
+			 x = "", y = "") +
+	theme(plot.title.position = "plot",
+				axis.text.y = element_text(colour = "black"),
+				strip.text.x = element_text(hjust = .5),
+				panel.grid.minor = element_blank(),
+				panel.grid.major = element_blank(),
+				axis.text.x = element_blank(),
+				legend.position = "none")
+```
