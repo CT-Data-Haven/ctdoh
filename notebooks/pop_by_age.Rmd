@@ -254,7 +254,7 @@ pop_by_age_out %>%
 	kableExtra::kable()
 ```
 
-```{r}
+```{r fig.height=8, fig.width=8}
 pop_by_age_out %>% 
 	ungroup() %>% 
 	filter(level != "3_towns", year %in% c( 2000,  2018)) %>% 
