@@ -96,7 +96,7 @@ int_pop <- bind_rows(int_ct, int_county) %>%
 ### write out total pop
 pop_out <- bind_rows(deci_pop, int_pop, acs_pop) %>% 
 	arrange(level, geoid, year) %>% 
-	write_csv(., "../output_data/total_pop_2000_2018.csv")
+	write_csv(., "../output_data/total_pop_1990_2018.csv")
 ```
 
 ## Calculate pop change
@@ -111,7 +111,7 @@ pop_change_all_years <- pop_out %>%
 	select(-estimate, -moe) %>% 
 	rename(estimate = diff) %>% 
 	select(year, level, geoid, name, county, var, estimate) %>% 
-	write_csv("../output_data/pop_change_2000_2018.csv")
+	write_csv("../output_data/pop_change_1990_2018.csv")
 ```
 
 ```{r fig.height=6}

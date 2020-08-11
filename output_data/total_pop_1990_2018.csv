@@ -1247,7 +1247,7 @@ year,level,geoid,name,county,var,estimate,moe
 2017,3_towns,0900907310,Branford,New Haven County,total_pop,28149,36
 2018,3_towns,0900907310,Branford,New Haven County,total_pop,28094,28
 1990,3_towns,0900914160,Cheshire,New Haven County,total_pop,25684,0
-2000,3_towns,0900914160,Cheshire,New Haven County,total_pop,28463,0
+2000,3_towns,0900914160,Cheshire,New Haven County,total_pop,28543,0
 2010,3_towns,0900914160,Cheshire,New Haven County,total_pop,29261,0
 2011,3_towns,0900914160,Cheshire,New Haven County,total_pop,29200,31
 2012,3_towns,0900914160,Cheshire,New Haven County,total_pop,29253,26
@@ -1324,7 +1324,7 @@ year,level,geoid,name,county,var,estimate,moe
 2017,3_towns,0900946520,Meriden,New Haven County,total_pop,60241,33
 2018,3_towns,0900946520,Meriden,New Haven County,total_pop,59864,85
 1990,3_towns,0900946940,Middlebury,New Haven County,total_pop,6145,0
-2000,3_towns,0900946940,Middlebury,New Haven County,total_pop,6531,0
+2000,3_towns,0900946940,Middlebury,New Haven County,total_pop,6451,0
 2010,3_towns,0900946940,Middlebury,New Haven County,total_pop,7575,0
 2011,3_towns,0900946940,Middlebury,New Haven County,total_pop,7459,18
 2012,3_towns,0900946940,Middlebury,New Haven County,total_pop,7522,20
