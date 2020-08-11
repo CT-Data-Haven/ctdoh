@@ -1794,11 +1794,12 @@ pop_by_race_out %>%
     pivot_wider(id_cols = c("name", "label"), names_from = year, values_from = estimate) %>% 
     mutate(pct_chg = (`2018` - `2000`) / `2000`) %>% 
     ggplot(aes(pct_chg, label)) +
+    geom_vline(xintercept = 0, size = .25, alpha = .8) +
     geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
-    geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Roboto Condensed", size = 3) +
+    geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Roboto Condensed", size = 4) +
     scale_x_continuous(limits = c(-.25, 2),
                                          labels = scales::percent_format(),
-                                         expand = expansion(mult = c(.05, .1))) +
+                                         expand = expansion(mult = c(.15, .1))) +
     facet_wrap(facets = "name") +
     hrbrthemes::theme_ipsum_rc() +
     guides(fill = guide_legend(title = "")) +
