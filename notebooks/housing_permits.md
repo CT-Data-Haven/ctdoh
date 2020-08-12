@@ -45,6 +45,8 @@ housing_read <- list.files(file.path("..", "input_data", "housing_permit_downloa
 
 Lydia’s table asks for groups as: SF, MF 2-4, and MF 5+
 
+I wish we could do 1, 2-9, 10+, but the data don’t come like that.
+
 ``` r
 source("../_utils/town2county.R")
 
@@ -60,21 +62,81 @@ permits <- housing_read %>%
                                          `1 unit` = "1 unit",
                                          `2 to 4 units` = c("2 units", "3 to 4 units"),
                                          `5+ units` = "5+ units")) %>% 
+    group_by(year, name, units) %>% 
+    summarise(value = sum(value)) %>% 
+    ungroup() %>% 
     left_join(town2county, by = c("name" = "town")) %>% 
-    select(year, name, county, units, value)
+    select(year, name, county, units, value) %>%
+    mutate(level = if_else(name == "Connecticut", "1_state", "3_towns")) %>% 
+    select(level, everything())
+
+county_permits <- permits %>% 
+    filter(!is.na(county)) %>% 
+    select(-name, -level) %>% 
+    group_by(year, county, units) %>% 
+    summarise(value = sum(value)) %>% 
+    rename(name = county) %>% 
+    mutate(county = NA, level = "2_counties")
+
+permits <- bind_rows(permits, county_permits) %>% 
+    arrange(level)
 
 write_csv(permits, "../output_data/housing_permits_2001_2019.csv")
 ```
 
+I think we should just combine all the MF permits since 2-4 gets totally
+washed out. Those make up a pretty small share of permits everywhere, in
+every year. Both options below.
+
 ``` r
 permits %>% 
-    select(-name) %>% 
-    group_by(county, year, units) %>% 
-    summarise(value = sum(value)) %>% 
-    filter(!is.na(county)) %>% 
+    filter(level != "3_towns") %>%
+    mutate(units = fct_rev(units)) %>% 
     ggplot(aes(year, value, group = units)) +
-    geom_line(aes(color = units)) +
-    facet_grid(facets = "county")
+    geom_col(aes(fill = units), color = "white", size = .15) +
+    facet_wrap(facets = "name", scales = "free_y") +
+    guides(fill = guide_legend(reverse = T)) +
+    hrbrthemes::theme_ipsum_rc() +
+    scale_y_continuous(labels = scales::comma_format()) +
+    scale_fill_hue(direction = -1) +
+    guides(fill = guide_legend(title = "", reverse = T)) +
+    labs(title = "Housing permits issued annually by number of units in building, 2001–2017",
+             x = "", y = "") +
+    theme(panel.grid.minor = element_blank(),
+                plot.title.position = "plot",
+                legend.position = "bottom",
+                strip.text.x = element_text(hjust = .5),
+                axis.text.x = element_text(colour = "black"),
+                axis.text.y = element_text(colour = "black"))
 ```
 
 ![](housing_permits_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+permits %>% 
+    filter(level != "3_towns") %>%
+    mutate(units = fct_collapse(units, `Single family` = "1 unit", `Multifamily` = c("2 to 4 units", "5+ units"))) %>% 
+    ungroup() %>% 
+    group_by(level, year, name, units) %>% 
+    summarise(value = sum(value)) %>% 
+    ungroup() %>% 
+    mutate(units = fct_rev(units)) %>% 
+    ggplot(aes(year, value, group = units)) +
+    geom_col(aes(fill = units), color = "white", size = .15) +
+    facet_wrap(facets = "name", scales = "free_y") +
+    guides(fill = guide_legend(reverse = T)) +
+    hrbrthemes::theme_ipsum_rc() +
+    scale_y_continuous(labels = scales::comma_format()) +
+    scale_fill_hue(direction = -1) +
+    guides(fill = guide_legend(title = "", reverse = T)) +
+    labs(title = "Housing permits issued annually by number of units in building, 2001–2017",
+             x = "", y = "") +
+    theme(panel.grid.minor = element_blank(),
+                plot.title.position = "plot",
+                legend.position = "bottom",
+                strip.text.x = element_text(hjust = .5),
+                axis.text.x = element_text(colour = "black"),
+                axis.text.y = element_text(colour = "black"))
+```
+
+![](housing_permits_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
