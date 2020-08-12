@@ -74,15 +74,6 @@ household_type <- bind_rows(family, children) %>%
 write_csv(household_type, "../output_data/household_type_2000_2018.csv")
 ```
 
-```{r}
-household_type %>% 
-	filter(level == "2_counties", !is.na(share)) %>% 
-	ggplot(aes(year, share, group = name)) +
-	geom_col(aes(fill = group)) +
-	facet_wrap(facets = "name") +
-	theme(legend.position = "bottom")
-```
-
 # Calculate change
 
 ```{r}
@@ -96,4 +87,98 @@ household_type_change <- household_type %>%
 	
 household_type_change %>% 
 	write_csv("../output_data/household_type_change_2000_2018.csv")
+```
+
+```{r fig.height=5, fig.width=6.25}
+set.seed(13)
+
+household_type_change %>% 
+	ungroup() %>% 
+	mutate(group = as.character(group),
+				 group = str_replace_all(group, "_", " "),
+				 group = str_replace(group, "w", "with"),
+				 group = str_replace(group, "no", "without"),
+				 group = str_to_sentence(group)) %>% 
+	mutate(group = as.factor(group) %>% 
+				 	fct_relevel(.,  "Total households", "Living alone", "Married with kids", "Married without kids", "Single with kids", "Other households")) %>% 
+	filter(level != "3_towns", group != "Total households") %>% 
+	select(-level, -change_from_prev_data_year) %>% 
+	mutate(year = as.factor(year)) %>% 
+	filter(name == "Connecticut") %>% 
+	ggplot(aes(year, value, group = group)) +
+	geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
+	geom_point(aes(color = group), size = 4, alpha = .8) +
+	geom_line(aes(color = group), size = 1, alpha = .8) +
+	ggrepel::geom_text_repel(aes(label = scales::comma(value, accuracy = 1)), segment.colour = NA, vjust = -1.4, family = "Roboto Condensed") +
+	scale_y_continuous(expand = expansion(mult = c(.1, .1))) +
+	hrbrthemes::theme_ipsum_rc() +
+	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+	labs(title = "Households by type, 2000–2018",
+			 subtitle = "Connecticut",
+			 x = "", y = "") +
+	theme(plot.title.position = "plot",
+				axis.text.y = element_blank(),
+				panel.grid.major = element_blank(),
+				panel.grid.minor = element_blank(),
+				axis.text.x = element_text(colour = "black"),
+				legend.position = "bottom")
+```
+
+```{r}
+household_type_change %>% 
+	ungroup() %>% 
+	filter(level != "3_towns") %>% 
+	mutate(group = as.character(group),
+				 group = str_replace_all(group, "_", " "),
+				 group = str_replace(group, "w", "with"),
+				 group = str_replace(group, "no", "without"),
+				 group = str_to_sentence(group)) %>% 
+	mutate(group = as.factor(group) %>% 
+				 	fct_relevel(.,  "Total households", "Living alone", "Married with kids", "Married without kids", "Single with kids", "Other households")) %>% 
+	select(-level, -change_from_prev_data_year) %>% 
+	pivot_wider(id_cols = c("name", "group"), names_from = year, values_from = value) %>% 
+	group_by(name, group) %>% 
+	mutate(diff = (`2018` - `2000`) / `2000`,
+				 pct = scales::percent(diff, accuracy = 1),
+				 x2000 = scales::comma(`2000`, accuracy = 1),
+				 x2018 = scales::comma(`2018`, accuracy = 1)) %>% 
+	select(Name = name, `Household type` = group, `Estimate, 2000` = x2000, `Estimate, 2018` = x2018, `Percent change` = pct) %>% 
+	arrange(Name, `Household type`) %>% 
+	kableExtra::kable()
+```
+
+```{r fig.height=8, fig.width=8}
+household_type_change %>% 
+	ungroup() %>% 
+	filter(level != "3_towns") %>% 
+	mutate(group = as.character(group),
+				 group = str_replace_all(group, "_", " "),
+				 group = str_replace(group, "w", "with"),
+				 group = str_replace(group, "no", "without"),
+				 group = str_to_sentence(group)) %>% 
+	mutate(group = as.factor(group) %>% 
+				 	fct_relevel(.,  "Total households", "Living alone", "Married with kids", "Married without kids", "Single with kids", "Other households")) %>% 
+	select(-level, -change_from_prev_data_year) %>% 
+	pivot_wider(id_cols = c("name", "group"), names_from = year, values_from = value) %>% 
+	group_by(name, group) %>% 
+	mutate(diff = (`2018` - `2000`) / `2000`) %>% 
+	select(name, group, diff) %>% 
+	ggplot(aes(diff, group)) +
+	geom_vline(xintercept = 0, size = .25, alpha = .8) +
+	geom_col(aes(fill = group), width = .75, position = "identity") +
+	geom_text(aes(label = scales::percent(diff, accuracy = 1)), hjust = "inward", position = "identity", family = "Roboto Condensed", size = 4) +
+	scale_x_continuous(limits = c(-.3, .5),
+										 expand = expansion(mult = c(.15,.05))) +
+	facet_wrap(facets = "name") +
+	hrbrthemes::theme_ipsum_rc() +
+	guides(fill = guide_legend(title = "")) +
+	labs(title = "Change in households by type, 2000–2018",
+			 x = "", y = "") +
+	theme(plot.title.position = "plot",
+				axis.text.y = element_text(colour = "black"),
+				strip.text.x = element_text(hjust = .5),
+				panel.grid.minor = element_blank(),
+				panel.grid.major = element_blank(),
+				axis.text.x = element_blank(),
+				legend.position = "none")
 ```
