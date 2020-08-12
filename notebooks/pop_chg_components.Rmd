@@ -92,15 +92,16 @@ components_plot <- components %>%
 ```{r fig.height=8, fig.width=12}
 ggplot(components_plot, aes(x = year, y = estimate, group = var)) +
 	geom_col(data = components_plot %>% filter(var != "Total"), aes(fill = var), position = position_stack(), color = "grey90", size = 0.1) +
-	geom_line(data = components_plot %>% filter(var == "Total"), aes(color = var), size = .75) +
+	geom_hline(yintercept = 0, color = .65, alpha = .9) +
+	geom_line(data = components_plot %>% filter(var == "Total"), aes(color = var), size = .85) +
 	scale_color_manual(values = "grey35") +
 	scale_y_continuous(labels = scales::comma_format()) +
 	facet_wrap(facets = "name", scales = "free_y") +
 	hrbrthemes::theme_ipsum_rc() +
 	guides(color = guide_legend(title = ""),
 				 fill = guide_legend(title = "Component")) +
-	labs(title = "Components of population change, 2011–2018",
-			 x = "", y = "", caption = "Natural population change is the sum of births and deaths in the area.") +
+	labs(title = "Population change by component, 2011–2018",
+			 x = "", y = "", caption = "Natural population change is equal to births minus deaths in the area.") +
 	theme(strip.text.x = element_text(hjust = .5, size = 11),
 				panel.grid.minor = element_blank(),
 				legend.position = "bottom",
