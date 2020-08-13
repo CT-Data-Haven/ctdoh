@@ -37,7 +37,7 @@ needed a convenient shorthand for the analysis.
   - Low income: (0.3–0.5\] CMI
   - Mid-low income: (0.5–.8\] CMI
   - Mid-high income: (.8–1.2\] CMI
-  - High income: (1.2–2.0\] CMI
+  - High income: \> 1.2 CMI
 
 Cost-burden in predictable breaks:
 
@@ -489,7 +489,7 @@ FYI, I did look at this by county, and each was very consistent in it
 distribution. High income was more than 40% with the rest somewhere
 between 10% and 20%. See table below.
 
-![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20bar%20chart-1.png)<!-- -->
+![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20share-1.png)<!-- -->
 
 <table>
 
@@ -987,6 +987,11 @@ hesitate to divide it up too much more than this, so more of an equity
 implication than an analysis crosstab.**
 
 ![](hh_desiring_housing_files/figure-gfm/hh%20by%20inc%20band%20by%20race%20bar%20charts-1.png)<!-- -->
+
+Here’s that chart pivoted so the numerator is the population by race of
+HOH of a given income band and the denominator is the total population
+of that income band. This is less helpful for less populous counties.
+![](hh_desiring_housing_files/figure-gfm/pivoted%20race%20bar-1.png)<!-- -->
 
 ### Disability
 
@@ -1996,6 +2001,7 @@ households, which is not insignificant, but it’s not the sole motivator
 for high SCB rates in this income band.
 
     ## # A tibble: 2 x 4
+    ## # Groups:   income [2]
     ##   income          cost_burden            households households_se
     ##   <chr>           <fct>                       <dbl>         <dbl>
     ## 1 negative_income Severely cost-burdened        366          79.2
@@ -2521,6 +2527,8 @@ In addition to the occupied units we’ve already looked at, this chart
 adds two categories of vacant units: “Vacant-On market” units are listed
 as “For rent or sale” or “For sale only,” and “Vacant-Off market” are
 vacant units that have been sold or rented but are not yet occupied.
+
+**8/13** Removed off market units from chart.
 
 ![](hh_desiring_housing_files/figure-gfm/units%20by%20tenure%20and%20occ%20bar%20chart-1.png)<!-- -->
 

@@ -71,7 +71,7 @@ After discussion with team on 7/15 we will use median household income by county
 * Low income: (0.3–0.5] CMI
 * Mid-low income: (0.5–.8] CMI
 * Mid-high income: (.8–1.2] CMI
-* High income: (1.2–2.0] CMI
+* High income: > 1.2 CMI
 
 Cost-burden in predictable breaks:
 
@@ -221,7 +221,7 @@ Because the groupings are granular only at the lower income extreme, High income
 
 FYI, I did look at this by county, and each was very consistent in it distribution. High income was more than 40% with the rest somewhere between 10% and 20%. See table below.
 
-```{r hh by inc band bar chart}
+```{r hh by inc band bar chart, eval=F}
 hh_by_inc_band %>% 
 	filter(inc_band != "Total", name == "Connecticut") %>% 
 	mutate(inc_band = fct_rev(inc_band)) %>% 
@@ -248,6 +248,29 @@ hh_by_inc_band %>%
 		axis.text.x = element_blank(),
 		axis.text.y = element_text(colour = "black"),
 		strip.text.y = element_blank())
+```
+
+```{r hh by inc band share, fig.height=8, fig.width=8}
+hh_by_inc_band %>% 
+	filter(inc_band != "Total") %>% 
+	mutate(inc_band = fct_rev(inc_band)) %>% 
+	ggplot(aes(share, inc_band, group = name)) +
+	geom_col(aes(fill = inc_band), width = .7, position = position_stack()) +
+	scale_x_continuous(expand = expansion(mult = c(0, 0.1)), labels = scales::comma) +
+	geom_text(aes(label = percent(share, accuracy = 1)),
+						position = position_stack(), hjust = 1, family = "Roboto Condensed", size = 4) +
+	facet_wrap(facets = "name") +
+	guides(fill = guide_legend(title = "")) +
+	labs(x = "",  y = "",
+			 title = "Share of households in each income band") +
+	scale_fill_custom(rev = T) +
+	theme(panel.grid.minor = element_blank(),
+				panel.grid.major = element_blank(),
+				legend.position = "none",
+				plot.title.position = "plot",
+				axis.text.x = element_blank(),
+				axis.text.y = element_text(colour = "black"),
+				strip.text.y = element_blank())
 ```
 
 ```{r hh by inc band table}
@@ -332,6 +355,46 @@ hh_by_race_inc_band %>%
 				plot.title.position = "plot")
 ```
 
+```{r pivot race data}
+pivot_race <- hh_by_race_inc_band %>% 
+	ungroup() %>% 
+	select(name, race2, inc_band, value) %>%
+	bind_rows(hh_by_inc_band %>% 
+							ungroup() %>% 
+							select(name, inc_band, value) %>% 
+							mutate(race2 = "Total"))
+```
+
+Here's that chart pivoted so the numerator is the population by race of HOH of a given income band and the denominator is the total population of that income band. This is less helpful for less populous counties.
+```{r pivoted race bar, fig.width=10, fig.height=10}
+pivot_race %>% 
+	select(name, inc_band, race2, value) %>%
+	filter(inc_band != "Total") %>%
+	ungroup() %>% 
+	group_by(name, inc_band) %>% 
+	calc_shares(group = race2, denom = "Total", value = value) %>% 
+	filter(!is.na(share)) %>% 
+	mutate(inc_band = fct_rev(inc_band)) %>% 
+	ggplot(aes(share, inc_band, group = race2)) +
+	geom_col(aes(fill = race2), width = .8, position = position_stack(1)) +
+	guides(fill = guide_legend(title = "", reverse = T)) +
+	geom_text(aes(label = percent(share, accuracy = 1)),
+						position = position_stack(.5), family = "Roboto Condensed") +
+	scale_x_continuous(expand = expansion(mult = c(0.1, 0))) +
+	facet_wrap(facets = "name") +
+	guides(fill = guide_legend(title = "")) +
+	scale_fill_custom() +
+	labs(x = "", y = "",
+			 title = "Share of households by race of HOH in each income band") +
+	theme(panel.grid.major  = element_blank(),
+				panel.grid.minor = element_blank(),
+				axis.text.y = element_text(colour = "black"),
+				axis.text.x = element_blank(),
+				strip.text.x = element_text(hjust = .5, colour = "black"),
+				legend.position = "bottom",
+				plot.title.position = "plot")
+```
+
 ### Disability
 
 Because of the sample size, I'm only looking at these households statewide, not by county.
@@ -388,7 +451,7 @@ ct_inc_band_disability %>%
 	filter(disability == "TRUE", inc_band != "Total") %>% 
 	ggplot(aes(share, inc_band, group = inc_band)) +
 	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 3.5, hjust = 1.1, vjust = .5) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_custom(rev = T) +
 	theme(plot.title.position = "plot",
@@ -424,7 +487,7 @@ ct_cost_ratio_inc_band_disability %>%
 	ggplot(aes(inc_band, avg_cost_ratio, group = disability)) +
 	geom_col(aes(fill = disability), width = .8, position = position_dodge(.85)) +
 	geom_text(aes(label = percent(avg_cost_ratio, accuracy = 1)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
-	scale_fill_manual(values = c(pal[1], pal [5])) +
+	scale_fill_manual(values = c(pal[1], pal [4])) +
 	guides(fill = guide_legend(title = "Household has occupant with disability")) +
 	labs(title = "Average cost ratio for households in each income band",
 			 subtitle = "Connecticut",
@@ -1182,44 +1245,61 @@ other_vac_own <- hpums %>%
 ```{r bind all units}
 vac_cost_bands <- bind_rows(rent_vac, own_vac, other_vac_own, other_vac_rent)
 
-units_by_tenure_occupancy_cost_band <- bind_rows(occ_cost_bands, vac_cost_bands) %>% 
-	mutate(cost_band = str_to_sentence(cost_band),
-				 cost_band = str_replace(cost_band, "_", "-"),
-				 cost_band = if_else(cost_band == "Very-low", "Very low", cost_band)) %>% 
+units_by_tenure_occupancy_cost_band <- bind_rows(occ_cost_bands, vac_cost_bands) %>%
 	mutate(cost_band = as.factor(cost_band) %>% 
-				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
+				 	fct_relevel(., "very_low", "low", "mid_low", "mid_high", "high")) %>% 
 	mutate(occupancy = as.factor(occupancy) %>% 
-				 	fct_relevel(., "occupied", "vacant"))
+				 	fct_relevel(., "occupied", "vacant-on market, vacant-off market"))
 
-out$units_by_tenure_occupancy_cost_band <- units_by_tenure_occupancy_cost_band
+ct_units_by_tenure_occupancy_cost_band <- units_by_tenure_occupancy_cost_band %>% 
+	select(-name) %>% 
+	arrange(cost_band) %>% 
+	group_by(occupancy, tenure, cost_band) %>% 
+	summarise(units = sum(units)) %>% 
+	mutate(name = "Connecticut")
 
+out$units_by_tenure_occupancy_cost_band <- bind_rows(units_by_tenure_occupancy_cost_band, ct_units_by_tenure_occupancy_cost_band)
 ```
 
 In addition to the occupied units we've already looked at, this chart adds two categories of vacant units: "Vacant-On market" units are listed as "For rent or sale" or "For sale only," and "Vacant-Off market" are vacant units that have been sold or rented but are not yet occupied.
 
-```{r units by tenure and occ bar chart}
-units_by_tenure_occupancy_cost_band %>% 
-	mutate(occupancy = str_to_sentence(occupancy)) %>% 
-	select(-tenure, -name) %>% 
-	arrange(cost_band) %>% 
-	group_by(occupancy, cost_band) %>% 
+**8/13** Removed off market units from chart.
+
+```{r units by tenure and occ bar chart, fig.width=10, fig.height=10}
+out$units_by_tenure_occupancy_cost_band %>% 
+	filter(occupancy != "vacant-off market") %>% 
+	ungroup() %>% 
+	select(-tenure) %>% 
+	group_by(name, occupancy, cost_band) %>% 
 	summarise(units = sum(units)) %>% 
+	ungroup() %>% 
+	mutate(occupancy = as.character(occupancy),
+				 occupancy = str_to_sentence(occupancy)) %>% 
+	mutate(occupancy = as.factor(occupancy)) %>% 
+	mutate(cost_band = as.character(cost_band),
+				 cost_band = str_replace(cost_band, "_", " "),
+				 cost_band = str_replace(cost_band, "mid ", "mid-"),
+				 cost_band = str_to_sentence(cost_band)) %>% 
+	mutate(cost_band = as.factor(cost_band) %>% 
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
 	ggplot(aes(cost_band, units, group = cost_band)) +
-	geom_col(aes(fill = occupancy), width = .75) +
-	ggrepel::geom_text_repel(aes(label = comma(units)), family = "Roboto Condensed", size = 3.5, position = position_stack(.5)) +
+	geom_col(aes(fill = occupancy), width = .85) +
+  geom_text(aes(label = comma(units, accuracy = 1)),
+  					family = "Roboto Condensed", size = 3,
+  					position = position_stack(.5)) +
 	scale_y_continuous(labels = comma_format(),
-										 expand = expansion(mult = c(0, .1)),
-										 breaks = c(1e5, 2e5, 3e5, 4e5)) +
-	scale_fill_manual(values = c(pal[1], pal[5], pal[3])) +
+										 expand = expansion(mult = c(0, .15))) +
+	scale_fill_manual(values = c(pal[1], pal[3], pal[5])) +
 	guides(fill = guide_legend(title = "")) + 
+	facet_wrap(facets = "name", scales = "free_y") +
 	theme(plot.title.position = "plot",
 				panel.grid.minor = element_blank(),
 				panel.grid.major.x = element_blank(),
-				axis.text.x = element_text(colour = "black"),
-				axis.text.y = element_text(colour = "black"),
+				axis.text.x = element_text(colour = "black", size = 9,  angle = -45, hjust= 0),
+				axis.text.y = element_text(colour = "black", size = 9),
+				strip.text.x = element_text(colour = "black", hjust = .5, size = 11),
 				legend.position = "bottom") +
 	labs(title = "Total housing units in each cost band",
-			 subtitle = "Connecticut",
 			 x = "", y = "")
 ```
 
@@ -1251,7 +1331,14 @@ all_units_by_inc_band <- units_by_tenure_occupancy_cost_band %>%
 							mutate(name = "Connecticut") %>% 
 							group_by(name, cost_band) %>% 
 							summarise(units = sum(units))) %>% 
-	rename(band = cost_band)
+	rename(band = cost_band) %>% 
+	ungroup() %>% 
+	mutate(band = as.character(band),
+				 band = str_replace(band, "_", " "),
+				 band = str_replace(band, "mid ", "mid-"),
+				 band = str_to_sentence(band)) %>% 
+	mutate(band = as.factor(band) %>% 
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High"))
 
 units_and_hh <- hh_by_inc_band %>% 
 	ungroup() %>% 
@@ -1264,10 +1351,10 @@ units_and_hh <- hh_by_inc_band %>%
 ```{r units v hh bar chart, fig.height=9, fig.width=9}
 units_and_hh %>% 
 	ggplot(aes(band, value, group = group)) +
-	geom_col(aes(fill = group), position = position_dodge()) +
+	geom_col(aes(fill = group), position = position_dodge(.5), color = "white", size = .25) +
 	scale_y_continuous(labels = comma_format()) +
 	facet_wrap(facets = "name", scales = "free_y") +
-	scale_fill_manual(values = c(pal[1], pal[3])) +
+	scale_fill_manual(values = c(pal[1], pal[5])) +
 	labs(title = "Households and housing units in each band",
 			 x = "", y = "", caption = "Units include vacant units") +
 	guides(fill = guide_legend(title = "")) +
@@ -1275,9 +1362,11 @@ units_and_hh %>%
 				axis.text.y = element_text(colour = "black"),
 				panel.grid.major.x = element_blank(),
 				panel.grid.minor = element_blank(),
+				strip.text.x = element_text(hjust = .5),
 				legend.position = "bottom",
 				axis.text.x = element_text(colour = "black", angle = -60, hjust = 0, vjust = .5))
 ```
+
 
 ## Add homeless households?
 Mark suggests https://cceh.org for subcounty estimates, but I'm not sure how best to align CANs to counties, so instead I think this should be separate and included in the statewide count.

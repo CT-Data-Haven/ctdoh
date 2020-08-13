@@ -1,0 +1,46 @@
+name,inc_band,income_floor,income_ceiling
+Connecticut,high,91327,NA
+Fairfield County,high,111563,NA
+Hartford County,high,86785,NA
+Litchfield County,high,93977,NA
+Middlesex County,high,101713,NA
+New Haven County,high,80554,NA
+New London County,high,85642,NA
+Tolland County,high,101899,NA
+Windham County,high,77729,NA
+Connecticut,low,22832,38053
+Fairfield County,low,27891,46484
+Hartford County,low,21696,36160
+Litchfield County,low,23494,39157
+Middlesex County,low,25428,42380
+New Haven County,low,20138,33564
+New London County,low,21410,35684
+Tolland County,low,25475,42458
+Windham County,low,19432,32387
+Connecticut,mid_high,60885,91327
+Fairfield County,mid_high,74375,111563
+Hartford County,mid_high,57857,86785
+Litchfield County,mid_high,62651,93977
+Middlesex County,mid_high,67809,101713
+New Haven County,mid_high,53702,80554
+New London County,mid_high,57094,85642
+Tolland County,mid_high,67933,101899
+Windham County,mid_high,51819,77729
+Connecticut,mid_low,38053,60885
+Fairfield County,mid_low,46484,74375
+Hartford County,mid_low,36160,57857
+Litchfield County,mid_low,39157,62651
+Middlesex County,mid_low,42380,67809
+New Haven County,mid_low,33564,53702
+New London County,mid_low,35684,57094
+Tolland County,mid_low,42458,67933
+Windham County,mid_low,32387,51819
+Connecticut,very_low,NA,22832
+Fairfield County,very_low,NA,27891
+Hartford County,very_low,NA,21696
+Litchfield County,very_low,NA,23494
+Middlesex County,very_low,NA,25428
+New Haven County,very_low,NA,20138
+New London County,very_low,NA,21410
+Tolland County,very_low,NA,25475
+Windham County,very_low,NA,19432
