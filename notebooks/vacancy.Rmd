@@ -7,22 +7,107 @@ output: github_document
 knitr::opts_chunk$set(echo = T, message = F, warning = F)
 ```
 
-```{r}
+```{r lib}
+library(ipumsr)
 library(tidyverse)
+library(srvyr)
 library(tidycensus)
-library(janitor)
-library(cwi)
+library(hrbrthemes)
 library(camiller)
+library(scales)
+library(kableExtra)
 ```
 
-Vacancy - Probably gonna be PUMS. Method is in desiring housing notebook. Need to submit a new extract with the years we want.
+I'm using a slightly modified version of the Census definitions here https://www.census.gov/housing/hvs/definitions.pdf (modified because we would ideally add the "Rented or sold but not (yet) occupied" units, but we can't split those out by tenure). Further splitting SF and MF (2+ units in structure) units separately:
 
-# Fetch
+* SF for-sale vacancy rate
+* MF for-sale vacancy rate
+* SF for-rent vacancy rate
+* MF for-rent vacancy rate
+
+For 2000, 2010, and 2018.
+
+# Read
 
 ```{r}
+ddi <- read_ipums_ddi("../input_data/usa_00046.xml")
 
+ctyfip <- tibble(countyfip = seq(from = 1, to = 15, by = 2),
+								 name = c("Fairfield County", "Hartford County", "Litchfield County", "Middlesex County", "New Haven County", "New London County", "Windham County", "Tolland County"))
+
+on_mkt <- c("For rent or sale", "For sale only")
+occupied <- c("Rented", "Owned or being bought (loan)")
+sf <- c("1-family house, detached", "1-family house, attached", "Mobile home or trailer", "Boat, tent, van, other")
+# ideally we would want to add not yet occupieds
+
+pums <- read_ipums_micro(ddi, verbose = F) %>% 
+	filter(RECTYPE == "H") %>% 
+	mutate_at(vars(YEAR, OWNERSHP, OWNERSHPD, VACANCY, UNITSSTR), as_factor) %>%
+	mutate_at(vars(HHWT), as.numeric) %>% 
+	mutate_at(vars(STATEFIP, COUNTYFIP, HHINCOME, VALUEH, OWNCOST, RENTGRS, BEDROOMS), as.integer) %>% 
+	janitor::clean_names() %>% 
+	left_join(ctyfip, by = "countyfip") %>% 
+	mutate(type = if_else(unitsstr %in% sf, "Single family", "Multifamily")) %>% 
+	mutate(type = if_else(unitsstr == "N/A", "n/a", type)) %>% 
+	mutate(mkt = if_else(vacancy %in% on_mkt, "Vacant", "n/a")) %>% 
+	mutate(mkt = if_else(ownershp %in% occupied, "Occupied", mkt)) %>%
+	mutate(tenure = if_else((ownershp == "Rented" | vacancy == "For rent or sale"), "For rent", "n/a")) %>% 
+	mutate(tenure = if_else((ownershp == "Owned or being bought (loan)" | vacancy == "For sale only"), "For sale", tenure))
 ```
 
 # Clean
 
-# Calculate change
+```{r}
+occ_des <- pums %>%
+	filter(mkt != "n/a", tenure != "n/a") %>% 
+	as_survey_design(., ids = 1, wt = hhwt)
+
+vacancy <- occ_des %>%
+	select(year, hhwt, name, type, mkt, tenure) %>% 
+	group_by(year, name, tenure, mkt, type) %>% 
+	summarise(units = survey_total(hhwt)) %>% 
+	ungroup() %>% 
+	select(-units_se) %>% 
+	pivot_wider(id_cols = year:type, names_from = mkt, values_from = units) %>% 
+	mutate(Vacant = if_else(is.na(Vacant), 0, Vacant)) %>% 
+	mutate(Total = Occupied + Vacant) %>% 
+	pivot_longer(cols = Occupied:Total, names_to = "mkt", values_to = "units") %>% 
+	group_by(year, name, tenure, type) %>% 
+	calc_shares(group = mkt, denom = "Total", value = units) %>% 
+	ungroup()
+
+vac_ct <- vacancy %>% 
+	select(-name, -share) %>% 
+	mutate(name = "Connecticut") %>% 
+	group_by(year, name, tenure, type, mkt) %>% 
+	summarise(units = sum(units)) %>% 
+	ungroup() %>% 
+	group_by(year, name, tenure, type) %>% 
+	calc_shares(group = mkt, denom = "Total", value = units)
+
+vacancy <- bind_rows(vac_ct, vacancy)
+```
+
+```{r fig.height=10, fig.width=8}
+vacancy %>% 
+	filter(mkt == "Vacant") %>% 
+	ggplot(aes(year, share, group = interaction(tenure, type))) +
+	geom_line(aes(color = tenure), size = .75, alpha = .8) +
+	geom_point(aes(shape = type, color = tenure), size = 3, alpha = .8) +
+	scale_y_continuous(labels = scales::percent_format(accuracy = 1),
+										 breaks = c(0, .02, .04, .06, .08, .1),
+										 expand = expansion(mult = c(.05, .05))) +
+	scale_x_discrete(expand = expansion(mult = c(.04, .04))) +
+	facet_wrap(facets = "name") +
+	guides(color = guide_legend(title = "Tenure", override.aes = list(linetype = 0)),
+				 shape = guide_legend(title = "Unit type")) +
+	hrbrthemes::theme_ipsum_rc() +
+	labs(title = "Vacancy rates by tenure and unit type, 2000–2018",
+			 x = "", y = "") +
+	theme(plot.title.position = "plot", 
+				strip.text.x = element_text(hjust = .5),
+				panel.grid.minor.y = element_blank(), 
+				axis.text.x = element_text(colour = "black"),
+				axis.text.y = element_text(colour = "black"),
+				legend.position = "bottom")
+```
