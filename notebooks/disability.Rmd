@@ -116,9 +116,6 @@ I think the approach I would use is to turn each of those columns into Y/N or T/
 ```{r}
 # John
 # I am regarding N/A as no disability -- revisit?
-pums$disability_sum <- pums %>% 
-  select(diffrem_TF:diffhear_TF) %>% 
-  apply(1, sum, na.rm=TRUE)
 pums$diffrem_TF <- ifelse(str_detect(pums$diffrem, "N/A"), NA, 
                           str_detect(pums$diffrem, "Has"))
 pums$diffphys_TF <- ifelse(str_detect(pums$diffphys, "N/A"), NA, 
@@ -131,6 +128,9 @@ pums$diffeye_TF <- ifelse(str_detect(pums$diffeye, "N/A"), NA,
                           str_detect(pums$diffeye, "Yes")) 
 pums$diffhear_TF <- ifelse(str_detect(pums$diffhear, "N/A"), NA, 
                           str_detect(pums$diffhear, "Yes")) 
+pums$disability_sum <- pums %>% 
+  select(diffrem_TF:diffhear_TF) %>% 
+  apply(1, sum, na.rm=TRUE)
 ```
 
 
@@ -187,7 +187,7 @@ ct_hhlds_no_total <- des %>%
 	mutate(name = "Connecticut", level = "1_state") %>% 
 	select(-statefip)
 
-ct_hhlds_total <- ct_hhlds %>% 
+ct_hhlds_total <- ct_hhlds_no_total %>% 
     select(-value_se) %>% 
     ungroup() %>% 
     mutate(inc_band = "Total") %>%
@@ -219,9 +219,11 @@ get_counts <- function(col) {
   return(ct_inc_band_disability)
 }
 
-ct_inc_band_disability_type <- pums %>% 
+tf_vars <- pums %>% 
   select(ends_with("TF")) %>% 
-  names() %>% 
+  names()
+
+ct_inc_band_disability_type <- tf_vars %>% 
   map_dfr(get_counts)
 ```
 
@@ -236,11 +238,9 @@ kable(ct_inc_band_disability)
 ```
 ```{r}
 # John
-dfs <- pums %>% 
-  select(ends_with("TF")) %>% 
-  names() %>% 
-  lapply(get_counts)
-dfs %>% lapply(kable) # separate tables for each disability type
+tf_vars %>% 
+  lapply(get_counts) %>% 
+  lapply(kable) # separate tables for each disability type
 ```
 
 
