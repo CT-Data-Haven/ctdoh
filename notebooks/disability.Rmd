@@ -115,7 +115,10 @@ I think the approach I would use is to turn each of those columns into Y/N or T/
 
 ```{r}
 # John
-# I am regarding N/A as no disability, but should revisit
+# I am regarding N/A as no disability -- revisit?
+pums$disability_sum <- pums %>% 
+  select(diffrem_TF:diffhear_TF) %>% 
+  apply(1, sum, na.rm=TRUE)
 pums$diffrem_TF <- ifelse(str_detect(pums$diffrem, "N/A"), NA, 
                           str_detect(pums$diffrem, "Has"))
 pums$diffphys_TF <- ifelse(str_detect(pums$diffphys, "N/A"), NA, 
@@ -170,45 +173,57 @@ ct_inc_band_disability <- ct_inc_band_disability %>%
 	bind_rows(ct_total_disability)
 ```
 
-```{r}
+
+```{r setup data}
 # John
 des <- pums %>%
 	filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
 	as_survey_design(., ids = 1, wt = hhwt)
 
-ct_hhlds <- des %>%
+ct_hhlds_no_total <- des %>%
 	select(hhwt, statefip, inc_band) %>% 
 	group_by(statefip, inc_band) %>% 
 	summarise(value = survey_total(hhwt)) %>% 
 	mutate(name = "Connecticut", level = "1_state") %>% 
 	select(-statefip)
 
+ct_hhlds_total <- ct_hhlds %>% 
+    select(-value_se) %>% 
+    ungroup() %>% 
+    mutate(inc_band = "Total") %>%
+    group_by(name, inc_band) %>% 
+    summarise(value = sum(value))
+
+ct_hhlds <- ct_hhlds_no_total %>% 
+  bind_rows(ct_hhlds_total)
+
 get_counts <- function(col) {
   colname <- as.name(col)
   inc_band_disability <- des %>% 
     select(hhwt, inc_band, !!colname) %>% 
   	mutate(name = "Connecticut") %>% 
-  	group_by(name, inc_band, !!colname) %>% 
+    mutate(disability_type = col %>% str_remove("_TF")) %>% 
+  	group_by(name, inc_band, disability_type, !!colname) %>% 
   	summarise(value = survey_total(hhwt)) %>% 
   	ungroup() %>% 
-  	group_by(name, inc_band)
+    select(name, disability_type, inc_band, disability=!!colname, value, value_se) %>% 
+  	group_by(name, inc_band, disability_type)
   total_disability <- inc_band_disability %>% 
     select(-value_se) %>% 
     ungroup() %>% 
-    mutate(inc_band = "Total") %>% 
-    group_by(name, inc_band, !!colname) %>% 
+    mutate(inc_band = "Total") %>%
+    group_by(name, disability_type, inc_band, disability) %>% 
     summarise(value = sum(value))
   ct_inc_band_disability <- inc_band_disability %>% 
     bind_rows(total_disability)
   return(ct_inc_band_disability)
 }
 
-ct_inc_band_disability_dfs <- pums %>% 
+ct_inc_band_disability_type <- pums %>% 
   select(ends_with("TF")) %>% 
   names() %>% 
-  lapply(get_counts)
+  map_dfr(get_counts)
 ```
-
 
 
 My original tables and charts are below, with comments in **bold** regarding new vizzes.
@@ -221,8 +236,13 @@ kable(ct_inc_band_disability)
 ```
 ```{r}
 # John
-ct_inc_band_disability_dfs %>% lapply(kable)
+dfs <- pums %>% 
+  select(ends_with("TF")) %>% 
+  names() %>% 
+  lapply(get_counts)
+dfs %>% lapply(kable) # separate tables for each disability type
 ```
+
 
 
 Taking a slightly different look than the table above, the plot below shows the share of households in each income band that have an occupant with a disability (so the numerator is households with an occupant with a disability in a given income band, and the denominator is all households in that income band).
@@ -249,7 +269,7 @@ ct_inc_band_disability %>%
 	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
 	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-#	scale_fill_custom(rev = T) + # temporarily commented because John was running into ggplot errors
+#	scale_fill_custom(rev = T) + 
 	theme(plot.title.position = "plot",
 				axis.text.x = element_blank(), 
 				axis.text.y = element_text(colour = "black"),
@@ -260,6 +280,43 @@ ct_inc_band_disability %>%
 			 subtitle = "Connecticut",
 			 x = "", y = "")
 ```
+
+```{r}
+# John
+ct_inc_band_disability_type %>%
+	bind_rows(ct_hhlds %>% mutate(disability_type = "diffrem")) %>% # messy...
+  bind_rows(ct_hhlds %>% mutate(disability_type = "diffphys")) %>% 
+  bind_rows(ct_hhlds %>% mutate(disability_type = "diffmob")) %>% 
+  bind_rows(ct_hhlds %>% mutate(disability_type = "diffcare")) %>% 
+  bind_rows(ct_hhlds %>% mutate(disability_type = "diffeye")) %>% 
+  bind_rows(ct_hhlds %>% mutate(disability_type = "diffhear")) %>% 
+	ungroup() %>%
+	select(-level) %>% 
+	mutate(inc_band = as.factor(inc_band) %>% 
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High", "Total") %>% 
+				 	fct_rev()) %>%
+	mutate(disability = as.character(disability)) %>% 
+	mutate(disability = if_else(is.na(disability), "Total", disability)) %>% 
+	group_by(name, disability_type, inc_band) %>% 
+	calc_shares(group = disability, denom = "Total", value = value, moe = value_se) %>% 
+	filter(disability == "TRUE", inc_band != "Total") %>% 
+	ggplot(aes(share, inc_band, group = disability_type)) +
+	geom_col(position = position_dodge(1)) +
+  facet_wrap(~ disability_type) + 
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), size = 4.5, hjust = 1.1, vjust = .5) +
+	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
+#	scale_fill_custom(rev = T) + # temp. commented bcus John was having ggplot errors
+	theme(plot.title.position = "plot",
+				axis.text.x = element_blank(), 
+				axis.text.y = element_text(colour = "black"),
+				panel.grid.major = element_blank(),
+				panel.grid.minor = element_blank(),
+				legend.position = "none") +
+	labs(title = str_wrap("Share of households with a person with a disability in each income band", 60),
+			 subtitle = "Connecticut",
+			 x = "", y = "")
+```
+
 
 
 Finally, what are the average cost burden rates for households with an occupant with a disability?
