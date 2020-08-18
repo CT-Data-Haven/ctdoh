@@ -113,6 +113,24 @@ We want 6 categories to group by. These are recorded in the PUMS data as below:
 
 I think the approach I would use is to turn each of those columns into Y/N or T/F rather than "Has (disability)" whatever text label they use.
 
+```{r}
+# John
+# I am regarding N/A as no disability, but should revisit
+pums$diffrem_TF <- ifelse(str_detect(pums$diffrem, "N/A"), NA, 
+                          str_detect(pums$diffrem, "Has"))
+pums$diffphys_TF <- ifelse(str_detect(pums$diffphys, "N/A"), NA, 
+                          str_detect(pums$diffphys, "Has")) 
+pums$diffmob_TF <- ifelse(str_detect(pums$diffmob, "N/A"), NA, 
+                          str_detect(pums$diffmob, "Has")) 
+pums$diffcare_TF <- ifelse(str_detect(pums$diffcare, "N/A"), NA, 
+                          str_detect(pums$diffcare, "Yes")) 
+pums$diffeye_TF <- ifelse(str_detect(pums$diffeye, "N/A"), NA, 
+                          str_detect(pums$diffeye, "Yes")) 
+pums$diffhear_TF <- ifelse(str_detect(pums$diffhear, "N/A"), NA, 
+                          str_detect(pums$diffhear, "Yes")) 
+```
+
+
 The chunk below pulls the data together by creating a LUT of households with any occupant with a disability, so we only count the household once. You'll need to set it up so we count each household only once per disability type. In other words, we can have a household counted more than once if they have an occupant with more than one disability type, or if they have multiple occupants with different disabilities.
 
 ```{r setup data}
@@ -141,15 +159,57 @@ ct_inc_band_disability <- des %>%
 	ungroup() %>% 
 	group_by(name, inc_band)
 
-ct_disability <- ct_inc_band_disability %>% 
+ct_total_disability <- ct_inc_band_disability %>% 
 	select(-value_se) %>% 
+  ungroup() %>% 
 	mutate(inc_band = "Total") %>% 
 	group_by(name, inc_band, disability) %>% 
 	summarise(value = sum(value))
 
 ct_inc_band_disability <- ct_inc_band_disability %>% 
-	bind_rows(ct_disability)
+	bind_rows(ct_total_disability)
 ```
+
+```{r}
+# John
+des <- pums %>%
+	filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
+	as_survey_design(., ids = 1, wt = hhwt)
+
+ct_hhlds <- des %>%
+	select(hhwt, statefip, inc_band) %>% 
+	group_by(statefip, inc_band) %>% 
+	summarise(value = survey_total(hhwt)) %>% 
+	mutate(name = "Connecticut", level = "1_state") %>% 
+	select(-statefip)
+
+get_counts <- function(col) {
+  colname <- as.name(col)
+  inc_band_disability <- des %>% 
+    select(hhwt, inc_band, !!colname) %>% 
+  	mutate(name = "Connecticut") %>% 
+  	group_by(name, inc_band, !!colname) %>% 
+  	summarise(value = survey_total(hhwt)) %>% 
+  	ungroup() %>% 
+  	group_by(name, inc_band)
+  total_disability <- inc_band_disability %>% 
+    select(-value_se) %>% 
+    ungroup() %>% 
+    mutate(inc_band = "Total") %>% 
+    group_by(name, inc_band, !!colname) %>% 
+    summarise(value = sum(value))
+  ct_inc_band_disability <- inc_band_disability %>% 
+    bind_rows(total_disability)
+  return(ct_inc_band_disability)
+}
+
+ct_inc_band_disability_dfs <- pums %>% 
+  select(ends_with("TF")) %>% 
+  names() %>% 
+  lapply(get_counts)
+```
+
+
 
 My original tables and charts are below, with comments in **bold** regarding new vizzes.
 
@@ -159,6 +219,11 @@ Quick tabulations of households with an occupant with a disability
 ```{r}
 kable(ct_inc_band_disability)
 ```
+```{r}
+# John
+ct_inc_band_disability_dfs %>% lapply(kable)
+```
+
 
 Taking a slightly different look than the table above, the plot below shows the share of households in each income band that have an occupant with a disability (so the numerator is households with an occupant with a disability in a given income band, and the denominator is all households in that income band).
 
@@ -184,7 +249,7 @@ ct_inc_band_disability %>%
 	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
 	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-	scale_fill_custom(rev = T) +
+#	scale_fill_custom(rev = T) + # temporarily commented because John was running into ggplot errors
 	theme(plot.title.position = "plot",
 				axis.text.x = element_blank(), 
 				axis.text.y = element_text(colour = "black"),
@@ -195,6 +260,7 @@ ct_inc_band_disability %>%
 			 subtitle = "Connecticut",
 			 x = "", y = "")
 ```
+
 
 Finally, what are the average cost burden rates for households with an occupant with a disability?
 
