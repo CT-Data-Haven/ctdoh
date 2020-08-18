@@ -174,7 +174,7 @@ ct_inc_band_disability <- ct_inc_band_disability %>%
 ```
 
 
-```{r setup data}
+```{r setup data 2}
 # John
 des <- pums %>%
 	filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
@@ -269,7 +269,7 @@ ct_inc_band_disability %>%
 	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
 	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-#	scale_fill_custom(rev = T) + 
+	scale_fill_custom(rev = T) + 
 	theme(plot.title.position = "plot",
 				axis.text.x = element_blank(), 
 				axis.text.y = element_text(colour = "black"),
@@ -293,8 +293,17 @@ ct_inc_band_disability_type %>%
 	ungroup() %>%
 	select(-level) %>% 
 	mutate(inc_band = as.factor(inc_band) %>% 
-				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High", "Total") %>% 
-				 	fct_rev()) %>%
+				 	fct_relevel("Very low", "Low", "Mid-low", "Mid-high", "High", "Total") %>% 
+				 	fct_rev()) %>% 
+  mutate(disability_type = as.factor(disability_type) %>% 
+           fct_relevel("diffrem", "diffphys", "diffmob", "diffcare", "diffeye", "diffhear") %>% 
+           plyr::revalue(c("diffrem" = "Cognitive disability", 
+				 	             "diffphys" = "Physical disability", 
+				 	             "diffmob" = "Ambulatory disability", 
+				 	             "diffcare" = "Independent living difficulty", 
+				 	             "diffeye" = "Vision disability", 
+				 	             "diffhear" = "Hearing disability"))) %>%
+# diffcare diffeye diffhear diffmob diffphys diffrem
 	mutate(disability = as.character(disability)) %>% 
 	mutate(disability = if_else(is.na(disability), "Total", disability)) %>% 
 	group_by(name, disability_type, inc_band) %>% 
@@ -305,7 +314,7 @@ ct_inc_band_disability_type %>%
   facet_wrap(~ disability_type) + 
 	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-#	scale_fill_custom(rev = T) + # temp. commented bcus John was having ggplot errors
+	scale_fill_custom(rev = T) + 
 	theme(plot.title.position = "plot",
 				axis.text.x = element_blank(), 
 				axis.text.y = element_text(colour = "black"),
@@ -316,7 +325,6 @@ ct_inc_band_disability_type %>%
 			 subtitle = "Connecticut",
 			 x = "", y = "")
 ```
-
 
 
 Finally, what are the average cost burden rates for households with an occupant with a disability?
