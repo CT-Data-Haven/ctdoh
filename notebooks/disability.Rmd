@@ -41,7 +41,7 @@ scale_color_custom <- function(palette = pal, rev = F) {
 }
 ```
 
-Tl;dr for code below: I'm making some sociodemographic groups here, including race (white, Black, Latino, Other), some income groups (very low, low, mid low, mid high, high) based on median household income, and cost burden (no burden, cost burden, severe cost burden) using a cost ratio (column called ratio) of monthly housing costs to monthly income.
+Tl;dr for code below: I'm making some sociodemographic groups here, including race (white, Black, Latino, Other), some income groups (very low, low, mid low, mid high, high) based on median household income, and cost burden (no burden, cost burden, severe cost burden).
 
 ```{r pums prep}
 minc <- get_acs(
@@ -116,6 +116,7 @@ I think the approach I would use is to turn each of those columns into Y/N or T/
 ```{r}
 # John
 # I am regarding N/A as no disability -- revisit?
+# I'm not sure what N/A means, but let's keep it as only yes if answer in the affirmative, like you have it. - kd
 pums$diffrem_TF <- ifelse(str_detect(pums$diffrem, "N/A"), NA, 
                           str_detect(pums$diffrem, "Has"))
 pums$diffphys_TF <- ifelse(str_detect(pums$diffphys, "N/A"), NA, 
@@ -238,9 +239,11 @@ kable(ct_inc_band_disability)
 ```
 ```{r}
 # John
+# combined into one large table - kd
 tf_vars %>% 
-  lapply(get_counts) %>% 
-  lapply(kable) # separate tables for each disability type
+	lapply(get_counts) %>% 
+	bind_rows() %>% 
+	kable()
 ```
 
 
@@ -283,6 +286,7 @@ ct_inc_band_disability %>%
 
 ```{r}
 # John
+# wee tweaks - kd
 ct_inc_band_disability_type %>%
 	bind_rows(ct_hhlds %>% mutate(disability_type = "diffrem")) %>% # messy...
   bind_rows(ct_hhlds %>% mutate(disability_type = "diffphys")) %>% 
@@ -310,9 +314,9 @@ ct_inc_band_disability_type %>%
 	calc_shares(group = disability, denom = "Total", value = value, moe = value_se) %>% 
 	filter(disability == "TRUE", inc_band != "Total") %>% 
 	ggplot(aes(share, inc_band, group = disability_type)) +
-	geom_col(position = position_dodge(1)) +
+	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
   facet_wrap(~ disability_type) + 
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), size = 4.5, hjust = 1.1, vjust = .5) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), size = 3, hjust = "inward", vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_custom(rev = T) + 
 	theme(plot.title.position = "plot",
@@ -351,7 +355,7 @@ So the average cost ratio for households with an occupant with a disability is s
 ct_cost_ratio_inc_band_disability %>% 
 	ggplot(aes(inc_band, avg_cost_ratio, group = disability)) +
 	geom_col(aes(fill = disability), width = .8, position = position_dodge(.85)) +
-	geom_text(aes(label = percent(avg_cost_ratio, accuracy = 1)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
+	geom_text(aes(label = round(avg_cost_ratio, 2)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
 	scale_fill_manual(values = c(pal[1], pal [4])) +
 	guides(fill = guide_legend(title = "Household has occupant with disability")) +
 	labs(title = "Average cost ratio for households in each income band",
