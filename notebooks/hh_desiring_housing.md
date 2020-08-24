@@ -995,6 +995,9 @@ of that income band. This is less helpful for less populous counties.
 
 ### Disability
 
+**For breakouts by disability type, see disability.Rmd in notebooks
+folder on repo**
+
 Because of the sample size, I’m only looking at these households
 statewide, not by county.
 
@@ -1467,6 +1470,7 @@ While the High band has the most (by count) households with an occupant
 with a disability, it has the smallest share.
 
 ![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
 Finally, what are the average cost burden rates for households with an
 occupant with a disability?
 

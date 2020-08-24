@@ -397,6 +397,8 @@ pivot_race %>%
 
 ### Disability
 
+**For breakouts by disability type, see disability.Rmd in notebooks folder on repo**
+
 Because of the sample size, I'm only looking at these households statewide, not by county.
 
 I think there's still more to do here, but I want to wrap up some of the other tabulation I need to do and come back to it if time permits.
@@ -427,6 +429,7 @@ ct_inc_band_disability <- ct_inc_band_disability %>%
 ```
 
 Quick tabulations of households with an occupant with a disability
+
 ```{r}
 kable(ct_inc_band_disability)
 ```
@@ -464,6 +467,7 @@ ct_inc_band_disability %>%
 			 subtitle = "Connecticut",
 			 x = "", y = "")
 ```
+
 Finally, what are the average cost burden rates for households with an occupant with a disability?
 
 ```{r}
@@ -486,7 +490,7 @@ So the average cost ratio for households with an occupant with a disability is s
 ct_cost_ratio_inc_band_disability %>% 
 	ggplot(aes(inc_band, avg_cost_ratio, group = disability)) +
 	geom_col(aes(fill = disability), width = .8, position = position_dodge(.85)) +
-	geom_text(aes(label = percent(avg_cost_ratio, accuracy = 1)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
+	geom_text(aes(label = round(avg_cost_ratio, 2)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
 	scale_fill_manual(values = c(pal[1], pal [4])) +
 	guides(fill = guide_legend(title = "Household has occupant with disability")) +
 	labs(title = "Average cost ratio for households in each income band",
