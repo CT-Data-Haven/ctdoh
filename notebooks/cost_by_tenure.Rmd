@@ -9,20 +9,236 @@ knitr::opts_chunk$set(echo = T, message = F, warning = F)
 
 ```{r}
 library(tidyverse)
-library(tidycensus)
-library(janitor)
-library(cwi)
-library(camiller)
+library(ipumsr)
+library(srvyr)
 ```
 
-Housing cost by tenure - Probably gonna be PUMS. Method is in desiring housing notebook. Need to submit a new extract with the years we want.
+Since we have 8 counties and the state, and 5 cost bands, and we want to look at cost over three periods of time (135 total values to consider), I think this should take a standardized approach rather than the sliding scale we've been using. That is, rather than look at different cost ranges for each area, look at one set of ranges in all three time periods for all geographic areas.
 
-# Fetch
+Using the 2018 cost ranges for CT and adjusting for inflation to 2018 dollars, I think we should graph how many units there were in each county in 2000, 2010, and 2018 that cost:
+
+* Up to $600 
+* $601-$1000 
+* $1001-$1500
+* $1501-2300
+* $2301 or more
+
+I'll split those out by tenure and include vacants.
+
+Estimating owner costs for vacants in this analysis will be a little different from how I estimated it in the households desiring housing notebook. That approach took contemporaneous mortgage loan interest rates and mill rates specific to each county. This approach will need to make more assumptions to standardize things.
+
+Googling average mortgage loan interest rates:
+
+* 2000: 8.15% (US) *daaang*
+* 2010: 5.12% (US)
+* 2018: 4.18% (CT)
+
+I can't find historical mill rates going back to 2000, but I think 30 is a safe number to use across all three time periods. Again, this would be higher in some towns than others, but on the whole at the county level, it should balance out.
+
+I'll stick with PMI at ~ 0.7% of the original loan amount with an assumed 10% down.
+
+And for owner utility costs, I'll again use the RENTGRS/RENT ratio.
+
+## Setup PUMS file
 
 ```{r}
+names <- tibble(countyfip = seq(from = 1, to = 15, by = 2),
+								name = c("Fairfield County", "Hartford County", "Litchfield County", "Middlesex County", "New Haven County", "New London County", "Tolland County", "Windham County"))
 
+infl_values <- blscrapeR::inflation_adjust(base_year = 2018) %>% 
+	filter(year %in% c(2000, 2010, 2018)) %>% 
+	arrange(desc(year)) %>% 
+	mutate(factor = 1 + (abs(pct_increase) / 100)) %>% 
+	select(year, factor)
+
+ddi <- read_ipums_ddi("../input_data/usa_00047.xml")
+
+pums <- read_ipums_micro(ddi, verbose = F) %>% 
+	filter(RECTYPE == "H") %>% 
+	mutate_at(vars(YEAR, OWNERSHP, OWNERSHPD, VACANCY), as_factor) %>% 
+	mutate_at(vars(OWNCOST, RENT, RENTGRS, VALUEH), as.numeric) %>% 
+	janitor::clean_names() %>% 
+	left_join(names, by = "countyfip") %>% 
+	left_join(infl_values, by = "year") %>% 
+	mutate(adj_owncost = round(owncost * factor, 0),
+				 adj_rentgrs = round(rentgrs * factor, 0)) %>% 
+	mutate(own_occ_cost_group = cut(adj_owncost, breaks = c(-Inf, 600, 1000, 1500, 2300, Inf),
+			labels = c("Up to $600", "$601 to $1,000", "$1,001 to $1,500", "$1,500 to $2,300", "$2,301 and up"), include.lowest = T, right = T)) %>% 
+	mutate(rent_occ_cost_group = cut(adj_rentgrs, breaks = c(-Inf, 600, 1000, 1500, 2300, Inf),
+			labels = c("Up to $600", "$601 to $1,000", "$1,001 to $1,500", "$1,500 to $2,300", "$2,301 and up"), include.lowest = T, right = T))
 ```
 
-# Clean
+## Occupied units
 
-# Calculate change
+```{r}
+occ_des <- pums %>%
+	filter(vacancy == "N/A", ownershp != "N/A") %>% 
+	as_survey_design(., ids = 1, wt = hhwt)
+
+own_occ <- occ_des %>%
+	filter(owncost != 99999) %>% 
+	select(hhwt, year, name, own_occ_cost_group) %>% 
+	group_by(year, name, own_occ_cost_group) %>% 
+	summarise(units = survey_total(hhwt)) %>% 
+	ungroup() %>%
+	rename(cost_group = own_occ_cost_group) %>% 
+	mutate(tenure = "owner", occupancy = "occupied")
+
+rent_occ <- occ_des %>%
+	filter(owncost == 99999) %>% 
+	select(year, hhwt, name, rent_occ_cost_group) %>% 
+	group_by(year, name, rent_occ_cost_group) %>% 
+	summarise(units = survey_total(hhwt)) %>% 
+	ungroup() %>%
+	rename(cost_group = rent_occ_cost_group) %>% 
+	mutate(tenure = "renter", occupancy = "occupied")
+
+state_occ <- bind_rows(own_occ, rent_occ) %>% 
+	mutate(name = "Connecticut") %>% 
+	group_by(year, name, tenure, occupancy, cost_group) %>% 
+	summarise(units = sum(units))
+
+occ_cost_groups <- bind_rows(own_occ, rent_occ, state_occ) %>%
+	mutate(tenure = as.factor(tenure), occupancy = as.factor(occupancy))
+```
+
+## Vacant units
+
+:weary:
+
+```{r}
+int <- tibble(year = c("2000", "2010", "2018"),
+							int = c(0.0815, 0.0512, 0.0418))
+
+mill <- 30
+
+pmi <- 0.007
+
+utility_pmts <- pums %>% 
+	filter(rent != 0 & rentgrs != 0) %>% 
+	mutate(ratio = rentgrs / rent) %>% 
+	mutate(mult = ratio * hhwt) %>% 
+	select(mult, hhwt) %>% 
+	summarise(avg_utilities = round(sum(mult) / sum(hhwt), 3))
+
+utility_pmts <- c(utility_pmts$avg_utilities)
+```
+
+```{r}
+own_vac <- pums %>%
+	left_join(int, by = "year") %>% 
+	filter(vacancy == "For sale only") %>% 
+	mutate(loan = .9 * valueh, # 10% down
+				 monthly_int = (int / 12), 
+				 monthly_pmt = loan * monthly_int * ((1+monthly_int)**360)/(((1+monthly_int)**360)-1), 
+				 mortgage_ins = pmi * loan / 12,
+				 property_tax = valueh / 1000 * mill / 12,
+				 total_monthly_pmt = monthly_pmt + mortgage_ins + property_tax,
+				 imputed_owncost = total_monthly_pmt * utility_pmts) %>% 
+	mutate(adj_imputed_owncost = round(imputed_owncost * factor, 0)) %>% 
+	mutate(own_vac_cost_group = cut(adj_imputed_owncost, breaks = c(-Inf, 600, 1000, 1500, 2300, Inf),
+			labels = c("Up to $600", "$601 to $1,000", "$1,001 to $1,500", "$1,500 to $2,300", "$2,301 and up"), include.lowest = T, right = T)) %>% 
+	select(year, hhwt, name, own_vac_cost_group) %>% 
+	group_by(year, name, own_vac_cost_group) %>% 
+	summarise(units = sum(hhwt)) %>% 
+	ungroup() %>% 
+	rename(cost_group = own_vac_cost_group) %>% 
+	mutate(tenure = "owner", occupancy = "vacant")
+
+rent_vac <- pums %>%
+	filter(owncost == "99999", vacancy == "For rent or sale") %>% 
+	mutate(adj_rent = round(rent * utility_pmts * factor, 0)) %>% 
+	mutate(rent_vac_cost_group = cut(adj_rent, breaks = c(-Inf, 600, 1000, 1500, 2300, Inf),
+			labels = c("Up to $600", "$601 to $1,000", "$1,001 to $1,500", "$1,500 to $2,300", "$2,301 and up"), include.lowest = T, right = T)) %>% 
+	select(year, hhwt, name, rent_vac_cost_group) %>% 
+	group_by(year, name, rent_vac_cost_group) %>% 
+	summarise(units = sum(hhwt)) %>% 
+	ungroup() %>% 
+	rename(cost_group = rent_vac_cost_group) %>% 
+	mutate(tenure = "renter", occupancy = "vacant")
+
+state_vac <- bind_rows(own_vac, rent_vac) %>% 
+	mutate(name = "Connecticut") %>% 
+	group_by(year, name, tenure, occupancy, cost_group) %>% 
+	summarise(units = sum(units))
+
+vac_cost_groups <- bind_rows(own_vac, rent_vac, state_vac) %>%
+	mutate(tenure = as.factor(tenure), occupancy = as.factor(occupancy))
+```
+
+```{r}
+units_by_cost_groups <- bind_rows(occ_cost_groups, vac_cost_groups) %>% 
+	select(year, name, tenure, occupancy, cost_group, units)
+```
+
+## Plots
+
+We've basically replaced low cost units with high cost units.
+
+```{r fig.height=10, fig.width=10}
+units_by_cost_groups %>% 
+	select(-occupancy) %>% 
+	group_by(year, name, tenure, cost_group) %>% 
+	summarise(units = sum(units)) %>% 
+	ungroup() %>% 
+	filter(year != "2010") %>% 
+	pivot_wider(id_cols = c(name, tenure, cost_group), names_from = year,
+							names_prefix = "x", values_from = units) %>% 
+	mutate(diff = x2018 - x2000) %>% 
+	filter(tenure == "owner") %>% 
+	mutate(cost_group = fct_rev(cost_group)) %>% 
+	ggplot(aes(diff, cost_group)) +
+	geom_col(aes(fill = cost_group)) +
+	geom_vline(xintercept = 0, size = .5, color = "grey65") +
+	geom_text(aes(label = scales::comma(diff, accuracy = 1)),
+						family = "Roboto Condensed", size = 3.5, hjust = "inward") +
+	scale_x_continuous(labels = scales::comma_format(accuracy = 1)) +
+	facet_wrap(facets = "name", scales = "free_x") +
+	guides(fill = guide_legend(title = "", reverse = T)) +
+	hrbrthemes::theme_ipsum_rc() +
+	labs(title = "Change in owner-occupied units by cost range",
+			 subtitle = "Inflation-adjusted to 2018 dollars",
+			 x = "", y = "") +
+	theme(plot.title.position = "plot",
+				legend.position = "none",
+				axis.text.x = element_blank(),
+				#axis.text.x = element_text(size = 7, colour = "black"),
+				axis.text.y = element_text(size = 9, colour = "black"),
+				strip.text.x = element_text(hjust = .5),
+				panel.grid.minor.x = element_blank(),
+				panel.grid.major.x = element_blank())
+```
+
+```{r fig.height=10, fig.width=10}
+units_by_cost_groups %>% 
+	select(-occupancy) %>% 
+	group_by(year, name, tenure, cost_group) %>% 
+	summarise(units = sum(units)) %>% 
+	ungroup() %>% 
+	filter(year != "2010") %>% 
+	pivot_wider(id_cols = c(name, tenure, cost_group), names_from = year,
+							names_prefix = "x", values_from = units) %>% 
+	mutate(diff = x2018 - x2000) %>% 
+	filter(tenure == "renter") %>% 
+	mutate(cost_group = fct_rev(cost_group)) %>% 
+	ggplot(aes(diff, cost_group)) +
+	geom_col(aes(fill = cost_group)) +
+	geom_vline(xintercept = 0, size = .5, color = "grey65") +
+	geom_text(aes(label = scales::comma(diff, accuracy = 1)),
+						family = "Roboto Condensed", size = 3.5, hjust = "inward") +
+	scale_x_continuous(labels = scales::comma_format(accuracy = 1)) +
+	facet_wrap(facets = "name", scales = "free_x") +
+	guides(fill = guide_legend(title = "", reverse = T)) +
+	hrbrthemes::theme_ipsum_rc() +
+	labs(title = "Change in renter-occupied units by cost range",
+			 subtitle = "Inflation-adjusted to 2018 dollars",
+			 x = "", y = "") +
+	theme(plot.title.position = "plot",
+				legend.position = "none",
+				axis.text.x = element_blank(),
+				#axis.text.x = element_text(size = 7, colour = "black"),
+				axis.text.y = element_text(size = 9, colour = "black"),
+				strip.text.x = element_text(hjust = .5),
+				panel.grid.minor.x = element_blank(),
+				panel.grid.major.x = element_blank())
+```
