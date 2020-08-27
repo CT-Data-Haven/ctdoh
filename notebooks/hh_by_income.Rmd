@@ -44,7 +44,7 @@ minc <- (bind_rows(fetch, .id = "year")) %>%
 ```
 
 ```{r}
-ddi <- read_ipums_ddi("../input_data/usa_00046.xml")
+ddi <- read_ipums_ddi("../input_data/usa_00047.xml")
 
 pums <- read_ipums_micro(ddi, verbose = F) %>% 
 	filter(RECTYPE == "H") %>% 
@@ -84,6 +84,8 @@ state_hh_by_inc_band <- county_hh_by_inc_band %>%
 hh_by_inc_band_2000_2018 <- bind_rows(county_hh_by_inc_band, state_hh_by_inc_band) %>% 
 	arrange(year, name) %>% 
 	mutate(name = as.factor(name))
+
+write_csv(hh_by_inc_band_2000_2018, path = "../output_data/hh_by_income_band_2000_2018.csv")
 ```
 
 Hmm. Other than high income households rising across the board, trends are pretty variable.
