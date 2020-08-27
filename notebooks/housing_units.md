@@ -22,7 +22,7 @@ Do we want 2000, 2018?
 names <- tibble(countyfip = seq(from = 1, to = 15, by = 2),
                                 name = c("Fairfield County", "Hartford County", "Litchfield County", "Middlesex County", "New Haven County", "New London County", "Tolland County", "Windham County"))
 
-ddi <- read_ipums_ddi("../input_data/usa_00046.xml")
+ddi <- read_ipums_ddi("../input_data/usa_00047.xml")
 
 pums <- read_ipums_micro(ddi, verbose = F) %>% 
     filter(RECTYPE == "H") %>% 
@@ -57,6 +57,8 @@ tenure <- pums %>%
     group_by(year, name, ownershp2) %>% 
     summarise(units = sum(hhwt)) %>% 
     ungroup()
+
+write_csv(tenure, path = "../output_data/units_by_tenure_2000_2018.csv")
 ```
 
 ``` r
@@ -99,6 +101,8 @@ bldg_type <- pums %>%
     group_by(year, name, type) %>% 
     summarise(units = sum(hhwt)) %>% 
     ungroup()
+
+write_csv(bldg_type, path = "../output_data/units_by_bldg_type_2000_2018.csv")
 ```
 
 ``` r
@@ -140,6 +144,8 @@ bedrooms <- pums %>%
     group_by(year, name, bdr) %>% 
     summarise(units = sum(hhwt)) %>% 
     ungroup()
+
+write_csv(bedrooms, path = "../output_data/units_by_bedrooms_2000_2018.csv")
 ```
 
 ``` r
