@@ -1,0 +1,523 @@
+year,name,tenure,occupancy,cost_group,units
+2000,Fairfield County,owner,occupied,Up to $600,17161
+2000,Fairfield County,owner,occupied,"$601 to $1,000",37730
+2000,Fairfield County,owner,occupied,"$1,001 to $1,500",30111
+2000,Fairfield County,owner,occupied,"$1,500 to $2,300",53060
+2000,Fairfield County,owner,occupied,"$2,301 and up",86646
+2000,Hartford County,owner,occupied,Up to $600,35905
+2000,Hartford County,owner,occupied,"$601 to $1,000",38992
+2000,Hartford County,owner,occupied,"$1,001 to $1,500",42854
+2000,Hartford County,owner,occupied,"$1,500 to $2,300",64540
+2000,Hartford County,owner,occupied,"$2,301 and up",33755
+2000,Litchfield County,owner,occupied,Up to $600,8259
+2000,Litchfield County,owner,occupied,"$601 to $1,000",9059
+2000,Litchfield County,owner,occupied,"$1,001 to $1,500",10737
+2000,Litchfield County,owner,occupied,"$1,500 to $2,300",17345
+2000,Litchfield County,owner,occupied,"$2,301 and up",8842
+2000,Middlesex County,owner,occupied,Up to $600,6801
+2000,Middlesex County,owner,occupied,"$601 to $1,000",6973
+2000,Middlesex County,owner,occupied,"$1,001 to $1,500",8272
+2000,Middlesex County,owner,occupied,"$1,500 to $2,300",14162
+2000,Middlesex County,owner,occupied,"$2,301 and up",7586
+2000,New Haven County,owner,occupied,Up to $600,28283
+2000,New Haven County,owner,occupied,"$601 to $1,000",38433
+2000,New Haven County,owner,occupied,"$1,001 to $1,500",40403
+2000,New Haven County,owner,occupied,"$1,500 to $2,300",62283
+2000,New Haven County,owner,occupied,"$2,301 and up",31561
+2000,New London County,owner,occupied,Up to $600,13726
+2000,New London County,owner,occupied,"$601 to $1,000",10661
+2000,New London County,owner,occupied,"$1,001 to $1,500",15117
+2000,New London County,owner,occupied,"$1,500 to $2,300",19620
+2000,New London County,owner,occupied,"$2,301 and up",7165
+2000,Tolland County,owner,occupied,Up to $600,5604
+2000,Tolland County,owner,occupied,"$601 to $1,000",5466
+2000,Tolland County,owner,occupied,"$1,001 to $1,500",7857
+2000,Tolland County,owner,occupied,"$1,500 to $2,300",12376
+2000,Tolland County,owner,occupied,"$2,301 and up",5320
+2000,Windham County,owner,occupied,Up to $600,6702
+2000,Windham County,owner,occupied,"$601 to $1,000",5021
+2000,Windham County,owner,occupied,"$1,001 to $1,500",8025
+2000,Windham County,owner,occupied,"$1,500 to $2,300",6429
+2000,Windham County,owner,occupied,"$2,301 and up",1535
+2010,Fairfield County,owner,occupied,Up to $600,6402
+2010,Fairfield County,owner,occupied,"$601 to $1,000",24358
+2010,Fairfield County,owner,occupied,"$1,001 to $1,500",31071
+2010,Fairfield County,owner,occupied,"$1,500 to $2,300",41414
+2010,Fairfield County,owner,occupied,"$2,301 and up",131156
+2010,Hartford County,owner,occupied,Up to $600,14028
+2010,Hartford County,owner,occupied,"$601 to $1,000",43486
+2010,Hartford County,owner,occupied,"$1,001 to $1,500",36704
+2010,Hartford County,owner,occupied,"$1,500 to $2,300",65744
+2010,Hartford County,owner,occupied,"$2,301 and up",70771
+2010,Litchfield County,owner,occupied,Up to $600,4030
+2010,Litchfield County,owner,occupied,"$601 to $1,000",10547
+2010,Litchfield County,owner,occupied,"$1,001 to $1,500",9876
+2010,Litchfield County,owner,occupied,"$1,500 to $2,300",16600
+2010,Litchfield County,owner,occupied,"$2,301 and up",19284
+2010,Middlesex County,owner,occupied,Up to $600,2590
+2010,Middlesex County,owner,occupied,"$601 to $1,000",8431
+2010,Middlesex County,owner,occupied,"$1,001 to $1,500",7737
+2010,Middlesex County,owner,occupied,"$1,500 to $2,300",13290
+2010,Middlesex County,owner,occupied,"$2,301 and up",18979
+2010,New Haven County,owner,occupied,Up to $600,8280
+2010,New Haven County,owner,occupied,"$601 to $1,000",36481
+2010,New Haven County,owner,occupied,"$1,001 to $1,500",34423
+2010,New Haven County,owner,occupied,"$1,500 to $2,300",60557
+2010,New Haven County,owner,occupied,"$2,301 and up",76308
+2010,New London County,owner,occupied,Up to $600,6680
+2010,New London County,owner,occupied,"$601 to $1,000",13276
+2010,New London County,owner,occupied,"$1,001 to $1,500",10562
+2010,New London County,owner,occupied,"$1,500 to $2,300",20951
+2010,New London County,owner,occupied,"$2,301 and up",23102
+2010,Tolland County,owner,occupied,Up to $600,2102
+2010,Tolland County,owner,occupied,"$601 to $1,000",7599
+2010,Tolland County,owner,occupied,"$1,001 to $1,500",6175
+2010,Tolland County,owner,occupied,"$1,500 to $2,300",12266
+2010,Tolland County,owner,occupied,"$2,301 and up",13446
+2010,Windham County,owner,occupied,Up to $600,3823
+2010,Windham County,owner,occupied,"$601 to $1,000",6115
+2010,Windham County,owner,occupied,"$1,001 to $1,500",5628
+2010,Windham County,owner,occupied,"$1,500 to $2,300",9521
+2010,Windham County,owner,occupied,"$2,301 and up",6501
+2018,Fairfield County,owner,occupied,Up to $600,6527
+2018,Fairfield County,owner,occupied,"$601 to $1,000",23992
+2018,Fairfield County,owner,occupied,"$1,001 to $1,500",32925
+2018,Fairfield County,owner,occupied,"$1,500 to $2,300",51593
+2018,Fairfield County,owner,occupied,"$2,301 and up",111079
+2018,Hartford County,owner,occupied,Up to $600,11055
+2018,Hartford County,owner,occupied,"$601 to $1,000",44084
+2018,Hartford County,owner,occupied,"$1,001 to $1,500",47383
+2018,Hartford County,owner,occupied,"$1,500 to $2,300",71355
+2018,Hartford County,owner,occupied,"$2,301 and up",49485
+2018,Litchfield County,owner,occupied,Up to $600,4045
+2018,Litchfield County,owner,occupied,"$601 to $1,000",12031
+2018,Litchfield County,owner,occupied,"$1,001 to $1,500",11260
+2018,Litchfield County,owner,occupied,"$1,500 to $2,300",17495
+2018,Litchfield County,owner,occupied,"$2,301 and up",12125
+2018,Middlesex County,owner,occupied,Up to $600,2468
+2018,Middlesex County,owner,occupied,"$601 to $1,000",8738
+2018,Middlesex County,owner,occupied,"$1,001 to $1,500",8332
+2018,Middlesex County,owner,occupied,"$1,500 to $2,300",15278
+2018,Middlesex County,owner,occupied,"$2,301 and up",14260
+2018,New Haven County,owner,occupied,Up to $600,8754
+2018,New Haven County,owner,occupied,"$601 to $1,000",38285
+2018,New Haven County,owner,occupied,"$1,001 to $1,500",43431
+2018,New Haven County,owner,occupied,"$1,500 to $2,300",61625
+2018,New Haven County,owner,occupied,"$2,301 and up",50533
+2018,New London County,owner,occupied,Up to $600,6533
+2018,New London County,owner,occupied,"$601 to $1,000",15414
+2018,New London County,owner,occupied,"$1,001 to $1,500",13852
+2018,New London County,owner,occupied,"$1,500 to $2,300",21741
+2018,New London County,owner,occupied,"$2,301 and up",13790
+2018,Tolland County,owner,occupied,Up to $600,2473
+2018,Tolland County,owner,occupied,"$601 to $1,000",8200
+2018,Tolland County,owner,occupied,"$1,001 to $1,500",7539
+2018,Tolland County,owner,occupied,"$1,500 to $2,300",13406
+2018,Tolland County,owner,occupied,"$2,301 and up",8097
+2018,Windham County,owner,occupied,Up to $600,4051
+2018,Windham County,owner,occupied,"$601 to $1,000",6445
+2018,Windham County,owner,occupied,"$1,001 to $1,500",6901
+2018,Windham County,owner,occupied,"$1,500 to $2,300",10580
+2018,Windham County,owner,occupied,"$2,301 and up",3075
+2000,Fairfield County,renter,occupied,Up to $600,18716
+2000,Fairfield County,renter,occupied,"$601 to $1,000",26442
+2000,Fairfield County,renter,occupied,"$1,001 to $1,500",31591
+2000,Fairfield County,renter,occupied,"$1,500 to $2,300",16420
+2000,Fairfield County,renter,occupied,"$2,301 and up",6710
+2000,Hartford County,renter,occupied,Up to $600,29597
+2000,Hartford County,renter,occupied,"$601 to $1,000",55238
+2000,Hartford County,renter,occupied,"$1,001 to $1,500",29557
+2000,Hartford County,renter,occupied,"$1,500 to $2,300",3651
+2000,Hartford County,renter,occupied,"$2,301 and up",1373
+2000,Litchfield County,renter,occupied,Up to $600,4995
+2000,Litchfield County,renter,occupied,"$601 to $1,000",7396
+2000,Litchfield County,renter,occupied,"$1,001 to $1,500",4289
+2000,Litchfield County,renter,occupied,"$1,500 to $2,300",937
+2000,Litchfield County,renter,occupied,"$2,301 and up",121
+2000,Middlesex County,renter,occupied,Up to $600,3416
+2000,Middlesex County,renter,occupied,"$601 to $1,000",7102
+2000,Middlesex County,renter,occupied,"$1,001 to $1,500",5033
+2000,Middlesex County,renter,occupied,"$1,500 to $2,300",1112
+2000,Middlesex County,renter,occupied,"$2,301 and up",394
+2000,New Haven County,renter,occupied,Up to $600,27397
+2000,New Haven County,renter,occupied,"$601 to $1,000",51854
+2000,New Haven County,renter,occupied,"$1,001 to $1,500",31471
+2000,New Haven County,renter,occupied,"$1,500 to $2,300",5491
+2000,New Haven County,renter,occupied,"$2,301 and up",1301
+2000,New London County,renter,occupied,Up to $600,9093
+2000,New London County,renter,occupied,"$601 to $1,000",15061
+2000,New London County,renter,occupied,"$1,001 to $1,500",7742
+2000,New London County,renter,occupied,"$1,500 to $2,300",1491
+2000,New London County,renter,occupied,"$2,301 and up",80
+2000,Tolland County,renter,occupied,Up to $600,2230
+2000,Tolland County,renter,occupied,"$601 to $1,000",7045
+2000,Tolland County,renter,occupied,"$1,001 to $1,500",3036
+2000,Tolland County,renter,occupied,"$1,500 to $2,300",525
+2000,Tolland County,renter,occupied,"$2,301 and up",11
+2000,Windham County,renter,occupied,Up to $600,4750
+2000,Windham County,renter,occupied,"$601 to $1,000",6855
+2000,Windham County,renter,occupied,"$1,001 to $1,500",1829
+2000,Windham County,renter,occupied,"$1,500 to $2,300",128
+2010,Fairfield County,renter,occupied,Up to $600,15328
+2010,Fairfield County,renter,occupied,"$601 to $1,000",13832
+2010,Fairfield County,renter,occupied,"$1,001 to $1,500",28082
+2010,Fairfield County,renter,occupied,"$1,500 to $2,300",28376
+2010,Fairfield County,renter,occupied,"$2,301 and up",11764
+2010,Hartford County,renter,occupied,Up to $600,22526
+2010,Hartford County,renter,occupied,"$601 to $1,000",34170
+2010,Hartford County,renter,occupied,"$1,001 to $1,500",46807
+2010,Hartford County,renter,occupied,"$1,500 to $2,300",11263
+2010,Hartford County,renter,occupied,"$2,301 and up",2126
+2010,Litchfield County,renter,occupied,Up to $600,3659
+2010,Litchfield County,renter,occupied,"$601 to $1,000",5491
+2010,Litchfield County,renter,occupied,"$1,001 to $1,500",4976
+2010,Litchfield County,renter,occupied,"$1,500 to $2,300",1667
+2010,Litchfield County,renter,occupied,"$2,301 and up",558
+2010,Middlesex County,renter,occupied,Up to $600,2808
+2010,Middlesex County,renter,occupied,"$601 to $1,000",4095
+2010,Middlesex County,renter,occupied,"$1,001 to $1,500",6293
+2010,Middlesex County,renter,occupied,"$1,500 to $2,300",2366
+2010,Middlesex County,renter,occupied,"$2,301 and up",387
+2010,New Haven County,renter,occupied,Up to $600,19126
+2010,New Haven County,renter,occupied,"$601 to $1,000",26666
+2010,New Haven County,renter,occupied,"$1,001 to $1,500",46657
+2010,New Haven County,renter,occupied,"$1,500 to $2,300",19736
+2010,New Haven County,renter,occupied,"$2,301 and up",2549
+2010,New London County,renter,occupied,Up to $600,5834
+2010,New London County,renter,occupied,"$601 to $1,000",8035
+2010,New London County,renter,occupied,"$1,001 to $1,500",12548
+2010,New London County,renter,occupied,"$1,500 to $2,300",4751
+2010,New London County,renter,occupied,"$2,301 and up",851
+2010,Tolland County,renter,occupied,Up to $600,1245
+2010,Tolland County,renter,occupied,"$601 to $1,000",4010
+2010,Tolland County,renter,occupied,"$1,001 to $1,500",4787
+2010,Tolland County,renter,occupied,"$1,500 to $2,300",2614
+2010,Tolland County,renter,occupied,"$2,301 and up",209
+2010,Windham County,renter,occupied,Up to $600,3222
+2010,Windham County,renter,occupied,"$601 to $1,000",4544
+2010,Windham County,renter,occupied,"$1,001 to $1,500",4200
+2010,Windham County,renter,occupied,"$1,500 to $2,300",653
+2010,Windham County,renter,occupied,"$2,301 and up",114
+2018,Fairfield County,renter,occupied,Up to $600,16032
+2018,Fairfield County,renter,occupied,"$601 to $1,000",12693
+2018,Fairfield County,renter,occupied,"$1,001 to $1,500",32603
+2018,Fairfield County,renter,occupied,"$1,500 to $2,300",35099
+2018,Fairfield County,renter,occupied,"$2,301 and up",17949
+2018,Hartford County,renter,occupied,Up to $600,22217
+2018,Hartford County,renter,occupied,"$601 to $1,000",33570
+2018,Hartford County,renter,occupied,"$1,001 to $1,500",50072
+2018,Hartford County,renter,occupied,"$1,500 to $2,300",17527
+2018,Hartford County,renter,occupied,"$2,301 and up",2315
+2018,Litchfield County,renter,occupied,Up to $600,2750
+2018,Litchfield County,renter,occupied,"$601 to $1,000",5278
+2018,Litchfield County,renter,occupied,"$1,001 to $1,500",6456
+2018,Litchfield County,renter,occupied,"$1,500 to $2,300",2245
+2018,Litchfield County,renter,occupied,"$2,301 and up",302
+2018,Middlesex County,renter,occupied,Up to $600,3115
+2018,Middlesex County,renter,occupied,"$601 to $1,000",3300
+2018,Middlesex County,renter,occupied,"$1,001 to $1,500",7218
+2018,Middlesex County,renter,occupied,"$1,500 to $2,300",3696
+2018,Middlesex County,renter,occupied,"$2,301 and up",488
+2018,New Haven County,renter,occupied,Up to $600,21757
+2018,New Haven County,renter,occupied,"$601 to $1,000",28637
+2018,New Haven County,renter,occupied,"$1,001 to $1,500",49098
+2018,New Haven County,renter,occupied,"$1,500 to $2,300",24446
+2018,New Haven County,renter,occupied,"$2,301 and up",3290
+2018,New London County,renter,occupied,Up to $600,6453
+2018,New London County,renter,occupied,"$601 to $1,000",8915
+2018,New London County,renter,occupied,"$1,001 to $1,500",14295
+2018,New London County,renter,occupied,"$1,500 to $2,300",5787
+2018,New London County,renter,occupied,"$2,301 and up",622
+2018,Tolland County,renter,occupied,Up to $600,1769
+2018,Tolland County,renter,occupied,"$601 to $1,000",4404
+2018,Tolland County,renter,occupied,"$1,001 to $1,500",5676
+2018,Tolland County,renter,occupied,"$1,500 to $2,300",3222
+2018,Tolland County,renter,occupied,"$2,301 and up",432
+2018,Windham County,renter,occupied,Up to $600,3286
+2018,Windham County,renter,occupied,"$601 to $1,000",5142
+2018,Windham County,renter,occupied,"$1,001 to $1,500",3944
+2018,Windham County,renter,occupied,"$1,500 to $2,300",885
+2018,Windham County,renter,occupied,"$2,301 and up",154
+2000,Connecticut,owner,occupied,Up to $600,122441
+2000,Connecticut,owner,occupied,"$601 to $1,000",152335
+2000,Connecticut,owner,occupied,"$1,001 to $1,500",163376
+2000,Connecticut,owner,occupied,"$1,500 to $2,300",249815
+2000,Connecticut,owner,occupied,"$2,301 and up",182410
+2000,Connecticut,renter,occupied,Up to $600,100194
+2000,Connecticut,renter,occupied,"$601 to $1,000",176993
+2000,Connecticut,renter,occupied,"$1,001 to $1,500",114548
+2000,Connecticut,renter,occupied,"$1,500 to $2,300",29755
+2000,Connecticut,renter,occupied,"$2,301 and up",9990
+2010,Connecticut,owner,occupied,Up to $600,47935
+2010,Connecticut,owner,occupied,"$601 to $1,000",150293
+2010,Connecticut,owner,occupied,"$1,001 to $1,500",142176
+2010,Connecticut,owner,occupied,"$1,500 to $2,300",240343
+2010,Connecticut,owner,occupied,"$2,301 and up",359547
+2010,Connecticut,renter,occupied,Up to $600,73748
+2010,Connecticut,renter,occupied,"$601 to $1,000",100843
+2010,Connecticut,renter,occupied,"$1,001 to $1,500",154350
+2010,Connecticut,renter,occupied,"$1,500 to $2,300",71426
+2010,Connecticut,renter,occupied,"$2,301 and up",18558
+2018,Connecticut,owner,occupied,Up to $600,45906
+2018,Connecticut,owner,occupied,"$601 to $1,000",157189
+2018,Connecticut,owner,occupied,"$1,001 to $1,500",171623
+2018,Connecticut,owner,occupied,"$1,500 to $2,300",263073
+2018,Connecticut,owner,occupied,"$2,301 and up",262444
+2018,Connecticut,renter,occupied,Up to $600,77379
+2018,Connecticut,renter,occupied,"$601 to $1,000",101939
+2018,Connecticut,renter,occupied,"$1,001 to $1,500",169362
+2018,Connecticut,renter,occupied,"$1,500 to $2,300",92907
+2018,Connecticut,renter,occupied,"$2,301 and up",25552
+2000,Fairfield County,owner,vacant,Up to $600,77
+2000,Fairfield County,owner,vacant,"$601 to $1,000",55
+2000,Fairfield County,owner,vacant,"$1,001 to $1,500",104
+2000,Fairfield County,owner,vacant,"$1,500 to $2,300",522
+2000,Fairfield County,owner,vacant,"$2,301 and up",1829
+2000,Hartford County,owner,vacant,Up to $600,66
+2000,Hartford County,owner,vacant,"$601 to $1,000",139
+2000,Hartford County,owner,vacant,"$1,001 to $1,500",491
+2000,Hartford County,owner,vacant,"$1,500 to $2,300",1072
+2000,Hartford County,owner,vacant,"$2,301 and up",698
+2000,Litchfield County,owner,vacant,Up to $600,5
+2000,Litchfield County,owner,vacant,"$601 to $1,000",72
+2000,Litchfield County,owner,vacant,"$1,001 to $1,500",148
+2000,Litchfield County,owner,vacant,"$1,500 to $2,300",296
+2000,Litchfield County,owner,vacant,"$2,301 and up",248
+2000,Middlesex County,owner,vacant,"$601 to $1,000",28
+2000,Middlesex County,owner,vacant,"$1,001 to $1,500",68
+2000,Middlesex County,owner,vacant,"$1,500 to $2,300",174
+2000,Middlesex County,owner,vacant,"$2,301 and up",283
+2000,New Haven County,owner,vacant,Up to $600,126
+2000,New Haven County,owner,vacant,"$601 to $1,000",329
+2000,New Haven County,owner,vacant,"$1,001 to $1,500",720
+2000,New Haven County,owner,vacant,"$1,500 to $2,300",1224
+2000,New Haven County,owner,vacant,"$2,301 and up",684
+2000,New London County,owner,vacant,Up to $600,28
+2000,New London County,owner,vacant,"$601 to $1,000",40
+2000,New London County,owner,vacant,"$1,001 to $1,500",153
+2000,New London County,owner,vacant,"$1,500 to $2,300",636
+2000,New London County,owner,vacant,"$2,301 and up",278
+2000,Tolland County,owner,vacant,Up to $600,30
+2000,Tolland County,owner,vacant,"$601 to $1,000",37
+2000,Tolland County,owner,vacant,"$1,001 to $1,500",11
+2000,Tolland County,owner,vacant,"$1,500 to $2,300",160
+2000,Tolland County,owner,vacant,"$2,301 and up",152
+2000,Windham County,owner,vacant,Up to $600,4
+2000,Windham County,owner,vacant,"$601 to $1,000",45
+2000,Windham County,owner,vacant,"$1,001 to $1,500",170
+2000,Windham County,owner,vacant,"$1,500 to $2,300",142
+2000,Windham County,owner,vacant,"$2,301 and up",71
+2010,Fairfield County,owner,vacant,"$601 to $1,000",55
+2010,Fairfield County,owner,vacant,"$1,001 to $1,500",60
+2010,Fairfield County,owner,vacant,"$1,500 to $2,300",384
+2010,Fairfield County,owner,vacant,"$2,301 and up",3407
+2010,Hartford County,owner,vacant,Up to $600,98
+2010,Hartford County,owner,vacant,"$601 to $1,000",61
+2010,Hartford County,owner,vacant,"$1,001 to $1,500",219
+2010,Hartford County,owner,vacant,"$1,500 to $2,300",609
+2010,Hartford County,owner,vacant,"$2,301 and up",1481
+2010,Litchfield County,owner,vacant,"$1,500 to $2,300",105
+2010,Litchfield County,owner,vacant,"$2,301 and up",547
+2010,Middlesex County,owner,vacant,Up to $600,133
+2010,Middlesex County,owner,vacant,"$1,001 to $1,500",40
+2010,Middlesex County,owner,vacant,"$1,500 to $2,300",220
+2010,Middlesex County,owner,vacant,"$2,301 and up",661
+2010,New Haven County,owner,vacant,Up to $600,44
+2010,New Haven County,owner,vacant,"$601 to $1,000",103
+2010,New Haven County,owner,vacant,"$1,001 to $1,500",287
+2010,New Haven County,owner,vacant,"$1,500 to $2,300",1049
+2010,New Haven County,owner,vacant,"$2,301 and up",1622
+2010,New London County,owner,vacant,Up to $600,38
+2010,New London County,owner,vacant,"$601 to $1,000",62
+2010,New London County,owner,vacant,"$1,500 to $2,300",334
+2010,New London County,owner,vacant,"$2,301 and up",718
+2010,Tolland County,owner,vacant,Up to $600,36
+2010,Tolland County,owner,vacant,"$1,500 to $2,300",59
+2010,Tolland County,owner,vacant,"$2,301 and up",273
+2010,Windham County,owner,vacant,"$601 to $1,000",69
+2010,Windham County,owner,vacant,"$1,001 to $1,500",43
+2010,Windham County,owner,vacant,"$1,500 to $2,300",236
+2010,Windham County,owner,vacant,"$2,301 and up",167
+2018,Fairfield County,owner,vacant,Up to $600,193
+2018,Fairfield County,owner,vacant,"$601 to $1,000",240
+2018,Fairfield County,owner,vacant,"$1,001 to $1,500",332
+2018,Fairfield County,owner,vacant,"$1,500 to $2,300",566
+2018,Fairfield County,owner,vacant,"$2,301 and up",3255
+2018,Hartford County,owner,vacant,Up to $600,16
+2018,Hartford County,owner,vacant,"$601 to $1,000",518
+2018,Hartford County,owner,vacant,"$1,001 to $1,500",781
+2018,Hartford County,owner,vacant,"$1,500 to $2,300",1088
+2018,Hartford County,owner,vacant,"$2,301 and up",1517
+2018,Litchfield County,owner,vacant,Up to $600,19
+2018,Litchfield County,owner,vacant,"$601 to $1,000",89
+2018,Litchfield County,owner,vacant,"$1,001 to $1,500",270
+2018,Litchfield County,owner,vacant,"$1,500 to $2,300",189
+2018,Litchfield County,owner,vacant,"$2,301 and up",528
+2018,Middlesex County,owner,vacant,"$1,001 to $1,500",118
+2018,Middlesex County,owner,vacant,"$1,500 to $2,300",334
+2018,Middlesex County,owner,vacant,"$2,301 and up",722
+2018,New Haven County,owner,vacant,Up to $600,237
+2018,New Haven County,owner,vacant,"$601 to $1,000",525
+2018,New Haven County,owner,vacant,"$1,001 to $1,500",726
+2018,New Haven County,owner,vacant,"$1,500 to $2,300",1033
+2018,New Haven County,owner,vacant,"$2,301 and up",1107
+2018,New London County,owner,vacant,Up to $600,91
+2018,New London County,owner,vacant,"$601 to $1,000",104
+2018,New London County,owner,vacant,"$1,001 to $1,500",551
+2018,New London County,owner,vacant,"$1,500 to $2,300",511
+2018,New London County,owner,vacant,"$2,301 and up",596
+2018,Tolland County,owner,vacant,Up to $600,49
+2018,Tolland County,owner,vacant,"$601 to $1,000",82
+2018,Tolland County,owner,vacant,"$1,001 to $1,500",46
+2018,Tolland County,owner,vacant,"$1,500 to $2,300",182
+2018,Tolland County,owner,vacant,"$2,301 and up",231
+2018,Windham County,owner,vacant,Up to $600,47
+2018,Windham County,owner,vacant,"$601 to $1,000",20
+2018,Windham County,owner,vacant,"$1,001 to $1,500",306
+2018,Windham County,owner,vacant,"$1,500 to $2,300",75
+2018,Windham County,owner,vacant,"$2,301 and up",115
+2000,Fairfield County,renter,vacant,Up to $600,515
+2000,Fairfield County,renter,vacant,"$601 to $1,000",964
+2000,Fairfield County,renter,vacant,"$1,001 to $1,500",1430
+2000,Fairfield County,renter,vacant,"$1,500 to $2,300",735
+2000,Fairfield County,renter,vacant,"$2,301 and up",377
+2000,Hartford County,renter,vacant,Up to $600,1589
+2000,Hartford County,renter,vacant,"$601 to $1,000",3644
+2000,Hartford County,renter,vacant,"$1,001 to $1,500",2722
+2000,Hartford County,renter,vacant,"$1,500 to $2,300",409
+2000,Hartford County,renter,vacant,"$2,301 and up",217
+2000,Litchfield County,renter,vacant,Up to $600,60
+2000,Litchfield County,renter,vacant,"$601 to $1,000",460
+2000,Litchfield County,renter,vacant,"$1,001 to $1,500",256
+2000,Litchfield County,renter,vacant,"$1,500 to $2,300",18
+2000,Litchfield County,renter,vacant,"$2,301 and up",48
+2000,Middlesex County,renter,vacant,Up to $600,111
+2000,Middlesex County,renter,vacant,"$601 to $1,000",248
+2000,Middlesex County,renter,vacant,"$1,001 to $1,500",395
+2000,Middlesex County,renter,vacant,"$1,500 to $2,300",142
+2000,Middlesex County,renter,vacant,"$2,301 and up",106
+2000,New Haven County,renter,vacant,Up to $600,1259
+2000,New Haven County,renter,vacant,"$601 to $1,000",3507
+2000,New Haven County,renter,vacant,"$1,001 to $1,500",2707
+2000,New Haven County,renter,vacant,"$1,500 to $2,300",628
+2000,New Haven County,renter,vacant,"$2,301 and up",159
+2000,New London County,renter,vacant,Up to $600,317
+2000,New London County,renter,vacant,"$601 to $1,000",847
+2000,New London County,renter,vacant,"$1,001 to $1,500",963
+2000,New London County,renter,vacant,"$1,500 to $2,300",183
+2000,New London County,renter,vacant,"$2,301 and up",14
+2000,Tolland County,renter,vacant,Up to $600,43
+2000,Tolland County,renter,vacant,"$601 to $1,000",260
+2000,Tolland County,renter,vacant,"$1,001 to $1,500",295
+2000,Tolland County,renter,vacant,"$1,500 to $2,300",22
+2000,Windham County,renter,vacant,Up to $600,274
+2000,Windham County,renter,vacant,"$601 to $1,000",274
+2000,Windham County,renter,vacant,"$1,001 to $1,500",127
+2000,Windham County,renter,vacant,"$1,500 to $2,300",14
+2000,Windham County,renter,vacant,"$2,301 and up",58
+2010,Fairfield County,renter,vacant,Up to $600,570
+2010,Fairfield County,renter,vacant,"$601 to $1,000",864
+2010,Fairfield County,renter,vacant,"$1,001 to $1,500",2915
+2010,Fairfield County,renter,vacant,"$1,500 to $2,300",1755
+2010,Fairfield County,renter,vacant,"$2,301 and up",1786
+2010,Hartford County,renter,vacant,Up to $600,1174
+2010,Hartford County,renter,vacant,"$601 to $1,000",2461
+2010,Hartford County,renter,vacant,"$1,001 to $1,500",4089
+2010,Hartford County,renter,vacant,"$1,500 to $2,300",1331
+2010,Hartford County,renter,vacant,"$2,301 and up",258
+2010,Litchfield County,renter,vacant,Up to $600,51
+2010,Litchfield County,renter,vacant,"$601 to $1,000",318
+2010,Litchfield County,renter,vacant,"$1,001 to $1,500",841
+2010,Litchfield County,renter,vacant,"$1,500 to $2,300",97
+2010,Litchfield County,renter,vacant,"$2,301 and up",14
+2010,Middlesex County,renter,vacant,"$601 to $1,000",88
+2010,Middlesex County,renter,vacant,"$1,001 to $1,500",590
+2010,Middlesex County,renter,vacant,"$1,500 to $2,300",370
+2010,New Haven County,renter,vacant,Up to $600,904
+2010,New Haven County,renter,vacant,"$601 to $1,000",1655
+2010,New Haven County,renter,vacant,"$1,001 to $1,500",4947
+2010,New Haven County,renter,vacant,"$1,500 to $2,300",1401
+2010,New Haven County,renter,vacant,"$2,301 and up",391
+2010,New London County,renter,vacant,Up to $600,54
+2010,New London County,renter,vacant,"$601 to $1,000",187
+2010,New London County,renter,vacant,"$1,001 to $1,500",1452
+2010,New London County,renter,vacant,"$1,500 to $2,300",360
+2010,New London County,renter,vacant,"$2,301 and up",45
+2010,Tolland County,renter,vacant,"$601 to $1,000",43
+2010,Tolland County,renter,vacant,"$1,001 to $1,500",414
+2010,Tolland County,renter,vacant,"$1,500 to $2,300",163
+2010,Tolland County,renter,vacant,"$2,301 and up",54
+2010,Windham County,renter,vacant,Up to $600,158
+2010,Windham County,renter,vacant,"$601 to $1,000",113
+2010,Windham County,renter,vacant,"$1,001 to $1,500",231
+2010,Windham County,renter,vacant,"$1,500 to $2,300",25
+2010,Windham County,renter,vacant,"$2,301 and up",45
+2018,Fairfield County,renter,vacant,Up to $600,452
+2018,Fairfield County,renter,vacant,"$601 to $1,000",755
+2018,Fairfield County,renter,vacant,"$1,001 to $1,500",1393
+2018,Fairfield County,renter,vacant,"$1,500 to $2,300",1935
+2018,Fairfield County,renter,vacant,"$2,301 and up",2025
+2018,Hartford County,renter,vacant,Up to $600,916
+2018,Hartford County,renter,vacant,"$601 to $1,000",2064
+2018,Hartford County,renter,vacant,"$1,001 to $1,500",3390
+2018,Hartford County,renter,vacant,"$1,500 to $2,300",1998
+2018,Hartford County,renter,vacant,"$2,301 and up",166
+2018,Litchfield County,renter,vacant,"$601 to $1,000",270
+2018,Litchfield County,renter,vacant,"$1,001 to $1,500",315
+2018,Litchfield County,renter,vacant,"$1,500 to $2,300",320
+2018,Litchfield County,renter,vacant,"$2,301 and up",115
+2018,Middlesex County,renter,vacant,Up to $600,86
+2018,Middlesex County,renter,vacant,"$601 to $1,000",178
+2018,Middlesex County,renter,vacant,"$1,001 to $1,500",840
+2018,Middlesex County,renter,vacant,"$1,500 to $2,300",306
+2018,Middlesex County,renter,vacant,"$2,301 and up",45
+2018,New Haven County,renter,vacant,Up to $600,745
+2018,New Haven County,renter,vacant,"$601 to $1,000",1502
+2018,New Haven County,renter,vacant,"$1,001 to $1,500",4997
+2018,New Haven County,renter,vacant,"$1,500 to $2,300",2902
+2018,New Haven County,renter,vacant,"$2,301 and up",348
+2018,New London County,renter,vacant,Up to $600,75
+2018,New London County,renter,vacant,"$601 to $1,000",328
+2018,New London County,renter,vacant,"$1,001 to $1,500",983
+2018,New London County,renter,vacant,"$1,500 to $2,300",401
+2018,New London County,renter,vacant,"$2,301 and up",139
+2018,Tolland County,renter,vacant,Up to $600,84
+2018,Tolland County,renter,vacant,"$601 to $1,000",108
+2018,Tolland County,renter,vacant,"$1,001 to $1,500",319
+2018,Tolland County,renter,vacant,"$1,500 to $2,300",287
+2018,Tolland County,renter,vacant,"$2,301 and up",38
+2018,Windham County,renter,vacant,Up to $600,130
+2018,Windham County,renter,vacant,"$601 to $1,000",242
+2018,Windham County,renter,vacant,"$1,001 to $1,500",267
+2018,Windham County,renter,vacant,"$1,500 to $2,300",48
+2018,Windham County,renter,vacant,"$2,301 and up",48
+2000,Connecticut,owner,vacant,Up to $600,336
+2000,Connecticut,owner,vacant,"$601 to $1,000",745
+2000,Connecticut,owner,vacant,"$1,001 to $1,500",1865
+2000,Connecticut,owner,vacant,"$1,500 to $2,300",4226
+2000,Connecticut,owner,vacant,"$2,301 and up",4243
+2000,Connecticut,renter,vacant,Up to $600,4168
+2000,Connecticut,renter,vacant,"$601 to $1,000",10204
+2000,Connecticut,renter,vacant,"$1,001 to $1,500",8895
+2000,Connecticut,renter,vacant,"$1,500 to $2,300",2151
+2000,Connecticut,renter,vacant,"$2,301 and up",979
+2010,Connecticut,owner,vacant,Up to $600,349
+2010,Connecticut,owner,vacant,"$601 to $1,000",350
+2010,Connecticut,owner,vacant,"$1,001 to $1,500",649
+2010,Connecticut,owner,vacant,"$1,500 to $2,300",2996
+2010,Connecticut,owner,vacant,"$2,301 and up",8876
+2010,Connecticut,renter,vacant,Up to $600,2911
+2010,Connecticut,renter,vacant,"$601 to $1,000",5729
+2010,Connecticut,renter,vacant,"$1,001 to $1,500",15479
+2010,Connecticut,renter,vacant,"$1,500 to $2,300",5502
+2010,Connecticut,renter,vacant,"$2,301 and up",2593
+2018,Connecticut,owner,vacant,Up to $600,652
+2018,Connecticut,owner,vacant,"$601 to $1,000",1578
+2018,Connecticut,owner,vacant,"$1,001 to $1,500",3130
+2018,Connecticut,owner,vacant,"$1,500 to $2,300",3978
+2018,Connecticut,owner,vacant,"$2,301 and up",8071
+2018,Connecticut,renter,vacant,Up to $600,2488
+2018,Connecticut,renter,vacant,"$601 to $1,000",5447
+2018,Connecticut,renter,vacant,"$1,001 to $1,500",12504
+2018,Connecticut,renter,vacant,"$1,500 to $2,300",8197
+2018,Connecticut,renter,vacant,"$2,301 and up",2924

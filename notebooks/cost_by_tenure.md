@@ -178,6 +178,8 @@ vac_cost_groups <- bind_rows(own_vac, rent_vac, state_vac) %>%
 ``` r
 units_by_cost_groups <- bind_rows(occ_cost_groups, vac_cost_groups) %>% 
     select(year, name, tenure, occupancy, cost_group, units)
+
+write_csv(units_by_cost_groups, path = "../output_data/units_by_cost_groups_2000_2018.csv")
 ```
 
 ## Plots
