@@ -1,0 +1,31 @@
+inc_band,disability_type,households
+Very low,diffcare,17754
+Low,diffcare,9960
+Mid-low,diffcare,11711
+Mid-high,diffcare,9614
+High,diffcare,15413
+Very low,diffeye,14957
+Low,diffeye,8445
+Mid-low,diffeye,8894
+Mid-high,diffeye,7405
+High,diffeye,14087
+Very low,diffhear,18103
+Low,diffhear,14583
+Mid-low,diffhear,17509
+Mid-high,diffhear,15120
+High,diffhear,31272
+Very low,diffmob,33706
+Low,diffmob,19097
+Mid-low,diffmob,19998
+Mid-high,diffmob,18087
+High,diffmob,27996
+Very low,diffphys,47037
+Low,diffphys,27160
+Mid-low,diffphys,28619
+Mid-high,diffphys,24147
+High,diffphys,37749
+Very low,diffrem,32791
+Low,diffrem,17900
+Mid-low,diffrem,18843
+Mid-high,diffrem,15465
+High,diffrem,29978

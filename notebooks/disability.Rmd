@@ -297,6 +297,8 @@ diffhear <- x %>%
 	ungroup()
 
 hh_disabilities_by_type <- bind_rows(diffcare, diffeye, diffhear, diffmob, diffphys, diffrem)
+
+write_csv(hh_disabilities_by_type, path = "../output_data/hh_disabilities_type.csv")
 ```
 
 ```{r}
@@ -315,6 +317,8 @@ hh_disabilities_count_share <- ct_hhlds %>%
 	bind_rows(hh_disabilities_by_type) %>% 
 	group_by(inc_band) %>% 
 	calc_shares(group = disability_type, denom = "total", value = households)
+
+write_csv(hh_disabilities_count_share, path = "../output_data/hh_disabilities_type_count_share.csv")
 ```
 
 ```{r eval=F, echo = F}

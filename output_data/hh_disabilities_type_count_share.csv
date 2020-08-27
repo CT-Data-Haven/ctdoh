@@ -1,0 +1,36 @@
+inc_band,disability_type,households,share
+Very low,total,201377,NA
+Very low,diffcare,17754,0.088
+Very low,diffeye,14957,0.074
+Very low,diffhear,18103,0.09
+Very low,diffmob,33706,0.167
+Very low,diffphys,47037,0.234
+Very low,diffrem,32791,0.163
+Low,total,151345,NA
+Low,diffcare,9960,0.066
+Low,diffeye,8445,0.056
+Low,diffhear,14583,0.096
+Low,diffmob,19097,0.126
+Low,diffphys,27160,0.179
+Low,diffrem,17900,0.118
+Mid-low,total,214490,NA
+Mid-low,diffcare,11711,0.055
+Mid-low,diffeye,8894,0.041
+Mid-low,diffhear,17509,0.082
+Mid-low,diffmob,19998,0.093
+Mid-low,diffphys,28619,0.133
+Mid-low,diffrem,18843,0.088
+Mid-high,total,231836,NA
+Mid-high,diffcare,9614,0.041
+Mid-high,diffeye,7405,0.032
+Mid-high,diffhear,15120,0.065
+Mid-high,diffmob,18087,0.078
+Mid-high,diffphys,24147,0.104
+Mid-high,diffrem,15465,0.067
+High,total,568326,NA
+High,diffcare,15413,0.027
+High,diffeye,14087,0.025
+High,diffhear,31272,0.055
+High,diffmob,27996,0.049
+High,diffphys,37749,0.066
+High,diffrem,29978,0.053
