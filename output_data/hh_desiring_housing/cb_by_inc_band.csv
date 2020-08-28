@@ -1,0 +1,179 @@
+level,name,inc_band,cost_burden,value,value_se,statefip.x,statefip.y,share,sharemoe
+1_state,Connecticut,Very low,Total,201377,2402.1673685602163,NA,NA,NA,NA
+1_state,Connecticut,Very low,No burden,28364,946.7406492808517,9,9,0.141,0.004
+1_state,Connecticut,Very low,Cost-burdened,31411,969.4061320358911,9,9,0.156,0.004
+1_state,Connecticut,Very low,Severely cost-burdened,141602,2049.2207123941785,9,9,0.703,0.006
+1_state,Connecticut,Low,Total,151345,2070.0317355472757,NA,NA,NA,NA
+1_state,Connecticut,Low,No burden,36305,976.2250864878391,9,9,0.24,0.006
+1_state,Connecticut,Low,Cost-burdened,61210,1366.7931746611312,9,9,0.404,0.007
+1_state,Connecticut,Low,Severely cost-burdened,53830,1294.4124372311776,9,9,0.356,0.007
+1_state,Connecticut,Mid-low,Total,214490,2454.299585179447,NA,NA,NA,NA
+1_state,Connecticut,Mid-low,No burden,106477,1729.890183443279,9,9,0.496,0.006
+1_state,Connecticut,Mid-low,Cost-burdened,81244,1617.2351343189055,9,9,0.379,0.006
+1_state,Connecticut,Mid-low,Severely cost-burdened,26769,896.0741158306662,9,9,0.125,0.004
+1_state,Connecticut,Mid-high,Total,231836,2421.325955048501,NA,NA,NA,NA
+1_state,Connecticut,Mid-high,No burden,172281,2121.55529500703,9,9,0.743,0.005
+1_state,Connecticut,Mid-high,Cost-burdened,51262,1195.8753390154259,9,9,0.221,0.005
+1_state,Connecticut,Mid-high,Severely cost-burdened,8293,484.0871878042068,9,9,0.036,0.002
+1_state,Connecticut,High,Total,568326,3148.2466306403753,NA,NA,NA,NA
+1_state,Connecticut,High,No burden,532872,3089.909617277115,9,9,0.938,0.002
+1_state,Connecticut,High,Cost-burdened,31315,883.9871496431481,9,9,0.055,0.002
+1_state,Connecticut,High,Severely cost-burdened,4139,348.18977375070574,9,9,0.007,0.001
+2_counties,Fairfield County,Very low,Total,55251,1313.2053242231782,NA,NA,NA,NA
+2_counties,Fairfield County,Very low,No burden,6751,460.3983009569459,NA,NA,0.122,0.008
+2_counties,Fairfield County,Very low,Cost-burdened,9295,558.2436175048695,NA,NA,0.168,0.009
+2_counties,Fairfield County,Very low,Severely cost-burdened,39205,1104.7625195427952,NA,NA,0.71,0.011
+2_counties,Fairfield County,Low,Total,38220,1072.740515556118,NA,NA,NA,NA
+2_counties,Fairfield County,Low,No burden,8593,474.9005615441911,NA,NA,0.225,0.011
+2_counties,Fairfield County,Low,Cost-burdened,14809,690.8922776200286,NA,NA,0.387,0.014
+2_counties,Fairfield County,Low,Severely cost-burdened,14818,679.2165610345561,NA,NA,0.388,0.014
+2_counties,Fairfield County,Mid-low,Total,51287,1207.1142877813616,NA,NA,NA,NA
+2_counties,Fairfield County,Mid-low,No burden,23628,791.7594246747557,NA,NA,0.461,0.011
+2_counties,Fairfield County,Mid-low,Cost-burdened,19180,776.9395546185805,NA,NA,0.374,0.012
+2_counties,Fairfield County,Mid-low,Severely cost-burdened,8479,499.72236930043704,NA,NA,0.165,0.009
+2_counties,Fairfield County,Mid-high,Total,53533,1201.1606113853227,NA,NA,NA,NA
+2_counties,Fairfield County,Mid-high,No burden,36182,992.4752548350939,NA,NA,0.676,0.011
+2_counties,Fairfield County,Mid-high,Cost-burdened,13914,624.6278454716709,NA,NA,0.26,0.01
+2_counties,Fairfield County,Mid-high,Severely cost-burdened,3437,294.5419222281401,NA,NA,0.064,0.005
+2_counties,Fairfield County,High,Total,142201,1737.6117114558806,NA,NA,NA,NA
+2_counties,Fairfield County,High,No burden,130220,1668.083382210842,NA,NA,0.916,0.004
+2_counties,Fairfield County,High,Cost-burdened,10389,490.33251863202884,NA,NA,0.073,0.003
+2_counties,Fairfield County,High,Severely cost-burdened,1592,202.54058886169827,NA,NA,0.011,0.001
+2_counties,Hartford County,Very low,Total,52900,1241.9264420161937,NA,NA,NA,NA
+2_counties,Hartford County,Very low,No burden,8125,495.3722049094255,NA,NA,0.154,0.009
+2_counties,Hartford County,Very low,Cost-burdened,7627,456.76929358973524,NA,NA,0.144,0.008
+2_counties,Hartford County,Very low,Severely cost-burdened,37148,1051.9875132167629,NA,NA,0.702,0.011
+2_counties,Hartford County,Low,Total,37375,1017.2915766551022,NA,NA,NA,NA
+2_counties,Hartford County,Low,No burden,8868,470.1972798816851,NA,NA,0.237,0.011
+2_counties,Hartford County,Low,Cost-burdened,15999,678.2556501356967,NA,NA,0.428,0.014
+2_counties,Hartford County,Low,Severely cost-burdened,12508,605.4698067555518,NA,NA,0.335,0.013
+2_counties,Hartford County,Mid-low,Total,55552,1281.1431414776725,NA,NA,NA,NA
+2_counties,Hartford County,Mid-low,No burden,28592,903.7260836496946,NA,NA,0.515,0.011
+2_counties,Hartford County,Mid-low,Cost-burdened,21517,840.9653335737152,NA,NA,0.387,0.012
+2_counties,Hartford County,Mid-low,Severely cost-burdened,5443,377.53606219255175,NA,NA,0.098,0.006
+2_counties,Hartford County,Mid-high,Total,57614,1242.1472890960902,NA,NA,NA,NA
+2_counties,Hartford County,Mid-high,No burden,45917,1121.5408903350378,NA,NA,0.797,0.009
+2_counties,Hartford County,Mid-high,Cost-burdened,10532,524.2013922402269,NA,NA,0.183,0.008
+2_counties,Hartford County,Mid-high,Severely cost-burdened,1165,160.77358689735217,NA,NA,0.02,0.003
+2_counties,Hartford County,High,Total,145622,1827.8524007120357,NA,NA,NA,NA
+2_counties,Hartford County,High,No burden,138687,1783.5246911987779,NA,NA,0.952,0.003
+2_counties,Hartford County,High,Cost-burdened,6176,402.63153045618094,NA,NA,0.042,0.003
+2_counties,Hartford County,High,Severely cost-burdened,759,159.2017618527553,NA,NA,0.005,0.001
+2_counties,Litchfield County,Very low,Total,8698,468.49946380909284,NA,NA,NA,NA
+2_counties,Litchfield County,Very low,No burden,976,139.1430366538147,NA,NA,0.112,0.015
+2_counties,Litchfield County,Very low,Cost-burdened,1910,217.59827530905466,NA,NA,0.22,0.022
+2_counties,Litchfield County,Very low,Severely cost-burdened,5812,391.547977239177,NA,NA,0.668,0.027
+2_counties,Litchfield County,Low,Total,8655,480.89653874258016,NA,NA,NA,NA
+2_counties,Litchfield County,Low,No burden,2531,237.62803749317334,NA,NA,0.292,0.022
+2_counties,Litchfield County,Low,Cost-burdened,3709,329.6023797549119,NA,NA,0.429,0.03
+2_counties,Litchfield County,Low,Severely cost-burdened,2415,258.5524240040842,NA,NA,0.279,0.026
+2_counties,Litchfield County,Mid-low,Total,11899,549.783834329364,NA,NA,NA,NA
+2_counties,Litchfield County,Mid-low,No burden,7239,425.3039805215214,NA,NA,0.608,0.022
+2_counties,Litchfield County,Mid-low,Cost-burdened,3537,303.4751120807664,NA,NA,0.297,0.021
+2_counties,Litchfield County,Mid-low,Severely cost-burdened,1123,174.2112821072908,NA,NA,0.094,0.014
+2_counties,Litchfield County,Mid-high,Total,14645,594.5172743794421,NA,NA,NA,NA
+2_counties,Litchfield County,Mid-high,No burden,11809,542.8373355120101,NA,NA,0.806,0.017
+2_counties,Litchfield County,Mid-high,Cost-burdened,2393,220.82707660598697,NA,NA,0.163,0.014
+2_counties,Litchfield County,Mid-high,Severely cost-burdened,443,104.84453520856518,NA,NA,0.03,0.007
+2_counties,Litchfield County,High,Total,30090,837.6505026896976,NA,NA,NA,NA
+2_counties,Litchfield County,High,No burden,28425,812.0655434343454,NA,NA,0.945,0.006
+2_counties,Litchfield County,High,Cost-burdened,1513,201.75023979693813,NA,NA,0.05,0.007
+2_counties,Litchfield County,High,Severely cost-burdened,152,53.40143448846088,NA,NA,0.005,0.002
+2_counties,Middlesex County,Very low,Total,9466,539.2450375883888,NA,NA,NA,NA
+2_counties,Middlesex County,Very low,No burden,1270,179.59291832877892,NA,NA,0.134,0.017
+2_counties,Middlesex County,Very low,Cost-burdened,1855,233.63014417696408,NA,NA,0.196,0.022
+2_counties,Middlesex County,Very low,Severely cost-burdened,6341,452.3013416680272,NA,NA,0.67,0.029
+2_counties,Middlesex County,Low,Total,7567,484.3732706132583,NA,NA,NA,NA
+2_counties,Middlesex County,Low,No burden,2334,245.45816310574713,NA,NA,0.308,0.026
+2_counties,Middlesex County,Low,Cost-burdened,3237,340.39720693082614,NA,NA,0.428,0.036
+2_counties,Middlesex County,Low,Severely cost-burdened,1996,242.95353021379128,NA,NA,0.264,0.027
+2_counties,Middlesex County,Mid-low,Total,10680,585.6616844076148,NA,NA,NA,NA
+2_counties,Middlesex County,Mid-low,No burden,5909,415.5754959499304,NA,NA,0.553,0.024
+2_counties,Middlesex County,Mid-low,Cost-burdened,3559,354.29000304669023,NA,NA,0.333,0.028
+2_counties,Middlesex County,Mid-low,Severely cost-burdened,1212,213.76586548159224,NA,NA,0.113,0.019
+2_counties,Middlesex County,Mid-high,Total,12075,563.3690859185457,NA,NA,NA,NA
+2_counties,Middlesex County,Mid-high,No burden,9416,500.6895368032443,NA,NA,0.78,0.02
+2_counties,Middlesex County,Mid-high,Cost-burdened,2310,239.41438276673156,NA,NA,0.191,0.018
+2_counties,Middlesex County,Mid-high,Severely cost-burdened,349,100.53565684086243,NA,NA,0.029,0.008
+2_counties,Middlesex County,High,Total,27105,844.0646894718293,NA,NA,NA,NA
+2_counties,Middlesex County,High,No burden,25686,819.5159763627081,NA,NA,0.948,0.007
+2_counties,Middlesex County,High,Cost-burdened,1250,196.10817907411254,NA,NA,0.046,0.007
+2_counties,Middlesex County,High,Severely cost-burdened,169,58.46917099363088,NA,NA,0.006,0.002
+2_counties,New Haven County,Very low,Total,47160,1222.5710443259034,NA,NA,NA,NA
+2_counties,New Haven County,Very low,No burden,7148,489.3504320623012,NA,NA,0.152,0.01
+2_counties,New Haven County,Very low,Cost-burdened,5314,390.77394101084326,NA,NA,0.113,0.008
+2_counties,New Haven County,Very low,Severely cost-burdened,34698,1056.330692583063,NA,NA,0.736,0.012
+2_counties,New Haven County,Low,Total,37512,1086.3995235003806,NA,NA,NA,NA
+2_counties,New Haven County,Low,No burden,7503,468.0137847761773,NA,NA,0.2,0.011
+2_counties,New Haven County,Low,Cost-burdened,14473,669.4662456299881,NA,NA,0.386,0.014
+2_counties,New Haven County,Low,Severely cost-burdened,15536,725.1120052269547,NA,NA,0.414,0.015
+2_counties,New Haven County,Mid-low,Total,52407,1330.3227802868053,NA,NA,NA,NA
+2_counties,New Haven County,Mid-low,No burden,22879,864.657724487055,NA,NA,0.437,0.012
+2_counties,New Haven County,Mid-low,Cost-burdened,22001,887.749720631584,NA,NA,0.42,0.013
+2_counties,New Haven County,Mid-low,Severely cost-burdened,7527,507.78966530379955,NA,NA,0.144,0.009
+2_counties,New Haven County,Mid-high,Total,53410,1280.7907276460392,NA,NA,NA,NA
+2_counties,New Haven County,Mid-high,No burden,36901,1046.2177423693304,NA,NA,0.691,0.01
+2_counties,New Haven County,Mid-high,Cost-burdened,14295,694.1297033514064,NA,NA,0.268,0.011
+2_counties,New Haven County,Mid-high,Severely cost-burdened,2214,286.68405791281276,NA,NA,0.041,0.005
+2_counties,New Haven County,High,Total,139367,1913.0801270135103,NA,NA,NA,NA
+2_counties,New Haven County,High,No burden,129285,1848.8602385999664,NA,NA,0.928,0.004
+2_counties,New Haven County,High,Cost-burdened,8922,489.3977308104029,NA,NA,0.064,0.003
+2_counties,New Haven County,High,Severely cost-burdened,1160,198.22083956854104,NA,NA,0.008,0.001
+2_counties,New London County,Very low,Total,14344,699.2419277524134,NA,NA,NA,NA
+2_counties,New London County,Very low,No burden,2164,298.10223662696995,NA,NA,0.151,0.019
+2_counties,New London County,Very low,Cost-burdened,2800,309.0215677053828,NA,NA,0.195,0.019
+2_counties,New London County,Very low,Severely cost-burdened,9380,553.2362774634021,NA,NA,0.654,0.022
+2_counties,New London County,Low,Total,10745,573.615454572927,NA,NA,NA,NA
+2_counties,New London County,Low,No burden,2752,286.89007724305435,NA,NA,0.256,0.023
+2_counties,New London County,Low,Cost-burdened,4411,368.68603658233036,NA,NA,0.411,0.026
+2_counties,New London County,Low,Severely cost-burdened,3582,334.46956076391155,NA,NA,0.333,0.026
+2_counties,New London County,Mid-low,Total,17668,735.2095971685566,NA,NA,NA,NA
+2_counties,New London County,Mid-low,No burden,9431,528.3175289936281,NA,NA,0.534,0.02
+2_counties,New London County,Mid-low,Cost-burdened,6562,461.21279004045334,NA,NA,0.371,0.021
+2_counties,New London County,Mid-low,Severely cost-burdened,1675,226.2918346615019,NA,NA,0.095,0.012
+2_counties,New London County,Mid-high,Total,20979,777.0604809273618,NA,NA,NA,NA
+2_counties,New London County,Mid-high,No burden,16452,705.3581257492962,NA,NA,0.784,0.017
+2_counties,New London County,Mid-high,Cost-burdened,4012,308.29110734511465,NA,NA,0.191,0.013
+2_counties,New London County,Mid-high,Severely cost-burdened,515,115.83364851698144,NA,NA,0.025,0.005
+2_counties,New London County,High,Total,43666,1013.0119901212736,NA,NA,NA,NA
+2_counties,New London County,High,No burden,41526,988.9865181015302,NA,NA,0.951,0.005
+2_counties,New London County,High,Cost-burdened,1839,202.89330013847686,NA,NA,0.042,0.005
+2_counties,New London County,High,Severely cost-burdened,301,97.2926052551597,NA,NA,0.007,0.002
+2_counties,Tolland County,Very low,Total,7722,539.5032027050245,NA,NA,NA,NA
+2_counties,Tolland County,Very low,No burden,898,187.33680209720546,NA,NA,0.116,0.023
+2_counties,Tolland County,Very low,Cost-burdened,1484,216.97345530911545,NA,NA,0.192,0.025
+2_counties,Tolland County,Very low,Severely cost-burdened,5340,457.4813128391614,NA,NA,0.692,0.034
+2_counties,Tolland County,Low,Total,6681,484.1531039822669,NA,NA,NA,NA
+2_counties,Tolland County,Low,No burden,2190,244.61588117056945,NA,NA,0.328,0.028
+2_counties,Tolland County,Low,Cost-burdened,2516,295.6409889779827,NA,NA,0.377,0.035
+2_counties,Tolland County,Low,Severely cost-burdened,1975,295.9442568191529,NA,NA,0.296,0.039
+2_counties,Tolland County,Mid-low,Total,8039,517.4684760639175,NA,NA,NA,NA
+2_counties,Tolland County,Mid-low,No burden,5178,436.93823444339625,NA,NA,0.644,0.035
+2_counties,Tolland County,Mid-low,Cost-burdened,2344,257.65700900917716,NA,NA,0.292,0.026
+2_counties,Tolland County,Mid-low,Severely cost-burdened,517,104.52449287051667,NA,NA,0.064,0.012
+2_counties,Tolland County,Mid-high,Total,10580,567.4093910345849,NA,NA,NA,NA
+2_counties,Tolland County,Mid-high,No burden,8691,517.5453179887788,NA,NA,0.821,0.021
+2_counties,Tolland County,Mid-high,Cost-burdened,1889,233.59204045796244,NA,NA,0.179,0.02
+2_counties,Tolland County,High,Total,22196,791.4999882833196,NA,NA,NA,NA
+2_counties,Tolland County,High,No burden,21652,782.8383149820868,NA,NA,0.975,0.006
+2_counties,Tolland County,High,Cost-burdened,544,118.19478437046754,NA,NA,0.025,0.005
+2_counties,Windham County,Very low,Total,5836,414.61080907893813,NA,NA,NA,NA
+2_counties,Windham County,Very low,No burden,1032,181.32673189643359,NA,NA,0.177,0.028
+2_counties,Windham County,Very low,Cost-burdened,1126,183.11340834190202,NA,NA,0.193,0.028
+2_counties,Windham County,Very low,Severely cost-burdened,3678,325.19214427014475,NA,NA,0.63,0.033
+2_counties,Windham County,Low,Total,4590,386.4346869797681,NA,NA,NA,NA
+2_counties,Windham County,Low,No burden,1534,209.36880733802658,NA,NA,0.334,0.036
+2_counties,Windham County,Low,Cost-burdened,2056,278.0777484039223,NA,NA,0.448,0.047
+2_counties,Windham County,Low,Severely cost-burdened,1000,168.40498957978218,NA,NA,0.218,0.032
+2_counties,Windham County,Mid-low,Total,6958,473.0999657545268,NA,NA,NA,NA
+2_counties,Windham County,Mid-low,No burden,3621,329.0240991489945,NA,NA,0.52,0.031
+2_counties,Windham County,Mid-low,Cost-burdened,2544,305.75427085961854,NA,NA,0.366,0.036
+2_counties,Windham County,Mid-low,Severely cost-burdened,793,149.93469630408373,NA,NA,0.114,0.02
+2_counties,Windham County,Mid-high,Total,9000,509.0703498126284,NA,NA,NA,NA
+2_counties,Windham County,Mid-high,No burden,6913,443.44901852764156,NA,NA,0.768,0.023
+2_counties,Windham County,Mid-high,Cost-burdened,1917,239.12709862774273,NA,NA,0.213,0.024
+2_counties,Windham County,Mid-high,Severely cost-burdened,170,75.77382168444035,NA,NA,0.019,0.008
+2_counties,Windham County,High,Total,18079,689.1626570661118,NA,NA,NA,NA
+2_counties,Windham County,High,No burden,17391,677.9384403741541,NA,NA,0.962,0.008
+2_counties,Windham County,High,Cost-burdened,682,125.16243516606453,NA,NA,0.038,0.007
+2_counties,Windham County,High,Severely cost-burdened,6,4.242610646376473,NA,NA,0,0

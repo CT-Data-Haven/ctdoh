@@ -1,0 +1,253 @@
+name,tenure,occupancy,cost_band,units
+Fairfield County,owner,occupied,high,80938
+Fairfield County,owner,occupied,mid_high,58876
+Fairfield County,owner,occupied,mid_low,43757
+Fairfield County,owner,occupied,low,31419
+Fairfield County,owner,occupied,very_low,11126
+Hartford County,owner,occupied,high,58470
+Hartford County,owner,occupied,mid_high,68359
+Hartford County,owner,occupied,mid_low,52064
+Hartford County,owner,occupied,low,37433
+Hartford County,owner,occupied,very_low,7036
+Litchfield County,owner,occupied,high,11340
+Litchfield County,owner,occupied,mid_high,16855
+Litchfield County,owner,occupied,mid_low,13255
+Litchfield County,owner,occupied,low,11792
+Litchfield County,owner,occupied,very_low,3714
+Middlesex County,owner,occupied,high,10834
+Middlesex County,owner,occupied,mid_high,14654
+Middlesex County,owner,occupied,mid_low,11099
+Middlesex County,owner,occupied,low,9403
+Middlesex County,owner,occupied,very_low,3086
+New Haven County,owner,occupied,high,70134
+New Haven County,owner,occupied,mid_high,55501
+New Haven County,owner,occupied,mid_low,46714
+New Haven County,owner,occupied,low,25943
+New Haven County,owner,occupied,very_low,4336
+New London County,owner,occupied,high,17027
+New London County,owner,occupied,mid_high,20585
+New London County,owner,occupied,mid_low,15220
+New London County,owner,occupied,low,14441
+New London County,owner,occupied,very_low,4057
+Tolland County,owner,occupied,high,5585
+Tolland County,owner,occupied,mid_high,12365
+Tolland County,owner,occupied,mid_low,9862
+Tolland County,owner,occupied,low,8656
+Tolland County,owner,occupied,very_low,3247
+Windham County,owner,occupied,high,6244
+Windham County,owner,occupied,mid_high,10257
+Windham County,owner,occupied,mid_low,6541
+Windham County,owner,occupied,low,5740
+Windham County,owner,occupied,very_low,2270
+Fairfield County,renter,occupied,high,9361
+Fairfield County,renter,occupied,mid_high,23419
+Fairfield County,renter,occupied,mid_low,43184
+Fairfield County,renter,occupied,low,20348
+Fairfield County,renter,occupied,very_low,18064
+Hartford County,renter,occupied,high,3040
+Hartford County,renter,occupied,mid_high,20214
+Hartford County,renter,occupied,mid_low,58079
+Hartford County,renter,occupied,low,24259
+Hartford County,renter,occupied,very_low,20109
+Litchfield County,renter,occupied,high,284
+Litchfield County,renter,occupied,mid_high,1991
+Litchfield County,renter,occupied,mid_low,7225
+Litchfield County,renter,occupied,low,4893
+Litchfield County,renter,occupied,very_low,2638
+Middlesex County,renter,occupied,high,386
+Middlesex County,renter,occupied,mid_high,2058
+Middlesex County,renter,occupied,mid_low,8179
+Middlesex County,renter,occupied,low,4007
+Middlesex County,renter,occupied,very_low,3187
+New Haven County,renter,occupied,high,7482
+New Haven County,renter,occupied,mid_high,31692
+New Haven County,renter,occupied,mid_low,54300
+New Haven County,renter,occupied,low,15735
+New Haven County,renter,occupied,very_low,18019
+New London County,renter,occupied,high,1160
+New London County,renter,occupied,mid_high,6869
+New London County,renter,occupied,mid_low,16585
+New London County,renter,occupied,low,5855
+New London County,renter,occupied,very_low,5603
+Tolland County,renter,occupied,high,220
+Tolland County,renter,occupied,mid_high,2062
+Tolland County,renter,occupied,mid_low,6053
+Tolland County,renter,occupied,low,5185
+Tolland County,renter,occupied,very_low,1983
+Windham County,renter,occupied,high,158
+Windham County,renter,occupied,mid_high,1775
+Windham County,renter,occupied,mid_low,5951
+Windham County,renter,occupied,low,3086
+Windham County,renter,occupied,very_low,2441
+Fairfield County,renter,vacant-on market,high,925
+Fairfield County,renter,vacant-on market,mid_high,1601
+Fairfield County,renter,vacant-on market,mid_low,2378
+Fairfield County,renter,vacant-on market,low,1026
+Fairfield County,renter,vacant-on market,very_low,630
+Hartford County,renter,vacant-on market,high,208
+Hartford County,renter,vacant-on market,mid_high,2054
+Hartford County,renter,vacant-on market,mid_low,4075
+Hartford County,renter,vacant-on market,low,1397
+Hartford County,renter,vacant-on market,very_low,800
+Litchfield County,renter,vacant-on market,high,115
+Litchfield County,renter,vacant-on market,mid_high,201
+Litchfield County,renter,vacant-on market,mid_low,434
+Litchfield County,renter,vacant-on market,low,270
+Middlesex County,renter,vacant-on market,mid_high,219
+Middlesex County,renter,vacant-on market,mid_low,844
+Middlesex County,renter,vacant-on market,low,306
+Middlesex County,renter,vacant-on market,very_low,86
+New Haven County,renter,vacant-on market,high,702
+New Haven County,renter,vacant-on market,mid_high,3361
+New Haven County,renter,vacant-on market,mid_low,4877
+New Haven County,renter,vacant-on market,low,914
+New Haven County,renter,vacant-on market,very_low,640
+New London County,renter,vacant-on market,high,139
+New London County,renter,vacant-on market,mid_high,405
+New London County,renter,vacant-on market,mid_low,1126
+New London County,renter,vacant-on market,low,181
+New London County,renter,vacant-on market,very_low,75
+Tolland County,renter,vacant-on market,mid_high,205
+Tolland County,renter,vacant-on market,mid_low,337
+Tolland County,renter,vacant-on market,low,135
+Tolland County,renter,vacant-on market,very_low,159
+Windham County,renter,vacant-on market,high,69
+Windham County,renter,vacant-on market,mid_high,135
+Windham County,renter,vacant-on market,mid_low,365
+Windham County,renter,vacant-on market,low,36
+Windham County,renter,vacant-on market,very_low,130
+Fairfield County,owner,vacant-on market,high,2722
+Fairfield County,owner,vacant-on market,mid_high,830
+Fairfield County,owner,vacant-on market,mid_low,522
+Fairfield County,owner,vacant-on market,low,217
+Fairfield County,owner,vacant-on market,very_low,295
+Hartford County,owner,vacant-on market,high,1826
+Hartford County,owner,vacant-on market,mid_high,1008
+Hartford County,owner,vacant-on market,mid_low,674
+Hartford County,owner,vacant-on market,low,396
+Hartford County,owner,vacant-on market,very_low,16
+Litchfield County,owner,vacant-on market,high,465
+Litchfield County,owner,vacant-on market,mid_high,181
+Litchfield County,owner,vacant-on market,mid_low,341
+Litchfield County,owner,vacant-on market,low,89
+Litchfield County,owner,vacant-on market,very_low,19
+Middlesex County,owner,vacant-on market,high,659
+Middlesex County,owner,vacant-on market,mid_high,358
+Middlesex County,owner,vacant-on market,mid_low,157
+New Haven County,owner,vacant-on market,high,1390
+New Haven County,owner,vacant-on market,mid_high,1086
+New Haven County,owner,vacant-on market,mid_low,775
+New Haven County,owner,vacant-on market,low,140
+New Haven County,owner,vacant-on market,very_low,237
+New London County,owner,vacant-on market,high,671
+New London County,owner,vacant-on market,mid_high,470
+New London County,owner,vacant-on market,mid_low,517
+New London County,owner,vacant-on market,low,165
+New London County,owner,vacant-on market,very_low,30
+Tolland County,owner,vacant-on market,high,210
+Tolland County,owner,vacant-on market,mid_high,154
+Tolland County,owner,vacant-on market,mid_low,95
+Tolland County,owner,vacant-on market,low,82
+Tolland County,owner,vacant-on market,very_low,49
+Windham County,owner,vacant-on market,high,174
+Windham County,owner,vacant-on market,mid_high,170
+Windham County,owner,vacant-on market,mid_low,172
+Windham County,owner,vacant-on market,very_low,47
+Fairfield County,owner,vacant-off market,high,1067
+Fairfield County,owner,vacant-off market,mid_high,242
+Fairfield County,owner,vacant-off market,mid_low,198
+Fairfield County,owner,vacant-off market,low,192
+Fairfield County,owner,vacant-off market,very_low,136
+Hartford County,owner,vacant-off market,high,581
+Hartford County,owner,vacant-off market,mid_high,225
+Hartford County,owner,vacant-off market,mid_low,284
+Hartford County,owner,vacant-off market,low,107
+Hartford County,owner,vacant-off market,very_low,44
+Litchfield County,owner,vacant-off market,high,104
+Litchfield County,owner,vacant-off market,mid_high,76
+Litchfield County,owner,vacant-off market,mid_low,83
+Litchfield County,owner,vacant-off market,low,38
+Litchfield County,owner,vacant-off market,very_low,20
+Middlesex County,owner,vacant-off market,high,62
+Middlesex County,owner,vacant-off market,mid_high,38
+Middlesex County,owner,vacant-off market,mid_low,88
+New Haven County,owner,vacant-off market,high,751
+New Haven County,owner,vacant-off market,mid_high,367
+New Haven County,owner,vacant-off market,mid_low,289
+New Haven County,owner,vacant-off market,low,70
+New Haven County,owner,vacant-off market,very_low,243
+New London County,owner,vacant-off market,high,124
+New London County,owner,vacant-off market,mid_high,110
+New London County,owner,vacant-off market,mid_low,148
+New London County,owner,vacant-off market,very_low,153
+Tolland County,owner,vacant-off market,high,69
+Tolland County,owner,vacant-off market,mid_high,42
+Tolland County,owner,vacant-off market,mid_low,31
+Tolland County,owner,vacant-off market,low,32
+Windham County,owner,vacant-off market,high,33
+Windham County,owner,vacant-off market,mid_low,44
+Windham County,owner,vacant-off market,very_low,39
+Fairfield County,renter,vacant-off market,high,223
+Fairfield County,renter,vacant-off market,mid_high,394
+Fairfield County,renter,vacant-off market,mid_low,244
+Fairfield County,renter,vacant-off market,low,64
+Fairfield County,renter,vacant-off market,very_low,35
+Hartford County,renter,vacant-off market,high,268
+Hartford County,renter,vacant-off market,mid_high,322
+Hartford County,renter,vacant-off market,mid_low,780
+Hartford County,renter,vacant-off market,low,443
+Hartford County,renter,vacant-off market,very_low,219
+Litchfield County,renter,vacant-off market,mid_low,94
+Litchfield County,renter,vacant-off market,low,13
+Middlesex County,renter,vacant-off market,mid_high,36
+Middlesex County,renter,vacant-off market,mid_low,104
+Middlesex County,renter,vacant-off market,very_low,30
+New Haven County,renter,vacant-off market,high,208
+New Haven County,renter,vacant-off market,mid_high,456
+New Haven County,renter,vacant-off market,mid_low,1100
+New Haven County,renter,vacant-off market,low,205
+New Haven County,renter,vacant-off market,very_low,75
+New London County,renter,vacant-off market,high,49
+New London County,renter,vacant-off market,mid_high,297
+New London County,renter,vacant-off market,mid_low,188
+New London County,renter,vacant-off market,low,113
+New London County,renter,vacant-off market,very_low,83
+Tolland County,renter,vacant-off market,high,35
+Tolland County,renter,vacant-off market,mid_low,80
+Tolland County,renter,vacant-off market,low,122
+Tolland County,renter,vacant-off market,very_low,46
+Windham County,renter,vacant-off market,high,36
+Windham County,renter,vacant-off market,mid_high,73
+Windham County,renter,vacant-off market,mid_low,171
+Windham County,renter,vacant-off market,low,24
+Windham County,renter,vacant-off market,very_low,57
+Connecticut,owner,occupied,very_low,38872
+Connecticut,owner,occupied,low,144827
+Connecticut,owner,occupied,mid_low,198512
+Connecticut,owner,occupied,mid_high,257452
+Connecticut,owner,occupied,high,260572
+Connecticut,renter,occupied,very_low,72044
+Connecticut,renter,occupied,low,83368
+Connecticut,renter,occupied,mid_low,199556
+Connecticut,renter,occupied,mid_high,90080
+Connecticut,renter,occupied,high,22091
+Connecticut,owner,vacant-off market,very_low,635
+Connecticut,owner,vacant-off market,low,439
+Connecticut,owner,vacant-off market,mid_low,1165
+Connecticut,owner,vacant-off market,mid_high,1100
+Connecticut,owner,vacant-off market,high,2791
+Connecticut,renter,vacant-off market,very_low,545
+Connecticut,renter,vacant-off market,low,984
+Connecticut,renter,vacant-off market,mid_low,2761
+Connecticut,renter,vacant-off market,mid_high,1578
+Connecticut,renter,vacant-off market,high,819
+Connecticut,owner,vacant-on market,very_low,693
+Connecticut,owner,vacant-on market,low,1089
+Connecticut,owner,vacant-on market,mid_low,3253
+Connecticut,owner,vacant-on market,mid_high,4257
+Connecticut,owner,vacant-on market,high,8117
+Connecticut,renter,vacant-on market,very_low,2520
+Connecticut,renter,vacant-on market,low,4265
+Connecticut,renter,vacant-on market,mid_low,14436
+Connecticut,renter,vacant-on market,mid_high,8181
+Connecticut,renter,vacant-on market,high,2158

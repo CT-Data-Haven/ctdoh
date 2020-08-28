@@ -1,0 +1,55 @@
+level,name,inc_band,value,value_se,statefip.x,statefip.y,share,sharemoe
+1_state,Connecticut,Total,1367374,3501.581384343159,NA,NA,NA,NA
+1_state,Connecticut,Very low,201377,2402.1673685602163,NA,9,0.147,0.002
+1_state,Connecticut,Low,151345,2070.0317355472757,NA,9,0.111,0.001
+1_state,Connecticut,Mid-low,214490,2454.299585179447,NA,9,0.157,0.002
+1_state,Connecticut,Mid-high,231836,2421.325955048501,NA,9,0.17,0.002
+1_state,Connecticut,High,568326,3148.2466306403753,NA,9,0.416,0.002
+2_counties,Fairfield County,Total,340492,2753.3262460299766,NA,NA,NA,NA
+2_counties,Fairfield County,Very low,55251,1313.2053242231782,NA,NA,0.162,0.004
+2_counties,Fairfield County,Low,38220,1072.740515556118,NA,NA,0.112,0.003
+2_counties,Fairfield County,Mid-low,51287,1207.1142877813616,NA,NA,0.151,0.003
+2_counties,Fairfield County,Mid-high,53533,1201.1606113853227,NA,NA,0.157,0.003
+2_counties,Fairfield County,High,142201,1737.6117114558806,NA,NA,0.418,0.004
+2_counties,Hartford County,Total,349063,2797.7675633401245,NA,NA,NA,NA
+2_counties,Hartford County,Very low,52900,1241.9264420161937,NA,NA,0.152,0.003
+2_counties,Hartford County,Low,37375,1017.2915766551022,NA,NA,0.107,0.003
+2_counties,Hartford County,Mid-low,55552,1281.1431414776725,NA,NA,0.159,0.003
+2_counties,Hartford County,Mid-high,57614,1242.1472890960902,NA,NA,0.165,0.003
+2_counties,Hartford County,High,145622,1827.8524007120357,NA,NA,0.417,0.004
+2_counties,Litchfield County,Total,73987,1323.1027431059076,NA,NA,NA,NA
+2_counties,Litchfield County,Very low,8698,468.49946380909284,NA,NA,0.118,0.006
+2_counties,Litchfield County,Low,8655,480.89653874258016,NA,NA,0.117,0.006
+2_counties,Litchfield County,Mid-low,11899,549.783834329364,NA,NA,0.161,0.007
+2_counties,Litchfield County,Mid-high,14645,594.5172743794421,NA,NA,0.198,0.007
+2_counties,Litchfield County,High,30090,837.6505026896976,NA,NA,0.407,0.009
+2_counties,Middlesex County,Total,66893,1360.525240295101,NA,NA,NA,NA
+2_counties,Middlesex County,Very low,9466,539.2450375883888,NA,NA,0.142,0.008
+2_counties,Middlesex County,Low,7567,484.3732706132583,NA,NA,0.113,0.007
+2_counties,Middlesex County,Mid-low,10680,585.6616844076148,NA,NA,0.16,0.008
+2_counties,Middlesex County,Mid-high,12075,563.3690859185457,NA,NA,0.181,0.008
+2_counties,Middlesex County,High,27105,844.0646894718293,NA,NA,0.405,0.01
+2_counties,New Haven County,Total,329856,2934.2723254260563,NA,NA,NA,NA
+2_counties,New Haven County,Very low,47160,1222.5710443259034,NA,NA,0.143,0.003
+2_counties,New Haven County,Low,37512,1086.3995235003806,NA,NA,0.114,0.003
+2_counties,New Haven County,Mid-low,52407,1330.3227802868053,NA,NA,0.159,0.004
+2_counties,New Haven County,Mid-high,53410,1280.7907276460392,NA,NA,0.162,0.004
+2_counties,New Haven County,High,139367,1913.0801270135103,NA,NA,0.423,0.004
+2_counties,New London County,Total,107402,1693.3321205437367,NA,NA,NA,NA
+2_counties,New London County,Very low,14344,699.2419277524134,NA,NA,0.134,0.006
+2_counties,New London County,Low,10745,573.615454572927,NA,NA,0.1,0.005
+2_counties,New London County,Mid-low,17668,735.2095971685566,NA,NA,0.165,0.006
+2_counties,New London County,Mid-high,20979,777.0604809273618,NA,NA,0.195,0.007
+2_counties,New London County,High,43666,1013.0119901212736,NA,NA,0.407,0.007
+2_counties,Tolland County,Total,55218,1307.4565515433771,NA,NA,NA,NA
+2_counties,Tolland County,Very low,7722,539.5032027050245,NA,NA,0.14,0.009
+2_counties,Tolland County,Low,6681,484.1531039822669,NA,NA,0.121,0.008
+2_counties,Tolland County,Mid-low,8039,517.4684760639175,NA,NA,0.146,0.009
+2_counties,Tolland County,Mid-high,10580,567.4093910345849,NA,NA,0.192,0.009
+2_counties,Tolland County,High,22196,791.4999882833196,NA,NA,0.402,0.011
+2_counties,Windham County,Total,44463,1121.7847038645325,NA,NA,NA,NA
+2_counties,Windham County,Very low,5836,414.61080907893813,NA,NA,0.131,0.009
+2_counties,Windham County,Low,4590,386.4346869797681,NA,NA,0.103,0.008
+2_counties,Windham County,Mid-low,6958,473.0999657545268,NA,NA,0.156,0.01
+2_counties,Windham County,Mid-high,9000,509.0703498126284,NA,NA,0.202,0.01
+2_counties,Windham County,High,18079,689.1626570661118,NA,NA,0.407,0.012

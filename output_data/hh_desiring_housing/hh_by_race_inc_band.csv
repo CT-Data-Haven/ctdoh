@@ -1,0 +1,217 @@
+level,name,race2,inc_band,value,value_se,statefip.x,statefip.y,share,sharemoe
+1_state,Connecticut,White,Total,996437,3345.7132395150697,NA,NA,NA,NA
+1_state,Connecticut,White,Very low,113213,1720.3190220021168,9,9,0.114,0.002
+1_state,Connecticut,White,Low,97152,1558.3198389346005,9,9,0.097,0.002
+1_state,Connecticut,White,Mid-low,144503,1910.2892872362843,9,9,0.145,0.002
+1_state,Connecticut,White,Mid-high,171246,1982.2004831893078,9,9,0.172,0.002
+1_state,Connecticut,White,High,470323,2851.2261934477738,9,9,0.472,0.002
+1_state,Connecticut,Black,Total,125094,2102.2513024331615,NA,NA,NA,NA
+1_state,Connecticut,Black,Very low,32076,1078.2905642409269,9,9,0.256,0.007
+1_state,Connecticut,Black,Low,19632,871.5152613908235,9,9,0.157,0.006
+1_state,Connecticut,Black,Mid-low,24342,958.0438826962187,9,9,0.195,0.007
+1_state,Connecticut,Black,Mid-high,20525,866.8678772823285,9,9,0.164,0.006
+1_state,Connecticut,Black,High,28519,1001.800139650478,9,9,0.228,0.007
+1_state,Connecticut,Latino,Total,170817,2463.7975053759437,NA,NA,NA,NA
+1_state,Connecticut,Latino,Very low,45051,1270.845629452715,9,9,0.264,0.006
+1_state,Connecticut,Latino,Low,27731,1008.8277407513018,9,9,0.162,0.005
+1_state,Connecticut,Latino,Mid-low,35113,1199.7349059262729,9,9,0.206,0.006
+1_state,Connecticut,Latino,Mid-high,26469,1029.5040708992767,9,9,0.155,0.006
+1_state,Connecticut,Latino,High,36453,1125.009936578051,9,9,0.213,0.006
+1_state,Connecticut,Other race,Total,75026,1509.958569144135,NA,NA,NA,NA
+1_state,Connecticut,Other race,Very low,11037,617.1590998628121,9,9,0.147,0.008
+1_state,Connecticut,Other race,Low,6830,503.087452189817,9,9,0.091,0.006
+1_state,Connecticut,Other race,Mid-low,10532,587.8333961931586,9,9,0.14,0.007
+1_state,Connecticut,Other race,Mid-high,13596,670.607688981918,9,9,0.181,0.008
+1_state,Connecticut,Other race,High,33031,953.1093550772243,9,9,0.44,0.009
+2_counties,Fairfield County,White,Total,233262,2194.6126082974124,NA,NA,NA,NA
+2_counties,Fairfield County,White,Very low,28127,891.7651146196782,NA,NA,0.121,0.004
+2_counties,Fairfield County,White,Low,20968,727.4266064253977,NA,NA,0.09,0.003
+2_counties,Fairfield County,White,Mid-low,31592,884.70760044271,NA,NA,0.135,0.004
+2_counties,Fairfield County,White,Mid-high,36056,930.5677512699103,NA,NA,0.155,0.004
+2_counties,Fairfield County,White,High,116519,1539.9876440518055,NA,NA,0.5,0.005
+2_counties,Fairfield County,Black,Total,33220,1085.8356034568053,NA,NA,NA,NA
+2_counties,Fairfield County,Black,Very low,10306,615.0278489662373,NA,NA,0.31,0.015
+2_counties,Fairfield County,Black,Low,5341,449.054442313548,NA,NA,0.161,0.012
+2_counties,Fairfield County,Black,Mid-low,6380,484.34378605834576,NA,NA,0.192,0.013
+2_counties,Fairfield County,Black,Mid-high,5187,412.22858047933823,NA,NA,0.156,0.011
+2_counties,Fairfield County,Black,High,6006,454.81876585930763,NA,NA,0.181,0.012
+2_counties,Fairfield County,Latino,Total,52636,1340.2370803971157,NA,NA,NA,NA
+2_counties,Fairfield County,Latino,Very low,13793,694.6853460084393,NA,NA,0.262,0.011
+2_counties,Fairfield County,Latino,Low,9786,598.2365078964192,NA,NA,0.186,0.01
+2_counties,Fairfield County,Latino,Mid-low,10366,605.0615824174847,NA,NA,0.197,0.01
+2_counties,Fairfield County,Latino,Mid-high,8565,556.9367517004463,NA,NA,0.163,0.01
+2_counties,Fairfield County,Latino,High,10126,557.3637759645039,NA,NA,0.192,0.009
+2_counties,Fairfield County,Other race,Total,21374,774.0342482103483,NA,NA,NA,NA
+2_counties,Fairfield County,Other race,Very low,3025,310.0238348999893,NA,NA,0.142,0.014
+2_counties,Fairfield County,Other race,Low,2125,273.35345606985,NA,NA,0.099,0.012
+2_counties,Fairfield County,Other race,Mid-low,2949,307.60882068153677,NA,NA,0.138,0.013
+2_counties,Fairfield County,Other race,Mid-high,3725,342.4560799471493,NA,NA,0.174,0.015
+2_counties,Fairfield County,Other race,High,9550,470.1676328745818,NA,NA,0.447,0.015
+2_counties,Hartford County,White,Total,236013,2216.581882921768,NA,NA,NA,NA
+2_counties,Hartford County,White,Very low,25213,800.0099497999445,NA,NA,0.107,0.003
+2_counties,Hartford County,White,Low,22312,745.2557362110318,NA,NA,0.095,0.003
+2_counties,Hartford County,White,Mid-low,33652,921.0674130016564,NA,NA,0.143,0.004
+2_counties,Hartford County,White,Mid-high,39510,972.2928301356324,NA,NA,0.167,0.004
+2_counties,Hartford County,White,High,115326,1571.7401744856825,NA,NA,0.489,0.005
+2_counties,Hartford County,Black,Total,40863,1174.3247188142486,NA,NA,NA,NA
+2_counties,Hartford County,Black,Very low,9048,545.610574484331,NA,NA,0.221,0.012
+2_counties,Hartford County,Black,Low,5932,451.4361266545476,NA,NA,0.145,0.01
+2_counties,Hartford County,Black,Mid-low,8627,557.1799124690892,NA,NA,0.211,0.012
+2_counties,Hartford County,Black,Mid-high,7280,504.0090096513251,NA,NA,0.178,0.011
+2_counties,Hartford County,Black,High,9976,576.0671652803079,NA,NA,0.244,0.012
+2_counties,Hartford County,Latino,Total,50591,1323.1066404373278,NA,NA,NA,NA
+2_counties,Hartford County,Latino,Very low,15758,731.363909514973,NA,NA,0.311,0.012
+2_counties,Hartford County,Latino,Low,7571,488.8319437684734,NA,NA,0.15,0.009
+2_counties,Hartford County,Latino,Mid-low,10509,645.1782359393532,NA,NA,0.208,0.012
+2_counties,Hartford County,Latino,Mid-high,6561,487.4307907189247,NA,NA,0.13,0.009
+2_counties,Hartford County,Latino,High,10192,592.6128271701365,NA,NA,0.201,0.01
+2_counties,Hartford County,Other race,Total,21596,809.1913977036085,NA,NA,NA,NA
+2_counties,Hartford County,Other race,Very low,2881,309.21645271274554,NA,NA,0.133,0.013
+2_counties,Hartford County,Other race,Low,1560,219.34497686747656,NA,NA,0.072,0.01
+2_counties,Hartford County,Other race,Mid-low,2764,301.9885841836585,NA,NA,0.128,0.013
+2_counties,Hartford County,Other race,Mid-high,4263,359.50727149156677,NA,NA,0.197,0.015
+2_counties,Hartford County,Other race,High,10128,543.3742605759256,NA,NA,0.469,0.018
+2_counties,Litchfield County,White,Total,68255,1254.3533563601418,NA,NA,NA,NA
+2_counties,Litchfield County,White,Very low,7800,431.82065662494824,NA,NA,0.114,0.006
+2_counties,Litchfield County,White,Low,7946,458.7819355081633,NA,NA,0.116,0.006
+2_counties,Litchfield County,White,Mid-low,10882,520.170072187144,NA,NA,0.159,0.007
+2_counties,Litchfield County,White,Mid-high,13400,563.2670116157783,NA,NA,0.196,0.007
+2_counties,Litchfield County,White,High,28227,798.3238564870937,NA,NA,0.414,0.009
+2_counties,Litchfield County,Black,Total,903,154.04476282643154,NA,NA,NA,NA
+2_counties,Litchfield County,Black,Very low,134,49.95779284910378,NA,NA,0.148,0.049
+2_counties,Litchfield County,Black,Low,46,23.28041473252465,NA,NA,0.051,0.024
+2_counties,Litchfield County,Black,Mid-low,255,102.96712734582898,NA,NA,0.282,0.103
+2_counties,Litchfield County,Black,Mid-high,204,63.46233296336907,NA,NA,0.226,0.059
+2_counties,Litchfield County,Black,High,264,77.91725740569947,NA,NA,0.292,0.07
+2_counties,Litchfield County,Latino,Total,3168,340.1874702134716,NA,NA,NA,NA
+2_counties,Litchfield County,Latino,Very low,544,155.6025452632025,NA,NA,0.172,0.046
+2_counties,Litchfield County,Latino,Low,434,121.57936500620963,NA,NA,0.137,0.035
+2_counties,Litchfield County,Latino,Mid-low,522,121.05514796722174,NA,NA,0.165,0.034
+2_counties,Litchfield County,Latino,Mid-high,587,139.97999143869217,NA,NA,0.185,0.039
+2_counties,Litchfield County,Latino,High,1081,206.38569496848322,NA,NA,0.341,0.054
+2_counties,Litchfield County,Other race,Total,1661,221.5730712126348,NA,NA,NA,NA
+2_counties,Litchfield County,Other race,Very low,220,80.7428444191543,NA,NA,0.132,0.045
+2_counties,Litchfield County,Other race,Low,229,74.96890667513401,NA,NA,0.138,0.041
+2_counties,Litchfield County,Other race,Mid-low,240,82.16617264019588,NA,NA,0.144,0.046
+2_counties,Litchfield County,Other race,Mid-high,454,114.215874144741,NA,NA,0.273,0.058
+2_counties,Litchfield County,Other race,High,518,131.1047048928664,NA,NA,0.312,0.067
+2_counties,Middlesex County,White,Total,57714,1222.362417707158,NA,NA,NA,NA
+2_counties,Middlesex County,White,Very low,7319,441.73429230995856,NA,NA,0.127,0.007
+2_counties,Middlesex County,White,Low,6318,411.4475994204453,NA,NA,0.109,0.007
+2_counties,Middlesex County,White,Mid-low,9004,523.7516739448096,NA,NA,0.156,0.008
+2_counties,Middlesex County,White,Mid-high,10766,520.9649475852447,NA,NA,0.187,0.008
+2_counties,Middlesex County,White,High,24307,786.5881752953198,NA,NA,0.421,0.01
+2_counties,Middlesex County,Black,Total,3341,381.49572848386384,NA,NA,NA,NA
+2_counties,Middlesex County,Black,Very low,1073,212.9256629554746,NA,NA,0.321,0.052
+2_counties,Middlesex County,Black,Low,461,155.74445083529207,NA,NA,0.138,0.044
+2_counties,Middlesex County,Black,Mid-low,706,178.5928141706553,NA,NA,0.211,0.048
+2_counties,Middlesex County,Black,Mid-high,475,144.65856780417315,NA,NA,0.142,0.04
+2_counties,Middlesex County,Black,High,626,152.46894702232746,NA,NA,0.187,0.04
+2_counties,Middlesex County,Latino,Total,3097,336.39081078736893,NA,NA,NA,NA
+2_counties,Middlesex County,Latino,Very low,600,171.9166092644796,NA,NA,0.194,0.051
+2_counties,Middlesex County,Latino,Low,516,136.92514386436687,NA,NA,0.167,0.04
+2_counties,Middlesex County,Latino,Mid-low,383,124.73629406646693,NA,NA,0.124,0.038
+2_counties,Middlesex County,Latino,Mid-high,519,122.89588859472008,NA,NA,0.168,0.035
+2_counties,Middlesex County,Latino,High,1079,185.19448899404514,NA,NA,0.348,0.046
+2_counties,Middlesex County,Other race,Total,2741,337.5769842677377,NA,NA,NA,NA
+2_counties,Middlesex County,Other race,Very low,474,145.77077639983764,NA,NA,0.173,0.049
+2_counties,Middlesex County,Other race,Low,272,150.20410046929646,NA,NA,0.099,0.053
+2_counties,Middlesex County,Other race,Mid-low,587,147.24954183957522,NA,NA,0.214,0.047
+2_counties,Middlesex County,Other race,Mid-high,315,101.81228636758472,NA,NA,0.115,0.034
+2_counties,Middlesex County,Other race,High,1093,195.39350836578032,NA,NA,0.399,0.052
+2_counties,New Haven County,White,Total,226283,2321.114938393454,NA,NA,NA,NA
+2_counties,New Haven County,White,Very low,23853,809.7450884527183,NA,NA,0.105,0.003
+2_counties,New Haven County,White,Low,22250,770.4568632789264,NA,NA,0.098,0.003
+2_counties,New Haven County,White,Mid-low,32055,950.7759717307772,NA,NA,0.142,0.004
+2_counties,New Haven County,White,Mid-high,37013,988.6924071667623,NA,NA,0.164,0.004
+2_counties,New Haven County,White,High,111112,1660.7401682182795,NA,NA,0.491,0.005
+2_counties,New Haven County,Black,Total,39815,1229.6779082572245,NA,NA,NA,NA
+2_counties,New Haven County,Black,Very low,9559,585.3835407529436,NA,NA,0.24,0.013
+2_counties,New Haven County,Black,Low,6709,518.8038270497706,NA,NA,0.169,0.012
+2_counties,New Haven County,Black,Mid-low,7388,538.7125031314399,NA,NA,0.186,0.012
+2_counties,New Haven County,Black,Mid-high,6505,525.35671814624,NA,NA,0.163,0.012
+2_counties,New Haven County,Black,High,9654,593.2041579240656,NA,NA,0.242,0.013
+2_counties,New Haven County,Latino,Total,46620,1383.6860336394718,NA,NA,NA,NA
+2_counties,New Haven County,Latino,Very low,10976,645.6948817194959,NA,NA,0.235,0.012
+2_counties,New Haven County,Latino,Low,7063,523.7694577263002,NA,NA,0.152,0.01
+2_counties,New Haven County,Latino,Mid-low,10576,722.509133892471,NA,NA,0.227,0.014
+2_counties,New Haven County,Latino,Mid-high,7348,566.6603441402901,NA,NA,0.158,0.011
+2_counties,New Haven County,Latino,High,10657,636.094671191148,NA,NA,0.229,0.012
+2_counties,New Haven County,Other race,Total,17138,744.3134922916331,NA,NA,NA,NA
+2_counties,New Haven County,Other race,Very low,2772,315.7951845706749,NA,NA,0.162,0.017
+2_counties,New Haven County,Other race,Low,1490,233.90026869050348,NA,NA,0.087,0.013
+2_counties,New Haven County,Other race,Mid-low,2388,274.6967679018721,NA,NA,0.139,0.015
+2_counties,New Haven County,Other race,Mid-high,2544,292.14646828702746,NA,NA,0.148,0.016
+2_counties,New Haven County,Other race,High,7944,491.641898797473,NA,NA,0.464,0.02
+2_counties,New London County,White,Total,87282,1438.1432353934947,NA,NA,NA,NA
+2_counties,New London County,White,Very low,10166,538.1101985600611,NA,NA,0.116,0.006
+2_counties,New London County,White,Low,8031,445.8839172972151,NA,NA,0.092,0.005
+2_counties,New London County,White,Mid-low,14263,634.5942530855014,NA,NA,0.163,0.007
+2_counties,New London County,White,Mid-high,17182,661.1350353302165,NA,NA,0.197,0.007
+2_counties,New London County,White,High,37640,904.6836900122,NA,NA,0.431,0.008
+2_counties,New London County,Black,Total,4750,459.34897221013927,NA,NA,NA,NA
+2_counties,New London County,Black,Very low,1374,276.2975690596111,NA,NA,0.289,0.051
+2_counties,New London County,Black,Low,595,155.36514552190462,NA,NA,0.125,0.03
+2_counties,New London County,Black,Mid-low,614,154.32756914419994,NA,NA,0.129,0.03
+2_counties,New London County,Black,Mid-high,714,163.71670742984531,NA,NA,0.15,0.031
+2_counties,New London County,Black,High,1453,245.25079964458368,NA,NA,0.306,0.042
+2_counties,New London County,Latino,Total,8720,635.6751805184217,NA,NA,NA,NA
+2_counties,New London County,Latino,Very low,1982,297.6165737195536,NA,NA,0.227,0.03
+2_counties,New London County,Latino,Low,1539,291.07500569269087,NA,NA,0.176,0.031
+2_counties,New London County,Latino,Mid-low,1725,270.52153005413675,NA,NA,0.198,0.027
+2_counties,New London County,Latino,Mid-high,1512,280.8749594978491,NA,NA,0.173,0.03
+2_counties,New London County,Latino,High,1962,282.07909250878805,NA,NA,0.225,0.028
+2_counties,New London County,Other race,Total,6650,487.320350383648,NA,NA,NA,NA
+2_counties,New London County,Other race,Very low,822,189.25892002502658,NA,NA,0.124,0.027
+2_counties,New London County,Other race,Low,580,148.45049101586113,NA,NA,0.087,0.021
+2_counties,New London County,Other race,Mid-low,1066,205.6708705048538,NA,NA,0.16,0.029
+2_counties,New London County,Other race,Mid-high,1571,251.01183653448973,NA,NA,0.236,0.034
+2_counties,New London County,Other race,High,2611,273.46209654552507,NA,NA,0.393,0.029
+2_counties,Tolland County,White,Total,48703,1178.8659002409113,NA,NA,NA,NA
+2_counties,Tolland County,White,Very low,6257,475.35648966701814,NA,NA,0.128,0.009
+2_counties,Tolland County,White,Low,5681,423.0939648697566,NA,NA,0.117,0.008
+2_counties,Tolland County,White,Mid-low,7240,480.9480064613395,NA,NA,0.149,0.009
+2_counties,Tolland County,White,Mid-high,9188,487.6001398351366,NA,NA,0.189,0.009
+2_counties,Tolland County,White,High,20337,735.1678142922534,NA,NA,0.418,0.011
+2_counties,Tolland County,Black,Total,1657,328.15186045176335,NA,NA,NA,NA
+2_counties,Tolland County,Black,Very low,490,169.3960043019418,NA,NA,0.296,0.084
+2_counties,Tolland County,Black,Low,423,177.56945875170834,NA,NA,0.255,0.094
+2_counties,Tolland County,Black,Mid-low,169,120.61841307150368,NA,NA,0.102,0.07
+2_counties,Tolland County,Black,Mid-high,122,56.9722317520813,NA,NA,0.074,0.031
+2_counties,Tolland County,Black,High,453,172.3151603723525,NA,NA,0.273,0.089
+2_counties,Tolland County,Latino,Total,2218,359.608350058492,NA,NA,NA,NA
+2_counties,Tolland County,Latino,Very low,357,128.99391774409116,NA,NA,0.161,0.052
+2_counties,Tolland County,Latino,Low,271,111.49051986251092,NA,NA,0.122,0.046
+2_counties,Tolland County,Latino,Mid-low,322,118.62854212259862,NA,NA,0.145,0.048
+2_counties,Tolland County,Latino,Mid-high,645,224.20486274268728,NA,NA,0.291,0.089
+2_counties,Tolland County,Latino,High,623,189.63652846805306,NA,NA,0.281,0.072
+2_counties,Tolland County,Other race,Total,2640,303.47422791704554,NA,NA,NA,NA
+2_counties,Tolland County,Other race,Very low,618,141.57992581863098,NA,NA,0.234,0.046
+2_counties,Tolland County,Other race,Low,306,107.72575527153337,NA,NA,0.116,0.039
+2_counties,Tolland County,Other race,Mid-low,308,89.50290533282215,NA,NA,0.117,0.031
+2_counties,Tolland County,Other race,Mid-high,625,176.24956232777586,NA,NA,0.237,0.061
+2_counties,Tolland County,Other race,High,783,146.45347972466095,NA,NA,0.297,0.044
+2_counties,Windham County,White,Total,38925,1025.250028060805,NA,NA,NA,NA
+2_counties,Windham County,White,Very low,4478,347.48776202383726,NA,NA,0.115,0.008
+2_counties,Windham County,White,Low,3646,320.88504202555595,NA,NA,0.094,0.008
+2_counties,Windham County,White,Mid-low,5815,423.436763351796,NA,NA,0.149,0.01
+2_counties,Windham County,White,Mid-high,8131,470.7843495428617,NA,NA,0.209,0.011
+2_counties,Windham County,White,High,16855,664.855036231226,NA,NA,0.433,0.013
+2_counties,Windham County,Black,Total,545,143.7674737111406,NA,NA,NA,NA
+2_counties,Windham County,Black,Very low,92,42.23630431909601,NA,NA,0.169,0.063
+2_counties,Windham County,Black,Low,125,91.52539188059437,NA,NA,0.229,0.157
+2_counties,Windham County,Black,Mid-low,203,87.79820952909766,NA,NA,0.372,0.128
+2_counties,Windham County,Black,Mid-high,38,26.907058625294077,NA,NA,0.07,0.046
+2_counties,Windham County,Black,High,87,45.5951999061054,NA,NA,0.16,0.072
+2_counties,Windham County,Latino,Total,3767,389.7411974522217,NA,NA,NA,NA
+2_counties,Windham County,Latino,Very low,1041,205.9277893038029,NA,NA,0.276,0.047
+2_counties,Windham County,Latino,Low,551,154.40543478799327,NA,NA,0.146,0.038
+2_counties,Windham County,Latino,Mid-low,710,173.94047786346823,NA,NA,0.188,0.042
+2_counties,Windham County,Latino,Mid-high,732,186.02392907310355,NA,NA,0.194,0.045
+2_counties,Windham County,Latino,High,733,144.74007070992886,NA,NA,0.195,0.033
+2_counties,Windham County,Other race,Total,1226,202.50751969328624,NA,NA,NA,NA
+2_counties,Windham County,Other race,Very low,225,84.53628981159625,NA,NA,0.184,0.062
+2_counties,Windham County,Other race,Low,268,119.37832594668181,NA,NA,0.219,0.09
+2_counties,Windham County,Other race,Mid-low,230,82.21524553097709,NA,NA,0.188,0.059
+2_counties,Windham County,Other race,Mid-high,99,48.87632388453523,NA,NA,0.081,0.038
+2_counties,Windham County,Other race,High,404,102.37107544856157,NA,NA,0.33,0.063

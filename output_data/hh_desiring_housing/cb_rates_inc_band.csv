@@ -1,0 +1,136 @@
+level,name,inc_band,cost_burden,value,share
+1_state,Connecticut,Very low,Total,201377,NA
+1_state,Connecticut,Very low,No burden,28364,0.141
+1_state,Connecticut,Very low,Burden,173013,0.859
+1_state,Connecticut,Low,Total,151345,NA
+1_state,Connecticut,Low,No burden,36305,0.24
+1_state,Connecticut,Low,Burden,115040,0.76
+1_state,Connecticut,Mid-low,Total,214490,NA
+1_state,Connecticut,Mid-low,No burden,106477,0.496
+1_state,Connecticut,Mid-low,Burden,108013,0.504
+1_state,Connecticut,Mid-high,Total,231836,NA
+1_state,Connecticut,Mid-high,No burden,172281,0.743
+1_state,Connecticut,Mid-high,Burden,59555,0.257
+1_state,Connecticut,High,Total,568326,NA
+1_state,Connecticut,High,No burden,532872,0.938
+1_state,Connecticut,High,Burden,35454,0.062
+2_counties,Fairfield County,Very low,Total,55251,NA
+2_counties,Fairfield County,Very low,No burden,6751,0.122
+2_counties,Fairfield County,Very low,Burden,48500,0.878
+2_counties,Fairfield County,Low,Total,38220,NA
+2_counties,Fairfield County,Low,No burden,8593,0.225
+2_counties,Fairfield County,Low,Burden,29627,0.775
+2_counties,Fairfield County,Mid-low,Total,51287,NA
+2_counties,Fairfield County,Mid-low,No burden,23628,0.461
+2_counties,Fairfield County,Mid-low,Burden,27659,0.539
+2_counties,Fairfield County,Mid-high,Total,53533,NA
+2_counties,Fairfield County,Mid-high,No burden,36182,0.676
+2_counties,Fairfield County,Mid-high,Burden,17351,0.324
+2_counties,Fairfield County,High,Total,142201,NA
+2_counties,Fairfield County,High,No burden,130220,0.916
+2_counties,Fairfield County,High,Burden,11981,0.084
+2_counties,Hartford County,Very low,Total,52900,NA
+2_counties,Hartford County,Very low,No burden,8125,0.154
+2_counties,Hartford County,Very low,Burden,44775,0.846
+2_counties,Hartford County,Low,Total,37375,NA
+2_counties,Hartford County,Low,No burden,8868,0.237
+2_counties,Hartford County,Low,Burden,28507,0.763
+2_counties,Hartford County,Mid-low,Total,55552,NA
+2_counties,Hartford County,Mid-low,No burden,28592,0.515
+2_counties,Hartford County,Mid-low,Burden,26960,0.485
+2_counties,Hartford County,Mid-high,Total,57614,NA
+2_counties,Hartford County,Mid-high,No burden,45917,0.797
+2_counties,Hartford County,Mid-high,Burden,11697,0.203
+2_counties,Hartford County,High,Total,145622,NA
+2_counties,Hartford County,High,No burden,138687,0.952
+2_counties,Hartford County,High,Burden,6935,0.048
+2_counties,Litchfield County,Very low,Total,8698,NA
+2_counties,Litchfield County,Very low,No burden,976,0.112
+2_counties,Litchfield County,Very low,Burden,7722,0.888
+2_counties,Litchfield County,Low,Total,8655,NA
+2_counties,Litchfield County,Low,No burden,2531,0.292
+2_counties,Litchfield County,Low,Burden,6124,0.708
+2_counties,Litchfield County,Mid-low,Total,11899,NA
+2_counties,Litchfield County,Mid-low,No burden,7239,0.608
+2_counties,Litchfield County,Mid-low,Burden,4660,0.392
+2_counties,Litchfield County,Mid-high,Total,14645,NA
+2_counties,Litchfield County,Mid-high,No burden,11809,0.806
+2_counties,Litchfield County,Mid-high,Burden,2836,0.194
+2_counties,Litchfield County,High,Total,30090,NA
+2_counties,Litchfield County,High,No burden,28425,0.945
+2_counties,Litchfield County,High,Burden,1665,0.055
+2_counties,Middlesex County,Very low,Total,9466,NA
+2_counties,Middlesex County,Very low,No burden,1270,0.134
+2_counties,Middlesex County,Very low,Burden,8196,0.866
+2_counties,Middlesex County,Low,Total,7567,NA
+2_counties,Middlesex County,Low,No burden,2334,0.308
+2_counties,Middlesex County,Low,Burden,5233,0.692
+2_counties,Middlesex County,Mid-low,Total,10680,NA
+2_counties,Middlesex County,Mid-low,No burden,5909,0.553
+2_counties,Middlesex County,Mid-low,Burden,4771,0.447
+2_counties,Middlesex County,Mid-high,Total,12075,NA
+2_counties,Middlesex County,Mid-high,No burden,9416,0.78
+2_counties,Middlesex County,Mid-high,Burden,2659,0.22
+2_counties,Middlesex County,High,Total,27105,NA
+2_counties,Middlesex County,High,No burden,25686,0.948
+2_counties,Middlesex County,High,Burden,1419,0.052
+2_counties,New Haven County,Very low,Total,47160,NA
+2_counties,New Haven County,Very low,No burden,7148,0.152
+2_counties,New Haven County,Very low,Burden,40012,0.848
+2_counties,New Haven County,Low,Total,37512,NA
+2_counties,New Haven County,Low,No burden,7503,0.2
+2_counties,New Haven County,Low,Burden,30009,0.8
+2_counties,New Haven County,Mid-low,Total,52407,NA
+2_counties,New Haven County,Mid-low,No burden,22879,0.437
+2_counties,New Haven County,Mid-low,Burden,29528,0.563
+2_counties,New Haven County,Mid-high,Total,53410,NA
+2_counties,New Haven County,Mid-high,No burden,36901,0.691
+2_counties,New Haven County,Mid-high,Burden,16509,0.309
+2_counties,New Haven County,High,Total,139367,NA
+2_counties,New Haven County,High,No burden,129285,0.928
+2_counties,New Haven County,High,Burden,10082,0.072
+2_counties,New London County,Very low,Total,14344,NA
+2_counties,New London County,Very low,No burden,2164,0.151
+2_counties,New London County,Very low,Burden,12180,0.849
+2_counties,New London County,Low,Total,10745,NA
+2_counties,New London County,Low,No burden,2752,0.256
+2_counties,New London County,Low,Burden,7993,0.744
+2_counties,New London County,Mid-low,Total,17668,NA
+2_counties,New London County,Mid-low,No burden,9431,0.534
+2_counties,New London County,Mid-low,Burden,8237,0.466
+2_counties,New London County,Mid-high,Total,20979,NA
+2_counties,New London County,Mid-high,No burden,16452,0.784
+2_counties,New London County,Mid-high,Burden,4527,0.216
+2_counties,New London County,High,Total,43666,NA
+2_counties,New London County,High,No burden,41526,0.951
+2_counties,New London County,High,Burden,2140,0.049
+2_counties,Tolland County,Very low,Total,7722,NA
+2_counties,Tolland County,Very low,No burden,898,0.116
+2_counties,Tolland County,Very low,Burden,6824,0.884
+2_counties,Tolland County,Low,Total,6681,NA
+2_counties,Tolland County,Low,No burden,2190,0.328
+2_counties,Tolland County,Low,Burden,4491,0.672
+2_counties,Tolland County,Mid-low,Total,8039,NA
+2_counties,Tolland County,Mid-low,No burden,5178,0.644
+2_counties,Tolland County,Mid-low,Burden,2861,0.356
+2_counties,Tolland County,Mid-high,Total,10580,NA
+2_counties,Tolland County,Mid-high,No burden,8691,0.821
+2_counties,Tolland County,Mid-high,Burden,1889,0.179
+2_counties,Tolland County,High,Total,22196,NA
+2_counties,Tolland County,High,No burden,21652,0.975
+2_counties,Tolland County,High,Burden,544,0.025
+2_counties,Windham County,Very low,Total,5836,NA
+2_counties,Windham County,Very low,No burden,1032,0.177
+2_counties,Windham County,Very low,Burden,4804,0.823
+2_counties,Windham County,Low,Total,4590,NA
+2_counties,Windham County,Low,No burden,1534,0.334
+2_counties,Windham County,Low,Burden,3056,0.666
+2_counties,Windham County,Mid-low,Total,6958,NA
+2_counties,Windham County,Mid-low,No burden,3621,0.52
+2_counties,Windham County,Mid-low,Burden,3337,0.48
+2_counties,Windham County,Mid-high,Total,9000,NA
+2_counties,Windham County,Mid-high,No burden,6913,0.768
+2_counties,Windham County,Mid-high,Burden,2087,0.232
+2_counties,Windham County,High,Total,18079,NA
+2_counties,Windham County,High,No burden,17391,0.962
+2_counties,Windham County,High,Burden,688,0.038

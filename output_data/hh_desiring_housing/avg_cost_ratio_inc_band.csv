@@ -1,0 +1,46 @@
+name,inc_band,wm_cb,level
+Fairfield County,Very low,0.7163003576959449,2_counties
+Fairfield County,Low,0.47392689756778605,2_counties
+Fairfield County,Mid-low,0.35195552859366785,2_counties
+Fairfield County,Mid-high,0.2681987481200306,2_counties
+Fairfield County,High,0.16906342957951917,2_counties
+Hartford County,Very low,0.7048461374809464,2_counties
+Hartford County,Low,0.445532252102666,2_counties
+Hartford County,Mid-low,0.3176212310455777,2_counties
+Hartford County,Mid-high,0.23206696915792804,2_counties
+Hartford County,High,0.1568018097518981,2_counties
+Litchfield County,Very low,0.6693307213539449,2_counties
+Litchfield County,Low,0.42112784909720175,2_counties
+Litchfield County,Mid-low,0.3038566894614507,2_counties
+Litchfield County,Mid-high,0.22669016694862065,2_counties
+Litchfield County,High,0.15460342372684113,2_counties
+Middlesex County,Very low,0.6766903047857371,2_counties
+Middlesex County,Low,0.4105683619916172,2_counties
+Middlesex County,Mid-low,0.3134058219653374,2_counties
+Middlesex County,Mid-high,0.2341605185070871,2_counties
+Middlesex County,High,0.15991059964945492,2_counties
+New Haven County,Very low,0.7411814363263723,2_counties
+New Haven County,Low,0.4862617787201134,2_counties
+New Haven County,Mid-low,0.3433877843023505,2_counties
+New Haven County,Mid-high,0.2599449060733224,2_counties
+New Haven County,High,0.17016149648926635,2_counties
+New London County,Very low,0.6775188523475449,2_counties
+New London County,Low,0.44618914515376257,2_counties
+New London County,Mid-low,0.3050218318993332,2_counties
+New London County,Mid-high,0.23277843731462494,2_counties
+New London County,High,0.15789559799808847,2_counties
+Tolland County,Very low,0.7046399346019806,2_counties
+Tolland County,Low,0.4144934150979942,2_counties
+Tolland County,Mid-low,0.28106645994099666,2_counties
+Tolland County,Mid-high,0.2120140092748916,2_counties
+Tolland County,High,0.1428453215940085,2_counties
+Windham County,Very low,0.6552540202288775,2_counties
+Windham County,Low,0.38480253709223883,2_counties
+Windham County,Mid-low,0.31731090507414966,2_counties
+Windham County,Mid-high,0.23414173446863465,2_counties
+Windham County,High,0.1548067114782262,2_counties
+Connecticut,Very low,0.7102489349206524,1_state
+Connecticut,Low,0.4564889136479826,1_state
+Connecticut,Mid-low,0.32873511415647017,1_state
+Connecticut,Mid-high,0.24583177676571294,1_state
+Connecticut,High,0.16265327905302032,1_state

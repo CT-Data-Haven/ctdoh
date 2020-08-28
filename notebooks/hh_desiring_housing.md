@@ -998,493 +998,6 @@ of that income band. This is less helpful for less populous counties.
 **For breakouts by disability type, see disability.Rmd in notebooks
 folder on repo**
 
-Because of the sample size, I’m only looking at these households
-statewide, not by county.
-
-I think there’s still more to do here, but I want to wrap up some of the
-other tabulation I need to do and come back to it if time permits.
-
-Quick tabulations of households with an occupant with a disability
-
-<table>
-
-<thead>
-
-<tr>
-
-<th style="text-align:left;">
-
-name
-
-</th>
-
-<th style="text-align:left;">
-
-inc\_band
-
-</th>
-
-<th style="text-align:left;">
-
-disability
-
-</th>
-
-<th style="text-align:right;">
-
-value
-
-</th>
-
-<th style="text-align:right;">
-
-value\_se
-
-</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Very low
-
-</td>
-
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-
-<td style="text-align:right;">
-
-124879
-
-</td>
-
-<td style="text-align:right;">
-
-1939.616
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Very low
-
-</td>
-
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-
-<td style="text-align:right;">
-
-76498
-
-</td>
-
-<td style="text-align:right;">
-
-1509.591
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Low
-
-</td>
-
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-
-<td style="text-align:right;">
-
-105139
-
-</td>
-
-<td style="text-align:right;">
-
-1776.579
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Low
-
-</td>
-
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-
-<td style="text-align:right;">
-
-46206
-
-</td>
-
-<td style="text-align:right;">
-
-1125.341
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Mid-low
-
-</td>
-
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-
-<td style="text-align:right;">
-
-164046
-
-</td>
-
-<td style="text-align:right;">
-
-2214.536
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Mid-low
-
-</td>
-
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-
-<td style="text-align:right;">
-
-50444
-
-</td>
-
-<td style="text-align:right;">
-
-1163.525
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Mid-high
-
-</td>
-
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-
-<td style="text-align:right;">
-
-186625
-
-</td>
-
-<td style="text-align:right;">
-
-2232.000
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Mid-high
-
-</td>
-
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-
-<td style="text-align:right;">
-
-45211
-
-</td>
-
-<td style="text-align:right;">
-
-1058.285
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-High
-
-</td>
-
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-
-<td style="text-align:right;">
-
-484239
-
-</td>
-
-<td style="text-align:right;">
-
-3034.160
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-High
-
-</td>
-
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-
-<td style="text-align:right;">
-
-84087
-
-</td>
-
-<td style="text-align:right;">
-
-1363.296
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Total
-
-</td>
-
-<td style="text-align:left;">
-
-FALSE
-
-</td>
-
-<td style="text-align:right;">
-
-1064928
-
-</td>
-
-<td style="text-align:right;">
-
-NA
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Total
-
-</td>
-
-<td style="text-align:left;">
-
-TRUE
-
-</td>
-
-<td style="text-align:right;">
-
-302446
-
-</td>
-
-<td style="text-align:right;">
-
-NA
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-Taking a slightly different look than the table above, the plot below
-shows the share of households in each income band that have an occupant
-with a disability (so the numerator is households with an occupant with
-a disability in a given income band, and the denominator is all
-households in that income band).
-
-While the High band has the most (by count) households with an occupant
-with a disability, it has the smallest share.
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
-
-Finally, what are the average cost burden rates for households with an
-occupant with a disability?
-
-Read this chart as: “Households with an occupant with a disability in
-the Very Low cost band spend, on average, 66% of household income on
-housing costs.”
-
-So the average cost ratio for households with an occupant with a
-disability is slightly lower than households without a disabled
-occupant, but the general trends in cost ratio across the cost bands
-still hold.
-
-![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
-
 ### Jobs held by household occupants
 
 Retrieved a list of 2018 occ codes from the Census Bureau at
@@ -2572,6 +2085,269 @@ family) mid-high units could help alleviate some strain on the middle
 income households.
 
 ![](hh_desiring_housing_files/figure-gfm/units%20v%20hh%20bar%20chart-1.png)<!-- -->
+
+    ## $hh_by_inc_band
+    ## # A tibble: 54 x 9
+    ## # Groups:   level, name [9]
+    ##    level  name    inc_band  value value_se statefip.x statefip.y  share sharemoe
+    ##    <fct>  <chr>   <fct>     <dbl>    <dbl>  <int+lbl>  <int+lbl>  <dbl>    <dbl>
+    ##  1 1_sta… Connec… Total    1.37e6    3502.         NA NA         NA       NA    
+    ##  2 1_sta… Connec… Very low 2.01e5    2402.         NA  9 [Conne…  0.147    0.002
+    ##  3 1_sta… Connec… Low      1.51e5    2070.         NA  9 [Conne…  0.111    0.001
+    ##  4 1_sta… Connec… Mid-low  2.14e5    2454.         NA  9 [Conne…  0.157    0.002
+    ##  5 1_sta… Connec… Mid-high 2.32e5    2421.         NA  9 [Conne…  0.17     0.002
+    ##  6 1_sta… Connec… High     5.68e5    3148.         NA  9 [Conne…  0.416    0.002
+    ##  7 2_cou… Fairfi… Total    3.40e5    2753.         NA NA         NA       NA    
+    ##  8 2_cou… Fairfi… Very low 5.53e4    1313.         NA NA          0.162    0.004
+    ##  9 2_cou… Fairfi… Low      3.82e4    1073.         NA NA          0.112    0.003
+    ## 10 2_cou… Fairfi… Mid-low  5.13e4    1207.         NA NA          0.151    0.003
+    ## # … with 44 more rows
+    ## 
+    ## $income_ranges
+    ## # A tibble: 9 x 6
+    ##   Name      `Very low`    Low           `Mid-low`      `Mid-high`      High     
+    ##   <chr>     <chr>         <chr>         <chr>          <chr>           <chr>    
+    ## 1 Fairfiel… Less than $2… Between $27,… Between $46,4… Between $74,37… More tha…
+    ## 2 Hartford… Less than $2… Between $21,… Between $36,1… Between $57,85… More tha…
+    ## 3 Litchfie… Less than $2… Between $23,… Between $39,1… Between $62,65… More tha…
+    ## 4 Middlese… Less than $2… Between $25,… Between $42,3… Between $67,80… More tha…
+    ## 5 New Have… Less than $2… Between $20,… Between $33,5… Between $53,70… More tha…
+    ## 6 New Lond… Less than $2… Between $21,… Between $35,6… Between $57,09… More tha…
+    ## 7 Tolland … Less than $2… Between $25,… Between $42,4… Between $67,93… More tha…
+    ## 8 Windham … Less than $1… Between $19,… Between $32,3… Between $51,81… More tha…
+    ## 9 Connecti… Less than $2… Between $22,… Between $38,0… Between $60,88… More tha…
+    ## 
+    ## $hh_by_race_inc_band
+    ## # A tibble: 216 x 10
+    ## # Groups:   level, name, race2 [36]
+    ##    level name  race2 inc_band  value value_se statefip.x statefip.y  share
+    ##    <fct> <chr> <fct> <fct>     <dbl>    <dbl>  <int+lbl>  <int+lbl>  <dbl>
+    ##  1 1_st… Conn… White Total    996437    3346. NA         NA         NA    
+    ##  2 1_st… Conn… White Very low 113213    1720.  9 [Conne…  9 [Conne…  0.114
+    ##  3 1_st… Conn… White Low       97152    1558.  9 [Conne…  9 [Conne…  0.097
+    ##  4 1_st… Conn… White Mid-low  144503    1910.  9 [Conne…  9 [Conne…  0.145
+    ##  5 1_st… Conn… White Mid-high 171246    1982.  9 [Conne…  9 [Conne…  0.172
+    ##  6 1_st… Conn… White High     470323    2851.  9 [Conne…  9 [Conne…  0.472
+    ##  7 1_st… Conn… Black Total    125094    2102. NA         NA         NA    
+    ##  8 1_st… Conn… Black Very low  32076    1078.  9 [Conne…  9 [Conne…  0.256
+    ##  9 1_st… Conn… Black Low       19632     872.  9 [Conne…  9 [Conne…  0.157
+    ## 10 1_st… Conn… Black Mid-low   24342     958.  9 [Conne…  9 [Conne…  0.195
+    ## # … with 206 more rows, and 1 more variable: sharemoe <dbl>
+    ## 
+    ## $pivot_race_inc_band
+    ## # A tibble: 270 x 4
+    ##    name        race2 inc_band  value
+    ##    <chr>       <chr> <fct>     <dbl>
+    ##  1 Connecticut White Total    996437
+    ##  2 Connecticut White Very low 113213
+    ##  3 Connecticut White Low       97152
+    ##  4 Connecticut White Mid-low  144503
+    ##  5 Connecticut White Mid-high 171246
+    ##  6 Connecticut White High     470323
+    ##  7 Connecticut Black Total    125094
+    ##  8 Connecticut Black Very low  32076
+    ##  9 Connecticut Black Low       19632
+    ## 10 Connecticut Black Mid-low   24342
+    ## # … with 260 more rows
+    ## 
+    ## $common_jobs_by_inc_band
+    ## # A tibble: 400 x 6
+    ## # Groups:   name, inc_band [40]
+    ##    level   name       inc_band workers   occ occ_label                          
+    ##    <chr>   <chr>      <fct>      <dbl> <int> <chr>                              
+    ##  1 2_coun… Fairfield… Very low    2715  4720 Cashiers                           
+    ##  2 2_coun… Fairfield… Very low    2035  9920 Unemployed, with no work experienc…
+    ##  3 2_coun… Fairfield… Very low    2023  4230 Maids and housekeeping cleaners    
+    ##  4 2_coun… Fairfield… Very low    1313  4600 Childcare workers                  
+    ##  5 2_coun… Fairfield… Very low    1265  4251 Landscaping and groundskeeping wor…
+    ##  6 2_coun… Fairfield… Very low    1250  3602 Personal care aides                
+    ##  7 2_coun… Fairfield… Very low    1241  4760 Retail salespersons                
+    ##  8 2_coun… Fairfield… Very low    1222  4220 Janitors and building cleaners     
+    ##  9 2_coun… Fairfield… Very low    1144  3603 Nursing assistants                 
+    ## 10 2_coun… Fairfield… Very low     866  4020 Cooks                              
+    ## # … with 390 more rows
+    ## 
+    ## $cb_by_inc_band
+    ## # A tibble: 178 x 10
+    ## # Groups:   level, name, inc_band [45]
+    ##    level name  inc_band cost_burden  value value_se statefip.x statefip.y  share
+    ##    <fct> <chr> <fct>    <fct>        <dbl>    <dbl>  <int+lbl>  <int+lbl>  <dbl>
+    ##  1 1_st… Conn… Very low Total       201377    2402. NA         NA         NA    
+    ##  2 1_st… Conn… Very low No burden    28364     947.  9 [Conne…  9 [Conne…  0.141
+    ##  3 1_st… Conn… Very low Cost-burde…  31411     969.  9 [Conne…  9 [Conne…  0.156
+    ##  4 1_st… Conn… Very low Severely c… 141602    2049.  9 [Conne…  9 [Conne…  0.703
+    ##  5 1_st… Conn… Low      Total       151345    2070. NA         NA         NA    
+    ##  6 1_st… Conn… Low      No burden    36305     976.  9 [Conne…  9 [Conne…  0.24 
+    ##  7 1_st… Conn… Low      Cost-burde…  61210    1367.  9 [Conne…  9 [Conne…  0.404
+    ##  8 1_st… Conn… Low      Severely c…  53830    1294.  9 [Conne…  9 [Conne…  0.356
+    ##  9 1_st… Conn… Mid-low  Total       214490    2454. NA         NA         NA    
+    ## 10 1_st… Conn… Mid-low  No burden   106477    1730.  9 [Conne…  9 [Conne…  0.496
+    ## # … with 168 more rows, and 1 more variable: sharemoe <dbl>
+    ## 
+    ## $cb_shares
+    ## # A tibble: 27 x 5
+    ##    level      name              cost_burden             value share
+    ##    <fct>      <chr>             <fct>                   <dbl> <dbl>
+    ##  1 1_state    Connecticut       No burden              876299 0.641
+    ##  2 1_state    Connecticut       Cost-burdened          256442 0.188
+    ##  3 1_state    Connecticut       Severely cost-burdened 234633 0.172
+    ##  4 2_counties Fairfield County  No burden              205374 0.603
+    ##  5 2_counties Fairfield County  Cost-burdened           67587 0.198
+    ##  6 2_counties Fairfield County  Severely cost-burdened  67531 0.198
+    ##  7 2_counties Hartford County   No burden              230189 0.659
+    ##  8 2_counties Hartford County   Cost-burdened           61851 0.177
+    ##  9 2_counties Hartford County   Severely cost-burdened  57023 0.163
+    ## 10 2_counties Litchfield County No burden               50980 0.689
+    ## # … with 17 more rows
+    ## 
+    ## $cb_rates_inc_band
+    ## # A tibble: 135 x 6
+    ## # Groups:   level, name, inc_band [45]
+    ##    level   name        inc_band cost_burden  value  share
+    ##    <fct>   <chr>       <fct>    <fct>        <dbl>  <dbl>
+    ##  1 1_state Connecticut Very low Total       201377 NA    
+    ##  2 1_state Connecticut Very low No burden    28364  0.141
+    ##  3 1_state Connecticut Very low Burden      173013  0.859
+    ##  4 1_state Connecticut Low      Total       151345 NA    
+    ##  5 1_state Connecticut Low      No burden    36305  0.24 
+    ##  6 1_state Connecticut Low      Burden      115040  0.76 
+    ##  7 1_state Connecticut Mid-low  Total       214490 NA    
+    ##  8 1_state Connecticut Mid-low  No burden   106477  0.496
+    ##  9 1_state Connecticut Mid-low  Burden      108013  0.504
+    ## 10 1_state Connecticut Mid-high Total       231836 NA    
+    ## # … with 125 more rows
+    ## 
+    ## $avg_cost_ratio_inc_band
+    ## # A tibble: 45 x 4
+    ## # Groups:   name [9]
+    ##    name             inc_band wm_cb level     
+    ##    <chr>            <fct>    <dbl> <chr>     
+    ##  1 Fairfield County Very low 0.716 2_counties
+    ##  2 Fairfield County Low      0.474 2_counties
+    ##  3 Fairfield County Mid-low  0.352 2_counties
+    ##  4 Fairfield County Mid-high 0.268 2_counties
+    ##  5 Fairfield County High     0.169 2_counties
+    ##  6 Hartford County  Very low 0.705 2_counties
+    ##  7 Hartford County  Low      0.446 2_counties
+    ##  8 Hartford County  Mid-low  0.318 2_counties
+    ##  9 Hartford County  Mid-high 0.232 2_counties
+    ## 10 Hartford County  High     0.157 2_counties
+    ## # … with 35 more rows
+    ## 
+    ## $avg_cost_inc_band
+    ## # A tibble: 45 x 4
+    ## # Groups:   name [9]
+    ##    name             inc_band wm_cost level     
+    ##    <chr>            <fct>      <dbl> <chr>     
+    ##  1 Connecticut      Very low   1000. 1_state   
+    ##  2 Connecticut      Low        1201. 1_state   
+    ##  3 Connecticut      Mid-low    1359. 1_state   
+    ##  4 Connecticut      Mid-high   1563. 1_state   
+    ##  5 Connecticut      High       2286. 1_state   
+    ##  6 Fairfield County Very low   1234. 2_counties
+    ##  7 Fairfield County Low        1524. 2_counties
+    ##  8 Fairfield County Mid-low    1751. 2_counties
+    ##  9 Fairfield County Mid-high   2054. 2_counties
+    ## 10 Fairfield County High       3207. 2_counties
+    ## # … with 35 more rows
+    ## 
+    ## $affordable_cost_table
+    ## # A tibble: 9 x 6
+    ##   Name       `Very low`   Low          `Mid-low`       `Mid-high`      High     
+    ##   <chr>      <chr>        <chr>        <chr>           <chr>           <chr>    
+    ## 1 Fairfield… Less than $… Between $69… Between $1,162… Between $1,859… More tha…
+    ## 2 Hartford … Less than $… Between $54… Between $904 a… Between $1,446… More tha…
+    ## 3 Litchfiel… Less than $… Between $58… Between $979 a… Between $1,566… More tha…
+    ## 4 Middlesex… Less than $… Between $63… Between $1,060… Between $1,695… More tha…
+    ## 5 New Haven… Less than $… Between $50… Between $839 a… Between $1,343… More tha…
+    ## 6 New Londo… Less than $… Between $53… Between $892 a… Between $1,427… More tha…
+    ## 7 Tolland C… Less than $… Between $63… Between $1,061… Between $1,698… More tha…
+    ## 8 Windham C… Less than $… Between $48… Between $810 a… Between $1,295… More tha…
+    ## 9 Connectic… Less than $… Between $57… Between $951 a… Between $1,522… More tha…
+    ## 
+    ## $all_units_inc_and_cost_bands
+    ## # A tibble: 70,616 x 6
+    ## # Groups:   name [8]
+    ##     hhwt name               minc inc_band hcost cost_band
+    ##    <dbl> <chr>             <dbl> <fct>    <int> <chr>    
+    ##  1    16 Fairfield County  92969 Mid-high  4208 High     
+    ##  2    11 New London County 71368 Mid-high  2169 High     
+    ##  3    21 New London County 71368 Mid-high   551 Low      
+    ##  4    19 New Haven County  67128 High      6607 High     
+    ##  5    24 New Haven County  67128 High      1176 Mid-low  
+    ##  6    15 Fairfield County  92969 High      4908 High     
+    ##  7     7 New London County 71368 High      4140 High     
+    ##  8    16 Hartford County   72321 High      1853 Mid-high 
+    ##  9     6 New London County 71368 Low       6546 High     
+    ## 10    12 Hartford County   72321 Mid-low    767 Low      
+    ## # … with 70,606 more rows
+    ## 
+    ## $units_by_cost_and_income
+    ## # A tibble: 90 x 5
+    ## # Groups:   name [9]
+    ##    name             inc_band group       value level     
+    ##    <chr>            <chr>    <chr>       <dbl> <chr>     
+    ##  1 Fairfield County High     households 142201 2_counties
+    ##  2 Fairfield County High     units       90766 2_counties
+    ##  3 Fairfield County Low      households  38220 2_counties
+    ##  4 Fairfield County Low      units       51660 2_counties
+    ##  5 Fairfield County Mid-high households  53533 2_counties
+    ##  6 Fairfield County Mid-high units       82083 2_counties
+    ##  7 Fairfield County Mid-low  households  51287 2_counties
+    ##  8 Fairfield County Mid-low  units       86663 2_counties
+    ##  9 Fairfield County Very low households  55251 2_counties
+    ## 10 Fairfield County Very low units       29320 2_counties
+    ## # … with 80 more rows
+    ## 
+    ## $hh_cost_band_vs_units_cost_band
+    ## # A tibble: 25 x 3
+    ## # Groups:   inc_band [5]
+    ##    inc_band cost_band units
+    ##    <fct>    <fct>     <dbl>
+    ##  1 Very low High       8865
+    ##  2 Very low Low       52714
+    ##  3 Very low Mid-high  22327
+    ##  4 Very low Mid-low   59737
+    ##  5 Very low Very low  57734
+    ##  6 Low      High       7975
+    ##  7 Low      Low       43194
+    ##  8 Low      Mid-high  23901
+    ##  9 Low      Mid-low   58814
+    ## 10 Low      Very low  17461
+    ## # … with 15 more rows
+    ## 
+    ## $units_by_tenure_occupancy_cost_band
+    ## # A tibble: 252 x 5
+    ## # Groups:   name, tenure, occupancy [54]
+    ##    name             tenure occupancy cost_band units
+    ##    <chr>            <chr>  <fct>     <fct>     <dbl>
+    ##  1 Fairfield County owner  occupied  high      80938
+    ##  2 Fairfield County owner  occupied  mid_high  58876
+    ##  3 Fairfield County owner  occupied  mid_low   43757
+    ##  4 Fairfield County owner  occupied  low       31419
+    ##  5 Fairfield County owner  occupied  very_low  11126
+    ##  6 Hartford County  owner  occupied  high      58470
+    ##  7 Hartford County  owner  occupied  mid_high  68359
+    ##  8 Hartford County  owner  occupied  mid_low   52064
+    ##  9 Hartford County  owner  occupied  low       37433
+    ## 10 Hartford County  owner  occupied  very_low   7036
+    ## # … with 242 more rows
+    ## 
+    ## $units_and_households
+    ## # A tibble: 90 x 4
+    ##    name        band     group       value
+    ##    <chr>       <fct>    <chr>       <dbl>
+    ##  1 Connecticut Very low households 201377
+    ##  2 Connecticut Very low units      115309
+    ##  3 Connecticut Low      households 151345
+    ##  4 Connecticut Low      units      234972
+    ##  5 Connecticut Mid-low  households 214490
+    ##  6 Connecticut Mid-low  units      419683
+    ##  7 Connecticut Mid-high households 231836
+    ##  8 Connecticut Mid-high units      362648
+    ##  9 Connecticut High     households 568326
+    ## 10 Connecticut High     units      296548
+    ## # … with 80 more rows
 
 ## Add homeless households?
 

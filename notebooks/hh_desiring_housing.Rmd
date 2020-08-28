@@ -212,6 +212,8 @@ income_table <- minc %>%
 				 High = paste("More than $", mh, sep = "")) %>% 
 	select(Name = name, `Very low`:High)
 
+out$income_ranges <- income_table
+
 kable(income_table, caption = "Income ranges by income band and area")
 ```
 
@@ -325,7 +327,7 @@ hh_by_race_inc_band <- bind_rows(county_hhlds_by_race, county_race_total, ct_hhl
 	group_by(level, name, race2) %>% 
 	calc_shares(group = inc_band, denom = "Total", value = value, moe = value_se)
 
-out$hh_by_inc_band <- hh_by_race_inc_band
+out$hh_by_race_inc_band <- hh_by_race_inc_band
 ```
 
 In the charts below, I'm considering race/ethnicity of head of household. Statewide, a quarter of all households headed by a Black or Latino person are very low income, earning less than 30% of the county household median income, compared to just over a tenth of households headed by a white person. Some variation exists by county. In the three largest counties, half of white households are high income.
@@ -363,6 +365,8 @@ pivot_race <- hh_by_race_inc_band %>%
 							ungroup() %>% 
 							select(name, inc_band, value) %>% 
 							mutate(race2 = "Total"))
+
+out$pivot_race_inc_band <- pivot_race
 ```
 
 Here's that chart pivoted so the numerator is the population by race of HOH of a given income band and the denominator is the total population of that income band. This is less helpful for less populous counties.
@@ -399,11 +403,8 @@ pivot_race %>%
 
 **For breakouts by disability type, see disability.Rmd in notebooks folder on repo**
 
-Because of the sample size, I'm only looking at these households statewide, not by county.
 
-I think there's still more to do here, but I want to wrap up some of the other tabulation I need to do and come back to it if time permits.
-
-```{r}
+```{r echo = F, eval = F}
 hh_w_disability <- pums %>%
 	filter(has_disability == T) %>% 
 	select(cbserial) %>% 
@@ -428,17 +429,12 @@ ct_inc_band_disability <- ct_inc_band_disability %>%
 	bind_rows(ct_disability)
 ```
 
-Quick tabulations of households with an occupant with a disability
 
-```{r}
+```{r echo = F, eval = F}
 kable(ct_inc_band_disability)
 ```
 
-Taking a slightly different look than the table above, the plot below shows the share of households in each income band that have an occupant with a disability (so the numerator is households with an occupant with a disability in a given income band, and the denominator is all households in that income band).
-
-While the High band has the most (by count) households with an occupant with a disability, it has the smallest share.
-
-```{r}
+```{r echo = F, eval = F}
 ct_inc_band_disability %>%
 	bind_rows(ct_hhlds) %>% 
 	ungroup() %>% 
@@ -468,9 +464,7 @@ ct_inc_band_disability %>%
 			 x = "", y = "")
 ```
 
-Finally, what are the average cost burden rates for households with an occupant with a disability?
-
-```{r}
+```{r eval = F, echo = F}
 ct_cost_ratio_inc_band_disability <- pums %>% 
 	mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
 	filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>% 
@@ -482,11 +476,8 @@ ct_cost_ratio_inc_band_disability <- pums %>%
 	mutate(name = "Connecticut")
 ```
 
-Read this chart as: "Households with an occupant with a disability in the Very Low cost band spend, on average, 66% of household income on housing costs." 
 
-So the average cost ratio for households with an occupant with a disability is slightly lower than households without a disabled occupant, but the general trends in cost ratio across the cost bands still hold.
-
-```{r}
+```{r echo = F, eval = F}
 ct_cost_ratio_inc_band_disability %>% 
 	ggplot(aes(inc_band, avg_cost_ratio, group = disability)) +
 	geom_col(aes(fill = disability), width = .8, position = position_dodge(.85)) +
@@ -585,7 +576,7 @@ out$cb_by_inc_band <- cb_by_inc_band
 Real quick top level summary of cost burden before we get into the details.
 
 ```{r cb totals bar chart}
-cb_by_inc_band %>% 
+cb2 <- cb_by_inc_band %>% 
 	ungroup() %>% 
 	select(level, name, cost_burden, value) %>% 
 	group_by(level, name, cost_burden) %>% 
@@ -594,8 +585,11 @@ cb_by_inc_band %>%
 	group_by(level, name) %>% 
 	calc_shares(group = cost_burden, denom = "Total", value = value) %>% 
 	filter(!is.na(share)) %>% 
-	ungroup() %>% 
-	group_by(level) %>% 
+	ungroup()
+
+out$cb_shares <- cb2
+
+cb2 %>% group_by(level) %>% 
 	mutate(name = fct_rev(name)) %>% 
 	ggplot(aes(share, name, group = cost_burden)) +
 	geom_col(aes(fill = cost_burden), width = .8, position = position_stack(.5)) +
@@ -616,7 +610,7 @@ cb_by_inc_band %>%
 This dot plot shows the share of cost burdened households in each income band. Statewide, almost 90% of Very Low income households pay 30%+ income to housing costs.
 
 ```{r cb rate dot plot, fig.width=8}
-cb_by_inc_band %>% 
+cb_rates <- cb_by_inc_band %>% 
 	mutate(cost_burden = fct_collapse(cost_burden, Burden = c("Cost-burdened", "Severely cost-burdened"))) %>% 
 	ungroup() %>% 
 	select(-share, -sharemoe, -value_se) %>% 
@@ -624,7 +618,11 @@ cb_by_inc_band %>%
 	summarise(value = sum(value)) %>% 
 	ungroup() %>% 
 	group_by(level, name, inc_band) %>% 
-	calc_shares(group = cost_burden, denom = "Total", value = value) %>% 
+	calc_shares(group = cost_burden, denom = "Total", value = value)
+
+out$cb_rates_inc_band <- cb_rates
+
+cb_rates %>% 
 	filter(cost_burden == "Burden") %>% 
 	group_by(level) %>% 
 	mutate(name = as.factor(name) %>% 
@@ -881,6 +879,9 @@ affordable_cost_table <- minc %>%
 				 `Mid-high` = paste("Between $", ml, " and $", mh, sep = ""),
 				 High = paste("More than $", mh, sep = ""))
 
+out$affordable_cost_table <- affordable_cost_table %>% 
+				select(Name = name, `Very low`:High)
+
 kable(affordable_cost_table %>% 
 				select(Name = name, `Very low`:High),
 			caption = "Affordable monthly housing cost ranges by income band and area")
@@ -931,6 +932,8 @@ ct_units_by_cost_income <- county_units_by_cost_income %>%
 
 units_by_cost_income <- bind_rows(county_units_by_cost_income, ct_units_by_cost_income) %>% 
 	mutate(level = if_else(name == "Connecticut", "1_state", "2_counties"))
+
+out$units_by_cost_and_income <- units_by_cost_income
 ```
 
 ```{r no eval3, fig.height=9, fig.width=9, eval = F}
@@ -1018,6 +1021,8 @@ income_vs_cost_bands <- units %>%
 				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>%
 	mutate(cost_band = as.factor(cost_band) %>%
 				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High"))
+
+out$hh_cost_band_vs_units_cost_band <- income_vs_cost_bands
 
 income_vs_cost_bands %>% 
 	mutate(inc_band = fct_rev(inc_band)) %>% 
@@ -1369,8 +1374,13 @@ units_and_hh %>%
 				strip.text.x = element_text(hjust = .5),
 				legend.position = "bottom",
 				axis.text.x = element_text(colour = "black", angle = -60, hjust = 0, vjust = .5))
+
+out$units_and_households <- units_and_hh
 ```
 
+```{r}
+cwi::batch_csv_dump(out, path = "../output_data/hh_desiring_housing")
+```
 
 ## Add homeless households?
 Mark suggests https://cceh.org for subcounty estimates, but I'm not sure how best to align CANs to counties, so instead I think this should be separate and included in the statewide count.
