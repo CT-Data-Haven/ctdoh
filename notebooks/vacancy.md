@@ -28,7 +28,7 @@ For 2000, 2010, and 2018.
 # Read
 
 ``` r
-ddi <- read_ipums_ddi("../input_data/usa_00046.xml")
+ddi <- read_ipums_ddi("../input_data/usa_00047.xml")
 
 ctyfip <- tibble(countyfip = seq(from = 1, to = 15, by = 2),
                                  name = c("Fairfield County", "Hartford County", "Litchfield County", "Middlesex County", "New Haven County", "New London County", "Windham County", "Tolland County"))
@@ -84,6 +84,8 @@ vac_ct <- vacancy %>%
     calc_shares(group = mkt, denom = "Total", value = units)
 
 vacancy <- bind_rows(vac_ct, vacancy)
+
+write_csv(vacancy, "../output_data/vacancy_2000_2018.csv")
 ```
 
 ``` r

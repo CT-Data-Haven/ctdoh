@@ -1,0 +1,325 @@
+year,name,tenure,type,mkt,units,share
+2000,Connecticut,For rent,Multifamily,Total,369336,NA
+2000,Connecticut,For rent,Multifamily,Occupied,346152,0.937
+2000,Connecticut,For rent,Multifamily,Vacant,23184,0.063
+2000,Connecticut,For rent,Single family,Total,88502,NA
+2000,Connecticut,For rent,Single family,Occupied,85289,0.964
+2000,Connecticut,For rent,Single family,Vacant,3213,0.036
+2000,Connecticut,For sale,Multifamily,Total,99794,NA
+2000,Connecticut,For sale,Multifamily,Occupied,96588,0.968
+2000,Connecticut,For sale,Multifamily,Vacant,3206,0.032
+2000,Connecticut,For sale,Single family,Total,782037,NA
+2000,Connecticut,For sale,Single family,Occupied,773828,0.99
+2000,Connecticut,For sale,Single family,Vacant,8209,0.01
+2010,Connecticut,For rent,Multifamily,Total,371242,NA
+2010,Connecticut,For rent,Multifamily,Occupied,342392,0.922
+2010,Connecticut,For rent,Multifamily,Vacant,28850,0.078
+2010,Connecticut,For rent,Single family,Total,79897,NA
+2010,Connecticut,For rent,Single family,Occupied,76533,0.958
+2010,Connecticut,For rent,Single family,Vacant,3364,0.042
+2010,Connecticut,For sale,Multifamily,Total,109940,NA
+2010,Connecticut,For sale,Multifamily,Occupied,106092,0.965
+2010,Connecticut,For sale,Multifamily,Vacant,3848,0.035
+2010,Connecticut,For sale,Single family,Total,843574,NA
+2010,Connecticut,For sale,Single family,Occupied,834202,0.989
+2010,Connecticut,For sale,Single family,Vacant,9372,0.011
+2018,Connecticut,For rent,Multifamily,Total,394015,NA
+2018,Connecticut,For rent,Multifamily,Occupied,366485,0.93
+2018,Connecticut,For rent,Multifamily,Vacant,27530,0.07
+2018,Connecticut,For rent,Single family,Total,104684,NA
+2018,Connecticut,For rent,Single family,Occupied,100654,0.962
+2018,Connecticut,For rent,Single family,Vacant,4030,0.038
+2018,Connecticut,For sale,Multifamily,Total,96188,NA
+2018,Connecticut,For sale,Multifamily,Occupied,92613,0.963
+2018,Connecticut,For sale,Multifamily,Vacant,3575,0.037
+2018,Connecticut,For sale,Single family,Total,821456,NA
+2018,Connecticut,For sale,Single family,Occupied,807622,0.983
+2018,Connecticut,For sale,Single family,Vacant,13834,0.017
+2000,Fairfield County,For rent,Multifamily,Total,81534,NA
+2000,Fairfield County,For rent,Multifamily,Occupied,78154,0.959
+2000,Fairfield County,For rent,Multifamily,Vacant,3380,0.041
+2000,Fairfield County,For rent,Single family,Total,22366,NA
+2000,Fairfield County,For rent,Single family,Occupied,21725,0.971
+2000,Fairfield County,For rent,Single family,Vacant,641,0.029
+2000,Fairfield County,For sale,Multifamily,Total,31007,NA
+2000,Fairfield County,For sale,Multifamily,Occupied,30571,0.986
+2000,Fairfield County,For sale,Multifamily,Vacant,436,0.014
+2000,Fairfield County,For sale,Single family,Total,196288,NA
+2000,Fairfield County,For sale,Single family,Occupied,194137,0.989
+2000,Fairfield County,For sale,Single family,Vacant,2151,0.011
+2000,Hartford County,For rent,Multifamily,Total,109993,NA
+2000,Hartford County,For rent,Multifamily,Occupied,102043,0.928
+2000,Hartford County,For rent,Multifamily,Vacant,7950,0.072
+2000,Hartford County,For rent,Single family,Total,18004,NA
+2000,Hartford County,For rent,Single family,Occupied,17373,0.965
+2000,Hartford County,For rent,Single family,Vacant,631,0.035
+2000,Hartford County,For sale,Multifamily,Total,23660,NA
+2000,Hartford County,For sale,Multifamily,Occupied,22865,0.966
+2000,Hartford County,For sale,Multifamily,Vacant,795,0.034
+2000,Hartford County,For sale,Single family,Total,194852,NA
+2000,Hartford County,For sale,Single family,Occupied,193181,0.991
+2000,Hartford County,For sale,Single family,Vacant,1671,0.009
+2000,Litchfield County,For rent,Multifamily,Total,12666,NA
+2000,Litchfield County,For rent,Multifamily,Occupied,12020,0.949
+2000,Litchfield County,For rent,Multifamily,Vacant,646,0.051
+2000,Litchfield County,For rent,Single family,Total,5914,NA
+2000,Litchfield County,For rent,Single family,Occupied,5718,0.967
+2000,Litchfield County,For rent,Single family,Vacant,196,0.033
+2000,Litchfield County,For sale,Multifamily,Total,4293,NA
+2000,Litchfield County,For sale,Multifamily,Occupied,4098,0.955
+2000,Litchfield County,For sale,Multifamily,Vacant,195,0.045
+2000,Litchfield County,For sale,Single family,Total,50718,NA
+2000,Litchfield County,For sale,Single family,Occupied,50144,0.989
+2000,Litchfield County,For sale,Single family,Vacant,574,0.011
+2000,Middlesex County,For rent,Multifamily,Total,12799,NA
+2000,Middlesex County,For rent,Multifamily,Occupied,12013,0.939
+2000,Middlesex County,For rent,Multifamily,Vacant,786,0.061
+2000,Middlesex County,For rent,Single family,Total,5260,NA
+2000,Middlesex County,For rent,Single family,Occupied,5044,0.959
+2000,Middlesex County,For rent,Single family,Vacant,216,0.041
+2000,Middlesex County,For sale,Multifamily,Total,2992,NA
+2000,Middlesex County,For sale,Multifamily,Occupied,2891,0.966
+2000,Middlesex County,For sale,Multifamily,Vacant,101,0.034
+2000,Middlesex County,For sale,Single family,Total,41355,NA
+2000,Middlesex County,For sale,Single family,Occupied,40903,0.989
+2000,Middlesex County,For sale,Single family,Vacant,452,0.011
+2000,New Haven County,For rent,Multifamily,Total,105303,NA
+2000,New Haven County,For rent,Multifamily,Occupied,98102,0.932
+2000,New Haven County,For rent,Multifamily,Vacant,7201,0.068
+2000,New Haven County,For rent,Single family,Total,20471,NA
+2000,New Haven County,For rent,Single family,Occupied,19412,0.948
+2000,New Haven County,For rent,Single family,Vacant,1059,0.052
+2000,New Haven County,For sale,Multifamily,Total,29452,NA
+2000,New Haven County,For sale,Multifamily,Occupied,28248,0.959
+2000,New Haven County,For sale,Multifamily,Vacant,1204,0.041
+2000,New Haven County,For sale,Single family,Total,174594,NA
+2000,New Haven County,For sale,Single family,Occupied,172715,0.989
+2000,New Haven County,For sale,Single family,Vacant,1879,0.011
+2000,New London County,For rent,Multifamily,Total,25504,NA
+2000,New London County,For rent,Multifamily,Occupied,23536,0.923
+2000,New London County,For rent,Multifamily,Vacant,1968,0.077
+2000,New London County,For rent,Single family,Total,10270,NA
+2000,New London County,For rent,Single family,Occupied,9914,0.965
+2000,New London County,For rent,Single family,Vacant,356,0.035
+2000,New London County,For sale,Multifamily,Total,5087,NA
+2000,New London County,For sale,Multifamily,Occupied,4696,0.923
+2000,New London County,For sale,Multifamily,Vacant,391,0.077
+2000,New London County,For sale,Single family,Total,62354,NA
+2000,New London County,For sale,Single family,Occupied,61610,0.988
+2000,New London County,For sale,Single family,Vacant,744,0.012
+2000,Tolland County,For rent,Multifamily,Total,10783,NA
+2000,Tolland County,For rent,Multifamily,Occupied,10112,0.938
+2000,Tolland County,For rent,Multifamily,Vacant,671,0.062
+2000,Tolland County,For rent,Single family,Total,3504,NA
+2000,Tolland County,For rent,Single family,Occupied,3428,0.978
+2000,Tolland County,For rent,Single family,Vacant,76,0.022
+2000,Tolland County,For sale,Multifamily,Total,1791,NA
+2000,Tolland County,For sale,Multifamily,Occupied,1745,0.974
+2000,Tolland County,For sale,Multifamily,Vacant,46,0.026
+2000,Tolland County,For sale,Single family,Total,26375,NA
+2000,Tolland County,For sale,Single family,Occupied,25989,0.985
+2000,Tolland County,For sale,Single family,Vacant,386,0.015
+2000,Windham County,For rent,Multifamily,Total,10754,NA
+2000,Windham County,For rent,Multifamily,Occupied,10172,0.946
+2000,Windham County,For rent,Multifamily,Vacant,582,0.054
+2000,Windham County,For rent,Single family,Total,2713,NA
+2000,Windham County,For rent,Single family,Occupied,2675,0.986
+2000,Windham County,For rent,Single family,Vacant,38,0.014
+2000,Windham County,For sale,Multifamily,Total,1512,NA
+2000,Windham County,For sale,Multifamily,Occupied,1474,0.975
+2000,Windham County,For sale,Multifamily,Vacant,38,0.025
+2000,Windham County,For sale,Single family,Total,35501,NA
+2000,Windham County,For sale,Single family,Occupied,35149,0.99
+2000,Windham County,For sale,Single family,Vacant,352,0.01
+2010,Fairfield County,For rent,Multifamily,Total,84781,NA
+2010,Fairfield County,For rent,Multifamily,Occupied,78037,0.92
+2010,Fairfield County,For rent,Multifamily,Vacant,6744,0.08
+2010,Fairfield County,For rent,Single family,Total,20491,NA
+2010,Fairfield County,For rent,Single family,Occupied,19345,0.944
+2010,Fairfield County,For rent,Single family,Vacant,1146,0.056
+2010,Fairfield County,For sale,Multifamily,Total,36268,NA
+2010,Fairfield County,For sale,Multifamily,Occupied,34714,0.957
+2010,Fairfield County,For sale,Multifamily,Vacant,1554,0.043
+2010,Fairfield County,For sale,Single family,Total,202039,NA
+2010,Fairfield County,For sale,Single family,Occupied,199687,0.988
+2010,Fairfield County,For sale,Single family,Vacant,2352,0.012
+2010,Hartford County,For rent,Multifamily,Total,110263,NA
+2010,Hartford County,For rent,Multifamily,Occupied,101365,0.919
+2010,Hartford County,For rent,Multifamily,Vacant,8898,0.081
+2010,Hartford County,For rent,Single family,Total,15942,NA
+2010,Hartford County,For rent,Single family,Occupied,15527,0.974
+2010,Hartford County,For rent,Single family,Vacant,415,0.026
+2010,Hartford County,For sale,Multifamily,Total,25748,NA
+2010,Hartford County,For sale,Multifamily,Occupied,25047,0.973
+2010,Hartford County,For sale,Multifamily,Vacant,701,0.027
+2010,Hartford County,For sale,Single family,Total,207453,NA
+2010,Hartford County,For sale,Single family,Occupied,205686,0.991
+2010,Hartford County,For sale,Single family,Vacant,1767,0.009
+2010,Litchfield County,For rent,Multifamily,Total,12188,NA
+2010,Litchfield County,For rent,Multifamily,Occupied,11206,0.919
+2010,Litchfield County,For rent,Multifamily,Vacant,982,0.081
+2010,Litchfield County,For rent,Single family,Total,5484,NA
+2010,Litchfield County,For rent,Single family,Occupied,5145,0.938
+2010,Litchfield County,For rent,Single family,Vacant,339,0.062
+2010,Litchfield County,For sale,Multifamily,Total,5061,NA
+2010,Litchfield County,For sale,Multifamily,Occupied,5021,0.992
+2010,Litchfield County,For sale,Multifamily,Vacant,40,0.008
+2010,Litchfield County,For sale,Single family,Total,55928,NA
+2010,Litchfield County,For sale,Single family,Occupied,55316,0.989
+2010,Litchfield County,For sale,Single family,Vacant,612,0.011
+2010,Middlesex County,For rent,Multifamily,Total,12721,NA
+2010,Middlesex County,For rent,Multifamily,Occupied,11800,0.928
+2010,Middlesex County,For rent,Multifamily,Vacant,921,0.072
+2010,Middlesex County,For rent,Single family,Total,4276,NA
+2010,Middlesex County,For rent,Single family,Occupied,4149,0.97
+2010,Middlesex County,For rent,Single family,Vacant,127,0.03
+2010,Middlesex County,For sale,Multifamily,Total,4140,NA
+2010,Middlesex County,For sale,Multifamily,Occupied,3903,0.943
+2010,Middlesex County,For sale,Multifamily,Vacant,237,0.057
+2010,Middlesex County,For sale,Single family,Total,47941,NA
+2010,Middlesex County,For sale,Single family,Occupied,47124,0.983
+2010,Middlesex County,For sale,Single family,Vacant,817,0.017
+2010,New Haven County,For rent,Multifamily,Total,104446,NA
+2010,New Haven County,For rent,Multifamily,Occupied,96147,0.921
+2010,New Haven County,For rent,Multifamily,Vacant,8299,0.079
+2010,New Haven County,For rent,Single family,Total,19586,NA
+2010,New Haven County,For rent,Single family,Occupied,18587,0.949
+2010,New Haven County,For rent,Single family,Vacant,999,0.051
+2010,New Haven County,For sale,Multifamily,Total,29168,NA
+2010,New Haven County,For sale,Multifamily,Occupied,28253,0.969
+2010,New Haven County,For sale,Multifamily,Vacant,915,0.031
+2010,New Haven County,For sale,Single family,Total,189986,NA
+2010,New Haven County,For sale,Single family,Occupied,187796,0.988
+2010,New Haven County,For sale,Single family,Vacant,2190,0.012
+2010,New London County,For rent,Multifamily,Total,25044,NA
+2010,New London County,For rent,Multifamily,Occupied,23171,0.925
+2010,New London County,For rent,Multifamily,Vacant,1873,0.075
+2010,New London County,For rent,Single family,Total,9073,NA
+2010,New London County,For rent,Single family,Occupied,8848,0.975
+2010,New London County,For rent,Single family,Vacant,225,0.025
+2010,New London County,For sale,Multifamily,Total,5769,NA
+2010,New London County,For sale,Multifamily,Occupied,5469,0.948
+2010,New London County,For sale,Multifamily,Vacant,300,0.052
+2010,New London County,For sale,Single family,Total,69954,NA
+2010,New London County,For sale,Single family,Occupied,69102,0.988
+2010,New London County,For sale,Single family,Vacant,852,0.012
+2010,Tolland County,For rent,Multifamily,Total,10616,NA
+2010,Tolland County,For rent,Multifamily,Occupied,10064,0.948
+2010,Tolland County,For rent,Multifamily,Vacant,552,0.052
+2010,Tolland County,For rent,Single family,Total,2689,NA
+2010,Tolland County,For rent,Single family,Occupied,2669,0.993
+2010,Tolland County,For rent,Single family,Vacant,20,0.007
+2010,Tolland County,For sale,Multifamily,Total,1772,NA
+2010,Tolland County,For sale,Multifamily,Occupied,1671,0.943
+2010,Tolland County,For sale,Multifamily,Vacant,101,0.057
+2010,Tolland County,For sale,Single family,Total,30331,NA
+2010,Tolland County,For sale,Single family,Occupied,29917,0.986
+2010,Tolland County,For sale,Single family,Vacant,414,0.014
+2010,Windham County,For rent,Multifamily,Total,11183,NA
+2010,Windham County,For rent,Multifamily,Occupied,10602,0.948
+2010,Windham County,For rent,Multifamily,Vacant,581,0.052
+2010,Windham County,For rent,Single family,Total,2356,NA
+2010,Windham County,For rent,Single family,Occupied,2263,0.961
+2010,Windham County,For rent,Single family,Vacant,93,0.039
+2010,Windham County,For sale,Multifamily,Total,2014,NA
+2010,Windham County,For sale,Multifamily,Occupied,2014,1
+2010,Windham County,For sale,Multifamily,Vacant,0,0
+2010,Windham County,For sale,Single family,Total,39942,NA
+2010,Windham County,For sale,Single family,Occupied,39574,0.991
+2010,Windham County,For sale,Single family,Vacant,368,0.009
+2018,Fairfield County,For rent,Multifamily,Total,93642,NA
+2018,Fairfield County,For rent,Multifamily,Occupied,88098,0.941
+2018,Fairfield County,For rent,Multifamily,Vacant,5544,0.059
+2018,Fairfield County,For rent,Single family,Total,27294,NA
+2018,Fairfield County,For rent,Single family,Occupied,26278,0.963
+2018,Fairfield County,For rent,Single family,Vacant,1016,0.037
+2018,Fairfield County,For sale,Multifamily,Total,30943,NA
+2018,Fairfield County,For sale,Multifamily,Occupied,30056,0.971
+2018,Fairfield County,For sale,Multifamily,Vacant,887,0.029
+2018,Fairfield County,For sale,Single family,Total,199759,NA
+2018,Fairfield County,For sale,Single family,Occupied,196060,0.981
+2018,Fairfield County,For sale,Single family,Vacant,3699,0.019
+2018,Hartford County,For rent,Multifamily,Total,110827,NA
+2018,Hartford County,For rent,Multifamily,Occupied,103007,0.929
+2018,Hartford County,For rent,Multifamily,Vacant,7820,0.071
+2018,Hartford County,For rent,Single family,Total,23408,NA
+2018,Hartford County,For rent,Single family,Occupied,22694,0.969
+2018,Hartford County,For rent,Single family,Vacant,714,0.031
+2018,Hartford County,For sale,Multifamily,Total,22873,NA
+2018,Hartford County,For sale,Multifamily,Occupied,21927,0.959
+2018,Hartford County,For sale,Multifamily,Vacant,946,0.041
+2018,Hartford County,For sale,Single family,Total,204409,NA
+2018,Hartford County,For sale,Single family,Occupied,201435,0.985
+2018,Hartford County,For sale,Single family,Vacant,2974,0.015
+2018,Litchfield County,For rent,Multifamily,Total,12803,NA
+2018,Litchfield County,For rent,Multifamily,Occupied,12265,0.958
+2018,Litchfield County,For rent,Multifamily,Vacant,538,0.042
+2018,Litchfield County,For rent,Single family,Total,5248,NA
+2018,Litchfield County,For rent,Single family,Occupied,4766,0.908
+2018,Litchfield County,For rent,Single family,Vacant,482,0.092
+2018,Litchfield County,For sale,Multifamily,Total,4897,NA
+2018,Litchfield County,For sale,Multifamily,Occupied,4736,0.967
+2018,Litchfield County,For sale,Multifamily,Vacant,161,0.033
+2018,Litchfield County,For sale,Single family,Total,53154,NA
+2018,Litchfield County,For sale,Single family,Occupied,52220,0.982
+2018,Litchfield County,For sale,Single family,Vacant,934,0.018
+2018,Middlesex County,For rent,Multifamily,Total,14454,NA
+2018,Middlesex County,For rent,Multifamily,Occupied,13093,0.906
+2018,Middlesex County,For rent,Multifamily,Vacant,1361,0.094
+2018,Middlesex County,For rent,Single family,Total,4818,NA
+2018,Middlesex County,For rent,Single family,Occupied,4724,0.98
+2018,Middlesex County,For rent,Single family,Vacant,94,0.02
+2018,Middlesex County,For sale,Multifamily,Total,3190,NA
+2018,Middlesex County,For sale,Multifamily,Occupied,2864,0.898
+2018,Middlesex County,For sale,Multifamily,Vacant,326,0.102
+2018,Middlesex County,For sale,Single family,Total,47060,NA
+2018,Middlesex County,For sale,Single family,Occupied,46212,0.982
+2018,Middlesex County,For sale,Single family,Vacant,848,0.018
+2018,New Haven County,For rent,Multifamily,Total,112806,NA
+2018,New Haven County,For rent,Multifamily,Occupied,103396,0.917
+2018,New Haven County,For rent,Multifamily,Vacant,9410,0.083
+2018,New Haven County,For rent,Single family,Total,24916,NA
+2018,New Haven County,For rent,Single family,Occupied,23832,0.956
+2018,New Haven County,For rent,Single family,Vacant,1084,0.044
+2018,New Haven County,For sale,Multifamily,Total,25568,NA
+2018,New Haven County,For sale,Multifamily,Occupied,24564,0.961
+2018,New Haven County,For sale,Multifamily,Vacant,1004,0.039
+2018,New Haven County,For sale,Single family,Total,180688,NA
+2018,New Haven County,For sale,Single family,Occupied,178064,0.985
+2018,New Haven County,For sale,Single family,Vacant,2624,0.015
+2018,New London County,For rent,Multifamily,Total,26757,NA
+2018,New London County,For rent,Multifamily,Occupied,25164,0.94
+2018,New London County,For rent,Multifamily,Vacant,1593,0.06
+2018,New London County,For rent,Single family,Total,11241,NA
+2018,New London County,For rent,Single family,Occupied,10908,0.97
+2018,New London County,For rent,Single family,Vacant,333,0.03
+2018,New London County,For sale,Multifamily,Total,5454,NA
+2018,New London County,For sale,Multifamily,Occupied,5295,0.971
+2018,New London County,For sale,Multifamily,Vacant,159,0.029
+2018,New London County,For sale,Single family,Total,67729,NA
+2018,New London County,For sale,Single family,Occupied,66035,0.975
+2018,New London County,For sale,Single family,Vacant,1694,0.025
+2018,Tolland County,For rent,Multifamily,Total,9886,NA
+2018,Tolland County,For rent,Multifamily,Occupied,9329,0.944
+2018,Tolland County,For rent,Multifamily,Vacant,557,0.056
+2018,Tolland County,For rent,Single family,Total,4260,NA
+2018,Tolland County,For rent,Single family,Occupied,4082,0.958
+2018,Tolland County,For rent,Single family,Vacant,178,0.042
+2018,Tolland County,For sale,Multifamily,Total,1769,NA
+2018,Tolland County,For sale,Multifamily,Occupied,1769,1
+2018,Tolland County,For sale,Multifamily,Vacant,0,0
+2018,Tolland County,For sale,Single family,Total,29846,NA
+2018,Tolland County,For sale,Single family,Occupied,29283,0.981
+2018,Tolland County,For sale,Single family,Vacant,563,0.019
+2018,Windham County,For rent,Multifamily,Total,12840,NA
+2018,Windham County,For rent,Multifamily,Occupied,12133,0.945
+2018,Windham County,For rent,Multifamily,Vacant,707,0.055
+2018,Windham County,For rent,Single family,Total,3499,NA
+2018,Windham County,For rent,Single family,Occupied,3370,0.963
+2018,Windham County,For rent,Single family,Vacant,129,0.037
+2018,Windham County,For sale,Multifamily,Total,1494,NA
+2018,Windham County,For sale,Multifamily,Occupied,1402,0.938
+2018,Windham County,For sale,Multifamily,Vacant,92,0.062
+2018,Windham County,For sale,Single family,Total,38811,NA
+2018,Windham County,For sale,Single family,Occupied,38313,0.987
+2018,Windham County,For sale,Single family,Vacant,498,0.013
