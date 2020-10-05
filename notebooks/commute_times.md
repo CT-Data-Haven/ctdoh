@@ -1,0 +1,101 @@
+Commute times by tenure
+================
+
+``` r
+library(tidyverse)
+library(ipumsr)
+library(srvyr)
+```
+
+I’m not sure if this makes the most sense or not, but commute times here
+are given as share by time range (mean is a bit misleading… the
+distributions seem bimodal in some places) by county and the state, then
+by tenure.
+
+LODES data are an alternative but a little dated (coupled with the fact
+that most high income workers who often had longer commutes are now
+working from home). Maybe discuss this with the team.
+
+**Important** These are top-coded to end at 179 minutes. About 100
+individuals have commutes that long, and many of them live in FC, so
+these estimates will be a little lower but still quite high given the
+number of people commuting into the city.
+
+The ranges I’m using are:
+
+  - 1 to 15 minutes - short commute
+  - 16 to 30 minutes - average range for CT and US
+  - 31 to 60 minutes - average range for transit riders
+  - 61 to 120 minutes - long commute
+  - More than 120 minutes - very long commute
+
+## Setup PUMS file
+
+``` r
+names <- tibble(countyfip = seq(from = 1, to = 15, by = 2),
+                                name = c("Fairfield County", "Hartford County", "Litchfield County", "Middlesex County", "New Haven County", "New London County", "Tolland County", "Windham County"))
+
+ddi <- read_ipums_ddi("../input_data/usa_00049.xml")
+
+pums <- read_ipums_micro(ddi, verbose = F) %>% 
+    mutate_at(vars(YEAR, OWNERSHP, OWNERSHPD), as_factor) %>% 
+    mutate_at(vars(HHINCOME, PERWT, TRANTIME), as.numeric) %>% 
+    janitor::clean_names() %>% 
+    left_join(names, by = "countyfip") %>% 
+    mutate(ownershp2 = if_else(ownershp == "Rented", "Renter", "Owner")) %>%
+    filter(trantime != 0) %>% 
+    mutate(trantime2 = cut(trantime, breaks = c(0, 15, 30, 60, 120, Inf), labels = c("Up to 15 mins", "16 to 30 mins", "31 to 60 mins", "61 to 120 mins", "More than 120 mins"), right = T)) %>% 
+    select(year, pernum, perwt, name, ownershp, ownershp2, hhincome, trantime, trantime2)
+```
+
+## By county and state, no disaggregation.
+
+\#check this… there should be more than 21k commuters in FC. I think
+trantime might be coded weird
+
+``` r
+des <- pums %>%
+    filter(hhincome != 9999999, ownershp != "N/A") %>% 
+    as_survey_design(., ids = 1, wt = perwt)
+
+total_county <- des %>% 
+    select(name, year) %>% 
+    group_by(name, year) %>% 
+    summarise(commuters = survey_total()) %>% 
+    mutate(trantime2 = "total")
+
+county_com <- des %>%
+    select(name, year, trantime2) %>% 
+    group_by(name, year, trantime2) %>% 
+    summarise(commuters = survey_total())
+
+#state
+#bind
+#write
+```
+
+``` r
+#plot
+```
+
+``` r
+#kable
+```
+
+## By tenure
+
+``` r
+#design
+#county
+#state
+#bind
+#write
+```
+
+``` r
+#plot
+```
+
+``` r
+#kable
+```
