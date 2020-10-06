@@ -1,0 +1,163 @@
+name,year,commute_time,commuters,share
+Connecticut,2000,Total,1570720,NA
+Connecticut,2000,Up to 15 mins,475307,0.303
+Connecticut,2000,16 to 30 mins,605681,0.386
+Connecticut,2000,31 to 60 mins,372365,0.237
+Connecticut,2000,61 to 120 mins,95972,0.061
+Connecticut,2000,More than 120 mins,21395,0.014
+Connecticut,2010,Total,1638069,NA
+Connecticut,2010,Up to 15 mins,472424,0.288
+Connecticut,2010,16 to 30 mins,633732,0.387
+Connecticut,2010,31 to 60 mins,408231,0.249
+Connecticut,2010,61 to 120 mins,109181,0.067
+Connecticut,2010,More than 120 mins,14501,0.009
+Connecticut,2018,Total,1667268,NA
+Connecticut,2018,Up to 15 mins,438571,0.263
+Connecticut,2018,16 to 30 mins,637844,0.383
+Connecticut,2018,31 to 60 mins,438814,0.263
+Connecticut,2018,61 to 120 mins,133721,0.08
+Connecticut,2018,More than 120 mins,18318,0.011
+Fairfield County,2000,Total,397518,NA
+Fairfield County,2000,Up to 15 mins,114239,0.287
+Fairfield County,2000,16 to 30 mins,139224,0.35
+Fairfield County,2000,31 to 60 mins,92712,0.233
+Fairfield County,2000,61 to 120 mins,44223,0.111
+Fairfield County,2000,More than 120 mins,7120,0.018
+Fairfield County,2010,Total,402359,NA
+Fairfield County,2010,Up to 15 mins,110892,0.276
+Fairfield County,2010,16 to 30 mins,142252,0.354
+Fairfield County,2010,31 to 60 mins,96140,0.239
+Fairfield County,2010,61 to 120 mins,48516,0.121
+Fairfield County,2010,More than 120 mins,4559,0.011
+Fairfield County,2018,Total,433176,NA
+Fairfield County,2018,Up to 15 mins,108612,0.251
+Fairfield County,2018,16 to 30 mins,147450,0.34
+Fairfield County,2018,31 to 60 mins,106167,0.245
+Fairfield County,2018,61 to 120 mins,63438,0.146
+Fairfield County,2018,More than 120 mins,7509,0.017
+Hartford County,2000,Total,393440,NA
+Hartford County,2000,Up to 15 mins,121845,0.31
+Hartford County,2000,16 to 30 mins,170426,0.433
+Hartford County,2000,31 to 60 mins,85110,0.216
+Hartford County,2000,61 to 120 mins,11881,0.03
+Hartford County,2000,More than 120 mins,4178,0.011
+Hartford County,2010,Total,411168,NA
+Hartford County,2010,Up to 15 mins,121286,0.295
+Hartford County,2010,16 to 30 mins,180338,0.439
+Hartford County,2010,31 to 60 mins,93830,0.228
+Hartford County,2010,61 to 120 mins,13090,0.032
+Hartford County,2010,More than 120 mins,2624,0.006
+Hartford County,2018,Total,417870,NA
+Hartford County,2018,Up to 15 mins,111683,0.267
+Hartford County,2018,16 to 30 mins,180695,0.432
+Hartford County,2018,31 to 60 mins,105546,0.253
+Hartford County,2018,61 to 120 mins,17111,0.041
+Hartford County,2018,More than 120 mins,2835,0.007
+Litchfield County,2000,Total,89099,NA
+Litchfield County,2000,Up to 15 mins,28291,0.318
+Litchfield County,2000,16 to 30 mins,28663,0.322
+Litchfield County,2000,31 to 60 mins,23781,0.267
+Litchfield County,2000,61 to 120 mins,6734,0.076
+Litchfield County,2000,More than 120 mins,1630,0.018
+Litchfield County,2010,Total,91850,NA
+Litchfield County,2010,Up to 15 mins,27894,0.304
+Litchfield County,2010,16 to 30 mins,27905,0.304
+Litchfield County,2010,31 to 60 mins,27418,0.299
+Litchfield County,2010,61 to 120 mins,7509,0.082
+Litchfield County,2010,More than 120 mins,1124,0.012
+Litchfield County,2018,Total,90533,NA
+Litchfield County,2018,Up to 15 mins,25561,0.282
+Litchfield County,2018,16 to 30 mins,29228,0.323
+Litchfield County,2018,31 to 60 mins,26137,0.289
+Litchfield County,2018,61 to 120 mins,8506,0.094
+Litchfield County,2018,More than 120 mins,1101,0.012
+Middlesex County,2000,Total,76058,NA
+Middlesex County,2000,Up to 15 mins,22254,0.293
+Middlesex County,2000,16 to 30 mins,26540,0.349
+Middlesex County,2000,31 to 60 mins,23526,0.309
+Middlesex County,2000,61 to 120 mins,2938,0.039
+Middlesex County,2000,More than 120 mins,800,0.011
+Middlesex County,2010,Total,79447,NA
+Middlesex County,2010,Up to 15 mins,22970,0.289
+Middlesex County,2010,16 to 30 mins,27531,0.347
+Middlesex County,2010,31 to 60 mins,24553,0.309
+Middlesex County,2010,61 to 120 mins,3766,0.047
+Middlesex County,2010,More than 120 mins,627,0.008
+Middlesex County,2018,Total,81691,NA
+Middlesex County,2018,Up to 15 mins,21988,0.269
+Middlesex County,2018,16 to 30 mins,27792,0.34
+Middlesex County,2018,31 to 60 mins,26794,0.328
+Middlesex County,2018,61 to 120 mins,4407,0.054
+Middlesex County,2018,More than 120 mins,710,0.009
+New Haven County,2000,Total,373476,NA
+New Haven County,2000,Up to 15 mins,115468,0.309
+New Haven County,2000,16 to 30 mins,152042,0.407
+New Haven County,2000,31 to 60 mins,84036,0.225
+New Haven County,2000,61 to 120 mins,17214,0.046
+New Haven County,2000,More than 120 mins,4716,0.013
+New Haven County,2010,Total,398717,NA
+New Haven County,2010,Up to 15 mins,115743,0.29
+New Haven County,2010,16 to 30 mins,159098,0.399
+New Haven County,2010,31 to 60 mins,98252,0.246
+New Haven County,2010,61 to 120 mins,21808,0.055
+New Haven County,2010,More than 120 mins,3816,0.01
+New Haven County,2018,Total,395131,NA
+New Haven County,2018,Up to 15 mins,103938,0.263
+New Haven County,2018,16 to 30 mins,156816,0.397
+New Haven County,2018,31 to 60 mins,105051,0.266
+New Haven County,2018,61 to 120 mins,25303,0.064
+New Haven County,2018,More than 120 mins,4023,0.01
+New London County,2000,Total,121721,NA
+New London County,2000,Up to 15 mins,40953,0.336
+New London County,2000,16 to 30 mins,48263,0.397
+New London County,2000,31 to 60 mins,25344,0.208
+New London County,2000,61 to 120 mins,5833,0.048
+New London County,2000,More than 120 mins,1328,0.011
+New London County,2010,Total,128827,NA
+New London County,2010,Up to 15 mins,40658,0.316
+New London County,2010,16 to 30 mins,52554,0.408
+New London County,2010,31 to 60 mins,27652,0.215
+New London County,2010,61 to 120 mins,7170,0.056
+New London County,2010,More than 120 mins,793,0.006
+New London County,2018,Total,127089,NA
+New London County,2018,Up to 15 mins,37112,0.292
+New London County,2018,16 to 30 mins,53890,0.424
+New London County,2018,31 to 60 mins,27734,0.218
+New London County,2018,61 to 120 mins,7349,0.058
+New London County,2018,More than 120 mins,1004,0.008
+Tolland County,2000,Total,67089,NA
+Tolland County,2000,Up to 15 mins,15742,0.235
+Tolland County,2000,16 to 30 mins,23973,0.357
+Tolland County,2000,31 to 60 mins,23496,0.35
+Tolland County,2000,61 to 120 mins,3026,0.045
+Tolland County,2000,More than 120 mins,852,0.013
+Tolland County,2010,Total,71114,NA
+Tolland County,2010,Up to 15 mins,16399,0.231
+Tolland County,2010,16 to 30 mins,26010,0.366
+Tolland County,2010,31 to 60 mins,24845,0.349
+Tolland County,2010,61 to 120 mins,3377,0.047
+Tolland County,2010,More than 120 mins,483,0.007
+Tolland County,2018,Total,69026,NA
+Tolland County,2018,Up to 15 mins,15005,0.217
+Tolland County,2018,16 to 30 mins,24498,0.355
+Tolland County,2018,31 to 60 mins,25296,0.366
+Tolland County,2018,61 to 120 mins,3545,0.051
+Tolland County,2018,More than 120 mins,682,0.01
+Windham County,2000,Total,52319,NA
+Windham County,2000,Up to 15 mins,16515,0.316
+Windham County,2000,16 to 30 mins,16550,0.316
+Windham County,2000,31 to 60 mins,14360,0.274
+Windham County,2000,61 to 120 mins,4123,0.079
+Windham County,2000,More than 120 mins,771,0.015
+Windham County,2010,Total,54587,NA
+Windham County,2010,Up to 15 mins,16582,0.304
+Windham County,2010,16 to 30 mins,18044,0.331
+Windham County,2010,31 to 60 mins,15541,0.285
+Windham County,2010,61 to 120 mins,3945,0.072
+Windham County,2010,More than 120 mins,475,0.009
+Windham County,2018,Total,52752,NA
+Windham County,2018,Up to 15 mins,14672,0.278
+Windham County,2018,16 to 30 mins,17475,0.331
+Windham County,2018,31 to 60 mins,16089,0.305
+Windham County,2018,61 to 120 mins,4062,0.077
+Windham County,2018,More than 120 mins,454,0.009

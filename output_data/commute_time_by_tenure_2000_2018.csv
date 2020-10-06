@@ -1,0 +1,325 @@
+name,year,tenure,commute_time,commuters,tenuer.x,tenuer.y,share
+Connecticut,2000,Owner,Total,1139038,NA,NA,NA
+Connecticut,2000,Owner,Up to 15 mins,333559,Owner,Owner,0.293
+Connecticut,2000,Owner,16 to 30 mins,435949,Owner,Owner,0.383
+Connecticut,2000,Owner,31 to 60 mins,279514,Owner,Owner,0.245
+Connecticut,2000,Owner,61 to 120 mins,73737,Owner,Owner,0.065
+Connecticut,2000,Owner,More than 120 mins,16279,Owner,Owner,0.014
+Connecticut,2000,Renter,Total,431682,NA,NA,NA
+Connecticut,2000,Renter,Up to 15 mins,141748,Renter,Renter,0.328
+Connecticut,2000,Renter,16 to 30 mins,169732,Renter,Renter,0.393
+Connecticut,2000,Renter,31 to 60 mins,92851,Renter,Renter,0.215
+Connecticut,2000,Renter,61 to 120 mins,22235,Renter,Renter,0.052
+Connecticut,2000,Renter,More than 120 mins,5116,Renter,Renter,0.012
+Connecticut,2010,Owner,Total,1219940,NA,NA,NA
+Connecticut,2010,Owner,Up to 15 mins,339326,Owner,Owner,0.278
+Connecticut,2010,Owner,16 to 30 mins,466916,Owner,Owner,0.383
+Connecticut,2010,Owner,31 to 60 mins,315551,Owner,Owner,0.259
+Connecticut,2010,Owner,61 to 120 mins,86354,Owner,Owner,0.071
+Connecticut,2010,Owner,More than 120 mins,11793,Owner,Owner,0.01
+Connecticut,2010,Renter,Total,418129,NA,NA,NA
+Connecticut,2010,Renter,Up to 15 mins,133098,Renter,Renter,0.318
+Connecticut,2010,Renter,16 to 30 mins,166816,Renter,Renter,0.399
+Connecticut,2010,Renter,31 to 60 mins,92680,Renter,Renter,0.222
+Connecticut,2010,Renter,61 to 120 mins,22827,Renter,Renter,0.055
+Connecticut,2010,Renter,More than 120 mins,2708,Renter,Renter,0.006
+Connecticut,2018,Owner,Total,1179464,NA,NA,NA
+Connecticut,2018,Owner,Up to 15 mins,297433,Owner,Owner,0.252
+Connecticut,2018,Owner,16 to 30 mins,445470,Owner,Owner,0.378
+Connecticut,2018,Owner,31 to 60 mins,325215,Owner,Owner,0.276
+Connecticut,2018,Owner,61 to 120 mins,96569,Owner,Owner,0.082
+Connecticut,2018,Owner,More than 120 mins,14777,Owner,Owner,0.013
+Connecticut,2018,Renter,Total,487804,NA,NA,NA
+Connecticut,2018,Renter,Up to 15 mins,141138,Renter,Renter,0.289
+Connecticut,2018,Renter,16 to 30 mins,192374,Renter,Renter,0.394
+Connecticut,2018,Renter,31 to 60 mins,113599,Renter,Renter,0.233
+Connecticut,2018,Renter,61 to 120 mins,37152,Renter,Renter,0.076
+Connecticut,2018,Renter,More than 120 mins,3541,Renter,Renter,0.007
+Fairfield County,2000,Owner,Total,284472,NA,NA,NA
+Fairfield County,2000,Owner,Up to 15 mins,77884,Owner,Owner,0.274
+Fairfield County,2000,Owner,16 to 30 mins,98589,Owner,Owner,0.347
+Fairfield County,2000,Owner,31 to 60 mins,67162,Owner,Owner,0.236
+Fairfield County,2000,Owner,61 to 120 mins,35119,Owner,Owner,0.123
+Fairfield County,2000,Owner,More than 120 mins,5718,Owner,Owner,0.02
+Fairfield County,2000,Renter,Total,113046,NA,NA,NA
+Fairfield County,2000,Renter,Up to 15 mins,36355,Renter,Renter,0.322
+Fairfield County,2000,Renter,16 to 30 mins,40635,Renter,Renter,0.359
+Fairfield County,2000,Renter,31 to 60 mins,25550,Renter,Renter,0.226
+Fairfield County,2000,Renter,61 to 120 mins,9104,Renter,Renter,0.081
+Fairfield County,2000,Renter,More than 120 mins,1402,Renter,Renter,0.012
+Fairfield County,2010,Owner,Total,293695,NA,NA,NA
+Fairfield County,2010,Owner,Up to 15 mins,78525,Owner,Owner,0.267
+Fairfield County,2010,Owner,16 to 30 mins,101438,Owner,Owner,0.345
+Fairfield County,2010,Owner,31 to 60 mins,70245,Owner,Owner,0.239
+Fairfield County,2010,Owner,61 to 120 mins,39564,Owner,Owner,0.135
+Fairfield County,2010,Owner,More than 120 mins,3923,Owner,Owner,0.013
+Fairfield County,2010,Renter,Total,108664,NA,NA,NA
+Fairfield County,2010,Renter,Up to 15 mins,32367,Renter,Renter,0.298
+Fairfield County,2010,Renter,16 to 30 mins,40814,Renter,Renter,0.376
+Fairfield County,2010,Renter,31 to 60 mins,25895,Renter,Renter,0.238
+Fairfield County,2010,Renter,61 to 120 mins,8952,Renter,Renter,0.082
+Fairfield County,2010,Renter,More than 120 mins,636,Renter,Renter,0.006
+Fairfield County,2018,Owner,Total,294933,NA,NA,NA
+Fairfield County,2018,Owner,Up to 15 mins,70777,Owner,Owner,0.24
+Fairfield County,2018,Owner,16 to 30 mins,98994,Owner,Owner,0.336
+Fairfield County,2018,Owner,31 to 60 mins,73033,Owner,Owner,0.248
+Fairfield County,2018,Owner,61 to 120 mins,46175,Owner,Owner,0.157
+Fairfield County,2018,Owner,More than 120 mins,5954,Owner,Owner,0.02
+Fairfield County,2018,Renter,Total,138243,NA,NA,NA
+Fairfield County,2018,Renter,Up to 15 mins,37835,Renter,Renter,0.274
+Fairfield County,2018,Renter,16 to 30 mins,48456,Renter,Renter,0.351
+Fairfield County,2018,Renter,31 to 60 mins,33134,Renter,Renter,0.24
+Fairfield County,2018,Renter,61 to 120 mins,17263,Renter,Renter,0.125
+Fairfield County,2018,Renter,More than 120 mins,1555,Renter,Renter,0.011
+Hartford County,2000,Owner,Total,278105,NA,NA,NA
+Hartford County,2000,Owner,Up to 15 mins,85180,Owner,Owner,0.306
+Hartford County,2000,Owner,16 to 30 mins,120462,Owner,Owner,0.433
+Hartford County,2000,Owner,31 to 60 mins,61280,Owner,Owner,0.22
+Hartford County,2000,Owner,61 to 120 mins,8341,Owner,Owner,0.03
+Hartford County,2000,Owner,More than 120 mins,2842,Owner,Owner,0.01
+Hartford County,2000,Renter,Total,115335,NA,NA,NA
+Hartford County,2000,Renter,Up to 15 mins,36665,Renter,Renter,0.318
+Hartford County,2000,Renter,16 to 30 mins,49964,Renter,Renter,0.433
+Hartford County,2000,Renter,31 to 60 mins,23830,Renter,Renter,0.207
+Hartford County,2000,Renter,61 to 120 mins,3540,Renter,Renter,0.031
+Hartford County,2000,Renter,More than 120 mins,1336,Renter,Renter,0.012
+Hartford County,2010,Owner,Total,300081,NA,NA,NA
+Hartford County,2010,Owner,Up to 15 mins,86863,Owner,Owner,0.289
+Hartford County,2010,Owner,16 to 30 mins,131612,Owner,Owner,0.439
+Hartford County,2010,Owner,31 to 60 mins,70589,Owner,Owner,0.235
+Hartford County,2010,Owner,61 to 120 mins,8996,Owner,Owner,0.03
+Hartford County,2010,Owner,More than 120 mins,2021,Owner,Owner,0.007
+Hartford County,2010,Renter,Total,111087,NA,NA,NA
+Hartford County,2010,Renter,Up to 15 mins,34423,Renter,Renter,0.31
+Hartford County,2010,Renter,16 to 30 mins,48726,Renter,Renter,0.439
+Hartford County,2010,Renter,31 to 60 mins,23241,Renter,Renter,0.209
+Hartford County,2010,Renter,61 to 120 mins,4094,Renter,Renter,0.037
+Hartford County,2010,Renter,More than 120 mins,603,Renter,Renter,0.005
+Hartford County,2018,Owner,Total,295187,NA,NA,NA
+Hartford County,2018,Owner,Up to 15 mins,77457,Owner,Owner,0.262
+Hartford County,2018,Owner,16 to 30 mins,126016,Owner,Owner,0.427
+Hartford County,2018,Owner,31 to 60 mins,78165,Owner,Owner,0.265
+Hartford County,2018,Owner,61 to 120 mins,11313,Owner,Owner,0.038
+Hartford County,2018,Owner,More than 120 mins,2236,Owner,Owner,0.008
+Hartford County,2018,Renter,Total,122683,NA,NA,NA
+Hartford County,2018,Renter,Up to 15 mins,34226,Renter,Renter,0.279
+Hartford County,2018,Renter,16 to 30 mins,54679,Renter,Renter,0.446
+Hartford County,2018,Renter,31 to 60 mins,27381,Renter,Renter,0.223
+Hartford County,2018,Renter,61 to 120 mins,5798,Renter,Renter,0.047
+Hartford County,2018,Renter,More than 120 mins,599,Renter,Renter,0.005
+Litchfield County,2000,Owner,Total,71452,NA,NA,NA
+Litchfield County,2000,Owner,Up to 15 mins,21831,Owner,Owner,0.306
+Litchfield County,2000,Owner,16 to 30 mins,22892,Owner,Owner,0.32
+Litchfield County,2000,Owner,31 to 60 mins,19685,Owner,Owner,0.275
+Litchfield County,2000,Owner,61 to 120 mins,5597,Owner,Owner,0.078
+Litchfield County,2000,Owner,More than 120 mins,1447,Owner,Owner,0.02
+Litchfield County,2000,Renter,Total,17647,NA,NA,NA
+Litchfield County,2000,Renter,Up to 15 mins,6460,Renter,Renter,0.366
+Litchfield County,2000,Renter,16 to 30 mins,5771,Renter,Renter,0.327
+Litchfield County,2000,Renter,31 to 60 mins,4096,Renter,Renter,0.232
+Litchfield County,2000,Renter,61 to 120 mins,1137,Renter,Renter,0.064
+Litchfield County,2000,Renter,More than 120 mins,183,Renter,Renter,0.01
+Litchfield County,2010,Owner,Total,77277,NA,NA,NA
+Litchfield County,2010,Owner,Up to 15 mins,22728,Owner,Owner,0.294
+Litchfield County,2010,Owner,16 to 30 mins,23360,Owner,Owner,0.302
+Litchfield County,2010,Owner,31 to 60 mins,23416,Owner,Owner,0.303
+Litchfield County,2010,Owner,61 to 120 mins,6798,Owner,Owner,0.088
+Litchfield County,2010,Owner,More than 120 mins,975,Owner,Owner,0.013
+Litchfield County,2010,Renter,Total,14573,NA,NA,NA
+Litchfield County,2010,Renter,Up to 15 mins,5166,Renter,Renter,0.354
+Litchfield County,2010,Renter,16 to 30 mins,4545,Renter,Renter,0.312
+Litchfield County,2010,Renter,31 to 60 mins,4002,Renter,Renter,0.275
+Litchfield County,2010,Renter,61 to 120 mins,711,Renter,Renter,0.049
+Litchfield County,2010,Renter,More than 120 mins,149,Renter,Renter,0.01
+Litchfield County,2018,Owner,Total,73206,NA,NA,NA
+Litchfield County,2018,Owner,Up to 15 mins,18838,Owner,Owner,0.257
+Litchfield County,2018,Owner,16 to 30 mins,24280,Owner,Owner,0.332
+Litchfield County,2018,Owner,31 to 60 mins,21966,Owner,Owner,0.3
+Litchfield County,2018,Owner,61 to 120 mins,7119,Owner,Owner,0.097
+Litchfield County,2018,Owner,More than 120 mins,1003,Owner,Owner,0.014
+Litchfield County,2018,Renter,Total,17327,NA,NA,NA
+Litchfield County,2018,Renter,Up to 15 mins,6723,Renter,Renter,0.388
+Litchfield County,2018,Renter,16 to 30 mins,4948,Renter,Renter,0.286
+Litchfield County,2018,Renter,31 to 60 mins,4171,Renter,Renter,0.241
+Litchfield County,2018,Renter,61 to 120 mins,1387,Renter,Renter,0.08
+Litchfield County,2018,Renter,More than 120 mins,98,Renter,Renter,0.006
+Middlesex County,2000,Owner,Total,58489,NA,NA,NA
+Middlesex County,2000,Owner,Up to 15 mins,16710,Owner,Owner,0.286
+Middlesex County,2000,Owner,16 to 30 mins,19729,Owner,Owner,0.337
+Middlesex County,2000,Owner,31 to 60 mins,19223,Owner,Owner,0.329
+Middlesex County,2000,Owner,61 to 120 mins,2195,Owner,Owner,0.038
+Middlesex County,2000,Owner,More than 120 mins,632,Owner,Owner,0.011
+Middlesex County,2000,Renter,Total,17569,NA,NA,NA
+Middlesex County,2000,Renter,Up to 15 mins,5544,Renter,Renter,0.316
+Middlesex County,2000,Renter,16 to 30 mins,6811,Renter,Renter,0.388
+Middlesex County,2000,Renter,31 to 60 mins,4303,Renter,Renter,0.245
+Middlesex County,2000,Renter,61 to 120 mins,743,Renter,Renter,0.042
+Middlesex County,2000,Renter,More than 120 mins,168,Renter,Renter,0.01
+Middlesex County,2010,Owner,Total,63896,NA,NA,NA
+Middlesex County,2010,Owner,Up to 15 mins,16876,Owner,Owner,0.264
+Middlesex County,2010,Owner,16 to 30 mins,21839,Owner,Owner,0.342
+Middlesex County,2010,Owner,31 to 60 mins,21517,Owner,Owner,0.337
+Middlesex County,2010,Owner,61 to 120 mins,3200,Owner,Owner,0.05
+Middlesex County,2010,Owner,More than 120 mins,464,Owner,Owner,0.007
+Middlesex County,2010,Renter,Total,15551,NA,NA,NA
+Middlesex County,2010,Renter,Up to 15 mins,6094,Renter,Renter,0.392
+Middlesex County,2010,Renter,16 to 30 mins,5692,Renter,Renter,0.366
+Middlesex County,2010,Renter,31 to 60 mins,3036,Renter,Renter,0.195
+Middlesex County,2010,Renter,61 to 120 mins,566,Renter,Renter,0.036
+Middlesex County,2010,Renter,More than 120 mins,163,Renter,Renter,0.01
+Middlesex County,2018,Owner,Total,64169,NA,NA,NA
+Middlesex County,2018,Owner,Up to 15 mins,16448,Owner,Owner,0.256
+Middlesex County,2018,Owner,16 to 30 mins,21356,Owner,Owner,0.333
+Middlesex County,2018,Owner,31 to 60 mins,22047,Owner,Owner,0.344
+Middlesex County,2018,Owner,61 to 120 mins,3701,Owner,Owner,0.058
+Middlesex County,2018,Owner,More than 120 mins,617,Owner,Owner,0.01
+Middlesex County,2018,Renter,Total,17522,NA,NA,NA
+Middlesex County,2018,Renter,Up to 15 mins,5540,Renter,Renter,0.316
+Middlesex County,2018,Renter,16 to 30 mins,6436,Renter,Renter,0.367
+Middlesex County,2018,Renter,31 to 60 mins,4747,Renter,Renter,0.271
+Middlesex County,2018,Renter,61 to 120 mins,706,Renter,Renter,0.04
+Middlesex County,2018,Renter,More than 120 mins,93,Renter,Renter,0.005
+New Haven County,2000,Owner,Total,269177,NA,NA,NA
+New Haven County,2000,Owner,Up to 15 mins,81821,Owner,Owner,0.304
+New Haven County,2000,Owner,16 to 30 mins,108604,Owner,Owner,0.403
+New Haven County,2000,Owner,31 to 60 mins,63073,Owner,Owner,0.234
+New Haven County,2000,Owner,61 to 120 mins,12167,Owner,Owner,0.045
+New Haven County,2000,Owner,More than 120 mins,3512,Owner,Owner,0.013
+New Haven County,2000,Renter,Total,104299,NA,NA,NA
+New Haven County,2000,Renter,Up to 15 mins,33647,Renter,Renter,0.323
+New Haven County,2000,Renter,16 to 30 mins,43438,Renter,Renter,0.416
+New Haven County,2000,Renter,31 to 60 mins,20963,Renter,Renter,0.201
+New Haven County,2000,Renter,61 to 120 mins,5047,Renter,Renter,0.048
+New Haven County,2000,Renter,More than 120 mins,1204,Renter,Renter,0.012
+New Haven County,2010,Owner,Total,290133,NA,NA,NA
+New Haven County,2010,Owner,Up to 15 mins,82039,Owner,Owner,0.283
+New Haven County,2010,Owner,16 to 30 mins,113743,Owner,Owner,0.392
+New Haven County,2010,Owner,31 to 60 mins,74977,Owner,Owner,0.258
+New Haven County,2010,Owner,61 to 120 mins,16450,Owner,Owner,0.057
+New Haven County,2010,Owner,More than 120 mins,2924,Owner,Owner,0.01
+New Haven County,2010,Renter,Total,108584,NA,NA,NA
+New Haven County,2010,Renter,Up to 15 mins,33704,Renter,Renter,0.31
+New Haven County,2010,Renter,16 to 30 mins,45355,Renter,Renter,0.418
+New Haven County,2010,Renter,31 to 60 mins,23275,Renter,Renter,0.214
+New Haven County,2010,Renter,61 to 120 mins,5358,Renter,Renter,0.049
+New Haven County,2010,Renter,More than 120 mins,892,Renter,Renter,0.008
+New Haven County,2018,Owner,Total,270838,NA,NA,NA
+New Haven County,2018,Owner,Up to 15 mins,69671,Owner,Owner,0.257
+New Haven County,2018,Owner,16 to 30 mins,105563,Owner,Owner,0.39
+New Haven County,2018,Owner,31 to 60 mins,76245,Owner,Owner,0.282
+New Haven County,2018,Owner,61 to 120 mins,16253,Owner,Owner,0.06
+New Haven County,2018,Owner,More than 120 mins,3106,Owner,Owner,0.011
+New Haven County,2018,Renter,Total,124293,NA,NA,NA
+New Haven County,2018,Renter,Up to 15 mins,34267,Renter,Renter,0.276
+New Haven County,2018,Renter,16 to 30 mins,51253,Renter,Renter,0.412
+New Haven County,2018,Renter,31 to 60 mins,28806,Renter,Renter,0.232
+New Haven County,2018,Renter,61 to 120 mins,9050,Renter,Renter,0.073
+New Haven County,2018,Renter,More than 120 mins,917,Renter,Renter,0.007
+New London County,2000,Owner,Total,85995,NA,NA,NA
+New London County,2000,Owner,Up to 15 mins,26998,Owner,Owner,0.314
+New London County,2000,Owner,16 to 30 mins,34680,Owner,Owner,0.403
+New London County,2000,Owner,31 to 60 mins,18947,Owner,Owner,0.22
+New London County,2000,Owner,61 to 120 mins,4471,Owner,Owner,0.052
+New London County,2000,Owner,More than 120 mins,899,Owner,Owner,0.01
+New London County,2000,Renter,Total,35726,NA,NA,NA
+New London County,2000,Renter,Up to 15 mins,13955,Renter,Renter,0.391
+New London County,2000,Renter,16 to 30 mins,13583,Renter,Renter,0.38
+New London County,2000,Renter,31 to 60 mins,6397,Renter,Renter,0.179
+New London County,2000,Renter,61 to 120 mins,1362,Renter,Renter,0.038
+New London County,2000,Renter,More than 120 mins,429,Renter,Renter,0.012
+New London County,2010,Owner,Total,95185,NA,NA,NA
+New London County,2010,Owner,Up to 15 mins,28058,Owner,Owner,0.295
+New London County,2010,Owner,16 to 30 mins,39325,Owner,Owner,0.413
+New London County,2010,Owner,31 to 60 mins,21673,Owner,Owner,0.228
+New London County,2010,Owner,61 to 120 mins,5535,Owner,Owner,0.058
+New London County,2010,Owner,More than 120 mins,594,Owner,Owner,0.006
+New London County,2010,Renter,Total,33642,NA,NA,NA
+New London County,2010,Renter,Up to 15 mins,12600,Renter,Renter,0.375
+New London County,2010,Renter,16 to 30 mins,13229,Renter,Renter,0.393
+New London County,2010,Renter,31 to 60 mins,5979,Renter,Renter,0.178
+New London County,2010,Renter,61 to 120 mins,1635,Renter,Renter,0.049
+New London County,2010,Renter,More than 120 mins,199,Renter,Renter,0.006
+New London County,2018,Owner,Total,88668,NA,NA,NA
+New London County,2018,Owner,Up to 15 mins,23971,Owner,Owner,0.27
+New London County,2018,Owner,16 to 30 mins,37588,Owner,Owner,0.424
+New London County,2018,Owner,31 to 60 mins,20507,Owner,Owner,0.231
+New London County,2018,Owner,61 to 120 mins,5743,Owner,Owner,0.065
+New London County,2018,Owner,More than 120 mins,859,Owner,Owner,0.01
+New London County,2018,Renter,Total,38421,NA,NA,NA
+New London County,2018,Renter,Up to 15 mins,13141,Renter,Renter,0.342
+New London County,2018,Renter,16 to 30 mins,16302,Renter,Renter,0.424
+New London County,2018,Renter,31 to 60 mins,7227,Renter,Renter,0.188
+New London County,2018,Renter,61 to 120 mins,1606,Renter,Renter,0.042
+New London County,2018,Renter,More than 120 mins,145,Renter,Renter,0.004
+Tolland County,2000,Owner,Total,52588,NA,NA,NA
+Tolland County,2000,Owner,Up to 15 mins,11407,Owner,Owner,0.217
+Tolland County,2000,Owner,16 to 30 mins,18575,Owner,Owner,0.353
+Tolland County,2000,Owner,31 to 60 mins,19415,Owner,Owner,0.369
+Tolland County,2000,Owner,61 to 120 mins,2542,Owner,Owner,0.048
+Tolland County,2000,Owner,More than 120 mins,649,Owner,Owner,0.012
+Tolland County,2000,Renter,Total,14501,NA,NA,NA
+Tolland County,2000,Renter,Up to 15 mins,4335,Renter,Renter,0.299
+Tolland County,2000,Renter,16 to 30 mins,5398,Renter,Renter,0.372
+Tolland County,2000,Renter,31 to 60 mins,4081,Renter,Renter,0.281
+Tolland County,2000,Renter,61 to 120 mins,484,Renter,Renter,0.033
+Tolland County,2000,Renter,More than 120 mins,203,Renter,Renter,0.014
+Tolland County,2010,Owner,Total,57442,NA,NA,NA
+Tolland County,2010,Owner,Up to 15 mins,12290,Owner,Owner,0.214
+Tolland County,2010,Owner,16 to 30 mins,21662,Owner,Owner,0.377
+Tolland County,2010,Owner,31 to 60 mins,20534,Owner,Owner,0.357
+Tolland County,2010,Owner,61 to 120 mins,2520,Owner,Owner,0.044
+Tolland County,2010,Owner,More than 120 mins,436,Owner,Owner,0.008
+Tolland County,2010,Renter,Total,13672,NA,NA,NA
+Tolland County,2010,Renter,Up to 15 mins,4109,Renter,Renter,0.301
+Tolland County,2010,Renter,16 to 30 mins,4348,Renter,Renter,0.318
+Tolland County,2010,Renter,31 to 60 mins,4311,Renter,Renter,0.315
+Tolland County,2010,Renter,61 to 120 mins,857,Renter,Renter,0.063
+Tolland County,2010,Renter,More than 120 mins,47,Renter,Renter,0.003
+Tolland County,2018,Owner,Total,52530,NA,NA,NA
+Tolland County,2018,Owner,Up to 15 mins,10018,Owner,Owner,0.191
+Tolland County,2018,Owner,16 to 30 mins,18721,Owner,Owner,0.356
+Tolland County,2018,Owner,31 to 60 mins,20203,Owner,Owner,0.385
+Tolland County,2018,Owner,61 to 120 mins,2961,Owner,Owner,0.056
+Tolland County,2018,Owner,More than 120 mins,627,Owner,Owner,0.012
+Tolland County,2018,Renter,Total,16496,NA,NA,NA
+Tolland County,2018,Renter,Up to 15 mins,4987,Renter,Renter,0.302
+Tolland County,2018,Renter,16 to 30 mins,5777,Renter,Renter,0.35
+Tolland County,2018,Renter,31 to 60 mins,5093,Renter,Renter,0.309
+Tolland County,2018,Renter,61 to 120 mins,584,Renter,Renter,0.035
+Tolland County,2018,Renter,More than 120 mins,55,Renter,Renter,0.003
+Windham County,2000,Owner,Total,38760,NA,NA,NA
+Windham County,2000,Owner,Up to 15 mins,11728,Owner,Owner,0.303
+Windham County,2000,Owner,16 to 30 mins,12418,Owner,Owner,0.32
+Windham County,2000,Owner,31 to 60 mins,10729,Owner,Owner,0.277
+Windham County,2000,Owner,61 to 120 mins,3305,Owner,Owner,0.085
+Windham County,2000,Owner,More than 120 mins,580,Owner,Owner,0.015
+Windham County,2000,Renter,Total,13559,NA,NA,NA
+Windham County,2000,Renter,Up to 15 mins,4787,Renter,Renter,0.353
+Windham County,2000,Renter,16 to 30 mins,4132,Renter,Renter,0.305
+Windham County,2000,Renter,31 to 60 mins,3631,Renter,Renter,0.268
+Windham County,2000,Renter,61 to 120 mins,818,Renter,Renter,0.06
+Windham County,2000,Renter,More than 120 mins,191,Renter,Renter,0.014
+Windham County,2010,Owner,Total,42231,NA,NA,NA
+Windham County,2010,Owner,Up to 15 mins,11947,Owner,Owner,0.283
+Windham County,2010,Owner,16 to 30 mins,13937,Owner,Owner,0.33
+Windham County,2010,Owner,31 to 60 mins,12600,Owner,Owner,0.298
+Windham County,2010,Owner,61 to 120 mins,3291,Owner,Owner,0.078
+Windham County,2010,Owner,More than 120 mins,456,Owner,Owner,0.011
+Windham County,2010,Renter,Total,12356,NA,NA,NA
+Windham County,2010,Renter,Up to 15 mins,4635,Renter,Renter,0.375
+Windham County,2010,Renter,16 to 30 mins,4107,Renter,Renter,0.332
+Windham County,2010,Renter,31 to 60 mins,2941,Renter,Renter,0.238
+Windham County,2010,Renter,61 to 120 mins,654,Renter,Renter,0.053
+Windham County,2010,Renter,More than 120 mins,19,Renter,Renter,0.002
+Windham County,2018,Owner,Total,39933,NA,NA,NA
+Windham County,2018,Owner,Up to 15 mins,10253,Owner,Owner,0.257
+Windham County,2018,Owner,16 to 30 mins,12952,Owner,Owner,0.324
+Windham County,2018,Owner,31 to 60 mins,13049,Owner,Owner,0.327
+Windham County,2018,Owner,61 to 120 mins,3304,Owner,Owner,0.083
+Windham County,2018,Owner,More than 120 mins,375,Owner,Owner,0.009
+Windham County,2018,Renter,Total,12819,NA,NA,NA
+Windham County,2018,Renter,Up to 15 mins,4419,Renter,Renter,0.345
+Windham County,2018,Renter,16 to 30 mins,4523,Renter,Renter,0.353
+Windham County,2018,Renter,31 to 60 mins,3040,Renter,Renter,0.237
+Windham County,2018,Renter,61 to 120 mins,758,Renter,Renter,0.059
+Windham County,2018,Renter,More than 120 mins,79,Renter,Renter,0.006
