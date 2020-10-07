@@ -2041,18 +2041,19 @@ household_type_change %>%
     select(-level, -change_from_prev_data_year) %>% 
     pivot_wider(id_cols = c("name", "group"), names_from = year, values_from = value) %>% 
     group_by(name, group) %>% 
-    mutate(diff = (`2018` - `2000`) / `2000`) %>% 
+    mutate(diff = (`2018` - `2000`)) %>%
+    #mutate(diff = (`2018` - `2000`) / `2000`) %>% 
     select(name, group, diff) %>% 
     ggplot(aes(diff, group)) +
     geom_vline(xintercept = 0, size = .25, alpha = .8) +
     geom_col(aes(fill = group), width = .75, position = "identity") +
-    geom_text(aes(label = scales::percent(diff, accuracy = 1)), hjust = "inward", position = "identity", family = "Roboto Condensed", size = 4) +
-    scale_x_continuous(limits = c(-.3, .5),
-                                         expand = expansion(mult = c(.15,.05))) +
-    facet_wrap(facets = "name") +
+    geom_text(aes(label = scales::comma(diff, accuracy = 1)), hjust = "inward", position = "identity", family = "Roboto Condensed", size = 4) +
+    scale_x_continuous(expand = expansion(mult = c(.15,.05))) +
+    facet_wrap(facets = "name", scales = "free_x") +
     hrbrthemes::theme_ipsum_rc() +
     guides(fill = guide_legend(title = "")) +
     labs(title = "Change in households by type, 2000–2018",
+             subtitle = "Connecticut",
              x = "", y = "") +
     theme(plot.title.position = "plot",
                 axis.text.y = element_text(colour = "black"),
