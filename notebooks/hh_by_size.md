@@ -114,3 +114,39 @@ household_size_change %>%
 ## Plots
 
 ![](hh_by_size_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-4.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-5.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-6.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-7.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-8.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-9.png)<!-- -->
+
+``` r
+total_tenure_change <- household_size_change %>% 
+    ungroup() %>% 
+    filter(hhlds == "total", level != "3_towns", year != 2010, tenure != "total") %>% 
+    select(-level, -hhlds, -change_from_prev_data_year) %>% 
+    group_by(name, tenure) %>% 
+    mutate(diff = value - lag(value)) %>% 
+    ungroup() %>% 
+    filter(!is.na(diff)) %>% 
+    select(-year, -value)
+
+write_csv(total_tenure_change, file = "../output_data/total_tenure_change_2000_2018.csv")
+```
+
+``` r
+total_tenure_change %>% 
+    mutate(tenure = str_to_title(tenure)) %>% 
+    ggplot(aes(tenure, diff)) +
+    geom_hline(yintercept = 0, color = "grey50", size = .25) +
+    geom_col(aes(fill = tenure), width = .7, position = position_dodge(.55)) +
+    geom_text(aes(label = scales::comma(diff, accuracy = 1)), position = position_dodge(.75), family = "Roboto Condensed", size = 4, vjust = "inward") +
+    facet_wrap(facets = "name", scales = "free_y") +
+    hrbrthemes::theme_ipsum_rc() +
+    labs(title = "Change in number of households by tenure, 2000–2018",
+             x = "", y = "") +
+    theme(plot.title.position = "plot",
+                legend.position = "none", 
+                panel.grid.major = element_blank(),
+                panel.grid.minor = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                axis.text.y = element_blank(),
+                strip.text.x = element_text(colour = "black", hjust = .5))
+```
+
+![](hh_by_size_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->

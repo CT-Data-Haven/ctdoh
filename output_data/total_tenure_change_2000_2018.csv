@@ -1,0 +1,19 @@
+name,tenure,diff
+Connecticut,owner,37405
+Connecticut,renter,28299
+Fairfield County,owner,4653
+Hartford County,owner,9837
+Litchfield County,owner,3290
+Middlesex County,owner,5037
+New Haven County,owner,2978
+New London County,owner,4897
+Tolland County,owner,3489
+Windham County,owner,3224
+Fairfield County,renter,11606
+Hartford County,renter,4129
+Litchfield County,renter,-854
+Middlesex County,renter,514
+New Haven County,renter,7839
+New London County,renter,2670
+Tolland County,renter,2312
+Windham County,renter,83
