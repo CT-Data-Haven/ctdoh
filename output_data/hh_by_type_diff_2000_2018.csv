@@ -1,0 +1,55 @@
+name,group,diff
+Connecticut,Married with kids,-50529
+Connecticut,Married without kids,34426
+Connecticut,Single with kids,4281
+Connecticut,Living alone,46126
+Connecticut,Other households,31400
+Connecticut,Total households,65704
+Fairfield County,Married with kids,-5582
+Hartford County,Married with kids,-9109
+Litchfield County,Married with kids,-4923
+Middlesex County,Married with kids,-2940
+New Haven County,Married with kids,-17283
+New London County,Married with kids,-5586
+Tolland County,Married with kids,-2490
+Windham County,Married with kids,-2616
+Fairfield County,Married without kids,7709
+Hartford County,Married without kids,4061
+Litchfield County,Married without kids,3005
+Middlesex County,Married without kids,3845
+New Haven County,Married without kids,6738
+New London County,Married without kids,3947
+Tolland County,Married without kids,2760
+Windham County,Married without kids,2361
+Fairfield County,Single with kids,3274
+Hartford County,Single with kids,-56
+Litchfield County,Single with kids,-322
+Middlesex County,Single with kids,507
+New Haven County,Single with kids,-864
+New London County,Single with kids,1248
+Tolland County,Single with kids,224
+Windham County,Single with kids,270
+Fairfield County,Living alone,6709
+Hartford County,Living alone,10091
+Litchfield County,Living alone,2372
+Middlesex County,Living alone,2710
+New Haven County,Living alone,14607
+New London County,Living alone,5006
+Tolland County,Living alone,2655
+Windham County,Living alone,1976
+Fairfield County,Other households,4149
+Hartford County,Other households,8979
+Litchfield County,Other households,2304
+Middlesex County,Other households,1429
+New Haven County,Other households,7619
+New London County,Other households,2952
+Tolland County,Other households,2652
+Windham County,Other households,1316
+Fairfield County,Total households,16259
+Hartford County,Total households,13966
+Litchfield County,Total households,2436
+Middlesex County,Total households,5551
+New Haven County,Total households,10817
+New London County,Total households,7567
+Tolland County,Total households,5801
+Windham County,Total households,3307

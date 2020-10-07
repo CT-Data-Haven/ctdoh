@@ -2028,7 +2028,7 @@ Other households
 </table>
 
 ``` r
-household_type_change %>% 
+plot <- household_type_change %>% 
     ungroup() %>% 
     filter(level != "3_towns") %>% 
     mutate(group = as.character(group),
@@ -2044,6 +2044,9 @@ household_type_change %>%
     mutate(diff = (`2018` - `2000`)) %>%
     #mutate(diff = (`2018` - `2000`) / `2000`) %>% 
     select(name, group, diff) %>% 
+    write_csv(file = "../output_data/hh_by_type_diff_2000_2018.csv")
+
+plot %>% 
     ggplot(aes(diff, group)) +
     geom_vline(xintercept = 0, size = .25, alpha = .8) +
     geom_col(aes(fill = group), width = .75, position = "identity") +
