@@ -61,7 +61,7 @@ components <- bind_rows(ct_components, county_components) %>%
     left_join(period_lut, by = "period") %>% 
     select(year, level, geoid, name, county, var = variable, estimate = value)
 
-write_csv(components, "../output_data/pop_change_components_2010_2018")
+write_csv(components, "../output_data/pop_change_components_2010_2018.csv")
 
 total <- components %>% 
     ungroup() %>% 
