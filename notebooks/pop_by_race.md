@@ -198,6 +198,7 @@ pop_by_race_out %>%
                  `2000` = scales::comma(`2000`, accuracy = 1),
                  `2018` = scales::comma(`2018`, accuracy = 1)) %>% 
     select(Name = name, `Race/ethnic group` = label, `Estimate, 2000` = `2000`, `Estimate, 2018` = `2018`, `Pct. chg. 2000–2018` = lbl_chg) %>% 
+    write_csv(file = "pop_race_change_percent_2000_2018.csv") %>% 
     kableExtra::kable()
 ```
 
