@@ -95,6 +95,9 @@ owner <- size %>%
     calc_shares(group = hhlds, denom = "total", value = value)
 
 write_csv(owner, "../output_data/household_size_owner_2000_2018.csv")
+
+bind <- bind_rows(owner, renter)
+write_csv(bind, file = "../output_data/hh_size_chg_tenure_2000_2018.csv")
 ```
 
 # Calculate change
