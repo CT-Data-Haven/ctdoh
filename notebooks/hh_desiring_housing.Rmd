@@ -652,7 +652,7 @@ Above, we established 86% of Very Low income households were cost burdened, so t
 
 **Note, these would add up to 100% if households with no burden were included, so the chart is read as "16% of very low income households in Connecticut are cost burdened and another 70% are severely cost burdened."**
 
-```{r cb burden by severity dot plot, fig.height=8, fig.width=10}
+```{r cb burden by severity dot plot, fig.height=8, fig.width=10, dpi=300}
 urban_pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
 	
 cb_by_inc_band %>% 
