@@ -20,7 +20,7 @@ minc <- get_acs(
 ddi <- read_ipums_ddi("../input_data/usa_00043.xml")
 
 pums <- read_ipums_micro(ddi, verbose = F)  %>% 
-    mutate_at(vars(YEAR, PUMA, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND, DIFFREM, DIFFPHYS, DIFFMOB, DIFFCARE, DIFFEYE, DIFFHEAR), as_factor) %>% 
+    mutate_at(vars(YEAR, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND, DIFFREM, DIFFPHYS, DIFFMOB, DIFFCARE, DIFFEYE, DIFFHEAR), as_factor) %>% 
     mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
     mutate_at(vars(HHINCOME, OWNCOST, RENTGRS, OCC), as.integer) %>% 
     janitor::clean_names() %>% 
@@ -110,11 +110,17 @@ des <- pums %>%
     filter(pernum == "1", hhincome != 9999999, ownershp != "N/A") %>%
     as_survey_design(., ids = 1, wt = hhwt)
 
+county_hhlds <- des %>%
+    select(hhwt, name, inc_band) %>% 
+    group_by(name, inc_band) %>% 
+    summarise(value = survey_total(hhwt))
+
 ct_hhlds <- des %>%
     select(hhwt, statefip, inc_band) %>% 
     group_by(statefip, inc_band) %>% 
     summarise(value = survey_total(hhwt)) %>% 
-    mutate(name = "Connecticut", level = "1_state") %>% 
+    ungroup() %>% 
+    mutate(name = "Connecticut") %>% 
     select(-statefip)
 
 hh_w_disability <- pums %>%
@@ -131,7 +137,22 @@ ct_inc_band_disability <- des %>%
     ungroup() %>% 
     group_by(name, inc_band)
 
+county_inc_band_disability <- des %>% 
+    mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
+    select(hhwt, name, inc_band, disability) %>% 
+    group_by(name, inc_band, disability) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    ungroup() %>% 
+    group_by(name, inc_band)
+
 ct_total_disability <- ct_inc_band_disability %>% 
+    select(-value_se) %>% 
+  ungroup() %>% 
+    mutate(inc_band = "Total") %>% 
+    group_by(name, inc_band, disability) %>% 
+    summarise(value = sum(value))
+
+county_total_disability <- county_inc_band_disability %>% 
     select(-value_se) %>% 
   ungroup() %>% 
     mutate(inc_band = "Total") %>% 
@@ -140,6 +161,15 @@ ct_total_disability <- ct_inc_band_disability %>%
 
 ct_inc_band_disability <- ct_inc_band_disability %>% 
     bind_rows(ct_total_disability)
+
+hh_disability_county_inc_band <- bind_rows(ct_hhlds, ct_inc_band_disability, county_hhlds, county_inc_band_disability) %>% 
+    mutate(disability = as.character(disability),
+                 disability = if_else(is.na(disability), "TOTAL", disability)) %>% 
+    ungroup() %>% 
+    group_by(name, inc_band) %>% 
+    calc_shares(group = disability, denom = "TOTAL", value = value, moe = value_se)
+
+write_csv(hh_disability_county_inc_band, file = "../output_data/hh_w_disability_by_county_and_inc_band.csv")
 ```
 
 Filters in des limit to just HOH, when we really need to be looking at
@@ -216,7 +246,7 @@ diffhear <- x %>%
 
 hh_disabilities_by_type <- bind_rows(diffcare, diffeye, diffhear, diffmob, diffphys, diffrem)
 
-write_csv(hh_disabilities_by_type, path = "../output_data/hh_disabilities_type.csv")
+write_csv(hh_disabilities_by_type, file = "../output_data/hh_disabilities_type.csv")
 ```
 
 ``` r
@@ -1384,7 +1414,7 @@ hh_disabilities_count_share <- ct_hhlds %>%
     group_by(inc_band) %>% 
     calc_shares(group = disability_type, denom = "total", value = households)
 
-write_csv(hh_disabilities_count_share, path = "../output_data/hh_disabilities_type_count_share.csv")
+write_csv(hh_disabilities_count_share, file = "../output_data/hh_disabilities_type_count_share.csv")
 ```
 
 Taking a slightly different look than the table above, the plot below
@@ -1430,3 +1460,3667 @@ still hold.
 notebook has all the disability tabulations in it.**
 
 ![](disability_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+
+## Add table and plot of households with any member with a disability by income band and county.
+
+![](disability_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+``` r
+hh_disability_county_inc_band %>% 
+    filter(disability != "TOTAL") %>% 
+    mutate(value_se = round(value_se, 0)) %>% 
+    select(name, income_band = inc_band, occupant_w_disability = disability, households = value, households_se = value_se, share) %>% 
+    kable()
+```
+
+<table>
+
+<thead>
+
+<tr>
+
+<th style="text-align:left;">
+
+name
+
+</th>
+
+<th style="text-align:left;">
+
+income\_band
+
+</th>
+
+<th style="text-align:left;">
+
+occupant\_w\_disability
+
+</th>
+
+<th style="text-align:right;">
+
+households
+
+</th>
+
+<th style="text-align:right;">
+
+households\_se
+
+</th>
+
+<th style="text-align:right;">
+
+share
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+484239
+
+</td>
+
+<td style="text-align:right;">
+
+3034
+
+</td>
+
+<td style="text-align:right;">
+
+0.852
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+84087
+
+</td>
+
+<td style="text-align:right;">
+
+1363
+
+</td>
+
+<td style="text-align:right;">
+
+0.148
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+105139
+
+</td>
+
+<td style="text-align:right;">
+
+1777
+
+</td>
+
+<td style="text-align:right;">
+
+0.695
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+46206
+
+</td>
+
+<td style="text-align:right;">
+
+1125
+
+</td>
+
+<td style="text-align:right;">
+
+0.305
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+186625
+
+</td>
+
+<td style="text-align:right;">
+
+2232
+
+</td>
+
+<td style="text-align:right;">
+
+0.805
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+45211
+
+</td>
+
+<td style="text-align:right;">
+
+1058
+
+</td>
+
+<td style="text-align:right;">
+
+0.195
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+164046
+
+</td>
+
+<td style="text-align:right;">
+
+2215
+
+</td>
+
+<td style="text-align:right;">
+
+0.765
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+50444
+
+</td>
+
+<td style="text-align:right;">
+
+1164
+
+</td>
+
+<td style="text-align:right;">
+
+0.235
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+124879
+
+</td>
+
+<td style="text-align:right;">
+
+1940
+
+</td>
+
+<td style="text-align:right;">
+
+0.620
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Connecticut
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+76498
+
+</td>
+
+<td style="text-align:right;">
+
+1510
+
+</td>
+
+<td style="text-align:right;">
+
+0.380
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+124129
+
+</td>
+
+<td style="text-align:right;">
+
+1641
+
+</td>
+
+<td style="text-align:right;">
+
+0.873
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+18072
+
+</td>
+
+<td style="text-align:right;">
+
+626
+
+</td>
+
+<td style="text-align:right;">
+
+0.127
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+27993
+
+</td>
+
+<td style="text-align:right;">
+
+936
+
+</td>
+
+<td style="text-align:right;">
+
+0.732
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+10227
+
+</td>
+
+<td style="text-align:right;">
+
+532
+
+</td>
+
+<td style="text-align:right;">
+
+0.268
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+44416
+
+</td>
+
+<td style="text-align:right;">
+
+1115
+
+</td>
+
+<td style="text-align:right;">
+
+0.830
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+9117
+
+</td>
+
+<td style="text-align:right;">
+
+460
+
+</td>
+
+<td style="text-align:right;">
+
+0.170
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+40256
+
+</td>
+
+<td style="text-align:right;">
+
+1094
+
+</td>
+
+<td style="text-align:right;">
+
+0.785
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+11031
+
+</td>
+
+<td style="text-align:right;">
+
+523
+
+</td>
+
+<td style="text-align:right;">
+
+0.215
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+35859
+
+</td>
+
+<td style="text-align:right;">
+
+1074
+
+</td>
+
+<td style="text-align:right;">
+
+0.649
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+19392
+
+</td>
+
+<td style="text-align:right;">
+
+769
+
+</td>
+
+<td style="text-align:right;">
+
+0.351
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+123517
+
+</td>
+
+<td style="text-align:right;">
+
+1705
+
+</td>
+
+<td style="text-align:right;">
+
+0.848
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+22105
+
+</td>
+
+<td style="text-align:right;">
+
+715
+
+</td>
+
+<td style="text-align:right;">
+
+0.152
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+25494
+
+</td>
+
+<td style="text-align:right;">
+
+856
+
+</td>
+
+<td style="text-align:right;">
+
+0.682
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+11881
+
+</td>
+
+<td style="text-align:right;">
+
+557
+
+</td>
+
+<td style="text-align:right;">
+
+0.318
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+46385
+
+</td>
+
+<td style="text-align:right;">
+
+1127
+
+</td>
+
+<td style="text-align:right;">
+
+0.805
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+11229
+
+</td>
+
+<td style="text-align:right;">
+
+537
+
+</td>
+
+<td style="text-align:right;">
+
+0.195
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+41952
+
+</td>
+
+<td style="text-align:right;">
+
+1138
+
+</td>
+
+<td style="text-align:right;">
+
+0.755
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+13600
+
+</td>
+
+<td style="text-align:right;">
+
+601
+
+</td>
+
+<td style="text-align:right;">
+
+0.245
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+31224
+
+</td>
+
+<td style="text-align:right;">
+
+952
+
+</td>
+
+<td style="text-align:right;">
+
+0.590
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+21676
+
+</td>
+
+<td style="text-align:right;">
+
+810
+
+</td>
+
+<td style="text-align:right;">
+
+0.410
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+25675
+
+</td>
+
+<td style="text-align:right;">
+
+782
+
+</td>
+
+<td style="text-align:right;">
+
+0.853
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+4415
+
+</td>
+
+<td style="text-align:right;">
+
+306
+
+</td>
+
+<td style="text-align:right;">
+
+0.147
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+5725
+
+</td>
+
+<td style="text-align:right;">
+
+389
+
+</td>
+
+<td style="text-align:right;">
+
+0.661
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2930
+
+</td>
+
+<td style="text-align:right;">
+
+284
+
+</td>
+
+<td style="text-align:right;">
+
+0.339
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+12115
+
+</td>
+
+<td style="text-align:right;">
+
+555
+
+</td>
+
+<td style="text-align:right;">
+
+0.827
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2530
+
+</td>
+
+<td style="text-align:right;">
+
+216
+
+</td>
+
+<td style="text-align:right;">
+
+0.173
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+8916
+
+</td>
+
+<td style="text-align:right;">
+
+483
+
+</td>
+
+<td style="text-align:right;">
+
+0.749
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2983
+
+</td>
+
+<td style="text-align:right;">
+
+265
+
+</td>
+
+<td style="text-align:right;">
+
+0.251
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+5551
+
+</td>
+
+<td style="text-align:right;">
+
+372
+
+</td>
+
+<td style="text-align:right;">
+
+0.638
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+3147
+
+</td>
+
+<td style="text-align:right;">
+
+285
+
+</td>
+
+<td style="text-align:right;">
+
+0.362
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+23533
+
+</td>
+
+<td style="text-align:right;">
+
+794
+
+</td>
+
+<td style="text-align:right;">
+
+0.868
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+3572
+
+</td>
+
+<td style="text-align:right;">
+
+291
+
+</td>
+
+<td style="text-align:right;">
+
+0.132
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+5053
+
+</td>
+
+<td style="text-align:right;">
+
+411
+
+</td>
+
+<td style="text-align:right;">
+
+0.668
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2514
+
+</td>
+
+<td style="text-align:right;">
+
+257
+
+</td>
+
+<td style="text-align:right;">
+
+0.332
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+9730
+
+</td>
+
+<td style="text-align:right;">
+
+500
+
+</td>
+
+<td style="text-align:right;">
+
+0.806
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2345
+
+</td>
+
+<td style="text-align:right;">
+
+260
+
+</td>
+
+<td style="text-align:right;">
+
+0.194
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+8474
+
+</td>
+
+<td style="text-align:right;">
+
+533
+
+</td>
+
+<td style="text-align:right;">
+
+0.793
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2206
+
+</td>
+
+<td style="text-align:right;">
+
+244
+
+</td>
+
+<td style="text-align:right;">
+
+0.207
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+5796
+
+</td>
+
+<td style="text-align:right;">
+
+438
+
+</td>
+
+<td style="text-align:right;">
+
+0.612
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+3670
+
+</td>
+
+<td style="text-align:right;">
+
+315
+
+</td>
+
+<td style="text-align:right;">
+
+0.388
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+117929
+
+</td>
+
+<td style="text-align:right;">
+
+1795
+
+</td>
+
+<td style="text-align:right;">
+
+0.846
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+21438
+
+</td>
+
+<td style="text-align:right;">
+
+713
+
+</td>
+
+<td style="text-align:right;">
+
+0.154
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+25916
+
+</td>
+
+<td style="text-align:right;">
+
+931
+
+</td>
+
+<td style="text-align:right;">
+
+0.691
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+11596
+
+</td>
+
+<td style="text-align:right;">
+
+567
+
+</td>
+
+<td style="text-align:right;">
+
+0.309
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+42872
+
+</td>
+
+<td style="text-align:right;">
+
+1177
+
+</td>
+
+<td style="text-align:right;">
+
+0.803
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+10538
+
+</td>
+
+<td style="text-align:right;">
+
+519
+
+</td>
+
+<td style="text-align:right;">
+
+0.197
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+40363
+
+</td>
+
+<td style="text-align:right;">
+
+1197
+
+</td>
+
+<td style="text-align:right;">
+
+0.770
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+12044
+
+</td>
+
+<td style="text-align:right;">
+
+593
+
+</td>
+
+<td style="text-align:right;">
+
+0.230
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+29823
+
+</td>
+
+<td style="text-align:right;">
+
+989
+
+</td>
+
+<td style="text-align:right;">
+
+0.632
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+17337
+
+</td>
+
+<td style="text-align:right;">
+
+729
+
+</td>
+
+<td style="text-align:right;">
+
+0.368
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+35709
+
+</td>
+
+<td style="text-align:right;">
+
+916
+
+</td>
+
+<td style="text-align:right;">
+
+0.818
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+7957
+
+</td>
+
+<td style="text-align:right;">
+
+443
+
+</td>
+
+<td style="text-align:right;">
+
+0.182
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+7315
+
+</td>
+
+<td style="text-align:right;">
+
+469
+
+</td>
+
+<td style="text-align:right;">
+
+0.681
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+3430
+
+</td>
+
+<td style="text-align:right;">
+
+331
+
+</td>
+
+<td style="text-align:right;">
+
+0.319
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+16000
+
+</td>
+
+<td style="text-align:right;">
+
+681
+
+</td>
+
+<td style="text-align:right;">
+
+0.763
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+4979
+
+</td>
+
+<td style="text-align:right;">
+
+376
+
+</td>
+
+<td style="text-align:right;">
+
+0.237
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+13188
+
+</td>
+
+<td style="text-align:right;">
+
+648
+
+</td>
+
+<td style="text-align:right;">
+
+0.746
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+4480
+
+</td>
+
+<td style="text-align:right;">
+
+350
+
+</td>
+
+<td style="text-align:right;">
+
+0.254
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+8267
+
+</td>
+
+<td style="text-align:right;">
+
+519
+
+</td>
+
+<td style="text-align:right;">
+
+0.576
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New London County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+6077
+
+</td>
+
+<td style="text-align:right;">
+
+470
+
+</td>
+
+<td style="text-align:right;">
+
+0.424
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+19237
+
+</td>
+
+<td style="text-align:right;">
+
+752
+
+</td>
+
+<td style="text-align:right;">
+
+0.867
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2959
+
+</td>
+
+<td style="text-align:right;">
+
+251
+
+</td>
+
+<td style="text-align:right;">
+
+0.133
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+4919
+
+</td>
+
+<td style="text-align:right;">
+
+421
+
+</td>
+
+<td style="text-align:right;">
+
+0.736
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+1762
+
+</td>
+
+<td style="text-align:right;">
+
+240
+
+</td>
+
+<td style="text-align:right;">
+
+0.264
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+8299
+
+</td>
+
+<td style="text-align:right;">
+
+514
+
+</td>
+
+<td style="text-align:right;">
+
+0.784
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2281
+
+</td>
+
+<td style="text-align:right;">
+
+242
+
+</td>
+
+<td style="text-align:right;">
+
+0.216
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+5935
+
+</td>
+
+<td style="text-align:right;">
+
+432
+
+</td>
+
+<td style="text-align:right;">
+
+0.738
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2104
+
+</td>
+
+<td style="text-align:right;">
+
+286
+
+</td>
+
+<td style="text-align:right;">
+
+0.262
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+5189
+
+</td>
+
+<td style="text-align:right;">
+
+444
+
+</td>
+
+<td style="text-align:right;">
+
+0.672
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2533
+
+</td>
+
+<td style="text-align:right;">
+
+307
+
+</td>
+
+<td style="text-align:right;">
+
+0.328
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+14510
+
+</td>
+
+<td style="text-align:right;">
+
+620
+
+</td>
+
+<td style="text-align:right;">
+
+0.803
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+High
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+3569
+
+</td>
+
+<td style="text-align:right;">
+
+303
+
+</td>
+
+<td style="text-align:right;">
+
+0.197
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+2724
+
+</td>
+
+<td style="text-align:right;">
+
+297
+
+</td>
+
+<td style="text-align:right;">
+
+0.593
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+1866
+
+</td>
+
+<td style="text-align:right;">
+
+248
+
+</td>
+
+<td style="text-align:right;">
+
+0.407
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+6808
+
+</td>
+
+<td style="text-align:right;">
+
+446
+
+</td>
+
+<td style="text-align:right;">
+
+0.756
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-high
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2192
+
+</td>
+
+<td style="text-align:right;">
+
+246
+
+</td>
+
+<td style="text-align:right;">
+
+0.244
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+4962
+
+</td>
+
+<td style="text-align:right;">
+
+402
+
+</td>
+
+<td style="text-align:right;">
+
+0.713
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Mid-low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+1996
+
+</td>
+
+<td style="text-align:right;">
+
+250
+
+</td>
+
+<td style="text-align:right;">
+
+0.287
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+FALSE
+
+</td>
+
+<td style="text-align:right;">
+
+3170
+
+</td>
+
+<td style="text-align:right;">
+
+320
+
+</td>
+
+<td style="text-align:right;">
+
+0.543
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Very low
+
+</td>
+
+<td style="text-align:left;">
+
+TRUE
+
+</td>
+
+<td style="text-align:right;">
+
+2666
+
+</td>
+
+<td style="text-align:right;">
+
+264
+
+</td>
+
+<td style="text-align:right;">
+
+0.457
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
