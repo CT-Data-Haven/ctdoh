@@ -1,0 +1,145 @@
+name,race2,cost_burden,value,value_se,share,sharemoe
+Connecticut,White,Total,996437,3345.7132395150697,NA,NA
+Connecticut,White,No burden,683761,3189.7338828252296,0.686,0.002
+Connecticut,White,Cost-burdened,171818,2037.8638461535277,0.172,0.002
+Connecticut,White,Severely cost-burdened,140858,1899.266990528831,0.141,0.002
+Connecticut,Black,Total,125094,2102.2513024331615,NA,NA
+Connecticut,Black,No burden,61561,1457.3400305848916,0.492,0.008
+Connecticut,Black,Cost-burdened,30516,1088.883650972563,0.244,0.008
+Connecticut,Black,Severely cost-burdened,33017,1117.7045065050982,0.264,0.008
+Connecticut,Latino,Total,170817,2463.7975053759437,NA,NA
+Connecticut,Latino,No burden,83009,1733.055850241135,0.486,0.007
+Connecticut,Latino,Cost-burdened,41316,1275.0834732634823,0.242,0.007
+Connecticut,Latino,Severely cost-burdened,46492,1304.5385404014223,0.272,0.007
+Connecticut,Other race,Total,75026,1509.958569144135,NA,NA
+Connecticut,Other race,No burden,47968,1189.992594525988,0.639,0.009
+Connecticut,Other race,Cost-burdened,12792,651.4144259578028,0.171,0.008
+Connecticut,Other race,Severely cost-burdened,14266,693.888153469943,0.19,0.008
+Fairfield County,White,Total,233262,2194.6126082974124,NA,NA
+Fairfield County,White,No burden,154321,1783.3333760004396,0.662,0.004
+Fairfield County,White,Cost-burdened,41058,1016.7715765245716,0.176,0.004
+Fairfield County,White,Severely cost-burdened,37883,995.6445857295513,0.162,0.004
+Fairfield County,Black,Total,33220,1085.8356034568053,NA,NA
+Fairfield County,Black,No burden,15084,719.8481127202266,0.454,0.016
+Fairfield County,Black,Cost-burdened,8257,547.702265901999,0.249,0.014
+Fairfield County,Black,Severely cost-burdened,9879,609.0469651422128,0.297,0.016
+Fairfield County,Latino,Total,52636,1340.2370803971157,NA,NA
+Fairfield County,Latino,No burden,22759,847.3205499092064,0.432,0.012
+Fairfield County,Latino,Cost-burdened,14584,748.9151992534414,0.277,0.012
+Fairfield County,Latino,Severely cost-burdened,15293,736.8749899120468,0.291,0.012
+Fairfield County,Other race,Total,21374,774.0342482103483,NA,NA
+Fairfield County,Other race,No burden,13210,577.469958437324,0.618,0.015
+Fairfield County,Other race,Cost-burdened,3688,338.05178356210786,0.173,0.015
+Fairfield County,Other race,Severely cost-burdened,4476,393.5739854132633,0.209,0.017
+Hartford County,White,Total,236013,2216.581882921768,NA,NA
+Hartford County,White,No burden,168710,1890.776143583132,0.715,0.004
+Hartford County,White,Cost-burdened,37298,962.3965070325263,0.158,0.004
+Hartford County,White,Severely cost-burdened,30005,874.8054650139779,0.127,0.004
+Hartford County,Black,Total,40863,1174.3247188142486,NA,NA
+Hartford County,Black,No burden,21078,825.7143171643226,0.516,0.014
+Hartford County,Black,Cost-burdened,10376,628.6024120867884,0.254,0.014
+Hartford County,Black,Severely cost-burdened,9409,562.7342291777773,0.23,0.012
+Hartford County,Latino,Total,50591,1323.1066404373278,NA,NA
+Hartford County,Latino,No burden,25394,950.3372728402384,0.502,0.013
+Hartford County,Latino,Cost-burdened,11018,621.1250745410947,0.218,0.011
+Hartford County,Latino,Severely cost-burdened,14179,695.8597940722926,0.28,0.012
+Hartford County,Other race,Total,21596,809.1913977036085,NA,NA
+Hartford County,Other race,No burden,15007,675.4333713780695,0.695,0.017
+Hartford County,Other race,Cost-burdened,3159,309.3170498526935,0.146,0.013
+Hartford County,Other race,Severely cost-burdened,3430,325.5931469555521,0.159,0.014
+Litchfield County,White,Total,68255,1254.3533563601418,NA,NA
+Litchfield County,White,No burden,47231,1036.4227415925873,0.692,0.008
+Litchfield County,White,Cost-burdened,12095,549.2446257865996,0.177,0.007
+Litchfield County,White,Severely cost-burdened,8929,478.2710705470242,0.131,0.007
+Litchfield County,Black,Total,903,154.04476282643154,NA,NA
+Litchfield County,Black,No burden,599,115.21331069073231,0.663,0.059
+Litchfield County,Black,Cost-burdened,195,92.12264490134804,0.216,0.095
+Litchfield County,Black,Severely cost-burdened,109,44.43939376495378,0.121,0.045
+Litchfield County,Latino,Total,3168,340.1874702134716,NA,NA
+Litchfield County,Latino,No burden,2025,267.1328156323596,0.639,0.049
+Litchfield County,Latino,Cost-burdened,554,143.72176677082211,0.175,0.041
+Litchfield County,Latino,Severely cost-burdened,589,154.22848005516872,0.186,0.044
+Litchfield County,Other race,Total,1661,221.5730712126348,NA,NA
+Litchfield County,Other race,No burden,1125,186.06334301329125,0.677,0.066
+Litchfield County,Other race,Cost-burdened,218,72.10686955681876,0.131,0.04
+Litchfield County,Other race,Severely cost-burdened,318,96.40902238073171,0.191,0.052
+Middlesex County,White,Total,57714,1222.362417707158,NA,NA
+Middlesex County,White,No burden,39895,1005.5835928171888,0.691,0.009
+Middlesex County,White,Cost-burdened,9945,530.6867370419887,0.172,0.008
+Middlesex County,White,Severely cost-burdened,7874,472.9642497405773,0.136,0.008
+Middlesex County,Black,Total,3341,381.49572848386384,NA,NA
+Middlesex County,Black,No burden,1645,254.93450153071376,0.492,0.052
+Middlesex County,Black,Cost-burdened,956,221.3136942689508,0.286,0.058
+Middlesex County,Black,Severely cost-burdened,740,177.95138049064082,0.221,0.047
+Middlesex County,Latino,Total,3097,336.39081078736893,NA,NA
+Middlesex County,Latino,No burden,1711,230.89022938252742,0.552,0.044
+Middlesex County,Latino,Cost-burdened,576,148.27546333938315,0.186,0.043
+Middlesex County,Latino,Severely cost-burdened,810,194.7902621346416,0.262,0.056
+Middlesex County,Other race,Total,2741,337.5769842677377,NA,NA
+Middlesex County,Other race,No burden,1364,215.7552143981162,0.498,0.049
+Middlesex County,Other race,Cost-burdened,734,195.46588366276967,0.268,0.063
+Middlesex County,Other race,Severely cost-burdened,643,171.07764193341876,0.235,0.055
+New Haven County,White,Total,226283,2321.114938393454,NA,NA
+New Haven County,White,No burden,151334,1925.56728291201,0.669,0.005
+New Haven County,White,Cost-burdened,41231,1047.6854228565912,0.182,0.004
+New Haven County,White,Severely cost-burdened,33718,970.947758409847,0.149,0.004
+New Haven County,Black,Total,39815,1229.6779082572245,NA,NA
+New Haven County,Black,No burden,19268,831.8127245012414,0.484,0.015
+New Haven County,Black,Cost-burdened,9405,624.4484894086999,0.236,0.014
+New Haven County,Black,Severely cost-burdened,11142,666.663540520474,0.28,0.014
+New Haven County,Latino,Total,46620,1383.6860336394718,NA,NA
+New Haven County,Latino,No burden,22823,960.2904220293283,0.49,0.015
+New Haven County,Latino,Cost-burdened,11052,706.5375700372325,0.237,0.013
+New Haven County,Latino,Severely cost-burdened,12745,715.9650836290116,0.273,0.013
+New Haven County,Other race,Total,17138,744.3134922916331,NA,NA
+New Haven County,Other race,No burden,10291,568.8337680829732,0.6,0.021
+New Haven County,Other race,Cost-burdened,3317,332.51880919012507,0.194,0.017
+New Haven County,Other race,Severely cost-burdened,3530,349.5558186112832,0.206,0.018
+New London County,White,Total,87282,1438.1432353934947,NA,NA
+New London County,White,No burden,60284,1180.549887153518,0.691,0.007
+New London County,White,Cost-burdened,15636,642.5073364177475,0.179,0.007
+New London County,White,Severely cost-burdened,11362,559.3481055590563,0.13,0.006
+New London County,Black,Total,4750,459.34897221013927,NA,NA
+New London County,Black,No burden,2716,347.15305715103204,0.572,0.048
+New London County,Black,Cost-burdened,942,180.54333426128375,0.198,0.033
+New London County,Black,Severely cost-burdened,1092,240.98949317588165,0.23,0.046
+New London County,Latino,Total,8720,635.6751805184217,NA,NA
+New London County,Latino,No burden,4682,474.454171236029,0.537,0.038
+New London County,Latino,Cost-burdened,2003,300.1823805648362,0.23,0.03
+New London County,Latino,Severely cost-burdened,2035,299.1949588153221,0.233,0.03
+New London County,Other race,Total,6650,487.320350383648,NA,NA
+New London County,Other race,No burden,4643,405.0877024318312,0.698,0.033
+New London County,Other race,Cost-burdened,1043,206.28668759533275,0.157,0.029
+New London County,Other race,Severely cost-burdened,964,176.4179154433757,0.145,0.024
+Tolland County,White,Total,48703,1178.8659002409113,NA,NA
+Tolland County,White,No burden,34653,970.6045875261201,0.712,0.01
+Tolland County,White,Cost-burdened,7684,471.6132143470942,0.158,0.009
+Tolland County,White,Severely cost-burdened,6366,490.31368781146233,0.131,0.01
+Tolland County,Black,Total,1657,328.15186045176335,NA,NA
+Tolland County,Black,No burden,926,255.55582960186962,0.559,0.107
+Tolland County,Black,Cost-burdened,286,123.47897632370574,0.173,0.066
+Tolland County,Black,Severely cost-burdened,445,164.77433122569312,0.269,0.084
+Tolland County,Latino,Total,2218,359.608350058492,NA,NA
+Tolland County,Latino,No burden,1390,301.2207234523852,0.627,0.09
+Tolland County,Latino,Cost-burdened,486,149.10053662024305,0.219,0.057
+Tolland County,Latino,Severely cost-burdened,342,128.02568402461242,0.154,0.052
+Tolland County,Other race,Total,2640,303.47422791704554,NA,NA
+Tolland County,Other race,No burden,1640,243.93596489017665,0.621,0.059
+Tolland County,Other race,Cost-burdened,321,94.43340039625622,0.122,0.033
+Tolland County,Other race,Severely cost-burdened,679,154.03508415801588,0.257,0.05
+Windham County,White,Total,38925,1025.250028060805,NA,NA
+Windham County,White,No burden,27333,844.4711031931461,0.702,0.011
+Windham County,White,Cost-burdened,6871,467.6061825426607,0.177,0.011
+Windham County,White,Severely cost-burdened,4721,359.5041167436834,0.121,0.009
+Windham County,Black,Total,545,143.7674737111406,NA,NA
+Windham County,Black,No burden,245,81.16799416596652,0.45,0.09
+Windham County,Black,Cost-burdened,99,68.70901003928735,0.182,0.117
+Windham County,Black,Severely cost-burdened,201,96.76032483263513,0.369,0.149
+Windham County,Latino,Total,3767,389.7411974522217,NA,NA
+Windham County,Latino,No burden,2225,304.8740887139225,0.591,0.053
+Windham County,Latino,Cost-burdened,1043,206.44175543086575,0.277,0.047
+Windham County,Latino,Severely cost-burdened,499,128.23301733095087,0.132,0.031
+Windham County,Other race,Total,1226,202.50751969328624,NA,NA
+Windham County,Other race,No burden,688,151.94612162224684,0.561,0.082
+Windham County,Other race,Cost-burdened,312,103.62805399582851,0.254,0.073
+Windham County,Other race,Severely cost-burdened,226,84.82557752413153,0.184,0.062

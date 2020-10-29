@@ -1,0 +1,73 @@
+name,disability,cost_burden,value,value_se,share,sharemoe
+Connecticut,FALSE,Total,1064928,3810.890119267763,NA,NA
+Connecticut,FALSE,No burden,710024,3489.117791678337,0.667,0.002
+Connecticut,FALSE,Cost-burdened,192188,2353.90165041143,0.18,0.002
+Connecticut,FALSE,Severely cost-burdened,162716,2197.9113225838996,0.153,0.002
+Connecticut,TRUE,Total,302446,2619.24052042559,NA,NA
+Connecticut,TRUE,No burden,166275,1953.918602776342,0.55,0.004
+Connecticut,TRUE,Cost-burdened,64254,1313.046550588076,0.212,0.004
+Connecticut,TRUE,Severely cost-burdened,71917,1445.9199968508642,0.238,0.004
+Fairfield County,FALSE,Total,272653,2530.7984144183242,NA,NA
+Fairfield County,FALSE,No burden,170743,1967.759880239466,0.626,0.004
+Fairfield County,FALSE,Cost-burdened,52633,1253.87309215878,0.193,0.004
+Fairfield County,FALSE,Severely cost-burdened,49277,1235.6966968139855,0.181,0.004
+Fairfield County,TRUE,Total,67839,1303.7384183773206,NA,NA
+Fairfield County,TRUE,No burden,34631,893.4499503014364,0.51,0.009
+Fairfield County,TRUE,Cost-burdened,14954,649.9255705846138,0.22,0.009
+Fairfield County,TRUE,Severely cost-burdened,18254,720.6807594264718,0.269,0.009
+Hartford County,FALSE,Total,268572,2526.816475102501,NA,NA
+Hartford County,FALSE,No burden,185605,2106.354944405603,0.691,0.004
+Hartford County,FALSE,Cost-burdened,45205,1158.3945417757532,0.168,0.004
+Hartford County,FALSE,Severely cost-burdened,37762,1044.357297808139,0.141,0.004
+Hartford County,TRUE,Total,80491,1433.5163662927998,NA,NA
+Hartford County,TRUE,No burden,44584,1041.7057583745952,0.554,0.008
+Hartford County,TRUE,Cost-burdened,16646,671.6892886092331,0.207,0.007
+Hartford County,TRUE,Severely cost-burdened,19261,757.0162118716233,0.239,0.008
+Litchfield County,FALSE,Total,57982,1186.3488379749185,NA,NA
+Litchfield County,FALSE,No burden,41175,994.0727060205054,0.71,0.009
+Litchfield County,FALSE,Cost-burdened,9602,500.6874469240948,0.166,0.008
+Litchfield County,FALSE,Severely cost-burdened,7205,436.0212850636977,0.124,0.007
+Litchfield County,TRUE,Total,16005,607.8328101535488,NA,NA
+Litchfield County,TRUE,No burden,9805,459.94192662668524,0.613,0.017
+Litchfield County,TRUE,Cost-burdened,3460,293.1308339594705,0.216,0.016
+Litchfield County,TRUE,Severely cost-burdened,2740,271.9903155838017,0.171,0.016
+Middlesex County,FALSE,Total,52586,1223.8438251495627,NA,NA
+Middlesex County,FALSE,No burden,36854,992.0766557673118,0.701,0.009
+Middlesex County,FALSE,Cost-burdened,9203,559.6320738196507,0.175,0.01
+Middlesex County,FALSE,Severely cost-burdened,6529,467.45313925528046,0.124,0.008
+Middlesex County,TRUE,Total,14307,611.9997267585438,NA,NA
+Middlesex County,TRUE,No burden,7761,440.8999725191795,0.542,0.02
+Middlesex County,TRUE,Cost-burdened,3008,278.76687386455797,0.21,0.017
+Middlesex County,TRUE,Severely cost-burdened,3538,322.76959982601056,0.247,0.02
+New Haven County,FALSE,Total,256903,2686.498993783143,NA,NA
+New Haven County,FALSE,No burden,164751,2141.3875921287854,0.641,0.005
+New Haven County,FALSE,Cost-burdened,49233,1289.1996043879426,0.192,0.005
+New Haven County,FALSE,Severely cost-burdened,42919,1208.116035136516,0.167,0.004
+New Haven County,TRUE,Total,72953,1386.9011850120517,NA,NA
+New Haven County,TRUE,No burden,38965,996.2362516793547,0.534,0.009
+New Haven County,TRUE,Cost-burdened,15772,651.6696680932647,0.216,0.008
+New Haven County,TRUE,Severely cost-burdened,18216,742.9541331469253,0.25,0.009
+New London County,FALSE,Total,80479,1464.9654662890084,NA,NA
+New London County,FALSE,No burden,56279,1202.994050919425,0.699,0.008
+New London County,FALSE,Cost-burdened,14009,648.0075630380082,0.174,0.007
+New London County,FALSE,Severely cost-burdened,10191,567.1268226845639,0.127,0.007
+New London County,TRUE,Total,26923,884.6566798223915,NA,NA
+New London County,TRUE,No burden,16046,678.1639897101742,0.596,0.016
+New London County,TRUE,Cost-burdened,5615,398.0989450480873,0.209,0.013
+New London County,TRUE,Severely cost-burdened,5262,412.32063487084275,0.195,0.014
+Tolland County,FALSE,Total,43579,1170.4497628405175,NA,NA
+Tolland County,FALSE,No burden,31454,983.151742456279,0.722,0.012
+Tolland County,FALSE,Cost-burdened,6663,448.86653166803217,0.153,0.009
+Tolland County,FALSE,Severely cost-burdened,5462,462.29487578588464,0.125,0.01
+Tolland County,TRUE,Total,11639,594.8576798863033,NA,NA
+Tolland County,TRUE,No burden,7155,439.7508100608207,0.615,0.021
+Tolland County,TRUE,Cost-burdened,2114,259.7761916701419,0.182,0.02
+Tolland County,TRUE,Severely cost-burdened,2370,306.66233918015166,0.204,0.024
+Windham County,FALSE,Total,32174,962.0842052151515,NA,NA
+Windham County,FALSE,No burden,23163,798.6427587507991,0.72,0.012
+Windham County,FALSE,Cost-burdened,5640,440.0889499597198,0.175,0.013
+Windham County,FALSE,Severely cost-burdened,3371,317.0922614070067,0.105,0.009
+Windham County,TRUE,Total,12289,586.5093940362843,NA,NA
+Windham County,TRUE,No burden,7328,447.4644012648821,0.596,0.023
+Windham County,TRUE,Cost-burdened,2685,288.4234517213966,0.218,0.021
+Windham County,TRUE,Severely cost-burdened,2276,248.56290541680895,0.185,0.018

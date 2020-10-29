@@ -1,0 +1,73 @@
+name,ownershp,cost_burden,value,value_se,share,sharemoe
+Connecticut,Owner,Total,900235,3283.0099649473227,NA,NA
+Connecticut,Owner,No burden,645369,3109.24732398967,0.717,0.002
+Connecticut,Owner,Cost-burdened,148439,1887.4485182342491,0.165,0.002
+Connecticut,Owner,Severely cost-burdened,106427,1629.197963633004,0.118,0.002
+Connecticut,Renter,Total,467139,3659.7208242114466,NA,NA
+Connecticut,Renter,No burden,230930,2683.58670551418,0.494,0.004
+Connecticut,Renter,Cost-burdened,108003,1951.1008945480776,0.231,0.004
+Connecticut,Renter,Severely cost-burdened,128206,2078.9974506236294,0.274,0.004
+Fairfield County,Owner,Total,226116,2129.3269711264584,NA,NA
+Fairfield County,Owner,No burden,152447,1748.1507793861665,0.674,0.004
+Fairfield County,Owner,Cost-burdened,40101,989.8750199155975,0.177,0.004
+Fairfield County,Owner,Severely cost-burdened,33568,924.3133800113113,0.148,0.004
+Fairfield County,Renter,Total,114376,1944.0313531483448,NA,NA
+Fairfield County,Renter,No burden,52927,1294.3537798695402,0.463,0.008
+Fairfield County,Renter,Cost-burdened,27486,1011.7677936575461,0.24,0.008
+Fairfield County,Renter,Severely cost-burdened,33963,1094.8905691124178,0.297,0.008
+Hartford County,Owner,Total,223362,2163.3804356406476,NA,NA
+Hartford County,Owner,No burden,166149,1884.283223110749,0.744,0.004
+Hartford County,Owner,Cost-burdened,34510,933.8111857749202,0.155,0.004
+Hartford County,Owner,Severely cost-burdened,22703,741.0194165102405,0.102,0.003
+Hartford County,Renter,Total,125701,1985.5722107740626,NA,NA
+Hartford County,Renter,No burden,64040,1427.7067226586223,0.509,0.008
+Hartford County,Renter,Cost-burdened,27341,962.5239067353051,0.218,0.007
+Hartford County,Renter,Severely cost-burdened,34320,1056.4629582362195,0.273,0.007
+Litchfield County,Owner,Total,56956,1119.2369459437568,NA,NA
+Litchfield County,Owner,No burden,41811,953.671862136877,0.734,0.009
+Litchfield County,Owner,Cost-burdened,9044,462.7577559515479,0.159,0.008
+Litchfield County,Owner,Severely cost-burdened,6101,385.42703136000284,0.107,0.006
+Litchfield County,Renter,Total,17031,724.8330453742024,NA,NA
+Litchfield County,Renter,No burden,9169,538.2012361303825,0.538,0.022
+Litchfield County,Renter,Cost-burdened,4018,350.0815822213496,0.236,0.018
+Litchfield County,Renter,Severely cost-burdened,3844,340.0652709845719,0.226,0.018
+Middlesex County,Owner,Total,49076,1118.538050617533,NA,NA
+Middlesex County,Owner,No burden,35656,947.1752686460978,0.727,0.01
+Middlesex County,Owner,Cost-burdened,7924,455.5060549977938,0.161,0.009
+Middlesex County,Owner,Severely cost-burdened,5496,401.6049472826341,0.112,0.008
+Middlesex County,Renter,Total,17817,790.3584438172339,NA,NA
+Middlesex County,Renter,No burden,8959,531.4267377112398,0.503,0.02
+Middlesex County,Renter,Cost-burdened,4287,428.47560256728826,0.241,0.022
+Middlesex County,Renter,Severely cost-burdened,4571,401.82509125798464,0.257,0.019
+New Haven County,Owner,Total,202628,2217.6572846500653,NA,NA
+New Haven County,Owner,No burden,142199,1863.110547941104,0.702,0.005
+New Haven County,Owner,Cost-burdened,35541,997.7451220188448,0.175,0.005
+New Haven County,Owner,Severely cost-burdened,24888,848.3835404020581,0.123,0.004
+New Haven County,Renter,Total,127228,2102.8802773051616,NA,NA
+New Haven County,Renter,No burden,61517,1474.0370912346953,0.484,0.008
+New Haven County,Renter,Cost-burdened,29464,1048.2747382335879,0.232,0.007
+New Haven County,Renter,Severely cost-burdened,36247,1138.0588099954593,0.285,0.008
+New London County,Owner,Total,71330,1270.3714553321765,NA,NA
+New London County,Owner,No burden,52910,1094.338805265677,0.742,0.008
+New London County,Owner,Cost-burdened,11049,514.7037586812794,0.155,0.007
+New London County,Owner,Severely cost-burdened,7371,425.74190675589904,0.103,0.006
+New London County,Renter,Total,36072,1151.6963651819613,NA,NA
+New London County,Renter,No burden,19415,844.4176586078228,0.538,0.016
+New London County,Renter,Cost-burdened,8575,560.2965030552538,0.238,0.014
+New London County,Renter,Severely cost-burdened,8082,557.2731942347888,0.224,0.014
+Tolland County,Owner,Total,39715,1011.5272896027236,NA,NA
+Tolland County,Owner,No burden,30901,896.9004179768999,0.778,0.011
+Tolland County,Owner,Cost-burdened,5456,371.5271296584682,0.137,0.009
+Tolland County,Owner,Severely cost-burdened,3358,298.25756803182594,0.085,0.007
+Tolland County,Renter,Total,15503,838.8643778906066,NA,NA
+Tolland County,Renter,No burden,7708,596.581665072142,0.497,0.028
+Tolland County,Renter,Cost-burdened,3321,362.0036912093494,0.214,0.02
+Tolland County,Renter,Severely cost-burdened,4474,467.8243700459379,0.289,0.026
+Windham County,Owner,Total,31052,884.086285890979,NA,NA
+Windham County,Owner,No burden,23296,754.4804720600199,0.75,0.012
+Windham County,Owner,Cost-burdened,4814,374.8437168368473,0.155,0.011
+Windham County,Owner,Severely cost-burdened,2942,278.1699594110704,0.095,0.009
+Windham County,Renter,Total,13411,698.9899684635707,NA,NA
+Windham County,Renter,No burden,7195,518.4146157668469,0.536,0.027
+Windham County,Renter,Cost-burdened,3511,369.33503237524286,0.262,0.024
+Windham County,Renter,Severely cost-burdened,2705,291.47999251523527,0.202,0.019
