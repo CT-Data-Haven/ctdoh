@@ -142,8 +142,8 @@ race_change %>%
 ```
 
 ``` r
-labels <- tibble(var = c("black", "white", "latino", "other_race", "total_pop"),
-                                 label = c("Black, non-Latino", "White, non-Latino", "Latino", "Other race, non-Latino", "Total population"))
+labels <- tibble(var = c("black", "white", "latino", "other_race", "total_pop", "asian"),
+                                 label = c("Black, non-Latino", "White, non-Latino", "Latino", "Other race, non-Latino", "Total population", "Asian, non-Latino"))
 
 pop_by_race_out %>% 
     ungroup() %>% 
@@ -198,7 +198,7 @@ pop_by_race_out %>%
                  `2000` = scales::comma(`2000`, accuracy = 1),
                  `2018` = scales::comma(`2018`, accuracy = 1)) %>% 
     select(Name = name, `Race/ethnic group` = label, `Estimate, 2000` = `2000`, `Estimate, 2018` = `2018`, `Pct. chg. 2000–2018` = lbl_chg) %>% 
-    write_csv(file = "pop_race_change_percent_2000_2018.csv") %>% 
+    write_csv(file = "../output_data/pop_race_change_percent_2000_2018.csv") %>% 
     kableExtra::kable()
 ```
 
@@ -1816,3 +1816,33 @@ pop_by_race_out %>%
 ```
 
 ![](pop_by_race_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+``` r
+pop_by_race_out %>% 
+    ungroup() %>% 
+    filter(year == 2018, level != "3_towns", var != "total_pop") %>% 
+    left_join(labels, by = "var") %>% 
+    mutate(label = as.factor(label) %>% 
+                    fct_relevel(., "White, non-Latino", "Black, non-Latino", "Latino", "Asian, non-Latino", "Other race, non-Latino") %>% 
+                    fct_rev()) %>% 
+    ggplot(aes(estimate, label, group = name)) +
+    geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
+    geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_dodge(.85), hjust = "inward", family = "Lato Regular", size = 4) +
+    scale_x_continuous(labels = scales::comma_format(),
+                                         expand = expansion(mult = c(.15, .1))) +
+    facet_wrap(facets = "name", scales = "free_x") +
+    hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular") +
+    guides(fill = guide_legend(title = "")) +
+    labs(title = "Population by race/ethnicity, 2018",
+             x = "", y = "",
+             caption = str_wrap("'Other Race, non-Latino' includes American Indian/Alaska Native, Native Hawaiian/Pacific Islander, people indicating 'Some Other Race,' and people of two or more races who are non-Latino.", 120)) +
+    theme(plot.title.position = "plot",
+                axis.text.y = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5),
+                panel.grid.minor = element_blank(),
+                panel.grid.major = element_blank(),
+                axis.text.x = element_blank(),
+                legend.position = "none")
+```
+
+![](pop_by_race_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
