@@ -153,3 +153,26 @@ total_tenure_change %>%
 ```
 
 ![](hh_by_size_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+``` r
+bind %>% 
+    filter(hhlds == "total", year == 2018, level != "3_towns") %>% 
+    mutate(tenure = str_to_title(tenure),
+                 tenure = as.factor(tenure)) %>% 
+    ggplot(aes(value, tenure)) +
+    geom_col(aes(fill = tenure), width = .7, position = position_dodge(.75)) +
+    geom_text(aes(label = scales::comma(value, accuracy = 1)), position = position_dodge(.75), family = "Roboto Condensed", size = 4, hjust = 1.05) +
+    facet_wrap(facets = "name", scales = "free_x") +
+    hrbrthemes::theme_ipsum_rc() +
+    labs(title = "Households by homeownership type, 2018",
+             x = "", y = "") +
+    theme(plot.title.position = "plot",
+                legend.position = "none", 
+                panel.grid.major = element_blank(),
+                panel.grid.minor = element_blank(),
+                axis.text.y = element_text(colour = "black"),
+                axis.text.x = element_blank(),
+                strip.text.x = element_text(colour = "black", hjust = .5))
+```
+
+![](hh_by_size_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
