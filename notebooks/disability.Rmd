@@ -60,6 +60,7 @@ pums <- read_ipums_micro(ddi, verbose = F)  %>%
 	mutate_at(vars(YEAR, OWNERSHP, OWNERSHPD, RACE, RACED, HISPAN, HISPAND, DIFFREM, DIFFPHYS, DIFFMOB, DIFFCARE, DIFFEYE, DIFFHEAR), as_factor) %>% 
 	mutate_at(vars(PERWT, HHWT), as.numeric) %>% 
 	mutate_at(vars(HHINCOME, OWNCOST, RENTGRS, OCC), as.integer) %>% 
+	mutate(PUMA = str_pad(PUMA, 5, side = c("left"), pad = "0")) %>% 
 	janitor::clean_names() %>% 
 	left_join(minc, by = "countyfip") %>% 
 	mutate(ratio = hhincome / minc) %>% 
@@ -94,7 +95,6 @@ pums <- read_ipums_micro(ddi, verbose = F)  %>%
 				 	fct_other(keep = c("White", "Black", "Latino"), other_level = "Other race") %>%
 				 	fct_relevel("White", "Black", "Latino", "Other race"))
 ```
-
 
 ```{r}
 #logical flag for any disability
@@ -536,4 +536,68 @@ hh_disability_county_inc_band %>%
 	mutate(value_se = round(value_se, 0)) %>% 
 	select(name, income_band = inc_band, occupant_w_disability = disability, households = value, households_se = value_se, share) %>% 
 	kable()
+```
+
+## PUMA map of share very-low income hh with disability
+
+Need to re-run analysis by PUMA.
+```{r}
+puma_hhlds <- des %>%
+	select(hhwt, puma, inc_band) %>% 
+	group_by(puma, inc_band) %>% 
+	summarise(value = survey_total(hhwt))
+
+puma_inc_band_disability <- des %>% 
+	mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
+	select(hhwt, puma, inc_band, disability) %>% 
+	group_by(puma, inc_band, disability) %>% 
+	summarise(value = survey_total(hhwt)) %>% 
+	ungroup() %>% 
+	group_by(puma, inc_band)
+
+puma_total_inc_band <- puma_inc_band_disability %>% 
+	select(-value_se) %>% 
+  ungroup() %>% 
+	mutate(disability = "Total") %>% 
+	group_by(puma, inc_band, disability) %>% 
+	summarise(value = sum(value))
+
+puma_inc_band_disability <- puma_inc_band_disability %>% 
+	mutate(disability = str_to_sentence(disability)) %>% 
+	bind_rows(puma_total_inc_band) %>% 
+	mutate(disability = as.factor(disability) %>%
+				 	fct_relevel(., "True", "False", "Total")) %>% 
+	ungroup() %>% 
+	group_by(puma, inc_band) %>% 
+	calc_shares(group = disability, denom = "Total", value = value, moe = value_se)
+```
+
+Map
+```{r, fig.height=8, fig.width=8}
+puma_shp <- tigris::pumas(state = 9, cb = T) %>% 
+	left_join(puma_inc_band_disability, by = c("PUMACE10" = "puma"))
+
+county_shp <- tigris::counties(state = "09", cb = T)
+
+puma_shp %>% 
+	filter(inc_band == "Very low" & disability == "True") %>% 
+	ggplot() +
+	geom_sf(aes(fill = share), color = "#696969", show.legend = "line") +
+	geom_sf(data = county_shp, fill = "transparent", color = "black") +
+	geom_sf_label(aes(label = scales::percent(share, accuracy = 1)), size = 2) +
+	coord_sf(ndiscr = 0) +
+	scale_fill_gradient(low = "#cfe8f3", high = "#0a4c6a") +
+	theme(plot.title.position = "plot",
+				legend.position = "none") +
+	labs(title = str_wrap("Connecticut PUMAs by share of very low income households
+												with an occupant with a disability", 60),
+			 x = "", y = "")
+
+```
+
+Write file
+```{r}
+puma_shp %>% 
+	select(PUMACE10, NAME10, inc_band, disability, value, value_se, share) %>%
+	write_csv(file = "../output_data/hh_w_disability_by_puma_and_inc_band.csv")
 ```
