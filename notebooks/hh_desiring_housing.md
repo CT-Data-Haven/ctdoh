@@ -1505,6 +1505,10 @@ burdened.”**
 
 ![](hh_desiring_housing_files/figure-gfm/cb%20burden%20by%20severity%20dot%20plot-1.png)<!-- -->
 
+By request, just SCB households…
+
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
 Quick diversion: is the SCB rate among very low income households
 partially explained by some of these households having housing costs and
 no/negative negative income?

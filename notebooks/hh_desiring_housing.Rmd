@@ -28,6 +28,7 @@ source("../_utils/town2county.R")
 theme_set(theme_ipsum_rc(base_family = "Lato Regular"))
 
 pal <- c("#92c9c5", "#ffe37e", "#ffac8f", "#cb94c4", "#5e63af")
+urban_pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
 
 scale_fill_custom <- function(palette = pal, rev = F) {
   if (rev) {
@@ -631,14 +632,13 @@ cb_rates %>%
 	geom_point(aes(color = inc_band), size = 7.5, alpha = .8) +
 	geom_text(aes(
 		label = percent(share, accuracy = 1)),
-		family = "Roboto Condensed", size = 3.55) +
+		family = "Lato Regular", size = 3.55) +
 	scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
 	guides(color = guide_legend(title = "")) +
-	labs(
-		x = "",
-		y = "",
-		title = "Cost-burden rates for households in each income band") +
-	scale_color_custom() +
+	labs(	x = "", y = "",
+		title = "Cost-burden rates for households in each income band",
+		caption = "Households spending 30% or more income to housing costs.") +
+	scale_color_manual(values = urban_pal) +
 	theme(
 		panel.grid.minor = element_blank(),
 		panel.grid.major.x = element_blank(),
@@ -653,8 +653,6 @@ Above, we established 86% of Very Low income households were cost burdened, so t
 **Note, these would add up to 100% if households with no burden were included, so the chart is read as "16% of very low income households in Connecticut are cost burdened and another 70% are severely cost burdened."**
 
 ```{r cb burden by severity dot plot, fig.height=8, fig.width=10, dpi=300}
-urban_pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
-	
 cb_by_inc_band %>% 
 	ungroup() %>% 
 	filter(!cost_burden %in% c("Total", "No burden")) %>% 
@@ -688,6 +686,36 @@ cb_by_inc_band %>%
 		plot.caption = element_text(colour = "black", size = 8.5),
 		plot.caption.position = "plot")
 ```
+
+By request, just SCB households...
+
+```{r fig.width=8}
+cb_by_inc_band %>% 
+	ungroup() %>% 
+	filter(cost_burden == "Severely cost-burdened") %>% 
+	group_by(level) %>% 
+	mutate(name = as.factor(name) %>% 
+				 	fct_rev()) %>% 
+	ggplot(aes(share, name, group = inc_band)) +
+	geom_point(aes(color = inc_band), size = 7.5, alpha = .8) +
+	geom_text(aes(
+		label = percent(share, accuracy = 1)),
+		family = "Lato Regular", size = 3.55) +
+	scale_x_continuous(expand = expansion(mult = c(.025, .1))) +
+	guides(color = guide_legend(title = "")) +
+	labs(	x = "", y = "",
+		title = "Severe cost-burden rates for households in each income band",
+		caption = "Households spending 50% or more income to housing costs.") +
+	scale_color_manual(values = urban_pal) +
+	theme(
+		panel.grid.minor = element_blank(),
+		panel.grid.major.x = element_blank(),
+		legend.position = "bottom",
+		plot.title.position = "plot",
+		axis.text.x = element_blank(),
+		axis.text.y = element_text(colour = "black"))
+```
+
 
 Quick diversion: is the SCB rate among very low income households partially explained by some of these households having housing costs and no/negative negative income?
 
