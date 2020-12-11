@@ -1,0 +1,145 @@
+name,ownershp,disability,cost_burden,value,value_se,share,sharemoe
+Connecticut,Owned or being bought (loan),FALSE,Total,714903,NA,NA,NA
+Connecticut,Owned or being bought (loan),FALSE,Cost-burdened,112884,1686.4247058100354,0.158,NA
+Connecticut,Owned or being bought (loan),FALSE,No burden,526763,2995.582662120967,0.737,NA
+Connecticut,Owned or being bought (loan),FALSE,Severely cost-burdened,75256,1396.7837146886015,0.105,NA
+Connecticut,Owned or being bought (loan),TRUE,Total,185332,NA,NA,NA
+Connecticut,Owned or being bought (loan),TRUE,Cost-burdened,35555,912.2000436428058,0.192,NA
+Connecticut,Owned or being bought (loan),TRUE,No burden,118606,1569.529009399333,0.64,NA
+Connecticut,Owned or being bought (loan),TRUE,Severely cost-burdened,31171,877.3371850022022,0.168,NA
+Connecticut,Rented,FALSE,Total,350025,NA,NA,NA
+Connecticut,Rented,FALSE,Cost-burdened,79304,1717.6649504189336,0.227,NA
+Connecticut,Rented,FALSE,No burden,183261,2436.093667525428,0.524,NA
+Connecticut,Rented,FALSE,Severely cost-burdened,87460,1751.0641421756359,0.25,NA
+Connecticut,Rented,TRUE,Total,117114,NA,NA,NA
+Connecticut,Rented,TRUE,Cost-burdened,28699,959.6262292432751,0.245,NA
+Connecticut,Rented,TRUE,No burden,47669,1230.6533679113265,0.407,NA
+Connecticut,Rented,TRUE,Severely cost-burdened,40746,1164.876150484506,0.348,NA
+Fairfield County,Owned or being bought (loan),FALSE,Total,183290,NA,NA,NA
+Fairfield County,Owned or being bought (loan),FALSE,Cost-burdened,31896,892.4149360554151,0.174,NA
+Fairfield County,Owned or being bought (loan),FALSE,No burden,126901,1616.6767272975435,0.692,NA
+Fairfield County,Owned or being bought (loan),FALSE,Severely cost-burdened,24493,795.3506248002682,0.134,NA
+Fairfield County,Owned or being bought (loan),TRUE,Total,42826,NA,NA,NA
+Fairfield County,Owned or being bought (loan),TRUE,Cost-burdened,8205,436.87566777164074,0.192,NA
+Fairfield County,Owned or being bought (loan),TRUE,No burden,25546,730.8926459657818,0.597,NA
+Fairfield County,Owned or being bought (loan),TRUE,Severely cost-burdened,9075,477.56463827275076,0.212,NA
+Fairfield County,Rented,FALSE,Total,89363,NA,NA,NA
+Fairfield County,Rented,FALSE,Cost-burdened,20737,891.3622449467069,0.232,NA
+Fairfield County,Rented,FALSE,No burden,43842,1189.9624832526956,0.491,NA
+Fairfield County,Rented,FALSE,Severely cost-burdened,24784,954.7546817844645,0.277,NA
+Fairfield County,Rented,TRUE,Total,25013,NA,NA,NA
+Fairfield County,Rented,TRUE,Cost-burdened,6749,482.8159870030302,0.27,NA
+Fairfield County,Rented,TRUE,No burden,9085,520.2134318576784,0.363,NA
+Fairfield County,Rented,TRUE,Severely cost-burdened,9179,541.9151493551823,0.367,NA
+Hartford County,Owned or being bought (loan),FALSE,Total,178058,NA,NA,NA
+Hartford County,Owned or being bought (loan),FALSE,Cost-burdened,26010,830.0707745339492,0.146,NA
+Hartford County,Owned or being bought (loan),FALSE,No burden,135724,1733.5307714798787,0.762,NA
+Hartford County,Owned or being bought (loan),FALSE,Severely cost-burdened,16324,642.439331861044,0.092,NA
+Hartford County,Owned or being bought (loan),TRUE,Total,45304,NA,NA,NA
+Hartford County,Owned or being bought (loan),TRUE,Cost-burdened,8500,435.02590810334334,0.188,NA
+Hartford County,Owned or being bought (loan),TRUE,No burden,30425,813.8487124838387,0.672,NA
+Hartford County,Owned or being bought (loan),TRUE,Severely cost-burdened,6379,373.2703240495532,0.141,NA
+Hartford County,Rented,FALSE,Total,90514,NA,NA,NA
+Hartford County,Rented,FALSE,Cost-burdened,19195,816.7011799793478,0.212,NA
+Hartford County,Rented,FALSE,No burden,49881,1274.1065745467406,0.551,NA
+Hartford County,Rented,FALSE,Severely cost-burdened,21438,829.3765568530575,0.237,NA
+Hartford County,Rented,TRUE,Total,35187,NA,NA,NA
+Hartford County,Rented,TRUE,Cost-burdened,8146,513.6925583152274,0.232,NA
+Hartford County,Rented,TRUE,No burden,14159,659.5469520491042,0.402,NA
+Hartford County,Rented,TRUE,Severely cost-burdened,12882,660.3561152631872,0.366,NA
+Litchfield County,Owned or being bought (loan),FALSE,Total,45670,NA,NA,NA
+Litchfield County,Owned or being bought (loan),FALSE,Cost-burdened,6896,407.4664683221673,0.151,NA
+Litchfield County,Owned or being bought (loan),FALSE,No burden,34077,872.6828321712816,0.746,NA
+Litchfield County,Owned or being bought (loan),FALSE,Severely cost-burdened,4697,338.04762810501467,0.103,NA
+Litchfield County,Owned or being bought (loan),TRUE,Total,11286,NA,NA,NA
+Litchfield County,Owned or being bought (loan),TRUE,Cost-burdened,2148,220.30739745465385,0.19,NA
+Litchfield County,Owned or being bought (loan),TRUE,No burden,7734,394.18163047016697,0.685,NA
+Litchfield County,Owned or being bought (loan),TRUE,Severely cost-burdened,1404,185.64636671940033,0.124,NA
+Litchfield County,Rented,FALSE,Total,12312,NA,NA,NA
+Litchfield County,Rented,FALSE,Cost-burdened,2706,291.8689990812598,0.22,NA
+Litchfield County,Rented,FALSE,No burden,7098,483.1726888259377,0.577,NA
+Litchfield County,Rented,FALSE,Severely cost-burdened,2508,275.992761634719,0.204,NA
+Litchfield County,Rented,TRUE,Total,4719,NA,NA,NA
+Litchfield County,Rented,TRUE,Cost-burdened,1312,193.57209122145278,0.278,NA
+Litchfield County,Rented,TRUE,No burden,2071,237.95181086139502,0.439,NA
+Litchfield County,Rented,TRUE,Severely cost-burdened,1336,198.91526897481063,0.283,NA
+Middlesex County,Owned or being bought (loan),FALSE,Total,39649,NA,NA,NA
+Middlesex County,Owned or being bought (loan),FALSE,Cost-burdened,5980,401.1706277585952,0.151,NA
+Middlesex County,Owned or being bought (loan),FALSE,No burden,30021,877.2132356531415,0.757,NA
+Middlesex County,Owned or being bought (loan),FALSE,Severely cost-burdened,3648,333.20731947395655,0.092,NA
+Middlesex County,Owned or being bought (loan),TRUE,Total,9427,NA,NA,NA
+Middlesex County,Owned or being bought (loan),TRUE,Cost-burdened,1944,216.5113094547865,0.206,NA
+Middlesex County,Owned or being bought (loan),TRUE,No burden,5635,363.90825059984275,0.598,NA
+Middlesex County,Owned or being bought (loan),TRUE,Severely cost-burdened,1848,224.61155984164884,0.196,NA
+Middlesex County,Rented,FALSE,Total,12937,NA,NA,NA
+Middlesex County,Rented,FALSE,Cost-burdened,3223,390.89136870056353,0.249,NA
+Middlesex County,Rented,FALSE,No burden,6833,469.59870402008403,0.528,NA
+Middlesex County,Rented,FALSE,Severely cost-burdened,2881,328.30319362278146,0.223,NA
+Middlesex County,Rented,TRUE,Total,4880,NA,NA,NA
+Middlesex County,Rented,TRUE,Cost-burdened,1064,175.76235589413454,0.218,NA
+Middlesex County,Rented,TRUE,No burden,2126,249.60544039763295,0.436,NA
+Middlesex County,Rented,TRUE,Severely cost-burdened,1690,231.9877510090013,0.346,NA
+New Haven County,Owned or being bought (loan),FALSE,Total,159554,NA,NA,NA
+New Haven County,Owned or being bought (loan),FALSE,Cost-burdened,26613,883.6743949998288,0.167,NA
+New Haven County,Owned or being bought (loan),FALSE,No burden,115878,1723.9121130619649,0.726,NA
+New Haven County,Owned or being bought (loan),FALSE,Severely cost-burdened,17063,714.7036359951375,0.107,NA
+New Haven County,Owned or being bought (loan),TRUE,Total,43074,NA,NA,NA
+New Haven County,Owned or being bought (loan),TRUE,Cost-burdened,8928,470.4724912487741,0.207,NA
+New Haven County,Owned or being bought (loan),TRUE,No burden,26321,765.3055314850399,0.611,NA
+New Haven County,Owned or being bought (loan),TRUE,Severely cost-burdened,7825,461.2319587382839,0.182,NA
+New Haven County,Rented,FALSE,Total,97349,NA,NA,NA
+New Haven County,Rented,FALSE,Cost-burdened,22620,947.7367728201513,0.232,NA
+New Haven County,Rented,FALSE,No burden,48873,1331.941196270864,0.502,NA
+New Haven County,Rented,FALSE,Severely cost-burdened,25856,980.42769009788606,0.266,NA
+New Haven County,Rented,TRUE,Total,29879,NA,NA,NA
+New Haven County,Rented,TRUE,Cost-burdened,6844,452.835061963316,0.229,NA
+New Haven County,Rented,TRUE,No burden,12644,645.1511057017234,0.423,NA
+New Haven County,Rented,TRUE,Severely cost-burdened,10391,584.4217845906695,0.348,NA
+New London County,Owned or being bought (loan),FALSE,Total,54024,NA,NA,NA
+New London County,Owned or being bought (loan),FALSE,Cost-burdened,7829,428.05094929853374,0.145,NA
+New London County,Owned or being bought (loan),FALSE,No burden,41302,965.5570526952108,0.765,NA
+New London County,Owned or being bought (loan),FALSE,Severely cost-burdened,4893,341.53713514837153,0.091,NA
+New London County,Owned or being bought (loan),TRUE,Total,17306,NA,NA,NA
+New London County,Owned or being bought (loan),TRUE,Cost-burdened,3220,287.06504323960684,0.186,NA
+New London County,Owned or being bought (loan),TRUE,No burden,11608,528.0679904453099,0.671,NA
+New London County,Owned or being bought (loan),TRUE,Severely cost-burdened,2478,254.85675153685673,0.143,NA
+New London County,Rented,FALSE,Total,26455,NA,NA,NA
+New London County,Rented,FALSE,Cost-burdened,6180,487.9103656148783,0.234,NA
+New London County,Rented,FALSE,No burden,14977,729.6670860687037,0.566,NA
+New London County,Rented,FALSE,Severely cost-burdened,5298,453.563036597074,0.2,NA
+New London County,Rented,TRUE,Total,9617,NA,NA,NA
+New London County,Rented,TRUE,Cost-burdened,2395,276.215227702465,0.249,NA
+New London County,Rented,TRUE,No burden,4438,427.2115047448217,0.461,NA
+New London County,Rented,TRUE,Severely cost-burdened,2784,324.4252343631216,0.289,NA
+Tolland County,Owned or being bought (loan),FALSE,Total,31693,NA,NA,NA
+Tolland County,Owned or being bought (loan),FALSE,Cost-burdened,4173,327.5880329797939,0.132,NA
+Tolland County,Owned or being bought (loan),FALSE,No burden,25207,820.6014113777658,0.795,NA
+Tolland County,Owned or being bought (loan),FALSE,Severely cost-burdened,2313,249.7240911250022,0.073,NA
+Tolland County,Owned or being bought (loan),TRUE,Total,8022,NA,NA,NA
+Tolland County,Owned or being bought (loan),TRUE,Cost-burdened,1283,175.698966216046,0.16,NA
+Tolland County,Owned or being bought (loan),TRUE,No burden,5694,367.571472462249,0.71,NA
+Tolland County,Owned or being bought (loan),TRUE,Severely cost-burdened,1045,163.29088559574265,0.13,NA
+Tolland County,Rented,FALSE,Total,11886,NA,NA,NA
+Tolland County,Rented,FALSE,Cost-burdened,2490,307.34595729182865,0.209,NA
+Tolland County,Rented,FALSE,No burden,6247,545.5827877376244,0.526,NA
+Tolland County,Rented,FALSE,Severely cost-burdened,3149,389.3080040088352,0.265,NA
+Tolland County,Rented,TRUE,Total,3617,NA,NA,NA
+Tolland County,Rented,TRUE,Cost-burdened,831,191.425546399928,0.23,NA
+Tolland County,Rented,TRUE,No burden,1461,241.88344584461382,0.404,NA
+Tolland County,Rented,TRUE,Severely cost-burdened,1325,259.6480177555052,0.366,NA
+Windham County,Owned or being bought (loan),FALSE,Total,22965,NA,NA,NA
+Windham County,Owned or being bought (loan),FALSE,Cost-burdened,3487,322.7821064632636,0.152,NA
+Windham County,Owned or being bought (loan),FALSE,No burden,17653,655.5334357212424,0.769,NA
+Windham County,Owned or being bought (loan),FALSE,Severely cost-burdened,1825,231.14192885885478,0.079,NA
+Windham County,Owned or being bought (loan),TRUE,Total,8087,NA,NA,NA
+Windham County,Owned or being bought (loan),TRUE,Cost-burdened,1327,190.9203485602297,0.164,NA
+Windham County,Owned or being bought (loan),TRUE,No burden,5643,377.2771892177338,0.698,NA
+Windham County,Owned or being bought (loan),TRUE,Severely cost-burdened,1117,154.95054488014398,0.138,NA
+Windham County,Rented,FALSE,Total,9209,NA,NA,NA
+Windham County,Rented,FALSE,Cost-burdened,2153,299.5039696104466,0.234,NA
+Windham County,Rented,FALSE,No burden,5510,459.1960950554649,0.598,NA
+Windham County,Rented,FALSE,Severely cost-burdened,1546,217.25750102565627,0.168,NA
+Windham County,Rented,TRUE,Total,4202,NA,NA,NA
+Windham County,Rented,TRUE,Cost-burdened,1358,216.30660459740278,0.323,NA
+Windham County,Rented,TRUE,No burden,1685,241.15475738103137,0.401,NA
+Windham County,Rented,TRUE,Severely cost-burdened,1159,194.44925586510752,0.276,NA

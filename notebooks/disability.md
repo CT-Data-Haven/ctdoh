@@ -5168,7 +5168,7 @@ puma_shp <- tigris::pumas(state = 9, cb = T) %>%
     left_join(puma_inc_band_disability, by = c("PUMACE10" = "puma"))
 ```
 
-    ##   |                                                                              |                                                                      |   0%  |                                                                              |=====================                                                 |  30%  |                                                                              |=================================                                     |  47%  |                                                                              |=======================================================               |  78%  |                                                                              |==================================================================    |  94%  |                                                                              |======================================================================| 100%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |==                                                                    |   3%  |                                                                              |=====================                                                 |  30%  |                                                                              |===========================================                           |  62%  |                                                                              |=============================================                         |  65%  |                                                                              |===================================================================   |  96%  |                                                                              |======================================================================| 100%
 
 ``` r
 county_shp <- tigris::counties(state = "09", cb = T)
@@ -5200,4 +5200,45 @@ Write file
 puma_shp %>% 
     select(PUMACE10, NAME10, inc_band, disability, value, value_se, share) %>%
     write_csv(file = "../output_data/hh_w_disability_by_puma_and_inc_band.csv")
+```
+
+## Cb by disability and tenure
+
+Share cost burdened with occupant with a disability by tenure, as a
+percent of all hh by by tenure with occupant with disability
+
+Denom: total hh by tenure with occ with disability Num: cb hh
+
+``` r
+ct_cb_disability_tenure <- des %>% 
+    mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
+    select(hhwt, ownershp, disability, cost_burden) %>% 
+    mutate(name = "Connecticut") %>% 
+    group_by(name, ownershp, disability, cost_burden) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    ungroup()
+
+county_cb_disability_tenure <- des %>% 
+    mutate(disability = if_else(cbserial %in% hh_w_disability$cbserial, T, F)) %>% 
+    select(hhwt, name, ownershp, disability, cost_burden) %>% 
+    group_by(name, ownershp, disability, cost_burden) %>% 
+    summarise(value = survey_total(hhwt)) %>% 
+    ungroup()
+
+total_tenure_cb <- ct_cb_disability_tenure %>% 
+    bind_rows(county_cb_disability_tenure) %>% 
+    select(-cost_burden, -value_se) %>% 
+    mutate(cost_burden = "Total") %>% 
+    group_by(name, ownershp, disability, cost_burden) %>% 
+    summarise(value = sum(value)) %>% 
+    ungroup()
+    
+    
+cb_tenure_disability <- ct_cb_disability_tenure %>% 
+    bind_rows(county_cb_disability_tenure, total_tenure_cb) %>% 
+    arrange(name, ownershp, cost_burden) %>% 
+    group_by(name, ownershp, disability) %>% 
+    calc_shares(group = cost_burden, denom = "Total", value = value, moe = value_se)
+
+write_csv(cb_tenure_disability, file = "../output_data/cb_tenure_disability.csv")
 ```
