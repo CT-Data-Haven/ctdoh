@@ -15,6 +15,29 @@ library(cwi)
 library(camiller)
 ```
 
+```{r gg etc}
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Collecting and lightly cleaning basic population data for multiple geographies and each year available starting in 2000 through latest available.
 
 # Total pop
@@ -115,16 +138,18 @@ pop_change_all_years <- pop_out %>%
 ```
 
 ```{r fig.height=6}
+pop_out <- read_csv("../output_data/total_pop_1990_2018.csv")
 pop_out %>% 
 	filter(level == "2_counties", year %in% c(1990, 2000, 2010, 2018)) %>% 
 	mutate(year = as.factor(year)) %>% 
 	ggplot(aes(year, estimate, group = name)) +
 	geom_col(aes(fill = name), width = .75, color = "grey95", position = position_stack()) +
-	geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_stack(.5), size = 3.25, family = "Roboto Condensed") +
+	geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_stack(.5), size = 3.25, family = "Lato Regular") +
 	scale_y_continuous(labels = scales::comma_format(),
 										 expand = expansion(mult = c(.01,0))) +
 	scale_x_discrete(expand = expansion(mult = c(0,0))) +
-	hrbrthemes::theme_ipsum_rc() +
+#	hrbrthemes::theme_ipsum_rc() +
+  scale_fill_manual(values = c(pal[1:5], pal[1:3])) ###### come back
 	guides(fill = guide_legend(title = "")) +
 	labs(title = "Population by county, 1990–2018",
 			 x = "", y = "") +
