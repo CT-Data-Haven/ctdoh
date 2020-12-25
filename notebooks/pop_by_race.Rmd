@@ -252,7 +252,7 @@ pop_by_race_out %>%
 										 expand = expansion(mult = c(.15, .1))) +
 	facet_wrap(facets = "name") +
 #	hrbrthemes::theme_ipsum_rc() +
-  scale_fill_manual(values = c(pal[1], pal[2], pal[4], pal[5], pal[3])) +
+  scale_fill_manual(values = rep(pal[1], 5)) +
 	guides(fill = guide_legend(title = "")) +
 	labs(title = "Population change by race/ethnicity, 2000–2018",
 			 x = "", y = "") +
@@ -280,7 +280,7 @@ pop_by_race_out %>%
 										 expand = expansion(mult = c(.15, .1))) +
 	facet_wrap(facets = "name", scales = "free_x") +
 #	hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular") +
-  scale_fill_manual(values = c(pal[1], pal[3], pal[2], pal[4], pal[5])) +
+  scale_fill_manual(values = rep(pal[1], 5)) +
 	guides(fill = guide_legend(title = "")) +
 	labs(title = "Population by race/ethnicity, 2018",
 			 x = "", y = "",
