@@ -15,6 +15,29 @@ library(cwi)
 library(camiller)
 ```
 
+```{r gg etc}
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Collecting and lightly cleaning basic population data for multiple
 geographies and each year available starting in 2000 through latest
 available.
@@ -103,7 +126,8 @@ int_race_county <- intercensal %>%
 	select(year, geoid, name, level, everything()) %>% 
 	pivot_longer(cols = 5:10, names_to = "var", values_to = "estimate") %>% 
 	group_by(year, geoid, name, level) %>% 
-	calc_shares(group = var, value = estimate, denom = "total_pop")
+	calc_shares(group = var, value = estimate, denom = "total_pop") %>% 
+  ungroup()
 
 int_race_ct <- int_race_county %>%
 	select(-name, -level, -geoid, -share) %>% 
@@ -145,6 +169,8 @@ race_change %>%
 labels <- tibble(var = c("black", "white", "latino", "other_race", "total_pop", "asian"),
 								 label = c("Black, non-Latino", "White, non-Latino", "Latino", "Other race, non-Latino", "Total population", "Asian, non-Latino"))
 
+pop_by_race_out <- read_csv("../output_data/pop_by_race_2000_2018.csv")
+
 pop_by_race_out %>% 
 	ungroup() %>% 
 	filter(level != "3_towns", year %in% c(2000, 2010, 2018)) %>% 
@@ -167,7 +193,8 @@ pop_by_race_out %>%
 	scale_y_continuous(labels = scales::percent_format()) +
 	scale_x_discrete(expand = expansion(mult = c(0.05,0.05))) +
 	facet_wrap(facets = "name") +
-	hrbrthemes::theme_ipsum_rc() +
+#	hrbrthemes::theme_ipsum_rc() +
+  scale_color_manual(values = c(pal[5], pal[4], pal[2], pal[1])) +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
 	labs(title = "Population by race/ethnicity, 2000–2018",
 			 x = "", y = "") +
@@ -219,12 +246,13 @@ pop_by_race_out %>%
 	ggplot(aes(pct_chg, label)) +
 	geom_vline(xintercept = 0, size = .25, alpha = .8) +
 	geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
-	geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Roboto Condensed", size = 4) +
+	geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Lato Regular", size = 4) +
 	scale_x_continuous(limits = c(-.25, 2),
 										 labels = scales::percent_format(),
 										 expand = expansion(mult = c(.15, .1))) +
 	facet_wrap(facets = "name") +
-	hrbrthemes::theme_ipsum_rc() +
+#	hrbrthemes::theme_ipsum_rc() +
+  scale_fill_manual(values = c(pal[1], pal[2], pal[4], pal[5], pal[3])) +
 	guides(fill = guide_legend(title = "")) +
 	labs(title = "Population change by race/ethnicity, 2000–2018",
 			 x = "", y = "") +
@@ -251,7 +279,8 @@ pop_by_race_out %>%
 	scale_x_continuous(labels = scales::comma_format(),
 										 expand = expansion(mult = c(.15, .1))) +
 	facet_wrap(facets = "name", scales = "free_x") +
-	hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular") +
+#	hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular") +
+  scale_fill_manual(values = c(pal[1], pal[3], pal[2], pal[4], pal[5])) +
 	guides(fill = guide_legend(title = "")) +
 	labs(title = "Population by race/ethnicity, 2018",
 			 x = "", y = "",
