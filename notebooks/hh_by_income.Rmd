@@ -18,6 +18,29 @@ library(srvyr)
 library(blscrapeR)
 ```
 
+```{r gg etc}
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Using the income ranges from hh desiring housing, look at change in total households by those 2018 income thresholds.
 
 Actually (or maybe in addition), maybe what I want to do is sum up the number of households who would have been in the income bands over time. So how many Very Low income households (i.e., <= 30% county median income) in each year regardless of what that income value would be.
@@ -101,6 +124,7 @@ hh_by_inc_band_2000_2018 %>%
 	scale_x_discrete(expand = expansion(mult = c(.04, .04))) +
 	facet_wrap(facets = "name", scales = "free_y") +
 	hrbrthemes::theme_ipsum_rc() +
+  scale_color_custom(palette = c(pal[1:5]), rev=T) +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
 	labs(title = "Count of households in each income band, 2000–2018",
 			 x = "", y = "") +
@@ -160,7 +184,7 @@ state_hh_by_2018_inc_band <- county_hh_by_2018_inc_band %>%
 	mutate(name = "Connecticut") %>% 
 	ungroup()
 
-hh_by_2018_inc_band <- bind_rows(county_hh_by_2018_inc_band, state_hh_by_2018_inc_band) %>% 
+hh_by_2018_inc_band <- bind_rows(county_hh_by_2018_inc_band, state_hh_by_2018_inc_band) %>%
 	arrange(year, name) %>% 
 	mutate(name = as.factor(name))
 ```
@@ -177,6 +201,7 @@ hh_by_2018_inc_band %>%
 	scale_x_discrete(expand = expansion(mult = c(.04, .04))) +
 	facet_wrap(facets = "name", scales = "free_y") +
 	hrbrthemes::theme_ipsum_rc() +
+  scale_color_custom(palette = c(pal[1:5]), rev=T) +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
 	labs(title = "Count of households by 2018 income band",
 			 x = "", y = "") +
