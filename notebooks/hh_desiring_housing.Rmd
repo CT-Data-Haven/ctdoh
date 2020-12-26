@@ -278,6 +278,7 @@ hh_by_inc_band %>%
 
 ```{r hh by inc band table}
 kable(hh_by_inc_band %>% 
+        ungroup() %>% 
 	mutate(level = fct_rev(level)) %>% 
 	arrange(level) %>% 
 	select(Name = name, inc_band, value) %>% 
@@ -337,6 +338,7 @@ In the charts below, I'm considering race/ethnicity of head of household. Statew
 
 ```{r hh by inc band by race bar charts, fig.width=10, fig.height=10}
 hh_by_race_inc_band %>% 
+  ungroup() %>% 
 	filter(inc_band != "Total") %>% 
 	mutate(race2 = fct_rev(race2)) %>% 
 	ggplot(aes(share, race2, group = race2)) +

@@ -1,6 +1,8 @@
 ---
 title: "Households by type"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -13,6 +15,13 @@ library(tidycensus)
 library(janitor)
 library(cwi)
 library(camiller)
+```
+
+```{r gg etc}
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
 ```
 
 These don't change much year over year, so I think 2000, 2010, and 2018 should be sufficient to make our point.
@@ -91,7 +100,6 @@ household_type_change %>%
 
 ```{r fig.height=5, fig.width=6.25}
 set.seed(13)
-
 household_type_change %>% 
 	ungroup() %>% 
 	mutate(group = as.character(group),
@@ -107,11 +115,11 @@ household_type_change %>%
 	filter(name == "Connecticut") %>% 
 	ggplot(aes(year, value, group = group)) +
 	geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
-	geom_point(aes(color = group), size = 4, alpha = .8) +
-	geom_line(aes(color = group), size = 1, alpha = .8) +
-	ggrepel::geom_text_repel(aes(label = scales::comma(value, accuracy = 1)), segment.colour = NA, vjust = -1.4, family = "Roboto Condensed") +
+	geom_point(size = 4, alpha = .8, color = pal[1]) +
+	geom_line(size = 1, alpha = .8, color = pal[1]) +
+	ggrepel::geom_text_repel(aes(label = scales::comma(value, accuracy = 1)), segment.colour = NA, vjust = -1.4, family = "Lato Regular") +
 	scale_y_continuous(expand = expansion(mult = c(.1, .1))) +
-	hrbrthemes::theme_ipsum_rc() +
+  hrbrthemes::theme_ipsum_rc() +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
 	labs(title = "Households by type, 2000–2018",
 			 subtitle = "Connecticut",
@@ -169,8 +177,8 @@ plot <- household_type_change %>%
 plot %>% 
 	ggplot(aes(diff, group)) +
 	geom_vline(xintercept = 0, size = .25, alpha = .8) +
-	geom_col(aes(fill = group), width = .75, position = "identity") +
-	geom_text(aes(label = scales::comma(diff, accuracy = 1)), hjust = "inward", position = "identity", family = "Roboto Condensed", size = 4) +
+	geom_col(width = .75, position = "identity", fill = pal[1]) +
+	geom_text(aes(label = scales::comma(diff, accuracy = 1)), hjust = "inward", position = "identity", family = "Lato Regular", size = 4) +
 	scale_x_continuous(expand = expansion(mult = c(.15,.05))) +
 	facet_wrap(facets = "name", scales = "free_x") +
 	hrbrthemes::theme_ipsum_rc() +

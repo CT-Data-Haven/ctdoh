@@ -1,6 +1,8 @@
 ---
 title: "Split out disability analysis from households desiring housing"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = T, message = F, warning = F)
@@ -20,9 +22,10 @@ library(kableExtra)
 ```{r gg etc, echo = F}
 set.seed(13)
 
-theme_set(theme_ipsum_rc())
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
 
-pal <- c("#92c9c5", "#ffe37e", "#ffac8f", "#cb94c4", "#5e63af")
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
 
 scale_fill_custom <- function(palette = pal, rev = F) {
   if (rev) {
@@ -200,7 +203,7 @@ hh_disability_county_inc_band <- bind_rows(ct_hhlds, ct_inc_band_disability, cou
 	group_by(name, inc_band) %>% 
 	calc_shares(group = disability, denom = "TOTAL", value = value, moe = value_se)
 
-write_csv(hh_disability_county_inc_band, file = "../output_data/hh_w_disability_by_county_and_inc_band.csv")
+write_csv(hh_disability_county_inc_band, "../output_data/hh_w_disability_by_county_and_inc_band.csv")
 ```
 
 ```{r setup data 2, eval = F, echo = F}
@@ -327,7 +330,7 @@ diffhear <- x %>%
 
 hh_disabilities_by_type <- bind_rows(diffcare, diffeye, diffhear, diffmob, diffphys, diffrem)
 
-write_csv(hh_disabilities_by_type, file = "../output_data/hh_disabilities_type.csv")
+write_csv(hh_disabilities_by_type, "../output_data/hh_disabilities_type.csv")
 ```
 
 ```{r}
@@ -347,7 +350,7 @@ hh_disabilities_count_share <- ct_hhlds %>%
 	group_by(inc_band) %>% 
 	calc_shares(group = disability_type, denom = "total", value = households)
 
-write_csv(hh_disabilities_count_share, file = "../output_data/hh_disabilities_type_count_share.csv")
+write_csv(hh_disabilities_count_share, "../output_data/hh_disabilities_type_count_share.csv")
 ```
 
 ```{r eval=F, echo = F}
@@ -379,10 +382,9 @@ ct_inc_band_disability %>%
 	calc_shares(group = disability, denom = "Total", value = value, moe = value_se) %>% 
 	filter(disability == "TRUE", inc_band != "Total") %>% 
 	ggplot(aes(share, inc_band, group = inc_band)) +
-	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 4.5, hjust = 1.1, vjust = .5) +
+	geom_col(position = position_dodge(1), fill=pal[1]) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Lato Regular", size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-	scale_fill_custom(rev = T) + 
 	theme(plot.title.position = "plot",
 				axis.text.x = element_blank(), 
 				axis.text.y = element_text(colour = "black"),
@@ -396,6 +398,7 @@ ct_inc_band_disability %>%
 
 ```{r fig.width = 8, fig.height = 8, echo = F}
 hh_disabilities_count_share %>% 
+  ungroup() %>% 
 	mutate(disability_type = as.factor(disability_type) %>% 
 				 	fct_relevel("diffrem", "diffphys", "diffmob", "diffcare", "diffeye", "diffhear") %>% 
 				 	plyr::revalue(c("diffrem" = "Cognitive disability", 
@@ -407,11 +410,10 @@ hh_disabilities_count_share %>%
 	filter(disability_type != "total") %>% 
 	mutate(inc_band = fct_rev(inc_band)) %>% 
 	ggplot(aes(share, inc_band)) +
-	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
+	geom_col(position = position_dodge(1), fill=pal[1]) +
 	facet_wrap(~ disability_type) + 
-	geom_text(aes(label = percent(share, accuracy = 1)), family = "Roboto Condensed", position = position_dodge(1), size = 4, hjust = 1.2, vjust = .5) +
+	geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", position = position_dodge(1), size = 4, hjust = 1.2, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
-	scale_fill_custom(rev = T) + 
 	theme(plot.title.position = "plot",
 				axis.text.x = element_blank(), 
 				axis.text.y = element_text(colour = "black"),
@@ -512,6 +514,7 @@ ct_cost_ratio_inc_band_disability %>%
 
 ```{r fig.width = 8, fig.height = 8, echo = F}
 hh_disability_county_inc_band %>% 
+  ungroup() %>% 
 	filter(disability == "TRUE") %>% 
 	mutate(inc_band = fct_rev(inc_band)) %>% 
 	ggplot(aes(share, inc_band)) +
@@ -599,7 +602,7 @@ Write file
 ```{r}
 puma_shp %>% 
 	select(PUMACE10, NAME10, inc_band, disability, value, value_se, share) %>%
-	write_csv(file = "../output_data/hh_w_disability_by_puma_and_inc_band.csv")
+	write_csv("../output_data/hh_w_disability_by_puma_and_inc_band.csv")
 ```
 
 ## Cb by disability and tenure
@@ -640,5 +643,5 @@ cb_tenure_disability <- ct_cb_disability_tenure %>%
 	group_by(name, ownershp, disability) %>% 
 	calc_shares(group = cost_burden, denom = "Total", value = value, moe = value_se)
 
-write_csv(cb_tenure_disability, file = "../output_data/cb_tenure_disability.csv")
+write_csv(cb_tenure_disability, "../output_data/cb_tenure_disability.csv")
 ```
