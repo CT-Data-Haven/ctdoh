@@ -13,6 +13,29 @@ library(ipumsr)
 library(srvyr)
 ```
 
+```{r gg etc}
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Two ways: 
 
 Median income by county. Simple enough.
@@ -73,11 +96,11 @@ write_csv(minc, "../output_data/minc_by_county_2000_2018.csv")
 
 ```{r fig.height=10, fig.width=10}
 minc %>% 
-	ggplot(aes(year, minc, group = name)) +
+	ggplot(aes(year, minc)) +
 	geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
-	geom_point(aes(color = name), size = 4) +
-	geom_line(aes(color = name), size = 1) +
-	geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Roboto Condensed", nudge_y = -500)) +
+	geom_point(size = 4, color = pal[1]) +
+	geom_line(size = 1, color = pal[1]) +
+	geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Lato Regular", nudge_y = -500)) +
 	#scale_y_continuous(expand = expansion(mult = c(.15, .15))) +
 	scale_y_continuous(limits = c(50000, 105000)) +
 	facet_wrap(facets = "name", scales = "free_y") +
@@ -130,11 +153,12 @@ minc_tenure %>%
 	geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
 	geom_point(aes(color = ownershp2), size = 4) +
 	geom_line(aes(color = ownershp2), size = 1) +
-	geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Roboto Condensed")) +
+	geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Lato Regular")) +
 	scale_y_continuous(expand = expansion(mult = c(.35, .25))) +
 	#scale_y_continuous(limits = c(0, 130000)) +
 	facet_wrap(facets = "name", scales = "free_y") +
 	hrbrthemes::theme_ipsum_rc() +
+  scale_color_manual(values = c(pal[1:2])) +
 	guides(color = guide_legend(title = "Tenure", override.aes = list(linetype = 0))) +
 	labs(title = "Median income by tenure and area, 2000–2018",
 			 x = "", y = "") +
