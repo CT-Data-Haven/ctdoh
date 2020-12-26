@@ -138,20 +138,19 @@ pop_change_all_years <- pop_out %>%
 ```
 
 ```{r fig.height=6}
-pop_out <- read_csv("../output_data/total_pop_1990_2018.csv")
 pop_out %>% 
-	filter(level == "2_counties", year %in% c(1990, 2000, 2010, 2018)) %>% 
+	filter(level == "1_state", year %in% c(1990, 2000, 2010, 2018)) %>% 
 	mutate(year = as.factor(year)) %>% 
 	ggplot(aes(year, estimate, group = name)) +
-	geom_col(aes(fill = name), width = .75, color = "grey95", position = position_stack()) +
+	geom_col(width = .75, color = "grey95", position = position_stack(), fill=pal[1]) +
 	geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_stack(.5), size = 3.25, family = "Lato Regular") +
 	scale_y_continuous(labels = scales::comma_format(),
 										 expand = expansion(mult = c(.01,0))) +
 	scale_x_discrete(expand = expansion(mult = c(0,0))) +
-#	hrbrthemes::theme_ipsum_rc() +
-  scale_fill_manual(values = rep(pal[1], 8)) +  ###### come back
+	hrbrthemes::theme_ipsum_rc() +
 	guides(fill = guide_legend(title = "")) +
-	labs(title = "Population by county, 1990–2018",
+	labs(title = "Population, 1990–2018",
+	     subtitle = "Connecticut",
 			 x = "", y = "") +
 	theme(panel.grid.minor = element_blank(),
 				panel.grid.major = element_blank(),
@@ -163,23 +162,32 @@ pop_out %>%
 ```
 
 ```{r}
-pop_change_90_18 <- pop_out %>% 
+pop_change <- pop_out %>% 
 	filter(year %in% c(1990, 2000, 2010, 2018)) %>% 
 	group_by(level, geoid, county, var) %>% 
 	arrange(name, year) %>% 
 	mutate(diff = estimate - lag(estimate, default = first(estimate))) %>% 
 	arrange(level, geoid, year) %>% 
+  ungroup() %>% 
 	mutate(var = "pop_change") %>% 
 	select(-estimate, -moe) %>% 
 	rename(estimate = diff) %>% 
 	select(year, level, geoid, name, county, var, estimate)
 
-pop_change_90_18 %>% 
+pop_change %>% 
 	ungroup() %>% 
-	filter(year %in% c(2000, 2010, 2018), level != "3_towns") %>% 
-	mutate(est = scales::comma(estimate, accuracy = 1)) %>% 
-	select(Name = name, year, est) %>% 
-	pivot_wider(id_cols = Name, names_from = year, values_from = est) %>% 
-	rename(`1990 to 2000` = `2000`, `2000 to 2010` = `2010`, `2010 to 2018` = `2018`) %>% 
+	filter(year %in% c(1990, 2000, 2010, 2018), level != "3_towns") %>% 
+	select(Name = name, year, change=estimate) %>% 
+  left_join(pop_out, by = c("Name" = "name", "year" = "year")) %>% 
+  select(Name, year, change, total=estimate) %>% 
+  pivot_wider(id_cols = Name, names_from = year, values_from = c(change, total)) %>% 
+  mutate(`1990 to 2018` = change_2000 + change_2010 + change_2018) %>% 
+  rename(`2010 to 2018` = `change_2018`, `1990` = `total_1990`, `2000` = `total_2000`, `2010` = `total_2010`, `2018` = `total_2018`) %>% 
+  select('Name', '1990', '2000', '2010', '2018', '1990 to 2018', '2010 to 2018') %>% 
+  mutate_if(is.numeric, scales::comma, accuracy = 1) %>% 
 	kableExtra::kable(caption = "Population change")
 ```
+
+
+
+
