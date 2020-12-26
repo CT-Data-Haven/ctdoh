@@ -235,7 +235,7 @@ hh_by_inc_band %>%
 		labels = scales::comma) +
 	geom_text(aes(
 		label = comma(value, accuracy = 1)),
-		position = position_dodge(.8), hjust = 1, family = "Roboto Condensed", size = 4) +
+		position = position_dodge(.8), hjust = 1, family = "Lato Regular", size = 4) +
 	guides(fill = guide_legend(title = "")) +
 	labs(
 		x = "",
@@ -261,7 +261,7 @@ hh_by_inc_band %>%
 	geom_col(aes(fill = inc_band), width = .7, position = position_stack()) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0.1)), labels = scales::comma) +
 	geom_text(aes(label = percent(share, accuracy = 1)),
-						position = position_stack(), hjust = 1, family = "Roboto Condensed", size = 4) +
+						position = position_stack(), hjust = 1, family = "Lato Regular", size = 4) +
 	facet_wrap(facets = "name") +
 	guides(fill = guide_legend(title = "")) +
 	labs(x = "",  y = "",
@@ -343,7 +343,7 @@ hh_by_race_inc_band %>%
 	geom_col(aes(fill = inc_band), width = .8, position = position_stack(1)) +
 	guides(fill = guide_legend(title = "", reverse = T)) +
 	geom_text(aes(label = percent(share, accuracy = 1)),
-						position = position_stack(.5), family = "Roboto Condensed") +
+						position = position_stack(.5), family = "Lato Regular") +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	facet_wrap(facets = "name") +
 	guides(fill = guide_legend(title = "")) +
@@ -384,7 +384,7 @@ pivot_race %>%
 	geom_col(aes(fill = race2), width = .8, position = position_stack(1)) +
 	guides(fill = guide_legend(title = "", reverse = T)) +
 	geom_text(aes(label = percent(share, accuracy = 1)),
-						position = position_stack(.5), family = "Roboto Condensed") +
+						position = position_stack(.5), family = "Lato Regular") +
 	scale_x_continuous(expand = expansion(mult = c(0.1, 0))) +
 	facet_wrap(facets = "name") +
 	guides(fill = guide_legend(title = "")) +
@@ -451,7 +451,7 @@ ct_inc_band_disability %>%
 	filter(disability == "TRUE", inc_band != "Total") %>% 
 	ggplot(aes(share, inc_band, group = inc_band)) +
 	geom_col(aes(fill = inc_band), position = position_dodge(1)) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Roboto Condensed", size = 4.5, hjust = 1.1, vjust = .5) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Lato Regular", size = 4.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_custom(rev = T) +
 	theme(plot.title.position = "plot",
@@ -482,7 +482,7 @@ ct_cost_ratio_inc_band_disability <- pums %>%
 ct_cost_ratio_inc_band_disability %>% 
 	ggplot(aes(inc_band, avg_cost_ratio, group = disability)) +
 	geom_col(aes(fill = disability), width = .8, position = position_dodge(.85)) +
-	geom_text(aes(label = round(avg_cost_ratio, 2)), position = position_dodge(.85), family = "Roboto Condensed", hjust = .5, vjust = 1.2) +
+	geom_text(aes(label = round(avg_cost_ratio, 2)), position = position_dodge(.85), family = "Lato Regular", hjust = .5, vjust = 1.2) +
 	scale_fill_manual(values = c(pal[1], pal [4])) +
 	guides(fill = guide_legend(title = "Household has occupant with disability")) +
 	labs(title = "Average cost ratio for households in each income band",
@@ -594,7 +594,7 @@ cb2 %>% group_by(level) %>%
 	mutate(name = fct_rev(name)) %>% 
 	ggplot(aes(share, name, group = cost_burden)) +
 	geom_col(aes(fill = cost_burden), width = .8, position = position_stack(.5)) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Roboto Condensed", size = 3.75) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Lato Regular", size = 3.75) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_manual(values = c("grey80", pal[1], pal[4])) +
 	theme(legend.position = "bottom",
@@ -772,7 +772,7 @@ avg_cost_ratio_inc_band %>%
 	geom_vline(xintercept = .5, color = "gray60", size = 0.5, linetype = "23") +
 	geom_text(aes(
 		label = percent(wm_cb, accuracy = 1)),
-		family = "Roboto Condensed", size = 2.75, alpha = 0.8) +
+		family = "Lato Regular", size = 2.75, alpha = 0.8) +
 	scale_x_continuous(breaks = c(.3, .5),
 										 labels = c("Cost burden", "Severe cost burden"),
 										 expand = expansion(mult = c(.025, .1))) +
@@ -833,7 +833,7 @@ avg_cost_inc_band %>%
 	geom_point(aes(color = inc_band), size = 6.5, alpha = 0.8) +
 	geom_text(aes(
 		label = dollar(wm_cost, accuracy = .1)),
-		family = "Roboto Condensed", size = 3, alpha = 0.8) +
+		family = "Lato Regular", size = 3, alpha = 0.8) +
 	scale_x_continuous(expand = expansion(mult = c(.025, .025))) +
 	guides(color = guide_legend(title = "")) +
 	labs(
@@ -979,7 +979,7 @@ units_by_cost_income %>%
 				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
 	ggplot(aes(inc_band, value, group = group)) +
 	geom_col(aes(fill = group), width = .8, position = position_dodge(.85)) +
-	geom_text(aes(label = comma(value, accuracy = 1)), position = position_dodge(.85), vjust = "top", family = "Roboto Condensed", size = 3.5, fontface = "bold") +
+	geom_text(aes(label = comma(value, accuracy = 1)), position = position_dodge(.85), vjust = "top", family = "Lato Regular", size = 3.5, fontface = "bold") +
 	facet_grid(rows = vars(name), scales = "free", space = "fixed", switch = "y") +
 	scale_fill_manual(values = c(pal[1], pal[3])) +
 	guides(fill = guide_legend(title = "")) +
@@ -1036,7 +1036,7 @@ ct_relative %>%
 				 	fct_rev()) %>% 
 	ggplot(aes(share, inc_band)) +
 	geom_col(aes(fill = cost_paid), width = .75, position = position_stack()) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Roboto Condensed") +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_stack(.5), family = "Lato Regular") +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	scale_fill_custom() +
 	labs(title = str_wrap("Share of households paying into the same, lower, or higher cost bands than their income band", 60), subtitle = "Connecticut", x = "", y = "") +
@@ -1063,7 +1063,7 @@ income_vs_cost_bands %>%
 	mutate(inc_band = fct_rev(inc_band)) %>% 
 	ggplot(aes(cost_band, inc_band, fill = units)) +
 	geom_tile(show.legend = F) +
-	geom_text(aes(label = comma(units)), family = "Roboto Condensed") +
+	geom_text(aes(label = comma(units)), family = "Lato Regular") +
 	scale_x_discrete(position = "top",
 									 expand = expansion(mult = c(0,0))) +
 	scale_y_discrete(expand = expansion(mult = c(0,0))) +
@@ -1329,11 +1329,11 @@ out$units_by_tenure_occupancy_cost_band %>%
 	ggplot(aes(cost_band, units, group = cost_band)) +
 	geom_col(aes(fill = occupancy), width = .85) +
   geom_text(aes(label = comma(units, accuracy = 1)),
-  					family = "Roboto Condensed", size = 3,
+  					family = "Lato Regular", size = 3,
   					position = position_stack(.5)) +
 	scale_y_continuous(labels = comma_format(),
 										 expand = expansion(mult = c(0, .15))) +
-	scale_fill_manual(values = c(pal[1], pal[3], pal[5])) +
+	scale_fill_manual(values = c(urban_pal[1], urban_pal[3], urban_pal[5])) +
 	guides(fill = guide_legend(title = "")) + 
 	facet_wrap(facets = "name", scales = "free_y") +
 	theme(plot.title.position = "plot",
@@ -1398,7 +1398,7 @@ units_and_hh %>%
 	geom_col(aes(fill = group), position = position_dodge(.5), color = "white", size = .25) +
 	scale_y_continuous(labels = comma_format()) +
 	facet_wrap(facets = "name", scales = "free_y") +
-	scale_fill_manual(values = c(pal[1], pal[5])) +
+	scale_fill_manual(values = c(urban_pal[1], urban_pal[5])) +
 	labs(title = "Households and housing units in each band",
 			 x = "", y = "", caption = "Units include vacant units") +
 	guides(fill = guide_legend(title = "")) +
