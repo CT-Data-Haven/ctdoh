@@ -11,6 +11,29 @@ library(scales)
 library(hrbrthemes)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Same deal as with households by type… this number moves only very
 slightly, so I’ll just pull three points: 2000, 2010, and 2018
 
@@ -116,7 +139,201 @@ household_size_change %>%
 
 ## Plots
 
-![](hh_by_size_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-4.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-5.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-6.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-7.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-8.png)<!-- -->![](hh_by_size_files/figure-gfm/unnamed-chunk-5-9.png)<!-- -->
+![](hh_by_size_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+``` r
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "Fairfield County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "Fairfield County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "Hartford County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "Hartford County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "Litchfield County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "Litchfield County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "Middlesex County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "Middlesex County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "New Haven County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "New Haven County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "New London County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "New London County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "Tolland County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "Tolland County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+
+bind_rows(owner, renter) %>% 
+    mutate(year = as.factor(year),
+                 tenure = as.character(str_to_sentence(tenure)),
+                 tenure = as.factor(tenure)) %>% 
+    filter(name == "Windham County", hhlds != "total") %>% 
+    ggplot(aes(year, share, group = hhlds)) +
+    geom_point(aes(color = hhlds)) +
+    geom_line(aes(color = hhlds)) +
+    geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
+    scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+    facet_grid(cols = vars(tenure)) +
+  scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
+    guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
+    labs(title = "Households by size (number of occupants)",
+             subtitle = "Windham County", x = "", y = "") +
+    theme_ipsum_rc() +
+    theme(legend.position = "bottom",
+                plot.title.position = "plot",
+                panel.grid.major.y = element_blank(),
+                panel.grid.minor.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.text.x = element_text(colour = "black"),
+                strip.text.x = element_text(hjust = .5))
+```
 
 ``` r
 total_tenure_change <- household_size_change %>% 
@@ -133,14 +350,17 @@ write_csv(total_tenure_change, file = "../output_data/total_tenure_change_2000_2
 ```
 
 ``` r
+total_tenure_change <- read_csv("../output_data/total_tenure_change_2000_2018.csv")
+
 total_tenure_change %>% 
     mutate(tenure = str_to_title(tenure)) %>% 
     ggplot(aes(tenure, diff)) +
     geom_hline(yintercept = 0, color = "grey50", size = .25) +
     geom_col(aes(fill = tenure), width = .7, position = position_dodge(.55)) +
-    geom_text(aes(label = scales::comma(diff, accuracy = 1)), position = position_dodge(.75), family = "Roboto Condensed", size = 4, vjust = "inward") +
+    geom_text(aes(label = scales::comma(diff, accuracy = 1)), position = position_dodge(.75), family = "Lato Regular", size = 4, vjust = "inward") +
     facet_wrap(facets = "name", scales = "free_y") +
     hrbrthemes::theme_ipsum_rc() +
+  scale_fill_manual(values = c(pal[1], pal[2])) +
     labs(title = "Change in number of households by tenure, 2000–2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
@@ -152,7 +372,7 @@ total_tenure_change %>%
                 strip.text.x = element_text(colour = "black", hjust = .5))
 ```
 
-![](hh_by_size_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](hh_by_size_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 bind %>% 
@@ -161,9 +381,10 @@ bind %>%
                  tenure = as.factor(tenure)) %>% 
     ggplot(aes(value, tenure)) +
     geom_col(aes(fill = tenure), width = .7, position = position_dodge(.75)) +
-    geom_text(aes(label = scales::comma(value, accuracy = 1)), position = position_dodge(.75), family = "Roboto Condensed", size = 4, hjust = 1.05) +
+    geom_text(aes(label = scales::comma(value, accuracy = 1)), position = position_dodge(.75), family = "Lato Regular", size = 4, hjust = 1.05) +
     facet_wrap(facets = "name", scales = "free_x") +
     hrbrthemes::theme_ipsum_rc() +
+  scale_fill_manual(values = c(pal[1], pal[2])) +
     labs(title = "Households by homeownership type, 2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
@@ -175,4 +396,4 @@ bind %>%
                 strip.text.x = element_text(colour = "black", hjust = .5))
 ```
 
-![](hh_by_size_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](hh_by_size_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->

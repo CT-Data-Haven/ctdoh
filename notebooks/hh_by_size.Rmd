@@ -145,31 +145,38 @@ household_size_change %>%
 
 ## Plots
 
-```{r echo = F}
+```{r echo = F, dpi = 300}
 bind_rows(owner, renter) %>% 
 	mutate(year = as.factor(year),
 				 tenure = as.character(str_to_sentence(tenure)),
 				 tenure = as.factor(tenure)) %>% 
 	filter(name == "Connecticut", hhlds != "total") %>% 
 	ggplot(aes(year, share, group = hhlds)) +
-	geom_point(aes(color = hhlds)) +
-	geom_line(aes(color = hhlds)) +
-	geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Regular", size = 3.5, vjust = -1.2) +
-	scale_y_continuous(expand = expansion(mult = c(0.05, 0.1))) +
+	geom_point(aes(color = hhlds), size = 2.1) +
+	geom_line(aes(color = hhlds), size = 1.25) +
+	geom_text(aes(label = percent(share, accuracy = 1)), family = "Lato Bold", size = 3.25, vjust = -1.2) +
+	scale_y_continuous(expand = expansion(mult = c(0.05, 0.10))) +
 	facet_grid(cols = vars(tenure)) +
   scale_color_manual(values = c(pal[1], pal[2], pal[4], pal[5])) +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
-	labs(title = "Households by size (number of occupants)",
+	labs(title = "Households by Number of Occupants",
 			 subtitle = "Connecticut", x = "", y = "") +
 	theme_ipsum_rc() +
 	theme(legend.position = "bottom",
+				plot.title = element_text(family = "Lato Bold"),
+				legend.text = element_text(family = "Lato Regular"),
+				plot.subtitle = element_text(family = "Lato Regular"),
 				plot.title.position = "plot",
 				panel.grid.major.y = element_blank(),
 				panel.grid.minor.y = element_blank(),
 				axis.text.y = element_blank(),
-				axis.text.x = element_text(colour = "black"),
-				strip.text.x = element_text(hjust = .5))
+				axis.text.x = element_text(colour = "black", family = "Lato Regular"),
+				strip.text.x = element_text(hjust = .5, family = "Lato Regular"))
 
+ggsave(filename = "hh_by_size_ct", path = "../output_data/corrected_charts/", device = "png", dpi = 300)
+```
+
+```{r eval = F}
 bind_rows(owner, renter) %>% 
 	mutate(year = as.factor(year),
 				 tenure = as.character(str_to_sentence(tenure)),

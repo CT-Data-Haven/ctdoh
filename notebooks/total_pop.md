@@ -9,6 +9,29 @@ library(cwi)
 library(camiller)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Collecting and lightly cleaning basic population data for multiple
 geographies and each year available starting in 2000 through latest
 available.
@@ -111,49 +134,62 @@ pop_change_all_years <- pop_out %>%
 ```
 
 ``` r
+pop_out <- read_csv("../output_data/total_pop_1990_2018.csv")
+```
+
+``` r
 pop_out %>% 
-    filter(level == "2_counties", year %in% c(1990, 2000, 2010, 2018)) %>% 
+    filter(level == "1_state", year %in% c(1990, 2000, 2010, 2018)) %>% 
     mutate(year = as.factor(year)) %>% 
     ggplot(aes(year, estimate, group = name)) +
-    geom_col(aes(fill = name), width = .75, color = "grey95", position = position_stack()) +
-    geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_stack(.5), size = 3.25, family = "Roboto Condensed") +
+    geom_col(position = position_dodge(.9), width = .5, fill=pal[1]) +
+    geom_text(aes(label = scales::comma(estimate, accuracy = 1)), vjust = 1.3,  size = 3.25, family = "Lato Regular") +
+    geom_hline(yintercept = 0, color = "black", size = .15) +
     scale_y_continuous(labels = scales::comma_format(),
                                          expand = expansion(mult = c(.01,0))) +
     scale_x_discrete(expand = expansion(mult = c(0,0))) +
     hrbrthemes::theme_ipsum_rc() +
     guides(fill = guide_legend(title = "")) +
-    labs(title = "Population by county, 1990–2018",
+    labs(title = "Population, 1990–2018",
+         subtitle = "Connecticut",
              x = "", y = "") +
     theme(panel.grid.minor = element_blank(),
                 panel.grid.major = element_blank(),
+                plot.title = element_text(family = "Lato Bold"),
+                plot.subtitle = element_text(family = "Lato Regular"),
                 axis.title.y = element_text(angle = 0, hjust = 0, vjust = .5),
                 axis.title.x = element_text(hjust = .5),
                 plot.title.position = "plot",
                 axis.text.y = element_blank(),
-                axis.text.x = element_text(color = "black", size = 10))
+                axis.text.x = element_text(color = "black", size = 10, family = "Lato Regular"))
 ```
 
-![](total_pop_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](total_pop_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
-pop_change_90_18 <- pop_out %>% 
+pop_change <- pop_out %>% 
     filter(year %in% c(1990, 2000, 2010, 2018)) %>% 
     group_by(level, geoid, county, var) %>% 
     arrange(name, year) %>% 
     mutate(diff = estimate - lag(estimate, default = first(estimate))) %>% 
     arrange(level, geoid, year) %>% 
+  ungroup() %>% 
     mutate(var = "pop_change") %>% 
     select(-estimate, -moe) %>% 
     rename(estimate = diff) %>% 
     select(year, level, geoid, name, county, var, estimate)
 
-pop_change_90_18 %>% 
+pop_change %>% 
     ungroup() %>% 
-    filter(year %in% c(2000, 2010, 2018), level != "3_towns") %>% 
-    mutate(est = scales::comma(estimate, accuracy = 1)) %>% 
-    select(Name = name, year, est) %>% 
-    pivot_wider(id_cols = Name, names_from = year, values_from = est) %>% 
-    rename(`1990 to 2000` = `2000`, `2000 to 2010` = `2010`, `2010 to 2018` = `2018`) %>% 
+    filter(year %in% c(1990, 2000, 2010, 2018), level != "3_towns") %>% 
+    select(Name = name, year, change=estimate) %>% 
+  left_join(pop_out, by = c("Name" = "name", "year" = "year")) %>% 
+  select(Name, year, change, total=estimate) %>% 
+  pivot_wider(id_cols = Name, names_from = year, values_from = c(change, total)) %>% 
+  mutate(`1990 to 2018` = change_2000 + change_2010 + change_2018) %>% 
+  rename(`2010 to 2018` = `change_2018`, `1990` = `total_1990`, `2000` = `total_2000`, `2010` = `total_2010`, `2018` = `total_2018`) %>% 
+  select('Name', '1990', '2000', '2010', '2018', '1990 to 2018', '2010 to 2018') %>% 
+  mutate_if(is.numeric, scales::comma, accuracy = 1) %>% 
     kableExtra::kable(caption = "Population change")
 ```
 
@@ -177,13 +213,31 @@ Name
 
 <th style="text-align:left;">
 
-1990 to 2000
+1990
 
 </th>
 
 <th style="text-align:left;">
 
-2000 to 2010
+2000
+
+</th>
+
+<th style="text-align:left;">
+
+2010
+
+</th>
+
+<th style="text-align:left;">
+
+2018
+
+</th>
+
+<th style="text-align:left;">
+
+1990 to 2018
 
 </th>
 
@@ -209,13 +263,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-118,449
+3,287,116
 
 </td>
 
 <td style="text-align:left;">
 
-168,532
+3,405,565
+
+</td>
+
+<td style="text-align:left;">
+
+3,574,097
+
+</td>
+
+<td style="text-align:left;">
+
+3,581,504
+
+</td>
+
+<td style="text-align:left;">
+
+294,388
 
 </td>
 
@@ -237,13 +309,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-54,922
+827,645
 
 </td>
 
 <td style="text-align:left;">
 
-34,262
+882,567
+
+</td>
+
+<td style="text-align:left;">
+
+916,829
+
+</td>
+
+<td style="text-align:left;">
+
+944,348
+
+</td>
+
+<td style="text-align:left;">
+
+116,703
 
 </td>
 
@@ -265,13 +355,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-5,400
+851,783
 
 </td>
 
 <td style="text-align:left;">
 
-36,831
+857,183
+
+</td>
+
+<td style="text-align:left;">
+
+894,014
+
+</td>
+
+<td style="text-align:left;">
+
+894,730
+
+</td>
+
+<td style="text-align:left;">
+
+42,947
 
 </td>
 
@@ -293,13 +401,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-8,101
+174,092
 
 </td>
 
 <td style="text-align:left;">
 
-7,734
+182,193
+
+</td>
+
+<td style="text-align:left;">
+
+189,927
+
+</td>
+
+<td style="text-align:left;">
+
+183,031
+
+</td>
+
+<td style="text-align:left;">
+
+8,939
 
 </td>
 
@@ -321,13 +447,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-11,875
+143,196
 
 </td>
 
 <td style="text-align:left;">
 
-10,605
+155,071
+
+</td>
+
+<td style="text-align:left;">
+
+165,676
+
+</td>
+
+<td style="text-align:left;">
+
+163,368
+
+</td>
+
+<td style="text-align:left;">
+
+20,172
 
 </td>
 
@@ -349,13 +493,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-19,789
+804,219
 
 </td>
 
 <td style="text-align:left;">
 
-38,469
+824,008
+
+</td>
+
+<td style="text-align:left;">
+
+862,477
+
+</td>
+
+<td style="text-align:left;">
+
+859,339
+
+</td>
+
+<td style="text-align:left;">
+
+55,120
 
 </td>
 
@@ -377,13 +539,31 @@ New London County
 
 <td style="text-align:left;">
 
-4,131
+254,957
 
 </td>
 
 <td style="text-align:left;">
 
-14,967
+259,088
+
+</td>
+
+<td style="text-align:left;">
+
+274,055
+
+</td>
+
+<td style="text-align:left;">
+
+268,881
+
+</td>
+
+<td style="text-align:left;">
+
+13,924
 
 </td>
 
@@ -405,13 +585,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-7,665
+128,699
 
 </td>
 
 <td style="text-align:left;">
 
-16,327
+136,364
+
+</td>
+
+<td style="text-align:left;">
+
+152,691
+
+</td>
+
+<td style="text-align:left;">
+
+151,269
+
+</td>
+
+<td style="text-align:left;">
+
+22,570
 
 </td>
 
@@ -433,13 +631,31 @@ Windham County
 
 <td style="text-align:left;">
 
-6,566
+102,525
 
 </td>
 
 <td style="text-align:left;">
 
-9,337
+109,091
+
+</td>
+
+<td style="text-align:left;">
+
+118,428
+
+</td>
+
+<td style="text-align:left;">
+
+116,538
+
+</td>
+
+<td style="text-align:left;">
+
+14,013
 
 </td>
 
