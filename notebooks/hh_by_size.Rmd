@@ -146,7 +146,7 @@ household_size_change %>%
 ## Plots
 
 ```{r echo = F, dpi = 300}
-bind_rows(owner, renter) %>% 
+hh_occ <- bind_rows(owner, renter) %>% 
 	mutate(year = as.factor(year),
 				 tenure = as.character(str_to_sentence(tenure)),
 				 tenure = as.factor(tenure)) %>% 
@@ -173,7 +173,10 @@ bind_rows(owner, renter) %>%
 				axis.text.x = element_text(colour = "black", family = "Lato Regular"),
 				strip.text.x = element_text(hjust = .5, family = "Lato Regular"))
 
-ggsave(filename = "hh_by_size_ct", path = "../output_data/corrected_charts/", device = "png", dpi = 300)
+plot(hh_occ)
+
+ggsave("../output_data/corrected_charts/hh_by_size_ct.png", dpi = 300)
+ggsave("../output_data/corrected_charts/hh_by_size_ct.svg", dpi = 300)
 ```
 
 ```{r eval = F}
