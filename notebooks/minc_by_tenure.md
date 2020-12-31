@@ -7,6 +7,13 @@ library(ipumsr)
 library(srvyr)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+```
+
 Two ways:
 
 Median income by county. Simple enough.
@@ -74,11 +81,11 @@ write_csv(minc, "../output_data/minc_by_county_2000_2018.csv")
 
 ``` r
 minc %>% 
-    ggplot(aes(year, minc, group = name)) +
+    ggplot(aes(year, minc)) +
     geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
-    geom_point(aes(color = name), size = 4) +
-    geom_line(aes(color = name), size = 1) +
-    geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Roboto Condensed", nudge_y = -500)) +
+    geom_point(size = 4, color = pal[1]) +
+    geom_line(size = 1, color = pal[1]) +
+    geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Lato Regular", nudge_y = -500)) +
     #scale_y_continuous(expand = expansion(mult = c(.15, .15))) +
     scale_y_continuous(limits = c(50000, 105000)) +
     facet_wrap(facets = "name", scales = "free_y") +
@@ -757,28 +764,34 @@ write_csv(minc_tenure, "../output_data/minc_by_tenure_2000_2018.csv")
 
 ``` r
 minc_tenure %>% 
-    ggplot(aes(year, minc, group = ownershp2)) +
-    geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
-    geom_point(aes(color = ownershp2), size = 4) +
-    geom_line(aes(color = ownershp2), size = 1) +
-    geom_text(aes(label = scales::dollar(minc, accuracy = 1e3), vjust = 1.6, family = "Roboto Condensed")) +
-    scale_y_continuous(expand = expansion(mult = c(.35, .25))) +
-    #scale_y_continuous(limits = c(0, 130000)) +
+    filter (year != 2010) %>% 
+    rename(Tenure = ownershp2) %>% 
+    ggplot(aes(year, minc, group = Tenure)) +
+    geom_col(aes(fill = Tenure), position = position_dodge(0), width = 1.5) +
+    geom_text(aes(label = scales::dollar(minc, accuracy = 1e3)), vjust = 1.6, family = "Lato Bold", size = 2.5, position = position_dodge(0)) +
+    scale_y_continuous(expand = expansion(mult = c(.05, 0))) +
     facet_wrap(facets = "name", scales = "free_y") +
-    hrbrthemes::theme_ipsum_rc() +
-    guides(color = guide_legend(title = "Tenure", override.aes = list(linetype = 0))) +
-    labs(title = "Median income by tenure and area, 2000–2018",
+  scale_fill_manual(values = c(pal[1:2])) +
+    scale_color_manual(values = c(pal[1:2])) +
+    labs(title = "Median Income by Homeownership, 2000 and 2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
                 axis.text.y = element_blank(),
+                legend.text = element_text(family = "Lato Regular", size = 8),
+                plot.title = element_text(family = "Lato Bold"),
                 panel.grid.major = element_blank(),
                 panel.grid.minor = element_blank(),
-                axis.text.x = element_text(colour = "black"),
-                strip.text.x = element_text(hjust = .5),
+                axis.text.x = element_text(colour = "black", size = 8, family = "Lato Regular"),
+                strip.text.x = element_text(hjust = .5, colour = "black", family = "Lato Regular"),
                 legend.position = "bottom")
 ```
 
 ![](minc_by_tenure_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/med_inc_tenure.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/med_inc_tenure.svg", dpi = 300, width = 6.5)
+```
 
 ``` r
 minc_tenure %>% 
