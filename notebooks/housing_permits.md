@@ -10,6 +10,13 @@ library(cwi)
 library(camiller)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+```
+
 Permits, 2001-2019… town-level at
 <https://portal.ct.gov/DECD/Content/About_DECD/Research-and-Publications/01_Access-Research/Exports-and-Housing-and-Income-Data>
 
@@ -18,6 +25,12 @@ Permits, 2001-2019… town-level at
 Jacking Camille’s scrape code
 
 ``` r
+housing_read <- list.files(file.path("..", "input_data", "housing_permit_downloads"), full.names = T) %>%
+  set_names() %>%
+  set_names(str_extract, "\\d+") %>%
+  map(read_excel, skip = 2)
+
+
 permit_url <- "https://portal.ct.gov/DECD/Content/About_DECD/Research-and-Publications/01_Access-Research/Exports-and-Housing-and-Income-Data"
 decd_base <- "https://portal.ct.gov"
 
@@ -89,6 +102,8 @@ washed out. Those make up a pretty small share of permits everywhere, in
 every year. Both options below.
 
 ``` r
+permits <- read_csv("../output_data/housing_permits_2001_2019.csv")
+
 permits %>% 
     filter(level != "3_towns") %>%
     mutate(units = fct_rev(units)) %>% 
@@ -96,21 +111,28 @@ permits %>%
     geom_col(aes(fill = units), color = "white", size = .15) +
     facet_wrap(facets = "name", scales = "free_y") +
     guides(fill = guide_legend(reverse = T)) +
-    hrbrthemes::theme_ipsum_rc() +
     scale_y_continuous(labels = scales::comma_format()) +
-    scale_fill_hue(direction = -1) +
+  scale_fill_manual(values = c(pal[1], pal[2], pal[3])) +
     guides(fill = guide_legend(title = "", reverse = T)) +
-    labs(title = "Housing permits issued annually by number of units in building, 2001–2017",
+    labs(title = "Housing permits Issued Annually", subtitle = "By number of units in building, 2001–2017",
              x = "", y = "") +
     theme(panel.grid.minor = element_blank(),
                 plot.title.position = "plot",
                 legend.position = "bottom",
-                strip.text.x = element_text(hjust = .5),
-                axis.text.x = element_text(colour = "black"),
-                axis.text.y = element_text(colour = "black"))
+                plot.title = element_text(family = "Lato Bold"),
+                plot.subtitle = element_text(family = "Lato Regular"),
+                strip.text.x = element_text(hjust = .5, size = 9, family = "Lato Regular"),
+                legend.text = element_text(family = "Lato Regular", size = 9),
+                axis.text.x = element_text(colour = "black", family = "Lato Regular", size = 8),
+                axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 8))
 ```
 
 ![](housing_permits_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/housing_permits.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/housing_permits.svg", dpi = 300, width = 6.5)
+```
 
 ``` r
 permits %>% 
@@ -126,8 +148,8 @@ permits %>%
     facet_wrap(facets = "name", scales = "free_y") +
     guides(fill = guide_legend(reverse = T)) +
     hrbrthemes::theme_ipsum_rc() +
+  scale_fill_manual(values = c(pal[4:5])) +
     scale_y_continuous(labels = scales::comma_format()) +
-    scale_fill_hue(direction = -1) +
     guides(fill = guide_legend(title = "", reverse = T)) +
     labs(title = "Housing permits issued annually by number of units in building, 2001–2017",
              x = "", y = "") +
@@ -138,5 +160,3 @@ permits %>%
                 axis.text.x = element_text(colour = "black"),
                 axis.text.y = element_text(colour = "black"))
 ```
-
-![](housing_permits_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
