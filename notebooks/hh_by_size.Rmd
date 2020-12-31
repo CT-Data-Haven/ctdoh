@@ -175,8 +175,8 @@ hh_occ <- bind_rows(owner, renter) %>%
 
 plot(hh_occ)
 
-ggsave("../output_data/corrected_charts/hh_by_size_ct.png", dpi = 300)
-ggsave("../output_data/corrected_charts/hh_by_size_ct.svg", dpi = 300)
+ggsave("../output_data/corrected_charts/hh_by_size_ct.png", dpi = 300, width = 6.5)
+ggsave("../output_data/corrected_charts/hh_by_size_ct.svg", dpi = 300, width = 6.5)
 ```
 
 ```{r eval = F}
