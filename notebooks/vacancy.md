@@ -12,6 +12,13 @@ library(scales)
 library(kableExtra)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+```
+
 I’m using a slightly modified version of the Census definitions here
 <https://www.census.gov/housing/hvs/definitions.pdf> (modified because
 we would ideally add the “Rented or sold but not (yet) occupied” units,
@@ -101,15 +108,23 @@ vacancy %>%
     facet_wrap(facets = "name") +
     guides(color = guide_legend(title = "Tenure", override.aes = list(linetype = 0)),
                  shape = guide_legend(title = "Unit type")) +
-    hrbrthemes::theme_ipsum_rc() +
-    labs(title = "Vacancy rates by tenure and unit type, 2000–2018",
+  scale_color_manual(values = c(pal[1:2])) +
+    labs(title = str_wrap("Vacancy Rates by Homeownershp and Unit Type, 2000–2018", 40),
              x = "", y = "") +
-    theme(plot.title.position = "plot", 
-                strip.text.x = element_text(hjust = .5),
+    theme(plot.title.position = "plot",
+                plot.title = element_text(family = "Lato Bold"),
+                strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
                 panel.grid.minor.y = element_blank(), 
-                axis.text.x = element_text(colour = "black"),
-                axis.text.y = element_text(colour = "black"),
-                legend.position = "bottom")
+                axis.text.x = element_text(colour = "black", family = "Lato Regular", size = 9),
+                axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
+                legend.position = "bottom",
+                legend.text = element_text(size = 9),
+                legend.title = element_text(size = 9))
 ```
 
 ![](vacancy_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/vacancy_tenure.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/vacancy_tenure.svg", dpi = 300, width = 6.5)
+```
