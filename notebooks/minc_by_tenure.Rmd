@@ -134,29 +134,35 @@ write_csv(minc_tenure, "../output_data/minc_by_tenure_2000_2018.csv")
 ```{r fig.width = 6.5, dpi = 300}
 minc_tenure %>% 
 	filter (year != 2010) %>% 
-	rename(Tenure = ownershp2) %>% 
-	ggplot(aes(year, minc, group = Tenure)) +
-	geom_col(aes(fill = Tenure), position = position_dodge(0), width = 1.5) +
-	geom_text(aes(label = scales::dollar(minc, accuracy = 1e3)), vjust = 1.6, family = "Lato Bold", size = 2.5, position = position_dodge(0)) +
-	scale_y_continuous(expand = expansion(mult = c(.05, 0))) +
+	rename(Homeownership = ownershp2) %>% 
+	ggplot(aes(minc, year, group = Homeownership)) +
+	geom_col(aes(fill = Homeownership), position = position_dodge(1), width = 0.9) +
+	geom_text(aes(label = scales::dollar(minc, accuracy = 1e3)), hjust = 1, family = "Lato Bold", size = 2.5, position = position_dodge(1)) +
+	scale_x_continuous(expand = expansion(mult = c(.05, 0))) +
 	facet_wrap(facets = "name", scales = "free_y") +
   scale_fill_manual(values = c(pal[1:2])) +
 	scale_color_manual(values = c(pal[1:2])) +
 	labs(title = "Median Income by Homeownership, 2000 and 2018",
+			 subtitle = "In 2017 inflation-adjusted dollars",
 			 x = "", y = "") +
+	guides(fill = guide_legend(title = "")) +
 	theme(plot.title.position = "plot",
-				axis.text.y = element_blank(),
-				legend.text = element_text(family = "Lato Regular", size = 8),
+				axis.text.x = element_blank(),
+				plot.subtitle = element_text(family = "Lato Regular", size = 11),
+				legend.text = element_text(family = "Lato Regular", size = 9),
+				legend.title = element_text(family = "Lato Regular", size = 9),
 				plot.title = element_text(family = "Lato Bold"),
 				panel.grid.major = element_blank(),
 				panel.grid.minor = element_blank(),
-				axis.text.x = element_text(colour = "black", size = 8, family = "Lato Regular"),
-				strip.text.x = element_text(hjust = .5, colour = "black", family = "Lato Regular"),
+				axis.text.y = element_text(angle = 90, hjust = .5, colour = "black", size = 8, family = "Lato Regular"),
+				strip.text.x = element_text(hjust = .5, colour = "black", size = 9, family = "Lato Regular"),
 				legend.position = "bottom")
 
 ggsave(filename = "../output_data/corrected_charts/med_inc_tenure.png", dpi = 300, width = 6.5)
 ggsave(filename = "../output_data/corrected_charts/med_inc_tenure.svg", dpi = 300, width = 6.5)
 ```
+
+
 
 ```{r}
 minc_tenure %>% 
