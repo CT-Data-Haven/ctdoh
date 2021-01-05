@@ -9,6 +9,29 @@ library(cwi)
 library(camiller)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Collecting and lightly cleaning basic population data for multiple
 geographies and each year available starting in 2000 through latest
 available.
@@ -102,7 +125,8 @@ int_race_county <- intercensal %>%
     select(year, geoid, name, level, everything()) %>% 
     pivot_longer(cols = 5:10, names_to = "var", values_to = "estimate") %>% 
     group_by(year, geoid, name, level) %>% 
-    calc_shares(group = var, value = estimate, denom = "total_pop")
+    calc_shares(group = var, value = estimate, denom = "total_pop") %>% 
+  ungroup()
 
 int_race_ct <- int_race_county %>%
     select(-name, -level, -geoid, -share) %>% 
@@ -145,6 +169,8 @@ race_change %>%
 labels <- tibble(var = c("black", "white", "latino", "other_race", "total_pop", "asian"),
                                  label = c("Black, non-Latino", "White, non-Latino", "Latino", "Other race, non-Latino", "Total population", "Asian, non-Latino"))
 
+pop_by_race_out <- read_csv("../output_data/pop_by_race_2000_2018.csv")
+
 pop_by_race_out %>% 
     ungroup() %>% 
     filter(level != "3_towns", year %in% c(2000, 2010, 2018)) %>% 
@@ -168,6 +194,7 @@ pop_by_race_out %>%
     scale_x_discrete(expand = expansion(mult = c(0.05,0.05))) +
     facet_wrap(facets = "name") +
     hrbrthemes::theme_ipsum_rc() +
+  scale_color_manual(values = c(pal[5], pal[4], pal[2], pal[1])) +
     guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
     labs(title = "Population by race/ethnicity, 2000–2018",
              x = "", y = "") +
@@ -254,93 +281,25 @@ Connecticut
 
 <td style="text-align:left;">
 
-Total population
+Other race, non-Latino
 
 </td>
 
 <td style="text-align:left;">
 
-3,405,565
+150,826
 
 </td>
 
 <td style="text-align:left;">
 
-3,581,504
+249,200
 
 </td>
 
 <td style="text-align:left;">
 
-5%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-320,323
-
-</td>
-
-<td style="text-align:left;">
-
-561,791
-
-</td>
-
-<td style="text-align:left;">
-
-75%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Connecticut
-
-</td>
-
-<td style="text-align:left;">
-
-White, non-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-2,638,845
-
-</td>
-
-<td style="text-align:left;">
-
-2,418,696
-
-</td>
-
-<td style="text-align:left;">
-
-\-8%
+65%
 
 </td>
 
@@ -390,25 +349,25 @@ Connecticut
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-150,826
+320,323
 
 </td>
 
 <td style="text-align:left;">
 
-249,200
+561,791
 
 </td>
 
 <td style="text-align:left;">
 
-65%
+75%
 
 </td>
 
@@ -418,7 +377,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-Fairfield County
+Connecticut
 
 </td>
 
@@ -430,53 +389,19 @@ Total population
 
 <td style="text-align:left;">
 
-882,567
+3,405,565
 
 </td>
 
 <td style="text-align:left;">
 
-944,348
+3,581,504
 
 </td>
 
 <td style="text-align:left;">
 
-7%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Fairfield County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-104,835
-
-</td>
-
-<td style="text-align:left;">
-
-182,653
-
-</td>
-
-<td style="text-align:left;">
-
-74%
+5%
 
 </td>
 
@@ -486,7 +411,7 @@ Latino
 
 <td style="text-align:left;">
 
-Fairfield County
+Connecticut
 
 </td>
 
@@ -498,19 +423,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-645,152
+2,638,845
 
 </td>
 
 <td style="text-align:left;">
 
-588,974
+2,418,696
 
 </td>
 
 <td style="text-align:left;">
 
-\-9%
+\-8%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Fairfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+47,856
+
+</td>
+
+<td style="text-align:left;">
+
+73,309
+
+</td>
+
+<td style="text-align:left;">
+
+53%
 
 </td>
 
@@ -560,25 +519,25 @@ Fairfield County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-47,856
+104,835
 
 </td>
 
 <td style="text-align:left;">
 
-73,309
+182,653
 
 </td>
 
 <td style="text-align:left;">
 
-53%
+74%
 
 </td>
 
@@ -588,7 +547,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-Hartford County
+Fairfield County
 
 </td>
 
@@ -600,53 +559,19 @@ Total population
 
 <td style="text-align:left;">
 
-857,183
+882,567
 
 </td>
 
 <td style="text-align:left;">
 
-894,730
+944,348
 
 </td>
 
 <td style="text-align:left;">
 
-4%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Hartford County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-98,968
-
-</td>
-
-<td style="text-align:left;">
-
-157,785
-
-</td>
-
-<td style="text-align:left;">
-
-59%
+7%
 
 </td>
 
@@ -656,7 +581,7 @@ Latino
 
 <td style="text-align:left;">
 
-Hartford County
+Fairfield County
 
 </td>
 
@@ -668,19 +593,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-625,797
+645,152
 
 </td>
 
 <td style="text-align:left;">
 
-553,425
+588,974
 
 </td>
 
 <td style="text-align:left;">
 
-\-12%
+\-9%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Hartford County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+37,261
+
+</td>
+
+<td style="text-align:left;">
+
+68,955
+
+</td>
+
+<td style="text-align:left;">
+
+85%
 
 </td>
 
@@ -730,25 +689,25 @@ Hartford County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-37,261
+98,968
 
 </td>
 
 <td style="text-align:left;">
 
-68,955
+157,785
 
 </td>
 
 <td style="text-align:left;">
 
-85%
+59%
 
 </td>
 
@@ -758,7 +717,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-Litchfield County
+Hartford County
 
 </td>
 
@@ -770,53 +729,19 @@ Total population
 
 <td style="text-align:left;">
 
-182,193
+857,183
 
 </td>
 
 <td style="text-align:left;">
 
-183,031
+894,730
 
 </td>
 
 <td style="text-align:left;">
 
-0%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Litchfield County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-3,894
-
-</td>
-
-<td style="text-align:left;">
-
-10,941
-
-</td>
-
-<td style="text-align:left;">
-
-181%
+4%
 
 </td>
 
@@ -826,7 +751,7 @@ Latino
 
 <td style="text-align:left;">
 
-Litchfield County
+Hartford County
 
 </td>
 
@@ -838,19 +763,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-172,154
+625,797
 
 </td>
 
 <td style="text-align:left;">
 
-162,898
+553,425
 
 </td>
 
 <td style="text-align:left;">
 
-\-5%
+\-12%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Litchfield County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+4,308
+
+</td>
+
+<td style="text-align:left;">
+
+6,329
+
+</td>
+
+<td style="text-align:left;">
+
+47%
 
 </td>
 
@@ -900,25 +859,25 @@ Litchfield County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-4,308
+3,894
 
 </td>
 
 <td style="text-align:left;">
 
-6,329
+10,941
 
 </td>
 
 <td style="text-align:left;">
 
-47%
+181%
 
 </td>
 
@@ -928,7 +887,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-Middlesex County
+Litchfield County
 
 </td>
 
@@ -940,53 +899,19 @@ Total population
 
 <td style="text-align:left;">
 
-155,071
+182,193
 
 </td>
 
 <td style="text-align:left;">
 
-163,368
+183,031
 
 </td>
 
 <td style="text-align:left;">
 
-5%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Middlesex County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-4,649
-
-</td>
-
-<td style="text-align:left;">
-
-9,835
-
-</td>
-
-<td style="text-align:left;">
-
-112%
+0%
 
 </td>
 
@@ -996,7 +921,7 @@ Latino
 
 <td style="text-align:left;">
 
-Middlesex County
+Litchfield County
 
 </td>
 
@@ -1008,19 +933,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-138,979
+172,154
 
 </td>
 
 <td style="text-align:left;">
 
-137,696
+162,898
 
 </td>
 
 <td style="text-align:left;">
 
-\-1%
+\-5%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Middlesex County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+4,855
+
+</td>
+
+<td style="text-align:left;">
+
+7,787
+
+</td>
+
+<td style="text-align:left;">
+
+60%
 
 </td>
 
@@ -1070,25 +1029,25 @@ Middlesex County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-4,855
+4,649
 
 </td>
 
 <td style="text-align:left;">
 
-7,787
+9,835
 
 </td>
 
 <td style="text-align:left;">
 
-60%
+112%
 
 </td>
 
@@ -1098,7 +1057,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-New Haven County
+Middlesex County
 
 </td>
 
@@ -1110,53 +1069,19 @@ Total population
 
 <td style="text-align:left;">
 
-824,008
+155,071
 
 </td>
 
 <td style="text-align:left;">
 
-859,339
+163,368
 
 </td>
 
 <td style="text-align:left;">
 
-4%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-New Haven County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-83,131
-
-</td>
-
-<td style="text-align:left;">
-
-151,361
-
-</td>
-
-<td style="text-align:left;">
-
-82%
+5%
 
 </td>
 
@@ -1166,7 +1091,7 @@ Latino
 
 <td style="text-align:left;">
 
-New Haven County
+Middlesex County
 
 </td>
 
@@ -1178,19 +1103,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-616,541
+138,979
 
 </td>
 
 <td style="text-align:left;">
 
-546,120
+137,696
 
 </td>
 
 <td style="text-align:left;">
 
-\-11%
+\-1%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+New Haven County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+35,050
+
+</td>
+
+<td style="text-align:left;">
+
+55,533
+
+</td>
+
+<td style="text-align:left;">
+
+58%
 
 </td>
 
@@ -1240,25 +1199,25 @@ New Haven County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-35,050
+83,131
 
 </td>
 
 <td style="text-align:left;">
 
-55,533
+151,361
 
 </td>
 
 <td style="text-align:left;">
 
-58%
+82%
 
 </td>
 
@@ -1268,7 +1227,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-New London County
+New Haven County
 
 </td>
 
@@ -1280,13 +1239,13 @@ Total population
 
 <td style="text-align:left;">
 
-259,088
+824,008
 
 </td>
 
 <td style="text-align:left;">
 
-268,881
+859,339
 
 </td>
 
@@ -1302,31 +1261,31 @@ Total population
 
 <td style="text-align:left;">
 
-New London County
+New Haven County
 
 </td>
 
 <td style="text-align:left;">
 
-Latino
+White, non-Latino
 
 </td>
 
 <td style="text-align:left;">
 
-13,236
+616,541
 
 </td>
 
 <td style="text-align:left;">
 
-27,762
+546,120
 
 </td>
 
 <td style="text-align:left;">
 
-110%
+\-11%
 
 </td>
 
@@ -1342,25 +1301,25 @@ New London County
 
 <td style="text-align:left;">
 
-White, non-Latino
+Other race, non-Latino
 
 </td>
 
 <td style="text-align:left;">
 
-219,542
+13,550
 
 </td>
 
 <td style="text-align:left;">
 
-204,185
+22,715
 
 </td>
 
 <td style="text-align:left;">
 
-\-7%
+68%
 
 </td>
 
@@ -1410,25 +1369,25 @@ New London County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-13,550
+13,236
 
 </td>
 
 <td style="text-align:left;">
 
-22,715
+27,762
 
 </td>
 
 <td style="text-align:left;">
 
-68%
+110%
 
 </td>
 
@@ -1438,7 +1397,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-Tolland County
+New London County
 
 </td>
 
@@ -1450,53 +1409,19 @@ Total population
 
 <td style="text-align:left;">
 
-136,364
+259,088
 
 </td>
 
 <td style="text-align:left;">
 
-151,269
+268,881
 
 </td>
 
 <td style="text-align:left;">
 
-11%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Tolland County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-3,873
-
-</td>
-
-<td style="text-align:left;">
-
-8,086
-
-</td>
-
-<td style="text-align:left;">
-
-109%
+4%
 
 </td>
 
@@ -1506,7 +1431,7 @@ Latino
 
 <td style="text-align:left;">
 
-Tolland County
+New London County
 
 </td>
 
@@ -1518,19 +1443,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-124,014
+219,542
 
 </td>
 
 <td style="text-align:left;">
 
-128,603
+204,185
 
 </td>
 
 <td style="text-align:left;">
 
-4%
+\-7%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Tolland County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+4,997
+
+</td>
+
+<td style="text-align:left;">
+
+10,281
+
+</td>
+
+<td style="text-align:left;">
+
+106%
 
 </td>
 
@@ -1580,25 +1539,25 @@ Tolland County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-4,997
+3,873
 
 </td>
 
 <td style="text-align:left;">
 
-10,281
+8,086
 
 </td>
 
 <td style="text-align:left;">
 
-106%
+109%
 
 </td>
 
@@ -1608,7 +1567,7 @@ Other race, non-Latino
 
 <td style="text-align:left;">
 
-Windham County
+Tolland County
 
 </td>
 
@@ -1620,53 +1579,19 @@ Total population
 
 <td style="text-align:left;">
 
-109,091
+136,364
 
 </td>
 
 <td style="text-align:left;">
 
-116,538
+151,269
 
 </td>
 
 <td style="text-align:left;">
 
-7%
-
-</td>
-
-</tr>
-
-<tr>
-
-<td style="text-align:left;">
-
-Windham County
-
-</td>
-
-<td style="text-align:left;">
-
-Latino
-
-</td>
-
-<td style="text-align:left;">
-
-7,737
-
-</td>
-
-<td style="text-align:left;">
-
-13,368
-
-</td>
-
-<td style="text-align:left;">
-
-73%
+11%
 
 </td>
 
@@ -1676,7 +1601,7 @@ Latino
 
 <td style="text-align:left;">
 
-Windham County
+Tolland County
 
 </td>
 
@@ -1688,19 +1613,53 @@ White, non-Latino
 
 <td style="text-align:left;">
 
-96,666
+124,014
 
 </td>
 
 <td style="text-align:left;">
 
-96,795
+128,603
 
 </td>
 
 <td style="text-align:left;">
 
-0%
+4%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Other race, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+2,949
+
+</td>
+
+<td style="text-align:left;">
+
+4,291
+
+</td>
+
+<td style="text-align:left;">
+
+46%
 
 </td>
 
@@ -1750,25 +1709,93 @@ Windham County
 
 <td style="text-align:left;">
 
-Other race, non-Latino
+Latino
 
 </td>
 
 <td style="text-align:left;">
 
-2,949
+7,737
 
 </td>
 
 <td style="text-align:left;">
 
-4,291
+13,368
 
 </td>
 
 <td style="text-align:left;">
 
-46%
+73%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+Total population
+
+</td>
+
+<td style="text-align:left;">
+
+109,091
+
+</td>
+
+<td style="text-align:left;">
+
+116,538
+
+</td>
+
+<td style="text-align:left;">
+
+7%
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="text-align:left;">
+
+Windham County
+
+</td>
+
+<td style="text-align:left;">
+
+White, non-Latino
+
+</td>
+
+<td style="text-align:left;">
+
+96,666
+
+</td>
+
+<td style="text-align:left;">
+
+96,795
+
+</td>
+
+<td style="text-align:left;">
+
+0%
 
 </td>
 
@@ -1796,19 +1823,20 @@ pop_by_race_out %>%
     mutate(pct_chg = (`2018` - `2000`) / `2000`) %>% 
     ggplot(aes(pct_chg, label)) +
     geom_vline(xintercept = 0, size = .25, alpha = .8) +
-    geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
-    geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Roboto Condensed", size = 4) +
-    scale_x_continuous(limits = c(-.25, 2),
+    geom_col(fill = pal[1], width = .75, position = position_dodge(.85)) +
+    geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Lato Regular", size = 3) +
+    scale_x_continuous(limits = c(-.35, 2),
                                          labels = scales::percent_format(),
                                          expand = expansion(mult = c(.15, .1))) +
     facet_wrap(facets = "name") +
-    hrbrthemes::theme_ipsum_rc() +
     guides(fill = guide_legend(title = "")) +
-    labs(title = "Population change by race/ethnicity, 2000–2018",
+    labs(title = "Population Change by Race/Ethnicity, 2000–2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
-                axis.text.y = element_text(colour = "black"),
-                strip.text.x = element_text(hjust = .5),
+                plot.title = element_text(family = "Lato Bold"),
+                plot.caption = element_text(family = "Lato Regular", size = 8),
+                axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
+                strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
                 panel.grid.minor = element_blank(),
                 panel.grid.major = element_blank(),
                 axis.text.x = element_blank(),
@@ -1816,6 +1844,11 @@ pop_by_race_out %>%
 ```
 
 ![](pop_by_race_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2000_2018.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2000_2018.svg", dpi = 300, width = 6.5)
+```
 
 ``` r
 pop_by_race_out %>% 
@@ -1826,19 +1859,20 @@ pop_by_race_out %>%
                     fct_relevel(., "White, non-Latino", "Black, non-Latino", "Latino", "Asian, non-Latino", "Other race, non-Latino") %>% 
                     fct_rev()) %>% 
     ggplot(aes(estimate, label, group = name)) +
-    geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
-    geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_dodge(.85), hjust = "inward", family = "Lato Regular", size = 4) +
+    geom_col(fill = pal[1], width = .75, position = position_dodge(.85)) +
+    geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_dodge(.85), hjust = "inward", family = "Lato Regular", size = 3) +
     scale_x_continuous(labels = scales::comma_format(),
                                          expand = expansion(mult = c(.15, .1))) +
     facet_wrap(facets = "name", scales = "free_x") +
-    hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular") +
     guides(fill = guide_legend(title = "")) +
-    labs(title = "Population by race/ethnicity, 2018",
+    labs(title = "Population by Race/Ethnicity, 2018",
              x = "", y = "",
              caption = str_wrap("'Other Race, non-Latino' includes American Indian/Alaska Native, Native Hawaiian/Pacific Islander, people indicating 'Some Other Race,' and people of two or more races who are non-Latino.", 120)) +
     theme(plot.title.position = "plot",
-                axis.text.y = element_text(colour = "black"),
-                strip.text.x = element_text(hjust = .5),
+                plot.title = element_text(family = "Lato Bold"),
+                plot.caption = element_text(family = "Lato Regular", size = 8),
+                axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
+                strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
                 panel.grid.minor = element_blank(),
                 panel.grid.major = element_blank(),
                 axis.text.x = element_blank(),
@@ -1846,3 +1880,8 @@ pop_by_race_out %>%
 ```
 
 ![](pop_by_race_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2018.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2018.svg", dpi = 300, width = 6.5)
+```

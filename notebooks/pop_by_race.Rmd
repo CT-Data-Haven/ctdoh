@@ -245,24 +245,27 @@ pop_by_race_out %>%
 	mutate(pct_chg = (`2018` - `2000`) / `2000`) %>% 
 	ggplot(aes(pct_chg, label)) +
 	geom_vline(xintercept = 0, size = .25, alpha = .8) +
-	geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
-	geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Lato Regular", size = 4) +
-	scale_x_continuous(limits = c(-.25, 2),
+	geom_col(fill = pal[1], width = .75, position = position_dodge(.85)) +
+	geom_text(aes(label = scales::percent(pct_chg, accuracy = 1)), position = position_dodge(.85), hjust = 1, family = "Lato Regular", size = 3) +
+	scale_x_continuous(limits = c(-.35, 2),
 										 labels = scales::percent_format(),
 										 expand = expansion(mult = c(.15, .1))) +
 	facet_wrap(facets = "name") +
-	hrbrthemes::theme_ipsum_rc() +
-  scale_fill_manual(values = rep(pal[1], 5)) +
 	guides(fill = guide_legend(title = "")) +
-	labs(title = "Population change by race/ethnicity, 2000–2018",
+	labs(title = "Population Change by Race/Ethnicity, 2000–2018",
 			 x = "", y = "") +
 	theme(plot.title.position = "plot",
-				axis.text.y = element_text(colour = "black"),
-				strip.text.x = element_text(hjust = .5),
+				plot.title = element_text(family = "Lato Bold"),
+				plot.caption = element_text(family = "Lato Regular", size = 8),
+				axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
+				strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
 				panel.grid.minor = element_blank(),
 				panel.grid.major = element_blank(),
 				axis.text.x = element_blank(),
 				legend.position = "none")
+
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2000_2018.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2000_2018.svg", dpi = 300, width = 6.5)
 ```
 
 ```{r fig.height=8, fig.width=8}
@@ -274,22 +277,25 @@ pop_by_race_out %>%
 				 	fct_relevel(., "White, non-Latino", "Black, non-Latino", "Latino", "Asian, non-Latino", "Other race, non-Latino") %>% 
 				 	fct_rev()) %>% 
 	ggplot(aes(estimate, label, group = name)) +
-	geom_col(aes(fill = label), width = .75, position = position_dodge(.85)) +
-	geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_dodge(.85), hjust = "inward", family = "Lato Regular", size = 4) +
+	geom_col(fill = pal[1], width = .75, position = position_dodge(.85)) +
+	geom_text(aes(label = scales::comma(estimate, accuracy = 1)), position = position_dodge(.85), hjust = "inward", family = "Lato Regular", size = 3) +
 	scale_x_continuous(labels = scales::comma_format(),
 										 expand = expansion(mult = c(.15, .1))) +
 	facet_wrap(facets = "name", scales = "free_x") +
-	hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular") +
-  scale_fill_manual(values = rep(pal[1], 5)) +
 	guides(fill = guide_legend(title = "")) +
-	labs(title = "Population by race/ethnicity, 2018",
+	labs(title = "Population by Race/Ethnicity, 2018",
 			 x = "", y = "",
 			 caption = str_wrap("'Other Race, non-Latino' includes American Indian/Alaska Native, Native Hawaiian/Pacific Islander, people indicating 'Some Other Race,' and people of two or more races who are non-Latino.", 120)) +
 	theme(plot.title.position = "plot",
-				axis.text.y = element_text(colour = "black"),
-				strip.text.x = element_text(hjust = .5),
+				plot.title = element_text(family = "Lato Bold"),
+				plot.caption = element_text(family = "Lato Regular", size = 8),
+				axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
+				strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
 				panel.grid.minor = element_blank(),
 				panel.grid.major = element_blank(),
 				axis.text.x = element_blank(),
 				legend.position = "none")
+
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2018.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/pop_by_race_2018.svg", dpi = 300, width = 6.5)
 ```
