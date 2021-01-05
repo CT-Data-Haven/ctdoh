@@ -118,8 +118,8 @@ commute %>%
 				axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
 				strip.text.x = element_text(hjust= .5, colour = "black", family = "Lato Regular", size = 9))
 
-ggsave(filename = "../output_data/corrected_charts/commuters.png", dpi = 300, width = 6.5)
-ggsave(filename = "../output_data/corrected_charts/commuters.svg", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/commuters.png", dpi = 300, width = 6.5, height = 6.5)
+ggsave(filename = "../output_data/corrected_charts/commuters.svg", dpi = 300, width = 6.5, height = 6.5)
 ```
 
 I'm only showing 2018 here even though 2010 and 2000 are listed in the csv (not much change over time...). It's still a very long table, but more analysis follows.

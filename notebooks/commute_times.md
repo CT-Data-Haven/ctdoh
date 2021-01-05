@@ -123,8 +123,8 @@ commute %>%
 ![](commute_times_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
-ggsave(filename = "../output_data/corrected_charts/commuters.png", dpi = 300, width = 6.5)
-ggsave(filename = "../output_data/corrected_charts/commuters.svg", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/commuters.png", dpi = 300, width = 6.5, height = 6.5)
+ggsave(filename = "../output_data/corrected_charts/commuters.svg", dpi = 300, width = 6.5, height = 6.5)
 ```
 
 I’m only showing 2018 here even though 2010 and 2000 are listed in the
