@@ -2074,6 +2074,6 @@ plot %>%
 ![](hh_by_type_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
-ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.png", dpi = 300, width = 6.5, height = 9)
-ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.svg", dpi = 300, width = 6.5, height = 9)
+ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.png", dpi = 300, width = 6.5, height = 6.5)
+ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.svg", dpi = 300, width = 6.5, height = 6.5)
 ```
