@@ -2062,7 +2062,7 @@ plot %>%
     labs(title = "Change in Households by Type, 2000–2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
-                plot.title = element_text(family = "Lato Bold"),
+                plot.title = element_text(family = "Lato Bold", size = 11),
                 axis.text.y = element_text(colour = "black", size = 9),
                 strip.text.x = element_text(hjust = .5, size = 9),
                 panel.grid.minor = element_blank(),
@@ -2074,6 +2074,6 @@ plot %>%
 ![](hh_by_type_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 ``` r
-ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.png", dpi = 300, width = 6.5)
-ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.svg", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.png", dpi = 300, width = 6.5, height = 9)
+ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.svg", dpi = 300, width = 6.5, height = 9)
 ```
