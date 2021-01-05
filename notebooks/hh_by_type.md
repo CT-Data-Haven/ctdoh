@@ -9,24 +9,29 @@ library(cwi)
 library(camiller)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+```
+
 These don’t change much year over year, so I think 2000, 2010, and 2018
 should be sufficient to make our point.
 
 # Fetch
 
 ``` r
-tbls <- ext_table_nums[c("family", "children")]
+tbls <- c("family" = "B11001", "children" = "B11003")
 
 fetch18 <- tbls %>% map(~multi_geo_acs(table = ., year = 2018, new_england = F) %>% 
                                                 label_acs() %>%
-                                                select(-GEOID) %>% 
-                                                rename(name = NAME) %>% 
+                                                select(-geoid) %>% 
                                                 group_by(level, name))
 
 fetch10 <- tbls %>% map(~multi_geo_acs(table = ., year = 2010, new_england = F) %>% 
                                                 label_acs() %>%
-                                                select(-GEOID) %>% 
-                                                rename(name = NAME) %>% 
+                                                select(-geoid) %>% 
                                                 group_by(level, name))
 
 fetch00 <- multi_geo_decennial(table = "P018", year = 2000)
@@ -47,8 +52,8 @@ children <- bind_rows(fetch18$children, fetch10$children) %>%
 
 hh00 <- fetch00 %>%
   label_decennial(year = 2000) %>% 
-  group_by(level, name = NAME) %>% 
-  add_grps(list(total_households = 1, living_alone = 2, married_w_kids = 8, married_no_kids = 9, single_w_kids = c(12, 15), other_households = c(13, 16, 17)), group = label, estimate = value) %>%
+  group_by(level, name) %>% 
+  add_grps(list(total_households = 1, living_alone = 2, married_w_kids = 8, married_no_kids = 9, single_w_kids = c(12, 15), other_households = c(13, 16, 17)), group = label, value = value) %>%
   mutate(year = 2000)
 
 household_type <- bind_rows(family, children) %>%
@@ -61,7 +66,7 @@ household_type <- bind_rows(family, children) %>%
     rename(group = label) %>% 
   ungroup() %>%
   group_by(level, name, year) %>%
-  calc_shares(group = group, denom = "total_households", estimate = value) %>%
+  calc_shares(group = group, denom = "total_households", value = value) %>%
   mutate(year = as.factor(year),
              group = as.factor(group) %>%
            fct_relevel("married_w_kids", "married_no_kids", "single_w_kids", "living_alone", "other_households")) %>%
@@ -87,7 +92,6 @@ household_type_change %>%
 
 ``` r
 set.seed(13)
-
 household_type_change %>% 
     ungroup() %>% 
     mutate(group = as.character(group),
@@ -103,11 +107,11 @@ household_type_change %>%
     filter(name == "Connecticut") %>% 
     ggplot(aes(year, value, group = group)) +
     geom_vline(aes(xintercept = year), size = .5, color = "grey70") +
-    geom_point(aes(color = group), size = 4, alpha = .8) +
-    geom_line(aes(color = group), size = 1, alpha = .8) +
-    ggrepel::geom_text_repel(aes(label = scales::comma(value, accuracy = 1)), segment.colour = NA, vjust = -1.4, family = "Roboto Condensed") +
+    geom_point(size = 4, alpha = .8, color = pal[1]) +
+    geom_line(size = 1, alpha = .8, color = pal[1]) +
+    ggrepel::geom_text_repel(aes(label = scales::comma(value, accuracy = 1)), segment.colour = NA, vjust = -1.4, family = "Lato Regular") +
     scale_y_continuous(expand = expansion(mult = c(.1, .1))) +
-    hrbrthemes::theme_ipsum_rc() +
+  hrbrthemes::theme_ipsum_rc() +
     guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
     labs(title = "Households by type, 2000–2018",
              subtitle = "Connecticut",
@@ -2049,18 +2053,18 @@ plot <- household_type_change %>%
 plot %>% 
     ggplot(aes(diff, group)) +
     geom_vline(xintercept = 0, size = .25, alpha = .8) +
-    geom_col(aes(fill = group), width = .75, position = "identity") +
-    geom_text(aes(label = scales::comma(diff, accuracy = 1)), hjust = "inward", position = "identity", family = "Roboto Condensed", size = 4) +
+    #geom_col(width = .75, position = "identity", fill = pal[1]) +
+    geom_col(fill = pal[1], position = position_dodge(1), width = .75) +
+    geom_text(aes(label = scales::comma(diff, accuracy = 1)), hjust = "inward", position = position_dodge(1), family = "Lato Regular", size = 3) +
     scale_x_continuous(expand = expansion(mult = c(.15,.05))) +
     facet_wrap(facets = "name", scales = "free_x") +
-    hrbrthemes::theme_ipsum_rc() +
     guides(fill = guide_legend(title = "")) +
-    labs(title = "Change in households by type, 2000–2018",
-             subtitle = "Connecticut",
+    labs(title = "Change in Households by Type, 2000–2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
-                axis.text.y = element_text(colour = "black"),
-                strip.text.x = element_text(hjust = .5),
+                plot.title = element_text(family = "Lato Bold"),
+                axis.text.y = element_text(colour = "black", size = 9),
+                strip.text.x = element_text(hjust = .5, size = 9),
                 panel.grid.minor = element_blank(),
                 panel.grid.major = element_blank(),
                 axis.text.x = element_blank(),
@@ -2068,3 +2072,8 @@ plot %>%
 ```
 
 ![](hh_by_type_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/hh_type_2000_2018.svg", dpi = 300, width = 6.5)
+```
