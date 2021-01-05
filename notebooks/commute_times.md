@@ -7,6 +7,13 @@ library(ipumsr)
 library(srvyr)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+```
+
 I’m not sure if this makes the most sense or not, but commute times here
 are given as share by time range (mean is influenced by some very high
 and low commute times) by county and the state, then by tenure.
@@ -98,22 +105,27 @@ commute %>%
                  year == "2018") %>% 
     mutate(commute_time = fct_rev(commute_time)) %>% 
     ggplot(aes(share, commute_time)) +
-    geom_col(aes(fill = commute_time), width = .7, position = position_dodge(.8)) +
-    geom_text(aes(label = scales::percent(share, accuracy = 1)), position = position_dodge(.8), hjust = -.1, family = "Roboto Condensed") +
-    scale_x_continuous(expand = expansion(mult = c(.05, .2))) +
+    geom_col(width = .7, position = position_dodge(.8), fill=pal[1]) +
+    geom_text(aes(label = scales::percent(share, accuracy = 1)), position = position_dodge(.8), hjust = -.1, family = "Lato Regular", size = 3) +
+    scale_x_continuous(expand = expansion(mult = c(.05, .272))) +
     facet_wrap(facets = "name") + 
-    hrbrthemes::theme_ipsum_rc() +
-    labs(title = "Share of commuters by travel time to work, 2018", x = "", y = "") +
+    labs(title = "Share of Commuters by Travel Time to Work, 2018", x = "", y = "") +
     theme(plot.title.position = "plot",
+                plot.title = element_text(family = "Lato Bold", size = 11),
                 panel.grid.major = element_blank(), 
                 panel.grid.minor = element_blank(),
                 legend.position = "none",
                 axis.text.x = element_blank(),
-                axis.text.y = element_text(colour = "black"),
-                strip.text.x = element_text(colour = "black"))
+                axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
+                strip.text.x = element_text(hjust= .5, colour = "black", family = "Lato Regular", size = 9))
 ```
 
 ![](commute_times_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/commuters.png", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/commuters.svg", dpi = 300, width = 6.5)
+```
 
 I’m only showing 2018 here even though 2010 and 2000 are listed in the
 csv (not much change over time…). It’s still a very long table, but more
@@ -2050,20 +2062,3 @@ commute_tenure <- bind_rows(state_com_tenure, total_state_tenure, county_com_ten
 
 write_csv(commute_tenure, file = "../output_data/commute_time_by_tenure_2000_2018.csv")
 ```
-
-I don’t think we should use this viz. It’s just here for reference.
-
-``` r
-commute_tenure %>% 
-    filter(!is.na(share), year == "2018") %>% 
-    mutate(commute_time = fct_rev(commute_time)) %>% 
-    ggplot(aes(share, commute_time, group = commute_time)) +
-    geom_point(aes(color = commute_time, shape = tenure)) +
-    facet_grid(rows = vars(name)) +
-    labs(title = "Share of commuters by travel time to work and tenure, 2018")
-```
-
-![](commute_times_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
-
-Too many rows for a kable table… see
-commute\_time\_by\_tenure\_2000\_2018.csv.
