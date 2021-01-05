@@ -1,36 +1,36 @@
 inc_band,disability_type,households,share
-Very low,total,201377,NA
-Very low,diffcare,17754,0.088
-Very low,diffeye,14957,0.074
-Very low,diffhear,18103,0.09
-Very low,diffmob,33706,0.167
-Very low,diffphys,47037,0.234
-Very low,diffrem,32791,0.163
-Low,total,151345,NA
-Low,diffcare,9960,0.066
-Low,diffeye,8445,0.056
-Low,diffhear,14583,0.096
-Low,diffmob,19097,0.126
-Low,diffphys,27160,0.179
-Low,diffrem,17900,0.118
-Mid-low,total,214490,NA
-Mid-low,diffcare,11711,0.055
-Mid-low,diffeye,8894,0.041
-Mid-low,diffhear,17509,0.082
-Mid-low,diffmob,19998,0.093
-Mid-low,diffphys,28619,0.133
-Mid-low,diffrem,18843,0.088
-Mid-high,total,231836,NA
-Mid-high,diffcare,9614,0.041
-Mid-high,diffeye,7405,0.032
-Mid-high,diffhear,15120,0.065
-Mid-high,diffmob,18087,0.078
-Mid-high,diffphys,24147,0.104
-Mid-high,diffrem,15465,0.067
-High,total,568326,NA
-High,diffcare,15413,0.027
-High,diffeye,14087,0.025
-High,diffhear,31272,0.055
-High,diffmob,27996,0.049
-High,diffphys,37749,0.066
-High,diffrem,29978,0.053
+Very low,total,208730,NA
+Very low,diffcare,18511,0.089
+Very low,diffeye,15523,0.074
+Very low,diffhear,18802,0.09
+Very low,diffmob,34983,0.168
+Very low,diffphys,48761,0.234
+Very low,diffrem,33941,0.163
+Low,total,156805,NA
+Low,diffcare,10089,0.064
+Low,diffeye,8524,0.054
+Low,diffhear,14928,0.095
+Low,diffmob,19555,0.125
+Low,diffphys,27631,0.176
+Low,diffrem,18142,0.116
+Mid-low,total,217599,NA
+Mid-low,diffcare,11294,0.052
+Mid-low,diffeye,8899,0.041
+Mid-low,diffhear,17640,0.081
+Mid-low,diffmob,19630,0.09
+Mid-low,diffphys,28115,0.129
+Mid-low,diffrem,18660,0.086
+Mid-high,total,237507,NA
+Mid-high,diffcare,9865,0.042
+Mid-high,diffeye,7409,0.031
+Mid-high,diffhear,15366,0.065
+Mid-high,diffmob,18177,0.077
+Mid-high,diffphys,24274,0.102
+Mid-high,diffrem,15642,0.066
+High,total,546733,NA
+High,diffcare,14693,0.027
+High,diffeye,13433,0.025
+High,diffhear,29851,0.055
+High,diffmob,26539,0.049
+High,diffphys,35931,0.066
+High,diffrem,28592,0.052

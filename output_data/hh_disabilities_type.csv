@@ -1,31 +1,31 @@
 inc_band,disability_type,households
-Very low,diffcare,17754
-Low,diffcare,9960
-Mid-low,diffcare,11711
-Mid-high,diffcare,9614
-High,diffcare,15413
-Very low,diffeye,14957
-Low,diffeye,8445
-Mid-low,diffeye,8894
-Mid-high,diffeye,7405
-High,diffeye,14087
-Very low,diffhear,18103
-Low,diffhear,14583
-Mid-low,diffhear,17509
-Mid-high,diffhear,15120
-High,diffhear,31272
-Very low,diffmob,33706
-Low,diffmob,19097
-Mid-low,diffmob,19998
-Mid-high,diffmob,18087
-High,diffmob,27996
-Very low,diffphys,47037
-Low,diffphys,27160
-Mid-low,diffphys,28619
-Mid-high,diffphys,24147
-High,diffphys,37749
-Very low,diffrem,32791
-Low,diffrem,17900
-Mid-low,diffrem,18843
-Mid-high,diffrem,15465
-High,diffrem,29978
+Very low,diffcare,18511
+Low,diffcare,10089
+Mid-low,diffcare,11294
+Mid-high,diffcare,9865
+High,diffcare,14693
+Very low,diffeye,15523
+Low,diffeye,8524
+Mid-low,diffeye,8899
+Mid-high,diffeye,7409
+High,diffeye,13433
+Very low,diffhear,18802
+Low,diffhear,14928
+Mid-low,diffhear,17640
+Mid-high,diffhear,15366
+High,diffhear,29851
+Very low,diffmob,34983
+Low,diffmob,19555
+Mid-low,diffmob,19630
+Mid-high,diffmob,18177
+High,diffmob,26539
+Very low,diffphys,48761
+Low,diffphys,27631
+Mid-low,diffphys,28115
+Mid-high,diffphys,24274
+High,diffphys,35931
+Very low,diffrem,33941
+Low,diffrem,18142
+Mid-low,diffrem,18660
+Mid-high,diffrem,15642
+High,diffrem,28592

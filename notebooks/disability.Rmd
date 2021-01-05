@@ -1,8 +1,6 @@
 ---
 title: "Split out disability analysis from households desiring housing"
 output: github_document
-editor_options: 
-  chunk_output_type: console
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = T, message = F, warning = F)
@@ -382,18 +380,24 @@ ct_inc_band_disability %>%
 	calc_shares(group = disability, denom = "Total", value = value, moe = value_se) %>% 
 	filter(disability == "TRUE", inc_band != "Total") %>% 
 	ggplot(aes(share, inc_band, group = inc_band)) +
-	geom_col(position = position_dodge(1), fill=pal[1]) +
-	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(1), family = "Lato Regular", size = 4.5, hjust = 1.1, vjust = .5) +
+	geom_col(position = position_dodge(.25), fill=pal[1]) +
+	geom_text(aes(label = percent(share, accuracy = 1)), position = position_dodge(.25), family = "Lato Regular", size = 3.5, hjust = 1.1, vjust = .5) +
 	scale_x_continuous(expand = expansion(mult = c(0, 0))) +
 	theme(plot.title.position = "plot",
+				plot.subtitle = element_text(family = "Lato Regular", size = 8),
+				plot.title = element_text(family = "Lato Bold", size = 11),
 				axis.text.x = element_blank(), 
-				axis.text.y = element_text(colour = "black"),
+				axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
 				panel.grid.major = element_blank(),
 				panel.grid.minor = element_blank(),
 				legend.position = "none") +
-	labs(title = str_wrap("Share of households with a person with a disability in each income band", 60),
+	labs(title = str_wrap("Share of Households With a Person With a Disability in Each Income Band", 100),
 			 subtitle = "Connecticut",
 			 x = "", y = "")
+
+ggsave(filename = "../output_data/corrected_charts/hh_pers_disability.png", dpi = 300, width = 6.5, height = 4)
+
+ggsave(filename = "../output_data/corrected_charts/hh_pers_disability.svg", dpi = 300, width = 6.5, height = 4)
 ```
 
 ```{r fig.width = 8, fig.height = 8, echo = F}

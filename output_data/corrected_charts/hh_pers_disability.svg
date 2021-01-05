@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 468.00 288.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, polygon, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ=='>
+    <rect x='78.58' y='72.69' width='359.53' height='171.25' />
+  </clipPath>
+</defs>
+<rect x='78.58' y='209.36' width='139.08' height='29.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #1696D2;' clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)' />
+<rect x='78.58' y='176.43' width='180.71' height='29.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #1696D2;' clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)' />
+<rect x='78.58' y='143.49' width='219.51' height='29.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #1696D2;' clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)' />
+<rect x='78.58' y='110.56' width='282.90' height='29.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #1696D2;' clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)' />
+<rect x='78.58' y='77.63' width='359.53' height='29.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #1696D2;' clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)' />
+<g clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)'><text x='195.74' y='227.75' style='font-size: 9.96px; font-family: Lato Regular;' textLength='19.93px' lengthAdjust='spacingAndGlyphs'>15%</text></g>
+<g clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)'><text x='237.37' y='194.82' style='font-size: 9.96px; font-family: Lato Regular;' textLength='19.93px' lengthAdjust='spacingAndGlyphs'>19%</text></g>
+<g clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)'><text x='276.16' y='161.88' style='font-size: 9.96px; font-family: Lato Regular;' textLength='19.93px' lengthAdjust='spacingAndGlyphs'>23%</text></g>
+<g clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)'><text x='339.55' y='128.95' style='font-size: 9.96px; font-family: Lato Regular;' textLength='19.93px' lengthAdjust='spacingAndGlyphs'>30%</text></g>
+<g clip-path='url(#cpNzguNTh8NDM4LjExfDI0My45NHw3Mi42OQ==)'><text x='416.19' y='96.02' style='font-size: 9.96px; font-family: Lato Regular;' textLength='19.93px' lengthAdjust='spacingAndGlyphs'>38%</text></g>
+<defs>
+  <clipPath id='cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA='>
+    <rect x='0.00' y='0.00' width='468.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='57.20' y='227.41' style='font-size: 9.00px; font-family: Lato Regular;' textLength='18.51px' lengthAdjust='spacingAndGlyphs'>High</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='41.20' y='194.47' style='font-size: 9.00px; font-family: Lato Regular;' textLength='34.51px' lengthAdjust='spacingAndGlyphs'>Mid-high</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='44.71' y='161.54' style='font-size: 9.00px; font-family: Lato Regular;' textLength='31.00px' lengthAdjust='spacingAndGlyphs'>Mid-low</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='59.20' y='128.61' style='font-size: 9.00px; font-family: Lato Regular;' textLength='16.51px' lengthAdjust='spacingAndGlyphs'>Low</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='41.20' y='95.68' style='font-size: 9.00px; font-family: Lato Regular;' textLength='34.51px' lengthAdjust='spacingAndGlyphs'>Very low</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='29.89' y='55.97' style='font-size: 8.00px; font-family: Lato Regular;' textLength='42.25px' lengthAdjust='spacingAndGlyphs'>Connecticut</text></g>
+<g clip-path='url(#cpMC4wMHw0NjguMDB8Mjg4LjAwfDAuMDA=)'><text x='29.89' y='37.84' style='font-size: 11.00px; font-weight: bold; font-family: Lato Bold;' textLength='359.73px' lengthAdjust='spacingAndGlyphs'>Share of Households With a Person With a Disability in Each Income Band</text></g>
+</svg>
