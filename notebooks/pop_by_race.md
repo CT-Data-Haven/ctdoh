@@ -1833,7 +1833,7 @@ pop_by_race_out %>%
     labs(title = "Population Change by Race/Ethnicity, 2000–2018",
              x = "", y = "") +
     theme(plot.title.position = "plot",
-                plot.title = element_text(family = "Lato Bold"),
+                plot.title = element_text(family = "Lato Bold", size = 11),
                 plot.caption = element_text(family = "Lato Regular", size = 8),
                 axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
                 strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
@@ -1869,7 +1869,7 @@ pop_by_race_out %>%
              x = "", y = "",
              caption = str_wrap("'Other Race, non-Latino' includes American Indian/Alaska Native, Native Hawaiian/Pacific Islander, people indicating 'Some Other Race,' and people of two or more races who are non-Latino.", 120)) +
     theme(plot.title.position = "plot",
-                plot.title = element_text(family = "Lato Bold"),
+                plot.title = element_text(family = "Lato Bold", size = 11),
                 plot.caption = element_text(family = "Lato Regular", size = 8),
                 axis.text.y = element_text(colour = "black", family = "Lato Regular", size = 9),
                 strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),

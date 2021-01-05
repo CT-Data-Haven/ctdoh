@@ -111,10 +111,10 @@ vacancy %>%
 	guides(color = guide_legend(title = "Tenure", override.aes = list(linetype = 0)),
 				 shape = guide_legend(title = "Unit type")) +
   scale_color_manual(values = c(pal[1:2])) +
-	labs(title = str_wrap("Vacancy Rates by Homeownershp and Unit Type, 2000–2018", 40),
+	labs(title = str_wrap("Vacancy Rates by Homeownershp and Unit Type, 2000–2018", 100),
 			 x = "", y = "") +
 	theme(plot.title.position = "plot",
-				plot.title = element_text(family = "Lato Bold"),
+				plot.title = element_text(family = "Lato Bold", size = 11),
 				strip.text.x = element_text(hjust = .5, family = "Lato Regular", size = 9),
 				panel.grid.minor.y = element_blank(), 
 				axis.text.x = element_text(colour = "black", family = "Lato Regular", size = 9),
