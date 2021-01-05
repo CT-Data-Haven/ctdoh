@@ -48,9 +48,11 @@ fetch <- yrs %>% map(~get_acs(geography = "county",table = "B19013", state = 09,
 	select(countyfip, name, minc = estimate))
 
 fetch2 <- get_decennial(geography = "county", variables = "HCT012001", state = 09, year = 2000, sumfile = "sf3") %>% 
+	rename(name = NAME) %>% 
 	mutate(year = "2000",
-				 countyfip = seq(from = 1, to = 15, by = 2)) %>% 
-	select(year, countyfip, name = NAME, minc = value)
+				 countyfip = seq(from = 1, to = 15, by = 2),
+				 name = str_remove(name, ", Connecticut")) %>% 
+	select(year, countyfip, name, minc = value)
 
 minc <- (bind_rows(fetch, .id = "year")) %>% 
 	bind_rows(fetch2) %>% 
@@ -195,12 +197,17 @@ hh_by_2018_inc_band %>%
 	hrbrthemes::theme_ipsum_rc() +
   scale_color_custom(palette = c(pal[1:5]), rev=T) +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
-	labs(title = "Count of households by 2018 income band",
+	labs(title = "Households by Income Band",
 			 x = "", y = "") +
 	theme(plot.title.position = "plot",
-				axis.text.y = element_text(colour = "black"),
-				strip.text.x = element_text(hjust = .5),
+				plot.title = element_text(family = "Lato Bold", size = 11),
+				legend.text = element_text(family = "Lato Regular", size = 9),
+				axis.text.y = element_text(colour = "black", size = 9),
+				strip.text.x = element_text(hjust = .5, size = 9),
 				panel.grid.minor = element_blank(),
-				axis.text.x = element_text(colour = "black"),
+				axis.text.x = element_text(colour = "black", size = 9),
 				legend.position = "bottom")
+
+ggsave(filename = "../output_data/corrected_charts/hh_by_inc_band.png", dpi = 300, width = 8, height = 10)
+ggsave(filename = "../output_data/corrected_charts/hh_by_inc_band.svg", dpi = 300, width = 8, height = 10)
 ```

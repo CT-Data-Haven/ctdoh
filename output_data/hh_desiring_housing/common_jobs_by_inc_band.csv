@@ -1,401 +1,402 @@
-level,name,inc_band,workers,occ,occ_label
-2_counties,Fairfield County,Very low,2715,4720,Cashiers
-2_counties,Fairfield County,Very low,2035,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Fairfield County,Very low,2023,4230,Maids and housekeeping cleaners
-2_counties,Fairfield County,Very low,1313,4600,Childcare workers
-2_counties,Fairfield County,Very low,1265,4251,Landscaping and groundskeeping workers
-2_counties,Fairfield County,Very low,1250,3602,Personal care aides
-2_counties,Fairfield County,Very low,1241,4760,Retail salespersons
-2_counties,Fairfield County,Very low,1222,4220,Janitors and building cleaners
-2_counties,Fairfield County,Very low,1144,3603,Nursing assistants
-2_counties,Fairfield County,Very low,866,4020,Cooks
-2_counties,Fairfield County,Low,2387,4230,Maids and housekeeping cleaners
-2_counties,Fairfield County,Low,1658,4220,Janitors and building cleaners
-2_counties,Fairfield County,Low,1560,4251,Landscaping and groundskeeping workers
-2_counties,Fairfield County,Low,1493,4720,Cashiers
-2_counties,Fairfield County,Low,1309,4600,Childcare workers
-2_counties,Fairfield County,Low,1197,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Fairfield County,Low,1170,3603,Nursing assistants
-2_counties,Fairfield County,Low,1047,4760,Retail salespersons
-2_counties,Fairfield County,Low,1046,6230,Carpenters
-2_counties,Fairfield County,Low,1013,5240,Customer service representatives
-2_counties,Fairfield County,Mid-low,2700,4720,Cashiers
-2_counties,Fairfield County,Mid-low,2476,4230,Maids and housekeeping cleaners
-2_counties,Fairfield County,Mid-low,2293,4220,Janitors and building cleaners
-2_counties,Fairfield County,Mid-low,1971,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Fairfield County,Mid-low,1935,4760,Retail salespersons
-2_counties,Fairfield County,Mid-low,1702,9130,Driver/sales workers and truck drivers
-2_counties,Fairfield County,Mid-low,1651,3603,Nursing assistants
-2_counties,Fairfield County,Mid-low,1645,6230,Carpenters
-2_counties,Fairfield County,Mid-low,1612,4020,Cooks
-2_counties,Fairfield County,Mid-low,1559,4251,Landscaping and groundskeeping workers
-2_counties,Fairfield County,Mid-high,2764,2310,Elementary and middle school teachers
-2_counties,Fairfield County,Mid-high,2758,4720,Cashiers
-2_counties,Fairfield County,Mid-high,2583,4760,Retail salespersons
-2_counties,Fairfield County,Mid-high,2280,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Fairfield County,Mid-high,2108,9130,Driver/sales workers and truck drivers
-2_counties,Fairfield County,Mid-high,2033,4220,Janitors and building cleaners
-2_counties,Fairfield County,Mid-high,2015,440,"Managers, all other"
-2_counties,Fairfield County,Mid-high,2012,4700,First-Line supervisors of retail sales workers
-2_counties,Fairfield County,Mid-high,1810,5240,Customer service representatives
-2_counties,Fairfield County,Mid-high,1731,6230,Carpenters
-2_counties,Fairfield County,High,12623,440,"Managers, all other"
-2_counties,Fairfield County,High,10751,2310,Elementary and middle school teachers
-2_counties,Fairfield County,High,8319,800,Accountants and auditors
-2_counties,Fairfield County,High,8181,120,Financial managers
-2_counties,Fairfield County,High,8010,10,Chief executives
-2_counties,Fairfield County,High,6602,2100,Lawyers
-2_counties,Fairfield County,High,6110,4760,Retail salespersons
-2_counties,Fairfield County,High,5915,3255,Registered nurses
-2_counties,Fairfield County,High,5014,4700,First-Line supervisors of retail sales workers
-2_counties,Fairfield County,High,4672,710,Management analysts
-2_counties,Hartford County,Very low,2110,4720,Cashiers
-2_counties,Hartford County,Very low,1871,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Hartford County,Very low,1212,3602,Personal care aides
-2_counties,Hartford County,Very low,1147,4220,Janitors and building cleaners
-2_counties,Hartford County,Very low,1088,3603,Nursing assistants
-2_counties,Hartford County,Very low,918,4600,Childcare workers
-2_counties,Hartford County,Very low,853,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Hartford County,Very low,781,5240,Customer service representatives
-2_counties,Hartford County,Very low,772,4760,Retail salespersons
-2_counties,Hartford County,Very low,739,9130,Driver/sales workers and truck drivers
-2_counties,Hartford County,Low,1691,4720,Cashiers
-2_counties,Hartford County,Low,1326,4220,Janitors and building cleaners
-2_counties,Hartford County,Low,1231,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Hartford County,Low,969,4760,Retail salespersons
-2_counties,Hartford County,Low,939,3603,Nursing assistants
-2_counties,Hartford County,Low,931,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Hartford County,Low,896,5240,Customer service representatives
-2_counties,Hartford County,Low,895,9130,Driver/sales workers and truck drivers
-2_counties,Hartford County,Low,862,4700,First-Line supervisors of retail sales workers
-2_counties,Hartford County,Low,761,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Hartford County,Mid-low,2479,4720,Cashiers
-2_counties,Hartford County,Mid-low,2135,4760,Retail salespersons
-2_counties,Hartford County,Mid-low,1884,3603,Nursing assistants
-2_counties,Hartford County,Mid-low,1800,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Hartford County,Mid-low,1738,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Hartford County,Mid-low,1724,4220,Janitors and building cleaners
-2_counties,Hartford County,Mid-low,1606,4700,First-Line supervisors of retail sales workers
-2_counties,Hartford County,Mid-low,1584,5240,Customer service representatives
-2_counties,Hartford County,Mid-low,1469,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Hartford County,Mid-low,1434,9130,Driver/sales workers and truck drivers
-2_counties,Hartford County,Mid-high,2358,4720,Cashiers
-2_counties,Hartford County,Mid-high,2152,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Hartford County,Mid-high,2145,4220,Janitors and building cleaners
-2_counties,Hartford County,Mid-high,2035,9130,Driver/sales workers and truck drivers
-2_counties,Hartford County,Mid-high,1891,5240,Customer service representatives
-2_counties,Hartford County,Mid-high,1784,3255,Registered nurses
-2_counties,Hartford County,Mid-high,1766,4700,First-Line supervisors of retail sales workers
-2_counties,Hartford County,Mid-high,1723,4760,Retail salespersons
-2_counties,Hartford County,Mid-high,1692,2310,Elementary and middle school teachers
-2_counties,Hartford County,Mid-high,1556,440,"Managers, all other"
-2_counties,Hartford County,High,10814,440,"Managers, all other"
-2_counties,Hartford County,High,10368,2310,Elementary and middle school teachers
-2_counties,Hartford County,High,8586,3255,Registered nurses
-2_counties,Hartford County,High,6134,800,Accountants and auditors
-2_counties,Hartford County,High,5834,4760,Retail salespersons
-2_counties,Hartford County,High,5755,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Hartford County,High,4880,5240,Customer service representatives
-2_counties,Hartford County,High,4761,2100,Lawyers
-2_counties,Hartford County,High,4657,4720,Cashiers
-2_counties,Hartford County,High,4356,4710,First-Line supervisors of non-retail sales workers
-2_counties,Litchfield County,Very low,296,4760,Retail salespersons
-2_counties,Litchfield County,Very low,261,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Litchfield County,Very low,241,3602,Personal care aides
-2_counties,Litchfield County,Very low,235,4720,Cashiers
-2_counties,Litchfield County,Very low,225,4220,Janitors and building cleaners
-2_counties,Litchfield County,Very low,216,6230,Carpenters
-2_counties,Litchfield County,Very low,153,4700,First-Line supervisors of retail sales workers
-2_counties,Litchfield County,Very low,125,8990,Other production workers
-2_counties,Litchfield County,Very low,117,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Litchfield County,Very low,105,2016,Social and human service assistants
-2_counties,Litchfield County,Low,308,4220,Janitors and building cleaners
-2_counties,Litchfield County,Low,282,4700,First-Line supervisors of retail sales workers
-2_counties,Litchfield County,Low,260,4110,Waiters and waitresses
-2_counties,Litchfield County,Low,247,3602,Personal care aides
-2_counties,Litchfield County,Low,225,5240,Customer service representatives
-2_counties,Litchfield County,Low,217,9130,Driver/sales workers and truck drivers
-2_counties,Litchfield County,Low,214,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Litchfield County,Low,191,310,Food service managers
-2_counties,Litchfield County,Low,180,4251,Landscaping and groundskeeping workers
-2_counties,Litchfield County,Low,176,6260,Construction laborers
-2_counties,Litchfield County,Mid-low,590,4220,Janitors and building cleaners
-2_counties,Litchfield County,Mid-low,497,4720,Cashiers
-2_counties,Litchfield County,Mid-low,497,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Litchfield County,Mid-low,452,9130,Driver/sales workers and truck drivers
-2_counties,Litchfield County,Mid-low,403,5120,"Bookkeeping, accounting, and auditing clerks"
-2_counties,Litchfield County,Mid-low,364,4760,Retail salespersons
-2_counties,Litchfield County,Mid-low,349,4251,Landscaping and groundskeeping workers
-2_counties,Litchfield County,Mid-low,333,440,"Managers, all other"
-2_counties,Litchfield County,Mid-low,320,4110,Waiters and waitresses
-2_counties,Litchfield County,Mid-low,311,5240,Customer service representatives
-2_counties,Litchfield County,Mid-high,783,4700,First-Line supervisors of retail sales workers
-2_counties,Litchfield County,Mid-high,645,2310,Elementary and middle school teachers
-2_counties,Litchfield County,Mid-high,515,4251,Landscaping and groundskeeping workers
-2_counties,Litchfield County,Mid-high,483,4760,Retail salespersons
-2_counties,Litchfield County,Mid-high,474,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Litchfield County,Mid-high,445,3255,Registered nurses
-2_counties,Litchfield County,Mid-high,436,440,"Managers, all other"
-2_counties,Litchfield County,Mid-high,422,4220,Janitors and building cleaners
-2_counties,Litchfield County,Mid-high,411,4720,Cashiers
-2_counties,Litchfield County,Mid-high,410,6230,Carpenters
-2_counties,Litchfield County,High,3049,2310,Elementary and middle school teachers
-2_counties,Litchfield County,High,2168,440,"Managers, all other"
-2_counties,Litchfield County,High,1877,3255,Registered nurses
-2_counties,Litchfield County,High,1274,10,Chief executives
-2_counties,Litchfield County,High,1264,5240,Customer service representatives
-2_counties,Litchfield County,High,1214,4700,First-Line supervisors of retail sales workers
-2_counties,Litchfield County,High,1201,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Litchfield County,High,1107,4760,Retail salespersons
-2_counties,Litchfield County,High,960,4720,Cashiers
-2_counties,Litchfield County,High,940,800,Accountants and auditors
-2_counties,Middlesex County,Very low,321,5240,Customer service representatives
-2_counties,Middlesex County,Very low,315,4720,Cashiers
-2_counties,Middlesex County,Very low,248,9130,Driver/sales workers and truck drivers
-2_counties,Middlesex County,Very low,225,4700,First-Line supervisors of retail sales workers
-2_counties,Middlesex County,Very low,198,3603,Nursing assistants
-2_counties,Middlesex County,Very low,197,4020,Cooks
-2_counties,Middlesex County,Very low,195,4760,Retail salespersons
-2_counties,Middlesex County,Very low,180,4230,Maids and housekeeping cleaners
-2_counties,Middlesex County,Very low,174,3500,Licensed practical and licensed vocational nurses
-2_counties,Middlesex County,Very low,163,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Middlesex County,Low,418,4720,Cashiers
-2_counties,Middlesex County,Low,295,4110,Waiters and waitresses
-2_counties,Middlesex County,Low,240,5860,"Office clerks, general"
-2_counties,Middlesex County,Low,229,4230,Maids and housekeeping cleaners
-2_counties,Middlesex County,Low,192,8740,"Inspectors, testers, sorters, samplers, and weighers"
-2_counties,Middlesex County,Low,186,5240,Customer service representatives
-2_counties,Middlesex County,Low,172,6230,Carpenters
-2_counties,Middlesex County,Low,171,4510,"Hairdressers, hairstylists, and cosmetologists"
-2_counties,Middlesex County,Low,160,9130,Driver/sales workers and truck drivers
-2_counties,Middlesex County,Low,147,440,"Managers, all other"
-2_counties,Middlesex County,Mid-low,401,4720,Cashiers
-2_counties,Middlesex County,Mid-low,352,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Middlesex County,Mid-low,321,4700,First-Line supervisors of retail sales workers
-2_counties,Middlesex County,Mid-low,317,5240,Customer service representatives
-2_counties,Middlesex County,Mid-low,302,3603,Nursing assistants
-2_counties,Middlesex County,Mid-low,263,4110,Waiters and waitresses
-2_counties,Middlesex County,Mid-low,261,4760,Retail salespersons
-2_counties,Middlesex County,Mid-low,248,440,"Managers, all other"
-2_counties,Middlesex County,Mid-low,240,9130,Driver/sales workers and truck drivers
-2_counties,Middlesex County,Mid-low,215,2545,Teaching assistants
-2_counties,Middlesex County,Mid-high,544,440,"Managers, all other"
-2_counties,Middlesex County,Mid-high,542,2310,Elementary and middle school teachers
-2_counties,Middlesex County,Mid-high,485,3255,Registered nurses
-2_counties,Middlesex County,Mid-high,478,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Middlesex County,Mid-high,464,4220,Janitors and building cleaners
-2_counties,Middlesex County,Mid-high,446,4760,Retail salespersons
-2_counties,Middlesex County,Mid-high,442,4700,First-Line supervisors of retail sales workers
-2_counties,Middlesex County,Mid-high,426,4720,Cashiers
-2_counties,Middlesex County,Mid-high,423,2205,Postsecondary teachers
-2_counties,Middlesex County,Mid-high,396,5240,Customer service representatives
-2_counties,Middlesex County,High,2501,2310,Elementary and middle school teachers
-2_counties,Middlesex County,High,2393,440,"Managers, all other"
-2_counties,Middlesex County,High,2276,3255,Registered nurses
-2_counties,Middlesex County,High,1172,10,Chief executives
-2_counties,Middlesex County,High,1114,2205,Postsecondary teachers
-2_counties,Middlesex County,High,1105,800,Accountants and auditors
-2_counties,Middlesex County,High,1069,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Middlesex County,High,959,4700,First-Line supervisors of retail sales workers
-2_counties,Middlesex County,High,938,4710,First-Line supervisors of non-retail sales workers
-2_counties,Middlesex County,High,922,2100,Lawyers
-2_counties,New Haven County,Very low,1856,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,New Haven County,Very low,1413,4720,Cashiers
-2_counties,New Haven County,Very low,1233,5240,Customer service representatives
-2_counties,New Haven County,Very low,983,3602,Personal care aides
-2_counties,New Haven County,Very low,978,4220,Janitors and building cleaners
-2_counties,New Haven County,Very low,935,3603,Nursing assistants
-2_counties,New Haven County,Very low,859,4760,Retail salespersons
-2_counties,New Haven County,Very low,840,4600,Childcare workers
-2_counties,New Haven County,Very low,835,4230,Maids and housekeeping cleaners
-2_counties,New Haven County,Very low,833,9130,Driver/sales workers and truck drivers
-2_counties,New Haven County,Low,1446,4720,Cashiers
-2_counties,New Haven County,Low,1127,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,New Haven County,Low,1053,3602,Personal care aides
-2_counties,New Haven County,Low,1031,3603,Nursing assistants
-2_counties,New Haven County,Low,954,4760,Retail salespersons
-2_counties,New Haven County,Low,798,6230,Carpenters
-2_counties,New Haven County,Low,779,4700,First-Line supervisors of retail sales workers
-2_counties,New Haven County,Low,775,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,New Haven County,Low,770,4230,Maids and housekeeping cleaners
-2_counties,New Haven County,Low,741,4220,Janitors and building cleaners
-2_counties,New Haven County,Mid-low,2461,4720,Cashiers
-2_counties,New Haven County,Mid-low,1787,3603,Nursing assistants
-2_counties,New Haven County,Mid-low,1762,4760,Retail salespersons
-2_counties,New Haven County,Mid-low,1662,4700,First-Line supervisors of retail sales workers
-2_counties,New Haven County,Mid-low,1652,4220,Janitors and building cleaners
-2_counties,New Haven County,Mid-low,1603,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,New Haven County,Mid-low,1326,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,New Haven County,Mid-low,1302,4020,Cooks
-2_counties,New Haven County,Mid-low,1296,5240,Customer service representatives
-2_counties,New Haven County,Mid-low,1177,3602,Personal care aides
-2_counties,New Haven County,Mid-high,2113,4220,Janitors and building cleaners
-2_counties,New Haven County,Mid-high,2048,4700,First-Line supervisors of retail sales workers
-2_counties,New Haven County,Mid-high,2024,4760,Retail salespersons
-2_counties,New Haven County,Mid-high,2013,4720,Cashiers
-2_counties,New Haven County,Mid-high,1894,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,New Haven County,Mid-high,1803,9130,Driver/sales workers and truck drivers
-2_counties,New Haven County,Mid-high,1625,2310,Elementary and middle school teachers
-2_counties,New Haven County,Mid-high,1611,3603,Nursing assistants
-2_counties,New Haven County,Mid-high,1410,5240,Customer service representatives
-2_counties,New Haven County,Mid-high,1285,440,"Managers, all other"
-2_counties,New Haven County,High,9846,2310,Elementary and middle school teachers
-2_counties,New Haven County,High,9480,440,"Managers, all other"
-2_counties,New Haven County,High,9030,3255,Registered nurses
-2_counties,New Haven County,High,7049,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,New Haven County,High,6398,4700,First-Line supervisors of retail sales workers
-2_counties,New Haven County,High,6282,4760,Retail salespersons
-2_counties,New Haven County,High,6010,2205,Postsecondary teachers
-2_counties,New Haven County,High,5513,4720,Cashiers
-2_counties,New Haven County,High,4840,5240,Customer service representatives
-2_counties,New Haven County,High,4780,800,Accountants and auditors
-2_counties,New London County,Very low,500,4230,Maids and housekeeping cleaners
-2_counties,New London County,Very low,444,4220,Janitors and building cleaners
-2_counties,New London County,Very low,430,4110,Waiters and waitresses
-2_counties,New London County,Very low,411,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,New London County,Very low,401,4720,Cashiers
-2_counties,New London County,Very low,369,3602,Personal care aides
-2_counties,New London County,Very low,348,4760,Retail salespersons
-2_counties,New London County,Very low,264,4020,Cooks
-2_counties,New London County,Very low,251,3603,Nursing assistants
-2_counties,New London County,Very low,237,4600,Childcare workers
-2_counties,New London County,Low,590,4720,Cashiers
-2_counties,New London County,Low,517,4220,Janitors and building cleaners
-2_counties,New London County,Low,461,4760,Retail salespersons
-2_counties,New London County,Low,387,4020,Cooks
-2_counties,New London County,Low,340,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,New London County,Low,325,3603,Nursing assistants
-2_counties,New London County,Low,288,4400,Gambling services workers
-2_counties,New London County,Low,263,4700,First-Line supervisors of retail sales workers
-2_counties,New London County,Low,254,9645,Stockers and order fillers
-2_counties,New London County,Low,251,4230,Maids and housekeeping cleaners
-2_counties,New London County,Mid-low,904,4220,Janitors and building cleaners
-2_counties,New London County,Mid-low,697,4720,Cashiers
-2_counties,New London County,Mid-low,675,4400,Gambling services workers
-2_counties,New London County,Mid-low,557,4251,Landscaping and groundskeeping workers
-2_counties,New London County,Mid-low,537,3603,Nursing assistants
-2_counties,New London County,Mid-low,512,2545,Teaching assistants
-2_counties,New London County,Mid-low,503,4110,Waiters and waitresses
-2_counties,New London County,Mid-low,496,4760,Retail salespersons
-2_counties,New London County,Mid-low,485,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,New London County,Mid-low,477,9130,Driver/sales workers and truck drivers
-2_counties,New London County,Mid-high,1025,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,New London County,Mid-high,799,9130,Driver/sales workers and truck drivers
-2_counties,New London County,Mid-high,794,4720,Cashiers
-2_counties,New London County,Mid-high,748,4700,First-Line supervisors of retail sales workers
-2_counties,New London County,Mid-high,738,2310,Elementary and middle school teachers
-2_counties,New London County,Mid-high,716,4400,Gambling services workers
-2_counties,New London County,Mid-high,702,4220,Janitors and building cleaners
-2_counties,New London County,Mid-high,692,4020,Cooks
-2_counties,New London County,Mid-high,688,4760,Retail salespersons
-2_counties,New London County,Mid-high,581,4110,Waiters and waitresses
-2_counties,New London County,High,3108,440,"Managers, all other"
-2_counties,New London County,High,2730,2310,Elementary and middle school teachers
-2_counties,New London County,High,2654,9825,Military enlisted tactical operations and air/weapons specialists and crew members
-2_counties,New London County,High,2556,3255,Registered nurses
-2_counties,New London County,High,2269,4720,Cashiers
-2_counties,New London County,High,1846,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,New London County,High,1702,4760,Retail salespersons
-2_counties,New London County,High,1510,1440,Marine engineers and naval architects
-2_counties,New London County,High,1482,4700,First-Line supervisors of retail sales workers
-2_counties,New London County,High,1363,4220,Janitors and building cleaners
-2_counties,Tolland County,Very low,370,4110,Waiters and waitresses
-2_counties,Tolland County,Very low,361,2205,Postsecondary teachers
-2_counties,Tolland County,Very low,280,5240,Customer service representatives
-2_counties,Tolland County,Very low,269,3603,Nursing assistants
-2_counties,Tolland County,Very low,259,4720,Cashiers
-2_counties,Tolland County,Very low,203,4600,Childcare workers
-2_counties,Tolland County,Very low,182,3602,Personal care aides
-2_counties,Tolland County,Very low,171,4655,"Personal care and service workers, all other"
-2_counties,Tolland County,Very low,158,4020,Cooks
-2_counties,Tolland County,Very low,158,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Tolland County,Low,303,4110,Waiters and waitresses
-2_counties,Tolland County,Low,281,9130,Driver/sales workers and truck drivers
-2_counties,Tolland County,Low,230,4000,Chefs and head cooks
-2_counties,Tolland County,Low,225,5400,Receptionists and information clerks
-2_counties,Tolland County,Low,210,5240,Customer service representatives
-2_counties,Tolland County,Low,187,9645,Stockers and order fillers
-2_counties,Tolland County,Low,181,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Tolland County,Low,178,2310,Elementary and middle school teachers
-2_counties,Tolland County,Low,173,3603,Nursing assistants
-2_counties,Tolland County,Low,171,4220,Janitors and building cleaners
-2_counties,Tolland County,Mid-low,333,4760,Retail salespersons
-2_counties,Tolland County,Mid-low,278,9130,Driver/sales workers and truck drivers
-2_counties,Tolland County,Mid-low,243,2545,Teaching assistants
-2_counties,Tolland County,Mid-low,228,4600,Childcare workers
-2_counties,Tolland County,Mid-low,228,4700,First-Line supervisors of retail sales workers
-2_counties,Tolland County,Mid-low,225,4720,Cashiers
-2_counties,Tolland County,Mid-low,223,3603,Nursing assistants
-2_counties,Tolland County,Mid-low,217,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Tolland County,Mid-low,206,4110,Waiters and waitresses
-2_counties,Tolland County,Mid-low,202,4251,Landscaping and groundskeeping workers
-2_counties,Tolland County,Mid-high,556,800,Accountants and auditors
-2_counties,Tolland County,Mid-high,516,2310,Elementary and middle school teachers
-2_counties,Tolland County,Mid-high,455,4720,Cashiers
-2_counties,Tolland County,Mid-high,417,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Tolland County,Mid-high,416,3255,Registered nurses
-2_counties,Tolland County,Mid-high,384,9130,Driver/sales workers and truck drivers
-2_counties,Tolland County,Mid-high,369,4700,First-Line supervisors of retail sales workers
-2_counties,Tolland County,Mid-high,367,5240,Customer service representatives
-2_counties,Tolland County,Mid-high,344,4110,Waiters and waitresses
-2_counties,Tolland County,Mid-high,338,4760,Retail salespersons
-2_counties,Tolland County,High,1961,440,"Managers, all other"
-2_counties,Tolland County,High,1817,2310,Elementary and middle school teachers
-2_counties,Tolland County,High,1563,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Tolland County,High,1329,3255,Registered nurses
-2_counties,Tolland County,High,1226,4720,Cashiers
-2_counties,Tolland County,High,1128,4760,Retail salespersons
-2_counties,Tolland County,High,1054,4710,First-Line supervisors of non-retail sales workers
-2_counties,Tolland County,High,929,2205,Postsecondary teachers
-2_counties,Tolland County,High,830,4110,Waiters and waitresses
-2_counties,Tolland County,High,828,5240,Customer service representatives
-2_counties,Windham County,Very low,284,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Windham County,Very low,155,4220,Janitors and building cleaners
-2_counties,Windham County,Very low,152,4230,Maids and housekeeping cleaners
-2_counties,Windham County,Very low,146,4110,Waiters and waitresses
-2_counties,Windham County,Very low,120,4760,Retail salespersons
-2_counties,Windham County,Very low,104,4600,Childcare workers
-2_counties,Windham County,Very low,104,5240,Customer service representatives
-2_counties,Windham County,Very low,103,9645,Stockers and order fillers
-2_counties,Windham County,Very low,98,4720,Cashiers
-2_counties,Windham County,Very low,90,9130,Driver/sales workers and truck drivers
-2_counties,Windham County,Low,220,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Windham County,Low,216,4760,Retail salespersons
-2_counties,Windham County,Low,184,3602,Personal care aides
-2_counties,Windham County,Low,175,3603,Nursing assistants
-2_counties,Windham County,Low,106,9130,Driver/sales workers and truck drivers
-2_counties,Windham County,Low,101,4230,Maids and housekeeping cleaners
-2_counties,Windham County,Low,98,8300,Laundry and dry-cleaning workers
-2_counties,Windham County,Low,92,4700,First-Line supervisors of retail sales workers
-2_counties,Windham County,Low,92,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
-2_counties,Windham County,Low,85,2300,Preschool and kindergarten teachers
-2_counties,Windham County,Mid-low,326,4220,Janitors and building cleaners
-2_counties,Windham County,Mid-low,274,9130,Driver/sales workers and truck drivers
-2_counties,Windham County,Mid-low,248,4251,Landscaping and groundskeeping workers
-2_counties,Windham County,Mid-low,242,4030,Food preparation workers
-2_counties,Windham County,Mid-low,233,4020,Cooks
-2_counties,Windham County,Mid-low,230,6230,Carpenters
-2_counties,Windham County,Mid-low,208,4700,First-Line supervisors of retail sales workers
-2_counties,Windham County,Mid-low,190,4760,Retail salespersons
-2_counties,Windham County,Mid-low,179,4720,Cashiers
-2_counties,Windham County,Mid-low,171,5240,Customer service representatives
-2_counties,Windham County,Mid-high,415,3603,Nursing assistants
-2_counties,Windham County,Mid-high,403,4700,First-Line supervisors of retail sales workers
-2_counties,Windham County,Mid-high,376,9130,Driver/sales workers and truck drivers
-2_counties,Windham County,Mid-high,375,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Windham County,Mid-high,374,5240,Customer service representatives
-2_counties,Windham County,Mid-high,360,9620,"Laborers and freight, stock, and material movers, hand"
-2_counties,Windham County,Mid-high,345,4110,Waiters and waitresses
-2_counties,Windham County,Mid-high,339,4720,Cashiers
-2_counties,Windham County,Mid-high,282,9645,Stockers and order fillers
-2_counties,Windham County,Mid-high,245,4020,Cooks
-2_counties,Windham County,High,1229,3255,Registered nurses
-2_counties,Windham County,High,1151,4720,Cashiers
-2_counties,Windham County,High,1119,2310,Elementary and middle school teachers
-2_counties,Windham County,High,916,9130,Driver/sales workers and truck drivers
-2_counties,Windham County,High,852,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
-2_counties,Windham County,High,815,440,"Managers, all other"
-2_counties,Windham County,High,811,4220,Janitors and building cleaners
-2_counties,Windham County,High,743,2545,Teaching assistants
-2_counties,Windham County,High,733,4760,Retail salespersons
-2_counties,Windham County,High,716,4700,First-Line supervisors of retail sales workers
+"level","name","inc_band","workers","occ","occ_label"
+"2_counties","Fairfield County","Very low",2850,4720,"Cashiers"
+"2_counties","Fairfield County","Very low",2121,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Fairfield County","Very low",2039,4230,"Maids and housekeeping cleaners"
+"2_counties","Fairfield County","Very low",1366,4600,"Childcare workers"
+"2_counties","Fairfield County","Very low",1306,4251,"Landscaping and groundskeeping workers"
+"2_counties","Fairfield County","Very low",1282,4760,"Retail salespersons"
+"2_counties","Fairfield County","Very low",1280,4220,"Janitors and building cleaners"
+"2_counties","Fairfield County","Very low",1250,3602,"Personal care aides"
+"2_counties","Fairfield County","Very low",1221,3603,"Nursing assistants"
+"2_counties","Fairfield County","Very low",866,4020,"Cooks"
+"2_counties","Fairfield County","Low",2480,4230,"Maids and housekeeping cleaners"
+"2_counties","Fairfield County","Low",1640,4251,"Landscaping and groundskeeping workers"
+"2_counties","Fairfield County","Low",1638,4220,"Janitors and building cleaners"
+"2_counties","Fairfield County","Low",1578,4720,"Cashiers"
+"2_counties","Fairfield County","Low",1305,3603,"Nursing assistants"
+"2_counties","Fairfield County","Low",1295,4600,"Childcare workers"
+"2_counties","Fairfield County","Low",1285,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Fairfield County","Low",1195,4760,"Retail salespersons"
+"2_counties","Fairfield County","Low",1149,4110,"Waiters and waitresses"
+"2_counties","Fairfield County","Low",1119,6230,"Carpenters"
+"2_counties","Fairfield County","Mid-low",2628,4720,"Cashiers"
+"2_counties","Fairfield County","Mid-low",2483,4230,"Maids and housekeeping cleaners"
+"2_counties","Fairfield County","Mid-low",2326,4220,"Janitors and building cleaners"
+"2_counties","Fairfield County","Mid-low",2048,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Fairfield County","Mid-low",1899,4760,"Retail salespersons"
+"2_counties","Fairfield County","Mid-low",1737,6230,"Carpenters"
+"2_counties","Fairfield County","Mid-low",1723,9130,"Driver/sales workers and truck drivers"
+"2_counties","Fairfield County","Mid-low",1624,5240,"Customer service representatives"
+"2_counties","Fairfield County","Mid-low",1603,4020,"Cooks"
+"2_counties","Fairfield County","Mid-low",1512,4251,"Landscaping and groundskeeping workers"
+"2_counties","Fairfield County","Mid-high",2936,2310,"Elementary and middle school teachers"
+"2_counties","Fairfield County","Mid-high",2624,4720,"Cashiers"
+"2_counties","Fairfield County","Mid-high",2560,4760,"Retail salespersons"
+"2_counties","Fairfield County","Mid-high",2292,440,"Managers, all other"
+"2_counties","Fairfield County","Mid-high",2273,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Fairfield County","Mid-high",2075,9130,"Driver/sales workers and truck drivers"
+"2_counties","Fairfield County","Mid-high",2029,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Fairfield County","Mid-high",2016,4220,"Janitors and building cleaners"
+"2_counties","Fairfield County","Mid-high",1787,800,"Accountants and auditors"
+"2_counties","Fairfield County","Mid-high",1762,5240,"Customer service representatives"
+"2_counties","Fairfield County","High",12306,440,"Managers, all other"
+"2_counties","Fairfield County","High",10490,2310,"Elementary and middle school teachers"
+"2_counties","Fairfield County","High",8128,800,"Accountants and auditors"
+"2_counties","Fairfield County","High",8055,120,"Financial managers"
+"2_counties","Fairfield County","High",7979,10,"Chief executives"
+"2_counties","Fairfield County","High",6468,2100,"Lawyers"
+"2_counties","Fairfield County","High",5980,4760,"Retail salespersons"
+"2_counties","Fairfield County","High",5816,3255,"Registered nurses"
+"2_counties","Fairfield County","High",4956,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Fairfield County","High",4662,710,"Management analysts"
+"2_counties","Hartford County","Very low",2134,4720,"Cashiers"
+"2_counties","Hartford County","Very low",2047,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Hartford County","Very low",1298,4220,"Janitors and building cleaners"
+"2_counties","Hartford County","Very low",1244,3602,"Personal care aides"
+"2_counties","Hartford County","Very low",1108,3603,"Nursing assistants"
+"2_counties","Hartford County","Very low",938,4600,"Childcare workers"
+"2_counties","Hartford County","Very low",935,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Hartford County","Very low",806,4760,"Retail salespersons"
+"2_counties","Hartford County","Very low",803,5240,"Customer service representatives"
+"2_counties","Hartford County","Very low",755,9130,"Driver/sales workers and truck drivers"
+"2_counties","Hartford County","Low",1847,4720,"Cashiers"
+"2_counties","Hartford County","Low",1486,4220,"Janitors and building cleaners"
+"2_counties","Hartford County","Low",1147,3603,"Nursing assistants"
+"2_counties","Hartford County","Low",1104,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Hartford County","Low",1013,4760,"Retail salespersons"
+"2_counties","Hartford County","Low",957,9130,"Driver/sales workers and truck drivers"
+"2_counties","Hartford County","Low",952,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Hartford County","Low",935,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Hartford County","Low",932,5240,"Customer service representatives"
+"2_counties","Hartford County","Low",860,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Hartford County","Mid-low",2421,4720,"Cashiers"
+"2_counties","Hartford County","Mid-low",2138,4760,"Retail salespersons"
+"2_counties","Hartford County","Mid-low",1803,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Hartford County","Mid-low",1756,3603,"Nursing assistants"
+"2_counties","Hartford County","Mid-low",1678,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Hartford County","Mid-low",1614,5240,"Customer service representatives"
+"2_counties","Hartford County","Mid-low",1535,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Hartford County","Mid-low",1527,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Hartford County","Mid-low",1518,4220,"Janitors and building cleaners"
+"2_counties","Hartford County","Mid-low",1460,9130,"Driver/sales workers and truck drivers"
+"2_counties","Hartford County","Mid-high",2571,4720,"Cashiers"
+"2_counties","Hartford County","Mid-high",2504,4220,"Janitors and building cleaners"
+"2_counties","Hartford County","Mid-high",2241,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Hartford County","Mid-high",2114,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Hartford County","Mid-high",2105,5240,"Customer service representatives"
+"2_counties","Hartford County","Mid-high",2084,9130,"Driver/sales workers and truck drivers"
+"2_counties","Hartford County","Mid-high",1995,3255,"Registered nurses"
+"2_counties","Hartford County","Mid-high",1927,4760,"Retail salespersons"
+"2_counties","Hartford County","Mid-high",1877,2310,"Elementary and middle school teachers"
+"2_counties","Hartford County","Mid-high",1746,440,"Managers, all other"
+"2_counties","Hartford County","High",10566,440,"Managers, all other"
+"2_counties","Hartford County","High",10083,2310,"Elementary and middle school teachers"
+"2_counties","Hartford County","High",8273,3255,"Registered nurses"
+"2_counties","Hartford County","High",5895,800,"Accountants and auditors"
+"2_counties","Hartford County","High",5614,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Hartford County","High",5549,4760,"Retail salespersons"
+"2_counties","Hartford County","High",4761,2100,"Lawyers"
+"2_counties","Hartford County","High",4578,5240,"Customer service representatives"
+"2_counties","Hartford County","High",4322,4720,"Cashiers"
+"2_counties","Hartford County","High",4176,10,"Chief executives"
+"2_counties","Litchfield County","Very low",296,4760,"Retail salespersons"
+"2_counties","Litchfield County","Very low",261,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Litchfield County","Very low",241,3602,"Personal care aides"
+"2_counties","Litchfield County","Very low",235,4720,"Cashiers"
+"2_counties","Litchfield County","Very low",225,4220,"Janitors and building cleaners"
+"2_counties","Litchfield County","Very low",216,6230,"Carpenters"
+"2_counties","Litchfield County","Very low",153,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Litchfield County","Very low",141,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Litchfield County","Very low",125,8990,"Other production workers"
+"2_counties","Litchfield County","Very low",105,2016,"Social and human service assistants"
+"2_counties","Litchfield County","Low",308,4220,"Janitors and building cleaners"
+"2_counties","Litchfield County","Low",282,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Litchfield County","Low",262,3602,"Personal care aides"
+"2_counties","Litchfield County","Low",260,4110,"Waiters and waitresses"
+"2_counties","Litchfield County","Low",225,5240,"Customer service representatives"
+"2_counties","Litchfield County","Low",217,9130,"Driver/sales workers and truck drivers"
+"2_counties","Litchfield County","Low",212,4230,"Maids and housekeeping cleaners"
+"2_counties","Litchfield County","Low",195,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Litchfield County","Low",194,4251,"Landscaping and groundskeeping workers"
+"2_counties","Litchfield County","Low",191,310,"Food service managers"
+"2_counties","Litchfield County","Mid-low",590,4220,"Janitors and building cleaners"
+"2_counties","Litchfield County","Mid-low",542,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Litchfield County","Mid-low",477,4720,"Cashiers"
+"2_counties","Litchfield County","Mid-low",474,9130,"Driver/sales workers and truck drivers"
+"2_counties","Litchfield County","Mid-low",420,4110,"Waiters and waitresses"
+"2_counties","Litchfield County","Mid-low",392,440,"Managers, all other"
+"2_counties","Litchfield County","Mid-low",364,4760,"Retail salespersons"
+"2_counties","Litchfield County","Mid-low",363,5120,"Bookkeeping, accounting, and auditing clerks"
+"2_counties","Litchfield County","Mid-low",346,4251,"Landscaping and groundskeeping workers"
+"2_counties","Litchfield County","Mid-low",327,5240,"Customer service representatives"
+"2_counties","Litchfield County","Mid-high",773,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Litchfield County","Mid-high",734,2310,"Elementary and middle school teachers"
+"2_counties","Litchfield County","Mid-high",553,4251,"Landscaping and groundskeeping workers"
+"2_counties","Litchfield County","Mid-high",510,4760,"Retail salespersons"
+"2_counties","Litchfield County","Mid-high",453,5240,"Customer service representatives"
+"2_counties","Litchfield County","Mid-high",452,440,"Managers, all other"
+"2_counties","Litchfield County","Mid-high",434,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Litchfield County","Mid-high",428,4220,"Janitors and building cleaners"
+"2_counties","Litchfield County","Mid-high",420,3255,"Registered nurses"
+"2_counties","Litchfield County","Mid-high",416,6230,"Carpenters"
+"2_counties","Litchfield County","High",2955,2310,"Elementary and middle school teachers"
+"2_counties","Litchfield County","High",2081,440,"Managers, all other"
+"2_counties","Litchfield County","High",1864,3255,"Registered nurses"
+"2_counties","Litchfield County","High",1274,10,"Chief executives"
+"2_counties","Litchfield County","High",1198,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Litchfield County","High",1191,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Litchfield County","High",1148,5240,"Customer service representatives"
+"2_counties","Litchfield County","High",1080,4760,"Retail salespersons"
+"2_counties","Litchfield County","High",960,4720,"Cashiers"
+"2_counties","Litchfield County","High",940,800,"Accountants and auditors"
+"2_counties","Middlesex County","Very low",321,5240,"Customer service representatives"
+"2_counties","Middlesex County","Very low",315,4720,"Cashiers"
+"2_counties","Middlesex County","Very low",248,9130,"Driver/sales workers and truck drivers"
+"2_counties","Middlesex County","Very low",225,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Middlesex County","Very low",198,3603,"Nursing assistants"
+"2_counties","Middlesex County","Very low",197,4020,"Cooks"
+"2_counties","Middlesex County","Very low",195,4760,"Retail salespersons"
+"2_counties","Middlesex County","Very low",184,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Middlesex County","Very low",180,4230,"Maids and housekeeping cleaners"
+"2_counties","Middlesex County","Very low",174,3500,"Licensed practical and licensed vocational nurses"
+"2_counties","Middlesex County","Low",418,4720,"Cashiers"
+"2_counties","Middlesex County","Low",295,4110,"Waiters and waitresses"
+"2_counties","Middlesex County","Low",240,5860,"Office clerks, general"
+"2_counties","Middlesex County","Low",229,4230,"Maids and housekeeping cleaners"
+"2_counties","Middlesex County","Low",192,8740,"Inspectors, testers, sorters, samplers, and weighers"
+"2_counties","Middlesex County","Low",186,5240,"Customer service representatives"
+"2_counties","Middlesex County","Low",172,6230,"Carpenters"
+"2_counties","Middlesex County","Low",171,4510,"Hairdressers, hairstylists, and cosmetologists"
+"2_counties","Middlesex County","Low",160,9130,"Driver/sales workers and truck drivers"
+"2_counties","Middlesex County","Low",147,440,"Managers, all other"
+"2_counties","Middlesex County","Mid-low",430,4720,"Cashiers"
+"2_counties","Middlesex County","Mid-low",380,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Middlesex County","Mid-low",321,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Middlesex County","Mid-low",317,5240,"Customer service representatives"
+"2_counties","Middlesex County","Mid-low",302,3603,"Nursing assistants"
+"2_counties","Middlesex County","Mid-low",275,4110,"Waiters and waitresses"
+"2_counties","Middlesex County","Mid-low",261,4760,"Retail salespersons"
+"2_counties","Middlesex County","Mid-low",248,440,"Managers, all other"
+"2_counties","Middlesex County","Mid-low",240,9130,"Driver/sales workers and truck drivers"
+"2_counties","Middlesex County","Mid-low",226,4220,"Janitors and building cleaners"
+"2_counties","Middlesex County","Mid-high",544,440,"Managers, all other"
+"2_counties","Middlesex County","Mid-high",542,2310,"Elementary and middle school teachers"
+"2_counties","Middlesex County","Mid-high",493,3255,"Registered nurses"
+"2_counties","Middlesex County","Mid-high",486,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Middlesex County","Mid-high",460,4760,"Retail salespersons"
+"2_counties","Middlesex County","Mid-high",442,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Middlesex County","Mid-high",439,5240,"Customer service representatives"
+"2_counties","Middlesex County","Mid-high",423,2205,"Postsecondary teachers"
+"2_counties","Middlesex County","Mid-high",413,4220,"Janitors and building cleaners"
+"2_counties","Middlesex County","Mid-high",397,4720,"Cashiers"
+"2_counties","Middlesex County","High",2501,2310,"Elementary and middle school teachers"
+"2_counties","Middlesex County","High",2393,440,"Managers, all other"
+"2_counties","Middlesex County","High",2268,3255,"Registered nurses"
+"2_counties","Middlesex County","High",1159,10,"Chief executives"
+"2_counties","Middlesex County","High",1114,2205,"Postsecondary teachers"
+"2_counties","Middlesex County","High",1105,800,"Accountants and auditors"
+"2_counties","Middlesex County","High",1033,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Middlesex County","High",959,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Middlesex County","High",938,4710,"First-Line supervisors of non-retail sales workers"
+"2_counties","Middlesex County","High",922,2100,"Lawyers"
+"2_counties","New Haven County","Very low",1877,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","New Haven County","Very low",1433,4720,"Cashiers"
+"2_counties","New Haven County","Very low",1272,5240,"Customer service representatives"
+"2_counties","New Haven County","Very low",1083,4220,"Janitors and building cleaners"
+"2_counties","New Haven County","Very low",1057,3602,"Personal care aides"
+"2_counties","New Haven County","Very low",1016,3603,"Nursing assistants"
+"2_counties","New Haven County","Very low",892,4760,"Retail salespersons"
+"2_counties","New Haven County","Very low",889,4230,"Maids and housekeeping cleaners"
+"2_counties","New Haven County","Very low",862,4600,"Childcare workers"
+"2_counties","New Haven County","Very low",833,9130,"Driver/sales workers and truck drivers"
+"2_counties","New Haven County","Low",1721,4720,"Cashiers"
+"2_counties","New Haven County","Low",1175,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","New Haven County","Low",1141,3602,"Personal care aides"
+"2_counties","New Haven County","Low",1022,3603,"Nursing assistants"
+"2_counties","New Haven County","Low",1011,4760,"Retail salespersons"
+"2_counties","New Haven County","Low",899,6230,"Carpenters"
+"2_counties","New Haven County","Low",831,4700,"First-Line supervisors of retail sales workers"
+"2_counties","New Haven County","Low",816,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","New Haven County","Low",790,4230,"Maids and housekeeping cleaners"
+"2_counties","New Haven County","Low",741,9130,"Driver/sales workers and truck drivers"
+"2_counties","New Haven County","Mid-low",2220,4720,"Cashiers"
+"2_counties","New Haven County","Mid-low",1949,3603,"Nursing assistants"
+"2_counties","New Haven County","Mid-low",1861,4760,"Retail salespersons"
+"2_counties","New Haven County","Mid-low",1828,4700,"First-Line supervisors of retail sales workers"
+"2_counties","New Haven County","Mid-low",1709,4220,"Janitors and building cleaners"
+"2_counties","New Haven County","Mid-low",1601,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","New Haven County","Mid-low",1461,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","New Haven County","Mid-low",1300,4020,"Cooks"
+"2_counties","New Haven County","Mid-low",1284,5240,"Customer service representatives"
+"2_counties","New Haven County","Mid-low",1185,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","New Haven County","Mid-high",2307,4720,"Cashiers"
+"2_counties","New Haven County","Mid-high",2156,4760,"Retail salespersons"
+"2_counties","New Haven County","Mid-high",2150,4220,"Janitors and building cleaners"
+"2_counties","New Haven County","Mid-high",2054,4700,"First-Line supervisors of retail sales workers"
+"2_counties","New Haven County","Mid-high",1973,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","New Haven County","Mid-high",1786,9130,"Driver/sales workers and truck drivers"
+"2_counties","New Haven County","Mid-high",1669,2310,"Elementary and middle school teachers"
+"2_counties","New Haven County","Mid-high",1503,440,"Managers, all other"
+"2_counties","New Haven County","Mid-high",1424,5240,"Customer service representatives"
+"2_counties","New Haven County","Mid-high",1412,3603,"Nursing assistants"
+"2_counties","New Haven County","High",9634,2310,"Elementary and middle school teachers"
+"2_counties","New Haven County","High",9211,440,"Managers, all other"
+"2_counties","New Haven County","High",8693,3255,"Registered nurses"
+"2_counties","New Haven County","High",6794,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","New Haven County","High",6174,4700,"First-Line supervisors of retail sales workers"
+"2_counties","New Haven County","High",5961,4760,"Retail salespersons"
+"2_counties","New Haven County","High",5898,2205,"Postsecondary teachers"
+"2_counties","New Haven County","High",5165,4720,"Cashiers"
+"2_counties","New Haven County","High",4733,5240,"Customer service representatives"
+"2_counties","New Haven County","High",4638,800,"Accountants and auditors"
+"2_counties","New London County","Very low",500,4230,"Maids and housekeeping cleaners"
+"2_counties","New London County","Very low",497,4220,"Janitors and building cleaners"
+"2_counties","New London County","Very low",430,4110,"Waiters and waitresses"
+"2_counties","New London County","Very low",424,4720,"Cashiers"
+"2_counties","New London County","Very low",411,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","New London County","Very low",369,3602,"Personal care aides"
+"2_counties","New London County","Very low",348,4760,"Retail salespersons"
+"2_counties","New London County","Very low",264,4020,"Cooks"
+"2_counties","New London County","Very low",251,3603,"Nursing assistants"
+"2_counties","New London County","Very low",237,4600,"Childcare workers"
+"2_counties","New London County","Low",656,4720,"Cashiers"
+"2_counties","New London County","Low",632,4760,"Retail salespersons"
+"2_counties","New London County","Low",506,4400,"Gambling services workers"
+"2_counties","New London County","Low",473,4220,"Janitors and building cleaners"
+"2_counties","New London County","Low",399,4020,"Cooks"
+"2_counties","New London County","Low",340,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","New London County","Low",339,3603,"Nursing assistants"
+"2_counties","New London County","Low",320,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","New London County","Low",283,4230,"Maids and housekeeping cleaners"
+"2_counties","New London County","Low",281,4110,"Waiters and waitresses"
+"2_counties","New London County","Mid-low",989,4220,"Janitors and building cleaners"
+"2_counties","New London County","Mid-low",636,4251,"Landscaping and groundskeeping workers"
+"2_counties","New London County","Mid-low",614,4720,"Cashiers"
+"2_counties","New London County","Mid-low",589,9130,"Driver/sales workers and truck drivers"
+"2_counties","New London County","Mid-low",572,4020,"Cooks"
+"2_counties","New London County","Mid-low",548,3603,"Nursing assistants"
+"2_counties","New London County","Mid-low",468,4110,"Waiters and waitresses"
+"2_counties","New London County","Mid-low",468,4400,"Gambling services workers"
+"2_counties","New London County","Mid-low",460,2545,"Teaching assistants"
+"2_counties","New London County","Mid-low",454,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","New London County","Mid-high",1073,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","New London County","Mid-high",928,4720,"Cashiers"
+"2_counties","New London County","Mid-high",806,4400,"Gambling services workers"
+"2_counties","New London County","Mid-high",780,2310,"Elementary and middle school teachers"
+"2_counties","New London County","Mid-high",748,9130,"Driver/sales workers and truck drivers"
+"2_counties","New London County","Mid-high",726,4220,"Janitors and building cleaners"
+"2_counties","New London County","Mid-high",707,4700,"First-Line supervisors of retail sales workers"
+"2_counties","New London County","Mid-high",637,4760,"Retail salespersons"
+"2_counties","New London County","Mid-high",560,4110,"Waiters and waitresses"
+"2_counties","New London County","Mid-high",554,440,"Managers, all other"
+"2_counties","New London County","High",3098,440,"Managers, all other"
+"2_counties","New London County","High",2688,2310,"Elementary and middle school teachers"
+"2_counties","New London County","High",2654,9825,"Military enlisted tactical operations and air/weapons specialists and crew members"
+"2_counties","New London County","High",2529,3255,"Registered nurses"
+"2_counties","New London County","High",2129,4720,"Cashiers"
+"2_counties","New London County","High",1798,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","New London County","High",1683,4760,"Retail salespersons"
+"2_counties","New London County","High",1482,4700,"First-Line supervisors of retail sales workers"
+"2_counties","New London County","High",1473,1440,"Marine engineers and naval architects"
+"2_counties","New London County","High",1253,9130,"Driver/sales workers and truck drivers"
+"2_counties","Tolland County","Very low",370,4110,"Waiters and waitresses"
+"2_counties","Tolland County","Very low",361,2205,"Postsecondary teachers"
+"2_counties","Tolland County","Very low",343,5240,"Customer service representatives"
+"2_counties","Tolland County","Very low",275,4720,"Cashiers"
+"2_counties","Tolland County","Very low",269,3603,"Nursing assistants"
+"2_counties","Tolland County","Very low",208,3602,"Personal care aides"
+"2_counties","Tolland County","Very low",203,4600,"Childcare workers"
+"2_counties","Tolland County","Very low",188,4655,"Personal care and service workers, all other"
+"2_counties","Tolland County","Very low",182,5860,"Office clerks, general"
+"2_counties","Tolland County","Very low",176,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Tolland County","Low",303,4110,"Waiters and waitresses"
+"2_counties","Tolland County","Low",281,9130,"Driver/sales workers and truck drivers"
+"2_counties","Tolland County","Low",215,5400,"Receptionists and information clerks"
+"2_counties","Tolland County","Low",205,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Tolland County","Low",192,4760,"Retail salespersons"
+"2_counties","Tolland County","Low",189,4030,"Food preparation workers"
+"2_counties","Tolland County","Low",187,9645,"Stockers and order fillers"
+"2_counties","Tolland County","Low",178,2310,"Elementary and middle school teachers"
+"2_counties","Tolland County","Low",174,4000,"Chefs and head cooks"
+"2_counties","Tolland County","Low",173,3603,"Nursing assistants"
+"2_counties","Tolland County","Mid-low",313,4760,"Retail salespersons"
+"2_counties","Tolland County","Mid-low",278,9130,"Driver/sales workers and truck drivers"
+"2_counties","Tolland County","Mid-low",231,2545,"Teaching assistants"
+"2_counties","Tolland County","Mid-low",223,3603,"Nursing assistants"
+"2_counties","Tolland County","Mid-low",222,4720,"Cashiers"
+"2_counties","Tolland County","Mid-low",220,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Tolland County","Mid-low",218,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Tolland County","Mid-low",211,4600,"Childcare workers"
+"2_counties","Tolland County","Mid-low",206,4110,"Waiters and waitresses"
+"2_counties","Tolland County","Mid-low",188,5240,"Customer service representatives"
+"2_counties","Tolland County","Mid-high",551,800,"Accountants and auditors"
+"2_counties","Tolland County","Mid-high",540,2310,"Elementary and middle school teachers"
+"2_counties","Tolland County","Mid-high",481,4720,"Cashiers"
+"2_counties","Tolland County","Mid-high",464,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Tolland County","Mid-high",435,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Tolland County","Mid-high",422,3255,"Registered nurses"
+"2_counties","Tolland County","Mid-high",384,9130,"Driver/sales workers and truck drivers"
+"2_counties","Tolland County","Mid-high",355,4760,"Retail salespersons"
+"2_counties","Tolland County","Mid-high",355,5240,"Customer service representatives"
+"2_counties","Tolland County","Mid-high",344,4110,"Waiters and waitresses"
+"2_counties","Tolland County","High",1942,440,"Managers, all other"
+"2_counties","Tolland County","High",1781,2310,"Elementary and middle school teachers"
+"2_counties","Tolland County","High",1507,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Tolland County","High",1312,3255,"Registered nurses"
+"2_counties","Tolland County","High",1188,4720,"Cashiers"
+"2_counties","Tolland County","High",1092,4760,"Retail salespersons"
+"2_counties","Tolland County","High",1021,4710,"First-Line supervisors of non-retail sales workers"
+"2_counties","Tolland County","High",887,2205,"Postsecondary teachers"
+"2_counties","Tolland County","High",830,4110,"Waiters and waitresses"
+"2_counties","Tolland County","High",828,5240,"Customer service representatives"
+"2_counties","Windham County","Very low",284,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Windham County","Very low",155,4220,"Janitors and building cleaners"
+"2_counties","Windham County","Very low",152,4230,"Maids and housekeeping cleaners"
+"2_counties","Windham County","Very low",146,4110,"Waiters and waitresses"
+"2_counties","Windham County","Very low",120,4760,"Retail salespersons"
+"2_counties","Windham County","Very low",104,4600,"Childcare workers"
+"2_counties","Windham County","Very low",104,5240,"Customer service representatives"
+"2_counties","Windham County","Very low",103,9645,"Stockers and order fillers"
+"2_counties","Windham County","Very low",98,4720,"Cashiers"
+"2_counties","Windham County","Very low",93,6230,"Carpenters"
+"2_counties","Windham County","Low",216,4760,"Retail salespersons"
+"2_counties","Windham County","Low",212,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Windham County","Low",184,3602,"Personal care aides"
+"2_counties","Windham County","Low",175,3603,"Nursing assistants"
+"2_counties","Windham County","Low",106,9130,"Driver/sales workers and truck drivers"
+"2_counties","Windham County","Low",105,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Windham County","Low",101,4230,"Maids and housekeeping cleaners"
+"2_counties","Windham County","Low",98,8300,"Laundry and dry-cleaning workers"
+"2_counties","Windham County","Low",92,9920,"Unemployed, with no work experience in the last 5 years or earlier or never worked"
+"2_counties","Windham County","Low",85,2300,"Preschool and kindergarten teachers"
+"2_counties","Windham County","Low",85,4720,"Cashiers"
+"2_counties","Windham County","Mid-low",333,4030,"Food preparation workers"
+"2_counties","Windham County","Mid-low",326,4220,"Janitors and building cleaners"
+"2_counties","Windham County","Mid-low",317,9130,"Driver/sales workers and truck drivers"
+"2_counties","Windham County","Mid-low",278,4020,"Cooks"
+"2_counties","Windham County","Mid-low",277,8990,"Other production workers"
+"2_counties","Windham County","Mid-low",252,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Windham County","Mid-low",234,6230,"Carpenters"
+"2_counties","Windham County","Mid-low",233,440,"Managers, all other"
+"2_counties","Windham County","Mid-low",228,4251,"Landscaping and groundskeeping workers"
+"2_counties","Windham County","Mid-low",198,3603,"Nursing assistants"
+"2_counties","Windham County","Mid-high",392,5240,"Customer service representatives"
+"2_counties","Windham County","Mid-high",372,3603,"Nursing assistants"
+"2_counties","Windham County","Mid-high",365,9130,"Driver/sales workers and truck drivers"
+"2_counties","Windham County","Mid-high",362,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Windham County","Mid-high",360,4110,"Waiters and waitresses"
+"2_counties","Windham County","Mid-high",357,9620,"Laborers and freight, stock, and material movers, hand"
+"2_counties","Windham County","Mid-high",349,4720,"Cashiers"
+"2_counties","Windham County","Mid-high",346,4700,"First-Line supervisors of retail sales workers"
+"2_counties","Windham County","Mid-high",301,9645,"Stockers and order fillers"
+"2_counties","Windham County","Mid-high",274,3602,"Personal care aides"
+"2_counties","Windham County","High",1203,3255,"Registered nurses"
+"2_counties","Windham County","High",1119,2310,"Elementary and middle school teachers"
+"2_counties","Windham County","High",1097,4720,"Cashiers"
+"2_counties","Windham County","High",884,9130,"Driver/sales workers and truck drivers"
+"2_counties","Windham County","High",838,5740,"Secretaries and administrative assistants, except legal, medical, and executive"
+"2_counties","Windham County","High",811,4220,"Janitors and building cleaners"
+"2_counties","Windham County","High",808,440,"Managers, all other"
+"2_counties","Windham County","High",743,2545,"Teaching assistants"
+"2_counties","Windham County","High",733,4760,"Retail salespersons"
+"2_counties","Windham County","High",716,4700,"First-Line supervisors of retail sales workers"

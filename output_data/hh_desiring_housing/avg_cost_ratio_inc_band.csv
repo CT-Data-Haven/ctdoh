@@ -1,46 +1,46 @@
-name,inc_band,wm_cb,level
-Fairfield County,Very low,0.7163003576959449,2_counties
-Fairfield County,Low,0.47392689756778605,2_counties
-Fairfield County,Mid-low,0.35195552859366785,2_counties
-Fairfield County,Mid-high,0.2681987481200306,2_counties
-Fairfield County,High,0.16906342957951917,2_counties
-Hartford County,Very low,0.7048461374809464,2_counties
-Hartford County,Low,0.445532252102666,2_counties
-Hartford County,Mid-low,0.3176212310455777,2_counties
-Hartford County,Mid-high,0.23206696915792804,2_counties
-Hartford County,High,0.1568018097518981,2_counties
-Litchfield County,Very low,0.6693307213539449,2_counties
-Litchfield County,Low,0.42112784909720175,2_counties
-Litchfield County,Mid-low,0.3038566894614507,2_counties
-Litchfield County,Mid-high,0.22669016694862065,2_counties
-Litchfield County,High,0.15460342372684113,2_counties
-Middlesex County,Very low,0.6766903047857371,2_counties
-Middlesex County,Low,0.4105683619916172,2_counties
-Middlesex County,Mid-low,0.3134058219653374,2_counties
-Middlesex County,Mid-high,0.2341605185070871,2_counties
-Middlesex County,High,0.15991059964945492,2_counties
-New Haven County,Very low,0.7411814363263723,2_counties
-New Haven County,Low,0.4862617787201134,2_counties
-New Haven County,Mid-low,0.3433877843023505,2_counties
-New Haven County,Mid-high,0.2599449060733224,2_counties
-New Haven County,High,0.17016149648926635,2_counties
-New London County,Very low,0.6775188523475449,2_counties
-New London County,Low,0.44618914515376257,2_counties
-New London County,Mid-low,0.3050218318993332,2_counties
-New London County,Mid-high,0.23277843731462494,2_counties
-New London County,High,0.15789559799808847,2_counties
-Tolland County,Very low,0.7046399346019806,2_counties
-Tolland County,Low,0.4144934150979942,2_counties
-Tolland County,Mid-low,0.28106645994099666,2_counties
-Tolland County,Mid-high,0.2120140092748916,2_counties
-Tolland County,High,0.1428453215940085,2_counties
-Windham County,Very low,0.6552540202288775,2_counties
-Windham County,Low,0.38480253709223883,2_counties
-Windham County,Mid-low,0.31731090507414966,2_counties
-Windham County,Mid-high,0.23414173446863465,2_counties
-Windham County,High,0.1548067114782262,2_counties
-Connecticut,Very low,0.7102489349206524,1_state
-Connecticut,Low,0.4564889136479826,1_state
-Connecticut,Mid-low,0.32873511415647017,1_state
-Connecticut,Mid-high,0.24583177676571294,1_state
-Connecticut,High,0.16265327905302032,1_state
+"name","inc_band","wm_cb","level"
+"Fairfield County","Very low",0.710356628327287,"2_counties"
+"Fairfield County","Low",0.466399114855439,"2_counties"
+"Fairfield County","Mid-low",0.345519055322222,"2_counties"
+"Fairfield County","Mid-high",0.264745750854699,"2_counties"
+"Fairfield County","High",0.167367132607203,"2_counties"
+"Hartford County","Very low",0.697817800449291,"2_counties"
+"Hartford County","Low",0.433067841757122,"2_counties"
+"Hartford County","Mid-low",0.310449374942298,"2_counties"
+"Hartford County","Mid-high",0.225600593773538,"2_counties"
+"Hartford County","High",0.154411572251471,"2_counties"
+"Litchfield County","Very low",0.665097764052443,"2_counties"
+"Litchfield County","Low",0.421466577036058,"2_counties"
+"Litchfield County","Mid-low",0.296848621242434,"2_counties"
+"Litchfield County","Mid-high",0.224770959444098,"2_counties"
+"Litchfield County","High",0.152704011556045,"2_counties"
+"Middlesex County","Very low",0.677215578792679,"2_counties"
+"Middlesex County","Low",0.406143222563133,"2_counties"
+"Middlesex County","Mid-low",0.311351373104051,"2_counties"
+"Middlesex County","Mid-high",0.233717339035473,"2_counties"
+"Middlesex County","High",0.159007118288142,"2_counties"
+"New Haven County","Very low",0.733787971859366,"2_counties"
+"New Haven County","Low",0.471615199783209,"2_counties"
+"New Haven County","Mid-low",0.335421268414727,"2_counties"
+"New Haven County","Mid-high",0.253786614346734,"2_counties"
+"New Haven County","High",0.16740298950365,"2_counties"
+"New London County","Very low",0.674412137204237,"2_counties"
+"New London County","Low",0.4357362661619,"2_counties"
+"New London County","Mid-low",0.300063254738106,"2_counties"
+"New London County","Mid-high",0.22714639154752,"2_counties"
+"New London County","High",0.155985382253772,"2_counties"
+"Tolland County","Very low",0.696624060814151,"2_counties"
+"Tolland County","Low",0.405782018294109,"2_counties"
+"Tolland County","Mid-low",0.277212036057064,"2_counties"
+"Tolland County","Mid-high",0.209804407650292,"2_counties"
+"Tolland County","High",0.140511884780343,"2_counties"
+"Windham County","Very low",0.649773269112466,"2_counties"
+"Windham County","Low",0.376424041508161,"2_counties"
+"Windham County","Mid-low",0.312470361167311,"2_counties"
+"Windham County","Mid-high",0.225399734504156,"2_counties"
+"Windham County","High",0.15363337415678,"2_counties"
+"Connecticut","Very low",0.704379513897457,"1_state"
+"Connecticut","Low",0.446472325955951,"1_state"
+"Connecticut","Mid-low",0.321879564539213,"1_state"
+"Connecticut","Mid-high",0.240852063307095,"1_state"
+"Connecticut","High",0.160552410293413,"1_state"

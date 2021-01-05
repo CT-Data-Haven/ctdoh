@@ -126,31 +126,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-Less than $27,891
+Less than $28,694
 
 </td>
 
 <td style="text-align:left;">
 
-Between $27,891 and $46,484
+Between $28,694 and $47,822
 
 </td>
 
 <td style="text-align:left;">
 
-Between $46,484 and $74,375
+Between $47,822 and $76,516
 
 </td>
 
 <td style="text-align:left;">
 
-Between $74,375 and $111,563
+Between $76,516 and $114,774
 
 </td>
 
 <td style="text-align:left;">
 
-More than $111,563
+More than $114,774
 
 </td>
 
@@ -166,31 +166,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-Less than $21,696
+Less than $22,544
 
 </td>
 
 <td style="text-align:left;">
 
-Between $21,696 and $36,160
+Between $22,544 and $37,574
 
 </td>
 
 <td style="text-align:left;">
 
-Between $36,160 and $57,857
+Between $37,574 and $60,118
 
 </td>
 
 <td style="text-align:left;">
 
-Between $57,857 and $86,785
+Between $60,118 and $90,178
 
 </td>
 
 <td style="text-align:left;">
 
-More than $86,785
+More than $90,178
 
 </td>
 
@@ -206,31 +206,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-Less than $23,494
+Less than $23,972
 
 </td>
 
 <td style="text-align:left;">
 
-Between $23,494 and $39,157
+Between $23,972 and $39,953
 
 </td>
 
 <td style="text-align:left;">
 
-Between $39,157 and $62,651
+Between $39,953 and $63,925
 
 </td>
 
 <td style="text-align:left;">
 
-Between $62,651 and $93,977
+Between $63,925 and $95,887
 
 </td>
 
 <td style="text-align:left;">
 
-More than $93,977
+More than $95,887
 
 </td>
 
@@ -246,31 +246,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-Less than $25,428
+Less than $25,769
 
 </td>
 
 <td style="text-align:left;">
 
-Between $25,428 and $42,380
+Between $25,769 and $42,949
 
 </td>
 
 <td style="text-align:left;">
 
-Between $42,380 and $67,809
+Between $42,949 and $68,718
 
 </td>
 
 <td style="text-align:left;">
 
-Between $67,809 and $101,713
+Between $68,718 and $103,078
 
 </td>
 
 <td style="text-align:left;">
 
-More than $101,713
+More than $103,078
 
 </td>
 
@@ -286,31 +286,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-Less than $20,138
+Less than $20,972
 
 </td>
 
 <td style="text-align:left;">
 
-Between $20,138 and $33,564
+Between $20,972 and $34,952
 
 </td>
 
 <td style="text-align:left;">
 
-Between $33,564 and $53,702
+Between $34,952 and $55,924
 
 </td>
 
 <td style="text-align:left;">
 
-Between $53,702 and $80,554
+Between $55,924 and $83,886
 
 </td>
 
 <td style="text-align:left;">
 
-More than $80,554
+More than $83,886
 
 </td>
 
@@ -326,31 +326,31 @@ New London County
 
 <td style="text-align:left;">
 
-Less than $21,410
+Less than $22,047
 
 </td>
 
 <td style="text-align:left;">
 
-Between $21,410 and $35,684
+Between $22,047 and $36,745
 
 </td>
 
 <td style="text-align:left;">
 
-Between $35,684 and $57,094
+Between $36,745 and $58,792
 
 </td>
 
 <td style="text-align:left;">
 
-Between $57,094 and $85,642
+Between $58,792 and $88,188
 
 </td>
 
 <td style="text-align:left;">
 
-More than $85,642
+More than $88,188
 
 </td>
 
@@ -366,31 +366,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-Less than $25,475
+Less than $26,121
 
 </td>
 
 <td style="text-align:left;">
 
-Between $25,475 and $42,458
+Between $26,121 and $43,534
 
 </td>
 
 <td style="text-align:left;">
 
-Between $42,458 and $67,933
+Between $43,534 and $69,655
 
 </td>
 
 <td style="text-align:left;">
 
-Between $67,933 and $101,899
+Between $69,655 and $104,483
 
 </td>
 
 <td style="text-align:left;">
 
-More than $101,899
+More than $104,483
 
 </td>
 
@@ -406,31 +406,31 @@ Windham County
 
 <td style="text-align:left;">
 
-Less than $19,432
+Less than $19,965
 
 </td>
 
 <td style="text-align:left;">
 
-Between $19,432 and $32,387
+Between $19,965 and $33,275
 
 </td>
 
 <td style="text-align:left;">
 
-Between $32,387 and $51,819
+Between $33,275 and $53,240
 
 </td>
 
 <td style="text-align:left;">
 
-Between $51,819 and $77,729
+Between $53,240 and $79,860
 
 </td>
 
 <td style="text-align:left;">
 
-More than $77,729
+More than $79,860
 
 </td>
 
@@ -446,31 +446,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-Less than $22,832
+Less than $23,533
 
 </td>
 
 <td style="text-align:left;">
 
-Between $22,832 and $38,053
+Between $23,533 and $39,222
 
 </td>
 
 <td style="text-align:left;">
 
-Between $38,053 and $60,885
+Between $39,222 and $62,755
 
 </td>
 
 <td style="text-align:left;">
 
-Between $60,885 and $91,327
+Between $62,755 and $94,133
 
 </td>
 
 <td style="text-align:left;">
 
-More than $91,327
+More than $94,133
 
 </td>
 
@@ -561,31 +561,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-55,251
+56,984
 
 </td>
 
 <td style="text-align:left;">
 
-38,220
+40,088
 
 </td>
 
 <td style="text-align:left;">
 
-51,287
+50,351
 
 </td>
 
 <td style="text-align:left;">
 
-53,533
+53,938
 
 </td>
 
 <td style="text-align:left;">
 
-142,201
+139,131
 
 </td>
 
@@ -607,31 +607,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-52,900
+55,051
 
 </td>
 
 <td style="text-align:left;">
 
-37,375
+39,071
 
 </td>
 
 <td style="text-align:left;">
 
-55,552
+56,021
 
 </td>
 
 <td style="text-align:left;">
 
-57,614
+61,014
 
 </td>
 
 <td style="text-align:left;">
 
-145,622
+137,906
 
 </td>
 
@@ -653,31 +653,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-8,698
+8,847
 
 </td>
 
 <td style="text-align:left;">
 
-8,655
+8,733
 
 </td>
 
 <td style="text-align:left;">
 
-11,899
+12,626
 
 </td>
 
 <td style="text-align:left;">
 
-14,645
+14,651
 
 </td>
 
 <td style="text-align:left;">
 
-30,090
+29,130
 
 </td>
 
@@ -699,31 +699,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-9,466
+9,549
 
 </td>
 
 <td style="text-align:left;">
 
-7,567
+7,575
 
 </td>
 
 <td style="text-align:left;">
 
-10,680
+10,848
 
 </td>
 
 <td style="text-align:left;">
 
-12,075
+12,205
 
 </td>
 
 <td style="text-align:left;">
 
-27,105
+26,716
 
 </td>
 
@@ -745,31 +745,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-47,160
+49,589
 
 </td>
 
 <td style="text-align:left;">
 
-37,512
+38,492
 
 </td>
 
 <td style="text-align:left;">
 
-52,407
+53,398
 
 </td>
 
 <td style="text-align:left;">
 
-53,410
+55,593
 
 </td>
 
 <td style="text-align:left;">
 
-139,367
+132,784
 
 </td>
 
@@ -791,31 +791,31 @@ New London County
 
 <td style="text-align:left;">
 
-14,344
+14,624
 
 </td>
 
 <td style="text-align:left;">
 
-10,745
+11,564
 
 </td>
 
 <td style="text-align:left;">
 
-17,668
+18,384
 
 </td>
 
 <td style="text-align:left;">
 
-20,979
+20,538
 
 </td>
 
 <td style="text-align:left;">
 
-43,666
+42,292
 
 </td>
 
@@ -837,31 +837,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-7,722
-
-</td>
-
-<td style="text-align:left;">
-
-6,681
-
-</td>
-
-<td style="text-align:left;">
-
 8,039
 
 </td>
 
 <td style="text-align:left;">
 
-10,580
+6,656
 
 </td>
 
 <td style="text-align:left;">
 
-22,196
+8,266
+
+</td>
+
+<td style="text-align:left;">
+
+10,949
+
+</td>
+
+<td style="text-align:left;">
+
+21,308
 
 </td>
 
@@ -883,31 +883,31 @@ Windham County
 
 <td style="text-align:left;">
 
-5,836
+6,047
 
 </td>
 
 <td style="text-align:left;">
 
-4,590
+4,626
 
 </td>
 
 <td style="text-align:left;">
 
-6,958
+7,705
 
 </td>
 
 <td style="text-align:left;">
 
-9,000
+8,619
 
 </td>
 
 <td style="text-align:left;">
 
-18,079
+17,466
 
 </td>
 
@@ -929,31 +929,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-201,377
+208,730
 
 </td>
 
 <td style="text-align:left;">
 
-151,345
+156,805
 
 </td>
 
 <td style="text-align:left;">
 
-214,490
+217,599
 
 </td>
 
 <td style="text-align:left;">
 
-231,836
+237,507
 
 </td>
 
 <td style="text-align:left;">
 
-568,326
+546,733
 
 </td>
 
@@ -1101,8 +1101,8 @@ workers; Landscaping and groundskeeping workers
 
 <td style="text-align:left;">
 
-Maids and housekeeping cleaners; Janitors and building cleaners;
-Landscaping and groundskeeping workers; Cashiers; Childcare workers
+Maids and housekeeping cleaners; Landscaping and groundskeeping workers;
+Janitors and building cleaners; Cashiers; Nursing assistants
 
 </td>
 
@@ -1117,8 +1117,8 @@ medical, and executive; Retail salespersons
 <td style="text-align:left;">
 
 Elementary and middle school teachers; Cashiers; Retail salespersons;
-Secretaries and administrative assistants, except legal, medical, and
-executive; Driver/sales workers and truck drivers
+Managers, all other; Secretaries and administrative assistants, except
+legal, medical, and executive
 
 </td>
 
@@ -1142,23 +1142,23 @@ Hartford County
 <td style="text-align:left;">
 
 Cashiers; Unemployed, with no work experience in the last 5 years or
-earlier or never worked; Personal care aides; Janitors and building
-cleaners; Nursing assistants
+earlier or never worked; Janitors and building cleaners; Personal care
+aides; Nursing assistants
 
 </td>
 
 <td style="text-align:left;">
 
-Cashiers; Janitors and building cleaners; Unemployed, with no work
-experience in the last 5 years or earlier or never worked; Retail
-salespersons; Nursing assistants
+Cashiers; Janitors and building cleaners; Nursing assistants;
+Unemployed, with no work experience in the last 5 years or earlier or
+never worked; Retail salespersons
 
 </td>
 
 <td style="text-align:left;">
 
-Cashiers; Retail salespersons; Nursing assistants; Unemployed, with no
-work experience in the last 5 years or earlier or never worked;
+Cashiers; Retail salespersons; Unemployed, with no work experience in
+the last 5 years or earlier or never worked; Nursing assistants;
 Secretaries and administrative assistants, except legal, medical, and
 executive
 
@@ -1166,16 +1166,17 @@ executive
 
 <td style="text-align:left;">
 
-Cashiers; Secretaries and administrative assistants, except legal,
-medical, and executive; Janitors and building cleaners; Driver/sales
-workers and truck drivers; Customer service representatives
+Cashiers; Janitors and building cleaners; Secretaries and administrative
+assistants, except legal, medical, and executive; First-Line supervisors
+of retail sales workers; Customer service representatives
 
 </td>
 
 <td style="text-align:left;">
 
 Managers, all other; Elementary and middle school teachers; Registered
-nurses; Accountants and auditors; Retail salespersons
+nurses; Accountants and auditors; Secretaries and administrative
+assistants, except legal, medical, and executive
 
 </td>
 
@@ -1199,16 +1200,16 @@ hand; Personal care aides; Cashiers; Janitors and building cleaners
 <td style="text-align:left;">
 
 Janitors and building cleaners; First-Line supervisors of retail sales
-workers; Waiters and waitresses; Personal care aides; Customer service
+workers; Personal care aides; Waiters and waitresses; Customer service
 representatives
 
 </td>
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Cashiers; Secretaries and administrative
-assistants, except legal, medical, and executive; Driver/sales workers
-and truck drivers; Bookkeeping, accounting, and auditing clerks
+Janitors and building cleaners; Secretaries and administrative
+assistants, except legal, medical, and executive; Cashiers; Driver/sales
+workers and truck drivers; Waiters and waitresses
 
 </td>
 
@@ -1216,15 +1217,14 @@ and truck drivers; Bookkeeping, accounting, and auditing clerks
 
 First-Line supervisors of retail sales workers; Elementary and middle
 school teachers; Landscaping and groundskeeping workers; Retail
-salespersons; Secretaries and administrative assistants, except legal,
-medical, and executive
+salespersons; Customer service representatives
 
 </td>
 
 <td style="text-align:left;">
 
 Elementary and middle school teachers; Managers, all other; Registered
-nurses; Chief executives; Customer service representatives
+nurses; Chief executives; First-Line supervisors of retail sales workers
 
 </td>
 
@@ -1266,7 +1266,7 @@ Customer service representatives; Nursing assistants
 
 Managers, all other; Elementary and middle school teachers; Registered
 nurses; Secretaries and administrative assistants, except legal,
-medical, and executive; Janitors and building cleaners
+medical, and executive; Retail salespersons
 
 </td>
 
@@ -1290,8 +1290,8 @@ New Haven County
 <td style="text-align:left;">
 
 Unemployed, with no work experience in the last 5 years or earlier or
-never worked; Cashiers; Customer service representatives; Personal care
-aides; Janitors and building cleaners
+never worked; Cashiers; Customer service representatives; Janitors and
+building cleaners; Personal care aides
 
 </td>
 
@@ -1312,9 +1312,9 @@ supervisors of retail sales workers; Janitors and building cleaners
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; First-Line supervisors of retail sales
-workers; Retail salespersons; Cashiers; Secretaries and administrative
-assistants, except legal, medical, and executive
+Cashiers; Retail salespersons; Janitors and building cleaners;
+First-Line supervisors of retail sales workers; Secretaries and
+administrative assistants, except legal, medical, and executive
 
 </td>
 
@@ -1339,31 +1339,30 @@ New London County
 <td style="text-align:left;">
 
 Maids and housekeeping cleaners; Janitors and building cleaners; Waiters
-and waitresses; Unemployed, with no work experience in the last 5 years
-or earlier or never worked; Cashiers
+and waitresses; Cashiers; Unemployed, with no work experience in the
+last 5 years or earlier or never worked
 
 </td>
 
 <td style="text-align:left;">
 
-Cashiers; Janitors and building cleaners; Retail salespersons; Cooks;
-Laborers and freight, stock, and material movers, hand
+Cashiers; Retail salespersons; Gambling services workers; Janitors and
+building cleaners; Cooks
 
 </td>
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Cashiers; Gambling services workers;
-Landscaping and groundskeeping workers; Nursing assistants
+Janitors and building cleaners; Landscaping and groundskeeping workers;
+Cashiers; Driver/sales workers and truck drivers; Cooks
 
 </td>
 
 <td style="text-align:left;">
 
 Secretaries and administrative assistants, except legal, medical, and
-executive; Driver/sales workers and truck drivers; Cashiers; First-Line
-supervisors of retail sales workers; Elementary and middle school
-teachers
+executive; Cashiers; Gambling services workers; Elementary and middle
+school teachers; Driver/sales workers and truck drivers
 
 </td>
 
@@ -1388,23 +1387,22 @@ Tolland County
 <td style="text-align:left;">
 
 Waiters and waitresses; Postsecondary teachers; Customer service
-representatives; Nursing assistants; Cashiers
+representatives; Cashiers; Nursing assistants
 
 </td>
 
 <td style="text-align:left;">
 
-Waiters and waitresses; Driver/sales workers and truck drivers; Chefs
-and head cooks; Receptionists and information clerks; Customer service
-representatives
+Waiters and waitresses; Driver/sales workers and truck drivers;
+Receptionists and information clerks; Laborers and freight, stock, and
+material movers, hand; Retail salespersons
 
 </td>
 
 <td style="text-align:left;">
 
 Retail salespersons; Driver/sales workers and truck drivers; Teaching
-assistants; Childcare workers; First-Line supervisors of retail sales
-workers
+assistants; Nursing assistants; Cashiers
 
 </td>
 
@@ -1412,7 +1410,7 @@ workers
 
 Accountants and auditors; Elementary and middle school teachers;
 Cashiers; Secretaries and administrative assistants, except legal,
-medical, and executive; Registered nurses
+medical, and executive; First-Line supervisors of retail sales workers
 
 </td>
 
@@ -1444,31 +1442,30 @@ cleaners; Waiters and waitresses; Retail salespersons
 
 <td style="text-align:left;">
 
-Laborers and freight, stock, and material movers, hand; Retail
-salespersons; Personal care aides; Nursing assistants; Driver/sales
-workers and truck drivers
+Retail salespersons; Laborers and freight, stock, and material movers,
+hand; Personal care aides; Nursing assistants; Driver/sales workers and
+truck drivers
 
 </td>
 
 <td style="text-align:left;">
 
-Janitors and building cleaners; Driver/sales workers and truck drivers;
-Landscaping and groundskeeping workers; Food preparation workers; Cooks
+Food preparation workers; Janitors and building cleaners; Driver/sales
+workers and truck drivers; Cooks; Other production workers
 
 </td>
 
 <td style="text-align:left;">
 
-Nursing assistants; First-Line supervisors of retail sales workers;
-Driver/sales workers and truck drivers; Secretaries and administrative
-assistants, except legal, medical, and executive; Customer service
-representatives
+Customer service representatives; Nursing assistants; Driver/sales
+workers and truck drivers; Secretaries and administrative assistants,
+except legal, medical, and executive; Waiters and waitresses
 
 </td>
 
 <td style="text-align:left;">
 
-Registered nurses; Cashiers; Elementary and middle school teachers;
+Registered nurses; Elementary and middle school teachers; Cashiers;
 Driver/sales workers and truck drivers; Secretaries and administrative
 assistants, except legal, medical, and executive
 
@@ -1649,31 +1646,31 @@ Fairfield County
 
 <td style="text-align:left;">
 
-Less than $697
+Less than $717
 
 </td>
 
 <td style="text-align:left;">
 
-Between $697 and $1,162
+Between $717 and $1,196
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,162 and $1,859
+Between $1,196 and $1,913
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,859 and $2,789
+Between $1,913 and $2,869
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,789
+More than $2,869
 
 </td>
 
@@ -1689,31 +1686,31 @@ Hartford County
 
 <td style="text-align:left;">
 
-Less than $542
+Less than $564
 
 </td>
 
 <td style="text-align:left;">
 
-Between $542 and $904
+Between $564 and $939
 
 </td>
 
 <td style="text-align:left;">
 
-Between $904 and $1,446
+Between $939 and $1,503
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,446 and $2,170
+Between $1,503 and $2,254
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,170
+More than $2,254
 
 </td>
 
@@ -1729,31 +1726,31 @@ Litchfield County
 
 <td style="text-align:left;">
 
-Less than $587
+Less than $599
 
 </td>
 
 <td style="text-align:left;">
 
-Between $587 and $979
+Between $599 and $999
 
 </td>
 
 <td style="text-align:left;">
 
-Between $979 and $1,566
+Between $999 and $1,598
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,566 and $2,349
+Between $1,598 and $2,397
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,349
+More than $2,397
 
 </td>
 
@@ -1769,31 +1766,31 @@ Middlesex County
 
 <td style="text-align:left;">
 
-Less than $636
+Less than $644
 
 </td>
 
 <td style="text-align:left;">
 
-Between $636 and $1,060
+Between $644 and $1,074
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,060 and $1,695
+Between $1,074 and $1,718
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,695 and $2,543
+Between $1,718 and $2,577
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,543
+More than $2,577
 
 </td>
 
@@ -1809,31 +1806,31 @@ New Haven County
 
 <td style="text-align:left;">
 
-Less than $503
+Less than $524
 
 </td>
 
 <td style="text-align:left;">
 
-Between $503 and $839
+Between $524 and $874
 
 </td>
 
 <td style="text-align:left;">
 
-Between $839 and $1,343
+Between $874 and $1,398
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,343 and $2,014
+Between $1,398 and $2,097
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,014
+More than $2,097
 
 </td>
 
@@ -1849,31 +1846,31 @@ New London County
 
 <td style="text-align:left;">
 
-Less than $535
+Less than $551
 
 </td>
 
 <td style="text-align:left;">
 
-Between $535 and $892
+Between $551 and $919
 
 </td>
 
 <td style="text-align:left;">
 
-Between $892 and $1,427
+Between $919 and $1,470
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,427 and $2,141
+Between $1,470 and $2,205
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,141
+More than $2,205
 
 </td>
 
@@ -1889,31 +1886,31 @@ Tolland County
 
 <td style="text-align:left;">
 
-Less than $637
+Less than $653
 
 </td>
 
 <td style="text-align:left;">
 
-Between $637 and $1,061
+Between $653 and $1,088
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,061 and $1,698
+Between $1,088 and $1,741
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,698 and $2,547
+Between $1,741 and $2,612
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,547
+More than $2,612
 
 </td>
 
@@ -1929,31 +1926,31 @@ Windham County
 
 <td style="text-align:left;">
 
-Less than $486
+Less than $499
 
 </td>
 
 <td style="text-align:left;">
 
-Between $486 and $810
+Between $499 and $832
 
 </td>
 
 <td style="text-align:left;">
 
-Between $810 and $1,295
+Between $832 and $1,331
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,295 and $1,943
+Between $1,331 and $1,996
 
 </td>
 
 <td style="text-align:left;">
 
-More than $1,943
+More than $1,996
 
 </td>
 
@@ -1969,31 +1966,31 @@ Connecticut
 
 <td style="text-align:left;">
 
-Less than $571
+Less than $588
 
 </td>
 
 <td style="text-align:left;">
 
-Between $571 and $951
+Between $588 and $981
 
 </td>
 
 <td style="text-align:left;">
 
-Between $951 and $1,522
+Between $981 and $1,569
 
 </td>
 
 <td style="text-align:left;">
 
-Between $1,522 and $2,283
+Between $1,569 and $2,353
 
 </td>
 
 <td style="text-align:left;">
 
-More than $2,283
+More than $2,353
 
 </td>
 
@@ -2053,6 +2050,8 @@ vacant units that have been sold or rented but are not yet occupied.
 
 ![](hh_desiring_housing_files/figure-gfm/units%20by%20tenure%20and%20occ%20bar%20chart-1.png)<!-- -->
 
+![](hh_desiring_housing_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
 There are two other major vacancy categories, “Other vacant” and “For
 seasonal, recreational, or other occasional use,” but there’s no cost
 information associated with those units, so they can’t be sorted into
@@ -2096,30 +2095,30 @@ income households.
     ##    level  name    inc_band  value value_se statefip.x statefip.y  share sharemoe
     ##    <fct>  <chr>   <fct>     <dbl>    <dbl>  <int+lbl>  <int+lbl>  <dbl>    <dbl>
     ##  1 1_sta… Connec… Total    1.37e6    3502.         NA NA         NA       NA    
-    ##  2 1_sta… Connec… Very low 2.01e5    2402.         NA  9 [Conne…  0.147    0.002
-    ##  3 1_sta… Connec… Low      1.51e5    2070.         NA  9 [Conne…  0.111    0.001
-    ##  4 1_sta… Connec… Mid-low  2.14e5    2454.         NA  9 [Conne…  0.157    0.002
-    ##  5 1_sta… Connec… Mid-high 2.32e5    2421.         NA  9 [Conne…  0.17     0.002
-    ##  6 1_sta… Connec… High     5.68e5    3148.         NA  9 [Conne…  0.416    0.002
+    ##  2 1_sta… Connec… Very low 2.09e5    2437.         NA  9 [Conne…  0.153    0.002
+    ##  3 1_sta… Connec… Low      1.57e5    2107.         NA  9 [Conne…  0.115    0.002
+    ##  4 1_sta… Connec… Mid-low  2.18e5    2461.         NA  9 [Conne…  0.159    0.002
+    ##  5 1_sta… Connec… Mid-high 2.38e5    2451.         NA  9 [Conne…  0.174    0.002
+    ##  6 1_sta… Connec… High     5.47e5    3103.         NA  9 [Conne…  0.4      0.002
     ##  7 2_cou… Fairfi… Total    3.40e5    2753.         NA NA         NA       NA    
-    ##  8 2_cou… Fairfi… Very low 5.53e4    1313.         NA NA          0.162    0.004
-    ##  9 2_cou… Fairfi… Low      3.82e4    1073.         NA NA          0.112    0.003
-    ## 10 2_cou… Fairfi… Mid-low  5.13e4    1207.         NA NA          0.151    0.003
+    ##  8 2_cou… Fairfi… Very low 5.70e4    1332.         NA NA          0.167    0.004
+    ##  9 2_cou… Fairfi… Low      4.01e4    1100.         NA NA          0.118    0.003
+    ## 10 2_cou… Fairfi… Mid-low  5.04e4    1186.         NA NA          0.148    0.003
     ## # … with 44 more rows
     ## 
     ## $income_ranges
     ## # A tibble: 9 x 6
     ##   Name      `Very low`    Low           `Mid-low`      `Mid-high`      High     
     ##   <chr>     <chr>         <chr>         <chr>          <chr>           <chr>    
-    ## 1 Fairfiel… Less than $2… Between $27,… Between $46,4… Between $74,37… More tha…
-    ## 2 Hartford… Less than $2… Between $21,… Between $36,1… Between $57,85… More tha…
-    ## 3 Litchfie… Less than $2… Between $23,… Between $39,1… Between $62,65… More tha…
-    ## 4 Middlese… Less than $2… Between $25,… Between $42,3… Between $67,80… More tha…
-    ## 5 New Have… Less than $2… Between $20,… Between $33,5… Between $53,70… More tha…
-    ## 6 New Lond… Less than $2… Between $21,… Between $35,6… Between $57,09… More tha…
-    ## 7 Tolland … Less than $2… Between $25,… Between $42,4… Between $67,93… More tha…
-    ## 8 Windham … Less than $1… Between $19,… Between $32,3… Between $51,81… More tha…
-    ## 9 Connecti… Less than $2… Between $22,… Between $38,0… Between $60,88… More tha…
+    ## 1 Fairfiel… Less than $2… Between $28,… Between $47,8… Between $76,51… More tha…
+    ## 2 Hartford… Less than $2… Between $22,… Between $37,5… Between $60,11… More tha…
+    ## 3 Litchfie… Less than $2… Between $23,… Between $39,9… Between $63,92… More tha…
+    ## 4 Middlese… Less than $2… Between $25,… Between $42,9… Between $68,71… More tha…
+    ## 5 New Have… Less than $2… Between $20,… Between $34,9… Between $55,92… More tha…
+    ## 6 New Lond… Less than $2… Between $22,… Between $36,7… Between $58,79… More tha…
+    ## 7 Tolland … Less than $2… Between $26,… Between $43,5… Between $69,65… More tha…
+    ## 8 Windham … Less than $1… Between $19,… Between $33,2… Between $53,24… More tha…
+    ## 9 Connecti… Less than $2… Between $23,… Between $39,2… Between $62,75… More tha…
     ## 
     ## $hh_by_race_inc_band
     ## # A tibble: 216 x 10
@@ -2127,15 +2126,15 @@ income households.
     ##    level name  race2 inc_band  value value_se statefip.x statefip.y  share
     ##    <fct> <chr> <fct> <fct>     <dbl>    <dbl>  <int+lbl>  <int+lbl>  <dbl>
     ##  1 1_st… Conn… White Total    996437    3346. NA         NA         NA    
-    ##  2 1_st… Conn… White Very low 113213    1720.  9 [Conne…  9 [Conne…  0.114
-    ##  3 1_st… Conn… White Low       97152    1558.  9 [Conne…  9 [Conne…  0.097
-    ##  4 1_st… Conn… White Mid-low  144503    1910.  9 [Conne…  9 [Conne…  0.145
-    ##  5 1_st… Conn… White Mid-high 171246    1982.  9 [Conne…  9 [Conne…  0.172
-    ##  6 1_st… Conn… White High     470323    2851.  9 [Conne…  9 [Conne…  0.472
+    ##  2 1_st… Conn… White Very low 117488    1748.  9 [Conne…  9 [Conne…  0.118
+    ##  3 1_st… Conn… White Low      100645    1584.  9 [Conne…  9 [Conne…  0.101
+    ##  4 1_st… Conn… White Mid-low  147671    1923.  9 [Conne…  9 [Conne…  0.148
+    ##  5 1_st… Conn… White Mid-high 176546    2017.  9 [Conne…  9 [Conne…  0.177
+    ##  6 1_st… Conn… White High     454087    2814.  9 [Conne…  9 [Conne…  0.456
     ##  7 1_st… Conn… Black Total    125094    2102. NA         NA         NA    
-    ##  8 1_st… Conn… Black Very low  32076    1078.  9 [Conne…  9 [Conne…  0.256
-    ##  9 1_st… Conn… Black Low       19632     872.  9 [Conne…  9 [Conne…  0.157
-    ## 10 1_st… Conn… Black Mid-low   24342     958.  9 [Conne…  9 [Conne…  0.195
+    ##  8 1_st… Conn… Black Very low  33474    1100.  9 [Conne…  9 [Conne…  0.268
+    ##  9 1_st… Conn… Black Low       20070     886.  9 [Conne…  9 [Conne…  0.16 
+    ## 10 1_st… Conn… Black Mid-low   24128     946.  9 [Conne…  9 [Conne…  0.193
     ## # … with 206 more rows, and 1 more variable: sharemoe <dbl>
     ## 
     ## $pivot_race_inc_band
@@ -2143,49 +2142,49 @@ income households.
     ##    name        race2 inc_band  value
     ##    <chr>       <chr> <fct>     <dbl>
     ##  1 Connecticut White Total    996437
-    ##  2 Connecticut White Very low 113213
-    ##  3 Connecticut White Low       97152
-    ##  4 Connecticut White Mid-low  144503
-    ##  5 Connecticut White Mid-high 171246
-    ##  6 Connecticut White High     470323
+    ##  2 Connecticut White Very low 117488
+    ##  3 Connecticut White Low      100645
+    ##  4 Connecticut White Mid-low  147671
+    ##  5 Connecticut White Mid-high 176546
+    ##  6 Connecticut White High     454087
     ##  7 Connecticut Black Total    125094
-    ##  8 Connecticut Black Very low  32076
-    ##  9 Connecticut Black Low       19632
-    ## 10 Connecticut Black Mid-low   24342
+    ##  8 Connecticut Black Very low  33474
+    ##  9 Connecticut Black Low       20070
+    ## 10 Connecticut Black Mid-low   24128
     ## # … with 260 more rows
     ## 
     ## $common_jobs_by_inc_band
-    ## # A tibble: 400 x 6
+    ## # A tibble: 401 x 6
     ## # Groups:   name, inc_band [40]
     ##    level   name       inc_band workers   occ occ_label                          
     ##    <chr>   <chr>      <fct>      <dbl> <int> <chr>                              
-    ##  1 2_coun… Fairfield… Very low    2715  4720 Cashiers                           
-    ##  2 2_coun… Fairfield… Very low    2035  9920 Unemployed, with no work experienc…
-    ##  3 2_coun… Fairfield… Very low    2023  4230 Maids and housekeeping cleaners    
-    ##  4 2_coun… Fairfield… Very low    1313  4600 Childcare workers                  
-    ##  5 2_coun… Fairfield… Very low    1265  4251 Landscaping and groundskeeping wor…
-    ##  6 2_coun… Fairfield… Very low    1250  3602 Personal care aides                
-    ##  7 2_coun… Fairfield… Very low    1241  4760 Retail salespersons                
-    ##  8 2_coun… Fairfield… Very low    1222  4220 Janitors and building cleaners     
-    ##  9 2_coun… Fairfield… Very low    1144  3603 Nursing assistants                 
+    ##  1 2_coun… Fairfield… Very low    2850  4720 Cashiers                           
+    ##  2 2_coun… Fairfield… Very low    2121  9920 Unemployed, with no work experienc…
+    ##  3 2_coun… Fairfield… Very low    2039  4230 Maids and housekeeping cleaners    
+    ##  4 2_coun… Fairfield… Very low    1366  4600 Childcare workers                  
+    ##  5 2_coun… Fairfield… Very low    1306  4251 Landscaping and groundskeeping wor…
+    ##  6 2_coun… Fairfield… Very low    1282  4760 Retail salespersons                
+    ##  7 2_coun… Fairfield… Very low    1280  4220 Janitors and building cleaners     
+    ##  8 2_coun… Fairfield… Very low    1250  3602 Personal care aides                
+    ##  9 2_coun… Fairfield… Very low    1221  3603 Nursing assistants                 
     ## 10 2_coun… Fairfield… Very low     866  4020 Cooks                              
-    ## # … with 390 more rows
+    ## # … with 391 more rows
     ## 
     ## $cb_by_inc_band
     ## # A tibble: 178 x 10
     ## # Groups:   level, name, inc_band [45]
     ##    level name  inc_band cost_burden  value value_se statefip.x statefip.y  share
     ##    <fct> <chr> <fct>    <fct>        <dbl>    <dbl>  <int+lbl>  <int+lbl>  <dbl>
-    ##  1 1_st… Conn… Very low Total       201377    2402. NA         NA         NA    
-    ##  2 1_st… Conn… Very low No burden    28364     947.  9 [Conne…  9 [Conne…  0.141
-    ##  3 1_st… Conn… Very low Cost-burde…  31411     969.  9 [Conne…  9 [Conne…  0.156
-    ##  4 1_st… Conn… Very low Severely c… 141602    2049.  9 [Conne…  9 [Conne…  0.703
-    ##  5 1_st… Conn… Low      Total       151345    2070. NA         NA         NA    
-    ##  6 1_st… Conn… Low      No burden    36305     976.  9 [Conne…  9 [Conne…  0.24 
-    ##  7 1_st… Conn… Low      Cost-burde…  61210    1367.  9 [Conne…  9 [Conne…  0.404
-    ##  8 1_st… Conn… Low      Severely c…  53830    1294.  9 [Conne…  9 [Conne…  0.356
-    ##  9 1_st… Conn… Mid-low  Total       214490    2454. NA         NA         NA    
-    ## 10 1_st… Conn… Mid-low  No burden   106477    1730.  9 [Conne…  9 [Conne…  0.496
+    ##  1 1_st… Conn… Very low Total       208730    2437. NA         NA         NA    
+    ##  2 1_st… Conn… Very low No burden    29601     962.  9 [Conne…  9 [Conne…  0.142
+    ##  3 1_st… Conn… Very low Cost-burde…  33506     996.  9 [Conne…  9 [Conne…  0.161
+    ##  4 1_st… Conn… Very low Severely c… 145623    2076.  9 [Conne…  9 [Conne…  0.698
+    ##  5 1_st… Conn… Low      Total       156805    2107. NA         NA         NA    
+    ##  6 1_st… Conn… Low      No burden    39386    1014.  9 [Conne…  9 [Conne…  0.251
+    ##  7 1_st… Conn… Low      Cost-burde…  64752    1411.  9 [Conne…  9 [Conne…  0.413
+    ##  8 1_st… Conn… Low      Severely c…  52667    1284.  9 [Conne…  9 [Conne…  0.336
+    ##  9 1_st… Conn… Mid-low  Total       217599    2461. NA         NA         NA    
+    ## 10 1_st… Conn… Mid-low  No burden   112667    1779.  9 [Conne…  9 [Conne…  0.518
     ## # … with 168 more rows, and 1 more variable: sharemoe <dbl>
     ## 
     ## $cb_shares
@@ -2209,16 +2208,16 @@ income households.
     ## # Groups:   level, name, inc_band [45]
     ##    level   name        inc_band cost_burden  value  share
     ##    <fct>   <chr>       <fct>    <fct>        <dbl>  <dbl>
-    ##  1 1_state Connecticut Very low Total       201377 NA    
-    ##  2 1_state Connecticut Very low No burden    28364  0.141
-    ##  3 1_state Connecticut Very low Burden      173013  0.859
-    ##  4 1_state Connecticut Low      Total       151345 NA    
-    ##  5 1_state Connecticut Low      No burden    36305  0.24 
-    ##  6 1_state Connecticut Low      Burden      115040  0.76 
-    ##  7 1_state Connecticut Mid-low  Total       214490 NA    
-    ##  8 1_state Connecticut Mid-low  No burden   106477  0.496
-    ##  9 1_state Connecticut Mid-low  Burden      108013  0.504
-    ## 10 1_state Connecticut Mid-high Total       231836 NA    
+    ##  1 1_state Connecticut Very low Total       208730 NA    
+    ##  2 1_state Connecticut Very low No burden    29601  0.142
+    ##  3 1_state Connecticut Very low Burden      179129  0.858
+    ##  4 1_state Connecticut Low      Total       156805 NA    
+    ##  5 1_state Connecticut Low      No burden    39386  0.251
+    ##  6 1_state Connecticut Low      Burden      117419  0.749
+    ##  7 1_state Connecticut Mid-low  Total       217599 NA    
+    ##  8 1_state Connecticut Mid-low  No burden   112667  0.518
+    ##  9 1_state Connecticut Mid-low  Burden      104932  0.482
+    ## 10 1_state Connecticut Mid-high Total       237507 NA    
     ## # … with 125 more rows
     ## 
     ## $avg_cost_ratio_inc_band
@@ -2226,16 +2225,16 @@ income households.
     ## # Groups:   name [9]
     ##    name             inc_band wm_cb level     
     ##    <chr>            <fct>    <dbl> <chr>     
-    ##  1 Fairfield County Very low 0.716 2_counties
-    ##  2 Fairfield County Low      0.474 2_counties
-    ##  3 Fairfield County Mid-low  0.352 2_counties
-    ##  4 Fairfield County Mid-high 0.268 2_counties
-    ##  5 Fairfield County High     0.169 2_counties
-    ##  6 Hartford County  Very low 0.705 2_counties
-    ##  7 Hartford County  Low      0.446 2_counties
-    ##  8 Hartford County  Mid-low  0.318 2_counties
-    ##  9 Hartford County  Mid-high 0.232 2_counties
-    ## 10 Hartford County  High     0.157 2_counties
+    ##  1 Fairfield County Very low 0.710 2_counties
+    ##  2 Fairfield County Low      0.466 2_counties
+    ##  3 Fairfield County Mid-low  0.346 2_counties
+    ##  4 Fairfield County Mid-high 0.265 2_counties
+    ##  5 Fairfield County High     0.167 2_counties
+    ##  6 Hartford County  Very low 0.698 2_counties
+    ##  7 Hartford County  Low      0.433 2_counties
+    ##  8 Hartford County  Mid-low  0.310 2_counties
+    ##  9 Hartford County  Mid-high 0.226 2_counties
+    ## 10 Hartford County  High     0.154 2_counties
     ## # … with 35 more rows
     ## 
     ## $avg_cost_inc_band
@@ -2243,47 +2242,47 @@ income households.
     ## # Groups:   name [9]
     ##    name             inc_band wm_cost level     
     ##    <chr>            <fct>      <dbl> <chr>     
-    ##  1 Connecticut      Very low   1000. 1_state   
-    ##  2 Connecticut      Low        1201. 1_state   
-    ##  3 Connecticut      Mid-low    1359. 1_state   
-    ##  4 Connecticut      Mid-high   1563. 1_state   
-    ##  5 Connecticut      High       2286. 1_state   
-    ##  6 Fairfield County Very low   1234. 2_counties
-    ##  7 Fairfield County Low        1524. 2_counties
-    ##  8 Fairfield County Mid-low    1751. 2_counties
-    ##  9 Fairfield County Mid-high   2054. 2_counties
-    ## 10 Fairfield County High       3207. 2_counties
+    ##  1 Connecticut      Very low   1003. 1_state   
+    ##  2 Connecticut      Low        1214. 1_state   
+    ##  3 Connecticut      Mid-low    1368. 1_state   
+    ##  4 Connecticut      Mid-high   1580. 1_state   
+    ##  5 Connecticut      High       2311. 1_state   
+    ##  6 Fairfield County Very low   1235. 2_counties
+    ##  7 Fairfield County Low        1554. 2_counties
+    ##  8 Fairfield County Mid-low    1767. 2_counties
+    ##  9 Fairfield County Mid-high   2071. 2_counties
+    ## 10 Fairfield County High       3226. 2_counties
     ## # … with 35 more rows
     ## 
     ## $affordable_cost_table
     ## # A tibble: 9 x 6
     ##   Name       `Very low`   Low          `Mid-low`       `Mid-high`      High     
     ##   <chr>      <chr>        <chr>        <chr>           <chr>           <chr>    
-    ## 1 Fairfield… Less than $… Between $69… Between $1,162… Between $1,859… More tha…
-    ## 2 Hartford … Less than $… Between $54… Between $904 a… Between $1,446… More tha…
-    ## 3 Litchfiel… Less than $… Between $58… Between $979 a… Between $1,566… More tha…
-    ## 4 Middlesex… Less than $… Between $63… Between $1,060… Between $1,695… More tha…
-    ## 5 New Haven… Less than $… Between $50… Between $839 a… Between $1,343… More tha…
-    ## 6 New Londo… Less than $… Between $53… Between $892 a… Between $1,427… More tha…
-    ## 7 Tolland C… Less than $… Between $63… Between $1,061… Between $1,698… More tha…
-    ## 8 Windham C… Less than $… Between $48… Between $810 a… Between $1,295… More tha…
-    ## 9 Connectic… Less than $… Between $57… Between $951 a… Between $1,522… More tha…
+    ## 1 Fairfield… Less than $… Between $71… Between $1,196… Between $1,913… More tha…
+    ## 2 Hartford … Less than $… Between $56… Between $939 a… Between $1,503… More tha…
+    ## 3 Litchfiel… Less than $… Between $59… Between $999 a… Between $1,598… More tha…
+    ## 4 Middlesex… Less than $… Between $64… Between $1,074… Between $1,718… More tha…
+    ## 5 New Haven… Less than $… Between $52… Between $874 a… Between $1,398… More tha…
+    ## 6 New Londo… Less than $… Between $55… Between $919 a… Between $1,470… More tha…
+    ## 7 Tolland C… Less than $… Between $65… Between $1,088… Between $1,741… More tha…
+    ## 8 Windham C… Less than $… Between $49… Between $832 a… Between $1,331… More tha…
+    ## 9 Connectic… Less than $… Between $58… Between $981 a… Between $1,569… More tha…
     ## 
     ## $all_units_inc_and_cost_bands
     ## # A tibble: 70,616 x 6
     ## # Groups:   name [8]
     ##     hhwt name               minc inc_band hcost cost_band
     ##    <dbl> <chr>             <dbl> <fct>    <int> <chr>    
-    ##  1    16 Fairfield County  92969 Mid-high  4208 High     
-    ##  2    11 New London County 71368 Mid-high  2169 High     
-    ##  3    21 New London County 71368 Mid-high   551 Low      
-    ##  4    19 New Haven County  67128 High      6607 High     
-    ##  5    24 New Haven County  67128 High      1176 Mid-low  
-    ##  6    15 Fairfield County  92969 High      4908 High     
-    ##  7     7 New London County 71368 High      4140 High     
-    ##  8    16 Hartford County   72321 High      1853 Mid-high 
-    ##  9     6 New London County 71368 Low       6546 High     
-    ## 10    12 Hartford County   72321 Mid-low    767 Low      
+    ##  1    16 Fairfield County  95645 Mid-high  4208 High     
+    ##  2    11 New London County 73490 Mid-high  2169 Mid-high 
+    ##  3    21 New London County 73490 Mid-high   551 Very low 
+    ##  4    19 New Haven County  69905 High      6607 High     
+    ##  5    24 New Haven County  69905 High      1176 Mid-low  
+    ##  6    15 Fairfield County  95645 High      4908 High     
+    ##  7     7 New London County 73490 High      4140 High     
+    ##  8    16 Hartford County   75148 High      1853 Mid-high 
+    ##  9     6 New London County 73490 Low       6546 High     
+    ## 10    12 Hartford County   75148 Mid-low    767 Low      
     ## # … with 70,606 more rows
     ## 
     ## $units_by_cost_and_income
@@ -2291,16 +2290,16 @@ income households.
     ## # Groups:   name [9]
     ##    name             inc_band group       value level     
     ##    <chr>            <chr>    <chr>       <dbl> <chr>     
-    ##  1 Fairfield County High     households 142201 2_counties
-    ##  2 Fairfield County High     units       90766 2_counties
-    ##  3 Fairfield County Low      households  38220 2_counties
-    ##  4 Fairfield County Low      units       51660 2_counties
-    ##  5 Fairfield County Mid-high households  53533 2_counties
-    ##  6 Fairfield County Mid-high units       82083 2_counties
-    ##  7 Fairfield County Mid-low  households  51287 2_counties
-    ##  8 Fairfield County Mid-low  units       86663 2_counties
-    ##  9 Fairfield County Very low households  55251 2_counties
-    ## 10 Fairfield County Very low units       29320 2_counties
+    ##  1 Fairfield County High     households 139131 2_counties
+    ##  2 Fairfield County High     units       85776 2_counties
+    ##  3 Fairfield County Low      households  40088 2_counties
+    ##  4 Fairfield County Low      units       54655 2_counties
+    ##  5 Fairfield County Mid-high households  53938 2_counties
+    ##  6 Fairfield County Mid-high units       81076 2_counties
+    ##  7 Fairfield County Mid-low  households  50351 2_counties
+    ##  8 Fairfield County Mid-low  units       88441 2_counties
+    ##  9 Fairfield County Very low households  56984 2_counties
+    ## 10 Fairfield County Very low units       30544 2_counties
     ## # … with 80 more rows
     ## 
     ## $hh_cost_band_vs_units_cost_band
@@ -2308,16 +2307,16 @@ income households.
     ## # Groups:   inc_band [5]
     ##    inc_band cost_band units
     ##    <fct>    <fct>     <dbl>
-    ##  1 Very low High       8865
-    ##  2 Very low Low       52714
-    ##  3 Very low Mid-high  22327
-    ##  4 Very low Mid-low   59737
-    ##  5 Very low Very low  57734
-    ##  6 Low      High       7975
-    ##  7 Low      Low       43194
-    ##  8 Low      Mid-high  23901
-    ##  9 Low      Mid-low   58814
-    ## 10 Low      Very low  17461
+    ##  1 Very low High       8328
+    ##  2 Very low Low       57631
+    ##  3 Very low Mid-high  20463
+    ##  4 Very low Mid-low   61347
+    ##  5 Very low Very low  60961
+    ##  6 Low      High       7402
+    ##  7 Low      Low       47355
+    ##  8 Low      Mid-high  23758
+    ##  9 Low      Mid-low   59829
+    ## 10 Low      Very low  18461
     ## # … with 15 more rows
     ## 
     ## $units_by_tenure_occupancy_cost_band
@@ -2325,32 +2324,32 @@ income households.
     ## # Groups:   name, tenure, occupancy [54]
     ##    name             tenure occupancy cost_band units
     ##    <chr>            <chr>  <fct>     <fct>     <dbl>
-    ##  1 Fairfield County owner  occupied  high      80938
-    ##  2 Fairfield County owner  occupied  mid_high  58876
-    ##  3 Fairfield County owner  occupied  mid_low   43757
-    ##  4 Fairfield County owner  occupied  low       31419
-    ##  5 Fairfield County owner  occupied  very_low  11126
-    ##  6 Hartford County  owner  occupied  high      58470
-    ##  7 Hartford County  owner  occupied  mid_high  68359
-    ##  8 Hartford County  owner  occupied  mid_low   52064
-    ##  9 Hartford County  owner  occupied  low       37433
-    ## 10 Hartford County  owner  occupied  very_low   7036
+    ##  1 Fairfield County owner  occupied  high      76980
+    ##  2 Fairfield County owner  occupied  mid_high  59518
+    ##  3 Fairfield County owner  occupied  mid_low   44969
+    ##  4 Fairfield County owner  occupied  low       32580
+    ##  5 Fairfield County owner  occupied  very_low  12069
+    ##  6 Hartford County  owner  occupied  high      52582
+    ##  7 Hartford County  owner  occupied  mid_high  68044
+    ##  8 Hartford County  owner  occupied  mid_low   54348
+    ##  9 Hartford County  owner  occupied  low       40030
+    ## 10 Hartford County  owner  occupied  very_low   8358
     ## # … with 242 more rows
     ## 
     ## $units_and_households
     ## # A tibble: 90 x 4
     ##    name        band     group       value
     ##    <chr>       <fct>    <chr>       <dbl>
-    ##  1 Connecticut Very low households 201377
-    ##  2 Connecticut Very low units      115309
-    ##  3 Connecticut Low      households 151345
-    ##  4 Connecticut Low      units      234972
-    ##  5 Connecticut Mid-low  households 214490
-    ##  6 Connecticut Mid-low  units      419683
-    ##  7 Connecticut Mid-high households 231836
-    ##  8 Connecticut Mid-high units      362648
-    ##  9 Connecticut High     households 568326
-    ## 10 Connecticut High     units      296548
+    ##  1 Connecticut Very low households 208730
+    ##  2 Connecticut Very low units      122020
+    ##  3 Connecticut Low      households 156805
+    ##  4 Connecticut Low      units      251752
+    ##  5 Connecticut Mid-low  households 217599
+    ##  6 Connecticut Mid-low  units      428638
+    ##  7 Connecticut Mid-high households 237507
+    ##  8 Connecticut Mid-high units      353086
+    ##  9 Connecticut High     households 546733
+    ## 10 Connecticut High     units      273649
     ## # … with 80 more rows
 
 ## Add homeless households?

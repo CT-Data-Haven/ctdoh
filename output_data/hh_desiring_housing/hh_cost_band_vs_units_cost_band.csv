@@ -1,26 +1,26 @@
-inc_band,cost_band,units
-Very low,High,8865
-Very low,Low,52714
-Very low,Mid-high,22327
-Very low,Mid-low,59737
-Very low,Very low,57734
-Low,High,7975
-Low,Low,43194
-Low,Mid-high,23901
-Low,Mid-low,58814
-Low,Very low,17461
-Mid-low,High,16895
-Mid-low,Low,46510
-Mid-low,Mid-high,48825
-Mid-low,Mid-low,87404
-Mid-low,Very low,14856
-Mid-high,High,30046
-Mid-high,Low,37095
-Mid-high,Mid-high,72787
-Mid-high,Mid-low,81767
-Mid-high,Very low,10141
-High,High,220404
-High,Low,48721
-High,Mid-high,178536
-High,Mid-low,109704
-High,Very low,10961
+"inc_band","cost_band","units"
+"Very low","High",8328
+"Very low","Low",57631
+"Very low","Mid-high",20463
+"Very low","Mid-low",61347
+"Very low","Very low",60961
+"Low","High",7402
+"Low","Low",47355
+"Low","Mid-high",23758
+"Low","Mid-low",59829
+"Low","Very low",18461
+"Mid-low","High",15815
+"Mid-low","Low",50311
+"Mid-low","Mid-high",46256
+"Mid-low","Mid-low",89438
+"Mid-low","Very low",15779
+"Mid-high","High",28131
+"Mid-high","Low",39121
+"Mid-high","Mid-high",73653
+"Mid-high","Mid-low",85375
+"Mid-high","Very low",11227
+"High","High",202051
+"High","Low",49674
+"High","Mid-high",174081
+"High","Mid-low",109596
+"High","Very low",11331

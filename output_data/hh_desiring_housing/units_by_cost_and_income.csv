@@ -1,91 +1,91 @@
-name,inc_band,group,value,level
-Fairfield County,High,households,142201,2_counties
-Fairfield County,High,units,90766,2_counties
-Fairfield County,Low,households,38220,2_counties
-Fairfield County,Low,units,51660,2_counties
-Fairfield County,Mid-high,households,53533,2_counties
-Fairfield County,Mid-high,units,82083,2_counties
-Fairfield County,Mid-low,households,51287,2_counties
-Fairfield County,Mid-low,units,86663,2_counties
-Fairfield County,Very low,households,55251,2_counties
-Fairfield County,Very low,units,29320,2_counties
-Hartford County,High,households,145622,2_counties
-Hartford County,High,units,61853,2_counties
-Hartford County,Low,households,37375,2_counties
-Hartford County,Low,units,61690,2_counties
-Hartford County,Mid-high,households,57614,2_counties
-Hartford County,Mid-high,units,88270,2_counties
-Hartford County,Mid-low,households,55552,2_counties
-Hartford County,Mid-low,units,110087,2_counties
-Hartford County,Very low,households,52900,2_counties
-Hartford County,Very low,units,27163,2_counties
-Litchfield County,High,households,30090,2_counties
-Litchfield County,High,units,11779,2_counties
-Litchfield County,Low,households,8655,2_counties
-Litchfield County,Low,units,16648,2_counties
-Litchfield County,Mid-high,households,14645,2_counties
-Litchfield County,Mid-high,units,18679,2_counties
-Litchfield County,Mid-low,households,11899,2_counties
-Litchfield County,Mid-low,units,20505,2_counties
-Litchfield County,Very low,households,8698,2_counties
-Litchfield County,Very low,units,6376,2_counties
-Middlesex County,High,households,27105,2_counties
-Middlesex County,High,units,11243,2_counties
-Middlesex County,Low,households,7567,2_counties
-Middlesex County,Low,units,13399,2_counties
-Middlesex County,Mid-high,households,12075,2_counties
-Middlesex County,Mid-high,units,16651,2_counties
-Middlesex County,Mid-low,households,10680,2_counties
-Middlesex County,Mid-low,units,19327,2_counties
-Middlesex County,Very low,households,9466,2_counties
-Middlesex County,Very low,units,6273,2_counties
-New Haven County,High,households,139367,2_counties
-New Haven County,High,units,77813,2_counties
-New Haven County,Low,households,37512,2_counties
-New Haven County,Low,units,41819,2_counties
-New Haven County,Mid-high,households,53410,2_counties
-New Haven County,Mid-high,units,87166,2_counties
-New Haven County,Mid-low,households,52407,2_counties
-New Haven County,Mid-low,units,100650,2_counties
-New Haven County,Very low,households,47160,2_counties
-New Haven County,Very low,units,22408,2_counties
-New London County,High,households,43666,2_counties
-New London County,High,units,18264,2_counties
-New London County,Low,households,10745,2_counties
-New London County,Low,units,20341,2_counties
-New London County,Mid-high,households,20979,2_counties
-New London County,Mid-high,units,27355,2_counties
-New London County,Mid-low,households,17668,2_counties
-New London County,Mid-low,units,31770,2_counties
-New London County,Very low,households,14344,2_counties
-New London County,Very low,units,9672,2_counties
-Tolland County,High,households,22196,2_counties
-Tolland County,High,units,6014,2_counties
-Tolland County,Low,households,6681,2_counties
-Tolland County,Low,units,13851,2_counties
-Tolland County,Mid-high,households,10580,2_counties
-Tolland County,Mid-high,units,14278,2_counties
-Tolland County,Mid-low,households,8039,2_counties
-Tolland County,Mid-low,units,15845,2_counties
-Tolland County,Very low,households,7722,2_counties
-Tolland County,Very low,units,5230,2_counties
-Windham County,High,households,18079,2_counties
-Windham County,High,units,6453,2_counties
-Windham County,Low,households,4590,2_counties
-Windham County,Low,units,8826,2_counties
-Windham County,Mid-high,households,9000,2_counties
-Windham County,Mid-high,units,11894,2_counties
-Windham County,Mid-low,households,6958,2_counties
-Windham County,Mid-low,units,12579,2_counties
-Windham County,Very low,households,5836,2_counties
-Windham County,Very low,units,4711,2_counties
-Connecticut,High,households,568326,1_state
-Connecticut,High,units,284185,1_state
-Connecticut,Low,households,151345,1_state
-Connecticut,Low,units,228234,1_state
-Connecticut,Mid-high,households,231836,1_state
-Connecticut,Mid-high,units,346376,1_state
-Connecticut,Mid-low,households,214490,1_state
-Connecticut,Mid-low,units,397426,1_state
-Connecticut,Very low,households,201377,1_state
-Connecticut,Very low,units,111153,1_state
+"name","inc_band","group","value","level"
+"Fairfield County","High","households",139131,"2_counties"
+"Fairfield County","High","units",85776,"2_counties"
+"Fairfield County","Low","households",40088,"2_counties"
+"Fairfield County","Low","units",54655,"2_counties"
+"Fairfield County","Mid-high","households",53938,"2_counties"
+"Fairfield County","Mid-high","units",81076,"2_counties"
+"Fairfield County","Mid-low","households",50351,"2_counties"
+"Fairfield County","Mid-low","units",88441,"2_counties"
+"Fairfield County","Very low","households",56984,"2_counties"
+"Fairfield County","Very low","units",30544,"2_counties"
+"Hartford County","High","households",137906,"2_counties"
+"Hartford County","High","units",55795,"2_counties"
+"Hartford County","Low","households",39071,"2_counties"
+"Hartford County","Low","units",67015,"2_counties"
+"Hartford County","Mid-high","households",61014,"2_counties"
+"Hartford County","Mid-high","units",85027,"2_counties"
+"Hartford County","Mid-low","households",56021,"2_counties"
+"Hartford County","Mid-low","units",112078,"2_counties"
+"Hartford County","Very low","households",55051,"2_counties"
+"Hartford County","Very low","units",29148,"2_counties"
+"Litchfield County","High","households",29130,"2_counties"
+"Litchfield County","High","units",10938,"2_counties"
+"Litchfield County","Low","households",8733,"2_counties"
+"Litchfield County","Low","units",17263,"2_counties"
+"Litchfield County","Mid-high","households",14651,"2_counties"
+"Litchfield County","Mid-high","units",18482,"2_counties"
+"Litchfield County","Mid-low","households",12626,"2_counties"
+"Litchfield County","Mid-low","units",20588,"2_counties"
+"Litchfield County","Very low","households",8847,"2_counties"
+"Litchfield County","Very low","units",6716,"2_counties"
+"Middlesex County","High","households",26716,"2_counties"
+"Middlesex County","High","units",10792,"2_counties"
+"Middlesex County","Low","households",7575,"2_counties"
+"Middlesex County","Low","units",13685,"2_counties"
+"Middlesex County","Mid-high","households",12205,"2_counties"
+"Middlesex County","Mid-high","units",16615,"2_counties"
+"Middlesex County","Mid-low","households",10848,"2_counties"
+"Middlesex County","Mid-low","units",19362,"2_counties"
+"Middlesex County","Very low","households",9549,"2_counties"
+"Middlesex County","Very low","units",6439,"2_counties"
+"New Haven County","High","households",132784,"2_counties"
+"New Haven County","High","units",70561,"2_counties"
+"New Haven County","Low","households",38492,"2_counties"
+"New Haven County","Low","units",46862,"2_counties"
+"New Haven County","Mid-high","households",55593,"2_counties"
+"New Haven County","Mid-high","units",84839,"2_counties"
+"New Haven County","Mid-low","households",53398,"2_counties"
+"New Haven County","Mid-low","units",103696,"2_counties"
+"New Haven County","Very low","households",49589,"2_counties"
+"New Haven County","Very low","units",23898,"2_counties"
+"New London County","High","households",42292,"2_counties"
+"New London County","High","units",16810,"2_counties"
+"New London County","Low","households",11564,"2_counties"
+"New London County","Low","units",20913,"2_counties"
+"New London County","Mid-high","households",20538,"2_counties"
+"New London County","Mid-high","units",26625,"2_counties"
+"New London County","Mid-low","households",18384,"2_counties"
+"New London County","Mid-low","units",32518,"2_counties"
+"New London County","Very low","households",14624,"2_counties"
+"New London County","Very low","units",10536,"2_counties"
+"Tolland County","High","households",21308,"2_counties"
+"Tolland County","High","units",5268,"2_counties"
+"Tolland County","Low","households",6656,"2_counties"
+"Tolland County","Low","units",14559,"2_counties"
+"Tolland County","Mid-high","households",10949,"2_counties"
+"Tolland County","Mid-high","units",13699,"2_counties"
+"Tolland County","Mid-low","households",8266,"2_counties"
+"Tolland County","Mid-low","units",16140,"2_counties"
+"Tolland County","Very low","households",8039,"2_counties"
+"Tolland County","Very low","units",5552,"2_counties"
+"Windham County","High","households",17466,"2_counties"
+"Windham County","High","units",5787,"2_counties"
+"Windham County","Low","households",4626,"2_counties"
+"Windham County","Low","units",9140,"2_counties"
+"Windham County","Mid-high","households",8619,"2_counties"
+"Windham County","Mid-high","units",11848,"2_counties"
+"Windham County","Mid-low","households",7705,"2_counties"
+"Windham County","Mid-low","units",12762,"2_counties"
+"Windham County","Very low","households",6047,"2_counties"
+"Windham County","Very low","units",4926,"2_counties"
+"Connecticut","High","households",546733,"1_state"
+"Connecticut","High","units",261727,"1_state"
+"Connecticut","Low","households",156805,"1_state"
+"Connecticut","Low","units",244092,"1_state"
+"Connecticut","Mid-high","households",237507,"1_state"
+"Connecticut","Mid-high","units",338211,"1_state"
+"Connecticut","Mid-low","households",217599,"1_state"
+"Connecticut","Mid-low","units",405585,"1_state"
+"Connecticut","Very low","households",208730,"1_state"
+"Connecticut","Very low","units",117759,"1_state"

@@ -1311,7 +1311,7 @@ In addition to the occupied units we've already looked at, this chart adds two c
 
 **8/13** Removed off market units from chart.
 
-```{r units by tenure and occ bar chart, fig.width=10, fig.height=10}
+```{r units by tenure and occ bar chart}
 out$units_by_tenure_occupancy_cost_band %>% 
 	filter(occupancy != "vacant-off market") %>% 
 	ungroup() %>% 
@@ -1335,18 +1335,61 @@ out$units_by_tenure_occupancy_cost_band %>%
   					position = position_stack(.5)) +
 	scale_y_continuous(labels = comma_format(),
 										 expand = expansion(mult = c(0, .15))) +
-	scale_fill_manual(values = c(urban_pal[1], urban_pal[3], urban_pal[5])) +
+	scale_fill_manual(values = c(urban_pal[1], urban_pal[2])) +
 	guides(fill = guide_legend(title = "")) + 
 	facet_wrap(facets = "name", scales = "free_y") +
 	theme(plot.title.position = "plot",
+				plot.title = element_text(family = "Lato Bold", size = 11),
 				panel.grid.minor = element_blank(),
 				panel.grid.major.x = element_blank(),
 				axis.text.x = element_text(colour = "black", size = 9,  angle = -45, hjust= 0),
 				axis.text.y = element_text(colour = "black", size = 9),
 				strip.text.x = element_text(colour = "black", hjust = .5, size = 11),
 				legend.position = "bottom") +
-	labs(title = "Total housing units in each cost band",
+	labs(title = "Total Housing Units by Cost Band",
 			 x = "", y = "")
+
+ggsave(filename = "../output_data/corrected_charts/units_by_cost_band.png", dpi = 300, height = 10, width = 10)
+ggsave(filename = "../output_data/corrected_charts/units_by_cost_band.svg", dpi = 300, height = 10, width = 10)
+```
+
+```{r}
+out$units_by_tenure_occupancy_cost_band %>% 
+	filter(occupancy != "vacant-off market") %>% 
+	ungroup() %>% 
+	select(-tenure) %>% 
+	group_by(name, occupancy, cost_band) %>% 
+	summarise(units = sum(units)) %>% 
+	ungroup() %>% 
+	mutate(occupancy = as.character(occupancy),
+				 occupancy = str_to_sentence(occupancy)) %>% 
+	mutate(occupancy = as.factor(occupancy)) %>% 
+	mutate(cost_band = as.character(cost_band),
+				 cost_band = str_replace(cost_band, "_", " "),
+				 cost_band = str_replace(cost_band, "mid ", "mid-"),
+				 cost_band = str_to_sentence(cost_band)) %>% 
+	mutate(cost_band = as.factor(cost_band) %>% 
+				 	fct_relevel(., "Very low", "Low", "Mid-low", "Mid-high", "High")) %>% 
+	ggplot(aes(cost_band, units, group = cost_band)) +
+	geom_col(aes(fill = occupancy), width = .85) +
+	scale_y_continuous(labels = comma_format(),
+										 expand = expansion(mult = c(0, .15))) +
+	scale_fill_manual(values = c(urban_pal[1], urban_pal[2])) +
+	guides(fill = guide_legend(title = "")) + 
+	facet_wrap(facets = "name", scales = "free_y") +
+	theme(plot.title.position = "plot",
+				plot.title = element_text(family = "Lato Bold", size = 11),
+				panel.grid.minor = element_blank(),
+				panel.grid.major.x = element_blank(),
+				axis.text.x = element_text(colour = "black", size = 9,  angle = -45, hjust= 0),
+				axis.text.y = element_text(colour = "black", size = 9),
+				strip.text.x = element_text(colour = "black", hjust = .5, size = 11),
+				legend.position = "bottom") +
+	labs(title = "Total Housing Units by Cost Band",
+			 x = "", y = "")
+
+ggsave(filename = "../output_data/corrected_charts/units_by_cost_band_no_labels.png", dpi = 300, height = 10, width = 9)
+ggsave(filename = "../output_data/corrected_charts/units_by_cost_band_no_labels.svg", dpi = 300, height = 10, width = 9)
 ```
 
 There are two other major vacancy categories, "Other vacant" and "For seasonal, recreational, or other occasional use," but there's no cost information associated with those units, so they can't be sorted into the appropriate cost bands. Another minor category are housing units reserved for migrant farm workers. Collectively, these comprise about 83,000 units, which is a ton by CT standards. The cities of Bridgeport, New Haven, and Hartford all have about 50,000 units each.
@@ -1396,21 +1439,27 @@ units_and_hh <- hh_by_inc_band %>%
 
 ```{r units v hh bar chart, fig.height=9, fig.width=9}
 units_and_hh %>% 
+	mutate(group = str_to_title(group)) %>% 
 	ggplot(aes(band, value, group = group)) +
-	geom_col(aes(fill = group), position = position_dodge(.5), color = "white", size = .25) +
+	geom_col(aes(fill = group), position = position_dodge(.7), width = .7, color = "white", size = .25) +
 	scale_y_continuous(labels = comma_format()) +
 	facet_wrap(facets = "name", scales = "free_y") +
-	scale_fill_manual(values = c(urban_pal[1], urban_pal[5])) +
-	labs(title = "Households and housing units in each band",
-			 x = "", y = "", caption = "Units include vacant units") +
+	scale_fill_manual(values = c(urban_pal[1], urban_pal[2])) +
+	labs(title = "Comparison of Housing Need and Supply by Income and Housing Cost Band, 2018",
+			 x = "", y = "", caption = "Units include vacant units.") +
 	guides(fill = guide_legend(title = "")) +
 	theme(plot.title.position = "plot",
-				axis.text.y = element_text(colour = "black"),
+				plot.title = element_text(family = "Lato Bold", size = 11),
+				plot.caption = element_text(family = "Lato Regular", size = 8),
+				axis.text.y = element_text(colour = "black", size = 9),
 				panel.grid.major.x = element_blank(),
 				panel.grid.minor = element_blank(),
-				strip.text.x = element_text(hjust = .5),
+				strip.text.x = element_text(hjust = .5, size = 9),
 				legend.position = "bottom",
-				axis.text.x = element_text(colour = "black", angle = -60, hjust = 0, vjust = .5))
+				axis.text.x = element_text(colour = "black", size = 9, angle = -60, hjust = 0, vjust = .5))
+
+ggsave(filename = "../output_data/corrected_charts/comparison_needs_cost.png", dpi = 300, width = 10)
+ggsave(filename = "../output_data/corrected_charts/comparison_needs_cost.svg", dpi = 300, width = 10)
 
 out$units_and_households <- units_and_hh
 ```

@@ -1,91 +1,91 @@
-name,band,group,value
-Connecticut,Very low,households,201377
-Connecticut,Very low,units,115309
-Connecticut,Low,households,151345
-Connecticut,Low,units,234972
-Connecticut,Mid-low,households,214490
-Connecticut,Mid-low,units,419683
-Connecticut,Mid-high,households,231836
-Connecticut,Mid-high,units,362648
-Connecticut,High,households,568326
-Connecticut,High,units,296548
-Fairfield County,Very low,households,55251
-Fairfield County,Very low,units,30286
-Fairfield County,Low,households,38220
-Fairfield County,Low,units,53266
-Fairfield County,Mid-low,households,51287
-Fairfield County,Mid-low,units,90283
-Fairfield County,Mid-high,households,53533
-Fairfield County,Mid-high,units,85362
-Fairfield County,High,households,142201
-Fairfield County,High,units,95236
-Hartford County,Very low,households,52900
-Hartford County,Very low,units,28224
-Hartford County,Low,households,37375
-Hartford County,Low,units,64035
-Hartford County,Mid-low,households,55552
-Hartford County,Mid-low,units,115956
-Hartford County,Mid-high,households,57614
-Hartford County,Mid-high,units,92182
-Hartford County,High,households,145622
-Hartford County,High,units,64393
-Litchfield County,Very low,households,8698
-Litchfield County,Very low,units,6391
-Litchfield County,Low,households,8655
-Litchfield County,Low,units,17095
-Litchfield County,Mid-low,households,11899
-Litchfield County,Mid-low,units,21432
-Litchfield County,Mid-high,households,14645
-Litchfield County,Mid-high,units,19304
-Litchfield County,High,households,30090
-Litchfield County,High,units,12308
-Middlesex County,Very low,households,9466
-Middlesex County,Very low,units,6389
-Middlesex County,Low,households,7567
-Middlesex County,Low,units,13716
-Middlesex County,Mid-low,households,10680
-Middlesex County,Mid-low,units,20471
-Middlesex County,Mid-high,households,12075
-Middlesex County,Mid-high,units,17363
-Middlesex County,High,households,27105
-Middlesex County,High,units,11941
-New Haven County,Very low,households,47160
-New Haven County,Very low,units,23550
-New Haven County,Low,households,37512
-New Haven County,Low,units,43007
-New Haven County,Mid-low,households,52407
-New Haven County,Mid-low,units,108055
-New Haven County,Mid-high,households,53410
-New Haven County,Mid-high,units,92463
-New Haven County,High,households,139367
-New Haven County,High,units,80667
-New London County,Very low,households,14344
-New London County,Very low,units,10001
-New London County,Low,households,10745
-New London County,Low,units,20755
-New London County,Mid-low,households,17668
-New London County,Mid-low,units,33784
-New London County,Mid-high,households,20979
-New London County,Mid-high,units,28736
-New London County,High,households,43666
-New London County,High,units,19170
-Tolland County,Very low,households,7722
-Tolland County,Very low,units,5484
-Tolland County,Low,households,6681
-Tolland County,Low,units,14212
-Tolland County,Mid-low,households,8039
-Tolland County,Mid-low,units,16458
-Tolland County,Mid-high,households,10580
-Tolland County,Mid-high,units,14828
-Tolland County,High,households,22196
-Tolland County,High,units,6119
-Windham County,Very low,households,5836
-Windham County,Very low,units,4984
-Windham County,Low,households,4590
-Windham County,Low,units,8886
-Windham County,Mid-low,households,6958
-Windham County,Mid-low,units,13244
-Windham County,Mid-high,households,9000
-Windham County,Mid-high,units,12410
-Windham County,High,households,18079
-Windham County,High,units,6714
+"name","band","group","value"
+"Connecticut","Very low","households",208730
+"Connecticut","Very low","units",122020
+"Connecticut","Low","households",156805
+"Connecticut","Low","units",251752
+"Connecticut","Mid-low","households",217599
+"Connecticut","Mid-low","units",428638
+"Connecticut","Mid-high","households",237507
+"Connecticut","Mid-high","units",353086
+"Connecticut","High","households",546733
+"Connecticut","High","units",273649
+"Fairfield County","Very low","households",56984
+"Fairfield County","Very low","units",31610
+"Fairfield County","Low","households",40088
+"Fairfield County","Low","units",56350
+"Fairfield County","Mid-low","households",50351
+"Fairfield County","Mid-low","units",91771
+"Fairfield County","Mid-high","households",53938
+"Fairfield County","Mid-high","units",84353
+"Fairfield County","High","households",139131
+"Fairfield County","High","units",90349
+"Hartford County","Very low","households",55051
+"Hartford County","Very low","units",30303
+"Hartford County","Low","households",39071
+"Hartford County","Low","units",69403
+"Hartford County","Mid-low","households",56021
+"Hartford County","Mid-low","units",118901
+"Hartford County","Mid-high","households",61014
+"Hartford County","Mid-high","units",88413
+"Hartford County","High","households",137906
+"Hartford County","High","units",57770
+"Litchfield County","Very low","households",8847
+"Litchfield County","Very low","units",6728
+"Litchfield County","Low","households",8733
+"Litchfield County","Low","units",17779
+"Litchfield County","Mid-low","households",12626
+"Litchfield County","Mid-low","units",21484
+"Litchfield County","Mid-high","households",14651
+"Litchfield County","Mid-high","units",18995
+"Litchfield County","High","households",29130
+"Litchfield County","High","units",11544
+"Middlesex County","Very low","households",9549
+"Middlesex County","Very low","units",6520
+"Middlesex County","Low","households",7575
+"Middlesex County","Low","units",14099
+"Middlesex County","Mid-low","households",10848
+"Middlesex County","Mid-low","units",20492
+"Middlesex County","Mid-high","households",12205
+"Middlesex County","Mid-high","units",17289
+"Middlesex County","High","households",26716
+"Middlesex County","High","units",11480
+"New Haven County","Very low","households",49589
+"New Haven County","Very low","units",25043
+"New Haven County","Low","households",38492
+"New Haven County","Low","units",48429
+"New Haven County","Mid-low","households",53398
+"New Haven County","Mid-low","units",111164
+"New Haven County","Mid-high","households",55593
+"New Haven County","Mid-high","units",89807
+"New Haven County","High","households",132784
+"New Haven County","High","units",73284
+"New London County","Very low","households",14624
+"New London County","Very low","units",10861
+"New London County","Low","households",11564
+"New London County","Low","units",21465
+"New London County","Mid-low","households",18384
+"New London County","Mid-low","units",34549
+"New London County","Mid-high","households",20538
+"New London County","Mid-high","units",27870
+"New London County","High","households",42292
+"New London County","High","units",17701
+"Tolland County","Very low","households",8039
+"Tolland County","Very low","units",5806
+"Tolland County","Low","households",6656
+"Tolland County","Low","units",14920
+"Tolland County","Mid-low","households",8266
+"Tolland County","Mid-low","units",16756
+"Tolland County","Mid-high","households",10949
+"Tolland County","Mid-high","units",14161
+"Tolland County","High","households",21308
+"Tolland County","High","units",5458
+"Windham County","Very low","households",6047
+"Windham County","Very low","units",5149
+"Windham County","Low","households",4626
+"Windham County","Low","units",9307
+"Windham County","Mid-low","households",7705
+"Windham County","Mid-low","units",13521
+"Windham County","Mid-high","households",8619
+"Windham County","Mid-high","units",12198
+"Windham County","High","households",17466
+"Windham County","High","units",6063

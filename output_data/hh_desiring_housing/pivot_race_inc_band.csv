@@ -1,271 +1,271 @@
-name,race2,inc_band,value
-Connecticut,White,Total,996437
-Connecticut,White,Very low,113213
-Connecticut,White,Low,97152
-Connecticut,White,Mid-low,144503
-Connecticut,White,Mid-high,171246
-Connecticut,White,High,470323
-Connecticut,Black,Total,125094
-Connecticut,Black,Very low,32076
-Connecticut,Black,Low,19632
-Connecticut,Black,Mid-low,24342
-Connecticut,Black,Mid-high,20525
-Connecticut,Black,High,28519
-Connecticut,Latino,Total,170817
-Connecticut,Latino,Very low,45051
-Connecticut,Latino,Low,27731
-Connecticut,Latino,Mid-low,35113
-Connecticut,Latino,Mid-high,26469
-Connecticut,Latino,High,36453
-Connecticut,Other race,Total,75026
-Connecticut,Other race,Very low,11037
-Connecticut,Other race,Low,6830
-Connecticut,Other race,Mid-low,10532
-Connecticut,Other race,Mid-high,13596
-Connecticut,Other race,High,33031
-Fairfield County,White,Total,233262
-Fairfield County,White,Very low,28127
-Fairfield County,White,Low,20968
-Fairfield County,White,Mid-low,31592
-Fairfield County,White,Mid-high,36056
-Fairfield County,White,High,116519
-Fairfield County,Black,Total,33220
-Fairfield County,Black,Very low,10306
-Fairfield County,Black,Low,5341
-Fairfield County,Black,Mid-low,6380
-Fairfield County,Black,Mid-high,5187
-Fairfield County,Black,High,6006
-Fairfield County,Latino,Total,52636
-Fairfield County,Latino,Very low,13793
-Fairfield County,Latino,Low,9786
-Fairfield County,Latino,Mid-low,10366
-Fairfield County,Latino,Mid-high,8565
-Fairfield County,Latino,High,10126
-Fairfield County,Other race,Total,21374
-Fairfield County,Other race,Very low,3025
-Fairfield County,Other race,Low,2125
-Fairfield County,Other race,Mid-low,2949
-Fairfield County,Other race,Mid-high,3725
-Fairfield County,Other race,High,9550
-Hartford County,White,Total,236013
-Hartford County,White,Very low,25213
-Hartford County,White,Low,22312
-Hartford County,White,Mid-low,33652
-Hartford County,White,Mid-high,39510
-Hartford County,White,High,115326
-Hartford County,Black,Total,40863
-Hartford County,Black,Very low,9048
-Hartford County,Black,Low,5932
-Hartford County,Black,Mid-low,8627
-Hartford County,Black,Mid-high,7280
-Hartford County,Black,High,9976
-Hartford County,Latino,Total,50591
-Hartford County,Latino,Very low,15758
-Hartford County,Latino,Low,7571
-Hartford County,Latino,Mid-low,10509
-Hartford County,Latino,Mid-high,6561
-Hartford County,Latino,High,10192
-Hartford County,Other race,Total,21596
-Hartford County,Other race,Very low,2881
-Hartford County,Other race,Low,1560
-Hartford County,Other race,Mid-low,2764
-Hartford County,Other race,Mid-high,4263
-Hartford County,Other race,High,10128
-Litchfield County,White,Total,68255
-Litchfield County,White,Very low,7800
-Litchfield County,White,Low,7946
-Litchfield County,White,Mid-low,10882
-Litchfield County,White,Mid-high,13400
-Litchfield County,White,High,28227
-Litchfield County,Black,Total,903
-Litchfield County,Black,Very low,134
-Litchfield County,Black,Low,46
-Litchfield County,Black,Mid-low,255
-Litchfield County,Black,Mid-high,204
-Litchfield County,Black,High,264
-Litchfield County,Latino,Total,3168
-Litchfield County,Latino,Very low,544
-Litchfield County,Latino,Low,434
-Litchfield County,Latino,Mid-low,522
-Litchfield County,Latino,Mid-high,587
-Litchfield County,Latino,High,1081
-Litchfield County,Other race,Total,1661
-Litchfield County,Other race,Very low,220
-Litchfield County,Other race,Low,229
-Litchfield County,Other race,Mid-low,240
-Litchfield County,Other race,Mid-high,454
-Litchfield County,Other race,High,518
-Middlesex County,White,Total,57714
-Middlesex County,White,Very low,7319
-Middlesex County,White,Low,6318
-Middlesex County,White,Mid-low,9004
-Middlesex County,White,Mid-high,10766
-Middlesex County,White,High,24307
-Middlesex County,Black,Total,3341
-Middlesex County,Black,Very low,1073
-Middlesex County,Black,Low,461
-Middlesex County,Black,Mid-low,706
-Middlesex County,Black,Mid-high,475
-Middlesex County,Black,High,626
-Middlesex County,Latino,Total,3097
-Middlesex County,Latino,Very low,600
-Middlesex County,Latino,Low,516
-Middlesex County,Latino,Mid-low,383
-Middlesex County,Latino,Mid-high,519
-Middlesex County,Latino,High,1079
-Middlesex County,Other race,Total,2741
-Middlesex County,Other race,Very low,474
-Middlesex County,Other race,Low,272
-Middlesex County,Other race,Mid-low,587
-Middlesex County,Other race,Mid-high,315
-Middlesex County,Other race,High,1093
-New Haven County,White,Total,226283
-New Haven County,White,Very low,23853
-New Haven County,White,Low,22250
-New Haven County,White,Mid-low,32055
-New Haven County,White,Mid-high,37013
-New Haven County,White,High,111112
-New Haven County,Black,Total,39815
-New Haven County,Black,Very low,9559
-New Haven County,Black,Low,6709
-New Haven County,Black,Mid-low,7388
-New Haven County,Black,Mid-high,6505
-New Haven County,Black,High,9654
-New Haven County,Latino,Total,46620
-New Haven County,Latino,Very low,10976
-New Haven County,Latino,Low,7063
-New Haven County,Latino,Mid-low,10576
-New Haven County,Latino,Mid-high,7348
-New Haven County,Latino,High,10657
-New Haven County,Other race,Total,17138
-New Haven County,Other race,Very low,2772
-New Haven County,Other race,Low,1490
-New Haven County,Other race,Mid-low,2388
-New Haven County,Other race,Mid-high,2544
-New Haven County,Other race,High,7944
-New London County,White,Total,87282
-New London County,White,Very low,10166
-New London County,White,Low,8031
-New London County,White,Mid-low,14263
-New London County,White,Mid-high,17182
-New London County,White,High,37640
-New London County,Black,Total,4750
-New London County,Black,Very low,1374
-New London County,Black,Low,595
-New London County,Black,Mid-low,614
-New London County,Black,Mid-high,714
-New London County,Black,High,1453
-New London County,Latino,Total,8720
-New London County,Latino,Very low,1982
-New London County,Latino,Low,1539
-New London County,Latino,Mid-low,1725
-New London County,Latino,Mid-high,1512
-New London County,Latino,High,1962
-New London County,Other race,Total,6650
-New London County,Other race,Very low,822
-New London County,Other race,Low,580
-New London County,Other race,Mid-low,1066
-New London County,Other race,Mid-high,1571
-New London County,Other race,High,2611
-Tolland County,White,Total,48703
-Tolland County,White,Very low,6257
-Tolland County,White,Low,5681
-Tolland County,White,Mid-low,7240
-Tolland County,White,Mid-high,9188
-Tolland County,White,High,20337
-Tolland County,Black,Total,1657
-Tolland County,Black,Very low,490
-Tolland County,Black,Low,423
-Tolland County,Black,Mid-low,169
-Tolland County,Black,Mid-high,122
-Tolland County,Black,High,453
-Tolland County,Latino,Total,2218
-Tolland County,Latino,Very low,357
-Tolland County,Latino,Low,271
-Tolland County,Latino,Mid-low,322
-Tolland County,Latino,Mid-high,645
-Tolland County,Latino,High,623
-Tolland County,Other race,Total,2640
-Tolland County,Other race,Very low,618
-Tolland County,Other race,Low,306
-Tolland County,Other race,Mid-low,308
-Tolland County,Other race,Mid-high,625
-Tolland County,Other race,High,783
-Windham County,White,Total,38925
-Windham County,White,Very low,4478
-Windham County,White,Low,3646
-Windham County,White,Mid-low,5815
-Windham County,White,Mid-high,8131
-Windham County,White,High,16855
-Windham County,Black,Total,545
-Windham County,Black,Very low,92
-Windham County,Black,Low,125
-Windham County,Black,Mid-low,203
-Windham County,Black,Mid-high,38
-Windham County,Black,High,87
-Windham County,Latino,Total,3767
-Windham County,Latino,Very low,1041
-Windham County,Latino,Low,551
-Windham County,Latino,Mid-low,710
-Windham County,Latino,Mid-high,732
-Windham County,Latino,High,733
-Windham County,Other race,Total,1226
-Windham County,Other race,Very low,225
-Windham County,Other race,Low,268
-Windham County,Other race,Mid-low,230
-Windham County,Other race,Mid-high,99
-Windham County,Other race,High,404
-Connecticut,Total,Total,1367374
-Connecticut,Total,Very low,201377
-Connecticut,Total,Low,151345
-Connecticut,Total,Mid-low,214490
-Connecticut,Total,Mid-high,231836
-Connecticut,Total,High,568326
-Fairfield County,Total,Total,340492
-Fairfield County,Total,Very low,55251
-Fairfield County,Total,Low,38220
-Fairfield County,Total,Mid-low,51287
-Fairfield County,Total,Mid-high,53533
-Fairfield County,Total,High,142201
-Hartford County,Total,Total,349063
-Hartford County,Total,Very low,52900
-Hartford County,Total,Low,37375
-Hartford County,Total,Mid-low,55552
-Hartford County,Total,Mid-high,57614
-Hartford County,Total,High,145622
-Litchfield County,Total,Total,73987
-Litchfield County,Total,Very low,8698
-Litchfield County,Total,Low,8655
-Litchfield County,Total,Mid-low,11899
-Litchfield County,Total,Mid-high,14645
-Litchfield County,Total,High,30090
-Middlesex County,Total,Total,66893
-Middlesex County,Total,Very low,9466
-Middlesex County,Total,Low,7567
-Middlesex County,Total,Mid-low,10680
-Middlesex County,Total,Mid-high,12075
-Middlesex County,Total,High,27105
-New Haven County,Total,Total,329856
-New Haven County,Total,Very low,47160
-New Haven County,Total,Low,37512
-New Haven County,Total,Mid-low,52407
-New Haven County,Total,Mid-high,53410
-New Haven County,Total,High,139367
-New London County,Total,Total,107402
-New London County,Total,Very low,14344
-New London County,Total,Low,10745
-New London County,Total,Mid-low,17668
-New London County,Total,Mid-high,20979
-New London County,Total,High,43666
-Tolland County,Total,Total,55218
-Tolland County,Total,Very low,7722
-Tolland County,Total,Low,6681
-Tolland County,Total,Mid-low,8039
-Tolland County,Total,Mid-high,10580
-Tolland County,Total,High,22196
-Windham County,Total,Total,44463
-Windham County,Total,Very low,5836
-Windham County,Total,Low,4590
-Windham County,Total,Mid-low,6958
-Windham County,Total,Mid-high,9000
-Windham County,Total,High,18079
+"name","race2","inc_band","value"
+"Connecticut","White","Total",996437
+"Connecticut","White","Very low",117488
+"Connecticut","White","Low",100645
+"Connecticut","White","Mid-low",147671
+"Connecticut","White","Mid-high",176546
+"Connecticut","White","High",454087
+"Connecticut","Black","Total",125094
+"Connecticut","Black","Very low",33474
+"Connecticut","Black","Low",20070
+"Connecticut","Black","Mid-low",24128
+"Connecticut","Black","Mid-high",20599
+"Connecticut","Black","High",26823
+"Connecticut","Latino","Total",170817
+"Connecticut","Latino","Very low",46506
+"Connecticut","Latino","Low",28545
+"Connecticut","Latino","Mid-low",34999
+"Connecticut","Latino","Mid-high",26518
+"Connecticut","Latino","High",34249
+"Connecticut","Other race","Total",75026
+"Connecticut","Other race","Very low",11262
+"Connecticut","Other race","Low",7545
+"Connecticut","Other race","Mid-low",10801
+"Connecticut","Other race","Mid-high",13844
+"Connecticut","Other race","High",31574
+"Fairfield County","White","Total",233262
+"Fairfield County","White","Very low",29091
+"Fairfield County","White","Low",22222
+"Fairfield County","White","Mid-low",31057
+"Fairfield County","White","Mid-high",36681
+"Fairfield County","White","High",114211
+"Fairfield County","Black","Total",33220
+"Fairfield County","Black","Very low",10571
+"Fairfield County","Black","Low",5263
+"Fairfield County","Black","Mid-low",6456
+"Fairfield County","Black","Mid-high",5118
+"Fairfield County","Black","High",5812
+"Fairfield County","Latino","Total",52636
+"Fairfield County","Latino","Very low",14276
+"Fairfield County","Latino","Low",10141
+"Fairfield County","Latino","Mid-low",10139
+"Fairfield County","Latino","Mid-high",8360
+"Fairfield County","Latino","High",9720
+"Fairfield County","Other race","Total",21374
+"Fairfield County","Other race","Very low",3046
+"Fairfield County","Other race","Low",2462
+"Fairfield County","Other race","Mid-low",2699
+"Fairfield County","Other race","Mid-high",3779
+"Fairfield County","Other race","High",9388
+"Hartford County","White","Total",236013
+"Hartford County","White","Very low",26354
+"Hartford County","White","Low",23254
+"Hartford County","White","Mid-low",34161
+"Hartford County","White","Mid-high",42256
+"Hartford County","White","High",109988
+"Hartford County","Black","Total",40863
+"Hartford County","Black","Very low",9426
+"Hartford County","Black","Low",6234
+"Hartford County","Black","Mid-low",8640
+"Hartford County","Black","Mid-high",7416
+"Hartford County","Black","High",9147
+"Hartford County","Latino","Total",50591
+"Hartford County","Latino","Very low",16347
+"Hartford County","Latino","Low",7865
+"Hartford County","Latino","Mid-low",10134
+"Hartford County","Latino","Mid-high",6891
+"Hartford County","Latino","High",9354
+"Hartford County","Other race","Total",21596
+"Hartford County","Other race","Very low",2924
+"Hartford County","Other race","Low",1718
+"Hartford County","Other race","Mid-low",3086
+"Hartford County","Other race","Mid-high",4451
+"Hartford County","Other race","High",9417
+"Litchfield County","White","Total",68255
+"Litchfield County","White","Very low",7949
+"Litchfield County","White","Low",8024
+"Litchfield County","White","Mid-low",11435
+"Litchfield County","White","Mid-high",13513
+"Litchfield County","White","High",27334
+"Litchfield County","Black","Total",903
+"Litchfield County","Black","Very low",134
+"Litchfield County","Black","Low",46
+"Litchfield County","Black","Mid-low",270
+"Litchfield County","Black","Mid-high",189
+"Litchfield County","Black","High",264
+"Litchfield County","Latino","Total",3168
+"Litchfield County","Latino","Very low",544
+"Litchfield County","Latino","Low",434
+"Litchfield County","Latino","Mid-low",629
+"Litchfield County","Latino","Mid-high",511
+"Litchfield County","Latino","High",1050
+"Litchfield County","Other race","Total",1661
+"Litchfield County","Other race","Very low",220
+"Litchfield County","Other race","Low",229
+"Litchfield County","Other race","Mid-low",292
+"Litchfield County","Other race","Mid-high",438
+"Litchfield County","Other race","High",482
+"Middlesex County","White","Total",57714
+"Middlesex County","White","Very low",7386
+"Middlesex County","White","Low",6300
+"Middlesex County","White","Mid-low",9185
+"Middlesex County","White","Mid-high",10886
+"Middlesex County","White","High",23957
+"Middlesex County","Black","Total",3341
+"Middlesex County","Black","Very low",1073
+"Middlesex County","Black","Low",461
+"Middlesex County","Black","Mid-low",706
+"Middlesex County","Black","Mid-high",490
+"Middlesex County","Black","High",611
+"Middlesex County","Latino","Total",3097
+"Middlesex County","Latino","Very low",600
+"Middlesex County","Latino","Low",558
+"Middlesex County","Latino","Mid-low",341
+"Middlesex County","Latino","Mid-high",519
+"Middlesex County","Latino","High",1079
+"Middlesex County","Other race","Total",2741
+"Middlesex County","Other race","Very low",490
+"Middlesex County","Other race","Low",256
+"Middlesex County","Other race","Mid-low",616
+"Middlesex County","Other race","Mid-high",310
+"Middlesex County","Other race","High",1069
+"New Haven County","White","Total",226283
+"New Haven County","White","Very low",25131
+"New Haven County","White","Low",22990
+"New Haven County","White","Mid-low",32923
+"New Haven County","White","Mid-high",39027
+"New Haven County","White","High",106212
+"New Haven County","Black","Total",39815
+"New Haven County","Black","Very low",10314
+"New Haven County","Black","Low",6747
+"New Haven County","Black","Mid-low",7200
+"New Haven County","Black","Mid-high",6360
+"New Haven County","Black","High",9194
+"New Haven County","Latino","Total",46620
+"New Haven County","Latino","Very low",11324
+"New Haven County","Latino","Low",7103
+"New Haven County","Latino","Mid-low",10845
+"New Haven County","Latino","Mid-high",7555
+"New Haven County","Latino","High",9793
+"New Haven County","Other race","Total",17138
+"New Haven County","Other race","Very low",2820
+"New Haven County","Other race","Low",1652
+"New Haven County","Other race","Mid-low",2430
+"New Haven County","Other race","Mid-high",2651
+"New Haven County","Other race","High",7585
+"New London County","White","Total",87282
+"New London County","White","Very low",10369
+"New London County","White","Low",8553
+"New London County","White","Mid-low",14806
+"New London County","White","Mid-high",17069
+"New London County","White","High",36485
+"New London County","Black","Total",4750
+"New London County","Black","Very low",1374
+"New London County","Black","Low",771
+"New London County","Black","Mid-low",472
+"New London County","Black","Mid-high",753
+"New London County","Black","High",1380
+"New London County","Latino","Total",8720
+"New London County","Latino","Very low",2006
+"New London County","Latino","Low",1574
+"New London County","Latino","Mid-low",1938
+"New London County","Latino","Mid-high",1263
+"New London County","Latino","High",1939
+"New London County","Other race","Total",6650
+"New London County","Other race","Very low",875
+"New London County","Other race","Low",666
+"New London County","Other race","Mid-low",1168
+"New London County","Other race","Mid-high",1453
+"New London County","Other race","High",2488
+"Tolland County","White","Total",48703
+"Tolland County","White","Very low",6519
+"Tolland County","White","Low",5632
+"Tolland County","White","Mid-low",7534
+"Tolland County","White","Mid-high",9391
+"Tolland County","White","High",19627
+"Tolland County","Black","Total",1657
+"Tolland County","Black","Very low",490
+"Tolland County","Black","Low",423
+"Tolland County","Black","Mid-low",181
+"Tolland County","Black","Mid-high",235
+"Tolland County","Black","High",328
+"Tolland County","Latino","Total",2218
+"Tolland County","Latino","Very low",368
+"Tolland County","Latino","Low",319
+"Tolland County","Latino","Mid-low",263
+"Tolland County","Latino","Mid-high",669
+"Tolland County","Latino","High",599
+"Tolland County","Other race","Total",2640
+"Tolland County","Other race","Very low",662
+"Tolland County","Other race","Low",282
+"Tolland County","Other race","Mid-low",288
+"Tolland County","Other race","Mid-high",654
+"Tolland County","Other race","High",754
+"Windham County","White","Total",38925
+"Windham County","White","Very low",4689
+"Windham County","White","Low",3670
+"Windham County","White","Mid-low",6570
+"Windham County","White","Mid-high",7723
+"Windham County","White","High",16273
+"Windham County","Black","Total",545
+"Windham County","Black","Very low",92
+"Windham County","Black","Low",125
+"Windham County","Black","Mid-low",203
+"Windham County","Black","Mid-high",38
+"Windham County","Black","High",87
+"Windham County","Latino","Total",3767
+"Windham County","Latino","Very low",1041
+"Windham County","Latino","Low",551
+"Windham County","Latino","Mid-low",710
+"Windham County","Latino","Mid-high",750
+"Windham County","Latino","High",715
+"Windham County","Other race","Total",1226
+"Windham County","Other race","Very low",225
+"Windham County","Other race","Low",280
+"Windham County","Other race","Mid-low",222
+"Windham County","Other race","Mid-high",108
+"Windham County","Other race","High",391
+"Connecticut","Total","Total",1367374
+"Connecticut","Total","Very low",208730
+"Connecticut","Total","Low",156805
+"Connecticut","Total","Mid-low",217599
+"Connecticut","Total","Mid-high",237507
+"Connecticut","Total","High",546733
+"Fairfield County","Total","Total",340492
+"Fairfield County","Total","Very low",56984
+"Fairfield County","Total","Low",40088
+"Fairfield County","Total","Mid-low",50351
+"Fairfield County","Total","Mid-high",53938
+"Fairfield County","Total","High",139131
+"Hartford County","Total","Total",349063
+"Hartford County","Total","Very low",55051
+"Hartford County","Total","Low",39071
+"Hartford County","Total","Mid-low",56021
+"Hartford County","Total","Mid-high",61014
+"Hartford County","Total","High",137906
+"Litchfield County","Total","Total",73987
+"Litchfield County","Total","Very low",8847
+"Litchfield County","Total","Low",8733
+"Litchfield County","Total","Mid-low",12626
+"Litchfield County","Total","Mid-high",14651
+"Litchfield County","Total","High",29130
+"Middlesex County","Total","Total",66893
+"Middlesex County","Total","Very low",9549
+"Middlesex County","Total","Low",7575
+"Middlesex County","Total","Mid-low",10848
+"Middlesex County","Total","Mid-high",12205
+"Middlesex County","Total","High",26716
+"New Haven County","Total","Total",329856
+"New Haven County","Total","Very low",49589
+"New Haven County","Total","Low",38492
+"New Haven County","Total","Mid-low",53398
+"New Haven County","Total","Mid-high",55593
+"New Haven County","Total","High",132784
+"New London County","Total","Total",107402
+"New London County","Total","Very low",14624
+"New London County","Total","Low",11564
+"New London County","Total","Mid-low",18384
+"New London County","Total","Mid-high",20538
+"New London County","Total","High",42292
+"Tolland County","Total","Total",55218
+"Tolland County","Total","Very low",8039
+"Tolland County","Total","Low",6656
+"Tolland County","Total","Mid-low",8266
+"Tolland County","Total","Mid-high",10949
+"Tolland County","Total","High",21308
+"Windham County","Total","Total",44463
+"Windham County","Total","Very low",6047
+"Windham County","Total","Low",4626
+"Windham County","Total","Mid-low",7705
+"Windham County","Total","Mid-high",8619
+"Windham County","Total","High",17466

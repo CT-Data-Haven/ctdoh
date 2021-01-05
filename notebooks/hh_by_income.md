@@ -12,6 +12,21 @@ library(srvyr)
 library(blscrapeR)
 ```
 
+``` r
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Using the income ranges from hh desiring housing, look at change in
 total households by those 2018 income thresholds.
 
@@ -31,9 +46,11 @@ fetch <- yrs %>% map(~get_acs(geography = "county",table = "B19013", state = 09,
     select(countyfip, name, minc = estimate))
 
 fetch2 <- get_decennial(geography = "county", variables = "HCT012001", state = 09, year = 2000, sumfile = "sf3") %>% 
+    rename(name = NAME) %>% 
     mutate(year = "2000",
-                 countyfip = seq(from = 1, to = 15, by = 2)) %>% 
-    select(year, countyfip, name = NAME, minc = value)
+                 countyfip = seq(from = 1, to = 15, by = 2),
+                 name = str_remove(name, ", Connecticut")) %>% 
+    select(year, countyfip, name, minc = value)
 
 minc <- (bind_rows(fetch, .id = "year")) %>% 
     bind_rows(fetch2) %>% 
@@ -100,6 +117,7 @@ hh_by_inc_band_2000_2018 %>%
     scale_x_discrete(expand = expansion(mult = c(.04, .04))) +
     facet_wrap(facets = "name", scales = "free_y") +
     hrbrthemes::theme_ipsum_rc() +
+  scale_color_custom(palette = c(pal[1:5]), rev=T) +
     guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
     labs(title = "Count of households in each income band, 2000–2018",
              x = "", y = "") +
@@ -162,7 +180,7 @@ state_hh_by_2018_inc_band <- county_hh_by_2018_inc_band %>%
     mutate(name = "Connecticut") %>% 
     ungroup()
 
-hh_by_2018_inc_band <- bind_rows(county_hh_by_2018_inc_band, state_hh_by_2018_inc_band) %>% 
+hh_by_2018_inc_band <- bind_rows(county_hh_by_2018_inc_band, state_hh_by_2018_inc_band) %>%
     arrange(year, name) %>% 
     mutate(name = as.factor(name))
 ```
@@ -183,15 +201,23 @@ hh_by_2018_inc_band %>%
     scale_x_discrete(expand = expansion(mult = c(.04, .04))) +
     facet_wrap(facets = "name", scales = "free_y") +
     hrbrthemes::theme_ipsum_rc() +
+  scale_color_custom(palette = c(pal[1:5]), rev=T) +
     guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
-    labs(title = "Count of households by 2018 income band",
+    labs(title = "Households by Income Band",
              x = "", y = "") +
     theme(plot.title.position = "plot",
-                axis.text.y = element_text(colour = "black"),
-                strip.text.x = element_text(hjust = .5),
+                plot.title = element_text(family = "Lato Bold", size = 11),
+                legend.text = element_text(family = "Lato Regular", size = 9),
+                axis.text.y = element_text(colour = "black", size = 9),
+                strip.text.x = element_text(hjust = .5, size = 9),
                 panel.grid.minor = element_blank(),
-                axis.text.x = element_text(colour = "black"),
+                axis.text.x = element_text(colour = "black", size = 9),
                 legend.position = "bottom")
 ```
 
 ![](hh_by_income_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+ggsave(filename = "../output_data/corrected_charts/hh_by_inc_band.png", dpi = 300, width = 8, height = 10)
+ggsave(filename = "../output_data/corrected_charts/hh_by_inc_band.svg", dpi = 300, width = 8, height = 10)
+```

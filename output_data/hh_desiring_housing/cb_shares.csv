@@ -1,28 +1,28 @@
-level,name,cost_burden,value,share
-1_state,Connecticut,No burden,876299,0.641
-1_state,Connecticut,Cost-burdened,256442,0.188
-1_state,Connecticut,Severely cost-burdened,234633,0.172
-2_counties,Fairfield County,No burden,205374,0.603
-2_counties,Fairfield County,Cost-burdened,67587,0.198
-2_counties,Fairfield County,Severely cost-burdened,67531,0.198
-2_counties,Hartford County,No burden,230189,0.659
-2_counties,Hartford County,Cost-burdened,61851,0.177
-2_counties,Hartford County,Severely cost-burdened,57023,0.163
-2_counties,Litchfield County,No burden,50980,0.689
-2_counties,Litchfield County,Cost-burdened,13062,0.177
-2_counties,Litchfield County,Severely cost-burdened,9945,0.134
-2_counties,Middlesex County,No burden,44615,0.667
-2_counties,Middlesex County,Cost-burdened,12211,0.183
-2_counties,Middlesex County,Severely cost-burdened,10067,0.15
-2_counties,New Haven County,No burden,203716,0.618
-2_counties,New Haven County,Cost-burdened,65005,0.197
-2_counties,New Haven County,Severely cost-burdened,61135,0.185
-2_counties,New London County,No burden,72325,0.673
-2_counties,New London County,Cost-burdened,19624,0.183
-2_counties,New London County,Severely cost-burdened,15453,0.144
-2_counties,Tolland County,No burden,38609,0.699
-2_counties,Tolland County,Cost-burdened,8777,0.159
-2_counties,Tolland County,Severely cost-burdened,7832,0.142
-2_counties,Windham County,No burden,30491,0.686
-2_counties,Windham County,Cost-burdened,8325,0.187
-2_counties,Windham County,Severely cost-burdened,5647,0.127
+"level","name","cost_burden","value","share"
+"1_state","Connecticut","No burden",876299,0.641
+"1_state","Connecticut","Cost-burdened",256442,0.188
+"1_state","Connecticut","Severely cost-burdened",234633,0.172
+"2_counties","Fairfield County","No burden",205374,0.603
+"2_counties","Fairfield County","Cost-burdened",67587,0.198
+"2_counties","Fairfield County","Severely cost-burdened",67531,0.198
+"2_counties","Hartford County","No burden",230189,0.659
+"2_counties","Hartford County","Cost-burdened",61851,0.177
+"2_counties","Hartford County","Severely cost-burdened",57023,0.163
+"2_counties","Litchfield County","No burden",50980,0.689
+"2_counties","Litchfield County","Cost-burdened",13062,0.177
+"2_counties","Litchfield County","Severely cost-burdened",9945,0.134
+"2_counties","Middlesex County","No burden",44615,0.667
+"2_counties","Middlesex County","Cost-burdened",12211,0.183
+"2_counties","Middlesex County","Severely cost-burdened",10067,0.15
+"2_counties","New Haven County","No burden",203716,0.618
+"2_counties","New Haven County","Cost-burdened",65005,0.197
+"2_counties","New Haven County","Severely cost-burdened",61135,0.185
+"2_counties","New London County","No burden",72325,0.673
+"2_counties","New London County","Cost-burdened",19624,0.183
+"2_counties","New London County","Severely cost-burdened",15453,0.144
+"2_counties","Tolland County","No burden",38609,0.699
+"2_counties","Tolland County","Cost-burdened",8777,0.159
+"2_counties","Tolland County","Severely cost-burdened",7832,0.142
+"2_counties","Windham County","No burden",30491,0.686
+"2_counties","Windham County","Cost-burdened",8325,0.187
+"2_counties","Windham County","Severely cost-burdened",5647,0.127
