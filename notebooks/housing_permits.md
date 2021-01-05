@@ -114,13 +114,13 @@ permits %>%
     scale_y_continuous(labels = scales::comma_format()) +
   scale_fill_manual(values = c(pal[1], pal[2], pal[3])) +
     guides(fill = guide_legend(title = "", reverse = T)) +
-    labs(title = "Housing permits Issued Annually", subtitle = "By number of units in building, 2001–2017",
+    labs(title = "Housing Permits Issued Annually", subtitle = "By number of units in building, 2001–2017",
              x = "", y = "") +
     theme(panel.grid.minor = element_blank(),
                 plot.title.position = "plot",
                 legend.position = "bottom",
-                plot.title = element_text(family = "Lato Bold"),
-                plot.subtitle = element_text(family = "Lato Regular"),
+                plot.title = element_text(family = "Lato Bold", size = 11),
+                plot.subtitle = element_text(family = "Lato Regular", size = 9),
                 strip.text.x = element_text(hjust = .5, size = 9, family = "Lato Regular"),
                 legend.text = element_text(family = "Lato Regular", size = 9),
                 axis.text.x = element_text(colour = "black", family = "Lato Regular", size = 8),
@@ -130,8 +130,8 @@ permits %>%
 ![](housing_permits_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
-ggsave(filename = "../output_data/corrected_charts/housing_permits.png", dpi = 300, width = 6.5)
-ggsave(filename = "../output_data/corrected_charts/housing_permits.svg", dpi = 300, width = 6.5)
+ggsave(filename = "../output_data/corrected_charts/housing_permits.png", dpi = 300, width = 6.5, height = 7.25)
+ggsave(filename = "../output_data/corrected_charts/housing_permits.svg", dpi = 300, width = 6.5, height = 7.25)
 ```
 
 ``` r
