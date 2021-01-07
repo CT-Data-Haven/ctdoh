@@ -16,6 +16,29 @@ library(camiller)
 library(censusapi)
 ```
 
+```{r gg etc}
+theme_set(hrbrthemes::theme_ipsum_rc(base_family = "Lato Regular"))
+
+#urban colors
+pal <- c("#1696d2", "#fdbf11", "#d2d2d2", "#ec008b", "#55b748")
+
+scale_fill_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_fill_manual(values = rev(pal))
+  } else {
+    scale_fill_manual(values = pal)
+  }
+}
+
+scale_color_custom <- function(palette = pal, rev = F) {
+  if (rev) {
+    scale_color_manual(values = rev(pal))
+  } else {
+    scale_color_manual(values = pal)
+  }
+}
+```
+
 Collecting and lightly cleaning basic population data for multiple geographies and each year available starting in 2000 through latest available.
 
 Change by component - *(natural, international, domestic)* - state and county only; town not available.
@@ -91,21 +114,27 @@ components_plot <- components %>%
 
 ```{r fig.height=8, fig.width=12}
 ggplot(components_plot, aes(x = year, y = estimate, group = var)) +
-	geom_col(data = components_plot %>% filter(var != "Total"), aes(fill = var), position = position_stack(), color = "grey90", size = 0.1) +
+	geom_col(data = components_plot %>% filter(var != "Total"), aes(fill = var), position = position_stack(), color = "white", size = 0.1) +
 	geom_hline(yintercept = 0, color = .65, alpha = .9) +
 	geom_line(data = components_plot %>% filter(var == "Total"), aes(color = var), size = .85) +
 	scale_color_manual(values = "grey35") +
 	scale_y_continuous(labels = scales::comma_format()) +
 	facet_wrap(facets = "name", scales = "free_y") +
-	hrbrthemes::theme_ipsum_rc() +
+	scale_fill_manual(values = c(pal[3], pal[2], pal[1])) +
 	guides(color = guide_legend(title = ""),
 				 fill = guide_legend(title = "Component")) +
-	labs(title = "Population change by component, 2011–2018",
+	labs(title = "Population Change by Component, 2011–2018",
 			 x = "", y = "", caption = "Natural population change is equal to births minus deaths in the area.") +
-	theme(strip.text.x = element_text(hjust = .5, size = 11),
+	theme(strip.text.x = element_text(hjust = .5, size = 9),
+				plot.title = element_text(family = "Lato Bold", size = 11),
+				plot.caption = element_text(family = "Lato Regular", size = 8),
 				panel.grid.minor = element_blank(),
 				legend.position = "bottom",
+				legend.title = element_text(size = 9),
 				plot.title.position = "plot", 
-				axis.text.x = element_text(colour = "black", size = 10),
-				axis.text.y = element_text(colour = "black", size = 10))
+				axis.text.x = element_text(colour = "black", size = 9),
+				axis.text.y = element_text(colour = "black", size = 9))
+
+ggsave(filename = "../output_data/corrected_charts/pop_chg_component.png", dpi = 300, width = 12, height = 8)
+ggsave(filename = "../output_data/corrected_charts/pop_chg_component.svg", dpi = 300, width = 12, height = 8)
 ```
