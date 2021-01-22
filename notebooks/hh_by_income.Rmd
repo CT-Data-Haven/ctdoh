@@ -195,7 +195,7 @@ hh_by_2018_inc_band %>%
 	scale_x_discrete(expand = expansion(mult = c(.04, .04))) +
 	facet_wrap(facets = "name", scales = "free_y") +
 	hrbrthemes::theme_ipsum_rc() +
-  scale_color_custom(palette = c(pal[1:5]), rev=T) +
+  scale_color_custom(palette = c(pal[1:5])) +
 	guides(color = guide_legend(title = "", override.aes = list(linetype = 0))) +
 	labs(title = "Households by Income Band",
 			 x = "", y = "") +
